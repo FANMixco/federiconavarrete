@@ -411,10 +411,18 @@
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7438484-9"></script>
   <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7438484-9');
   </script>
 </body>
 
