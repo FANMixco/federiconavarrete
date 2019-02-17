@@ -50,6 +50,7 @@ hr.star-light {
 hr.star-light:after {
   color: #fff;
   background-color: #0d46a0;
+  border-radius: 50%;
 }
 
 hr.star-dark {
