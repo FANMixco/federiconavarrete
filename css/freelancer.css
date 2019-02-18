@@ -71,7 +71,7 @@ section h2 {
   line-height: 2rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1235px) {
   section h2 {
     font-size: 3rem;
     line-height: 2.5rem;
@@ -141,7 +141,7 @@ section h2 {
   padding: 0.8rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1235px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -188,7 +188,7 @@ header.masthead h2 {
   font-family: 'Lato';
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1235px) {
   header.masthead {
     padding-top: calc(6rem + 106px);
     padding-bottom: 6rem;
