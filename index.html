@@ -97,77 +97,77 @@
             <hr class="star-light mb-5">
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Public speaking" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Public speaking" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="mdi mdi-voice"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Innovation" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Innovation" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="mdi mdi-lightbulb-on"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Entrepreneurship" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Entrepreneurship" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-hand-holding-usd"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Create a better world" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Create a better world" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-globe-americas"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Photography" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Photography" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-camera-retro"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Travelling" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Travelling" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-plane-departure"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-gamepad"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Board games" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Board games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-dice"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Creative writing" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Creative writing" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-pen-fancy"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="mdi mdi-pillar"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-flag-usa"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-swimmer"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-theater-masks"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Conferences & Networking" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Conferences & Networking" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="fas fa-users"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                     <i class="mdi mdi-telescope"></i>
                 </a>
               </li>
@@ -390,7 +390,7 @@
         <div class="col-md-4">
           <h4 class="text-uppercase mb-4">About Freelancer</h4>
           <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            <a href="http://startbootstrap.com" target="_blank">Start Bootstrap</a>.</p>
         </div>
       </div>
     </div>
@@ -418,7 +418,10 @@
 
   <script>
     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
+      $('[data-toggle="tooltip"]').tooltip();
+      $(".ignore-click").click(function(){
+        return false;
+      });
     })
   </script>
 </body>
