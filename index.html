@@ -458,7 +458,7 @@ http://www.ascii-art.de/ascii/pqr/rockets.txt
       });
 
       var os = getMobileOperatingSystem();
-      if (os == "iOS" || os == "Android"){
+      if ((os == "iOS" || os == "Android") && window.screen.width < 1024){
         var lastScrollTop = 0;
         var $navbar = $('.navbar');
         var navbarHeight = $navbar.outerHeight();
