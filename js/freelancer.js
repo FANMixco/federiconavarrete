@@ -21,6 +21,7 @@
     if (scrollDistance > 100) {
       $('.scroll-to-top').fadeIn();
     } else {
+      $('.navbar').css('margin-top', "0px");
       $('.scroll-to-top').fadeOut();
     }
   });
