@@ -465,7 +465,7 @@ http://www.ascii-art.de/ascii/pqr/rockets.txt
           var lastDirection = 0;
 
           $(window).scroll(function(event) {
-              if ((os == "iOS" || os == "Android") && window.screen.width < 1024) {
+              if ((os == "iOS" || os == "Android") && window.screen.width < 400) {
                   var st = $(this).scrollTop();
                   movement += st - lastScrollTop;
 
