@@ -7,8 +7,8 @@ $(function() {
     var os = getMobileOperatingSystem();
     var smallScreenMobileOS = (os == "iOS" || os == "Android") && window.screen.width < 400;
 
-    if (smallScreenMobileOS) {
-      $("#spanMenu").text("☰");
+    if (!smallScreenMobileOS) {
+      $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
     }
 
     var lastScrollTop = 0;
