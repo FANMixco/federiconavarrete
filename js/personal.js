@@ -56,6 +56,7 @@ $(function() {
     
     $("#linkContactMe").click(function(e){
         e.preventDefault();
+        $(this).tooltip('hide');
         $("#contactMe").modal("show");
     });
 });
