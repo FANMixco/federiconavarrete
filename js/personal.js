@@ -51,4 +51,11 @@ $(function() {
             lastScrollTop = st;
         }
     });
+
+    $('#contactMeForm').html('<iframe src="https://www.emailmeform.com/builder/form/D0ebT7E2c2" height="545px" width="100%" frameborder="0" scrolling="no" id="print_frame"></iframe>');
+    
+    $("#linkContactMe").click(function(e){
+        e.preventDefault();
+        $("#contactMe").modal("show");
+    });
 });
