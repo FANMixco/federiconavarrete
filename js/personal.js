@@ -3,12 +3,20 @@ $(function() {
     $(".ignore-click").click(function() {
         return false;
     });
+    
+    var marginTop = 0;
+    var heightIFrame = 460;
 
     var os = getMobileOperatingSystem();
     var smallScreenMobileOS = (os == "iOS" || os == "Android") && window.screen.width < 400;
 
     if (!smallScreenMobileOS) {
       $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
+    }
+    else {
+      $("#spanMenu").html("<i class='fas fa-bars'></i>");
+      marginTop = -40;
+      heightIFrame = 420;
     }
 
     var lastScrollTop = 0;
@@ -52,7 +60,7 @@ $(function() {
         }
     });
 
-    $('#contactMeForm').html('<iframe src="contact.html" height="460px" width="100%" frameborder="0" scrolling="no"></iframe>');
+    $('#contactMeForm').html(`<iframe src="contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`);
     
     $("#linkContactMe").click(function(e){
         e.preventDefault();
