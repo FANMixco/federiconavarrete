@@ -52,7 +52,7 @@ $(function() {
         }
     });
 
-    $('#contactMeForm').html('<iframe src="contact.html" height="490px" width="100%" frameborder="0" scrolling="no" id="print_frame"></iframe>');
+    $('#contactMeForm').html('<iframe src="contact.html" height="460px" width="100%" frameborder="0" scrolling="no"></iframe>');
     
     $("#linkContactMe").click(function(e){
         e.preventDefault();
