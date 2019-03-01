@@ -5,7 +5,7 @@ $(function() {
     });
     
     var marginTop = 0;
-    var heightIFrame = 460;
+    var heightIFrame = 520;
 
     var os = getMobileOperatingSystem();
     var smallScreenMobileOS = (os == "iOS" || os == "Android") && window.screen.width < 400;
@@ -16,7 +16,7 @@ $(function() {
     else {
       $("#spanMenu").html("<i class='fas fa-bars'></i>");
       marginTop = -40;
-      heightIFrame = 420;
+      heightIFrame = 480;
     }
 
     var lastScrollTop = 0;
