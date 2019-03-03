@@ -44,7 +44,7 @@
 
 }
 #imgMoney:hover img{
-    filter: invert(0%);
+    filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
 
 }
 
