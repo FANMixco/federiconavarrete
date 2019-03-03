@@ -37,3 +37,21 @@
 #innerSkillsDiv {
     background: rgba(44, 62, 80, .3);
 }
+
+#imgMoney img{
+    margin-top: -3px;
+    filter: invert(100%);
+
+}
+#imgMoney:hover img{
+    filter: invert(0%);
+
+}
+
+#linkContactMe{
+    color: white;
+}
+
+#linkContactMe:hover{
+    color: #212529;
+}
