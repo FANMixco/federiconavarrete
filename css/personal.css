@@ -38,12 +38,12 @@
     background: rgba(44, 62, 80, .3);
 }
 
-#imgMoney img{
+.externalImg img{
     margin-top: -3px;
     filter: invert(100%);
 
 }
-#imgMoney:hover img{
+.externalImg:hover img{
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
 
 }
