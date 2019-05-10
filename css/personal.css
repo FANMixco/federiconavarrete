@@ -34,7 +34,7 @@
     background-size: cover;
 }
 
-#innerSkillsDiv {
+.innerSkillsDiv {
     background: rgba(44, 62, 80, .3);
 }
 
