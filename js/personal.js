@@ -3,7 +3,7 @@ $(function() {
     $(".ignore-click").click(function() {
         return false;
     });
-    
+
     var marginTop = 0;
     var heightIFrame = 600;
 
@@ -11,12 +11,11 @@ $(function() {
     var smallScreenMobileOS = (os == "iOS" || os == "Android") && window.screen.width < 400;
 
     if (!smallScreenMobileOS) {
-      $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
-    }
-    else {
-      $("#spanMenu").html("<i class='fas fa-bars'></i>");
-      marginTop = -40;
-      heightIFrame = 560;
+        $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
+    } else {
+        $("#spanMenu").html("<i class='fas fa-bars'></i>");
+        marginTop = -40;
+        heightIFrame = 560;
     }
 
     var lastScrollTop = 0;
@@ -61,14 +60,17 @@ $(function() {
     });
 
     $('#contactMeForm').html(`<iframe src="contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`);
-    
-    $("#linkContactMe").click(function(e){
+
+    $("#linkContactMe").click(function(e) {
         e.preventDefault();
         $(this).tooltip('hide');
         $("#contactMe").modal("show");
     });
-    
-    setTimeout(function(){
-        $("#contactMe").modal("show");
+
+    setTimeout(function() {
+        if (localStorage.getItem("firstTimeContact") === null) {
+            localStorage.setItem("firstTimeContact", Date.now());
+            $("#contactMe").modal("show");
+        }
     }, 30000);
 });
