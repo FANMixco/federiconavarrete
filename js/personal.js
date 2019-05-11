@@ -67,4 +67,8 @@ $(function() {
         $(this).tooltip('hide');
         $("#contactMe").modal("show");
     });
+    
+    setTimeout(function(){
+        $("#contactMe").modal("show");
+    }, 30000);
 });
