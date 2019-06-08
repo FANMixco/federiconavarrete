@@ -34,6 +34,11 @@
     background-size: cover;
 }
 
+#skillBusiness {
+    background-image: url('../img/business.jpg');
+    background-size: cover;
+}
+
 .innerSkillsDiv {
     background: rgba(44, 62, 80, .3);
 }
