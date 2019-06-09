@@ -42,6 +42,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Custom styles for this template -->
       <link href="css/freelancer.min.css" rel="stylesheet" />
       <link href="css/personal.min.css" rel="stylesheet" />
+      <link href="css/carousel.min.css" rel="stylesheet" />
    </head>
    <body id="page-top">
       <!-- Navigation -->
@@ -57,7 +58,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skillBusiness">Skills</a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
                      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a>
@@ -240,6 +241,56 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
       </section>
+      <section class="bg-primary text-white mb-0">       
+       <div class="container">
+            <div class="row" id="testimonialsRow">
+                <div class="col-md-8 offset-md-2 col-10 offset-1 mt-5">
+                    <h2 class="text-center text-uppercase text-white"><strong>Testimonials</strong></h2>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner mt-4">
+                        <div class="carousel-item text-center active">
+                            <div class="img-box p-1 border rounded-circle m-auto">
+                                <img class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" alt="First slide">
+                            </div>
+                            <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"><a href="https://thinknatalia.com" target="_blank" class="text-warning">Dr. Natalia Wiechowski</a></strong></h5>
+                            <h6 class="text-white m-0">Personal Branding Coachsultant | Keynote Speaker 🇩🇪️/🇺🇸 | LinkedIn Strategist |The Middle East's leading Edutainer</h6>
+                            <p class="m-0 pt-3 text-white">Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … <a class="yLinks" data-toggle="modal" data-target="#nataliaReview" href="#nataliaReview">Read more</a></p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="img-box p-1 border rounded-circle m-auto">
+                                <img class="d-block w-100 rounded-circle" src="https://media.licdn.com/dms/image/C4E03AQEWwOzGahyilg/profile-displayphoto-shrink_800_800/0?e=1565827200&v=beta&t=0vUnFqd-tSSFEdJhn0isARd-ctJsZPp1LB6zk5yKdoY" alt="First slide">
+                            </div>
+                            <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
+                            <h6 class="text-white m-0">Java Consultant at Adastra Czech Republic</h6>
+                            <p class="m-0 pt-3 text-white">I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college … <a data-toggle="modal" data-target="#edgarReview" class="yLinks" href="#edgarReview">Read more</a></p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="img-box p-1 border rounded-circle m-auto">
+                                <img class="d-block w-100 rounded-circle" src="https://media.licdn.com/dms/image/C4E03AQFTKD_-EaYX4A/profile-displayphoto-shrink_800_800/0?e=1565827200&v=beta&t=NuCMXBrZ2LhY05ATwcIV9prxi5qEx78ZqAUKYw7Em0o" alt="First slide">
+                            </div>
+                            <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Marlon Marroquin</strong></h5>
+                            <h6 class="text-white m-0">Asesor Inmobiliario</h6>
+                            <p class="m-0 pt-3 text-white">Federico is a result oriented person and able to manage complexity at all times. He is also very understanding and a great person to work with.</p>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>            
+            </div>
+        </div>
+      </section>
       <!-- Personal projects Grid Section -->
       <section class="portfolio" id="projects">
          <div class="container">
@@ -346,7 +397,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
             </div>
             <hr class="wHR">
-            <h3 class="text-center text-uppercase text-white"><img src="img/el-salvador.svg" style="height: 1.3em;filter: invert(1);" /> My Salvadoran Legends and Fairy tales</h3>
+            <h3 class="text-center text-uppercase text-white"><img src="img/el-salvador.svg" id="elSalvadorIcon" /> My Salvadoran Legends and Fairy tales</h3>
             <hr class="star-light mb-5">
             <div class="row">
                <div class="col-sm">
@@ -464,6 +515,41 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
              <small>Copyright &copy; Federico Navarrete &amp; <a href="http://supernovaic.tk" target="_blank">Supernova IC</a> <script>let cYear = new Date().getFullYear();document.write(cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`);</script></small>
          </div>
       </div>
+      <div class="modal" tabindex="-1" role="dialog" id="nataliaReview">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               <div class="picReviewers img-box p-1 border rounded-circle m-auto">
+                <img class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" alt="First slide">
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"><a href="https://thinknatalia.com" target="_blank" class="text-warning">Dr. Natalia Wiechowski</a></strong></h5>
+                <h6 class="text-dark m-0">Personal Branding Coachsultant | Keynote Speaker 🇩🇪️/🇺🇸 | LinkedIn Strategist |The Middle East's leading Edutainer</h6>
+                <p class="m-0 pt-3 text-black">Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!</p>
+               </div>
+            </div>
+         </div>
+      </div>
+       <div class="modal" tabindex="-1" role="dialog" id="edgarReview">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               <div class="picReviewers img-box p-1 border rounded-circle m-auto">
+                <img class="d-block w-100 rounded-circle" src="https://media.licdn.com/dms/image/C4E03AQEWwOzGahyilg/profile-displayphoto-shrink_800_800/0?e=1565827200&v=beta&t=0vUnFqd-tSSFEdJhn0isARd-ctJsZPp1LB6zk5yKdoY" alt="First slide">
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
+                <h6 class="text-dark m-0">Java Consultant at Adastra Czech Republic</h6>
+                <p class="m-0 pt-3 text-black">I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college. During this time I developed a strong friendship relationship with him. My close association to him made me witness his stupendous growth as a person and as a professional. He's the most agile developer I've ever known. He creates clean, maintainable code in half the time of his peers. This is a consequence of his highly analytical 
+personality and strong passion for computer science.<br />On the other hand, Federico has been working hard to develop his interpersonal skills. To do so, he participated in various communities that require him to take a leadership role, such as Microsoft Student Partners and Toastmasters. In the latter, Federico gained confidence and developed the art of public speaking.<br />There's no doubt that Federico is a person of integrity, with a well-balanced set of technical and interpersonal skills. For all of this, it is my pleasure to recommend Federico.</p>
+               </div>
+            </div>
+         </div>
+      </div>
       <div class="modal" tabindex="-1" role="dialog" id="contactMe">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -483,7 +569,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                   </button>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" frameborder="0" id="elSalvadorIframe" allowfullscreen></iframe>
                </div>
             </div>
          </div>

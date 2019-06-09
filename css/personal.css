@@ -53,10 +53,30 @@
 
 }
 
+.picReviewers{
+    max-height: 100px;
+    max-width: 100px;
+}
+
 #linkContactMe{
     color: white;
 }
 
 #linkContactMe:hover{
     color: #212529;
+}
+
+#testimonialsRow{
+    margin-top: -80px;
+}
+
+#elSalvadorIcon{
+    height: 1.3em;
+    filter: invert(1);
+}
+
+#elSalvadorIframe{
+    width: 100%;
+    height: 450px;
+    border: 0;
 }
