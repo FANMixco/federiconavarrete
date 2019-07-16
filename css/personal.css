@@ -50,7 +50,13 @@
 }
 .externalImg:hover img{
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
+}
 
+.externalImgAzure img{
+    height: 24px;
+}
+.externalImgAzure:hover img{
+    filter: invert(85%);
 }
 
 .picReviewers{
