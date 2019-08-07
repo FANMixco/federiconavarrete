@@ -306,28 +306,42 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
       </section>
+     
       <!-- Personal projects Grid Section -->
       <section class="portfolio" id="projects">
          <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0">Personal projects</h2>
             <hr class="star-dark mb-5">
-            <div class="row">
-               <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://github.com/FANMixco/toastmasters-timer" target="_blank">Toastmasters Timer</a>, 2018 - now</h4>
-               </div>
-               <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://www.microsoft.com/en-gb/p/lets-stop-diabetes-premium/9nblggh4r824?rtc=1" target="_blank">Let's Stop Diabetes</a>, 2015 - now</h4>
-               </div>
-            </div>
-            <br />
-            <div class="row">
-               <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0"><a href="http://gravitynow.tk" target="_blank">Gravity Now!</a>, 2014 - now</h4>
-               </div>
-            </div>
+              <div id="videoCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-video-inner">
+                      <iframe class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://github.com/FANMixco/toastmasters-timer" target="_blank">Toastmasters Timer</a>, 2018 - now</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-video-inner">
+                      <iframe class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://www.microsoft.com/en-gb/p/lets-stop-diabetes-premium/9nblggh4r824?rtc=1" target="_blank">Let's Stop Diabetes</a>, 2015 - now</h4>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-video-inner">
+                      <iframe class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="text-center text-uppercase text-secondary mb-0"><a href="http://gravitynow.tk" target="_blank">Gravity Now!</a>, 2014 - now</h4>
+                    </div>
+                  </div>
+                </div>
+                <a id="carousel-control-prev-video" class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a id="carousel-control-next-video" class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>             
          </div>
       </section>
       <!-- Portfolio Grid Section -->
@@ -400,6 +414,8 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </section>
       <!-- Books Section -->
       <section class="bg-primary text-white mb-0" id="books">
+      
+          
          <div class="container">
             <h2 class="text-center text-uppercase text-white">Recommended Books and Literature</h2>
             <hr class="star-light mb-5">
@@ -680,6 +696,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <script src="js/freelancer.min.js"></script>
       <script src="js/getOS.min.js"></script>
       <script src="js/personal.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
       <script>
          (() => {
              'use strict';
@@ -709,5 +726,15 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          
          gtag('config', 'UA-7438484-9');
       </script>
+       <style>
+           #carousel-control-prev-video {
+               left: 0px;
+           }
+           #carousel-control-next-video {
+               right: 0px;
+           }
+       .carousel-video-inner {
+  text-align: center;
+}</style>
    </body>
 </html>
