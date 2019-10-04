@@ -86,3 +86,13 @@
     height: 450px;
     border: 0;
 }
+
+#carousel-control-prev-video {
+    left: 0px;
+ }
+ #carousel-control-next-video {
+    right: 0px;
+ }
+ .carousel-video-inner {
+    text-align: center;
+ }
