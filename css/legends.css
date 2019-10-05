@@ -7,6 +7,17 @@ body {
     background: #0d46a0!important;
 }
 
+.caption {
+    text-align: center;
+}
+
+.caption p {
+	width: 100%;
+	position: relative;
+    top: 50%;
+    transform: translateY(40%);
+}
+
 .img-thumbnail {
 	background: #2C3E50!important;
 }
