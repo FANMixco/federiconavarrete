@@ -7,6 +7,10 @@ body {
     background: #0d46a0!important;
 }
 
+.img-thumbnail {
+	background: #2C3E50!important;
+}
+
 @media (min-width: 768px) {
 	/* show 3 items */
 	.carousel-inner .active,
