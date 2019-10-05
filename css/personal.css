@@ -96,3 +96,21 @@
  .carousel-video-inner {
     text-align: center;
  }
+
+.mini-cards {
+    background: rgba(51, 170, 51, 0);
+    border: 0;
+}
+
+.btn-more {
+    text-align: center;
+    width: 100%;
+}
+
+.cards-row {
+    width: 100%;
+}
+
+.row-auto {
+    margin: auto;
+}
