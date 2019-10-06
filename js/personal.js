@@ -12,7 +12,9 @@ $(function() {
 
     if (!smallScreenMobileOS) {
         $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
+        $("#btnExtraHobbies").hide();
     } else {
+        $(".btnOptional").hide();
         $("#spanMenu").html("<i class='fas fa-bars'></i>");
         marginTop = -40;
         heightIFrame = 560;

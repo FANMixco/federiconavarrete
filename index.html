@@ -122,11 +122,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
             </div>
             <div class="text-center mt-4">
-               <h3 class="text-center text-uppercase text-white">I invite you to explore my fav App!</h3>
+               <h3 class="text-center text-uppercase text-white">I invite you to download my fav App!</h3>
                <br />
                <a class="btn btn-xl btn-outline-light" target="_blank" href="https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute">
-               <i class="fas fa-download mr-2"></i>
-               Download The Mayan Route!
+                  <i class="fas fa-download mr-2"></i> The Mayan Route!
                </a>
             </div>
             <div class="text-center mt-4 divSpace">
@@ -158,7 +157,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <i class="mdi mdi-airport extraIcons"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                      <i class="fas fa-gamepad"></i>
                      </a>
@@ -173,22 +172,22 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <i class="fas fa-pen-fancy"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                      <i class="mdi mdi-pillar"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                      <i class="fas fa-flag-usa"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                      <i class="fas fa-swimmer"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                      <i class="fas fa-theater-masks"></i>
                      </a>
@@ -198,14 +197,19 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <i class="fas fa-users"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                      <i class="mdi mdi-telescope extraIcons"></i>
                      </a>
                   </li>
-                  <li class="list-inline-item">
+                  <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
                      <img src="img/nature.svg" />
+                     </a>
+                  </li>
+                  <li class="list-inline-item" id='btnExtraHobbies'>
+                     <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherHobbies">
+                        <i class="fas fa-plus"></i>
                      </a>
                   </li>
                </ul>
@@ -564,7 +568,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                         </a>
                      </li>
                      <li class="list-inline-item">
-                        <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle" class="text-warning" data-toggle="modal" data-target="#otherLocs">
+                        <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherLocs">
                            <i class="fas fa-plus"></i>
                         </a>
                      </li>
@@ -722,6 +726,57 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Prezi presentations" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://prezi.com/user/fanmixco/">
                           <i class="mdi mdi-presentation-play"></i>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal" tabindx="-1" role="dialog" id="otherHobbies">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title text-uppercase">Other hobbies</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body" style="background-color: #2C3E50; text-align: center">
+                  <ul class="list-inline mb-0">
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
+                        <i class="fas fa-gamepad"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
+                        <i class="mdi mdi-pillar"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
+                        <i class="fas fa-flag-usa"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
+                        <i class="fas fa-swimmer"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
+                        <i class="fas fa-theater-masks"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
+                        <i class="mdi mdi-telescope extraIcons"></i>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
+                        <img src="img/nature.svg" />
                         </a>
                      </li>
                   </ul>
