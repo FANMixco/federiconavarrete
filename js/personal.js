@@ -7,12 +7,19 @@ $(function() {
     var marginTop = 0;
     var heightIFrame = 600;
 
-    var os = getMobileOperatingSystem();
-    var smallScreenMobileOS = (os == "iOS" || os == "Android") && window.screen.width < 400;
+    var smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
     if (!smallScreenMobileOS) {
         $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
         $("#btnExtraHobbies").hide();
+        if (WURFL.is_mobile) {
+            $(".btnOptional").hide();
+            $("#btnExtraHobbies").show();
+        }
+
+        $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");​
+        $("#divSkillsContainer").css("padding-top", "15px");​
+        $("#divSkillsContainer").css("border-radius", "20px");​
     } else {
         $(".btnOptional").hide();
         $("#spanMenu").html("<i class='fas fa-bars'></i>");
