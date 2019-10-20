@@ -42,6 +42,17 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
       <link rel="stylesheet" href="css/cards-gallery.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+      <style>
+         .row-container {
+            margin-right: 0!important;
+            margin-left: 0!important;
+         }
+
+         .full-width {
+            width: 100%;
+         }
+      </style>
    </head>
    <body>
       <section class="gallery-block cards-gallery">
@@ -53,10 +64,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <ul class="pagination" style="justify-content: center;"></ul>
          </div>
          <div id='page1' class="row">
-            <div class="row" style="width: 100%">
-               <h4 class="text-center" style="width: 100%">Prezi Next</h4>
+            <div class="row row-container full-width">
+               <h4 class="text-center full-width">Prezi Next</h4>
             </div>
-            <div class="row">
+            <div class="row row-container">
                <div class="col-md-6 col-lg-4">
                   <div class="card border-0 transform-on-hover">
                      <a href="https://prezi.com/view/HiN8y183svgykMtSa2St">
@@ -170,10 +181,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
          <div id='page2' class="row" style="display: none">
-            <div class="row" style="width: 100%">
-               <h4 class="text-center" style="width: 100%">Prezi Classic</h4>
+            <div class="row row-container full-width">
+               <h4 class="text-center full-width">Prezi Classic</h4>
             </div>
-            <div class="row">
+            <div class="row row-container">
                <div class="col-md-6 col-lg-4">
                   <div class="card border-0 transform-on-hover">
                      <a href="https://prezi.com/5dudpkomifdz/final-make-science-cool/">
@@ -298,8 +309,8 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
          <div id='page3' class="row" style="display: none">
-            <div class="row" style="width: 100%">
-               <h4 class="text-center" style="width: 100%">PowerPoint</h4>
+            <div class="row full-width row-container">
+               <h4 class="text-center full-width row-container">PowerPoint</h4>
             </div>
             <div class="row">
                <div class="col-md-6 col-lg-4">
@@ -394,20 +405,16 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <script>
         baguetteBox.run('.cards-gallery', { animation: 'slideIn'});
          $(function() {
-             console.log( "ready!" );
-             $('#page').Pagination({
-                     size: 9,
-                     pageShow: 3,
-                     page: 1,
-                     limit: 3,
-                 }, function(obj){
-                     $('#page1,#page2,#page3').hide();
-                     console.log(obj.page);
-                     $('#page'+ obj.page).show();
-                         //$('#info').html('Current page: ' + obj.page);
-                 });
+            $('#page').Pagination({
+               size: 9,
+               pageShow: 3,
+               page: 1,
+               limit: 3,
+            }, function(obj){
+               $('#page1,#page2,#page3').hide();
+               $('#page'+ obj.page).show();
+            });
          });
-         
       </script>
    </body>
 </html>
