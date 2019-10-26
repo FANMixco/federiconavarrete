@@ -84,9 +84,8 @@ function setApps(appCollection, control) {
         let tooltip = `${years}<br><br>${appCollection[item].description}`;
 
         let technologies = '';
-        for (let technology in appCollection[item].technologies) {
+        for (let technology in appCollection[item].technologies)
             technologies += `<i class="${appCollection[item].technologies[technology]}"></i>&nbsp;`;
-        }
 
         tooltip += `<br><br><b>Technologies:<b><br><br><div class='iconsDiv'>${technologies.replaceAll('"', "'")}</div>`;
 
@@ -114,17 +113,3 @@ function createElem(item, edition) {
          technologies: edition.technologies
    };
 }
-
-/*console.log(androidSupported);
-console.log(w10Supported);
-
-console.log(androidUnsupported);
-console.log(w10Unsupported);
-
-console.log(wpUnsupported);
-
-console.log(w8Unsupported);
-
-console.log(wXPUnsupported);
-
-console.log(webUnsupported);*/
