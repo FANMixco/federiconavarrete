@@ -403,19 +403,19 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                <div class="carousel-inner">
                   <div class="carousel-item active">
                      <div class="carousel-video-inner">
-                        <iframe class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://github.com/FANMixco/toastmasters-timer" target="_blank">Toastmasters Timer</a>, 2018 - now</h4>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="carousel-video-inner">
-                        <iframe class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://www.microsoft.com/en-gb/p/lets-stop-diabetes-premium/9nblggh4r824?rtc=1" target="_blank">Let's Stop Diabetes</a>, 2015 - now</h4>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="carousel-video-inner">
-                        <iframe class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h4 class="text-center text-uppercase text-secondary mb-0"><a href="http://gravitynow.tk" target="_blank">Gravity Now!</a>, 2014 - now</h4>
                      </div>
                   </div>
@@ -444,11 +444,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <hr>
             <div class="row">
                <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/XJyWAErkNtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="iVideos" src="https://www.youtube.com/embed/XJyWAErkNtY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <h4 class="text-center text-uppercase text-secondary mb-0">Moments of Truth with Dr Natalia Wiechowski</h4>
                </div>
                <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/-c2zayFv14Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe class="iVideos" src="https://www.youtube.com/embed/-c2zayFv14Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <h4 class="text-center text-uppercase text-secondary mb-0">The Missing Variable</h4>
                </div>
             </div>
@@ -513,13 +513,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <h2 class="text-center text-uppercase text-white">Recommended Books and Literature</h2>
             <hr class="star-black-dark mb-5">
             <div class="row row-auto">
-               <iframe src="books.html" style="width: 100%; border: 0; height: 250px;"></iframe>
+               <iframe src="books.html" id="booksIframe"></iframe>
             </div>
             <hr class="wHR">
             <h3 class="text-center text-uppercase text-white"><img src="img/el-salvador.svg" id="elSalvadorIcon" /> My Salvadoran Legends and Fairy tales</h3>
             <hr class="star-black-dark mb-5">
             <div class="row">
-               <iframe src="legends.html" style="width: 100%; border: 0; height: 325px;"></iframe>
+               <iframe src="legends.html" id="legendsIframe"></iframe>
             </div>
          </div>
       </section>
@@ -670,7 +670,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                   </button>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" frameborder="0" id="elSalvadorIframe" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" id="elSalvadorIframe" allowfullscreen></iframe>
                </div>
             </div>
          </div>
@@ -678,11 +678,17 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <div class="modal" tabindex="-1" role="dialog" id="appsPreview">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-               <div class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+               <div class="modal-header">
+                  <h5 class="modal-title">Projects Gallery</h5>
+                  <button type="button" style="padding-top: 1.05rem;" class="close btnFullScreen" id="appsFullScreen">
+                     <span aria-hidden="true"><i class="mdi mdi-fullscreen"></i></span>
                   </button>
-                  <iframe src="apps.html" frameborder="0" id="elSalvadorIframe" allowfullscreen></iframe>
+                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <iframe src="apps.html?isIframe=true" id="elSalvadorIframe" allowfullscreen></iframe>
                </div>
             </div>
          </div>
@@ -690,11 +696,17 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <div class="modal" tabindex="-1" role="dialog" id="pptPreview">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-               <div class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+               <div class="modal-header">
+                  <h5 class="modal-title">Presentations Gallery</h5>
+                  <button type="button" style="padding-top: 1.05rem;" class="close" id="pptsFullScreen btnFullScreen">
+                     <span aria-hidden="true"><i class="mdi mdi-fullscreen"></i></span>
                   </button>
-                  <iframe src="prezis.html" frameborder="0" id="elSalvadorIframe" allowfullscreen></iframe>
+                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <iframe src="prezis.html?isIframe=true" id="elSalvadorIframe" allowfullscreen></iframe>
                </div>
             </div>
          </div>
@@ -708,7 +720,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
-               <div class="modal-body" style="background-color: #2C3E50; text-align: center">
+               <div class="modal-body" id="modelDark">
                   <ul class="list-inline mb-0">
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Supernova IC" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="http://supernovaic.tk">
@@ -764,7 +776,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
-               <div class="modal-body" style="background-color: #121212; text-align: center">
+               <div class="modal-body" id="modalBlack">
                   <ul class="list-inline mb-0">
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">

@@ -1,4 +1,11 @@
 $(function() {
+    $("#appsFullScreen").click(function(){
+        window.open("https://federiconavarrete.com/apps.html");
+    });
+    $("#pptsFullScreen").click(function(){
+        window.open("https://federiconavarrete.com/prezis.html");
+    });
+
     $('[data-toggle="tooltip"]').tooltip();
     $(".ignore-click").click(function() {
         return false;
@@ -17,9 +24,11 @@ $(function() {
             $("#btnExtraHobbies").show();
         }
 
-        $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");​
-        $("#divSkillsContainer").css("padding-top", "15px");​
-        $("#divSkillsContainer").css("border-radius", "20px");​
+        setTimeout(function() {
+            $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
+            $("#divSkillsContainer").css("padding-top", "15px");
+            $("#divSkillsContainer").css("border-radius", "20px");
+        }, 100);
     } else {
         $(".btnOptional").hide();
         $("#spanMenu").html("<i class='fas fa-bars'></i>");

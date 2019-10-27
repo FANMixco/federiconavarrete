@@ -170,7 +170,7 @@ var apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.gnow",
                preview:"https://www.behance.net/gallery/54678483/Gravity-Now-Android",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp","fas fa-map", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fas fa-map", "fas fa-calculator", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -181,7 +181,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/gravity-now/9nblgggzjlp5",
                preview:"https://www.behance.net/gallery/25675453/Gravity-Now-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml","fas fa-map", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "fas fa-map", "fas fa-calculator", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -192,7 +192,7 @@ var apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/85723563/Gravity-Now-Angular-Edition",
                technologies: [
-                  "mdi mdi-angular", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-language-typescript", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-azure-devops"
+                  "mdi mdi-angular", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-language-typescript", "fas fa-map", "fas fa-calculator", "mdi mdi-azure-devops", "fab fa-git", "mdi mdi-github-circle"
                ]
             },
             {
@@ -203,7 +203,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/25675249/Gravity-Now",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fab fa-git"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fas fa-calculator", "mdi mdi-azure", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
@@ -216,24 +216,24 @@ var apps =
       edition: [
             {
                yearStart: 2014,
-               yearEnd: 2015,
+               yearEnd: 2014,
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
                preview:"https://www.behance.net/gallery/11190853/Diputado-85-Windows-Phone-7",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-xaml", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-xaml", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
                yearStart: 2014,
-               yearEnd: 2015,
+               yearEnd: 2014,
                storeLink:"",
                mainTech: "web",
                isSupported: false,
                preview:"https://www.behance.net/gallery/12188107/Diputado-85-Mobile",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "fab fa-git"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fas fa-chart-pie", "mdi mdi-azure", "fas fa-database", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -252,7 +252,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42387517/Firefly-App-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-xaml", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-xaml", "fas fa-map", "fas fa-network-wired", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -290,7 +290,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/lets-stop-diabetes-premium/9nblggh4r824",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fas fa-map", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -309,7 +309,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-gb/p/lets-stop-diabetes/9nblgggzpxrb",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fas fa-map", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -328,7 +328,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42382057/Lets-Stop-Diabetes-Web-Site",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "fab fa-git", "mdi mdi-bitbucket","fas fa-map"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "fas fa-map", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -359,7 +359,7 @@ var apps =
       logo: "tu_elsalvador.png",
       edition: [
             {
-               yearStart: 2012,
+               yearStart: 2013,
                yearEnd: 2013,
                mainTech: "android",
                isSupported: false,
@@ -379,7 +379,7 @@ var apps =
       edition: [
             {
                yearStart: 2012,
-               yearEnd: 2013,
+               yearEnd: 2012,
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
@@ -398,7 +398,7 @@ var apps =
       edition: [
             {
                yearStart: 2014,
-               yearEnd: 2015,
+               yearEnd: 2014,
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
@@ -417,7 +417,7 @@ var apps =
       edition: [
             {
                yearStart: 2013,
-               yearEnd: 2014,
+               yearEnd: 2013,
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
@@ -512,7 +512,7 @@ var apps =
       edition: [
             {
                yearStart: 2010,
-               yearEnd: 2011,
+               yearEnd: 2010,
                storeLink:"",
                mainTech: "web",
                isSupported: false,
@@ -556,7 +556,7 @@ var apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/11105699/WebSite-Lions-Club-of-Santa-Tecla",
                technologies: [
-                  "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -587,7 +587,7 @@ var apps =
       logo: "arevalo.png",
       edition: [
             {
-               yearStart: 2012,
+               yearStart: 2013,
                yearEnd: 2013,
                storeLink:"",
                mainTech: "web",
@@ -613,7 +613,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11048267/Mr-Tooth",
                technologies: [
-                  "mdi mdi-windows", "fas fa-database"
+                  "mdi mdi-windows", "fas fa-database", "mdi mdi-upload", "mdi mdi-file-chart"
                ]
             }
          ]
@@ -632,7 +632,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11047863/Ghost-Hunter",
                technologies: [
-                  "mdi mdi-windows", "fas fa-database"
+                  "mdi mdi-windows", "fas fa-database", "mdi mdi-file-chart"
                ]
             }
          ]

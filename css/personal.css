@@ -87,6 +87,32 @@
     border: 0;
 }
 
+#booksIframe {
+    width: 100%;
+    border: 0;
+    height: 250px;
+}
+
+iframe {
+    border:none;
+}
+
+#legendsIframe {
+    width: 100%;
+    border: 0;
+    height: 325px;
+}
+
+#modelDark {
+    background-color: #2C3E50;
+    text-align: center;
+}
+
+#modalBlack {
+    background-color: #121212;
+    text-align: center
+}
+
 #carousel-control-prev-video {
     left: 0px;
  }

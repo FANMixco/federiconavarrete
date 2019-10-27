@@ -7,18 +7,6 @@ const cardTemplate =
    </div>
 </div>`;
 
-String.prototype.format = function() {
-   let formatted = this;
-   for (let arg in arguments)
-       formatted = formatted.replace(`{${arg}}`, arguments[arg]);
-   return formatted;
-};
-
-String.prototype.replaceAll = function(search, replacement) {
-    var target = this;
-    return target.replace(new RegExp(search, 'g'), replacement);
-};
-
 $(function(){
     let androidSupported = [];
     let w10Supported = [];
@@ -31,6 +19,11 @@ $(function(){
     let wpUnsupported = [];
     let w8Unsupported = [];
     let webUnsupported = [];
+
+    if (new URLSearchParams(window.location.search).get('isIframe')) {
+        $("#header").hide();
+        $(".gallery-block").css('padding-top', '0px');
+    }
 
     for(let item in apps) {
         filterElem(apps[item], 'android', true, androidSupported);
@@ -79,8 +72,12 @@ function setApps(appCollection, control) {
         if (appCollection[item].preview !== '')
             content += `<a href="${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
 
-        let years = appCollection[item].yearStart + (appCollection[item].yearEnd !== undefined ? ` - ${appCollection[item].yearEnd}` : " -");
+        let years = appCollection[item].yearStart;
 
+        if (appCollection[item].yearStart !== appCollection[item].yearEnd) {
+            years += appCollection[item].yearEnd !== undefined ? ` - ${appCollection[item].yearEnd}` : " -";
+        }
+        
         let tooltip = `${years}<br><br>${appCollection[item].description}`;
 
         let technologies = '';
