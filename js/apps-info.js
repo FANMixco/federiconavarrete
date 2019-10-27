@@ -328,7 +328,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42382057/Lets-Stop-Diabetes-Web-Site",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "fas fa-map", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "mdi mdi-azure", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-language-php", "fas fa-map", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
