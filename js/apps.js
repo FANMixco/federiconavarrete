@@ -21,9 +21,9 @@ $(function(){
         let w8Unsupported = [];
         let webUnsupported = [];
 
-        if (new URLSearchParams(window.location.search).get('isIframe')) {
-            $("#header").hide();
-            $(".gallery-block").css('padding-top', '0px');
+        if (!new URLSearchParams(window.location.search).get('isIframe')) {
+            $("#header").show();
+            $(".gallery-block").css('padding-top', '60px');
         }
 
         for(let item in apps) {

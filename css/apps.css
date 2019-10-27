@@ -1,3 +1,9 @@
+#header {
+   display: none;
+}
+.gallery-block {
+   padding-top: 0px;
+}
 .btn-circle {
     width: 30px;
     height: 30px;
