@@ -85,8 +85,20 @@ function setApps(appCollection, control) {
         let tooltip = `${years}<br><br>${appCollection[item].description}`;
 
         let technologies = '';
-        for (let technology in appCollection[item].technologies)
-            technologies += `<i class="${appCollection[item].technologies[technology]}"></i>&nbsp;`;
+        for (let technology in appCollection[item].technologies) {
+            if (!Array.isArray(appCollection[item].technologies[technology]))
+                technologies += `<i class="${appCollection[item].technologies[technology]}"></i>&nbsp;`;
+            else {
+                switch (appCollection[item].technologies[technology][0].type)
+                {
+                    case "text":
+                        technologies += `<span>${appCollection[item].technologies[technology][0].value}</span>&nbsp;`;
+                        break;
+                    default:
+                        technologies += `<img style='max-height:10px!important;max-width:10px!important;' src='img/icons/${appCollection[item].technologies[technology][0].value}' alt='icon' />&nbsp;`;
+                }
+            }
+        }
 
         tooltip += `<br><br><b>Technologies:<b><br><br><div class='iconsDiv'>${technologies.replaceAll('"', "'")}</div>`;
 
