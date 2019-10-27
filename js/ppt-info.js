@@ -154,13 +154,6 @@ var ppts = [
     type: "ppt"
 },
 {
-    name: "The Missing Variable",
-    preview: "p30.jpg",
-    edited: "2018-12-13",
-    link: "https://1drv.ms/p/s!AhpAtowYvNcyj-FRaORzEhSZjKzh-Q",
-    type: "ppt"
-},
-{
     name: "Story Mapping to Change the World!",
     preview: "p23.jpg",
     edited: "2019-09-01",
@@ -168,9 +161,16 @@ var ppts = [
     type: "ppt"
 },
 {
+    name: "The Missing Variable",
+    preview: "p30.jpg",
+    edited: "2018-12-13",
+    link: "https://1drv.ms/p/s!AhpAtowYvNcyj-FRaORzEhSZjKzh-Q",
+    type: "ppt"
+},
+{
     name: "Your Ideas, Your Real Super Power!",
     preview: "p27.jpg",
-    edited: "2019-03-38",
+    edited: "2019-03-18",
     link: "https://1drv.ms/p/s!AhpAtowYvNcyj-QnPVgD5b23rL-W7g",
     type: "ppt"
 },
@@ -183,7 +183,7 @@ var ppts = [
 },
 {
     name: "Creative Thinking",
-    preview: "p.jpg",
+    preview: "p25.jpg",
     edited: "2017-09-30",
     link: "https://1drv.ms/p/s!AhpAtowYvNcyj9J-CfEf-gkY_f9PHA",
     type: "ppt"

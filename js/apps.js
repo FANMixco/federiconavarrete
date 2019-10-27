@@ -8,58 +8,62 @@ const cardTemplate =
 </div>`;
 
 $(function(){
-    let androidSupported = [];
-    let w10Supported = [];
-    let webSupported = [];
-    
-    let androidUnsupported = [];
-    let w10Unsupported = [];
-    let wXPUnsupported = [];
-    
-    let wpUnsupported = [];
-    let w8Unsupported = [];
-    let webUnsupported = [];
+    function load() {
+        let androidSupported = [];
+        let w10Supported = [];
+        let webSupported = [];
+        
+        let androidUnsupported = [];
+        let w10Unsupported = [];
+        let wXPUnsupported = [];
+        
+        let wpUnsupported = [];
+        let w8Unsupported = [];
+        let webUnsupported = [];
 
-    if (new URLSearchParams(window.location.search).get('isIframe')) {
-        $("#header").hide();
-        $(".gallery-block").css('padding-top', '0px');
+        if (new URLSearchParams(window.location.search).get('isIframe')) {
+            $("#header").hide();
+            $(".gallery-block").css('padding-top', '0px');
+        }
+
+        for(let item in apps) {
+            filterElem(apps[item], 'android', true, androidSupported);
+
+            filterElem(apps[item], 'windows10', true, w10Supported);
+
+            filterElem(apps[item], 'android', false, androidUnsupported);
+
+            filterElem(apps[item], 'windows10', false, w10Unsupported);
+
+            filterElem(apps[item], 'windowsPhone', false, wpUnsupported);
+
+            filterElem(apps[item], 'windows8', false, w8Unsupported);
+
+            filterElem(apps[item], 'web', true, webSupported);
+
+            filterElem(apps[item], 'web', false, webUnsupported);
+
+            filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
+        }
+
+        setApps(androidSupported, "playStore");
+        setApps(w10Supported, "msStore");
+        setApps(androidUnsupported, "unsupportedAndroid");
+        setApps(w8Unsupported, "unsupportedWindows8");
+        setApps(w10Unsupported, "unsupportedWindows10");
+        setApps(wpUnsupported, "unsupportedWindowsPhone");
+        setApps(webUnsupported, "unsupportedWeb");
+        setApps(webSupported, "webStore");
+        setApps(wXPUnsupported, "unsupportedVB");
+
+        $('[data-toggle="popover"]').popover();
+
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });
     }
 
-    for(let item in apps) {
-        filterElem(apps[item], 'android', true, androidSupported);
-
-        filterElem(apps[item], 'windows10', true, w10Supported);
-
-        filterElem(apps[item], 'android', false, androidUnsupported);
-
-        filterElem(apps[item], 'windows10', false, w10Unsupported);
-
-        filterElem(apps[item], 'windowsPhone', false, wpUnsupported);
-
-        filterElem(apps[item], 'windows8', false, w8Unsupported);
-
-        filterElem(apps[item], 'web', true, webSupported);
-
-        filterElem(apps[item], 'web', false, webUnsupported);
-
-        filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
-    }
-
-    setApps(androidSupported, "playStore");
-    setApps(w10Supported, "msStore");
-    setApps(androidUnsupported, "unsupportedAndroid");
-    setApps(w8Unsupported, "unsupportedWindows8");
-    setApps(w10Unsupported, "unsupportedWindows10");
-    setApps(wpUnsupported, "unsupportedWindowsPhone");
-    setApps(webUnsupported, "unsupportedWeb");
-    setApps(webSupported, "webStore");
-    setApps(wXPUnsupported, "unsupportedVB");
-
-    $('[data-toggle="popover"]').popover();
-
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    });
+    load();
 });
 
 function setApps(appCollection, control) {
