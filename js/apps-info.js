@@ -129,7 +129,7 @@ var apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute",
                preview:"https://www.behance.net/gallery/83173325/The-Mayan-Route-Material-Design",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-material-design", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fas fa-database", "fab fa-wikipedia-w", "mdi mdi-json", "mdi mdi-xml", "fas fa-map", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "mdi mdi-material-design", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fas fa-database", "fab fa-wikipedia-w", "mdi mdi-json", "mdi mdi-xml", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -170,7 +170,7 @@ var apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.gnow",
                preview:"https://www.behance.net/gallery/54678483/Gravity-Now-Android",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-json", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-calculator", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-json", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fas fa-calculator", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -358,7 +358,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/25674827/The-Wet-Zone-Web-Site-and-Tutorial",
                technologies: [
-                  "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-language-php", "mdi mdi-json", "fas fa-database", "fas fa-map", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-language-php", "mdi mdi-json", "fas fa-database", "fas fa-map", "fas fa-route", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
@@ -472,7 +472,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/25675817/TulResidence",
                technologies: [
-                  "fab fa-java", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-java", "fas fa-leaf", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
