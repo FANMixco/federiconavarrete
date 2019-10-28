@@ -290,7 +290,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/lets-stop-diabetes-premium/9nblggh4r824",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fab fa-foursquare", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -309,7 +309,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-gb/p/lets-stop-diabetes/9nblgggzpxrb",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "mdi mdi-azure", "fas fa-database", "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan","fas fa-map", "mdi mdi-file-excel-box", "fab fa-foursquare", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
