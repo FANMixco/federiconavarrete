@@ -47,7 +47,7 @@ var apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
                technologies: [
-                "mdi mdi-material-design", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "fab fa-bootstrap", "mdi mdi-pdf-box", "fab fa-git", "mdi mdi-bitbucket"
+                "mdi mdi-material-design", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "fab fa-bootstrap", "mdi mdi-pdf-box", "fab fa-git", "mdi mdi-github-circle"
                ]
             },
             {
@@ -58,7 +58,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
                technologies: [
-                  "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-bootstrap", "mdi mdi-pdf-box", "fab fa-git", "mdi mdi-bitbucket"
+                  "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-bootstrap", "mdi mdi-pdf-box", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
@@ -347,7 +347,7 @@ var apps =
                storeLink:"https://www.microsoft.com/pl-pl/p/the-wet-zone/9nblggh67dbd",
                preview:"https://www.behance.net/gallery/12186697/The-Wet-Zone-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fas fa-database", "mdi mdi-json", "mdi mdi-xaml", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-sms", "fab fa-git", "mdi mdi-github-circle"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fas fa-database", "mdi mdi-json", "mdi mdi-xaml", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-sms", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -472,7 +472,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/25675817/TulResidence",
                technologies: [
-                  "fab fa-java", "fas fa-leaf", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-java", "fas fa-leaf", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -491,7 +491,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/47766987/Virtual-Cloud-School",
                technologies: [
-                  "mdi mdi-language-php", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-github-circle"
+                  "mdi mdi-language-php", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -510,7 +510,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11104189/Talento-Siman",
                technologies: [
-                  "mdi mdi-language-php", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-github-circle"
+                  "mdi mdi-language-php", "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -529,7 +529,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11048475/MaintSys",
                technologies: [
-                  [{type: "text", value: "VB.NET"}], "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", value: "VB.NET"}], "fas fa-database", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -605,7 +605,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11104171/ArevaloGroup-Web-App",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-js-square", "fab fa-css3", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
