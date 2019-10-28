@@ -252,7 +252,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42387517/Firefly-App-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "mdi mdi-json", "fas fa-database", "mdi mdi-xaml", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", value: "IOT"}], "mdi mdi-led-on", "mdi mdi-tshirt-crew", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "mdi mdi-json", "fas fa-database", "mdi mdi-xaml", "fas fa-map", "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", value: "IOT"}], "mdi mdi-led-on", "mdi mdi-tshirt-crew", "mdi mdi-voice", "mdi mdi-circle-double", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
