@@ -151,7 +151,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11104041/La-Ruta-Maya-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "mdi mdi-azure", "mdi mdi-language-php", "mdi mdi-json", "fas fa-database", [{type: "icon", icon: "here.svg"}], "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "mdi mdi-azure", "mdi mdi-language-php", "mdi mdi-json", "fas fa-database", [{type: "img", icon: "here.svg"}], "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
       ]
@@ -192,7 +192,7 @@ var apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/85723563/Gravity-Now-Angular-Edition",
                technologies: [
-                  "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", "mdi mdi-json", [{type: "icon", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", "fas fa-calculator", "mdi mdi-azure-devops", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", "mdi mdi-json", [{type: "img", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", "fas fa-calculator", "mdi mdi-azure-devops", "fab fa-git", "mdi mdi-github-circle"
                ]
             },
             {
@@ -358,7 +358,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/25674827/The-Wet-Zone-Web-Site-and-Tutorial",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-language-php", "mdi mdi-json", "fas fa-database", [{type: "icon", icon: "here.svg"}], "fas fa-route", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-language-php", "mdi mdi-json", "fas fa-database", [{type: "img", icon: "here.svg"}], "fas fa-route", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
@@ -415,7 +415,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42387741/Farmapp-Windows-Phone-81",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fas fa-database", "mdi mdi-language-php", "mdi mdi-json", [{type: "icon", icon: "here.svg"}], "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fas fa-database", "mdi mdi-language-php", "mdi mdi-json", [{type: "img", icon: "here.svg"}], "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -434,7 +434,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11328733/Tu-Costa-Windows-Phone-7",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fas fa-database", "mdi mdi-language-php", "mdi mdi-json", [{type: "icon", icon: "here.svg"}], "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fas fa-database", "mdi mdi-language-php", "mdi mdi-json", [{type: "img", icon: "here.svg"}], "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
