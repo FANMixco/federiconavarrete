@@ -92,10 +92,17 @@ function setApps(appCollection, control) {
                 switch (appCollection[item].technologies[technology][0].type)
                 {
                     case "text":
-                        technologies += `<span>${appCollection[item].technologies[technology][0].value}</span>&nbsp;`;
+                        technologies += `<span class='oneLineIcon'>${appCollection[item].technologies[technology][0].text}</span>&nbsp;`;
+                        break;
+                    case "mix-left-icon":
+                        technologies += `<span class='oneLineIcon'><i class="${appCollection[item].technologies[technology][0].icon}"></i>${appCollection[item].technologies[technology][0].text}</span>&nbsp;`;
+                        console.log(technologies);
+                        break;
+                    case "mix-right-icon":
+                        technologies += `<span class='oneLineIcon'>${appCollection[item].technologies[technology][0].text}<i class="${appCollection[item].technologies[technology][0].icon}"></i></span>&nbsp;`;
                         break;
                     default:
-                        technologies += `<img style='max-height:10px!important;max-width:10px!important;' src='img/icons/${appCollection[item].technologies[technology][0].value}' alt='icon' />&nbsp;`;
+                        technologies += `<img class='icons' src='img/icons/${appCollection[item].technologies[technology][0].icon}' alt='icon' />&nbsp;`;
                 }
             }
         }
