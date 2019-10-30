@@ -15,6 +15,10 @@
    margin: 3px;
  }
 
+ sub {
+   font-size: xx-small;
+ }
+
  .icons {
    vertical-align: middle;
    width: 24px;
