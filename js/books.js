@@ -1,4 +1,4 @@
-$('#carouselExample').on('slide.bs.carousel', function (e) {
+$('#booksCarousel').on('slide.bs.carousel', function (e) {
     /*
         CC 2.0 License Iatek LLC 2018
         Attribution required
