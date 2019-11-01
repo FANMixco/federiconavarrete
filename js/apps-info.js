@@ -624,7 +624,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11048267/Mr-Tooth",
                technologies: [
-                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], "fas fa-database", "mdi mdi-upload", "mdi mdi-file-chart"
+                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], [{ type:"mix-left-icon", id: "id_access", text: "<sub>Access</sub>", icon: "fas fa-database"}], "mdi mdi-upload", "mdi mdi-file-chart"
                ]
             }
          ]
@@ -643,7 +643,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11047863/Ghost-Hunter",
                technologies: [
-                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], "fas fa-database", "mdi mdi-file-chart"
+                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], [{ type:"mix-left-icon", id: "id_access", text: "<sub>Access</sub>", icon: "fas fa-database"}], "mdi mdi-file-chart"
                ]
             }
          ]
