@@ -69,9 +69,7 @@ $(function(){
 
         $('[data-toggle="popover"]').popover();
 
-        $('.popover-dismiss').popover({
-            trigger: 'focus'
-        });
+        $('.popover-dismiss').popover({ trigger: 'focus' });
     }
 
     load();
@@ -81,18 +79,23 @@ function setTechUsed(techs, container, customIcons) {
     const result = { }
 
     for (let i = 0; i < techs.length; i++) result[techs[i]] = (result[techs[i]] || 0) + 1;
+
+    var sortable = [];
+    for (var item in result) {
+        sortable.push([item, result[item]]);
+    }
     
-    let techResult = Object.keys(result).map(key => ({ [key]: result[key] }));
+    sortable.sort(function(a, b) {
+        return b[1] - a[1];
+    });
 
     let conclusions = "";
 
-    for (let item in techResult) {
-        $.each(techResult[item], function(i, v) {
-            if (!i.includes("id_"))
-                conclusions += getTechPrint(i.replaceAll("__", "-").replaceAll("_", " "), `×${v}&nbsp;&nbsp;&nbsp;`);
-            else
-                conclusions += getTechPrint(customIcons.filter(x=>x.id == i), `&nbsp;×${v}&nbsp;&nbsp;&nbsp;`);
-        });
+    for (let item in sortable) {
+        if (!sortable[item][0].includes("id_"))
+            conclusions += getTechPrint(sortable[item][0], `×${sortable[item][1]}&nbsp;&nbsp;&nbsp;`);
+        else
+            conclusions += getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `&nbsp;×${sortable[item][1]}&nbsp;&nbsp;&nbsp;`);
     }
 
     $(`#${container}`).append(conclusions);
@@ -100,15 +103,15 @@ function setTechUsed(techs, container, customIcons) {
 
 function getTechPrint(tech, extra) {
     if (!Array.isArray(tech))
-        return`<span class='oneLineIcon'><i class="${tech}"></i>${extra}</span>`;
-    else {
+        return`<span class='oneLineIcon'><i class="${tech} storeIcon"></i>${extra}</span>`;
+    else
         switch (tech[0].type) {
             case "text":
-                return `<span class='oneLineIcon'>${tech[0].text}${extra}</span>`;
+                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span>${extra}</span>`;
             case "mix-left-icon":
-                return `<span class='oneLineIcon'><i class="${tech[0].icon}"></i>${tech[0].text}</span>${extra}`;
+                return `<span class='oneLineIcon'><i class="${tech[0].icon} storeIcon"></i>${tech[0].text}</span>${extra}`;
             case "mix-right-icon":
-                return `<span class='oneLineIcon'>${tech[0].text}<i class="${tech[0].icon}"></i></span>${extra}`;
+                return `<span class='oneLineIcon'>${tech[0].text}<i class="${tech[0].icon} storeIcon"></i></span>${extra}`;
             case "mix-left-img":
                 return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${tech[0].text}</span>${extra}`;
             case "mix-right-img":
@@ -116,7 +119,6 @@ function getTechPrint(tech, extra) {
             case "img":
                 return `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`;
         }
-    }
 }
 
 function setApps(appCollection, control, techs, customIcons) {

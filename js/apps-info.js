@@ -290,7 +290,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/lets-stop-diabetes-premium/9nblggh4r824",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -309,7 +309,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-gb/p/lets-stop-diabetes/9nblgggzpxrb",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -624,7 +624,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11048267/Mr-Tooth",
                technologies: [
-                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB"}], "fas fa-database", "mdi mdi-upload", "mdi mdi-file-chart"
+                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], "fas fa-database", "mdi mdi-upload", "mdi mdi-file-chart"
                ]
             }
          ]
@@ -643,7 +643,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11047863/Ghost-Hunter",
                technologies: [
-                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB"}], "fas fa-database", "mdi mdi-file-chart"
+                  "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], "fas fa-database", "mdi mdi-file-chart"
                ]
             }
          ]

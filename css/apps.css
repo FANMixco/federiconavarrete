@@ -17,7 +17,10 @@
 
  .store {
   font-size: 24px;
-  font-weight: bold;
+ }
+
+ .storeIcon {
+   font-weight: bold;
  }
 
  sub {
