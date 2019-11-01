@@ -65,4 +65,5 @@
    font-size:x-large;
    text-align:center;
    vertical-align: middle;
+   word-wrap: break-word;
 }
