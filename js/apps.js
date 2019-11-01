@@ -12,6 +12,7 @@ $(function(){
         let androidSupported = [];
         let androidSupportedTechs = [];
         let w10Supported = [];
+        let w10SupportedTechs = [];
         let webSupported = [];
         
         let androidUnsupported = [];
@@ -21,6 +22,8 @@ $(function(){
         let wpUnsupported = [];
         let w8Unsupported = [];
         let webUnsupported = [];
+
+        let customIconsArray = [];
 
         if (!new URLSearchParams(window.location.search).get('isIframe')) {
             $("#header").show();
@@ -48,7 +51,8 @@ $(function(){
         }
 
         setApps(androidSupported, "playStore", androidSupportedTechs);
-        setApps(w10Supported, "msStore");
+        setApps(w10Supported, "msStore", w10SupportedTechs, customIconsArray);
+
         setApps(androidUnsupported, "unsupportedAndroid");
         setApps(w8Unsupported, "unsupportedWindows8");
         setApps(w10Unsupported, "unsupportedWindows10");
@@ -58,6 +62,7 @@ $(function(){
         setApps(wXPUnsupported, "unsupportedVB");
 
         setTechUsed(androidSupportedTechs, "techsPlayStore");
+        setTechUsed(w10SupportedTechs, "techsMSStore");
 
         $('[data-toggle="popover"]').popover();
 
@@ -72,19 +77,15 @@ $(function(){
 function setTechUsed(techs, container) {
     const result = { }
 
-    for (let i = 0; i < techs.length; i++) {
-        result[techs[i]] = (result[techs[i]] || 0) + 1;
-    }
+    for (let i = 0; i < techs.length; i++) result[techs[i]] = (result[techs[i]] || 0) + 1;
     
     let techResult = Object.keys(result).map(key => ({ [key]: result[key] }));
-
-    console.log(techResult);
 
     let conclusions = "";
 
     for (let item in techResult) {
-        $.each(techResult[item],function(i,v){
-            if (!Array.isArray(i)) {
+        $.each(techResult[item], function(i, v) {
+            if (!i.includes("id_")) {
                 conclusions += getTechPrint(i.replaceAll("__", "-").replaceAll("_", " "), `×${v}&nbsp;&nbsp;&nbsp;`);
             }
             else {
@@ -100,8 +101,7 @@ function getTechPrint(tech, extra) {
     if (!Array.isArray(tech))
         return`<i class="${tech}"></i>${extra}`;
     else {
-        switch (tech[0].type)
-        {
+        switch (tech[0].type) {
             case "text":
                 return `<span class='oneLineIcon'>${tech[0].text}</span>${extra}`;
             case "mix-left-icon":
@@ -118,7 +118,7 @@ function getTechPrint(tech, extra) {
     }
 }
 
-function setApps(appCollection, control, techs) {
+function setApps(appCollection, control, techs, customIcons) {
     for (let item in appCollection) {
         let content = '';
         if (appCollection[item].storeLink !== '')
@@ -144,7 +144,11 @@ function setApps(appCollection, control, techs) {
             }
             else {
                 technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
-                addTech(techs, appCollection[item].technologies[technology][0]);
+                addTech(techs, appCollection[item].technologies[technology][0].id);
+
+                if (customIcons !== undefined)
+                    if (_.findWhere(customIcons, appCollection[item].technologies[technology][0]) == null)
+                        customIcons.push(appCollection[item].technologies[technology][0]);
             }
         }
 
@@ -156,7 +160,12 @@ function setApps(appCollection, control, techs) {
 
 function addTech(techs, tech){
     if (techs !== undefined)
-        techs.push(tech.replaceAll(" ", "_").replaceAll("-", "__"));
+        if (!Array.isArray(techs)) { 
+            techs.push(tech.replaceAll(" ", "_").replaceAll("-", "__"));
+        }
+        else {
+            techs.push(tech);
+        }
 }
 
 function filterElem(item, tech, isSupported, array) {
