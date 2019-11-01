@@ -170,7 +170,7 @@ var apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.gnow",
                preview:"https://www.behance.net/gallery/54678483/Gravity-Now-Android",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-json", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fas fa-calculator", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-xml", "mdi mdi-json", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fas fa-calculator", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -271,7 +271,7 @@ var apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.federicostories",
                preview:"",
                technologies: [
-                  "mdi mdi-android-head", "fab fa-java", "fab fa-blogger-b", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "fab fa-java", "mdi mdi-xml", "fab fa-blogger-b", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -644,6 +644,158 @@ var apps =
                preview:"https://www.behance.net/gallery/11047863/Ghost-Hunter",
                technologies: [
                   "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], [{ type:"mix-left-icon", id: "id_access", text: "<sub>Access</sub>", icon: "fas fa-database"}], "mdi mdi-file-chart"
+               ]
+            }
+         ]
+   },
+   {
+      app: "SpotsDialog.Xamarin",
+      link: "",
+      description: "Android AlertDialog with moving spots progress indicator packed as android library.",
+      logo: 'libs/spotsDialog.png',
+      edition: [
+            {
+               yearStart: 2017,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/SpotsDialog.Xamarin/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply"
+               ]
+            }
+         ]
+   },
+   {
+      app: "BubbleTabs.Xamarin",
+      link: "",
+      description: "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
+      logo: 'libs/bubbleTabs.png',
+      edition: [
+            {
+               yearStart: 2017,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/BubbleTabs.Xamarin/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Xamarin-MaterialSearchBar",
+      link: "",
+      description: "Material Design Search Bar for Android Based on the fantastic version by Mancj.",
+      logo: 'libs/searchBar.png',
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchBar/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-xml"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Xamarin-OneMoreFabMenu",
+      link: "",
+      description: "OneMoreFabMenu Another floating action button menu with expand/collapse behavior.",
+      logo: 'libs/oneFabMenu.png',
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Xamarin-MaterialSearchView",
+      link: "",
+      description: "Cute library to implement SearchView in a Material Design Approach.",
+      logo: 'libs/materialSearchView.png',
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchView/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Xamarin.Search.Dialog",
+      link: "",
+      description: "Android Search Dialog Library.",
+      logo: 'libs/searchDialog.png',
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin.Search.Dialog/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Xamarin-Speed-Dial",
+      link: "",
+      description: "Android library providing an implementation of the Material Design Floating Action Button Speed Dial.",
+      logo: 'libs/speedDial.png',
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: 2019,
+               mainTech: "nuget",
+               isSupported: false,
+               storeLink:"https://www.nuget.org/packages/Xamarin-Speed-Dial/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Xamarin-SmartRate",
+      link: "",
+      description: "A library for simple implementation of smart ranking.",
+      logo: 'libs/rating.png',
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin-SmartRate/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply"
                ]
             }
          ]

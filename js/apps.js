@@ -15,6 +15,8 @@ $(function(){
         let w10SupportedTechs = [];
         let webSupported = [];
         let webSupportedTechs = [];
+        let nugetSupported = [];
+        let nugetSupportedTechs = [];
         
         let androidUnsupported = [];
         let w10Unsupported = [];
@@ -22,6 +24,7 @@ $(function(){
         let wpUnsupported = [];
         let w8Unsupported = [];
         let webUnsupported = [];
+        let nugetUnsupported = [];
         let unsupportedTechs = [];
 
         let customIconsArray = [];
@@ -49,11 +52,16 @@ $(function(){
             filterElem(apps[item], 'web', false, webUnsupported);
 
             filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
+
+            filterElem(apps[item], 'nuget', true, nugetSupported);
+
+            filterElem(apps[item], 'nuget', false, nugetUnsupported);
         }
 
         setApps(androidSupported, "playStore", androidSupportedTechs, customIconsArray);
         setApps(w10Supported, "msStore", w10SupportedTechs, customIconsArray);
         setApps(webSupported, "webStore", webSupportedTechs, customIconsArray);
+        setApps(nugetSupported, "nugetsStore", nugetSupportedTechs, customIconsArray);
 
         setApps(androidUnsupported, "unsupportedAndroid", unsupportedTechs, customIconsArray);
         setApps(w8Unsupported, "unsupportedWindows8", unsupportedTechs, customIconsArray);
@@ -61,11 +69,13 @@ $(function(){
         setApps(wpUnsupported, "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
         setApps(webUnsupported, "unsupportedWeb", unsupportedTechs, customIconsArray);
         setApps(wXPUnsupported, "unsupportedVB", unsupportedTechs, customIconsArray);
+        setApps(nugetUnsupported, "unsupportedNuget", unsupportedTechs, customIconsArray);
 
         setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
         setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
         setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
         setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
+        setTechUsed(nugetSupportedTechs, "techsNugetsStore", customIconsArray);
 
         $('[data-toggle="popover"]').popover();
 
@@ -168,12 +178,10 @@ function setApps(appCollection, control, techs, customIcons) {
 
 function addTech(techs, tech){
     if (techs !== undefined)
-        if (!Array.isArray(techs)) { 
+        if (!Array.isArray(techs))
             techs.push(tech.replaceAll(" ", "_").replaceAll("-", "__"));
-        }
-        else {
+        else
             techs.push(tech);
-        }
 }
 
 function filterElem(item, tech, isSupported, array) {
