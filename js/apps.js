@@ -10,6 +10,7 @@ const cardTemplate =
 $(function(){
     function load() {
         let androidSupported = [];
+        let androidSupportedTechs = [];
         let w10Supported = [];
         let webSupported = [];
         
@@ -46,7 +47,7 @@ $(function(){
             filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
         }
 
-        setApps(androidSupported, "playStore");
+        setApps(androidSupported, "playStore", androidSupportedTechs);
         setApps(w10Supported, "msStore");
         setApps(androidUnsupported, "unsupportedAndroid");
         setApps(w8Unsupported, "unsupportedWindows8");
@@ -55,6 +56,8 @@ $(function(){
         setApps(webUnsupported, "unsupportedWeb");
         setApps(webSupported, "webStore");
         setApps(wXPUnsupported, "unsupportedVB");
+
+        setTechUsed(androidSupportedTechs, "techsPlayStore");
 
         $('[data-toggle="popover"]').popover();
 
@@ -66,7 +69,56 @@ $(function(){
     load();
 });
 
-function setApps(appCollection, control) {
+function setTechUsed(techs, container) {
+    const result = { }
+
+    for (let i = 0; i < techs.length; i++) {
+        result[techs[i]] = (result[techs[i]] || 0) + 1;
+    }
+    
+    let techResult = Object.keys(result).map(key => ({ [key]: result[key] }));
+
+    console.log(techResult);
+
+    let conclusions = "";
+
+    for (let item in techResult) {
+        $.each(techResult[item],function(i,v){
+            if (!Array.isArray(i)) {
+                conclusions += getTechPrint(i.replaceAll("__", "-").replaceAll("_", " "), `×${v}&nbsp;&nbsp;&nbsp;`);
+            }
+            else {
+                //technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
+            }
+        });
+    }
+
+    $(`#${container}`).append(conclusions);
+}
+
+function getTechPrint(tech, extra) {
+    if (!Array.isArray(tech))
+        return`<i class="${tech}"></i>${extra}`;
+    else {
+        switch (tech[0].type)
+        {
+            case "text":
+                return `<span class='oneLineIcon'>${tech[0].text}</span>${extra}`;
+            case "mix-left-icon":
+                return `<span class='oneLineIcon'><i class="${tech[0].icon}"></i>${tech[0].text}</span>${extra}`;
+            case "mix-right-icon":
+                return `<span class='oneLineIcon'>${tech[0].text}<i class="${tech[0].icon}"></i></span>${extra}`;
+            case "mix-left-img":
+                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${tech[0].text}</span>${extra}`;
+            case "mix-right-img":
+                return `<span class='oneLineIcon'>${tech[0].text}<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' /></span>${extra}`;
+            case "img":
+                return `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`;
+        }
+    }
+}
+
+function setApps(appCollection, control, techs) {
     for (let item in appCollection) {
         let content = '';
         if (appCollection[item].storeLink !== '')
@@ -86,29 +138,13 @@ function setApps(appCollection, control) {
 
         let technologies = '';
         for (let technology in appCollection[item].technologies) {
-            if (!Array.isArray(appCollection[item].technologies[technology]))
-                technologies += `<i class="${appCollection[item].technologies[technology]}"></i>&nbsp;`;
+            if (!Array.isArray(appCollection[item].technologies[technology])) {
+                technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
+                addTech(techs, appCollection[item].technologies[technology]);
+            }
             else {
-                switch (appCollection[item].technologies[technology][0].type)
-                {
-                    case "text":
-                        technologies += `<span class='oneLineIcon'>${appCollection[item].technologies[technology][0].text}</span>&nbsp;`;
-                        break;
-                    case "mix-left-icon":
-                        technologies += `<span class='oneLineIcon'><i class="${appCollection[item].technologies[technology][0].icon}"></i>${appCollection[item].technologies[technology][0].text}</span>&nbsp;`;
-                        break;
-                    case "mix-right-icon":
-                        technologies += `<span class='oneLineIcon'>${appCollection[item].technologies[technology][0].text}<i class="${appCollection[item].technologies[technology][0].icon}"></i></span>&nbsp;`;
-                        break;
-                    case "mix-left-img":
-                        technologies += `<span class='oneLineIcon'><img class='icons' src='img/icons/${appCollection[item].technologies[technology][0].icon}' alt='icon' />${appCollection[item].technologies[technology][0].text}</span>&nbsp;`;
-                        break;
-                    case "mix-right-img":
-                        technologies += `<span class='oneLineIcon'>${appCollection[item].technologies[technology][0].text}<img class='icons' src='img/icons/${appCollection[item].technologies[technology][0].icon}' alt='icon' /></span>&nbsp;`;
-                        break;
-                    case "img":
-                        technologies += `<img class='icons' src='img/icons/${appCollection[item].technologies[technology][0].icon}' alt='icon' />&nbsp;`;
-                }
+                technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
+                addTech(techs, appCollection[item].technologies[technology][0]);
             }
         }
 
@@ -116,6 +152,11 @@ function setApps(appCollection, control) {
 
         $(`#${control}`).append(cardTemplate.format(appCollection[item].logo, appCollection[item].app, appCollection[item].app, content, appCollection[item].app, tooltip));
     }
+}
+
+function addTech(techs, tech){
+    if (techs !== undefined)
+        techs.push(tech.replaceAll(" ", "_").replaceAll("-", "__"));
 }
 
 function filterElem(item, tech, isSupported, array) {
