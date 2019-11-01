@@ -222,7 +222,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11190853/Diputado-85-Windows-Phone-7",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fas fa-database", "mdi mdi-xaml", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-xaml", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -233,7 +233,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/12188107/Diputado-85-Mobile",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "fas fa-chart-pie", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fas fa-database", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "fas fa-chart-pie", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -586,7 +586,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11048315/MyMaps-Web-Site",
                technologies: [
-                  [{type: "text", id: "id_vbNet", text: "VB.net"}], "fas fa-database", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps"
+                  [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps"
                ]
             }
          ]
