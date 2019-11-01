@@ -62,7 +62,7 @@ $(function(){
         setApps(wXPUnsupported, "unsupportedVB");
 
         setTechUsed(androidSupportedTechs, "techsPlayStore");
-        setTechUsed(w10SupportedTechs, "techsMSStore");
+        setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
 
         $('[data-toggle="popover"]').popover();
 
@@ -74,7 +74,7 @@ $(function(){
     load();
 });
 
-function setTechUsed(techs, container) {
+function setTechUsed(techs, container, customIcons) {
     const result = { }
 
     for (let i = 0; i < techs.length; i++) result[techs[i]] = (result[techs[i]] || 0) + 1;
@@ -85,12 +85,10 @@ function setTechUsed(techs, container) {
 
     for (let item in techResult) {
         $.each(techResult[item], function(i, v) {
-            if (!i.includes("id_")) {
+            if (!i.includes("id_"))
                 conclusions += getTechPrint(i.replaceAll("__", "-").replaceAll("_", " "), `×${v}&nbsp;&nbsp;&nbsp;`);
-            }
-            else {
-                //technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
-            }
+            else
+                conclusions += getTechPrint(customIcons.filter(x=>x.id == i), `×${v}&nbsp;&nbsp;&nbsp;`);
         });
     }
 
