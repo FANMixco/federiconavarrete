@@ -93,31 +93,36 @@ function setTechUsed(techs, container, customIcons) {
 
     for (let item in sortable) {
         if (!sortable[item][0].includes("id_"))
-            conclusions += getTechPrint(sortable[item][0], `×${sortable[item][1]}&nbsp;&nbsp;&nbsp;`);
+            conclusions += getTechPrint(sortable[item][0], `×${sortable[item][1]}`, 3);
         else
-            conclusions += getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `&nbsp;×${sortable[item][1]}&nbsp;&nbsp;&nbsp;`);
+            conclusions += getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `×${sortable[item][1]}`, 3);
     }
 
     $(`#${container}`).append(conclusions);
 }
 
-function getTechPrint(tech, extra) {
+function getTechPrint(tech, extra, noSpaces) {
+    let totalSpaces = "";
+    for (let i=0; i<=noSpaces; i++) {
+        totalSpaces+="&nbsp;";
+    }
+
     if (!Array.isArray(tech))
-        return`<span class='oneLineIcon'><i class="${tech} storeIcon"></i>${extra}</span>`;
+        return`<span class='oneLineIcon'><i class="${tech}"></i>${extra}</span>${totalSpaces}`;
     else
         switch (tech[0].type) {
             case "text":
-                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span>${extra}</span>`;
+                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span>${extra}</span>${totalSpaces}`;
             case "mix-left-icon":
-                return `<span class='oneLineIcon'><i class="${tech[0].icon} storeIcon"></i>${tech[0].text}${extra}</span>`;
+                return `<span class='oneLineIcon'><i class="${tech[0].icon}"></i><span class='storeIcon'>${tech[0].text}</span>${extra}</span>${totalSpaces}`;
             case "mix-right-icon":
-                return `<span class='oneLineIcon'>${tech[0].text}<i class="${tech[0].icon} storeIcon"></i>${extra}</span>`;
+                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span><i class="${tech[0].icon}"></i>${extra}</span>${totalSpaces}`;
             case "mix-left-img":
-                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${tech[0].text}${extra}</span>`;
+                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' /><span class='storeIcon'>${tech[0].text}</span>${extra}</span>${totalSpaces}`;
             case "mix-right-img":
-                return `<span class='oneLineIcon'>${tech[0].text}<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>`;
+                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>${totalSpaces}`;
             case "img":
-                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>`;
+                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>${totalSpaces}`;
         }
 }
 
@@ -142,11 +147,11 @@ function setApps(appCollection, control, techs, customIcons) {
         let technologies = '';
         for (let technology in appCollection[item].technologies) {
             if (!Array.isArray(appCollection[item].technologies[technology])) {
-                technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
+                technologies += getTechPrint(appCollection[item].technologies[technology], '', 1);
                 addTech(techs, appCollection[item].technologies[technology]);
             }
             else {
-                technologies += getTechPrint(appCollection[item].technologies[technology], '&nbsp;');
+                technologies += getTechPrint(appCollection[item].technologies[technology], '', 1);
                 addTech(techs, appCollection[item].technologies[technology][0].id);
 
                 if (customIcons !== undefined)
