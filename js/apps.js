@@ -109,15 +109,15 @@ function getTechPrint(tech, extra) {
             case "text":
                 return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span>${extra}</span>`;
             case "mix-left-icon":
-                return `<span class='oneLineIcon'><i class="${tech[0].icon} storeIcon"></i>${tech[0].text}</span>${extra}`;
+                return `<span class='oneLineIcon'><i class="${tech[0].icon} storeIcon"></i>${tech[0].text}${extra}</span>`;
             case "mix-right-icon":
-                return `<span class='oneLineIcon'>${tech[0].text}<i class="${tech[0].icon} storeIcon"></i></span>${extra}`;
+                return `<span class='oneLineIcon'>${tech[0].text}<i class="${tech[0].icon} storeIcon"></i>${extra}</span>`;
             case "mix-left-img":
-                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${tech[0].text}</span>${extra}`;
+                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${tech[0].text}${extra}</span>`;
             case "mix-right-img":
-                return `<span class='oneLineIcon'>${tech[0].text}<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' /></span>${extra}`;
+                return `<span class='oneLineIcon'>${tech[0].text}<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>`;
             case "img":
-                return `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`;
+                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>`;
         }
 }
 
