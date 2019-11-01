@@ -745,7 +745,7 @@ var apps =
    },
    {
       app: "Xamarin.Search.Dialog",
-      link: "",
+      link: "https://github.com/FANMixco/search-dialog",
       description: "Android Search Dialog Library.",
       logo: 'libs/searchDialog.png',
       edition: [
@@ -783,7 +783,7 @@ var apps =
    },
    {
       app: "Xamarin-SmartRate",
-      link: "",
+      link: "https://github.com/FANMixco/SmartRateUsDialog-Android",
       description: "A library for simple implementation of smart ranking.",
       logo: 'libs/rating.png',
       edition: [
