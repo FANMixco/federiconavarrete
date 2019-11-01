@@ -649,46 +649,8 @@ var apps =
          ]
    },
    {
-      app: "SpotsDialog.Xamarin",
-      link: "",
-      description: "Android AlertDialog with moving spots progress indicator packed as android library.",
-      logo: 'libs/spotsDialog.png',
-      edition: [
-            {
-               yearStart: 2017,
-               yearEnd: undefined,
-               mainTech: "nuget",
-               isSupported: true,
-               storeLink:"https://www.nuget.org/packages/SpotsDialog.Xamarin/",
-               preview:"",
-               technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply"
-               ]
-            }
-         ]
-   },
-   {
-      app: "BubbleTabs.Xamarin",
-      link: "",
-      description: "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
-      logo: 'libs/bubbleTabs.png',
-      edition: [
-            {
-               yearStart: 2017,
-               yearEnd: undefined,
-               mainTech: "nuget",
-               isSupported: true,
-               storeLink:"https://www.nuget.org/packages/BubbleTabs.Xamarin/",
-               preview:"",
-               technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
-               ]
-            }
-         ]
-   },
-   {
       app: "Xamarin-MaterialSearchBar",
-      link: "",
+      link: "https://github.com/FANMixco/Xamarin-SearchBar",
       description: "Material Design Search Bar for Android Based on the fantastic version by Mancj.",
       logo: 'libs/searchBar.png',
       edition: [
@@ -700,7 +662,45 @@ var apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchBar/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-material-design", "mdi mdi-language-csharp", "mdi mdi-xml", "fab fa-git", "mdi mdi-github-circle"
+               ]
+            }
+         ]
+   },
+   {
+      app: "SpotsDialog.Xamarin",
+      link: "https://github.com/FANMixco/spots-dialog",
+      description: "Android AlertDialog with moving spots progress indicator packed as android library.",
+      logo: 'libs/spotsDialog.png',
+      edition: [
+            {
+               yearStart: 2017,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/SpotsDialog.Xamarin/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply", "fab fa-git", "mdi mdi-github-circle"
+               ]
+            }
+         ]
+   },
+   {
+      app: "BubbleTabs.Xamarin",
+      link: "https://github.com/FANMixco/BubbleTab",
+      description: "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
+      logo: 'libs/bubbleTabs.png',
+      edition: [
+            {
+               yearStart: 2017,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/BubbleTabs.Xamarin/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
@@ -719,7 +719,7 @@ var apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-material-design", "mdi mdi-language-csharp", [{type: "img", id: "id_kotlin", icon: "kotlin.svg" }], "mdi mdi-xml"
                ]
             }
          ]
@@ -738,7 +738,7 @@ var apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchView/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-material-design", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
                ]
             }
          ]
@@ -757,7 +757,7 @@ var apps =
                storeLink:"https://www.nuget.org/packages/Xamarin.Search.Dialog/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
@@ -776,7 +776,7 @@ var apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-Speed-Dial/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-material-design", "fab fa-java", "mdi mdi-xml"
                ]
             }
          ]
@@ -795,7 +795,7 @@ var apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-SmartRate/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply", "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
