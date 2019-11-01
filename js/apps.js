@@ -14,14 +14,15 @@ $(function(){
         let w10Supported = [];
         let w10SupportedTechs = [];
         let webSupported = [];
+        let webSupportedTechs = [];
         
         let androidUnsupported = [];
         let w10Unsupported = [];
         let wXPUnsupported = [];
-        
         let wpUnsupported = [];
         let w8Unsupported = [];
         let webUnsupported = [];
+        let unsupportedTechs = [];
 
         let customIconsArray = [];
 
@@ -50,19 +51,21 @@ $(function(){
             filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
         }
 
-        setApps(androidSupported, "playStore", androidSupportedTechs);
+        setApps(androidSupported, "playStore", androidSupportedTechs, customIconsArray);
         setApps(w10Supported, "msStore", w10SupportedTechs, customIconsArray);
+        setApps(webSupported, "webStore", webSupportedTechs, customIconsArray);
 
-        setApps(androidUnsupported, "unsupportedAndroid");
-        setApps(w8Unsupported, "unsupportedWindows8");
-        setApps(w10Unsupported, "unsupportedWindows10");
-        setApps(wpUnsupported, "unsupportedWindowsPhone");
-        setApps(webUnsupported, "unsupportedWeb");
-        setApps(webSupported, "webStore");
-        setApps(wXPUnsupported, "unsupportedVB");
+        setApps(androidUnsupported, "unsupportedAndroid", unsupportedTechs, customIconsArray);
+        setApps(w8Unsupported, "unsupportedWindows8", unsupportedTechs, customIconsArray);
+        setApps(w10Unsupported, "unsupportedWindows10", unsupportedTechs, customIconsArray);
+        setApps(wpUnsupported, "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
+        setApps(webUnsupported, "unsupportedWeb", unsupportedTechs, customIconsArray);
+        setApps(wXPUnsupported, "unsupportedVB", unsupportedTechs, customIconsArray);
 
-        setTechUsed(androidSupportedTechs, "techsPlayStore");
+        setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
         setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
+        setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
+        setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
 
         $('[data-toggle="popover"]').popover();
 
@@ -88,7 +91,7 @@ function setTechUsed(techs, container, customIcons) {
             if (!i.includes("id_"))
                 conclusions += getTechPrint(i.replaceAll("__", "-").replaceAll("_", " "), `×${v}&nbsp;&nbsp;&nbsp;`);
             else
-                conclusions += getTechPrint(customIcons.filter(x=>x.id == i), `×${v}&nbsp;&nbsp;&nbsp;`);
+                conclusions += getTechPrint(customIcons.filter(x=>x.id == i), `&nbsp;×${v}&nbsp;&nbsp;&nbsp;`);
         });
     }
 
@@ -97,11 +100,11 @@ function setTechUsed(techs, container, customIcons) {
 
 function getTechPrint(tech, extra) {
     if (!Array.isArray(tech))
-        return`<i class="${tech}"></i>${extra}`;
+        return`<span class='oneLineIcon'><i class="${tech}"></i>${extra}</span>`;
     else {
         switch (tech[0].type) {
             case "text":
-                return `<span class='oneLineIcon'>${tech[0].text}</span>${extra}`;
+                return `<span class='oneLineIcon'>${tech[0].text}${extra}</span>`;
             case "mix-left-icon":
                 return `<span class='oneLineIcon'><i class="${tech[0].icon}"></i>${tech[0].text}</span>${extra}`;
             case "mix-right-icon":

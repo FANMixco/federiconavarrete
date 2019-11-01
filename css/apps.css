@@ -15,6 +15,11 @@
    margin: 3px;
  }
 
+ .store {
+  font-size: 24px;
+  font-weight: bold;
+ }
+
  sub {
    font-size: xx-small;
  }
