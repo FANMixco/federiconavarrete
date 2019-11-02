@@ -850,5 +850,65 @@ var apps =
                ]
             }
          ]
+   },
+   {
+      app: "Personal website",
+      link: "https://federiconavarrete.com",
+      description: "My personal website.",
+      logo: "personal.png",
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               storeLink:"",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview:"https://www.behance.net/gallery/76883225/Personal-website",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Projects Gallery",
+      link: "https://federiconavarrete.com/apps.html",
+      description: "My collection of projects.",
+      logo: "apps.png",
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               storeLink:"",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview:"https://www.behance.net/gallery/87607183/Projects-Gallery",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ]
+            }
+         ]
+   },
+   {
+      app: "Presentations Gallery",
+      link: "https://federiconavarrete.com/prezis.html",
+      description: "My collection of presentations in Prezi and PowerPoint.",
+      logo: "presentations.png",
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: undefined,
+               storeLink:"",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview:"https://www.behance.net/gallery/87607283/Presentations-Gallery",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ]
+            }
+         ]
    }
 ];
