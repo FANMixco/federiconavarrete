@@ -47,7 +47,7 @@ var apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
                technologies: [
-                "mdi mdi-material-design", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", id: "id_pwa", text: "PWA"}], "mdi mdi-material-design", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
                ]
             },
             {
@@ -58,7 +58,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", id: "id_pwa", text: "PWA"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
                ]
             },
             {
