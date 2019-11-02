@@ -53,7 +53,8 @@ var apps =
             {
                yearStart: 2017,
                yearEnd: 2018,
-               storeLink:"https://fanmixco.github.io/toastmasters-timer/",
+               storeLink:"",
+               link: "https://fanmixco.github.io/toastmasters-timer/",
                mainTech: "web",
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
@@ -462,6 +463,7 @@ var apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
+               link: "http://lodzarts.pl",
                preview:"https://www.behance.net/gallery/76882983/Lodzarts-website",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"

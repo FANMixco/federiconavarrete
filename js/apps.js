@@ -151,6 +151,9 @@ function setApps(appCollection, control, techs, customIcons) {
             content += `<a href="${appCollection[item].storeLink}" class="btn btn-info btn-circle text-white" target="_blank"><i class="fas fa-download"></i></a>`;
         if (appCollection[item].link !== '' && appCollection[item].isSupported)
             content += `<a href="${appCollection[item].link}" class="btn btn-success btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
+        else if (appCollection[item].secondaryLink!== undefined && !appCollection[item].isSupported)
+            if (appCollection[item].secondaryLink !== '')
+                content += `<a href="${appCollection[item].secondaryLink}" class="btn btn-secondary btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
         if (appCollection[item].preview !== '')
             content += `<a href="${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
 
@@ -210,6 +213,7 @@ function createElem(item, edition) {
          yearStart: edition.yearStart,
          yearEnd: edition.yearEnd,
          technologies: edition.technologies,
-         isSupported: edition.isSupported
+         isSupported: edition.isSupported,
+         secondaryLink: edition.link
    };
 }
