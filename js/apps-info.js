@@ -844,7 +844,7 @@ var apps =
                storeLink:"",
                preview:"",
                technologies: [
-                  "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}]
+                  "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-git", "mdi mdi-github-circle"
                ]
             }
          ]
