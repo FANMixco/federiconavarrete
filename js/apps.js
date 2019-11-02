@@ -209,6 +209,7 @@ function createElem(item, edition) {
          technologies: edition.technologies,
          yearStart: edition.yearStart,
          yearEnd: edition.yearEnd,
-         technologies: edition.technologies
+         technologies: edition.technologies,
+         isSupported: edition.isSupported
    };
 }
