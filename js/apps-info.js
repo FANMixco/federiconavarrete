@@ -25,7 +25,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/toastmasters-timer-pro/9n9rhqms0nwg",
                preview:"https://www.behance.net/gallery/77339261/Toastmasters-Timer-Material-Design-Edition",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-material-design", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-file-excel-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-material-design", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-file-excel-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -60,6 +60,17 @@ var apps =
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
                ]
+            },
+            {
+               yearStart: 2017,
+               yearEnd: 2018,
+               mainTech: "windows10",
+               isSupported: false,
+               storeLink:"",
+               preview:"https://www.behance.net/gallery/63506593/Toastmasters-Timer-Windows-10",
+               technologies: [
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+               ]
             }
          ]
    },
@@ -88,7 +99,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/tipicos-salvadorenos/9nblggh0k853",
                preview:"https://www.behance.net/gallery/29299349/Tipicos-Salvadorenos-Windows-Phone-81",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-xml", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "mdi mdi-youtube", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-xml", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "mdi mdi-youtube", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -140,7 +151,7 @@ var apps =
                storeLink:"https://www.microsoft.com/pl-pl/p/la-ruta-maya/9nblggh0k83p",
                preview:"https://www.behance.net/gallery/42826087/The-Mayan-Route-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fab fa-wikipedia-w", "mdi mdi-json", "fas fa-language", "mdi mdi-xml", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fab fa-wikipedia-w", "mdi mdi-json", "fas fa-language", "mdi mdi-xml", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -181,7 +192,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/gravity-now/9nblgggzjlp5",
                preview:"https://www.behance.net/gallery/25675453/Gravity-Now-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-calculator", "mdi mdi-chart-scatter-plot", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-calculator", "mdi mdi-chart-scatter-plot", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -252,7 +263,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42387517/Firefly-App-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-azure", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", id: "id_iot", text: "IoT"}], "mdi mdi-led-on", "mdi mdi-tshirt-crew", "mdi mdi-voice", "mdi mdi-circle-double", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-azure", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", id: "id_iot", text: "IoT"}], "mdi mdi-led-on", "mdi mdi-tshirt-crew", "mdi mdi-voice", "mdi mdi-circle-double", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -290,7 +301,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-us/p/lets-stop-diabetes-premium/9nblggh4r824",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -309,7 +320,7 @@ var apps =
                storeLink:"https://www.microsoft.com/en-gb/p/lets-stop-diabetes/9nblgggzpxrb",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -328,7 +339,7 @@ var apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42382057/Lets-Stop-Diabetes-Web-Site",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -347,7 +358,7 @@ var apps =
                storeLink:"https://www.microsoft.com/pl-pl/p/the-wet-zone/9nblggh67dbd",
                preview:"https://www.behance.net/gallery/12186697/The-Wet-Zone-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-json", "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-json", "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
                ]
             },
             {
@@ -472,7 +483,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/25675817/TulResidence",
                technologies: [
-                  "fab fa-java", "fas fa-leaf", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_hibernate", text: "<sub>Hibernate</sub>", icon: "orm.svg"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-bitbucket"
+                  [{ type:"img", id: "id_jsp", icon: "jsp.svg"}], "fab fa-java", "fas fa-leaf", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_hibernate", text: "<sub>Hibernate</sub>", icon: "orm.svg"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -529,7 +540,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11048475/MaintSys",
                technologies: [
-                  [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
                ]
             }
          ]
@@ -548,7 +559,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11104155/TranSoft",
                technologies: [
-                  [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery"
+                  [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery"
                ]
             }
          ]
@@ -586,7 +597,7 @@ var apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11048315/MyMaps-Web-Site",
                technologies: [
-                  [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps"
+                  [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps"
                ]
             }
          ]
