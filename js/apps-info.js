@@ -810,5 +810,43 @@ var apps =
                ]
             }
          ]
+   },
+   {
+      app: "Timing Field",
+      link: "https://github.com/FANMixco/TimingField",
+      description: "A jquery plugin to transform a timestamp field into an hours/minutes/seconds selector.",
+      logo: 'libs/timePicker.png',
+      edition: [
+            {
+               yearStart: 2018,
+               yearEnd: undefined,
+               mainTech: "js_lib",
+               isSupported: true,
+               storeLink:"",
+               preview:"",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ]
+            }
+         ]
+   },
+   {
+      app: "7 Segment OCR",
+      link: "https://github.com/FANMixco/7-segment-ocr-reader",
+      description: "Class for reading 7 segment displays with C#.",
+      logo: 'libs/7segment.png',
+      edition: [
+            {
+               yearStart: 2015,
+               yearEnd: undefined,
+               mainTech: "uwp_lib",
+               isSupported: true,
+               storeLink:"",
+               preview:"",
+               technologies: [
+                  "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}]
+               ]
+            }
+         ]
    }
 ];

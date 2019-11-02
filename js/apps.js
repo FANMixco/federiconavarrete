@@ -16,7 +16,9 @@ $(function(){
         let webSupported = [];
         let webSupportedTechs = [];
         let nugetSupported = [];
-        let nugetSupportedTechs = [];
+        let libsSupportedTechs = [];
+        let jsLibSupported = [];
+        let uwpLibSupported = [];
         
         let androidUnsupported = [];
         let w10Unsupported = [];
@@ -55,13 +57,19 @@ $(function(){
 
             filterElem(apps[item], 'nuget', true, nugetSupported);
 
+            filterElem(apps[item], 'js_lib', true, jsLibSupported);
+
+            filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
+
             filterElem(apps[item], 'nuget', false, nugetUnsupported);
         }
 
         setApps(androidSupported, "playStore", androidSupportedTechs, customIconsArray);
         setApps(w10Supported, "msStore", w10SupportedTechs, customIconsArray);
         setApps(webSupported, "webStore", webSupportedTechs, customIconsArray);
-        setApps(nugetSupported, "nugetsStore", nugetSupportedTechs, customIconsArray);
+        setApps(nugetSupported, "nugetsStore", libsSupportedTechs, customIconsArray);
+        setApps(jsLibSupported, "jsLibStore", libsSupportedTechs, customIconsArray);
+        setApps(uwpLibSupported, "uwpLibStore", libsSupportedTechs, customIconsArray);
 
         setApps(androidUnsupported, "unsupportedAndroid", unsupportedTechs, customIconsArray);
         setApps(w8Unsupported, "unsupportedWindows8", unsupportedTechs, customIconsArray);
@@ -75,7 +83,7 @@ $(function(){
         setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
         setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
         setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
-        setTechUsed(nugetSupportedTechs, "techsNugetsStore", customIconsArray);
+        setTechUsed(libsSupportedTechs, "techsLibsStore", customIconsArray);
 
         $('[data-toggle="popover"]').popover();
 
@@ -149,7 +157,7 @@ function setApps(appCollection, control, techs, customIcons) {
         let years = appCollection[item].yearStart;
 
         if (appCollection[item].yearStart !== appCollection[item].yearEnd) {
-            years += appCollection[item].yearEnd !== undefined ? ` - ${appCollection[item].yearEnd}` : " -";
+            years += appCollection[item].yearEnd !== undefined ? ` - ${appCollection[item].yearEnd}` : " - now";
         }
         
         let tooltip = `${years}<br><br>${appCollection[item].description}`;
