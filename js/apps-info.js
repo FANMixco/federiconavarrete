@@ -53,7 +53,7 @@ var apps =
             {
                yearStart: 2017,
                yearEnd: 2018,
-               storeLink:"",
+               storeLink:"https://fanmixco.github.io/toastmasters-timer/",
                mainTech: "web",
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",

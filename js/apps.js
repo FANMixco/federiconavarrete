@@ -149,7 +149,7 @@ function setApps(appCollection, control, techs, customIcons) {
         let content = '';
         if (appCollection[item].storeLink !== '')
             content += `<a href="${appCollection[item].storeLink}" class="btn btn-info btn-circle text-white" target="_blank"><i class="fas fa-download"></i></a>`;
-        if (appCollection[item].link !== '')
+        if (appCollection[item].link !== '' && appCollection[item].isSupported)
             content += `<a href="${appCollection[item].link}" class="btn btn-success btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
         if (appCollection[item].preview !== '')
             content += `<a href="${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
