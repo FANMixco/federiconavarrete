@@ -27,6 +27,10 @@
    font-size: xx-small;
  }
 
+ h5 {
+   font-weight: bold;
+ }
+
  .icons {
    vertical-align: middle;
    width: 24px;
