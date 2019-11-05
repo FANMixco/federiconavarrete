@@ -63,13 +63,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
    </head>
    <body>
       <section class="gallery-block cards-gallery">
-         <div class="container">
+         <div id="pptGallery" class="container">
          <div id="header" class="heading">
-            <h2>Federico Navarrete — Presentations Gallery</h2>
+            <h2 id="galleryTitle"></h2>
          </div>
          <!-- Bootstrap CSS -->
          <!-- jQuery first, then Bootstrap JS. -->
-         <!-- Nav tabs -->
+         <!-- Nav tabs 
          <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
                <a class="nav-link active" href="#next" role="tab" data-toggle="tab">Prezi Next</a>
@@ -80,8 +80,8 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <li class="nav-item">
                <a class="nav-link" href="#ppt" role="tab" data-toggle="tab">PowerPoint</a>
             </li>
-         </ul>
-         <!-- Tab panes -->
+         </ul>-->
+         <!-- Tab panes 
          <div class="tab-content">
             <div role="tabpanel" class="tab-pane in active" id="next">
                <div class="row row-container full-width">
@@ -101,14 +101,12 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
                <div class="row justify-content-center" id="pptPowerPoint"></div>
             </div>
-         </div>
+         </div>-->
       </section>
 
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <footer class="blockquote-footer">
-         <div class="footer-copyright text-center py-3">
-            <a rel="license" target="_blank"  href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />All presentations​ in this site are licensed under a <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> and were designed by <a href="https://federiconavarrete.com">Federico Navarrete</a>.
-         </div>
+         <div id="galleryFooter" class="footer-copyright text-center py-3"></div>
       </footer>
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7438484-12"></script>
@@ -120,8 +118,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
         gtag('config', 'UA-7438484-12');
       </script>
 
+      <script src="js/tabs-ppt-info.js"></script>
       <script src="js/ppt-info.js"></script>
       <script src="js/libs/string-manipulation.min.js"></script>
+	  <script src="js/tabGenerator.min.js"></script>
       <script src="js/prezis.min.js"></script>
    </body>
 </html>

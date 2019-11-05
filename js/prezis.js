@@ -11,11 +11,21 @@ const cardTemplate =
 </div>
 </div>`;
 
+const galleryTitle = "Federico Navarrete — Presentations Gallery";
+
+const galleryFooter = `<a rel="license" target="_blank"  href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />All presentations​ in this site are licensed under a <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> and were designed by <a href="https://federiconavarrete.com">Federico Navarrete</a>.`;
+
 $(function(){
     function load() {
+		$('#pptGallery').append(createTabs() + createPanes());
+		
         let preziNext = ppts.filter(x=>x.type == 'next');
         let preziClassic = ppts.filter(x=>x.type == 'classic');
         let powerPoint = ppts.filter(x=>x.type == 'ppt');
+		
+		$("#galleryTitle").append(galleryTitle);
+		
+		$("#galleryFooter").append(galleryFooter);
 
         if (!new URLSearchParams(window.location.search).get('isIframe')) {
             $("#header").show();
