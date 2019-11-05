@@ -1,3 +1,5 @@
+/*This code is property of Federico Navarrete and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
+
 const cardTemplate = 
 `<div class="card border-0 transform-on-hover">
    <img src="img/apps/{0}" alt="{1}" class="card-img-top">
@@ -7,8 +9,22 @@ const cardTemplate =
    </div>
 </div>`;
 
+const galleryTitle = "Federico Navarrete — Projects Gallery";
+
+const galleryFooter = `Copyright &copy; <a class="text-warning" href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> {0}. Some icons were provided by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>`;
+
 $(function(){
     function load() {
+		$('#galleryApps').append(createTabs() + createPanes());
+		
+		$("#galleryTitle").append(galleryTitle);
+		
+		let cYear = new Date().getFullYear();
+		
+		cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
+		
+		$("#galleryFooter").append(galleryFooter.format(cYear));
+		
         let androidSupported = [];
         let androidSupportedTechs = [];
         let w10Supported = [];
