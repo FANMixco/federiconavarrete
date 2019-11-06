@@ -19,9 +19,9 @@ $(function(){
     function load() {
 		$('#pptGallery').append(createTabs() + createPanes());
 		
-        let preziNext = ppts.filter(x=>x.type == 'next');
-        let preziClassic = ppts.filter(x=>x.type == 'classic');
-        let powerPoint = ppts.filter(x=>x.type == 'ppt');
+        let preziNext = ppts.filter(x=>x.type == 'next').sort(sortByProperty('order'));
+        let preziClassic = ppts.filter(x=>x.type == 'classic').sort(sortByProperty('order'));
+        let powerPoint = ppts.filter(x=>x.type == 'ppt').sort(sortByProperty('order'));
 		
 		$("#galleryTitle").append(galleryTitle);
 		

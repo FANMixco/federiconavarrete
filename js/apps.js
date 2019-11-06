@@ -80,20 +80,20 @@ $(function(){
             filterElem(apps[item], 'nuget', false, nugetUnsupported);
         }
 
-        setApps(androidSupported, "playStore", androidSupportedTechs, customIconsArray);
-        setApps(w10Supported, "msStore", w10SupportedTechs, customIconsArray);
-        setApps(webSupported, "webStore", webSupportedTechs, customIconsArray);
-        setApps(nugetSupported, "nugetsStore", libsSupportedTechs, customIconsArray);
-        setApps(jsLibSupported, "jsLibStore", libsSupportedTechs, customIconsArray);
-        setApps(uwpLibSupported, "uwpLibStore", libsSupportedTechs, customIconsArray);
+        setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
+        setApps(w10Supported.sort(sortByProperty('order')), "msStore", w10SupportedTechs, customIconsArray);
+        setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
+        setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
+        setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
+        setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
 
-        setApps(androidUnsupported, "unsupportedAndroid", unsupportedTechs, customIconsArray);
-        setApps(w8Unsupported, "unsupportedWindows8", unsupportedTechs, customIconsArray);
-        setApps(w10Unsupported, "unsupportedWindows10", unsupportedTechs, customIconsArray);
-        setApps(wpUnsupported, "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
-        setApps(webUnsupported, "unsupportedWeb", unsupportedTechs, customIconsArray);
-        setApps(wXPUnsupported, "unsupportedVB", unsupportedTechs, customIconsArray);
-        setApps(nugetUnsupported, "unsupportedNuget", unsupportedTechs, customIconsArray);
+        setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
+        setApps(w8Unsupported.sort(sortByProperty('order')), "unsupportedWindows8", unsupportedTechs, customIconsArray);
+        setApps(w10Unsupported.sort(sortByProperty('order')), "unsupportedWindows10", unsupportedTechs, customIconsArray);
+        setApps(wpUnsupported.sort(sortByProperty('order')), "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
+        setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
+        setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
+        setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
 
         setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
         setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
@@ -230,6 +230,7 @@ function createElem(item, edition) {
          yearEnd: edition.yearEnd,
          technologies: edition.technologies,
          isSupported: edition.isSupported,
-         secondaryLink: edition.link
+         secondaryLink: edition.link,
+         order: edition.order
    };
 }
