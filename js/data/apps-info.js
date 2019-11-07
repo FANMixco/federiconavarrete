@@ -1,4 +1,4 @@
-var apps =
+let apps =
 [ 
    {
       app: "Toastasters Timer",

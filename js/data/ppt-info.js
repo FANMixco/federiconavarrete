@@ -1,4 +1,4 @@
-var ppts = [
+let ppts = [
     {
         name: "Creative - CV, Federico Navarrete",
         preview: "p1.jpg",
@@ -238,5 +238,13 @@ var ppts = [
         link: "https://1drv.ms/p/s!AhpAtowYvNcyj79A8v7yGSofV00Ppg",
         type: "ppt",
         order: 9
+    },
+    {
+        name: "All is about the closing!",
+        preview: "p31.jpg",
+        edited: "2019-11-07",
+        link: "https://prezi.com/view/l61CWrqDqpOvIvDLr02a/",
+        type: "next",
+        order: 11
     }
 ];

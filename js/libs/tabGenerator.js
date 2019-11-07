@@ -18,7 +18,7 @@ const techsInvolvedStr = 'Technologies involved:';
 
 function createTabs() {
 	let print = '';
-	for (let tab in tabsOptions)
+	for (let tab in tabsOptions.sort(sortByProperty('order')))
 		if (tabsOptions[tab].isVisible) {
 			let isActive = tabsOptions[tab].isActive ? " active" : "";
 			print += tabElem.format(isActive, tabsOptions[tab].id, tabsOptions[tab].name);			
@@ -28,7 +28,7 @@ function createTabs() {
 
 function createPanes() {
 	let print = '';
-	for (let pane in panesOptions) {
+	for (let pane in panesOptions.sort(sortByProperty('order'))) {
 		let isActive = panesOptions[pane].isActive ? " in active" : "";
 		print += panElem.format(isActive, panesOptions[pane].id, '{0}');
 		
