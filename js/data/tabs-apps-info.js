@@ -3,31 +3,36 @@ let tabsOptions = [
 		id: "android",
 		name: "Android",
 		isVisible: true,
-		isActive: true
+		isActive: true,
+		order: 1
 	},
 	{
 		id: "windows",
 		name: "Windows 10",
 		isVisible: true,
-		isActive: false
+		isActive: false,
+		order: 2
 	},
 	{
 		id: "web",
 		name: "Web",
 		isVisible: true,
-		isActive: false
+		isActive: false,
+		order: 3
 	},
 	{
 		id: "libraries",
 		name: "Libraries",
 		isVisible: true,
-		isActive: false
+		isActive: false,
+		order: 4
 	},
 	{
 		id: "others",
 		name: "Others",
 		isVisible: true,
-		isActive: false
+		isActive: false,
+		order: 999
 	}
 ];
 
@@ -47,7 +52,8 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "techsPlayStore",
-		isActive: true
+		isActive: true,
+		order: 1
 	},
 	{
 		id: "windows",
@@ -64,7 +70,8 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "techsMSStore",
-		isActive: false
+		isActive: false,
+		order: 2
 	},
 	{
 		id: "web",
@@ -81,7 +88,8 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "techsWebStore",
-		isActive: false
+		isActive: false,
+		order: 3
 	},
 	{
 		id: "libraries",
@@ -106,7 +114,8 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "techsLibsStore",
-		isActive: false
+		isActive: false,
+		order: 4
 	},
 	{
 		id: "others",
@@ -152,6 +161,7 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "techsOldStore",
-		isActive: false
+		isActive: false,
+		order: 999
 	}
 ];

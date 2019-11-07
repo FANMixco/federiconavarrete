@@ -3,19 +3,22 @@ let tabsOptions = [
 		id: "next",
 		name: "Prezi Next",
 		isVisible: true,
-		isActive: true
+		isActive: true,
+		order: 1
 	},
 	{
 		id: "classic",
 		name: "Prezi Classic",
 		isVisible: true,
-		isActive: false
+		isActive: false,
+		order: 2
 	},
 	{
 		id: "ppt",
 		name: "PowerPoint",
 		isVisible: true,
-		isActive: false
+		isActive: false,
+		order: 3
 	}
 ];
 let panesOptions =[
@@ -34,7 +37,8 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "",
-		isActive: true
+		isActive: true,
+		order: 1
 	},
 	{
 		id: "classic",
@@ -51,7 +55,8 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "",
-		isActive: false
+		isActive: false,
+		order: 2
 	},
 	{
 		id: "ppt",
@@ -68,6 +73,7 @@ let panesOptions =[
 			}
 		],
 		techsInvolvedId: "",
-		isActive: false
+		isActive: false,
+		order: 3
 	}
 ];
