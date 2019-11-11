@@ -77,7 +77,7 @@ $(function() {
         }
     });
 
-    $('#contactMeForm').html(`<iframe src="contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`);
+    $('#contactMeForm').html(`<iframe src="pages/contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`);
 
     $("#linkContactMe").click(function(e) {
         e.preventDefault();
