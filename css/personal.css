@@ -103,6 +103,10 @@ iframe {
     height: 325px;
 }
 
+.centerText {
+    text-align: center;
+}
+
 #modelDark {
     background-color: #2C3E50;
     text-align: center;
