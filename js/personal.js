@@ -4,6 +4,37 @@ const iframeApps = `<iframe title='Projects' id='iframeApps' src="apps.html?isIf
 
 const iframePrezis = `<iframe title="Presentations" id='iframePrezis' src="prezis.html?isIframe=true" class="previewerIframe" allowfullscreen></iframe>`;
 
+const review1 = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
+<img class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" loading="lazy" alt="Natalia's slide" />
+</div>
+<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"><a href="https://thinknatalia.com" rel="noreferrer" target="_blank" class="text-dark">Dr. Natalia Wiechowski</a></strong></h5>
+<h6 class="text-dark m-0">Personal Branding Coachsultant | Keynote Speaker 🇩🇪️/🇺🇸 | LinkedIn Strategist |The Middle East's leading Edutainer</h6>
+<p class="m-0 pt-3 text-black">Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!</p>`;
+
+const review2 = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
+<img class="d-block w-100 rounded-circle" loading="lazy" src="img/photos/District-108010.jpg" alt="Gabriela's slide" />
+</div>
+<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Gabriela Roivainen</strong></h5>
+<h6 class="text-dark m-0">Program Quality Director 2018/2019 at <a target="_blank" rel="noreferrer" href="https://toastmastersd108.org" class="text-dark">District 108</a>, <a target="_blank" rel="noreferrer" href="https://www.toastmasters.org" class="text-dark">Toastmasters International</a></h6>
+<div id="reviewGabrielaPDF"></div>
+<div id="downloadReview" class="centerText">
+<a class="btn" target="_blank" href="testimonials/20190603165400926.pdf">
+   <i class="fas fa-download mr-2"></i> Download
+</a>
+</div>`;
+
+const review3 = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
+<img class="d-block w-100 rounded-circle" loading="lazy" src="https://media.licdn.com/dms/image/C4E03AQEWwOzGahyilg/profile-displayphoto-shrink_800_800/0?e=1575504000&v=beta&t=QLCyPVb_9g17hpXhn-xFCLjQfipPuDE_vDaQn7K8Xp4" alt="Edgar's slide">
+</div>
+<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
+<h6 class="text-dark m-0">Java Consultant at Adastra Czech Republic</h6>
+<p class="m-0 pt-3 text-black">I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college. During this time I developed a strong friendship relationship with him. My close association to him made me witness his stupendous growth as a person and as a professional. He's the most agile developer I've ever known. He creates clean, maintainable code in half the time of his peers. This is a consequence of his highly analytical 
+personality and strong passion for computer science.<br /><br />On the other hand, Federico has been working hard to develop his interpersonal skills. To do so, he participated in various communities that require him to take a leadership role, such as Microsoft Student Partners and Toastmasters. In the latter, Federico gained confidence and developed the art of public speaking.<br /><br />There's no doubt that Federico is a person of integrity, with a well-balanced set of technical and interpersonal skills. For all of this, it is my pleasure to recommend Federico.
+</p>`;
+
+const imgLocPortfolio = 'img/portfolio/';
+const imgLocArticles = 'img/articles/';
+
 $(function() {
     let cYear = new Date().getFullYear();
     $("#spanYear").text(cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`);
@@ -20,10 +51,10 @@ $(function() {
         return false;
     });
 
-    var marginTop = 0;
-    var heightIFrame = 600;
+    let marginTop = 0;
+    let heightIFrame = 600;
 
-    var smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+    let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
     if (!smallScreenMobileOS) {
         $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
@@ -45,22 +76,70 @@ $(function() {
         heightIFrame = 560;
     }
 
-    var lastScrollTop = 0;
-    var $navbar = $('.navbar');
-    var navbarHeight = $navbar.outerHeight();
-    var movement = 0;
-    var lastDirection = 0;
+    switch (WURFL.form_factor) {
+        case "Smartphone":
+            $("#imgPPT1").attr("src",`${imgLocPortfolio}rfriends_small.jpg`);
+            $('#imgPPT1').data('src',`${imgLocPortfolio}rfriends_small.jpg`);
+            $("#imgPPT2").attr("src",`${imgLocPortfolio}ponline_small.jpg`);
+            $('#imgPPT2').data('src',`${imgLocPortfolio}ponline_small.jpg`);
+            $("#imgLodzarts").attr("src",`${imgLocPortfolio}lodzarts_small.jpg`);
+            $('#imgLodzarts').data('src',`${imgLocPortfolio}lodzarts_small.jpg`);
+            break;
+        case "Tablet":
+            $("#imgPPT1").attr("src",`${imgLocPortfolio}rfriends_medium.jpg`);
+            $('#imgPPT1').data('src',`${imgLocPortfolio}rfriends_medium.jpg`);
+            $("#imgPPT2").attr("src",`${imgLocPortfolio}ponline_medium.jpg`);
+            $('#imgPPT2').data('src',`${imgLocPortfolio}ponline_medium.jpg`);
+            $("#imgLodzarts").attr("src",`${imgLocPortfolio}lodzarts_medium.jpg`);
+            $('#imgLodzarts').data('src',`${imgLocPortfolio}lodzarts_medium.jpg`);
+            break;
+        default:
+            $("#imgPPT1").attr("src",`${imgLocPortfolio}rfriends.jpg`);
+            $('#imgPPT1').data('src',`${imgLocPortfolio}rfriends.jpg`);
+            $("#imgPPT2").attr("src",`${imgLocPortfolio}ponline.jpg`);
+            $('#imgPPT2').data('src',`${imgLocPortfolio}ponline.jpg`);
+            $("#imgLodzarts").attr("src",`${imgLocPortfolio}lodzarts.jpg`);
+            $('#imgLodzarts').data('src',`${imgLocPortfolio}lodzarts.jpg`);
+            break;
+    }
+
+    switch (WURFL.form_factor) {
+        case "Smartphone":
+            $("#imgArt1").attr("src",`${imgLocArticles}parts_small.png`);
+            $('#imgArt1').data('src',`${imgLocArticles}parts_small.png`);
+            $("#imgArt2").attr("src",`${imgLocArticles}faces_small.jpg`);
+            $('#imgArt2').data('src',`${imgLocArticles}faces_small.jpg`);
+            $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);
+            break;
+        default:
+            $("#imgArt1").attr("src",`${imgLocArticles}parts.png`);
+            $('#imgArt1').data('src',`${imgLocArticles}parts.png`);
+            $("#imgArt2").attr("src",`${imgLocArticles}faces.jpg`);
+            $('#imgArt2').data('src',`${imgLocArticles}faces.jpg`);
+            $("#imgProfile").attr("src",`img/photos/profile.jpg`);
+            break;
+    }
+
+    $("#divReview1").append(review1);
+    $("#divReview2").append(review2);
+    $("#divReview3").append(review3);
+
+    let lastScrollTop = 0;
+    let $navbar = $('.navbar');
+    let navbarHeight = $navbar.outerHeight();
+    let movement = 0;
+    let lastDirection = 0;
 
     $(window).scroll(function(event) {
         if (smallScreenMobileOS) {
-            var st = $(this).scrollTop();
+            let st = $(this).scrollTop();
             movement += st - lastScrollTop;
 
             if (st > lastScrollTop) { // scroll down
                 if (lastDirection != 1) {
                     movement = 0;
                 }
-                var margin = Math.abs(movement);
+                let margin = Math.abs(movement);
                 if (margin > navbarHeight) {
                     margin = navbarHeight;
                 }
@@ -72,7 +151,7 @@ $(function() {
                 if (lastDirection != -1) {
                     movement = 0;
                 }
-                var margin = Math.abs(movement);
+                let margin = Math.abs(movement);
                 if (margin > navbarHeight) {
                     margin = navbarHeight;
                 }
@@ -115,6 +194,6 @@ $(function() {
             $("#contactMe").modal("show");
         }
     }, 30000);
-});
 
- PDFObject.embed("/testimonials/20190603165400926.pdf", "#reviewGabrielaPDF");
+    PDFObject.embed("/testimonials/20190603165400926.pdf", "#reviewGabrielaPDF");
+});
