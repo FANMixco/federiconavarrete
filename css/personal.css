@@ -19,24 +19,45 @@
     height: 315px;
 }
 
-#mainBackground {
-    background-image: url('../img/lake.jpg');
-    background-size: cover;
+@media screen and (max-width: 682px) {
+    #mainBackground {
+        background-image: url('../img/lake_small.jpg');
+        background-size: cover;
+    }
+
+    #skillBusiness {
+        background-image: url('../img/business_small.jpg');
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1364px) and (min-width: 683px) {
+    #mainBackground {
+        background-image: url('../img/lake_medium.jpg');
+        background-size: cover;
+    }
+
+    #skillBusiness {
+        background-image: url('../img/business_medium.jpg');
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1365px) {
+    #mainBackground {
+        background-image: url('../img/lake_large.jpg');
+        background-size: cover;
+    }
+
+    #skillBusiness {
+        background-image: url('../img/business_large.jpg');
+        background-size: cover;
+    }
 }
 
 #imgProfile {
     max-width: 300px;
     border-radius: 50%;
-}
-
-#skills {
-    background-image: url('../img/skills.jpg');
-    background-size: cover;
-}
-
-#skillBusiness {
-    background-image: url('../img/business.jpg');
-    background-size: cover;
 }
 
 .innerSkillsDiv {
@@ -81,7 +102,7 @@
     filter: invert(1);
 }
 
-#elSalvadorIframe{
+.previewerIframe{
     width: 100%;
     height: 450px;
     border: 0;

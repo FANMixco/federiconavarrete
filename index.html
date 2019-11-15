@@ -35,15 +35,14 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
       <link rel="icon" type="image/png" href="img/favicon.png" />
       <!-- Custom fonts for this template -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css" />
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-      <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" defer />
+      <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css" defer />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" defer />
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" defer />
       <!-- Custom styles for this template -->
       <link href="css/freelancer.min.css" rel="stylesheet" />
       <link href="css/personal.min.css" rel="stylesheet" />
-      <link href="css/carousel.min.css" rel="stylesheet" />
-      <script src="js/libs/pdfobject.min.js"></script>
+      <link href="css/carousel.min.css" rel="stylesheet" defer />
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://federiconavarrete.com">
@@ -109,7 +108,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
             <div class="row">
                <div class="col-sm">
-                  <p class="lead">Welcome everyone! I'm an IT Consultant and Bilingual Public Speaker 🇬🇧/ 🇪🇸 from <a href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who is constantly challenging himself.
+                  <p class="lead">Welcome everyone! I'm an IT Consultant and Bilingual Public Speaker 🇬🇧/ 🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who is constantly challenging himself.
                      <br />
                      <br />
                      I've been in the IT industry for more than 10+ years, where I've created innovative apps while developing useful soft skills.
@@ -124,7 +123,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="text-center mt-4">
                <h3 class="text-center text-uppercase text-white">I invite you to download my fav App!</h3>
                <br />
-               <a class="btn btn-xl btn-outline-light" target="_blank" href="https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute">
+               <a class="btn btn-xl btn-outline-light" rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute">
                   <i class="fas fa-download mr-2"></i> The Mayan Route!
                </a>
             </div>
@@ -204,7 +203,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   </li>
                   <li class="list-inline-item btnOptional">
                      <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                     <img alt="nature" src="img/nature.svg" />
+                     <img alt="nature" src="img/nature.svg" loading="lazy" />
                      </a>
                   </li>
                   <li class="list-inline-item" id='btnExtraHobbies'>
@@ -403,19 +402,19 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                <div class="carousel-inner">
                   <div class="carousel-item active">
                      <div class="carousel-video-inner">
-                        <iframe class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe title="Timer" class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://github.com/FANMixco/toastmasters-timer" target="_blank">Toastmasters Timer</a>, 2018 - now</h4>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="carousel-video-inner">
-                        <iframe class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe title="LSD" class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://www.microsoft.com/en-gb/p/lets-stop-diabetes-premium/9nblggh4r824?rtc=1" target="_blank">Let's Stop Diabetes</a>, 2015 - now</h4>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="carousel-video-inner">
-                        <iframe class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe title="GNow" class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h4 class="text-center text-uppercase text-secondary mb-0"><a href="http://gravitynow.tk" target="_blank">Gravity Now!</a>, 2014 - now</h4>
                      </div>
                   </div>
@@ -431,7 +430,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
             <br >
             <p class="btn-more">
-               <a data-toggle="modal" data-target="#appsPreview" href="#appsPreview" class="btn btn-dark">Projects Gallery</a>
+               <a id="aAppsPreview" data-toggle="modal" data-target="#appsPreview" href="#appsPreview" class="btn btn-dark">Projects Gallery</a>
             </p>
          </div>
       </section>
@@ -444,11 +443,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <hr>
             <div class="row">
                <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/XJyWAErkNtY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="Dr. Nats" class="iVideos" src="https://www.youtube.com/embed/XJyWAErkNtY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
                   <h4 class="text-center text-uppercase text-secondary mb-0">Moments of Truth with Dr Natalia Wiechowski</h4>
                </div>
                <div class="col-sm">
-                  <iframe class="iVideos" src="https://www.youtube.com/embed/-c2zayFv14Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="Missing" class="iVideos" src="https://www.youtube.com/embed/-c2zayFv14Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
                   <h4 class="text-center text-uppercase text-secondary mb-0">The Missing Variable</h4>
                </div>
             </div>
@@ -458,20 +457,20 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="row">
                <div class="col-sm">
                   <a href="https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS" target="_blank">
-                  <img loading="lazy" class="img-fluid asyncImage" src="img/portfolio/rfriends.jpg" data-src="img/portfolio/rfriends.jpg" alt="Are robots your friends?" />
+                  <img loading="lazy" class="img-fluid" src="img/portfolio/rfriends.jpg" data-src="img/portfolio/rfriends.jpg" alt="Are robots your friends?" />
                   </a>
                   <h4 class="text-center text-uppercase text-secondary mb-0">Are robots your friends?</h4>
                </div>
                <div class="col-sm">
                   <a href="https://prezi.com/view/WFmIP01XeUsnpcQUpsgt" target="_blank">
-                  <img loading="lazy" class="img-fluid asyncImage" src="img/portfolio/ponline.jpg" data-src="img/portfolio/ponline.jpg" alt="how to improve our presence online" />
+                  <img loading="lazy" class="img-fluid" src="img/portfolio/ponline.jpg" data-src="img/portfolio/ponline.jpg" alt="how to improve our presence online" />
                   </a>
                   <h4 class="text-center text-uppercase text-secondary mb-0">How to improve our presence online.</h4>
                </div>
             </div>
             <br>
    			<p class="btn-more">
-               <a data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark">Presentations Gallery</a>
+               <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark">Presentations Gallery</a>
 	   		</p>
             <hr>
             <h3 class="text-center text-uppercase text-secondary mb-0"><i class="fas fa-calendar-day"></i> Organized Events</h3>
@@ -479,7 +478,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="row">
                <div class="col-sm">
                   <a href="http://lodzarts.pl" target="_blank">
-                  <img loading="lazy" class="img-fluid asyncImage" src="img/portfolio/lodzarts.jpg" data-src="img/portfolio/lodzarts.jpg" alt="lodzarts" />
+                  <img loading="lazy" class="img-fluid" src="img/portfolio/lodzarts.jpg" data-src="img/portfolio/lodzarts.jpg" alt="lodzarts" />
                   </a>
                   <h4 class="text-center text-uppercase text-secondary mb-0">Łódźarts - Toastmasters Conference, Division A, <a href="https://toastmastersd108.org" target="_blank">District 108</a></h4>
                </div>
@@ -513,13 +512,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <h2 class="text-center text-uppercase text-white">Recommended Books and Literature</h2>
             <hr class="star-black-dark mb-5">
             <div class="row row-auto">
-               <iframe loading="lazy" src="pages/books.html" id="booksIframe"></iframe>
+               <iframe title="books" loading="lazy" src="pages/books.html" id="booksIframe"></iframe>
             </div>
             <hr class="wHR">
-            <h3 class="text-center text-uppercase text-white"><img src="img/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" /> My Salvadoran Legends and Fairy tales</h3>
+            <h3 class="text-center text-uppercase text-white"><img loading="lazy" src="img/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" /> My Salvadoran Legends and Fairy tales</h3>
             <hr class="star-black-dark mb-5">
             <div class="row">
-               <iframe loading="lazy" src="pages/legends.html" id="legendsIframe"></iframe>
+               <iframe title="legends" loading="lazy" src="pages/legends.html" id="legendsIframe"></iframe>
             </div>
          </div>
       </section>
@@ -594,7 +593,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <div class="copyright py-4 text-center text-white">
          <div class="container">
             <small>
-               Copyright &copy; Federico Navarrete &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> <script>let cYear = new Date().getFullYear();document.write(cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`);</script>
+               Copyright &copy; Federico Navarrete &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> <span id="spanYear"></span>
             </small>
          </div>
       </div>
@@ -606,7 +605,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <span aria-hidden="true">&times;</span>
                   </button>
                   <div class="picReviewers img-box p-1 border rounded-circle m-auto">
-                     <img class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" loading="lazy" alt="First slide" />
+                     <img class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" loading="lazy" alt="Natalia's slide" />
                   </div>
                   <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"><a href="https://thinknatalia.com" target="_blank" class="text-dark">Dr. Natalia Wiechowski</a></strong></h5>
                   <h6 class="text-dark m-0">Personal Branding Coachsultant | Keynote Speaker 🇩🇪️/🇺🇸 | LinkedIn Strategist |The Middle East's leading Edutainer</h6>
@@ -623,7 +622,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <span aria-hidden="true">&times;</span>
                   </button>
                   <div class="picReviewers img-box p-1 border rounded-circle m-auto">
-                     <img class="d-block w-100 rounded-circle" loading="lazy" src="img/photos/District-108010.jpg" />
+                     <img class="d-block w-100 rounded-circle" loading="lazy" src="img/photos/District-108010.jpg" alt="Gabriela's slide" />
                   </div>
                   <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Gabriela Roivainen</strong></h5>
                   <h6 class="text-dark m-0">Program Quality Director 2018/2019 at <a target="_blank" href="https://toastmastersd108.org" class="text-dark">District 108</a>, <a target="_blank" href="https://www.toastmasters.org" class="text-dark">Toastmasters International</a></h6>
@@ -645,7 +644,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <span aria-hidden="true">&times;</span>
                   </button>
                   <div class="picReviewers img-box p-1 border rounded-circle m-auto">
-                     <img class="d-block w-100 rounded-circle" loading="lazy" src="https://media.licdn.com/dms/image/C4E03AQEWwOzGahyilg/profile-displayphoto-shrink_800_800/0?e=1575504000&v=beta&t=QLCyPVb_9g17hpXhn-xFCLjQfipPuDE_vDaQn7K8Xp4" alt="First slide">
+                     <img class="d-block w-100 rounded-circle" loading="lazy" src="https://media.licdn.com/dms/image/C4E03AQEWwOzGahyilg/profile-displayphoto-shrink_800_800/0?e=1575504000&v=beta&t=QLCyPVb_9g17hpXhn-xFCLjQfipPuDE_vDaQn7K8Xp4" alt="Edgar's slide">
                   </div>
                   <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
                   <h6 class="text-dark m-0">Java Consultant at Adastra Czech Republic</h6>
@@ -671,11 +670,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <div class="modal" tabindex="-1" role="dialog" id="elSalvador">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-               <div class="modal-body">
+               <div class="modal-body" id="divIframElSalvador">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                   </button>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" id="elSalvadorIframe" allowfullscreen></iframe>
                </div>
             </div>
          </div>
@@ -692,9 +690,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
-               <div class="modal-body">
-                  <iframe src="apps.html?isIframe=true" id="elSalvadorIframe" allowfullscreen></iframe>
-               </div>
+               <div class="modal-body" id="divApps"></div>
             </div>
          </div>
       </div>
@@ -710,9 +706,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
-               <div class="modal-body">
-                  <iframe src="prezis.html?isIframe=true" id="elSalvadorIframe" allowfullscreen></iframe>
-               </div>
+               <div class="modal-body" id="divPrezis"></div>
             </div>
          </div>
       </div>
@@ -764,7 +758,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      </li>
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Azure DevOps" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle externalImgAzure" href="https://dev.azure.com/federiconavarrete">
-                           <img src="img/AzureDevOps.svg" alt="DevOps" />
+                           <img src="img/AzureDevOps.svg" alt="DevOps" loading="lazy" />
                         </a>
                      </li>
                   </ul>
@@ -815,7 +809,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      </li>
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                        <img src="img/nature.svg" alt="nature" />
+                        <img src="img/nature.svg" alt="nature" loading="lazy" />
                         </a>
                      </li>
                   </ul>
@@ -834,18 +828,18 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- Custom scripts for this template -->
+      <script src="js/libs/pdfobject.min.js"></script>
       <script src="js/freelancer.min.js"></script>
       <script src="//wurfl.io/wurfl.js"></script>
       <script src="js/personal.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
       <!-- Global Site Tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7438484-9"></script>
       <script>
-         window.dataLayer = window.dataLayer || [];
+         /*window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
          
-         gtag('config', 'UA-7438484-9');
+         gtag('config', 'UA-7438484-9');*/
       </script>
       <!--script src="js/libs/chatbot.min.js"></script-->
    </body>
