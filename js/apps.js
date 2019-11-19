@@ -13,6 +13,8 @@ const galleryTitle = "Federico Navarrete — Projects Gallery";
 
 const galleryFooter = `Copyright &copy; <a class="text-warning" href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> {0}. Some icons were provided by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>`;
 
+const iconSpan = "<span class='oneLineIcon' {0}>{1}</span>";
+
 $(function(){
     function load() {
 		$('#galleryApps').append(createTabs() + createPanes());
@@ -104,6 +106,8 @@ $(function(){
         $('[data-toggle="popover"]').popover();
 
         $('.popover-dismiss').popover({ trigger: 'focus' });
+
+        $('[data-toggle="tooltip"]').tooltip();
     }
 
     load();
@@ -115,9 +119,8 @@ function setTechUsed(techs, container, customIcons) {
     for (let i = 0; i < techs.length; i++) result[techs[i]] = (result[techs[i]] || 0) + 1;
 
     var sortable = [];
-    for (var item in result) {
+    for (var item in result)
         sortable.push([item, result[item]]);
-    }
     
     sortable.sort(function(a, b) {
         return b[1] - a[1];
@@ -125,39 +128,44 @@ function setTechUsed(techs, container, customIcons) {
 
     let conclusions = "";
 
-    for (let item in sortable) {
+    for (let item in sortable)
         if (!sortable[item][0].includes("id_"))
             conclusions += getTechPrint(sortable[item][0], `×${sortable[item][1]}`, 3);
         else
             conclusions += getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `×${sortable[item][1]}`, 3);
-    }
 
     $(`#${container}`).append(conclusions);
 }
 
 function getTechPrint(tech, extra, noSpaces) {
     let totalSpaces = "";
-    for (let i=0; i<=noSpaces; i++) {
-        totalSpaces+="&nbsp;";
-    }
+    for (let i=0; i<=noSpaces; i++)
+        totalSpaces += "&nbsp;";
 
     if (!Array.isArray(tech))
-        return`<span class='oneLineIcon'><i class="${tech}"></i>${extra}</span>${totalSpaces}`;
-    else
+        return `${iconSpan.format("", `<i class="${tech}"></i>${extra}`)}${totalSpaces}`;
+    else {
+        let tooltip = '';
+        if (tech[0].tooltip)
+            tooltip = `data-toggle="tooltip" title="${tech[0].tooltip}"`;
+
         switch (tech[0].type) {
             case "text":
-                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span>${extra}</span>${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<span class='storeIcon'>${tech[0].text}</span>${extra}`)}${totalSpaces}`;
             case "mix-left-icon":
-                return `<span class='oneLineIcon'><i class="${tech[0].icon}"></i><span class='storeIcon'>${tech[0].text}</span>${extra}</span>${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<i class="${tech[0].icon}"></i><span class='storeIcon'>${tech[0].text}</span>${extra}`)}${totalSpaces}`;
             case "mix-right-icon":
-                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span><i class="${tech[0].icon}"></i>${extra}</span>${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<span class='storeIcon'>${tech[0].text}</span><i class="${tech[0].icon}"></i>${extra}`)}${totalSpaces}`;
             case "mix-left-img":
-                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' /><span class='storeIcon'>${tech[0].text}</span>${extra}</span>${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' /><span class='storeIcon'>${tech[0].text}</span>${extra}`)}${totalSpaces}`;
             case "mix-right-img":
-                return `<span class='oneLineIcon'><span class='storeIcon'>${tech[0].text}</span><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<span class='storeIcon'>${tech[0].text}</span><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`)}${totalSpaces}`;
             case "img":
-                return `<span class='oneLineIcon'><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}</span>${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`)}${totalSpaces}`;
+            case "icon":
+                return `${iconSpan.format(tooltip, `<i class="${tech[0].icon}"></i>${extra}`)}${totalSpaces}`;
         }
+    }
 }
 
 function setApps(appCollection, control, techs, customIcons) {

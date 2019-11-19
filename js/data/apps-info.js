@@ -1,5 +1,5 @@
 let apps =
-[ 
+[
    {
       app: "Toastasters Timer",
       link: "https://toastmasterstimer.tk",
@@ -14,7 +14,7 @@ let apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.tmtimer.tk.supernova.tmtimer",
                preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-material-design", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-file-excel-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
             },
@@ -26,7 +26,7 @@ let apps =
                storeLink:"https://www.microsoft.com/en-us/p/toastmasters-timer-pro/9n9rhqms0nwg",
                preview:"https://www.behance.net/gallery/77339261/Toastmasters-Timer-Material-Design-Edition",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-material-design", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-file-excel-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
             },
@@ -38,7 +38,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "mdi mdi-file-excel-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
             },
@@ -50,7 +50,7 @@ let apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
                technologies: [
-                  [{type: "text", id: "id_pwa", text: "PWA"}], "mdi mdi-material-design", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", "mdi mdi-pdf-box", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 1
             },
@@ -63,7 +63,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
                technologies: [
-                  [{type: "text", id: "id_pwa", text: "PWA"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 1
             },
@@ -75,7 +75,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/63506593/Toastmasters-Timer-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", "mdi mdi-pdf-box", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
             }
@@ -95,7 +95,7 @@ let apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.tipsal",
                preview:"https://www.behance.net/gallery/81946027/Tipicos-Salvadorenos-Material-Design",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-material-design", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-xml", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 2
             },
@@ -107,7 +107,7 @@ let apps =
                storeLink:"https://www.microsoft.com/en-us/p/tipicos-salvadorenos/9nblggh0k853",
                preview:"https://www.behance.net/gallery/29299349/Tipicos-Salvadorenos-Windows-Phone-81",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-xml", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "mdi mdi-youtube", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 2
             },
@@ -119,7 +119,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11104165/Tipicos-Salvadorenos-Windows-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
             },
@@ -131,7 +131,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/12187191/Tipicos-Salvadorenos-Windows-Phone-7",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
             }
@@ -151,7 +151,7 @@ let apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute",
                preview:"https://www.behance.net/gallery/83173325/The-Mayan-Route-Material-Design",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-material-design", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "fab fa-wikipedia-w", "mdi mdi-json", "mdi mdi-xml", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "fab fa-wikipedia-w", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             },
@@ -163,7 +163,7 @@ let apps =
                storeLink:"https://www.microsoft.com/pl-pl/p/la-ruta-maya/9nblggh0k83p",
                preview:"https://www.behance.net/gallery/42826087/The-Mayan-Route-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fab fa-wikipedia-w", "mdi mdi-json", "fas fa-language", "mdi mdi-xml", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fab fa-wikipedia-w", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             },
@@ -175,7 +175,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11104041/La-Ruta-Maya-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-xaml", "mdi mdi-azure", "mdi mdi-language-php", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "mdi mdi-azure", "mdi mdi-language-php", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 2
             }
@@ -195,7 +195,7 @@ let apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.gnow",
                preview:"https://www.behance.net/gallery/54678483/Gravity-Now-Android",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-xml", "mdi mdi-json", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fas fa-calculator", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 4
             },
@@ -207,7 +207,7 @@ let apps =
                storeLink:"https://www.microsoft.com/en-us/p/gravity-now/9nblgggzjlp5",
                preview:"https://www.behance.net/gallery/25675453/Gravity-Now-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-calculator", "mdi mdi-chart-scatter-plot", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "mdi mdi-chart-scatter-plot", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 4
             },
@@ -219,7 +219,7 @@ let apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/85723563/Gravity-Now-Angular-Edition",
                technologies: [
-                  "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", "mdi mdi-json", [{type: "img", id: "id_osm", text: "osm", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", "fas fa-calculator", "mdi mdi-azure-devops", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_osm", text: "osm", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "mdi mdi-azure-devops", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 2
             },
@@ -231,7 +231,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/25675249/Gravity-Now",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "fas fa-calculator", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 2
             }
@@ -251,7 +251,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11190853/Diputado-85-Windows-Phone-7",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-xaml", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "fas fa-chart-pie", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             },
@@ -263,7 +263,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/12188107/Diputado-85-Mobile",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "fas fa-chart-pie", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "fas fa-chart-pie", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             }
@@ -283,7 +283,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42387517/Firefly-App-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-azure", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", id: "id_iot", text: "IoT"}], "mdi mdi-led-on", "mdi mdi-tshirt-crew", "mdi mdi-voice", "mdi mdi-circle-double", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], "mdi mdi-azure", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", id: "id_iot", text: "IoT", tooltip: "Internet of Things"}], "mdi mdi-led-on", [{type: "icon", id: "id_eTextile", icon: "mdi mdi-tshirt-crew", tooltip: "e-Textile"}], [{type: "icon", id: "id_voiceR", icon: "mdi mdi-voice", tooltip: "Voice recognition"}], [{type: "icon", id: "id_cortana", icon: "mdi mdi-circle-double", tooltip: "Cortana"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 2
             }
@@ -303,7 +303,7 @@ let apps =
                storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.federicostories",
                preview:"",
                technologies: [
-                  "mdi mdi-android-head", "fab fa-java", "mdi mdi-xml", "fab fa-blogger-b", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-blogger-b", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 5
             }
@@ -323,7 +323,7 @@ let apps =
                storeLink:"https://www.microsoft.com/en-us/p/lets-stop-diabetes-premium/9nblggh4r824",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", tooltip: "7 segment OCR", icon: "7segment.svg"}], [{type: "icon", id: "id_voiceR", icon: "mdi mdi-voice", tooltip: "Voice recognition"}], [{type: "icon", id: "id_cortana", icon: "mdi mdi-circle-double", tooltip: "Cortana"}], "mdi mdi-barcode-scan", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", [{type: "icon", id: "id_gamefication", icon: "fas fa-gamepad", tooltip: "Gamefication"}], [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 5
             }
@@ -343,7 +343,7 @@ let apps =
                storeLink:"https://www.microsoft.com/en-gb/p/lets-stop-diabetes/9nblgggzpxrb",
                preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-xaml", "mdi mdi-json", "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", icon: "7segment.svg"}], "mdi mdi-voice", "mdi mdi-circle-double", "mdi mdi-barcode-scan", "mdi mdi-file-excel-box", "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", "fas fa-gamepad", "mdi mdi-youtube", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", tooltip: "7 segment OCR", icon: "7segment.svg"}], [{type: "icon", id: "id_voiceR", icon: "mdi mdi-voice", tooltip: "Voice recognition"}], [{type: "icon", id: "id_cortana", icon: "mdi mdi-circle-double", tooltip: "Cortana"}], "mdi mdi-barcode-scan", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", [{type: "icon", id: "id_gamefication", icon: "fas fa-gamepad", tooltip: "Gamefication"}], [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 6
             }
@@ -363,7 +363,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42382057/Lets-Stop-Diabetes-Web-Site",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "mdi mdi-xaml", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             }
@@ -383,7 +383,7 @@ let apps =
                storeLink:"https://www.microsoft.com/pl-pl/p/the-wet-zone/9nblggh67dbd",
                preview:"https://www.behance.net/gallery/12186697/The-Wet-Zone-Windows-Phone-8",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-json", "mdi mdi-xaml", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 7
             },
@@ -395,7 +395,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/25674827/The-Wet-Zone-Web-Site-and-Tutorial",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-language-php", "mdi mdi-json", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "fas fa-route", "mdi mdi-crosshairs-gps", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-language-php", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "fas fa-route", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 4
             }
@@ -415,7 +415,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11104169/Tu_ElSalvador-Android",
                technologies: [
-                  "mdi mdi-android-head", "fab fa-java", "mdi mdi-cordova", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-android-head", "fab fa-java", "mdi mdi-cordova", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 2
             }
@@ -435,7 +435,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/87226435/QuickDer",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-cordova", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-json", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-cordova", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 4
             }
@@ -455,7 +455,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/42387741/Farmapp-Windows-Phone-81",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-json", [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "mdi mdi-crosshairs-gps", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "mdi mdi-crosshairs-gps", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 5
             }
@@ -475,7 +475,7 @@ let apps =
                storeLink:"",
                preview:"https://www.behance.net/gallery/11328733/Tu-Costa-Windows-Phone-7",
                technologies: [
-                  "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-json", [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "fas fa-language", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 6
             }
@@ -496,7 +496,7 @@ let apps =
                link: "http://lodzarts.pl",
                preview:"https://www.behance.net/gallery/76882983/Lodzarts-website",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fas fa-language", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 5
             }
@@ -516,7 +516,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/25675817/TulResidence",
                technologies: [
-                  [{ type:"img", id: "id_jsp", icon: "jsp.svg"}], "fab fa-java", "fas fa-leaf", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_hibernate", text: "<sub>Hibernate</sub>", icon: "orm.svg"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-bitbucket"
+                  [{ type:"img", id: "id_jsp", icon: "jsp.svg"}], "fab fa-java", "fas fa-leaf", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_hibernate", text: "<sub>Hibernate</sub>", icon: "orm.svg"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 6
             }
@@ -536,7 +536,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/47766987/Virtual-Cloud-School",
                technologies: [
-                  "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 7
             }
@@ -556,7 +556,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11104189/Talento-Siman",
                technologies: [
-                  "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 8
             }
@@ -576,7 +576,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11048475/MaintSys",
                technologies: [
-                  [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 9
             }
@@ -616,7 +616,7 @@ let apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/11105699/WebSite-Lions-Club-of-Santa-Tecla",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             }
@@ -656,7 +656,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/11104171/ArevaloGroup-Web-App",
                technologies: [
-                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", "mdi mdi-bitbucket"
+                  "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 12
             }
@@ -716,7 +716,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchBar/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-material-design", "mdi mdi-language-csharp", "mdi mdi-xml", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 1
             }
@@ -736,7 +736,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/SpotsDialog.Xamarin/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_dialog", icon: "mdi mdi-message-reply", tooltip: "Dialog/Modal"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 2
             }
@@ -756,7 +756,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/BubbleTabs.Xamarin/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 3
             }
@@ -776,7 +776,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-material-design", "mdi mdi-language-csharp", [{type: "img", id: "id_kotlin", icon: "kotlin.svg" }], "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "img", id: "id_kotlin", icon: "kotlin.svg" }], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}]
                ],
                order: 4
             }
@@ -796,7 +796,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchView/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-material-design", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}]
                ],
                order: 5
             }
@@ -816,7 +816,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/Xamarin.Search.Dialog/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_dialog", icon: "mdi mdi-message-reply", tooltip: "Dialog/Modal"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 6
             }
@@ -836,7 +836,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-Speed-Dial/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "mdi mdi-material-design", "fab fa-java", "mdi mdi-xml"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}]
                ],
                order: 1
             }
@@ -856,7 +856,7 @@ let apps =
                storeLink:"https://www.nuget.org/packages/Xamarin-SmartRate/",
                preview:"",
                technologies: [
-                  [{type: "img", id: "id_nuget", icon: "nuget.svg" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", "mdi mdi-xml", "mdi mdi-message-reply", "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_dialog", icon: "mdi mdi-message-reply", tooltip: "Dialog/Modal"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 7
             }
@@ -896,7 +896,7 @@ let apps =
                storeLink:"",
                preview:"",
                technologies: [
-                  "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP"}], "fab fa-git", "mdi mdi-github-circle"
+                  "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], "fab fa-git", "mdi mdi-github-circle"
                ],
                order: 1
             }
