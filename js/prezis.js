@@ -32,15 +32,12 @@ $(function(){
             $(".gallery-block").css('padding-top', '60px');
         }
 
-        for (let item in preziNext) {
+        for (let item in preziNext)
             createPPT("pptNext", preziNext[item].link, preziNext[item].preview, preziNext[item].name, preziNext[item].name, moment(preziNext[item].edited).format('MMM D, YYYY').toUpperCase());
-        }
-        for (let item in preziClassic) {
+        for (let item in preziClassic)
             createPPT("pptClassic", preziClassic[item].link, preziClassic[item].preview, preziClassic[item].name, preziClassic[item].name, moment(preziClassic[item].edited).format('MMM D, YYYY').toUpperCase());
-        }
-        for (let item in powerPoint) {
+        for (let item in powerPoint)
             createPPT("pptPowerPoint", powerPoint[item].link, powerPoint[item].preview, powerPoint[item].name, powerPoint[item].name, moment(powerPoint[item].edited).format('MMM D, YYYY').toUpperCase());
-        }
     }
 
     function createPPT(control, url, src, alt, name, edited) {
