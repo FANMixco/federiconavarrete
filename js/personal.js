@@ -123,6 +123,7 @@ $(function() {
     $("#divReview1").append(review1);
     $("#divReview2").append(review2);
     $("#divReview3").append(review3);
+    $("#imgProfile").show();
 
     let lastScrollTop = 0;
     let $navbar = $('.navbar');
