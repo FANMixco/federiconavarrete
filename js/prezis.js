@@ -1,3 +1,5 @@
+/*This code is property of Federico Navarrete and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
+
 const cardTemplate = 
 `<div class="col-md-6 col-lg-4">
 <div class="card border-0 transform-on-hover">
@@ -6,7 +8,7 @@ const cardTemplate =
    </a>
    <div class="card-body">
       <h6><a href="#">{3}</a></h6>
-      <p class="text-muted card-text">EDITED {4}</p>
+      <p class="text-muted card-text">{4} {5}</p>
    </div>
 </div>
 </div>`;
@@ -33,15 +35,19 @@ $(function(){
         }
 
         for (let item in preziNext)
-            createPPT("pptNext", preziNext[item].link, preziNext[item].preview, preziNext[item].name, preziNext[item].name, moment(preziNext[item].edited).format('MMM D, YYYY').toUpperCase());
+            createPPT("pptNext", preziNext[item].link, preziNext[item].preview, preziNext[item].name, preziNext[item].name, presentedOrEdited(preziNext[item].wasPresented), moment(preziNext[item].edited).format('MMM D, YYYY').toUpperCase());
         for (let item in preziClassic)
-            createPPT("pptClassic", preziClassic[item].link, preziClassic[item].preview, preziClassic[item].name, preziClassic[item].name, moment(preziClassic[item].edited).format('MMM D, YYYY').toUpperCase());
+            createPPT("pptClassic", preziClassic[item].link, preziClassic[item].preview, preziClassic[item].name, preziClassic[item].name, presentedOrEdited(preziClassic[item].wasPresented), moment(preziClassic[item].edited).format('MMM D, YYYY').toUpperCase());
         for (let item in powerPoint)
-            createPPT("pptPowerPoint", powerPoint[item].link, powerPoint[item].preview, powerPoint[item].name, powerPoint[item].name, moment(powerPoint[item].edited).format('MMM D, YYYY').toUpperCase());
+            createPPT("pptPowerPoint", powerPoint[item].link, powerPoint[item].preview, powerPoint[item].name, powerPoint[item].name, presentedOrEdited(powerPoint[item].wasPresented), moment(powerPoint[item].edited).format('MMM D, YYYY').toUpperCase());
     }
 
-    function createPPT(control, url, src, alt, name, edited) {
-        $(`#${control}`).append(cardTemplate.format(url, src, alt, name, edited));
+    function presentedOrEdited(wasPresented) {
+        return wasPresented ? "PRESENTED ON" : "EDITED";
+    }
+
+    function createPPT(control, url, src, alt, name, presented, edited) {
+        $(`#${control}`).append(cardTemplate.format(url, src, alt, name, presented, edited));
     }
 
     load();

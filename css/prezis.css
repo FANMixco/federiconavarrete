@@ -23,3 +23,8 @@ h4 {
     height: 25px;
     margin-top: -3px;
 }
+
+footer {
+  margin: auto;
+  text-align: center;
+}
