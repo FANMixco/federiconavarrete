@@ -1,12 +1,21 @@
 let ppts = [
     {
+        name: "Creative CV - 2020",
+        preview: "p33.jpg",
+        edited: "2020-01-04",
+        wasPresented: false,
+        link: "https://prezi.com/view/OIhmzaYZIOWFUV2Ibs7H",
+        type: "next",
+        order: 1
+    },
+    {
         name: "Creative - CV, Federico Navarrete",
         preview: "p1.jpg",
         edited: "2019-10-07",
         wasPresented: false,
         link: "https://prezi.com/view/HiN8y183svgykMtSa2St",
         type: "next",
-        order: 1
+        order: 2
     },
     {
         name: "The goddess Áróra and her kingdom",
@@ -15,7 +24,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/Om1QSV7mt7TSbh2Vky7F",
         type: "next",
-        order: 2
+        order: 3
     },
     {
         name: "How to improve our presence online",
@@ -24,7 +33,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/WFmIP01XeUsnpcQUpsgt",
         type: "next",
-        order: 3
+        order: 4
     },
     {
         name: "The Ultimate Elevator Pitch",
@@ -33,7 +42,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/c17ykmHBmjsEGTZuh75c",
         type: "next",
-        order: 4
+        order: 5
     },
     {
         name: "Are robots your friends?",
@@ -42,7 +51,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS",
         type: "next",
-        order: 5
+        order: 6
     },
     {
         name: "What's next?",
@@ -51,7 +60,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/myp85uY10ynzis7eEFmJ",
         type: "next",
-        order: 6
+        order: 7
     },
     {
         name: "Delegation: The Finest Art",
@@ -60,7 +69,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/VRbPd1EEVbFqhFGF9BYZ",
         type: "next",
-        order: 7
+        order: 8
     },
     {
         name: "Club Officers Training 2018/2019",
@@ -69,7 +78,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/IrsrOLj1NfPOas6S62zB",
         type: "next",
-        order: 8
+        order: 9
     },
     {
         name: "The Future of the Workforce",
@@ -78,7 +87,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/d92HrKMdehdZyfSsMZrY",
         type: "next",
-        order: 9
+        order: 10
     },
     {
         name: "A Goal-Oriented Life",
@@ -87,7 +96,7 @@ let ppts = [
         wasPresented: true,
         link: "https://prezi.com/view/pWl4pscZA2O6T3ps5sdV",
         type: "next",
-        order: 10
+        order: 11
     },
     {
         name: "Make science cool!",
