@@ -189,12 +189,5 @@ $(function() {
             $("#divPrezis").append(iframePrezis);
     });
 
-    setTimeout(function() {
-        if (localStorage.getItem("firstTimeContact") === null) {
-            localStorage.setItem("firstTimeContact", Date.now());
-            $("#contactMe").modal("show");
-        }
-    }, 30000);
-
     PDFObject.embed("/testimonials/20190603165400926.pdf", "#reviewGabrielaPDF");
 });
