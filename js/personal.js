@@ -24,7 +24,7 @@ const review2 = `<div class="picReviewers img-box p-1 border rounded-circle m-au
 </div>`;
 
 const review3 = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
-<img class="d-block w-100 rounded-circle" loading="lazy" src="https://media.licdn.com/dms/image/C4E03AQEWwOzGahyilg/profile-displayphoto-shrink_800_800/0?e=1575504000&v=beta&t=QLCyPVb_9g17hpXhn-xFCLjQfipPuDE_vDaQn7K8Xp4" alt="Edgar's slide">
+<img class="d-block w-100 rounded-circle" loading="lazy" src="img/photos/edgar.jpeg" alt="Edgar's slide">
 </div>
 <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
 <h6 class="text-dark m-0">Java Consultant at Adastra Czech Republic</h6>
