@@ -105,15 +105,15 @@ $(function() {
 
     switch (WURFL.form_factor) {
         case "Smartphone":
-            $("#imgArt1").attr("src",`${imgLocArticles}parts_small.png`);
-            $('#imgArt1').data('src',`${imgLocArticles}parts_small.png`);
+            $("#imgArt1").attr("src",`${imgLocArticles}lowCode_small.png`);
+            $('#imgArt1').data('src',`${imgLocArticles}lowCode_small.png`);
             $("#imgArt2").attr("src",`${imgLocArticles}faces_small.jpg`);
             $('#imgArt2').data('src',`${imgLocArticles}faces_small.jpg`);
             $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);
             break;
         default:
-            $("#imgArt1").attr("src",`${imgLocArticles}parts.png`);
-            $('#imgArt1').data('src',`${imgLocArticles}parts.png`);
+            $("#imgArt1").attr("src",`${imgLocArticles}lowCode.png`);
+            $('#imgArt1').data('src',`${imgLocArticles}lowCode.png`);
             $("#imgArt2").attr("src",`${imgLocArticles}faces.jpg`);
             $('#imgArt2').data('src',`${imgLocArticles}faces.jpg`);
             $("#imgProfile").attr("src",`img/photos/profile.jpg`);
