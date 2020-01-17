@@ -92,9 +92,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
             <img class="img-fluid mb-5 d-block mx-auto" style="display: none!important;" loading="lazy" id="imgProfile" alt="image profile" />
-            <h1 class="text-uppercase mb-0">Federico Navarrete</h1>
+            <h1 class="text-uppercase mb-0" id="hName"></h1>
             <hr class="star-light">
-            <h2 class="font-weight-light mb-0">IT Consultant 💡 and Bilingual Public Speaker 🇬🇧/ 🇪🇸</h2>
+            <h2 class="font-weight-light mb-0" id="hHeadline"></h2>
          </div>
       </header>
       <!-- About Section -->
@@ -103,131 +103,24 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <h2 class="text-center text-uppercase text-white">About me</h2>
             <hr class="star-black-dark mb-5">
             <div class="text-center mt-4">
-               <h3 class="text-center text-uppercase text-white">I help companies and individuals solve IT challenges in an innovative, agile and creative manner! 💡💡💡</h3>
+               <h3 class="text-center text-uppercase text-white" id="hIntro"></h3>
                <br />
             </div>
-            <div class="row">
-               <div class="col-sm">
-                  <p class="lead">Welcome everyone! I'm an IT Consultant and Bilingual Public Speaker 🇬🇧/ 🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who is constantly challenging himself.
-                     <br />
-                     <br />
-                     I've been in the IT industry for over 10+ years, where I've created innovative apps while developing useful soft skills.
-                  </p>
-               </div>
-               <div class="col-sm">
-                  <p class="lead">Furthermore, I'm a Machine Learning Enthusiast, who enjoys challenges! Especially <i>Innovation</i> and <i>Public Speaking</i> ones like Microsoft Imagine Cup.
-                  </p>
-                  <p class="lead text-uppercase text-warning carousel-video-inner "><i>What about you? Are you ready for your next challenge?</i></p>
-               </div>
-            </div>
-            <div class="text-center mt-4">
+            <div class="row" id="divAbout"></div>
+            <div class="text-center mt-4" id="favApp">
                <h3 class="text-center text-uppercase text-white">I invite you to download my fav App!</h3>
                <br />
-               <a class="btn btn-xl btn-outline-light" rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute">
-                  <i class="fas fa-download mr-2"></i> The Mayan Route!
-               </a>
             </div>
-            <div class="text-center mt-4 divSpace">
+            <div class="text-center mt-4 divSpace" id="divHobbies">
                <h3 class="text-center text-uppercase text-white">Hobbies</h3>
                <hr class="star-black-dark mb-5">
-               <ul class="list-inline mb-0">
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Innovation & Entrepreneurship / Intrapreneurship" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                     <img alt="bulb" src="img/bulb-money-solid.svg" />
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Creating a better world" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-globe-americas"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Public speaking" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-voice extraIcons"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Photography" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-camera-retro"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Travelling" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-airport extraIcons"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-gamepad"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Board games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-dice"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Creative writing" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-pen-fancy"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-pillar"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-flag-usa"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-swimmer"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-theater-masks"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Conferences & Networking" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-users"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-telescope extraIcons"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                     <img alt="nature" src="img/nature.svg" loading="lazy" />
-                     </a>
-                  </li>
-                  <li class="list-inline-item" id='btnExtraHobbies'>
-                     <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherHobbies">
-                        <i class="fas fa-plus"></i>
-                     </a>
-                  </li>
-               </ul>
+               <ul class="list-inline mb-0" id="hobbiesList"></ul>
             </div>
             <br />
-            <div class="container divSpace">
+            <div class="container divSpace" id="divAwards">
                <h3 class="text-center text-uppercase text-white"><i class="fas fa-medal"></i> Awards</h3>
                <hr class="star-black-dark mb-5">
-               <div class="row">
-                  <div class="col-lg-4 ml-auto">
-                     <p class="lead">Triple Crown by Toastmasters International 2018<br /><br />1st place in the Faculty ranking of the WEEIA and IFE 2016</p>
-                  </div>
-                  <div class="col-lg-4 mr-auto">
-                     <p class="lead">Best scientific paper in the iNOTICE Conference 2016<br /><br />Top 5 in the Microsoft Imagine Cup of Poland 2016 in the category World Citizenship 2016</p>
-                  </div>
-                  <div class="col-lg-4 mr-auto">
-                     <p class="lead">1st place in the Cisco Switch Up Challenge "The Internet of Everything" 2016<br /><br /><a href="https://2014.spaceappschallenge.org/awards/#globalawards" rel="noreferrer" class="text-danger">Top 5 of The Most Inspiring projects of SpaceApps Challenge of NASA 2014</a></p>
-                  </div>
-               </div>
+               <div class="row" id="awardsList"></div>
             </div>
          </div>
       </section>
@@ -236,110 +129,22 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container" id="divSkillsContainer">
             <h2 class="text-center text-uppercase text-white"><i class="fas fa-laptop-code"></i> Technical Skills</h2>
             <hr class="star-black mb-5">
-            <div class="row" class="innerSkillsDiv">
-               <div class="col">
-                  <p class="lead">Cloud / Mobile / Web Dev <br><br>C# & .NET Core<br /><br /></p>
-               </div>
-               <div class="col">
-                  <p class="lead">Angular 8+<br><br>PWA</p>
-               </div>
-               <div class="col">
-                  <p class="lead">Xamarin.Android<br /><br />Google Maps API</p>
-               </div>
-               <div class="col">
-                  <p class="lead">Agile - Scrum<br /><br />CICD — Azure DevOps</p>
-               </div>
-            </div>
+            <div class="row" class="innerSkillsDiv" id="divTechSkills"></div>
             <div class="row">
                <p class="btn-more">
                   <button class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiDev1 multiDev2 multiDev3">More …</button>
                </p>
-               <div class="row cards-row">
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiDev1">
-                        <div class="card card-body mini-cards">
-                           Azure<br /><br />
-                           Visual Studio & Code<br /><br />
-                           SQL Server & SQLite
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiDev2">
-                        <div class="card card-body mini-cards">
-                           ASP MVC<br /><br />
-                           HTML5 / CSS3 / JS<br /><br />
-                           UIX
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiDev3">
-                        <div class="card card-body mini-cards">
-                           RESTful Web Services<br /><br />
-                           Versioning — Git<br /><br />
-                           Entity Framework
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body mini-cards">
-                           ITSM — ITIL v4<br /><br />
-                           ATDD<br /><br />
-                           RPA — UiPath &amp; <span class="text-danger" title="Automation Anywhere" data-toggle="tooltip">AA</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <div class="row cards-row" id="divTechSkillsOthers"></div>
             </div>
             <br />
             <h2 class="text-center text-uppercase text-white"><i class="fas fa-chalkboard-teacher"></i> Soft and Business Skills</h2>
             <hr class="star-black mb-5">
-            <div class="row" class="innerSkillsDiv">
-               <div class="col">
-                  <p class="lead">Leadership<br><br>Employee training</p>
-               </div>
-               <div class="col">
-                  <p class="lead">IT consultancy<br><br>Emerging technologies research</p>
-               </div>
-               <div class="col">
-                  <p class="lead">Storytelling<br><br>Presentation design</p>
-               </div>
-            </div>
+            <div class="row" class="innerSkillsDiv" id="divSoftSkills"></div>
             <div class="row">
                <p class="btn-more">
-                  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse-business" aria-expanded="false" aria-controls="multiBS1 multiBS2 multiBS3">More …</button>
+                  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse-business" aria-expanded="false" aria-controls="multiBS2 multiBS1 multiBS0">More …</button>
                </p>
-               <div class="row cards-row">
-                  <div class="col">
-                     <div class="collapse multi-collapse-business" id="multiBS1">
-                        <div class="card card-body mini-cards">
-                           Project management<br /><br />
-                           Mentoring & Coaching<br /><br />
-                           Team building
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse-business" id="multiBS2">
-                        <div class="card card-body mini-cards">
-                           Requirements collection<br /><br />
-                           Innovative planning<br /><br />
-                           Business analysis
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse-business" id="multiBS3">
-                        <div class="card card-body mini-cards">
-                           Organizing events<br /><br />
-                           Creative writing<br /><br />
-                           Elevator pitching
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <div class="row cards-row" id="divSoftSkillsOther"></div>
             </div>
          </div>
       </section>
@@ -802,6 +607,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      
+      <script src="js/libs/translations.js"></script>
+
       <!-- Custom scripts for this template -->
       <script src="js/libs/pdfobject.min.js"></script>
       <script src="js/freelancer.min.js"></script>

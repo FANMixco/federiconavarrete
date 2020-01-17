@@ -46,7 +46,6 @@ $(function() {
         window.open("https://federiconavarrete.com/prezis.html");
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
     $(".ignore-click").click(function() {
         return false;
     });
@@ -190,4 +189,5 @@ $(function() {
     });
 
     PDFObject.embed("/testimonials/20190603165400926.pdf", "#reviewGabrielaPDF");
+    $('[data-toggle="tooltip"]').tooltip();
 });
