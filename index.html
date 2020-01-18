@@ -159,32 +159,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                      </ol>
-                     <div class="carousel-inner mt-4">
-                        <div class="carousel-item text-center active">
-                           <div class="img-box p-1 border rounded-circle m-auto">
-                              <img loading="lazy" class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" alt="Natalia slide" />
-                           </div>
-                           <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"><a href="https://thinknatalia.com" rel="noreferrer" target="_blank" class="text-danger">Dr. Natalia Wiechowski</a></strong></h5>
-                           <h6 class="text-white m-0">Personal Branding Coachsultant | Keynote Speaker 🇩🇪️/🇺🇸 | LinkedIn Strategist |The Middle East's leading Edutainer</h6>
-                           <p class="m-0 pt-3 text-white">Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … <a class="text-danger" data-toggle="modal" data-target="#nataliaReview" href="#nataliaReview">Read more</a></p>
-                        </div>
-                        <div class="carousel-item text-center">
-                           <div class="img-box p-1 border rounded-circle m-auto">
-                              <img loading="lazy" class="d-block w-100 rounded-circle" src="img/photos/District-108010.jpg" alt="Gabriela slide" />
-                           </div>
-                           <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Gabriela Roivainen</strong></h5>
-                           <h6 class="text-white m-0">Program Quality Director 2018/2019 at <a class="text-danger" target="_blank" href="https://toastmastersd108.org" rel="noreferrer">District 108</a>, <a class="text-danger" target="_blank" href="https://www.toastmasters.org" rel="noreferrer">Toastmasters International</a></h6>
-                           <p class="m-0 pt-3 text-white">I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland … <a data-toggle="modal" data-target="#gabrielaReview" class="text-danger" href="#gabrielaReview">Read more</a></p>
-                        </div>
-                        <div class="carousel-item text-center">
-                           <div class="img-box p-1 border rounded-circle m-auto">
-                              <img loading="lazy" class="d-block w-100 rounded-circle" src="img/photos/edgar.jpeg" alt="Edgar slide" />
-                           </div>
-                           <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
-                           <h6 class="text-white m-0">Java Consultant at Adastra Czech Republic</h6>
-                           <p class="m-0 pt-3 text-white">I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college … <a data-toggle="modal" data-target="#edgarReview" class="text-danger" href="#edgarReview">Read more</a></p>
-                        </div>
-                     </div>
+                     <div class="carousel-inner mt-4" id="divReviewsPreviews"></div>
                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <i class="fa fa-chevron-left fa-lg text-muted"></i>
                         <span class="sr-only">Previous</span>
@@ -301,7 +276,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </small>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="nataliaReview">
+      <div class="modal" tabindex="-1" role="dialog" id="review1">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body" id="divReview1">
@@ -312,7 +287,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="gabrielaReview">
+      <div class="modal" tabindex="-1" role="dialog" id="review2">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div id="divReview2" class="modal-body">
@@ -323,7 +298,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="edgarReview">
+      <div class="modal" tabindex="-1" role="dialog" id="review3">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div id="divReview3" class="modal-body">
@@ -428,7 +403,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Bootstrap core JavaScript -->
       <script src="js/libs/underscore-min.js"></script>
       <script src="//wurfl.io/wurfl.js"></script>
-      
+
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

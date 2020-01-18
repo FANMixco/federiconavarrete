@@ -12,8 +12,73 @@ $.getScript(`${langLoc}${lang}/generics.js`).done(function() {
     $.getScript(`${langLoc}${lang}/organizedEvents.js`).done(loadOrganizedEvents);
     $.getScript(`${langLoc}${lang}/articlesList.js`).done(loadArticles);
     $.getScript(`${langLoc}${lang}/socialMediasLists.js`).done(loadSocialMedias);
+    $.getScript(`${langLoc}${lang}/reviewsList.js`).done(loadReviews);
 });
 
+function loadReviews() {
+    const { reviews, isVisible } = reviewsList;
+
+    if (isVisible) {
+        reviews.forEach(function(item, index) {
+
+            let name = item.externalLink !== "" ? `<a href="${item.externalLink}" rel="noreferrer" target="_blank" class="text-danger">${item.name}</a>` : item.name;
+
+            let active = item.isActive ? " active" : "";
+
+            let currentReview = index + 1;
+
+            let review = `<div class="carousel-item text-center${active}">
+                <div class="img-box p-1 border rounded-circle m-auto">
+                    <img loading="lazy" class="d-block w-100 rounded-circle" src="${item.img}" alt="review${currentReview} slide" />
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">${name}</strong></h5>
+                <h6 class="text-white m-0">${item.title}</h6>
+                <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-danger" data-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
+            </div>`;
+
+            $("#divReviewsPreviews").append(review);
+
+            let longReview = "";
+
+            if (item.isPDF) {
+                longReview = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
+                <img class="d-block w-100 rounded-circle" loading="lazy" src="${item.img}" alt="review${currentReview} slide" />
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">${name}</strong></h5>
+                <h6 class="text-dark m-0">${item.title}</h6>
+                <p class="text-dark m-0 centerText">${item.date}</p>
+                <div id="review${currentReview}PDF"></div>
+                <div class="centerText">
+                <a class="btn" target="_blank" href="${item.pdfLocation}">
+                   <i class="fas fa-download mr-2"></i> ${genericTranslations.download}
+                </a>
+                </div>`;
+            }
+            else {
+                longReview = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
+                <img class="d-block w-100 rounded-circle" src="${item.img}" loading="lazy" alt="review${index + 1} slide" />
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">${name}</strong></h5>
+                <p class="text-dark m-0">${item.title}</p>
+                <h6 class="text-dark m-0 centerText">${item.date}</h6>
+                <p class="m-0 pt-3 text-black">${item.review}</p>`;
+            }
+
+            console.log(currentReview);
+            console.log(longReview);
+
+            $(`#divReview${currentReview}`).append(longReview);
+
+            if (item.isPDF) {
+                PDFObject.embed("/testimonials/20190603165400926.pdf", `#review${currentReview}PDF`);
+    $('[data-toggle="tooltip"]').tooltip();
+            }
+        });
+    }
+    else {
+        $("#divReviews").hide();
+    }
+}
 
 function loadBasicInfo() {
     const { name, headline, headlineIntro, aboutDesc, favApp, telephone, email, skype } = basicInfo;
