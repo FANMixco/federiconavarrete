@@ -4,7 +4,8 @@ let hobbiesList = {
 			"title": `Innovation & Entrepreneurship / Intrapreneurship`,
 			"icon": `img/bulb-money-solid.svg`,
 			"isIcon": false,
-			"isOpt": false
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Creating a better world",
@@ -88,7 +89,8 @@ let hobbiesList = {
 			"title": "Mountains & Lakes",
 			"icon": "img/nature.svg",
 			"isIcon": false,
-			"isOpt": true
+			"isOpt": true,
+			"externalClass": "externalImg"
 		}
 	],
 	"isVisible": true

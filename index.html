@@ -204,26 +204,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <h2 class="text-center text-uppercase text-secondary mb-0">Personal projects</h2>
             <hr class="star-dark mb-5">
             <div id="videoCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="carousel-video-inner">
-                        <iframe title="Timer" class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://github.com/FANMixco/toastmasters-timer" rel="noreferrer" target="_blank">Toastmasters Timer</a>, 2018 - now</h4>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="carousel-video-inner">
-                        <iframe title="LSD" class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://www.microsoft.com/en-gb/p/lets-stop-diabetes-premium/9nblggh4r824?rtc=1" rel="noreferrer" target="_blank">Let's Stop Diabetes</a>, 2015 - now</h4>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="carousel-video-inner">
-                        <iframe title="GNow" class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4 class="text-center text-uppercase text-secondary mb-0"><a href="http://gravitynow.tk" rel="noreferrer" target="_blank">Gravity Now!</a>, 2014 - now</h4>
-                     </div>
-                  </div>
-               </div>
+               <div class="carousel-inner" id="personalProjects"></div>
                <a id="carousel-control-prev-video" class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
                   <i class="fa fa-chevron-left fa-lg text-muted"></i>
                   <span class="sr-only">Previous</span>
@@ -244,50 +225,21 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0">Presentations &amp; Organized Events</h2>
             <hr class="star-dark mb-5">
-            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="mdi mdi-voice"></i> Public Speaking</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPublicSpeaking"><i class="mdi mdi-voice"></i> Public Speaking</h3>
             <hr>
-            <div class="row">
-               <div class="col-sm">
-                  <iframe title="Dr. Nats" class="iVideos" src="https://www.youtube.com/embed/XJyWAErkNtY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Moments of Truth with Dr Natalia Wiechowski</h4>
-               </div>
-               <div class="col-sm">
-                  <iframe title="Missing" class="iVideos" src="https://www.youtube.com/embed/-c2zayFv14Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">The Missing Variable</h4>
-               </div>
-            </div>
+            <div class="row" id="divVideos"></div>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="mdi mdi-presentation-play"></i> Presentations</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPresentations"><i class="mdi mdi-presentation-play"></i> Presentations</h3>
             <hr>
-            <div class="row">
-               <div class="col-sm">
-                  <a href="https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS" rel="noreferrer" target="_blank">
-                     <img id="imgPPT1" loading="lazy" class="img-fluid" alt="Are robots your friends?" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Are robots your friends?</h4>
-               </div>
-               <div class="col-sm">
-                  <a href="https://prezi.com/view/WFmIP01XeUsnpcQUpsgt" rel="noreferrer" target="_blank">
-                     <img id="imgPPT2" loading="lazy" class="img-fluid" alt="how to improve our presence online" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">How to improve our presence online.</h4>
-               </div>
-            </div>
-            <br>
-   			<p class="btn-more">
+            <div class="row" id="divPPTs"></div>
+            <br />
+   			<p class="btn-more" id="pPPTs">
                <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark">Presentations Gallery</a>
 	   		</p>
             <hr>
             <h3 class="text-center text-uppercase text-secondary mb-0"><i class="fas fa-calendar-day"></i> Organized Events</h3>
             <hr>
-            <div class="row">
-               <div class="col-sm">
-                  <a href="http://lodzarts.pl" rel="noreferrer" target="_blank">
-                     <img loading="lazy" class="img-fluid" id="imgLodzarts" alt="lodzarts" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Łódźarts - Toastmasters Conference, Division A, <a href="https://toastmastersd108.org" rel="noreferrer" target="_blank">District 108</a></h4>
-               </div>
-            </div>
+            <div class="row" id="divEvents"></div>
          </div>
       </section>
       <!-- Articles Grid Section -->
@@ -295,20 +247,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0"><i class="far fa-newspaper"></i> Articles</h2>
             <hr class="star-dark mb-5">
-            <div class="row">
-               <div class="col-sm">
-                  <a href="https://www.linkedin.com/pulse/low-code-platforms-next-big-thing-federico-navarrete/" target="_blank" rel="noreferrer">
-                     <img loading="lazy" class="img-fluid" id="imgArt1" alt="Low Code Platforms" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Are Low-Code Platforms the next big thing in IT?</h4>
-               </div>
-               <div class="col-sm">
-                  <a href="https://www.linkedin.com/pulse/four-faces-automation-federico-navarrete/" target="_blank" rel="noreferrer">
-                     <img loading="lazy" class="img-fluid" id="imgArt2" alt="Automation" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">The Four Faces of Automation</h4>
-               </div>
-            </div>
+            <div class="row" id="divArticles"></div>
          </div>
       </section>
       <!-- Books Section -->
@@ -333,22 +272,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="row">
                <div class="col-md-4 mb-5 mb-lg-0">
                   <h4 class="text-uppercase mb-4">Contact me</h4>
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Email" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="mailto:&#102;&#101;&#100;&#101;&#114;&#105;&#099;&#111;&#046;&#110;&#097;&#118;&#097;&#114;&#114;&#101;&#116;&#101;&#064;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#046;&#099;&#111;&#109;?subject=Contact me (FANMixco site)" rel="noreferrer">
-                        <i class="fas fa-at"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Telephone" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="tel:+48422886718" rel="noreferrer">
-                        <i class="fas fa-phone"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Skype" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="skype:fanmixco?call" rel="noreferrer">
-                        <i class="fab fa-fw fa-skype"></i>
-                        </a>
-                     </li>
+                  <ul class="list-inline mb-0" id="listContacts">
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Contact Me" class="btn btn-outline-light btn-social text-center rounded-circle" id="linkContactMe">
                         <i class="fas fa-envelope-open"></i>
@@ -358,33 +282,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
                <div class="col-md-4 mb-5 mb-lg-0">
                   <h4 class="text-uppercase mb-4">Around the Web</h4>
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="LinkedIn" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/fanmixco" rel="noreferrer">
-                           <i class="fab fa-fw fa-linkedin-in"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="YouTube Channel" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/c/FedericoNavarrete" rel="noreferrer">
-                           <i class="fab fa-fw fa-youtube"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Portfolio" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.behance.net/fanmixco" rel="noreferrer">
-                           <i class="fab fa-fw fa-behance"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Federico Stories" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://federicostories.blogspot.com" rel="noreferrer">
-                           <i class="fab fa-fw fa-blogger-b"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherLocs">
-                           <i class="fas fa-plus"></i>
-                        </a>
-                     </li>
-                  </ul>
+                  <ul class="list-inline mb-0" id="socialMediaBasic"></ul>
                </div>
                <div class="col-md-4">
                   <h4 class="text-uppercase mb-4">About Freelancer</h4>
@@ -501,48 +399,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   </button>
                </div>
                <div class="modal-body" id="modelDark">
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Supernova IC" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://supernovaic.tk" rel="noreferrer">
-                           <i class="fas fa-fw fa-building"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Supernova IC's Blog" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="http://supernovaic.blogspot.com/" rel="noreferrer">
-                           <i class="fab fa-blogger"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="GitHub" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/FANMixco" rel="noreferrer">
-                           <i class="fab fa-fw fa-github"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Instagram" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/federico_the_consultant" rel="noreferrer">
-                           <i class="fab fa-fw fa-instagram"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Quora" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" rel="noreferrer" href="https://www.quora.com/profile/Federico-Navarrete-1">
-                           <i class="fab fa-quora"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="StackOverflow" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" rel="noreferrer" href="https://stackoverflow.com/users/2889347/federico-navarrete" rel="noreferrer">
-                           <i class="fab fa-fw fa-stack-overflow"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Dev" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" rel="noreferrer" href="https://dev.to/fanmixco">
-                           <i class="fab fa-dev"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Azure DevOps" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle externalImgAzure" href="https://dev.azure.com/federiconavarrete" rel="noreferrer">
-                           <img src="img/AzureDevOps.svg" alt="DevOps" loading="lazy" />
-                        </a>
-                     </li>
-                  </ul>
+                  <ul class="list-inline mb-0" id="socialMediaOthers"></ul>
                </div>
             </div>
          </div>
@@ -557,7 +414,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   </button>
                </div>
                <div class="modal-body" id="modalBlack">
-                  <ul class="list-inline mb-0">
+                  <ul class="list-inline mb-0" id="optHobbies">
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
                         <i class="fas fa-gamepad"></i>
@@ -605,6 +462,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          </a>
       </div>
       <!-- Bootstrap core JavaScript -->
+      <script src="js/libs/underscore-min.js"></script>
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       

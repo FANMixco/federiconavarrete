@@ -25,7 +25,7 @@ var socialBasicList = {
 			"isIcon": true
 		}
 	],
-	"isVisble": true
+	"isVisible": true
 }
 
 var socialOthersList = {
@@ -43,8 +43,8 @@ var socialOthersList = {
 			"isIcon": true
 		},
 		{
-			"icon": "GitHub",
-			"title": "fab fa-fw fa-github",
+			"icon": "fab fa-fw fa-github",
+			"title": "GitHub",
 			"link": `https://github.com/FANMixco`,
 			"isIcon": true
 		},
@@ -76,8 +76,9 @@ var socialOthersList = {
 			"icon": "img/AzureDevOps.svg",
 			"title": "Azure DevOps",
 			"link": `https://dev.azure.com/federiconavarrete`,
-			"isIcon": false
+			"isIcon": false,
+			"externalClass": "externalImgAzure"
 		}
 	],
-	"isVisble": true
+	"isVisible": true
 };

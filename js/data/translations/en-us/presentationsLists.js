@@ -1,15 +1,15 @@
 var presentationsVideos = {
 	"presentations": [
 		{
-			"youTubeLink": `XJyWAErkNtY`,
+			"youTubeID": `XJyWAErkNtY`,
 			"title": "Moments of Truth with Dr Natalia Wiechowski"
 		},
 		{
-			"youTubeLink": `-c2zayFv14Y`,
+			"youTubeID": `-c2zayFv14Y`,
 			"title": "The Missing Variable"		
 		}
 	],
-	"isVisble": true
+	"isVisible": true
 };
 
 var presentationsLinks = {
@@ -17,13 +17,17 @@ var presentationsLinks = {
 		{
 			"link": `https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS`,
 			"title": "Are robots your friends?",
-			"imgID": "imgPPT1"
+			"imgID": "imgPPT1",
+			"imgBasicName": "rfriends",
+			"imgFormat": "jpg"
 		},
 		{
 			"link": `https://prezi.com/view/WFmIP01XeUsnpcQUpsgt`,
 			"title": "How to improve our presence online",
-			"imgID": "imgPPT2"	
+			"imgID": "imgPPT2",
+			"imgBasicName": "ponline",
+			"imgFormat": "jpg"
 		}
 	],
-	"isVisble": true
+	"isVisible": true
 };
