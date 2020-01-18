@@ -60,29 +60,29 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Navigation -->
       <nav class="navbar navbar-expand-xl bg-secondary fixed-top text-uppercase" id="mainNav">
          <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Federico Navarrete</a>
+            <a id="linkName" class="navbar-brand js-scroll-trigger" href="#page-top"></a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase btn-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span id="spanMenu"></span>
+               <span id="spanMenu"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about" id="menuAbout"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skillBusiness">Skills</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skillBusiness" id="menuSkills"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects" id="menuProjects"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#presentations">Presentations</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger menuPresentations" href="#presentations"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#articles">Articles</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger menuArticles" href="#articles" class="menuArticles"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#books">Books</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#books" id="menuBooks"></a>
                   </li>
                </ul>
             </div>
@@ -91,302 +91,82 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Header -->
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
-            <img class="img-fluid mb-5 d-block mx-auto" style="display: none!important;" loading="lazy" id="imgProfile" alt="image profile" />
-            <h1 class="text-uppercase mb-0">Federico Navarrete</h1>
+            <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgProfile" style="display: none!important;" alt="image profile" />
+            <h1 class="text-uppercase mb-0" id="hName"></h1>
             <hr class="star-light">
-            <h2 class="font-weight-light mb-0">IT Consultant 💡 and Bilingual Public Speaker 🇬🇧/ 🇪🇸</h2>
+            <h2 class="font-weight-light mb-0" id="hHeadline"></h2>
          </div>
       </header>
       <!-- About Section -->
       <section class="bg-primary text-white mb-0" id="about">
          <div class="container">
-            <h2 class="text-center text-uppercase text-white">About me</h2>
+            <h2 class="text-center text-uppercase text-white" id="hAboutMe"></h2>
             <hr class="star-black-dark mb-5">
             <div class="text-center mt-4">
-               <h3 class="text-center text-uppercase text-white">I help companies and individuals solve IT challenges in an innovative, agile and creative manner! 💡💡💡</h3>
+               <h3 class="text-center text-uppercase text-white" id="hIntro"></h3>
                <br />
             </div>
-            <div class="row">
-               <div class="col-sm">
-                  <p class="lead">Welcome everyone! I'm an IT Consultant and Bilingual Public Speaker 🇬🇧/ 🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who is constantly challenging himself.
-                     <br />
-                     <br />
-                     I've been in the IT industry for over 10+ years, where I've created innovative apps while developing useful soft skills.
-                  </p>
-               </div>
-               <div class="col-sm">
-                  <p class="lead">Furthermore, I'm a Machine Learning Enthusiast, who enjoys challenges! Especially <i>Innovation</i> and <i>Public Speaking</i> ones like Microsoft Imagine Cup.
-                  </p>
-                  <p class="lead text-uppercase text-warning carousel-video-inner "><i>What about you? Are you ready for your next challenge?</i></p>
-               </div>
-            </div>
-            <div class="text-center mt-4">
-               <h3 class="text-center text-uppercase text-white">I invite you to download my fav App!</h3>
+            <div class="row" id="divAbout"></div>
+            <div class="text-center mt-4" id="favApp">
+               <h3 class="text-center text-uppercase text-white" id="hDownloadFavApp"></h3>
                <br />
-               <a class="btn btn-xl btn-outline-light" rel="noreferrer" target="_blank" href="https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute">
-                  <i class="fas fa-download mr-2"></i> The Mayan Route!
-               </a>
             </div>
-            <div class="text-center mt-4 divSpace">
-               <h3 class="text-center text-uppercase text-white">Hobbies</h3>
+            <div class="text-center mt-4 divSpace" id="divHobbies">
+               <h3 class="text-center text-uppercase text-white" id="hHobbies"></h3>
                <hr class="star-black-dark mb-5">
-               <ul class="list-inline mb-0">
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Innovation & Entrepreneurship / Intrapreneurship" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                     <img alt="bulb" src="img/bulb-money-solid.svg" />
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Creating a better world" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-globe-americas"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Public speaking" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-voice extraIcons"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Photography" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-camera-retro"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Travelling" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-airport extraIcons"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-gamepad"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Board games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-dice"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Creative writing" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-pen-fancy"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-pillar"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-flag-usa"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-swimmer"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-theater-masks"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item">
-                     <a data-toggle="tooltip" title="Conferences & Networking" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="fas fa-users"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                     <i class="mdi mdi-telescope extraIcons"></i>
-                     </a>
-                  </li>
-                  <li class="list-inline-item btnOptional">
-                     <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                     <img alt="nature" src="img/nature.svg" loading="lazy" />
-                     </a>
-                  </li>
-                  <li class="list-inline-item" id='btnExtraHobbies'>
-                     <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherHobbies">
-                        <i class="fas fa-plus"></i>
-                     </a>
-                  </li>
-               </ul>
+               <ul class="list-inline mb-0" id="hobbiesList"></ul>
             </div>
             <br />
-            <div class="container divSpace">
-               <h3 class="text-center text-uppercase text-white"><i class="fas fa-medal"></i> Awards</h3>
+            <div class="container divSpace" id="divAwards">
+               <h3 class="text-center text-uppercase text-white"><i class="fas fa-medal"></i> <span id="spanAwards"></span></h3>
                <hr class="star-black-dark mb-5">
-               <div class="row">
-                  <div class="col-lg-4 ml-auto">
-                     <p class="lead">Triple Crown by Toastmasters International 2018<br /><br />1st place in the Faculty ranking of the WEEIA and IFE 2016</p>
-                  </div>
-                  <div class="col-lg-4 mr-auto">
-                     <p class="lead">Best scientific paper in the iNOTICE Conference 2016<br /><br />Top 5 in the Microsoft Imagine Cup of Poland 2016 in the category World Citizenship 2016</p>
-                  </div>
-                  <div class="col-lg-4 mr-auto">
-                     <p class="lead">1st place in the Cisco Switch Up Challenge "The Internet of Everything" 2016<br /><br /><a href="https://2014.spaceappschallenge.org/awards/#globalawards" rel="noreferrer" class="text-danger">Top 5 of The Most Inspiring projects of SpaceApps Challenge of NASA 2014</a></p>
-                  </div>
-               </div>
+               <div class="row" id="awardsList"></div>
             </div>
          </div>
       </section>
       <!-- About Section -->
       <section class="bg-primary text-white mb-0" id="skillBusiness">
          <div class="container" id="divSkillsContainer">
-            <h2 class="text-center text-uppercase text-white"><i class="fas fa-laptop-code"></i> Technical Skills</h2>
+            <h2 class="text-center text-uppercase text-white"><i class="fas fa-laptop-code"></i> <span id="spanTechSkills"></span></h2>
             <hr class="star-black mb-5">
-            <div class="row" class="innerSkillsDiv">
-               <div class="col">
-                  <p class="lead">Cloud / Mobile / Web Dev <br><br>C# & .NET Core<br /><br /></p>
-               </div>
-               <div class="col">
-                  <p class="lead">Angular 8+<br><br>PWA</p>
-               </div>
-               <div class="col">
-                  <p class="lead">Xamarin.Android<br /><br />Google Maps API</p>
-               </div>
-               <div class="col">
-                  <p class="lead">Agile - Scrum<br /><br />CICD — Azure DevOps</p>
-               </div>
-            </div>
+            <div class="row" class="innerSkillsDiv" id="divTechSkills"></div>
             <div class="row">
                <p class="btn-more">
-                  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiDev1 multiDev2 multiDev3">More …</button>
+                  <button id="btnMoreTechSkills" class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"><span class="btnMore"></span></button>
                </p>
-               <div class="row cards-row">
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiDev1">
-                        <div class="card card-body mini-cards">
-                           Azure<br /><br />
-                           Visual Studio & Code<br /><br />
-                           SQL Server & SQLite
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiDev2">
-                        <div class="card card-body mini-cards">
-                           ASP MVC<br /><br />
-                           HTML5 / CSS3 / JS<br /><br />
-                           UIX
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiDev3">
-                        <div class="card card-body mini-cards">
-                           RESTful Web Services<br /><br />
-                           Versioning — Git<br /><br />
-                           Entity Framework
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse" id="multiCollapseExample2">
-                        <div class="card card-body mini-cards">
-                           ITSM — ITIL v4<br /><br />
-                           ATDD<br /><br />
-                           RPA — UiPath &amp; <span class="text-danger" title="Automation Anywhere" data-toggle="tooltip">AA</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <div class="row cards-row" id="divTechSkillsOthers"></div>
             </div>
             <br />
-            <h2 class="text-center text-uppercase text-white"><i class="fas fa-chalkboard-teacher"></i> Soft and Business Skills</h2>
+            <h2 class="text-center text-uppercase text-white"><i class="fas fa-chalkboard-teacher"></i> <span id="spanSoftSkills"></span></h2>
             <hr class="star-black mb-5">
-            <div class="row" class="innerSkillsDiv">
-               <div class="col">
-                  <p class="lead">Leadership<br><br>Employee training</p>
-               </div>
-               <div class="col">
-                  <p class="lead">IT consultancy<br><br>Emerging technologies research</p>
-               </div>
-               <div class="col">
-                  <p class="lead">Storytelling<br><br>Presentation design</p>
-               </div>
-            </div>
+            <div class="row" class="innerSkillsDiv" id="divSoftSkills"></div>
             <div class="row">
                <p class="btn-more">
-                  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse-business" aria-expanded="false" aria-controls="multiBS1 multiBS2 multiBS3">More …</button>
+                  <button id="btnMoreSoftSkills" class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse-business" aria-expanded="false"><span class="btnMore"></span></button id="btnMoreTechSkills">
                </p>
-               <div class="row cards-row">
-                  <div class="col">
-                     <div class="collapse multi-collapse-business" id="multiBS1">
-                        <div class="card card-body mini-cards">
-                           Project management<br /><br />
-                           Mentoring & Coaching<br /><br />
-                           Team building
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse-business" id="multiBS2">
-                        <div class="card card-body mini-cards">
-                           Requirements collection<br /><br />
-                           Innovative planning<br /><br />
-                           Business analysis
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <div class="collapse multi-collapse-business" id="multiBS3">
-                        <div class="card card-body mini-cards">
-                           Organizing events<br /><br />
-                           Creative writing<br /><br />
-                           Elevator pitching
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <div class="row cards-row" id="divSoftSkillsOther"></div>
             </div>
          </div>
       </section>
-      <section class="bg-primary text-white mb-0">
+      <section class="bg-primary text-white mb-0" id="divReviews">
          <div class="container">
             <div class="row" id="testimonialsRow">
                <div class="col-md-8 offset-md-2 col-10 offset-1 mt-5">
-                  <h3 class="text-center text-uppercase text-white"><strong>Testimonials</strong></h3>
+                  <h3 class="text-center text-uppercase text-white"><strong><span id="spanTestimonials"></span></strong></h3>
                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                      <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                      </ol>
-                     <div class="carousel-inner mt-4">
-                        <div class="carousel-item text-center active">
-                           <div class="img-box p-1 border rounded-circle m-auto">
-                              <img loading="lazy" class="d-block w-100 rounded-circle" src="https://blogs-images.forbes.com/forbescoachescouncil/files/2019/01/nataliawiechowski_avatar_1546534855.png" alt="Natalia slide" />
-                           </div>
-                           <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase"><a href="https://thinknatalia.com" rel="noreferrer" target="_blank" class="text-danger">Dr. Natalia Wiechowski</a></strong></h5>
-                           <h6 class="text-white m-0">Personal Branding Coachsultant | Keynote Speaker 🇩🇪️/🇺🇸 | LinkedIn Strategist |The Middle East's leading Edutainer</h6>
-                           <p class="m-0 pt-3 text-white">Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … <a class="text-danger" data-toggle="modal" data-target="#nataliaReview" href="#nataliaReview">Read more</a></p>
-                        </div>
-                        <div class="carousel-item text-center">
-                           <div class="img-box p-1 border rounded-circle m-auto">
-                              <img loading="lazy" class="d-block w-100 rounded-circle" src="img/photos/District-108010.jpg" alt="Gabriela slide" />
-                           </div>
-                           <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Gabriela Roivainen</strong></h5>
-                           <h6 class="text-white m-0">Program Quality Director 2018/2019 at <a class="text-danger" target="_blank" href="https://toastmastersd108.org" rel="noreferrer">District 108</a>, <a class="text-danger" target="_blank" href="https://www.toastmasters.org" rel="noreferrer">Toastmasters International</a></h6>
-                           <p class="m-0 pt-3 text-white">I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland … <a data-toggle="modal" data-target="#gabrielaReview" class="text-danger" href="#gabrielaReview">Read more</a></p>
-                        </div>
-                        <div class="carousel-item text-center">
-                           <div class="img-box p-1 border rounded-circle m-auto">
-                              <img loading="lazy" class="d-block w-100 rounded-circle" src="img/photos/edgar.jpeg" alt="Edgar slide" />
-                           </div>
-                           <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Edgar Regalado</strong></h5>
-                           <h6 class="text-white m-0">Java Consultant at Adastra Czech Republic</h6>
-                           <p class="m-0 pt-3 text-white">I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college … <a data-toggle="modal" data-target="#edgarReview" class="text-danger" href="#edgarReview">Read more</a></p>
-                        </div>
-                     </div>
+                     <div class="carousel-inner mt-4" id="divReviewsPreviews"></div>
                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <i class="fa fa-chevron-left fa-lg text-muted"></i>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only spanPrevious"></span>
                      </a>
                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <i class="fa fa-chevron-right fa-lg text-muted"></i>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only spanNext"></span>
                      </a>
                   </div>
                </div>
@@ -396,126 +176,65 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Personal projects Grid Section -->
       <section class="portfolio" id="projects">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0">Personal projects</h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0" id="hPersonalProjects"></h2>
             <hr class="star-dark mb-5">
             <div id="videoCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="carousel-video-inner">
-                        <iframe title="Timer" class="iVideos" src="https://www.youtube.com/embed/0S8ybMuA4vA"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://github.com/FANMixco/toastmasters-timer" rel="noreferrer" target="_blank">Toastmasters Timer</a>, 2018 - now</h4>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="carousel-video-inner">
-                        <iframe title="LSD" class="iVideos" src="https://www.youtube.com/embed/HEfgCXWM6xg" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4 class="text-center text-uppercase text-secondary mb-0"><a href="https://www.microsoft.com/en-gb/p/lets-stop-diabetes-premium/9nblggh4r824?rtc=1" rel="noreferrer" target="_blank">Let's Stop Diabetes</a>, 2015 - now</h4>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="carousel-video-inner">
-                        <iframe title="GNow" class="iVideos" src="https://www.youtube.com/embed/x-4Z8Fo7HOQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h4 class="text-center text-uppercase text-secondary mb-0"><a href="http://gravitynow.tk" rel="noreferrer" target="_blank">Gravity Now!</a>, 2014 - now</h4>
-                     </div>
-                  </div>
-               </div>
+               <div class="carousel-inner" id="personalProjects"></div>
                <a id="carousel-control-prev-video" class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
                   <i class="fa fa-chevron-left fa-lg text-muted"></i>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only spanPrevious"></span>
                </a>
                <a id="carousel-control-next-video" class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
                   <i class="fa fa-chevron-right fa-lg text-muted"></i>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only spanNext"></span>
                </a>
             </div>
             <br >
             <p class="btn-more">
-               <a id="aAppsPreview" data-toggle="modal" data-target="#appsPreview" href="#appsPreview" class="btn btn-dark">Projects Gallery</a>
+               <a id="aAppsPreview" data-toggle="modal" data-target="#appsPreview" href="#appsPreview" class="btn btn-dark"><span class="spanProjectsGallery"></span></a>
             </p>
          </div>
       </section>
       <!-- Portfolio Grid Section -->
       <section class="portfolio" id="presentations">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0">Presentations &amp; Organized Events</h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0" id="hPPTTile"></h2>
             <hr class="star-dark mb-5">
-            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="mdi mdi-voice"></i> Public Speaking</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPublicSpeaking"><i class="mdi mdi-voice"></i> <span id="spanPS"></span></h3>
             <hr>
-            <div class="row">
-               <div class="col-sm">
-                  <iframe title="Dr. Nats" class="iVideos" src="https://www.youtube.com/embed/XJyWAErkNtY" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Moments of Truth with Dr Natalia Wiechowski</h4>
-               </div>
-               <div class="col-sm">
-                  <iframe title="Missing" class="iVideos" src="https://www.youtube.com/embed/-c2zayFv14Y" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">The Missing Variable</h4>
-               </div>
-            </div>
+            <div class="row" id="divVideos"></div>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="mdi mdi-presentation-play"></i> Presentations</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPresentations"><i class="mdi mdi-presentation-play"></i> <span class="menuPresentations"></span></h3>
             <hr>
-            <div class="row">
-               <div class="col-sm">
-                  <a href="https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS" rel="noreferrer" target="_blank">
-                     <img id="imgPPT1" loading="lazy" class="img-fluid" alt="Are robots your friends?" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Are robots your friends?</h4>
-               </div>
-               <div class="col-sm">
-                  <a href="https://prezi.com/view/WFmIP01XeUsnpcQUpsgt" rel="noreferrer" target="_blank">
-                     <img id="imgPPT2" loading="lazy" class="img-fluid" alt="how to improve our presence online" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">How to improve our presence online.</h4>
-               </div>
-            </div>
-            <br>
-   			<p class="btn-more">
-               <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark">Presentations Gallery</a>
+            <div class="row" id="divPPTs"></div>
+            <br />
+   			<p class="btn-more" id="pPPTs">
+               <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark hPresentationsGallery"></a>
 	   		</p>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="fas fa-calendar-day"></i> Organized Events</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="fas fa-calendar-day"></i> <span id="spanOE"></span></h3>
             <hr>
-            <div class="row">
-               <div class="col-sm">
-                  <a href="http://lodzarts.pl" rel="noreferrer" target="_blank">
-                     <img loading="lazy" class="img-fluid" id="imgLodzarts" alt="lodzarts" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Łódźarts - Toastmasters Conference, Division A, <a href="https://toastmastersd108.org" rel="noreferrer" target="_blank">District 108</a></h4>
-               </div>
-            </div>
+            <div class="row" id="divEvents"></div>
          </div>
       </section>
       <!-- Articles Grid Section -->
       <section class="portfolio" id="articles">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0"><i class="far fa-newspaper"></i> Articles</h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0"><i class="far fa-newspaper"></i> <span class="menuArticles"></span></h2>
             <hr class="star-dark mb-5">
-            <div class="row">
-               <div class="col-sm">
-                  <a href="https://www.linkedin.com/pulse/low-code-platforms-next-big-thing-federico-navarrete/" target="_blank" rel="noreferrer">
-                     <img loading="lazy" class="img-fluid" id="imgArt1" alt="Low Code Platforms" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">Are Low-Code Platforms the next big thing in IT?</h4>
-               </div>
-               <div class="col-sm">
-                  <a href="https://www.linkedin.com/pulse/four-faces-automation-federico-navarrete/" target="_blank" rel="noreferrer">
-                     <img loading="lazy" class="img-fluid" id="imgArt2" alt="Automation" />
-                  </a>
-                  <h4 class="text-center text-uppercase text-secondary mb-0">The Four Faces of Automation</h4>
-               </div>
-            </div>
+            <div class="row" id="divArticles"></div>
          </div>
       </section>
       <!-- Books Section -->
       <section class="bg-primary text-white mb-0" id="books">
          <div class="container">
-            <h2 class="text-center text-uppercase text-white">Recommended Books and Literature</h2>
+            <h2 class="text-center text-uppercase text-white" id="hRecommendedBooks"></h2>
             <hr class="star-black-dark mb-5">
             <div class="row row-auto">
                <iframe title="books" loading="lazy" src="pages/books.html" id="booksIframe"></iframe>
             </div>
             <hr class="wHR">
-            <h3 class="text-center text-uppercase text-white"><img loading="lazy" src="img/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" /> My Salvadoran Legends and Fairy tales</h3>
+            <h3 class="text-center text-uppercase text-white"><img loading="lazy" src="img/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" /> <span id="spanSalvadorean"></span></h3>
             <hr class="star-black-dark mb-5">
             <div class="row">
                <iframe title="legends" loading="lazy" src="pages/legends.html" id="legendsIframe"></iframe>
@@ -528,22 +247,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="row">
                <div class="col-md-4 mb-5 mb-lg-0">
                   <h4 class="text-uppercase mb-4">Contact me</h4>
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Email" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="mailto:&#102;&#101;&#100;&#101;&#114;&#105;&#099;&#111;&#046;&#110;&#097;&#118;&#097;&#114;&#114;&#101;&#116;&#101;&#064;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#046;&#099;&#111;&#109;?subject=Contact me (FANMixco site)" rel="noreferrer">
-                        <i class="fas fa-at"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Telephone" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="tel:+48422886718" rel="noreferrer">
-                        <i class="fas fa-phone"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Skype" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="skype:fanmixco?call" rel="noreferrer">
-                        <i class="fab fa-fw fa-skype"></i>
-                        </a>
-                     </li>
+                  <ul class="list-inline mb-0" id="listContacts">
                      <li class="list-inline-item">
                         <a data-toggle="tooltip" title="Contact Me" class="btn btn-outline-light btn-social text-center rounded-circle" id="linkContactMe">
                         <i class="fas fa-envelope-open"></i>
@@ -553,33 +257,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
                <div class="col-md-4 mb-5 mb-lg-0">
                   <h4 class="text-uppercase mb-4">Around the Web</h4>
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="LinkedIn" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/fanmixco" rel="noreferrer">
-                           <i class="fab fa-fw fa-linkedin-in"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="YouTube Channel" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.youtube.com/c/FedericoNavarrete" rel="noreferrer">
-                           <i class="fab fa-fw fa-youtube"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Portfolio" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.behance.net/fanmixco" rel="noreferrer">
-                           <i class="fab fa-fw fa-behance"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Federico Stories" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://federicostories.blogspot.com" rel="noreferrer">
-                           <i class="fab fa-fw fa-blogger-b"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherLocs">
-                           <i class="fas fa-plus"></i>
-                        </a>
-                     </li>
-                  </ul>
+                  <ul class="list-inline mb-0" id="socialMediaBasic"></ul>
                </div>
                <div class="col-md-4">
                   <h4 class="text-uppercase mb-4">About Freelancer</h4>
@@ -592,39 +270,39 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </footer>
       <div class="copyright py-4 text-center text-white">
          <div class="container">
-            <div id="google_translate_element" style="padding:1em;"></div>
+            <div id="google_translate_element"></div>
             <small>
                Copyright &copy; Federico Navarrete &amp; <a class="text-warning" rel="noreferrer" href="https://supernovaic.tk" target="_blank">Supernova IC</a> <span id="spanYear"></span>
             </small>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="nataliaReview">
+      <div class="modal" tabindex="-1" role="dialog" id="review1">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body" id="divReview1">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
             </div>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="gabrielaReview">
+      <div class="modal" tabindex="-1" role="dialog" id="review2">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div id="divReview2" class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
             </div>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="edgarReview">
+      <div class="modal" tabindex="-1" role="dialog" id="review3">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div id="divReview3" class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -635,7 +313,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                   <div id="contactMeForm"></div>
@@ -647,7 +325,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body" id="divIframElSalvador">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -658,11 +336,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title">Projects Gallery</h5>
+                  <h5 class="modal-title spanProjectsGallery"></h5>
                   <button type="button" style="padding-top: 1.05rem;" class="close btnFullScreen" id="appsFullScreen">
                      <span aria-hidden="true"><i class="mdi mdi-fullscreen"></i></span>
                   </button>
-                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal">
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -674,11 +352,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title">Presentations Gallery</h5>
+                  <h5 class="modal-title hPresentationsGallery"></h5>
                   <button type="button" style="padding-top: 1.05rem;" class="close" id="pptsFullScreen">
                      <span aria-hidden="true"><i class="mdi mdi-fullscreen"></i></span>
                   </button>
-                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal">
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -690,54 +368,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title text-uppercase">More around the web</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <h5 class="modal-title text-uppercase" id="hMoreWeb"></h5>
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
                <div class="modal-body" id="modelDark">
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Supernova IC" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://supernovaic.tk" rel="noreferrer">
-                           <i class="fas fa-fw fa-building"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Supernova IC's Blog" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="http://supernovaic.blogspot.com/" rel="noreferrer">
-                           <i class="fab fa-blogger"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="GitHub" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/FANMixco" rel="noreferrer">
-                           <i class="fab fa-fw fa-github"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Instagram" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/federico_the_consultant" rel="noreferrer">
-                           <i class="fab fa-fw fa-instagram"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Quora" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" rel="noreferrer" href="https://www.quora.com/profile/Federico-Navarrete-1">
-                           <i class="fab fa-quora"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="StackOverflow" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" rel="noreferrer" href="https://stackoverflow.com/users/2889347/federico-navarrete" rel="noreferrer">
-                           <i class="fab fa-fw fa-stack-overflow"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Dev" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" rel="noreferrer" href="https://dev.to/fanmixco">
-                           <i class="fab fa-dev"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Azure DevOps" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle externalImgAzure" href="https://dev.azure.com/federiconavarrete" rel="noreferrer">
-                           <img src="img/AzureDevOps.svg" alt="DevOps" loading="lazy" />
-                        </a>
-                     </li>
-                  </ul>
+                  <ul class="list-inline mb-0" id="socialMediaOthers"></ul>
                </div>
             </div>
          </div>
@@ -746,49 +383,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title text-uppercase">Other hobbies</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <h5 class="modal-title text-uppercase" id="hOtherHobbies"></h5>
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
                <div class="modal-body" id="modalBlack">
-                  <ul class="list-inline mb-0">
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Video games" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                        <i class="fas fa-gamepad"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="History" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                        <i class="mdi mdi-pillar"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Politics" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                        <i class="fas fa-flag-usa"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Swimming" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                        <i class="fas fa-swimmer"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Theater" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                        <i class="fas fa-theater-masks"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Astronomy & Science" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#">
-                        <i class="mdi mdi-telescope extraIcons"></i>
-                        </a>
-                     </li>
-                     <li class="list-inline-item">
-                        <a data-toggle="tooltip" title="Mountains & Lakes" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click externalImg" href="#">
-                        <img src="img/nature.svg" alt="nature" loading="lazy" />
-                        </a>
-                     </li>
-                  </ul>
+                  <ul class="list-inline mb-0" id="optHobbies"></ul>
                </div>
             </div>
          </div>
@@ -800,12 +401,18 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          </a>
       </div>
       <!-- Bootstrap core JavaScript -->
+      <script src="js/libs/underscore-min.js"></script>
+      <script src="//wurfl.io/wurfl.js"></script>
+
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
       <!-- Custom scripts for this template -->
       <script src="js/libs/pdfobject.min.js"></script>
       <script src="js/freelancer.min.js"></script>
-      <script src="//wurfl.io/wurfl.js"></script>
+      
+      <script src="js/libs/translations.min.js"></script>
+
       <script src="js/personal.min.js"></script>
       <!-- Global Site Tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7438484-9"></script>

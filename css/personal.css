@@ -165,3 +165,7 @@ iframe {
 .row-auto {
     margin: auto;
 }
+
+#google_translate_element {
+    padding:1em;
+}
