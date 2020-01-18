@@ -34,15 +34,15 @@ function loadBasicInfo() {
     }
 
     if (skype.isVisible) {
-        $("#listContacts").prepend(getImage(genericTranslations.skype, `skype:${skype.id}?call`, "fab fa-fw fa-skype", false));
+        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.skype, `skype:${skype.id}?call`, "fab fa-fw fa-skype", false)}</li>`);
     }
 
     if (telephone.isVisible) {
-        $("#listContacts").prepend(getImage(genericTranslations.telephone, `tel:${telephone.number}`, "fas fa-phone", false));
+        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.telephone, `tel:${telephone.number}`, "fas fa-phone", false)}</li>`);
     }
 
     if (email.isVisible) {
-        $("#listContacts").prepend(getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, "fas fa-at", false));
+        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, "fas fa-at", false)}</li>`);
     }
 }
 
@@ -52,42 +52,48 @@ function loadHobbies() {
     if (isVisible) {
         hobbies.forEach(item => {
             const btnOptional = item.isOpt ? " btnOptional" : "";
-
-            let externalClass = "";
-
-            if (item.externalClass) {
-                externalClass = item.externalClass;
-            }
-
-            let img = getImage(item.title, "#", item.icon, false, item.isIcon, externalClass, true);
-
-            $("#hobbiesList").append(`<li class="list-inline-item"${btnOptional}>${img}</li>`)
-
-            /*if (!item.isIcon) {
-                let externalClass = "";
-
-                if (item.externalClass) {
-                    externalClass = item.externalClass;
-                }
-
-                let img = getImage(item.title, "#", item.icon, false, item.isIcon, externalClass, true);
-
-                $("#hobbiesList").append(`<li class="list-inline-item"${btnOptional}>${img}</li>`)
-            }
-            else {
-                $("#hobbiesList").append(`<li class="list-inline-item"${btnOptional}><a data-toggle="tooltip" title="${item.title}" class="btn btn-outline-light btn-social text-center rounded-circle ignore-click" href="#"><i class="${item.icon}"></i></a>`);
-            }*/
+            $("#hobbiesList").append(`<li class="list-inline-item${btnOptional}">${getHobbyImg(item)}</li>`);
         });
+
+        $("#hobbiesList").append(`<li class="list-inline-item" id='btnExtraHobbies'>
+            <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherHobbies">
+            <i class="fas fa-plus"></i>
+            </a>
+        </li>`);
 
         const hobbiesOthers = _.where(hobbies, { isOpt: true });
 
-        console.log(hobbiesOthers);
+        hobbiesOthers.forEach(elem => {
+            $("#optHobbies").append(`<li class="list-inline-item">${getHobbyImg(elem)}</li>`);
+        });
 
         $('[data-toggle="tooltip"]').tooltip();
+
+        let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+
+        if (!smallScreenMobileOS) {
+            $("#btnExtraHobbies").hide();
+            if (WURFL.is_mobile) {
+                $(".btnOptional").hide();
+                $("#btnExtraHobbies").show();
+            }
+        } else {
+            $(".btnOptional").hide();
+        }
     }
     else {
         $("#divHobbies").hide();
     }
+}
+
+function getHobbyImg(item) {
+    let externalClass = "";
+
+    if (item.externalClass) {
+        externalClass = item.externalClass;
+    }
+
+    return getImage(item.title, "#", item.icon, false, item.isIcon, externalClass, true);
 }
 
 function loadAwards() {
@@ -219,7 +225,7 @@ function loadSocialMedias() {
 
     if (isVisible) {
         socialMedia.forEach(item => {
-            $("#socialMediaBasic").append(getImage(item.title, item.link, item.icon, true, item.isIcon));
+            $("#socialMediaBasic").append(`<li class="list-inline-item">${getImage(item.title, item.link, item.icon, true, item.isIcon)}</li>`);
         });
 
         if (socialOthersList.isVisible) {
@@ -236,7 +242,7 @@ function loadSocialMedias() {
                     externalClass = elem.externalClass;
                 }
 
-                $("#socialMediaOthers").append(getImage(elem.title, elem.link, elem.icon, true, elem.isIcon,externalClass, false));
+                $("#socialMediaOthers").append(`<li class="list-inline-item">${getImage(elem.title, elem.link, elem.icon, true, elem.isIcon,externalClass, false)}</li>`);
             });
         }
         $('[data-toggle="tooltip"]').tooltip();
@@ -252,7 +258,7 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let noreferrer = link == "#" ? rel="noreferrer" : "";
     let img = isIcon ? `<i class="${icon}"></i>` : `<img src="${icon}" loading="lazy" />`;
 
-    return `<li class="list-inline-item"><a data-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a></li>`;
+    return `<a data-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {

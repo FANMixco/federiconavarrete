@@ -57,11 +57,11 @@ $(function() {
 
     if (!smallScreenMobileOS) {
         $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
-        $("#btnExtraHobbies").hide();
+        /*$("#btnExtraHobbies").hide();
         if (WURFL.is_mobile) {
             $(".btnOptional").hide();
             $("#btnExtraHobbies").show();
-        }
+        }*/
 
         setTimeout(function() {
             $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
@@ -69,7 +69,7 @@ $(function() {
             $("#divSkillsContainer").css("border-radius", "20px");
         }, 100);
     } else {
-        $(".btnOptional").hide();
+        //$(".btnOptional").hide();
         $("#spanMenu").html("<i class='fas fa-bars'></i>");
         marginTop = -40;
         heightIFrame = 560;
