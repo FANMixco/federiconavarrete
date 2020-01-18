@@ -1,4 +1,4 @@
-var articlesList = {
+const articlesList = {
 	"articles": [
 		{
 			"link": `https://www.linkedin.com/pulse/low-code-platforms-next-big-thing-federico-navarrete`,

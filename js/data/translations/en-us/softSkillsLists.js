@@ -1,5 +1,5 @@
 //soft-skills front
-let softSkills = [
+const softSkills = [
 	[
 		`Storytelling`,
 		`Presentation design`
@@ -15,7 +15,7 @@ let softSkills = [
 ];
 
 //soft-skills hidden
-let softSkillsOthers = [
+const softSkillsOthers = [
 	[
 		"Organizing events",
 		`Creative writing`,

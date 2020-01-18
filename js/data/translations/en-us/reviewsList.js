@@ -1,4 +1,4 @@
-var reviewsList = {
+const reviewsList = {
 	"reviews": [
 		{
 			"name": "Dr. Natalia Wiechowski",

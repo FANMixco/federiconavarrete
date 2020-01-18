@@ -1,4 +1,4 @@
-var socialBasicList = {
+const socialBasicList = {
 	"socialMedia": [
 		{
 			"icon": "fab fa-fw fa-linkedin-in",
@@ -28,7 +28,7 @@ var socialBasicList = {
 	"isVisible": true
 }
 
-var socialOthersList = {
+const socialOthersList = {
 	"socialMedia": [
 		{
 			"icon": "fas fa-fw fa-building",

@@ -60,29 +60,29 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Navigation -->
       <nav class="navbar navbar-expand-xl bg-secondary fixed-top text-uppercase" id="mainNav">
          <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Federico Navarrete</a>
+            <a id="linkName" class="navbar-brand js-scroll-trigger" href="#page-top"></a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase btn-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span id="spanMenu"></span>
+               <span id="spanMenu"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about" id="menuAbout"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skillBusiness">Skills</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skillBusiness" id="menuSkills"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects" id="menuProjects"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#presentations">Presentations</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger menuPresentations" href="#presentations"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#articles">Articles</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger menuArticles" href="#articles" class="menuArticles"></a>
                   </li>
                   <li class="nav-item mx-0 mx-lg-1">
-                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#books">Books</a>
+                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#books" id="menuBooks"></a>
                   </li>
                </ul>
             </div>
@@ -91,7 +91,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Header -->
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
-            <img class="img-fluid mb-5 d-block mx-auto" style="display: none!important;" loading="lazy" id="imgProfile" alt="image profile" />
+            <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgProfile" style="display: none!important;" alt="image profile" />
             <h1 class="text-uppercase mb-0" id="hName"></h1>
             <hr class="star-light">
             <h2 class="font-weight-light mb-0" id="hHeadline"></h2>
@@ -100,7 +100,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- About Section -->
       <section class="bg-primary text-white mb-0" id="about">
          <div class="container">
-            <h2 class="text-center text-uppercase text-white">About me</h2>
+            <h2 class="text-center text-uppercase text-white" id="hAboutMe"></h2>
             <hr class="star-black-dark mb-5">
             <div class="text-center mt-4">
                <h3 class="text-center text-uppercase text-white" id="hIntro"></h3>
@@ -108,17 +108,17 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
             <div class="row" id="divAbout"></div>
             <div class="text-center mt-4" id="favApp">
-               <h3 class="text-center text-uppercase text-white">I invite you to download my fav App!</h3>
+               <h3 class="text-center text-uppercase text-white" id="hDownloadFavApp"></h3>
                <br />
             </div>
             <div class="text-center mt-4 divSpace" id="divHobbies">
-               <h3 class="text-center text-uppercase text-white">Hobbies</h3>
+               <h3 class="text-center text-uppercase text-white" id="hHobbies"></h3>
                <hr class="star-black-dark mb-5">
                <ul class="list-inline mb-0" id="hobbiesList"></ul>
             </div>
             <br />
             <div class="container divSpace" id="divAwards">
-               <h3 class="text-center text-uppercase text-white"><i class="fas fa-medal"></i> Awards</h3>
+               <h3 class="text-center text-uppercase text-white"><i class="fas fa-medal"></i> <span id="spanAwards"></span></h3>
                <hr class="star-black-dark mb-5">
                <div class="row" id="awardsList"></div>
             </div>
@@ -127,22 +127,22 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- About Section -->
       <section class="bg-primary text-white mb-0" id="skillBusiness">
          <div class="container" id="divSkillsContainer">
-            <h2 class="text-center text-uppercase text-white"><i class="fas fa-laptop-code"></i> Technical Skills</h2>
+            <h2 class="text-center text-uppercase text-white"><i class="fas fa-laptop-code"></i> <span id="spanTechSkills"></span></h2>
             <hr class="star-black mb-5">
             <div class="row" class="innerSkillsDiv" id="divTechSkills"></div>
             <div class="row">
                <p class="btn-more">
-                  <button id="btnMoreTechSkills" class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false">More …</button>
+                  <button id="btnMoreTechSkills" class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"><span class="btnMore"></span></button>
                </p>
                <div class="row cards-row" id="divTechSkillsOthers"></div>
             </div>
             <br />
-            <h2 class="text-center text-uppercase text-white"><i class="fas fa-chalkboard-teacher"></i> Soft and Business Skills</h2>
+            <h2 class="text-center text-uppercase text-white"><i class="fas fa-chalkboard-teacher"></i> <span id="spanSoftSkills"></span></h2>
             <hr class="star-black mb-5">
             <div class="row" class="innerSkillsDiv" id="divSoftSkills"></div>
             <div class="row">
                <p class="btn-more">
-                  <button id="btnMoreSoftSkills" class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse-business" aria-expanded="false">More …</button id="btnMoreTechSkills">
+                  <button id="btnMoreSoftSkills" class="btn btn-dark" type="button" data-toggle="collapse" data-target=".multi-collapse-business" aria-expanded="false"><span class="btnMore"></span></button id="btnMoreTechSkills">
                </p>
                <div class="row cards-row" id="divSoftSkillsOther"></div>
             </div>
@@ -152,7 +152,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container">
             <div class="row" id="testimonialsRow">
                <div class="col-md-8 offset-md-2 col-10 offset-1 mt-5">
-                  <h3 class="text-center text-uppercase text-white"><strong>Testimonials</strong></h3>
+                  <h3 class="text-center text-uppercase text-white"><strong><span id="spanTestimonials"></span></strong></h3>
                   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                      <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -162,11 +162,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <div class="carousel-inner mt-4" id="divReviewsPreviews"></div>
                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <i class="fa fa-chevron-left fa-lg text-muted"></i>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only spanPrevious"></span>
                      </a>
                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <i class="fa fa-chevron-right fa-lg text-muted"></i>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only spanNext"></span>
                      </a>
                   </div>
                </div>
@@ -176,43 +176,43 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Personal projects Grid Section -->
       <section class="portfolio" id="projects">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0">Personal projects</h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0" id="hPersonalProjects"></h2>
             <hr class="star-dark mb-5">
             <div id="videoCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
                <div class="carousel-inner" id="personalProjects"></div>
                <a id="carousel-control-prev-video" class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
                   <i class="fa fa-chevron-left fa-lg text-muted"></i>
-                  <span class="sr-only">Previous</span>
+                  <span class="sr-only spanPrevious"></span>
                </a>
                <a id="carousel-control-next-video" class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
                   <i class="fa fa-chevron-right fa-lg text-muted"></i>
-                  <span class="sr-only">Next</span>
+                  <span class="sr-only spanNext"></span>
                </a>
             </div>
             <br >
             <p class="btn-more">
-               <a id="aAppsPreview" data-toggle="modal" data-target="#appsPreview" href="#appsPreview" class="btn btn-dark">Projects Gallery</a>
+               <a id="aAppsPreview" data-toggle="modal" data-target="#appsPreview" href="#appsPreview" class="btn btn-dark"><span class="spanProjectsGallery"></span></a>
             </p>
          </div>
       </section>
       <!-- Portfolio Grid Section -->
       <section class="portfolio" id="presentations">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0">Presentations &amp; Organized Events</h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0" id="hPPTTile"></h2>
             <hr class="star-dark mb-5">
-            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPublicSpeaking"><i class="mdi mdi-voice"></i> Public Speaking</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPublicSpeaking"><i class="mdi mdi-voice"></i> <span id="spanPS"></span></h3>
             <hr>
             <div class="row" id="divVideos"></div>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPresentations"><i class="mdi mdi-presentation-play"></i> Presentations</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPresentations"><i class="mdi mdi-presentation-play"></i> <span class="menuPresentations"></span></h3>
             <hr>
             <div class="row" id="divPPTs"></div>
             <br />
    			<p class="btn-more" id="pPPTs">
-               <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark">Presentations Gallery</a>
+               <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark hPresentationsGallery"></a>
 	   		</p>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="fas fa-calendar-day"></i> Organized Events</h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0"><i class="fas fa-calendar-day"></i> <span id="spanOE"></span></h3>
             <hr>
             <div class="row" id="divEvents"></div>
          </div>
@@ -220,7 +220,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Articles Grid Section -->
       <section class="portfolio" id="articles">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0"><i class="far fa-newspaper"></i> Articles</h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0"><i class="far fa-newspaper"></i> <span class="menuArticles"></span></h2>
             <hr class="star-dark mb-5">
             <div class="row" id="divArticles"></div>
          </div>
@@ -228,13 +228,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Books Section -->
       <section class="bg-primary text-white mb-0" id="books">
          <div class="container">
-            <h2 class="text-center text-uppercase text-white">Recommended Books and Literature</h2>
+            <h2 class="text-center text-uppercase text-white" id="hRecommendedBooks"></h2>
             <hr class="star-black-dark mb-5">
             <div class="row row-auto">
                <iframe title="books" loading="lazy" src="pages/books.html" id="booksIframe"></iframe>
             </div>
             <hr class="wHR">
-            <h3 class="text-center text-uppercase text-white"><img loading="lazy" src="img/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" /> My Salvadoran Legends and Fairy tales</h3>
+            <h3 class="text-center text-uppercase text-white"><img loading="lazy" src="img/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" /> <span id="spanSalvadorean"></span></h3>
             <hr class="star-black-dark mb-5">
             <div class="row">
                <iframe title="legends" loading="lazy" src="pages/legends.html" id="legendsIframe"></iframe>
@@ -270,7 +270,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </footer>
       <div class="copyright py-4 text-center text-white">
          <div class="container">
-            <div id="google_translate_element" style="padding:1em;"></div>
+            <div id="google_translate_element"></div>
             <small>
                Copyright &copy; Federico Navarrete &amp; <a class="text-warning" rel="noreferrer" href="https://supernovaic.tk" target="_blank">Supernova IC</a> <span id="spanYear"></span>
             </small>
@@ -280,7 +280,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body" id="divReview1">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -291,7 +291,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div id="divReview2" class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -302,7 +302,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div id="divReview3" class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -313,7 +313,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                   <div id="contactMeForm"></div>
@@ -325,7 +325,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-body" id="divIframElSalvador">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -336,11 +336,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title">Projects Gallery</h5>
+                  <h5 class="modal-title spanProjectsGallery"></h5>
                   <button type="button" style="padding-top: 1.05rem;" class="close btnFullScreen" id="appsFullScreen">
                      <span aria-hidden="true"><i class="mdi mdi-fullscreen"></i></span>
                   </button>
-                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal">
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -352,11 +352,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title">Presentations Gallery</h5>
+                  <h5 class="modal-title hPresentationsGallery"></h5>
                   <button type="button" style="padding-top: 1.05rem;" class="close" id="pptsFullScreen">
                      <span aria-hidden="true"><i class="mdi mdi-fullscreen"></i></span>
                   </button>
-                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal">
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -368,8 +368,8 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title text-uppercase">More around the web</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <h5 class="modal-title text-uppercase" id="hMoreWeb"></h5>
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -383,8 +383,8 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title text-uppercase">Other hobbies</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <h5 class="modal-title text-uppercase" id="hOtherHobbies"></h5>
+                  <button type="button" class="close" data-dismiss="modal" >
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>

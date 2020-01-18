@@ -1,4 +1,4 @@
-let basicInfo = {
+const basicInfo = {
 	"name": `Federico Navarrete`,
 	"headline": `IT Consultant 💡 and Bilingual Public Speaker 🇬🇧/ 🇪🇸`,
 	"headlineIntro": `I help companies and individuals solve IT challenges in an innovative, agile and creative manner! 💡💡💡`,

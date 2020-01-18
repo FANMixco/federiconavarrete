@@ -2,6 +2,7 @@ let lang = "en-us";
 let langLoc = "js/data/translations/";
 
 $.getScript(`${langLoc}${lang}/generics.js`).done(function() {
+    loadTranslations();
     $.getScript(`${langLoc}${lang}/basicInfo.js`).done(loadBasicInfo);
     $.getScript(`${langLoc}${lang}/hobbiesList.js`).done(loadHobbies);
     $.getScript(`${langLoc}${lang}/awardsList.js`).done(loadAwards);
@@ -64,9 +65,6 @@ function loadReviews() {
                 <p class="m-0 pt-3 text-black">${item.review}</p>`;
             }
 
-            console.log(currentReview);
-            console.log(longReview);
-
             $(`#divReview${currentReview}`).append(longReview);
 
             if (item.isPDF) {
@@ -80,9 +78,156 @@ function loadReviews() {
     }
 }
 
+function loadTranslations() {
+    const controlTranslation = [
+        {
+            "identifier": "#menuAbout",
+            "value": genericTranslations.about
+        },
+        {
+            "identifier": "#menuSkills",
+            "value": genericTranslations.skills
+        },
+        {
+            "identifier": "#menuProjects",
+            "value": genericTranslations.projects
+        },
+        {
+            "identifier": ".menuPresentations",
+            "value": genericTranslations.presentations
+        },
+        {
+            "identifier": ".menuArticles",
+            "value": genericTranslations.articles
+        },
+        {
+            "identifier": "#menuBooks",
+            "value": genericTranslations.books
+        },
+        {
+            "identifier": "#hAboutMe",
+            "value": genericTranslations.aboutMe
+        },
+        {
+            "identifier": "#hDownloadFavApp",
+            "value": genericTranslations.downloadFavApp
+        },
+        {
+            "identifier": "#hHobbies",
+            "value": genericTranslations.hobbies
+        },
+        {
+            "identifier": "#spanAwards",
+            "value": genericTranslations.awards
+        },
+        {
+            "identifier": "#spanTechSkills",
+            "value": genericTranslations.techSkills
+        },
+        {
+            "identifier": "#spanTechSkills",
+            "value": genericTranslations.techSkills
+        },
+        {
+            "identifier": "#spanSoftSkills",
+            "value": genericTranslations.softSkills
+        },
+        {
+            "identifier": "#spanTestimonials",
+            "value": genericTranslations.testimonials
+        },
+        {
+            "identifier": "#hPersonalProjects",
+            "value": genericTranslations.personalProjects
+        },
+        {
+            "identifier": "#aAppsPreview",
+            "value": genericTranslations.projectsGallery
+        },
+        {
+            "identifier": ".spanProjectsGallery",
+            "value": genericTranslations.projectsGallery
+        },
+        {
+            "identifier": ".spanPrevious",
+            "value": genericTranslations.previous
+        },
+        {
+            "identifier": ".spanNext",
+            "value": genericTranslations.next
+        },
+        {
+            "identifier": ".btnMore",
+            "value": genericTranslations.more
+        },
+        {
+            "identifier": "#hPPTTile",
+            "value": genericTranslations.pptsOrganizedEvents
+        },
+        {
+            "identifier": "#hPPTTile",
+            "value": genericTranslations.pptsOrganizedEvents
+        },
+        {
+            "identifier": "#spanPS",
+            "value": genericTranslations.publicSpeaking
+        },
+        {
+            "identifier": ".hPresentationsGallery",
+            "value": genericTranslations.presentationsGallery
+        },
+        {
+            "identifier": "#spanOE",
+            "value": genericTranslations.organizedEvents
+        },
+        {
+            "identifier": "#hRecommendedBooks",
+            "value": genericTranslations.recommendedBooks
+        },
+        {
+            "identifier": "#spanSalvadorean",
+            "value": genericTranslations.mySalvadorean
+        },
+        {
+            "identifier": "#hMoreWeb",
+            "value": genericTranslations.moreWeb
+        },
+        {
+            "identifier": "#hOtherHobbies",
+            "value": genericTranslations.otherHobbies
+        }
+    ];
+
+    $("button.close").attr("aria-label", genericTranslations.close);
+
+    controlTranslation.forEach(item => {
+        setTranslation(item.identifier, item.value);
+    });
+
+    let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+
+    if (!smallScreenMobileOS) {
+        $("#spanMenu").html(`${genericTranslations.menu}&nbsp;<i class='fas fa-bars'></i>`);
+        setTimeout(function() {
+            $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
+            $("#divSkillsContainer").css("padding-top", "15px");
+            $("#divSkillsContainer").css("border-radius", "20px");
+        }, 100);
+    } else {
+        $("#spanMenu").html("<i class='fas fa-bars'></i>");
+        marginTop = -40;
+        heightIFrame = 560;
+    }
+}
+
+function setTranslation(id, text) {
+    $(`${id}`).text(text);
+}
+
 function loadBasicInfo() {
     const { name, headline, headlineIntro, aboutDesc, favApp, telephone, email, skype } = basicInfo;
 
+    $("#linkName").html(name);
     $("#hName").html(name);
     $("#hHeadline").html(headline);
     $("#hIntro").html(headlineIntro);
@@ -109,6 +254,8 @@ function loadBasicInfo() {
     if (email.isVisible) {
         $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, "fas fa-at", false)}</li>`);
     }
+    
+    $('[data-toggle="tooltip"]').tooltip();
 }
 
 function loadHobbies() {

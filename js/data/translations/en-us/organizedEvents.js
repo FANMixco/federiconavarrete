@@ -1,4 +1,4 @@
-let organizedEvents = {
+const organizedEvents = {
 	"events": [
 		{
 			"link": `http://lodzarts.pl`,

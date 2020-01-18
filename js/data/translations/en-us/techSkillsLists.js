@@ -1,5 +1,5 @@
 //techskills front
-let techSkills = [
+const techSkills = [
 	[
 		`Agile - Scrum`,
 		`CICD — Azure DevOps`
@@ -19,7 +19,7 @@ let techSkills = [
 ];
 
 //techskills hidden
-let techSkillsOthers =[
+const techSkillsOthers =[
 	[
 		`ITSM — ITIL v4`,
 		`ATDD`,

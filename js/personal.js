@@ -25,21 +25,6 @@ $(function() {
     let marginTop = 0;
     let heightIFrame = 600;
 
-    let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
-
-    if (!smallScreenMobileOS) {
-        $("#spanMenu").html("Menu&nbsp;<i class='fas fa-bars'></i>");
-        setTimeout(function() {
-            $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
-            $("#divSkillsContainer").css("padding-top", "15px");
-            $("#divSkillsContainer").css("border-radius", "20px");
-        }, 100);
-    } else {
-        $("#spanMenu").html("<i class='fas fa-bars'></i>");
-        marginTop = -40;
-        heightIFrame = 560;
-    }
-
     switch (WURFL.form_factor) {
         case "Smartphone":
             $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);

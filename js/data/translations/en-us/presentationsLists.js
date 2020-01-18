@@ -1,4 +1,4 @@
-var presentationsVideos = {
+const presentationsVideos = {
 	"presentations": [
 		{
 			"youTubeID": `XJyWAErkNtY`,
@@ -12,7 +12,7 @@ var presentationsVideos = {
 	"isVisible": true
 };
 
-var presentationsLinks = {
+const presentationsLinks = {
 	"presentations": [
 		{
 			"link": `https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS`,

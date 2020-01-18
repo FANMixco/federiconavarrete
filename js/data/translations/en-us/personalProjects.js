@@ -1,4 +1,4 @@
-let personalProjects = [
+const personalProjects = [
 	{
 		"youTubeID": `0S8ybMuA4vA`,
 		"link": `https://github.com/FANMixco/toastmasters-timer`,

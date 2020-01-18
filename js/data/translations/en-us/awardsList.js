@@ -1,4 +1,4 @@
-let awardsList = {
+const awardsList = {
 	"awards": [
 		[
 			{

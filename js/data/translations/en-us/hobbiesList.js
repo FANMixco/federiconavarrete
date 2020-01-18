@@ -1,4 +1,4 @@
-let hobbiesList = {
+const hobbiesList = {
 	"hobbies": [
 		{
 			"title": `Innovation & Entrepreneurship / Intrapreneurship`,

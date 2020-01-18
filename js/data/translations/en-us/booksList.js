@@ -1,4 +1,4 @@
-var booksList = [
+const booksList = [
 	{
 		"title": "",
 		"img": "https://images-na.ssl-images-amazon.com/images/I/51-zRYQweBL.jpg",
