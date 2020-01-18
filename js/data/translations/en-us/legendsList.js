@@ -2,7 +2,8 @@ const legendsList = [
 	{
 		"title": "The Good and The Bad Cadejo",
 		"img": "https://4.bp.blogspot.com/-QmK8dT1ACAQ/WehT1iz1qyI/AAAAAAAABWc/9SbLszOEPxQ3LUWdB0fshJT0wqY2tx95gCPcBGAYYCw/s400/el-cadejo-leyenda.jpg",
-		"link": "https://federicostories.blogspot.com/2017/10/the-good-and-bad-cadejo.html"
+		"link": "https://federicostories.blogspot.com/2017/10/the-good-and-bad-cadejo.html",
+		"isActive": true
 	},
 	{
 		"title": "The Good and The Bad Cadejo",

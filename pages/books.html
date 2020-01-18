@@ -10,48 +10,7 @@
    <body>
       <div class="container-fluid">
          <div id="booksCarousel" class="carousel slide" data-ride="carousel" data-interval="900000" data-touch="true">
-            <div class="carousel-inner row w-100 mx-auto" role="listbox">
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="https://amzn.to/2TtC6wY">
-                        <img class="img-fluid mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/51-zRYQweBL.jpg" alt="slide 1">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2 active">
-                    <a target="_blank" href="https://bit.ly/2p0eZNl">
-                        <img class="img-fluid mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/51QwraqM-gL._SX306_BO1,204,203,200_.jpg" alt="slide 2">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="https://amzn.to/2ivFURl">
-                        <img class="img-fluid mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/51StUBlb0rL._SX302_BO1,204,203,200_.jpg" alt="slide 3">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="https://amzn.to/2fjDsY5">
-                        <img class="img-fluid mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/410BqHSamiL._SX322_BO1,204,203,200_.jpg" alt="slide 4">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="https://amzn.to/2XuIe9O">
-                        <img class="img-fluid mx-auto d-block" src="https://images-eu.ssl-images-amazon.com/images/I/41ToUKr%2BKpL.jpg" alt="slide 5">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="https://bit.ly/2L90eon">
-                        <img class="img-fluid mx-auto d-block" src="https://s3.amazonaws.com/netgalley-covers/cover13354-medium.png" alt="slide 6">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="http://4motivi.com/books/hill/lawofsuccess.pdf">
-                        <img class="img-fluid mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/913NFUp%2B05L.jpg" alt="slide 7">
-                    </a>
-               </div>
-               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
-                    <a target="_blank" href="https://www.jpattonassociates.com/user-story-mapping/">
-                        <img class="img-fluid mx-auto d-block" src="https://images-na.ssl-images-amazon.com/images/I/71385MbgcSL.jpg" alt="slide 8">
-                    </a>
-               </div>
-            </div>
+            <div class="carousel-inner row w-100 mx-auto" role="listbox" id="divBooks"></div>
             <a class="carousel-control-prev" href="#booksCarousel" role="button" data-slide="prev">
                 <i class="fa fa-chevron-left fa-lg text-muted"></i>
                 <span class="sr-only">Previous</span>
@@ -62,6 +21,8 @@
             </a>
          </div>
       </div>
+      <script src="../js/data/translations/en-us/booksList.js"></script>
+      <script src="../js/libs/translationsBooks.min.js"></script>
       <script src="../js/books.min.js"></script>
    </body>
 </html>

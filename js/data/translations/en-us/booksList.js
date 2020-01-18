@@ -7,7 +7,8 @@ const booksList = [
 	{
 		"title": "",
 		"img": "https://images-na.ssl-images-amazon.com/images/I/51QwraqM-gL._SX306_BO1,204,203,200_.jpg",
-		"link": "https://bit.ly/2p0eZNl"
+		"link": "https://bit.ly/2p0eZNl",
+		"isActive": true
 	},
 	{
 		"title": "",
