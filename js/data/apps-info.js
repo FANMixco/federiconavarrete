@@ -38,7 +38,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}], "mdi mdi-google-analytics"
                ],
                order: 1
             },
@@ -50,7 +50,7 @@ let apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
                technologies: [
-                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
                order: 1
             },
@@ -63,7 +63,7 @@ let apps =
                isSupported: false,
                preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
                technologies: [
-                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
+                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
                order: 1
             },
@@ -219,7 +219,7 @@ let apps =
                isSupported: true,
                preview:"https://www.behance.net/gallery/85723563/Gravity-Now-Angular-Edition",
                technologies: [
-                  "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_osm", text: "osm", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_azureDevOps", icon: "mdi mdi-azure-devops", tooltip: "Azure DevOps"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_osm", text: "osm", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_azureDevOps", icon: "mdi mdi-azure-devops", tooltip: "Azure DevOps"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
                order: 2
             },
@@ -371,7 +371,7 @@ let apps =
    },
    {
       app: "The Wet Zone",
-      link: "https://thewetzone.tk/",
+      link: "https://fanmixco.github.io/thewetzone-site/",
       description: "It's an application designed by SuperNova Team from 2013-2014. The project aim is, “To Save Lives”.",
       logo: "twetzone.png",
       edition: [
@@ -917,7 +917,7 @@ let apps =
                link: "",
                preview:"https://www.behance.net/gallery/76883225/Personal-website",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
                order: 4
             }
@@ -938,7 +938,7 @@ let apps =
                link: "",
                preview:"https://www.behance.net/gallery/87607183/Projects-Gallery",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
                order: 5
             }
@@ -959,7 +959,7 @@ let apps =
                link: "",
                preview:"https://www.behance.net/gallery/87607283/Presentations-Gallery",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
                order: 6
             }
