@@ -11,7 +11,7 @@ const legendsList = [
 		"link": "https://federicostories.blogspot.com/2017/10/the-good-and-bad-cadejo.html"
 	},
 	{
-		"title": "The Guirola's Family",
+		"title": "The Guirola Family",
 		"img": "https://1.bp.blogspot.com/-PCEd2eWZupc/WtpDLr_7d1I/AAAAAAAABkQ/26tNoaG4kfsY7nUvL6vzNhgRyvHVGxJbQCLcBGAs/s1600/Cuadro-Familia_Guirola.jpg",
 		"link": "https://federicostories.blogspot.com/2018/04/the-guirolas-family.html"
 	},
