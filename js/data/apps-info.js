@@ -964,5 +964,26 @@ let apps =
                order: 6
             }
       ]
+   },
+   {
+      app: "Booking App",
+      link: "https://github.com/FANMixco/BookingApp",
+      description: "Simple app for reserving books in ASP .NET Core",
+      logo: "book-app.png",
+      edition: [
+            {
+               yearStart: 2020,
+               yearEnd: undefined,
+               storeLink:"",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview:"",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_netCore", text: ".NET<sub>Core</sub>", tooltip: ".NET Core"}], [{type: "text", id: "id_xUnit", text: "xUnit", tooltip: "xUnit"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}]
+               ],
+               order: 7
+            }
+      ]
    }
 ];
