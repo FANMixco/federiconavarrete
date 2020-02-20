@@ -980,7 +980,7 @@ let apps =
                link: "",
                preview:"",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_netCore", text: ".NET<sub>Core</sub>", tooltip: ".NET Core"}], [{type: "text", id: "id_xUnit", text: "xUnit", tooltip: "xUnit"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}]
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "mix-left-icon", id: "id_netCore", icon: "mdi mdi-dot-net", text: "<sub>Core</sub>"}], [{type: "text", id: "id_xUnit", text: "xUnit", tooltip: "xUnit"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_entity", text: "<sub>Entity</sub>", icon: "orm.svg", tooltip: "Entity Framework Core"}]
                ],
                order: 7
             }
