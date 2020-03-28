@@ -265,7 +265,7 @@ let apps =
                technologies: [
                   "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "fas fa-chart-pie", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
-               order: 3
+               order: 8
             }
          ]
    },
@@ -618,7 +618,7 @@ let apps =
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
-               order: 3
+               order: 4
             }
          ]
    },
@@ -919,7 +919,7 @@ let apps =
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
-               order: 4
+               order: 5
             }
       ]
    },
@@ -940,7 +940,7 @@ let apps =
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
-               order: 5
+               order: 6
             }
       ]
    },
@@ -961,7 +961,7 @@ let apps =
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
-               order: 6
+               order: 7
             }
       ]
    },
@@ -982,7 +982,29 @@ let apps =
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "mix-left-icon", id: "id_netCore", icon: "mdi mdi-dot-net", text: "<sub>Core</sub>"}], [{type: "text", id: "id_xUnit", text: "xUnit", tooltip: "xUnit"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_entity", text: "<sub>Entity</sub>", icon: "orm.svg", tooltip: "Entity Framework Core"}]
                ],
-               order: 7
+               order: 8
+            }
+      ]
+   },
+   {
+      app: "RPA Best Practices",
+      link: "https://fanmixco.github.io/rpaBestPractices/",
+      description: "RPA Best Practices for developing the best Bots from Gathering requirements to infrastructure and even more secret details!",
+      logo: "robot.png",
+      edition: [
+            {
+               yearStart: 2020,
+               yearEnd: undefined,
+               storeLink: "",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview: "",
+               technologies: [
+                  [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}],
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 3
             }
       ]
    }
