@@ -17,7 +17,7 @@ const basicInfo = {
 		"isVisible": true
 	},
 	"telephone": {
-		"number": "+48881387085",
+		"number": "+48533002697",
 		"isVisible": true
 	},
 	"email": {
