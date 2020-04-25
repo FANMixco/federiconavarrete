@@ -43,6 +43,8 @@ $(function() {
     let lastDirection = 0;
 
     $(window).scroll(function(event) {
+        let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+        
         if (smallScreenMobileOS) {
             let st = $(this).scrollTop();
             movement += st - lastScrollTop;
