@@ -6,9 +6,9 @@ const legendsList = [
 		"isActive": true
 	},
 	{
-		"title": "The Good and The Bad Cadejo",
-		"img": "https://4.bp.blogspot.com/-QmK8dT1ACAQ/WehT1iz1qyI/AAAAAAAABWc/9SbLszOEPxQ3LUWdB0fshJT0wqY2tx95gCPcBGAYYCw/s400/el-cadejo-leyenda.jpg",
-		"link": "https://federicostories.blogspot.com/2017/10/the-good-and-bad-cadejo.html"
+		"title": "The Siguanaba’s hammock",
+		"img": "https://1.bp.blogspot.com/-DaFnjRSrpBE/Xp3qhrh56gI/AAAAAAAACno/_KLVBYwJ4CA_Lzqd6KT-uMzD6EPa5A_JQCLcBGAsYHQ/s400/image.jpeg",
+		"link": "https://federicostories.blogspot.com/2020/04/the-hammock-of-siguanaba.html"
 	},
 	{
 		"title": "The Guirola Family",
@@ -36,7 +36,7 @@ const legendsList = [
 		"link": "https://federicostories.blogspot.com/2018/05/mr-money-and-mrs-fortune.html"
 	},
 	{
-		"title": "The Cave of the Moon",
+		"title": "The Moon’s cave",
 		"img": "https://1.bp.blogspot.com/-nQ_XaJAEFvg/XTjGN_F2aNI/AAAAAAAACYE/Mjcxtjb8q1oAZmn9yHQHZZtePHvtPA7PgCLcBGAs/s320/LA%2BCUEVA%2BDE%2BLA%2BLUNA%2B-%2BLEYENDA%2BSALVADOREN%25CC%2583A.jpg",
 		"link": "https://federicostories.blogspot.com/2019/07/the-cave-of-moon.html"
 	}
