@@ -1007,5 +1007,68 @@ let apps =
                order: 3
             }
       ]
+   },
+   {
+      app: "Mate",
+      link: "",
+      description: "Your new experience to find the best Mates in your town!",
+      logo: "mate.png",
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: 2020,
+               storeLink: "",
+               mainTech: "web",
+               isSupported: false,
+               link: "https://fanmixco.github.io/MatePreview/",
+               preview: "https://www.behance.net/gallery/97825755/Mate-Website",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 3
+            }
+      ]
+   },
+   {
+      app: "Futurum",
+      link: "",
+      description: "Online IT services and trainings in Poland.",
+      logo: "futurum.png",
+      edition: [
+            {
+               yearStart: 2019,
+               yearEnd: 2019,
+               storeLink: "",
+               mainTech: "web",
+               isSupported: false,
+               link: "https://fanmixco.github.io/futurum/",
+               preview: "https://www.behance.net/gallery/97825947/Futurum-Website",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 4
+            }
+      ]
+   },
+   {
+      app: "Zero Waste",
+      link: "https://fanmixco.github.io/ZeroWaste/",
+      description: "Your new Recycling experience powered by AI!",
+      logo: "zeroWaste.png",
+      edition: [
+            {
+               yearStart: 2020,
+               yearEnd: undefined,
+               storeLink: "",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview: "https://www.behance.net/gallery/97826047/Zero-Waste-Website",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 3
+            }
+      ]
    }
 ];
