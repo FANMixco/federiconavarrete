@@ -999,7 +999,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview: "",
+               preview: "https://www.behance.net/gallery/97845651/RPA-Best-Practices-PWA",
                technologies: [
                   [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}],
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-firebase", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
