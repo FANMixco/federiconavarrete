@@ -2,7 +2,7 @@ let apps =
 [
    {
       app: "Toastasters Timer",
-      link: "https://toastmasterstimer.tk",
+      link: "https://fanmixco.github.io/toastmasters-timer-material-design/",
       description:"The best Toastmasters Timer for your meetings, it's simple fast and accurate.",
       logo: "timer.png",
       edition: [
@@ -493,7 +493,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               link: "http://lodzarts.pl",
+               link: "https://fanmixco.github.io/LodzartsConference/",
                preview:"https://www.behance.net/gallery/76882983/Lodzarts-website",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
