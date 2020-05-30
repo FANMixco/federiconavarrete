@@ -1,7 +1,6 @@
 const basicInfo = {
 	"name": `Federico Navarrete`,
 	"headline": `IT Consultant 💡 and Orator 🇬🇧/ 🇪🇸`,
-	//It's time to bring innovation 💡! Are you ready?
 	"headlineIntro": `It's time to bring innovation 💡! Are you ready?`,
 	"aboutDesc": [
 		`Welcome! I'm an IT Consultant and Orator 🇬🇧/ 🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who can help you bring innovation and change to your world!<br /><br />I've been in the IT industry for over 10 years, where I've designed <a href="https://behance.net/fanmixco" class="text-danger" target="_blank">innovative apps</a>, led fantastic teams, automated multiple services, and developed important <a href="https://www.youtube.com/c/FedericoNavarrete" class="text-danger" target="_blank">soft skills</a>.`,

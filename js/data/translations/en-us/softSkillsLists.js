@@ -5,8 +5,8 @@ const softSkills = [
 		`Presentation design`
 	],
 	[
-		`IT consultancy`,
-		`Emerging technologies research`
+		"Project management",
+		`IT consultancy`
 	],
 	[
 		`Leadership`,
@@ -27,7 +27,7 @@ const softSkillsOthers = [
 		"Business analysis"
 	],
 	[
-		"Project management",
+		`Emerging technologies research`,
 		`Mentoring & Coaching`,
 		"Team building"
 	]
