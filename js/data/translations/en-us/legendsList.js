@@ -26,7 +26,7 @@ const legendsList = [
 		"link": "https://federicostories.blogspot.com/2018/02/the-squeaky-wagon.html"
 	},
 	{
-		"title": "The Cuyuncua",
+		"title": "The Cuyancua",
 		"img": "https://3.bp.blogspot.com/-DB-vx-bro2w/WhXF_X_Z4WI/AAAAAAAABbI/F-psj9QCDxgez5NJ8Cv1dlJe7txNVJLkgCLcBGAs/s400/cuyancua.jpg",
 		"link": "https://federicostories.blogspot.com/2017/11/the-cuyancua.html"
 	},
