@@ -2,7 +2,7 @@ const awardsList = {
 	"awards": [
 		[
 			{
-				"title": "Triple Crown by Toastmasters International 2018"
+				"title": "President's Distinguished Area by Toastmasters International 2019"
 			},
 			{ 
 				"title": "1st place in the Faculty ranking of the WEEIA and IFE 2016"

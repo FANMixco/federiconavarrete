@@ -14,7 +14,7 @@ const genericTranslations = {
     "articles": "Articles",
     "books": "Books",
     "aboutMe": "About me",
-    "downloadFavApp": "I invite you to download my fav App!",
+    "downloadFavApp": "Download my fav App!",
     "hobbies": "Hobbies",
     "awards": "Awards",
     "techSkills": "Technical Skills",

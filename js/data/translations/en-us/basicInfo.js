@@ -1,15 +1,16 @@
 const basicInfo = {
 	"name": `Federico Navarrete`,
-	"headline": `IT Consultant 💡 and Bilingual Public Speaker 🇬🇧/ 🇪🇸`,
-	"headlineIntro": `I help companies and individuals solve IT challenges in an innovative, agile and creative manner! 💡💡💡`,
+	"headline": `IT Consultant 💡 and Orator 🇬🇧/ 🇪🇸`,
+	//It's time to bring innovation 💡! Are you ready?
+	"headlineIntro": `It's time to bring innovation 💡! Are you ready?`,
 	"aboutDesc": [
-		`Welcome everyone! I'm an IT Consultant and Bilingual Public Speaker 🇬🇧/ 🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who is constantly challenging himself.
+		`Welcome! I'm an IT Consultant and Orator 🇬🇧/ 🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-danger" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who can help you bring innovation and change to your world!
 						 <br />
 						 <br />
-						 I've been in the IT industry for over 10+ years, where I've created innovative apps while developing useful soft skills.`,
-		`Furthermore, I'm a Machine Learning Enthusiast, who enjoys challenges! Especially <i>Innovation</i> and <i>Public Speaking</i> ones like Microsoft Imagine Cup.
+						 I've been in the IT industry for 10+ years, where I've designed <a href="https://behance.net/fanmixco" class="text-danger" target="_blank">innovative apps</a>, led fantastic teams, automated multiple services, and developed important soft skills.`,
+		`Furthermore, I'm on the constant quest of the next <i>great thing</i>! Plus, challenges define me. I love innovation contests like Microsoft Imagine Cup and create a better world.
                   </p>
-                  <p class="lead text-uppercase text-warning carousel-video-inner "><i>What about you? Are you ready for your next challenge?</i>`
+                  <p class="lead text-uppercase text-warning carousel-video-inner font-weight-bold"><i>What about you? Are you ready for your next challenge? We can work on it.</i>`
 	],
 	"favApp": {
 		"link": `https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute`,
