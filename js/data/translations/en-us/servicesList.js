@@ -7,7 +7,7 @@ const servicesList = {
             },
 			{
 				"title": "Keynote Speeches",
-                "link": `https://forms.gle/djC8C4Ah7mRiZXTu5`
+                "link": `https://forms.gle/YCiDoWEm5BZhHh4R9`
 			}
         ],
         [
