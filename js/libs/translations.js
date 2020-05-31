@@ -24,7 +24,7 @@ function loadReviews() {
     if (isVisible) {
         reviews.forEach(function(item, index) {
 
-            let name = item.externalLink !== "" ? `<a href="${item.externalLink}" rel="noreferrer" target="_blank" class="text-danger">${item.name}</a>` : item.name;
+            let name = item.externalLink !== "" ? `<a href="${item.externalLink}" rel="noreferrer" target="_blank" class="text-warning">${item.name}</a>` : item.name;
 
             let active = item.isActive ? " active" : "";
 
@@ -34,9 +34,9 @@ function loadReviews() {
                 <div class="img-box p-1 border rounded-circle m-auto">
                     <img loading="lazy" class="d-block w-100 rounded-circle" src="${item.img}" alt="review${currentReview} slide" />
                 </div>
-                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">${name}</strong></h5>
+                <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
                 <h6 class="text-white m-0">${item.title}</h6>
-                <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-danger" data-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
+                <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-material-link" data-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
             </div>`;
 
             $("#divReviewsPreviews").append(review);
@@ -47,7 +47,7 @@ function loadReviews() {
                 longReview = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
                 <img class="d-block w-100 rounded-circle" loading="lazy" src="${item.img}" alt="review${currentReview} slide" />
                 </div>
-                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">${name}</strong></h5>
+                <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
                 <h6 class="text-dark m-0">${item.title}</h6>
                 <p class="text-dark m-0 centerText">${item.date}</p>
                 <div id="review${currentReview}PDF"></div>
@@ -61,7 +61,7 @@ function loadReviews() {
                 longReview = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
                 <img class="d-block w-100 rounded-circle" src="${item.img}" loading="lazy" alt="review${index + 1} slide" />
                 </div>
-                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">${name}</strong></h5>
+                <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
                 <p class="text-dark m-0">${item.title}</p>
                 <h6 class="text-dark m-0 centerText">${item.date}</h6>
                 <p class="m-0 pt-3 text-black">${item.review}</p>`;
@@ -356,7 +356,7 @@ function loadAwards() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a href=${elem.link} target="_blank" class="text-danger">${elem.title}</a>`;
+                    title = `<a href=${elem.link} target="_blank" class="text-warning">${elem.title}</a>`;
                 else
                     title = elem.title;
                 items += `${title}<br /><br />`;

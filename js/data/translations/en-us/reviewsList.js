@@ -6,7 +6,7 @@ const reviewsList = {
 			"externalLink": "https://thinknatalia.com",
 			"review": `Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!`,
 			"shortReview": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … ",
-			"title": "LinkedIn🦄|Personal Branding Strategist|Edutainer🎤:Helping Coachsultants to make LinkedIn their Marketing & 🤑 platform",
+			"title": "LinkedIn🦄|Personal Branding Pro|Edutainer: Helping Coachsultants to grow their bizz through ORGANIC LinkedIn marketing",
 			"date": "27-05-2019",
 			"isPDF": false,
 			"isActive": true
@@ -17,7 +17,7 @@ const reviewsList = {
 			"externalLink": "",
 			"review": `testimonials/20190603165400926.pdf`,
 			"shortReview": "I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland …",
-			"title": `Program Quality Director 2018/2019 at <a class="text-danger" target="_blank" rel="noreferrer" href="https://toastmastersd108.org" class="text-dark">District 108</a>, <a target="_blank" class="text-danger" rel="noreferrer" href="https://www.toastmasters.org" class="text-dark">Toastmasters International</a>`,
+			"title": `Program Quality Director 2018/2019 at <a class="text-material-link" target="_blank" rel="noreferrer" href="https://toastmastersd108.org" class="text-dark">District 108</a>, <a target="_blank" class="text-material-link" rel="noreferrer" href="https://www.toastmasters.org" class="text-dark">Toastmasters International</a>`,
 			"date": "03-06-2019",
 			"isPDF": true,
 			"pdfLocation": "testimonials/20190603165400926.pdf",

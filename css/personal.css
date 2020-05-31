@@ -169,3 +169,15 @@ iframe {
 #google_translate_element {
     padding:1em;
 }
+
+a.text-material-link {
+    color: #6300ED;
+}
+
+a.text-material-link:hover {
+    color: #7919FF;
+}
+
+.text-material-orange {
+    color: #ED5218;
+}
