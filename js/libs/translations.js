@@ -339,7 +339,7 @@ function loadServices() {
                     title = `<a href=${elem.link} target="_blank" class="text-warning">${elem.title}</a>`;
                 else
                     title = elem.title;
-                items += `<b>${title}</b><br /><br />`;
+                items += `<span class="font-weight-bold">${title}</span><br /><br />`;
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
 
