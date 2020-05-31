@@ -64,20 +64,20 @@
     background: rgba(44, 62, 80, .3);
 }
 
-.externalImg img{
+.externalImg img,.externalImg:active img{
     margin-top: -3px;
     filter: invert(100%);
-
 }
-.externalImg:hover img,.externalImg:active img{
+{}
+.externalImg:hover img{
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
 }
 
-
-.externalImgAzure img{
+.externalImgAzure img,.externalImgAzure:active img{
     height: 24px;
 }
-.externalImgAzure:hover img,.externalImgAzure:active img{
+
+.externalImgAzure:hover img{
     filter: invert(85%);
 }
 
