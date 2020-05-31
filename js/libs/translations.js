@@ -7,6 +7,7 @@ $.getScript(`${langLoc}${lang}/generics.js`).done(function() {
     $.getScript(`${langLoc}${lang}/basicInfo.js`).done(loadBasicInfo);
     $.getScript(`${langLoc}${lang}/hobbiesList.js`).done(loadHobbies);
     $.getScript(`${langLoc}${lang}/awardsList.js`).done(loadAwards);
+    $.getScript(`${langLoc}${lang}/servicesList.js`).done(loadServices);
     $.getScript(`${langLoc}${lang}/techSkillsLists.js`).done(loadTechSkills);
     $.getScript(`${langLoc}${lang}/softSkillsLists.js`).done(loadSoftSkills);
     $.getScript(`${langLoc}${lang}/personalProjects.js`).done(loadPersonalProjects);
@@ -120,6 +121,10 @@ function loadTranslations() {
         {
             "identifier": "#spanAwards",
             "value": genericTranslations.awards
+        },
+        {
+            "identifier": "#spanServices",
+            "value": genericTranslations.services
         },
         {
             "identifier": "#spanTechSkills",
@@ -318,6 +323,30 @@ function getHobbyImg(item) {
     return getImage(item.title, "#", item.icon, false, item.isIcon, externalClass, true);
 }
 
+function loadServices() {
+    const { services, isVisible } = servicesList;
+
+    if (isVisible) {
+        services.forEach(item => {
+            let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
+            item.forEach(elem => {
+                let title = "";
+                if (elem.link)
+                    title = `<a href=${elem.link} target="_blank" class="text-warning">${elem.title}</a>`;
+                else
+                    title = elem.title;
+                items += `${title}<br /><br />`;
+            });
+            items = `${items.substring(0, items.length - 12)}</div>`;
+
+            $("#servicesList").append(items);
+        });
+    }
+    else {
+        $("#divServices").hide();
+    }
+}
+
 function loadAwards() {
     const { awards, isVisible } = awardsList;
 
@@ -325,7 +354,12 @@ function loadAwards() {
         awards.forEach(item => {
             let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
             item.forEach(elem => {
-                items += `${elem.title}<br /><br />`;
+                let title = "";
+                if (elem.link)
+                    title = `<a href=${elem.link} target="_blank" class="text-danger">${elem.title}</a>`;
+                else
+                    title = elem.title;
+                items += `${title}<br /><br />`;
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
 
