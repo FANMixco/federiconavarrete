@@ -68,7 +68,7 @@
     margin-top: -3px;
     filter: invert(100%);
 }
-{}
+
 .externalImg:hover img{
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
 }
