@@ -23,7 +23,7 @@ const servicesList = {
 		[
 			{
                 "title": "Trainings like Storytelling, Elevator Pitching, Zoom, or IT related",
-                "link": `https://forms.gle/djC8C4Ah7mRiZXTu5`
+                "link": `https://forms.gle/J7i1mFp9NDeHFnFy9`
 			}
 		]
 	],
