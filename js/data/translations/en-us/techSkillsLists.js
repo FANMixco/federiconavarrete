@@ -23,7 +23,7 @@ const techSkillsOthers =[
 	[
 		`ITSM — ITIL v4`,
 		`ATDD`,
-		`RPA — UiPath &amp; <span class="text-danger" title="Automation Anywhere" data-toggle="tooltip">AA</span>`
+		`RPA — UiPath &amp; <span class="text-info" title="Automation Anywhere" data-toggle="tooltip">AA</span>`
 	],
 	[
 		`RESTful Web Services`,
@@ -36,7 +36,7 @@ const techSkillsOthers =[
 		`UIX`
 	],
 	[
-		`Azure`,
+		`Azure (PaaS & IaaS)`,
 		`Visual Studio & Code`,
 		`SQL Server & SQLite`
 	]
