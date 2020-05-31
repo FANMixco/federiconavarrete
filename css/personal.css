@@ -69,14 +69,15 @@
     filter: invert(100%);
 
 }
-.externalImg:hover img{
+.externalImg:hover img,.externalImg:active img{
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
 }
+
 
 .externalImgAzure img{
     height: 24px;
 }
-.externalImgAzure:hover img{
+.externalImgAzure:hover img,.externalImgAzure:hover img{
     filter: invert(85%);
 }
 
@@ -89,7 +90,7 @@
     color: white;
 }
 
-#linkContactMe:hover{
+#linkContactMe:hover,#linkContactMe:active{
     color: #212529;
 }
 
@@ -174,7 +175,7 @@ a.text-material-link {
     color: #6300ED;
 }
 
-a.text-material-link:hover {
+a.text-material-link:hover,a.text-material-link:active {
     color: #7919FF;
 }
 
