@@ -77,7 +77,7 @@
 .externalImgAzure img{
     height: 24px;
 }
-.externalImgAzure:hover img,.externalImgAzure:hover img{
+.externalImgAzure:hover img,.externalImgAzure:active img{
     filter: invert(85%);
 }
 
