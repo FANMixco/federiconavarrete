@@ -296,6 +296,10 @@ function loadHobbies() {
 
         $('[data-toggle="tooltip"]').tooltip();
 
+        $('[data-toggle="tooltip"]').click(function(e){
+            e.preventDefault();
+        });
+    
         let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
         if (!smallScreenMobileOS) {
