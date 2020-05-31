@@ -22,7 +22,7 @@ const softSkillsOthers = [
 		"Elevator pitching"
 	],
 	[
-		"Requirements collection",
+		"Gathering requirements",
 		`Innovative planning`,
 		"Business analysis"
 	],
