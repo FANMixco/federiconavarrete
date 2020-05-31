@@ -16,7 +16,7 @@ const servicesList = {
                 "link": `https://forms.gle/djC8C4Ah7mRiZXTu5`
 			},
 			{
-				"title": "IT Consultancy",
+				"title": "IT or RPA Consultancy",
                 "link": `https://forms.gle/AuXkzzpvozAGKHWaA`
 			}
 		],
