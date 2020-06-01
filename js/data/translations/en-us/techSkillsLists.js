@@ -23,7 +23,7 @@ const techSkillsOthers =[
 	[
 		`ITSM — ITIL v4`,
 		`ATDD`,
-		`RPA — UiPath &amp; <span class="text-info" title="Automation Anywhere" data-toggle="tooltip">AA</span>`
+		`RPA — UiPath &amp; Automation Anywhere`
 	],
 	[
 		`RESTful Web Services`,
