@@ -33,5 +33,6 @@ const genericTranslations = {
     "mySalvadorean": "My Salvadoran Legends and Fairy tales",
     "moreWeb": "More around the web",
     "otherHobbies": "Other hobbies",
-    "menu": "Menu"
+    "menu": "Menu",
+    "massMedia": "Mass Media"
 };

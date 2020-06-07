@@ -1,4 +1,4 @@
-let lang = "en-us";
+let lang = "en-us/min";
 let langLoc = "js/data/translations/";
 const iframeElSalvador = `<iframe title='El Salvador Map' id='iframeElSalvador' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" class="previewerIframe" allowfullscreen></iframe>`;
 
@@ -14,6 +14,7 @@ $.getScript(`${langLoc}${lang}/generics.js`).done(function() {
     $.getScript(`${langLoc}${lang}/presentationsLists.js`).done(loadVideosAndPresentations);
     $.getScript(`${langLoc}${lang}/organizedEvents.js`).done(loadOrganizedEvents);
     $.getScript(`${langLoc}${lang}/articlesList.js`).done(loadArticles);
+    $.getScript(`${langLoc}${lang}/newsArticleList.js`).done(loadNewsArticles);
     $.getScript(`${langLoc}${lang}/socialMediasLists.js`).done(loadSocialMedias);
     $.getScript(`${langLoc}${lang}/reviewsList.js`).done(loadReviews);
 });
@@ -101,6 +102,10 @@ function loadTranslations() {
         {
             "identifier": ".menuArticles",
             "value": genericTranslations.articles
+        },
+        {
+            "identifier": ".hMassMedia",
+            "value": genericTranslations.massMedia
         },
         {
             "identifier": "#menuBooks",
@@ -477,6 +482,26 @@ function loadArticles() {
     }
     else {
         $("#articles").hide();
+    }
+}
+
+function loadNewsArticles() {
+    const { articles, isVisible } = newsArticlesList;
+
+    if (isVisible) {
+        articles.forEach(item => {
+            let event = `<div class="col-sm">
+                <a href="${item.link}" target="_blank" rel="noreferrer">
+                    <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
+                </a>
+                <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+            </div>`;
+            $("#divMMArticles").append(event);
+            setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
+        });
+    }
+    else {
+        $("#newsArticles").hide();
     }
 }
 
