@@ -1,12 +1,12 @@
 const booksList = [
 	{
 		"title": "",
-		"img": "../img/books/hp.jpg",
+		"img": "../img/books/HP.jpg",
 		"link": "https://amzn.to/2TtC6wY"
 	},
 	{
 		"title": "",
-		"img": "../img/books/wf.jpg",
+		"img": "../img/books/WF.jpg",
 		"link": "https://bit.ly/2p0eZNl",
 		"isActive": true
 	},
