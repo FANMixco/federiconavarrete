@@ -562,7 +562,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 
 function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse, btnMore, itemCollapseID) {
     skills.forEach(item => {
-        let items = `<div class="col"><p class="lead">`;
+        let items = `<div class="col-sm"><p class="lead">`;
         item.forEach(elem => {
             items += `${elem}<br /><br />`;
         });
@@ -580,7 +580,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
     $(`#${btnMore}`).attr("aria-controls", arias);
 
     skillsOthers.forEach(function(item, index) {
-        let items = `<div class="col"><div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
+        let items = `<div class="col-sm"><div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
         item.forEach(elem => {
             items += `${elem}<br /><br />`;
         });

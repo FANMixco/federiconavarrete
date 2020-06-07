@@ -2,19 +2,18 @@
 const techSkills = [
 	[
 		`Agile - Scrum`,
-		`CICD — Azure DevOps`
-	],
-	[
-		"Xamarin.Android",
-		`Google Maps API`
+		`CICD — Azure DevOps`,
+		`<a href="https://fanmixco.github.io/rpaBestPractices/" target="_blank" class="text-warning">RPA</a> — UiPath &amp; Automation Anywhere`
 	],
 	[
 		"Angular 8+",
-		`PWA`
+		`PWA`,
+		`Google Maps API`
 	],
 	[
 		`Cloud / Mobile / Web Dev`,
-		`C# & .NET Core`
+		`C# & .NET Core`,
+		"Xamarin.Android"
 	]
 ];
 
@@ -23,21 +22,19 @@ const techSkillsOthers =[
 	[
 		`ITSM — ITIL v4`,
 		`ATDD`,
-		`RPA — UiPath &amp; Automation Anywhere`
-	],
-	[
 		`RESTful Web Services`,
 		`Versioning — Git`,
-		`Entity Framework`
 	],
 	[
 		`ASP MVC`,
+		`Entity Framework`,
 		`HTML5 / CSS3 / JS`,
-		`UIX`
+		`UI & UX`
 	],
 	[
 		`Azure (PaaS & IaaS)`,
 		`Visual Studio & Code`,
-		`SQL Server & SQLite`
+		`SQL Server & SQLite`,
+		`Google Analytics`
 	]
 ];
