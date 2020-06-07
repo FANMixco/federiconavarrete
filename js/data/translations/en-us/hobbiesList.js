@@ -14,8 +14,8 @@ const hobbiesList = {
 			"isOpt": false
 		},
 		{
-			"title": "Public speaking",
-			"icon": "mdi mdi-voice extraIcons",
+			"title": "Public speaking (Storytelling & Elevator Pitching)",
+			"icon": "mdi mdi-account-voice extraIcons",
 			"isIcon": true,
 			"isOpt": false
 		},
