@@ -5,14 +5,14 @@ const articlesList = {
 			"title": `The Four Faces of Automation in the Industry 4.0`,
 			"imgID": "imgArt1",
 			"imgBasicName": "faces2",
-			"imgFormat": "png"
+			"imgFormat": "jpg"
 		},
 		{
 			"link": `https://www.linkedin.com/pulse/low-code-platforms-next-big-thing-federico-navarrete`,
 			"title": `Are Low-Code Platforms the next big thing in IT?`,
 			"imgID": "imgArt2",
 			"imgBasicName": "lowCode",
-			"imgFormat": "png"
+			"imgFormat": "jpg"
 		}
 	],
 	"isVisible": true
