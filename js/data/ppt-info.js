@@ -295,5 +295,14 @@ let ppts = [
         link: "https://1drv.ms/p/s!AhpAtowYvNcyi6Q_WXXzx_vXLs2vCQ?e=Yka8Cf",
         type: "ppt",
         order: 1
+    },
+    {
+        name: "La Automatización en los procesos informáticos y el Futuro Post Covid-19",
+        preview: "p34.jpg",
+        edited: "2020-07-16",
+        wasPresented: true,
+        link: "https://prezi.com/view/FcXeOX2hZCKHuyYPBzhI",
+        type: "next",
+        order: 0
     }
 ];
