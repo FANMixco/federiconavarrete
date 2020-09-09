@@ -33,13 +33,13 @@ const socialOthersList = {
 		{
 			"icon": "fas fa-fw fa-building",
 			"title": "Supernova IC",
-			"link": `"https://supernovaic.tk`,
+			"link": `"https://supernovaic.com`,
 			"isIcon": true
 		},
 		{
 			"icon": "fab fa-blogger",
 			"title": "Supernova IC's Blog",
-			"link": `http://supernovaic.blogspot.com/`,
+			"link": `https://supernovaic.blogspot.com/`,
 			"isIcon": true
 		},
 		{
