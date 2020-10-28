@@ -26,9 +26,14 @@ $(function() {
     switch (WURFL.form_factor) {
         case "Smartphone":
             $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);
+            $("#imgBook").attr("src",`img/mybook/book_small.jpg`);
+            break;
+        case "Tablet":
+            $("#imgBook").attr("src",`img/mybook/book_medium.jpg`);
             break;
         default:
-            $("#imgProfile").attr("src",`img/photos/profile.jpg`);
+            $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);
+            $("#imgBook").attr("src",`img/mybook/book_medium.jpg`);
             break;
     }
 
