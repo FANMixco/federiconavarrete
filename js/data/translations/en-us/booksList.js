@@ -6,9 +6,14 @@ const booksList = [
 	},
 	{
 		"title": "",
-		"img": "../img/books/WF.jpg",
-		"link": "https://bit.ly/2p0eZNl",
+		"img": "../img/books/mybook1.jpg",
+		"link": "https://amzn.to/3nnbn4e",
 		"isActive": true
+	},
+	{
+		"title": "",
+		"img": "../img/books/WF.jpg",
+		"link": "https://bit.ly/2p0eZNl"
 	},
 	{
 		"title": "",
