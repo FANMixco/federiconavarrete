@@ -121,7 +121,7 @@ let ppts = [
         preview: "p13.jpg",
         edited: "2016-03-03",
         wasPresented: true,
-        link: "https://prezi.com/kuihy80pqijp/firefly-cisco-switch-up-challenge-2016/",
+        link: "https://prezi.com/view/WdIP4iHB1iLGsYyNuyiR/",
         type: "classic",
         order: 1
     },
@@ -130,7 +130,7 @@ let ppts = [
         preview: "p14.jpg",
         edited: "2016-07-21",
         wasPresented: true,
-        link: "https://prezi.com/gouvakelgfji/el-salvador-impressive",
+        link: "https://prezi.com/view/h68rYOg8MucysIIZ1AgE/",
         type: "classic",
         order: 9
     },
@@ -139,7 +139,7 @@ let ppts = [
         preview: "p15.jpg",
         edited: "2013-09-07",
         wasPresented: true,
-        link: "https://prezi.com/fxqgezqltasz/diputado-85",
+        link: "https://prezi.com/view/pxuKqbJuWD8GA0SMbehN/",
         type: "classic",
         order: 5
     },
@@ -166,7 +166,7 @@ let ppts = [
         preview: "p18.jpg",
         edited: "2016-06-10",
         wasPresented: true,
-        link: "https://prezi.com/lbax0zojjwjy/from-el-salvador-to-poland",
+        link: "https://prezi.com/view/IVn2kSXLLjNQP9dv1fzz/",
         type: "classic",
         order: 8
     },
@@ -175,7 +175,7 @@ let ppts = [
         preview: "p19.jpg",
         edited: "2014-04-20",
         wasPresented: true,
-        link: "https://prezi.com/npsmsuq8mxkf/gravity-now-spaceapps-challenge-2014-nasa",
+        link: "https://prezi.com/view/LBzKzTdmREy0ZA6ZRqg1/",
         type: "classic",
         order: 2
     },
@@ -302,6 +302,15 @@ let ppts = [
         edited: "2020-07-16",
         wasPresented: true,
         link: "https://prezi.com/view/FcXeOX2hZCKHuyYPBzhI",
+        type: "next",
+        order: 0
+    },
+    {
+        name: "Build Your Club's Personal Brand",
+        preview: "p35.jpg",
+        edited: "2020-12-05",
+        wasPresented: true,
+        link: "https://prezi.com/view/zm8tMzGvv3vGVysbk1Aq",
         type: "next",
         order: 0
     }

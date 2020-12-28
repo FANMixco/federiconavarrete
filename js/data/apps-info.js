@@ -863,6 +863,66 @@ let apps =
       ]
    },
    {
+      app: "Xamarin-FiveStarsRate",
+      link: "https://github.com/Angtrim/Android-Five-Stars-Library",
+      description: "Android Five Stars Library is a small library that helps developer add a “Rate My App” dialog to their applications. It's called “Five Stars” because the dialog has a different behaviour based on the rating given by the user.",
+      logo: 'libs/star_five.png',
+      edition: [
+            {
+               yearStart: 2020,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin-FiveStarsRate/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 8
+            }
+         ]
+   },
+   {
+      app: "Xamarin-SmoothBottomBar",
+      link: "https://github.com/ibrahimsn98/SmoothBottomBar",
+      description: "A lightweight Xamarin.Android material bottom navigation bar library. Based on @ibrahimsn98's version.",
+      logo: 'libs/bottom_tab.png',
+      edition: [
+            {
+               yearStart: 2020,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/Xamarin-SmoothBottomBar/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 9
+            }
+         ]
+   },
+   {
+      app: "ZoomImage-Xamarin",
+      link: "https://github.com/FANMixco/ZoomImage-Xamarin",
+      description: "A simple pinch-to-zoom ImageView library for Xamarin.Android.",
+      logo: 'libs/zoom.png',
+      edition: [
+            {
+               yearStart: 2020,
+               yearEnd: undefined,
+               mainTech: "nuget",
+               isSupported: true,
+               storeLink:"https://www.nuget.org/packages/ZoomImage-Xamarin/",
+               preview:"",
+               technologies: [
+                  [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
+               ],
+               order: 10
+            }
+         ]
+   },
+   {
       app: "Timing Field",
       link: "https://github.com/FANMixco/TimingField",
       description: "A jquery plugin to transform a timestamp field into an hours/minutes/seconds selector.",
