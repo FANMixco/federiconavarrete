@@ -292,7 +292,7 @@ let ppts = [
         preview: "p32.jpg",
         edited: "2016-04-02",
         wasPresented: true,
-        link: "https://1drv.ms/p/s!AhpAtowYvNcyi6Q_WXXzx_vXLs2vCQ?e=Yka8Cf",
+        link: "https://1drv.ms/p/s!AhpAtowYvNcykJY-WpGf7Zg2BbrLbg?e=BfFvaI",
         type: "ppt",
         order: 1
     },
