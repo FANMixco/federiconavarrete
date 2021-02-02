@@ -43,6 +43,12 @@ const socialOthersList = {
 			"isIcon": true
 		},
 		{
+			"icon": "fab fa-goodreads",
+			"title": "Goodreads",
+			"link": `https://www.goodreads.com/fanmixco`,
+			"isIcon": true
+		},
+		{
 			"icon": "fab fa-fw fa-github",
 			"title": "GitHub",
 			"link": `https://github.com/FANMixco`,
