@@ -20,6 +20,12 @@ const hobbiesList = {
 			"isOpt": false
 		},
 		{
+			"title": "Creative writing",
+			"icon": "fas fa-pen-fancy",
+			"isIcon": true,
+			"isOpt": false
+		},
+		{
 			"title": "Photography",
 			"icon": "fas fa-camera-retro",
 			"isIcon": true,
@@ -40,12 +46,6 @@ const hobbiesList = {
 		{
 			"title": "Board games",
 			"icon": "fas fa-dice",
-			"isIcon": true,
-			"isOpt": false
-		},
-		{
-			"title": "Creative writing",
-			"icon": "fas fa-pen-fancy",
 			"isIcon": true,
 			"isOpt": false
 		},
