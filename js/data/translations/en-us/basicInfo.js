@@ -1,6 +1,6 @@
 const basicInfo = {
 	"name": `Federico Navarrete`,
-	"headline": `IT Consultant 💡, <a href="https://amzn.to/3nnbn4e" target="_blank">Author</a> 📝 and Orator 🇬🇧/🇪🇸<br />Leading Digital Transformations`,
+	"headline": `IT Consultant 💡, <a id="aBooksModal" data-toggle="modal" data-target="#booksModal" href="#booksModal">Author</a> 📝 and Orator 🇬🇧/🇪🇸<br />Leading Digital Transformations`,
 	"headlineIntro": `It's time to bring innovation 💡! Are you ready?`,
 	"aboutDesc": [
 		`Welcome! I'm an IT Consultant and Orator 🇬🇧/🇪🇸 from <a id="aElSalvador" href="#elSalvador" class="text-material-link" data-toggle="modal" data-target="#elSalvador">El Salvador</a>, who can help you bring innovation and change to your world!<br /><br />I've been in the IT industry for over 10 years, where I've designed <a href="https://bit.ly/3dIhfQW" class="text-material-link" target="_blank">innovative apps</a>, led fantastic teams, automated multiple services, and developed important <a href="https://bit.ly/3cA3SkE" class="text-material-link" target="_blank">soft skills</a>.`,

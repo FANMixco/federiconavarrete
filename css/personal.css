@@ -182,3 +182,9 @@ a.text-material-link:hover,a.text-material-link:active {
 .text-material-orange {
     color: #ED5218;
 }
+
+.bookIcons {
+    width: 96px;
+    padding: 5px;
+    margin: auto;
+}
