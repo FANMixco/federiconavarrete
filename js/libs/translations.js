@@ -120,6 +120,10 @@ function loadTranslations() {
             "value": genericTranslations.downloadFavApp
         },
         {
+            "identifier": "#hDownloadFavBook",
+            "value": genericTranslations.getBook
+        },
+        {
             "identifier": "#hHobbies",
             "value": genericTranslations.hobbies
         },
@@ -236,7 +240,7 @@ function setTranslation(id, text) {
 }
 
 function loadBasicInfo() {
-    const { name, headline, headlineIntro, aboutDesc, favApp, telephone, email, skype } = basicInfo;
+    const { name, headline, headlineIntro, aboutDesc, favApp, favBook, telephone, email, skype } = basicInfo;
 
     $("#linkName").html(name);
     $("#hName").html(name);
@@ -246,6 +250,13 @@ function loadBasicInfo() {
     aboutDesc.forEach(item => {
         $("#divAbout").append(`<div class="col-sm"><p class="lead">${item}</p></div>`);
     });
+
+    if (favBook.isVisible) { 
+        $("#favBook").append(`<a class="btn btn-xl btn-outline-light" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><i class="fas fa-download mr-2"></i> ${favBook.title}</a>`);
+    }
+    else {
+        $("#favBook").hide();
+    }
 
     if (favApp.isVisible) {
         $("#favApp").append(`<a class="btn btn-xl btn-outline-light" rel="noreferrer" target="_blank" href="${favApp.link}"><i class="fas fa-download mr-2"></i> ${favApp.title}</a>`);
