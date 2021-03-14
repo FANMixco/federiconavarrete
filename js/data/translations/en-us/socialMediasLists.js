@@ -19,9 +19,9 @@ const socialBasicList = {
 			"isIcon": true
 		},
 		{
-			"icon": "fab fa-fw fa-blogger-b",
-			"title": "Federico Stories",
-			"link": `https://federicostories.blogspot.com`,
+			"icon": "fas fa-fw fa-podcast",
+			"title": "Cyber Prophets",
+			"link": `https://www.youtube.com/channel/UCKk7_-BlX80WV_YTeDGXbFQ`,
 			"isIcon": true
 		}
 	],
@@ -34,6 +34,24 @@ const socialOthersList = {
 			"icon": "fas fa-fw fa-building",
 			"title": "Supernova IC",
 			"link": `"https://supernovaic.com`,
+			"isIcon": true
+		},
+		{
+			"icon": "fab fa-fw fa-amazon",
+			"title": "Amazon",
+			"link": `https://www.amazon.com/Federico-Navarrete/e/B08NJTXQRV`,
+			"isIcon": true
+		},
+		{
+			"icon": "fab fa-fw fa-twitter",
+			"title": "Twitter",
+			"link": `https://twitter.com/FedeStories`,
+			"isIcon": true
+		},
+		{
+			"icon": "fab fa-fw fa-blogger-b",
+			"title": "Federico Stories",
+			"link": `https://federicostories.blogspot.com`,
 			"isIcon": true
 		},
 		{
