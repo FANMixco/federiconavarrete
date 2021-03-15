@@ -21,7 +21,7 @@ const socialBasicList = {
 		{
 			"icon": "fas fa-fw fa-podcast",
 			"title": "Cyber Prophets",
-			"link": `https://www.youtube.com/channel/UCKk7_-BlX80WV_YTeDGXbFQ`,
+			"link": `https://redcircle.com/shows/cyber-prophets`,
 			"isIcon": true
 		}
 	],
