@@ -7,8 +7,13 @@ const basicInfo = {
 		`Furthermore, I'm on the constant quest for <span class="font-weight-bold">the next big thing</span>! Plus, challenges define me. I love innovation contests like Microsoft Imagine Cup and create a better world.<br /><br /><span class="text-uppercase font-weight-bold text-center d-block"><i>What about you? Are you ready for your next challenge? <a id="linkContactMeAbout" class="text-warning" style="cursor: pointer;">We can work together on it.</a></i></span>`
 	],
 	"favApp": {
-		"link": `https://bit.ly/2UkxmMZ`,
+		"link": 'https://bit.ly/2UkxmMZ',
 		"title": "The Mayan Route!",
+		"isVisible": false
+	},
+	"favPodcast": {
+		"link": 'https://bit.ly/3vfdxWZ',
+		"title": "Cyber Prophets",
 		"isVisible": true
 	},
 	"favBook": {
@@ -18,7 +23,7 @@ const basicInfo = {
 	},
 	"telephone": {
 		"number": "+48881387085",
-		"isVisible": true
+		"isVisible": false
 	},
 	"email": {
 		"address": "fanmixco@gmail.com",

@@ -124,6 +124,10 @@ function loadTranslations() {
             "value": genericTranslations.getBook
         },
         {
+            "identifier": "#hPodcast",
+            "value": genericTranslations.hPodcast
+        },
+        {
             "identifier": "#hHobbies",
             "value": genericTranslations.hobbies
         },
@@ -240,7 +244,7 @@ function setTranslation(id, text) {
 }
 
 function loadBasicInfo() {
-    const { name, headline, headlineIntro, aboutDesc, favApp, favBook, telephone, email, skype } = basicInfo;
+    const { name, headline, headlineIntro, aboutDesc, favApp, favBook, favPodcast, telephone, email, skype } = basicInfo;
 
     $("#linkName").html(name);
     $("#hName").html(name);
@@ -256,6 +260,13 @@ function loadBasicInfo() {
     }
     else {
         $("#favBook").hide();
+    }
+
+    if (favPodcast.isVisible) {
+        $("#favPodcast").append(`<a class="btn btn-xl btn-outline-light" rel="noreferrer" target="_blank" href="${favPodcast.link}"><i class="fas fa-podcast mr-2"></i> ${favPodcast.title}</a>`);
+    }
+    else {
+        $("#favPodcast").hide();
     }
 
     if (favApp.isVisible) {
