@@ -47,6 +47,18 @@ let panesOptions =[
 					{
 						id: "playStore",
 						subTitle: `<i class="mdi mdi-google-play"></i> Play Store`
+					},
+					{
+						id: "amazonStore",
+						subTitle: `<i class="mdi mdi-amazon"></i> Amazon App Store`
+					},
+					{
+						id: "huaweiStore",
+						subTitle: `<i class="mdi mdi-shopping"></i> Huawei App Gallery`
+					},
+					{
+						id: "samsungStore",
+						subTitle: `<i class="mdi mdi-shopping"></i> Samsung Galaxy Store`
 					}
 				]
 			}

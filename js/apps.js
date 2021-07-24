@@ -28,6 +28,9 @@ $(function(){
 		$("#galleryFooter").append(galleryFooter.format(cYear));
 		
         let androidSupported = [];
+        let androidHuaweiSupported = [];
+        let androidSamsungSupported = [];
+        let androidAmazonSupported = [];
         let androidSupportedTechs = [];
         let w10Supported = [];
         let w10SupportedTechs = [];
@@ -57,6 +60,12 @@ $(function(){
         for(let item in apps) {
             filterElem(apps[item], 'android', true, androidSupported);
 
+            filterElem(apps[item], 'android_huawei', true, androidHuaweiSupported);
+
+            filterElem(apps[item], 'android_samsung', true, androidSamsungSupported);
+
+            filterElem(apps[item], 'android_amazon', true, androidAmazonSupported);
+
             filterElem(apps[item], 'windows10', true, w10Supported);
 
             filterElem(apps[item], 'android', false, androidUnsupported);
@@ -83,6 +92,9 @@ $(function(){
         }
 
         setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
+        setApps(androidHuaweiSupported.sort(sortByProperty('order')), "huaweiStore", androidSupportedTechs, customIconsArray);
+        setApps(androidSamsungSupported.sort(sortByProperty('order')), "samsungStore", androidSupportedTechs, customIconsArray);
+        setApps(androidAmazonSupported.sort(sortByProperty('order')), "amazonStore", androidSupportedTechs, customIconsArray);
         setApps(w10Supported.sort(sortByProperty('order')), "msStore", w10SupportedTechs, customIconsArray);
         setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
         setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);

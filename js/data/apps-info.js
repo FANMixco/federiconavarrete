@@ -2,7 +2,7 @@ let apps =
 [
    {
       app: "Toastasters Timer",
-      link: "https://fanmixco.github.io/toastmasters-timer-material-design/",
+      link: "https://bit.ly/3kMjYiS",
       description:"The best Toastmasters Timer for your meetings, it's simple fast and accurate.",
       logo: "timer.png",
       edition: [
@@ -11,8 +11,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "android",
                isSupported: true,
-               storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.tmtimer.tk.supernova.tmtimer",
-               preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
+               storeLink:"https://bit.ly/3bcm6uL",
+               preview:"https://bit.ly/3iZaMVZ",
                technologies: [
                   "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -23,8 +23,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/en-us/p/toastmasters-timer-pro/9n9rhqms0nwg",
-               preview:"https://www.behance.net/gallery/77339261/Toastmasters-Timer-Material-Design-Edition",
+               storeLink:"https://bit.ly/36Ug2EC",
+               preview:"https://bit.ly/3BDz2VS",
                technologies: [
                   "mdi mdi-windows", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -36,7 +36,7 @@ let apps =
                storeLink:"",
                mainTech: "android",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
+               preview:"https://bit.ly/2WhUDDe",
                technologies: [
                   "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}], "mdi mdi-google-analytics"
                ],
@@ -48,7 +48,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: true,
-               preview:"https://www.behance.net/gallery/81708775/Toastmasters-Timer-Android-Dark-Mode",
+               preview:"https://bit.ly/3iZaMVZ",
                technologies: [
                   [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
@@ -58,10 +58,10 @@ let apps =
                yearStart: 2017,
                yearEnd: 2018,
                storeLink:"",
-               link: "https://fanmixco.github.io/toastmasters-timer/",
+               link: "https://bit.ly/2VbUUXB",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/63506137/Toastmasters-Timer-Android",
+               preview:"https://bit.ly/2WhUDDe",
                technologies: [
                   [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
@@ -73,11 +73,91 @@ let apps =
                mainTech: "windows10",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/63506593/Toastmasters-Timer-Windows-10",
+               preview:"https://bit.ly/3xYvATA",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-bootstrap", [{type: "icon", id: "id_pdfExport", icon: "mdi mdi-pdf-box", tooltip: "PDF export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 1
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_huawei",
+               isSupported: true,
+               storeLink:"https://bit.ly/3rqoC7w",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 1
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_amazon",
+               isSupported: true,
+               storeLink:"https://amzn.to/3eSF23h",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 1
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_samsung",
+               isSupported: true,
+               storeLink:"https://galaxy.store/tmtimer",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 1
+            }
+      ]
+   },
+   {
+      app: "Toastasters Timer Lite",
+      link: "https://bit.ly/3kMjYiS",
+      description:"The best Toastmasters Timer for your meetings, it's simple fast and accurate.",
+      logo: "tm_lite.png",
+      edition: [
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android",
+               isSupported: true,
+               storeLink:"https://bit.ly/3zx5zeE",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 6
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_amazon",
+               isSupported: true,
+               storeLink:"https://amzn.to/3iBmaXy",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 6
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_samsung",
+               isSupported: true,
+               storeLink:"https://galaxy.store/tmtimerl",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 6
             }
       ]
    },
@@ -92,8 +172,44 @@ let apps =
                yearEnd: undefined,
                mainTech: "android",
                isSupported: true,
-               storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.tipsal",
-               preview:"https://www.behance.net/gallery/81946027/Tipicos-Salvadorenos-Material-Design",
+               storeLink:"https://bit.ly/36XKnSB",
+               preview:"https://bit.ly/3mrsIrM",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 2
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_samsung",
+               isSupported: true,
+               storeLink:"https://galaxy.store/lrm",
+               preview:"https://bit.ly/3mrsIrM",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 2
+            },
+            {
+               yearStart: 2016,
+               yearEnd: undefined,
+               mainTech: "android_amazon",
+               isSupported: true,
+               storeLink:"https://amzn.to/3i0bdQg",
+               preview:"https://bit.ly/3mrsIrM",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 2
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_huawei",
+               isSupported: true,
+               storeLink:"https://amzn.to/3i0bdQg",
+               preview:"https://bit.ly/3eMF251",
                technologies: [
                   "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -104,8 +220,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/en-us/p/tipicos-salvadorenos/9nblggh0k853",
-               preview:"https://www.behance.net/gallery/29299349/Tipicos-Salvadorenos-Windows-Phone-81",
+               storeLink:"https://bit.ly/2V4goFY",
+               preview:"https://bit.ly/3yfklGk",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -117,7 +233,7 @@ let apps =
                mainTech: "windows8",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11104165/Tipicos-Salvadorenos-Windows-8",
+               preview:"https://bit.ly/37085xu",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -129,7 +245,7 @@ let apps =
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/12187191/Tipicos-Salvadorenos-Windows-Phone-7",
+               preview:"https://bit.ly/3iHkTyk",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -148,8 +264,44 @@ let apps =
                yearEnd: undefined,
                mainTech: "android",
                isSupported: true,
-               storeLink:"https://play.google.com/store/apps/details?id=tk.supernovaic.themayanroute",
-               preview:"https://www.behance.net/gallery/83173325/The-Mayan-Route-Material-Design",
+               storeLink:"https://bit.ly/37cTxuR",
+               preview:"https://bit.ly/3ztuEqI",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 3
+            },
+            {
+               yearStart: 2016,
+               yearEnd: undefined,
+               mainTech: "android_amazon",
+               isSupported: true,
+               storeLink:"https://bit.ly/37cTxuR",
+               preview:"https://bit.ly/3ztuEqI",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 3
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_huawei",
+               isSupported: true,
+               storeLink:"https://bit.ly/3zw36kC",
+               preview:"https://bit.ly/3ztuEqI",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 3
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_samsung",
+               isSupported: true,
+               storeLink:"https://galaxy.store/lrm",
+               preview:"https://bit.ly/3ztuEqI",
                technologies: [
                   "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -160,8 +312,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/pl-pl/p/la-ruta-maya/9nblggh0k83p",
-               preview:"https://www.behance.net/gallery/42826087/The-Mayan-Route-Windows-10",
+               storeLink:"https://bit.ly/3i1nX9l",
+               preview:"https://bit.ly/3eRddIy",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -173,7 +325,7 @@ let apps =
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11104041/La-Ruta-Maya-Windows-Phone-8",
+               preview:"https://bit.ly/2VaQpwJ",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "mdi mdi-azure", "mdi mdi-language-php", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -183,7 +335,7 @@ let apps =
    },
    {
       app: "Gravity Now!",
-      link: "http://gravitynow.tk",
+      link: "https://bit.ly/3x3b4zK",
       description: "This is an educational platform that aims to be the #1 tool for teaching the physical sciences related to gravity.",
       logo: "gnow.png",
       edition: [
@@ -192,8 +344,44 @@ let apps =
                yearEnd: undefined,
                mainTech: "android",
                isSupported: true,
-               storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.gnow",
-               preview:"https://www.behance.net/gallery/54678483/Gravity-Now-Android",
+               storeLink:"https://bit.ly/3rv7vS5",
+               preview:"https://bit.ly/3wWGzvu",
+               technologies: [
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 4
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_huawei",
+               isSupported: true,
+               storeLink:"https://bit.ly/3iBkjly",
+               preview:"https://bit.ly/3wWGzvu",
+               technologies: [
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 4
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_samsung",
+               isSupported: true,
+               storeLink:"https://galaxy.store/gnow",
+               preview:"https://bit.ly/3wWGzvu",
+               technologies: [
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 4
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_amazon",
+               isSupported: true,
+               storeLink:"https://amzn.to/3y2egwV",
+               preview:"https://bit.ly/3wWGzvu",
                technologies: [
                   "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -204,8 +392,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/en-us/p/gravity-now/9nblgggzjlp5",
-               preview:"https://www.behance.net/gallery/25675453/Gravity-Now-Windows-Phone-8",
+               storeLink:"https://bit.ly/36ZaRTW",
+               preview:"https://bit.ly/3i1in6O",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "mdi mdi-chart-scatter-plot", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -217,7 +405,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: true,
-               preview:"https://www.behance.net/gallery/85723563/Gravity-Now-Angular-Edition",
+               preview:"https://bit.ly/3eRBmPp",
                technologies: [
                   "fab fa-angular", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-language-typescript", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_osm", text: "osm", icon: "osm.svg"}], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_azureDevOps", icon: "mdi mdi-azure-devops", tooltip: "Azure DevOps"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
@@ -229,7 +417,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/25675249/Gravity-Now",
+               preview:"https://bit.ly/3BADtkq",
                technologies: [
                   "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
@@ -249,7 +437,7 @@ let apps =
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11190853/Diputado-85-Windows-Phone-7",
+               preview:"https://bit.ly/3eS3HoK",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "fas fa-chart-pie", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -261,7 +449,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/12188107/Diputado-85-Mobile",
+               preview:"https://bit.ly/3ztwc40",
                technologies: [
                   "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "fas fa-chart-pie", [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -281,7 +469,7 @@ let apps =
                mainTech: "windows10",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/42387517/Firefly-App-Windows-10",
+               preview:"https://bit.ly/3ePpuNM",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], "mdi mdi-azure", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "text", id: "id_iot", text: "IoT", tooltip: "Internet of Things"}], "mdi mdi-led-on", [{type: "icon", id: "id_eTextile", icon: "mdi mdi-tshirt-crew", tooltip: "e-Textile"}], [{type: "icon", id: "id_voiceR", icon: "mdi mdi-voice", tooltip: "Voice recognition"}], [{type: "icon", id: "id_cortana", icon: "mdi mdi-circle-double", tooltip: "Cortana"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -291,7 +479,7 @@ let apps =
    },
    {
       app: "Federico Stories",
-      link: "https://federicostories.blogspot.com/",
+      link: "https://federicostories.blogspot.com",
       description: "Do you have some spare time to enjoy some of the most unique legends of the world? Do you enjoy horror or mysteries?",
       logo: "fstories.png",
       edition: [
@@ -300,7 +488,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "android",
                isSupported: true,
-               storeLink:"https://play.google.com/store/apps/details?id=tk.supernova.federicostories",
+               storeLink:"https://bit.ly/2W5qiHN",
                preview:"",
                technologies: [
                   "mdi mdi-android-head", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-blogger-b", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
@@ -320,8 +508,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/en-us/p/lets-stop-diabetes-premium/9nblggh4r824",
-               preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
+               storeLink:"https://bit.ly/3BLy1vh",
+               preview:"https://bit.ly/3yfldL6",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", tooltip: "7 segment OCR", icon: "7segment.svg"}], [{type: "icon", id: "id_voiceR", icon: "mdi mdi-voice", tooltip: "Voice recognition"}], [{type: "icon", id: "id_cortana", icon: "mdi mdi-circle-double", tooltip: "Cortana"}], "mdi mdi-barcode-scan", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", [{type: "icon", id: "id_gamefication", icon: "fas fa-gamepad", tooltip: "Gamefication"}], [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -340,8 +528,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/en-gb/p/lets-stop-diabetes/9nblgggzpxrb",
-               preview:"https://www.behance.net/gallery/42336075/Lets-Stop-Diabetes-Windows-10",
+               storeLink:"https://bit.ly/3BAlVEY",
+               preview:"https://bit.ly/3yfldL6",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_sqlAzure", text: "<sub>Azure</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-camera-enhance", "mdi mdi-ocr", [{ type:"img", id: "id_7segment", tooltip: "7 segment OCR", icon: "7segment.svg"}], [{type: "icon", id: "id_voiceR", icon: "mdi mdi-voice", tooltip: "Voice recognition"}], [{type: "icon", id: "id_cortana", icon: "mdi mdi-circle-double", tooltip: "Cortana"}], "mdi mdi-barcode-scan", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], "fab fa-foursquare", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fas fa-chart-bar", [{type: "icon", id: "id_gamefication", icon: "fas fa-gamepad", tooltip: "Gamefication"}], [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -361,7 +549,7 @@ let apps =
                mainTech: "windows10",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/42382057/Lets-Stop-Diabetes-Web-Site",
+               preview:"https://bit.ly/3i3S5Bb",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-chart-pie", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -371,7 +559,7 @@ let apps =
    },
    {
       app: "The Wet Zone",
-      link: "https://fanmixco.github.io/thewetzone-site/",
+      link: "https://bit.ly/3eRguI4",
       description: "It's an application designed by SuperNova Team from 2013-2014. The project aim is, “To Save Lives”.",
       logo: "twetzone.png",
       edition: [
@@ -380,8 +568,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "windows10",
                isSupported: true,
-               storeLink:"https://www.microsoft.com/pl-pl/p/the-wet-zone/9nblggh67dbd",
-               preview:"https://www.behance.net/gallery/12186697/The-Wet-Zone-Windows-Phone-8",
+               storeLink:"https://bit.ly/36YeWaS",
+               preview:"https://bit.ly/36VHthc",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xaml", icon: "mdi mdi-xaml", tooltip: "XAML"}], [{ type:"mix-left-icon", id: "id_bMaps", text: "<sub>maps</sub>", icon: "mdi mdi-bing" }], "mdi mdi-crosshairs-gps", "fas fa-sms", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -393,7 +581,7 @@ let apps =
                mainTech: "web",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/25674827/The-Wet-Zone-Web-Site-and-Tutorial",
+               preview:"https://bit.ly/3BAm0IM",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-language-php", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "fas fa-route", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
@@ -413,7 +601,7 @@ let apps =
                mainTech: "android",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11104169/Tu_ElSalvador-Android",
+               preview:"https://bit.ly/374ZidD",
                technologies: [
                   "mdi mdi-android-head", "fab fa-java", "mdi mdi-cordova", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -433,7 +621,7 @@ let apps =
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/87226435/QuickDer",
+               preview:"https://bit.ly/3BBOD8w",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-cordova", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-azure", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -453,7 +641,7 @@ let apps =
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/42387741/Farmapp-Windows-Phone-81",
+               preview:"https://bit.ly/3BBOB0o",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], "mdi mdi-crosshairs-gps", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -473,7 +661,7 @@ let apps =
                mainTech: "windowsPhone",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11328733/Tu-Costa-Windows-Phone-7",
+               preview:"https://bit.ly/3i2na8d",
                technologies: [
                   "mdi mdi-windows", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "mdi mdi-language-php", [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "img", id: "id_here", text: "here", icon: "here.svg"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -493,8 +681,8 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               link: "https://fanmixco.github.io/LodzartsConference/",
-               preview:"https://www.behance.net/gallery/76882983/Lodzarts-website",
+               link: "https://bit.ly/3zwjqSl",
+               preview:"https://bit.ly/3y6OLea",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", "mdi mdi-github-circle"
                ],
@@ -514,7 +702,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/25675817/TulResidence",
+               preview:"https://bit.ly/3zuBM61",
                technologies: [
                   [{ type:"img", id: "id_jsp", icon: "jsp.svg"}], "fab fa-java", "fas fa-leaf", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_hibernate", text: "<sub>Hibernate</sub>", icon: "orm.svg"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -534,7 +722,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/47766987/Virtual-Cloud-School",
+               preview:"https://bit.ly/2TvKzp0",
                technologies: [
                   "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -554,7 +742,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/11104189/Talento-Siman",
+               preview:"https://bit.ly/3rvaWrI",
                technologies: [
                   "mdi mdi-language-php", [{ type:"mix-left-icon", id: "id_mysql", text: "<sub>MySQL</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -574,7 +762,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/11048475/MaintSys",
+               preview:"https://bit.ly/2TxAtUF",
                technologies: [
                   [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -594,7 +782,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/11104155/TranSoft",
+               preview:"https://bit.ly/3i1jfIC",
                technologies: [
                   [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery"
                ],
@@ -614,7 +802,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: true,
-               preview:"https://www.behance.net/gallery/11105699/WebSite-Lions-Club-of-Santa-Tecla",
+               preview:"https://bit.ly/2Wb4IBH",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -634,7 +822,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/11048315/MyMaps-Web-Site",
+               preview:"https://bit.ly/3kSVioS",
                technologies: [
                   [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "text", id: "id_vbNet", text: "VB.net"}], [{ type:"mix-left-icon", id: "id_sqlServer", text: "<sub>SQL Server</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-google-maps"
                ],
@@ -654,7 +842,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
-               preview:"https://www.behance.net/gallery/11104171/ArevaloGroup-Web-App",
+               preview:"https://bit.ly/2TwgyW7",
                technologies: [
                   "mdi mdi-cellphone", "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -674,7 +862,7 @@ let apps =
                mainTech: "windowsXP",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11048267/Mr-Tooth",
+               preview:"https://bit.ly/36XLLEN",
                technologies: [
                   "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], [{ type:"mix-left-icon", id: "id_access", text: "<sub>Access</sub>", icon: "fas fa-database"}], "mdi mdi-upload", "mdi mdi-file-chart"
                ],
@@ -694,7 +882,7 @@ let apps =
                mainTech: "windowsXP",
                isSupported: false,
                storeLink:"",
-               preview:"https://www.behance.net/gallery/11047863/Ghost-Hunter",
+               preview:"https://bit.ly/3x3UfoD",
                technologies: [
                   "mdi mdi-windows", [{type: "text", id: "id_vb6", text: "VB6"}], [{ type:"mix-left-icon", id: "id_access", text: "<sub>Access</sub>", icon: "fas fa-database"}], "mdi mdi-file-chart"
                ],
@@ -704,7 +892,7 @@ let apps =
    },
    {
       app: "Xamarin-MaterialSearchBar",
-      link: "https://github.com/FANMixco/Xamarin-SearchBar",
+      link: "https://bit.ly/38naOBJ",
       description: "Material Design Search Bar for Android Based on the fantastic version by Mancj.",
       logo: 'libs/searchBar.png',
       edition: [
@@ -713,7 +901,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchBar/",
+               storeLink:"https://bit.ly/2UIGwGC",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
@@ -724,7 +912,7 @@ let apps =
    },
    {
       app: "SpotsDialog.Xamarin",
-      link: "https://github.com/FANMixco/spots-dialog",
+      link: "https://bit.ly/3BzC1i5",
       description: "Android AlertDialog with moving spots progress indicator packed as android library.",
       logo: 'libs/spotsDialog.png',
       edition: [
@@ -733,7 +921,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/SpotsDialog.Xamarin/",
+               storeLink:"https://bit.ly/3zu3WOG",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_dialog", icon: "mdi mdi-message-reply", tooltip: "Dialog/Modal"}], "fab fa-git", "mdi mdi-github-circle"
@@ -744,7 +932,7 @@ let apps =
    },
    {
       app: "BubbleTabs.Xamarin",
-      link: "https://github.com/FANMixco/BubbleTab",
+      link: "https://bit.ly/3iOKWE2",
       description: "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
       logo: 'libs/bubbleTabs.png',
       edition: [
@@ -753,7 +941,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/BubbleTabs.Xamarin/",
+               storeLink:"https://bit.ly/3iN3Ivv",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
@@ -773,7 +961,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin-OneMoreFabMenu/",
+               storeLink:"https://bit.ly/3BBQ46U",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "img", id: "id_kotlin", icon: "kotlin.svg" }], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}]
@@ -793,7 +981,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin-MaterialSearchView/",
+               storeLink:"https://bit.ly/3iFYaTn",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}]
@@ -804,7 +992,7 @@ let apps =
    },
    {
       app: "Xamarin.Search.Dialog",
-      link: "https://github.com/FANMixco/search-dialog",
+      link: "https://bit.ly/3BEOhOe",
       description: "Android Search Dialog Library.",
       logo: 'libs/searchDialog.png',
       edition: [
@@ -813,7 +1001,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin.Search.Dialog/",
+               storeLink:"https://bit.ly/3iL0Kr8",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_dialog", icon: "mdi mdi-message-reply", tooltip: "Dialog/Modal"}], "fab fa-git", "mdi mdi-github-circle"
@@ -833,7 +1021,7 @@ let apps =
                yearEnd: 2019,
                mainTech: "nuget",
                isSupported: false,
-               storeLink:"https://www.nuget.org/packages/Xamarin-Speed-Dial/",
+               storeLink:"https://bit.ly/3eTHuH0",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}]
@@ -844,7 +1032,7 @@ let apps =
    },
    {
       app: "Xamarin-SmartRate",
-      link: "https://github.com/FANMixco/SmartRateUsDialog-Android",
+      link: "https://bit.ly/3iFBEKs",
       description: "A library for simple implementation of smart ranking.",
       logo: 'libs/rating.png',
       edition: [
@@ -853,7 +1041,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin-SmartRate/",
+               storeLink:"https://bit.ly/3BFv7bo",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_dialog", icon: "mdi mdi-message-reply", tooltip: "Dialog/Modal"}], "fab fa-git", "mdi mdi-github-circle"
@@ -864,7 +1052,7 @@ let apps =
    },
    {
       app: "Xamarin-FiveStarsRate",
-      link: "https://github.com/Angtrim/Android-Five-Stars-Library",
+      link: "https://bit.ly/3BAnD9m",
       description: "Android Five Stars Library is a small library that helps developer add a “Rate My App” dialog to their applications. It's called “Five Stars” because the dialog has a different behaviour based on the rating given by the user.",
       logo: 'libs/star_five.png',
       edition: [
@@ -873,7 +1061,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin-FiveStarsRate/",
+               storeLink:"https://bit.ly/3zuDcNT",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
@@ -884,7 +1072,7 @@ let apps =
    },
    {
       app: "Xamarin-SmoothBottomBar",
-      link: "https://github.com/ibrahimsn98/SmoothBottomBar",
+      link: "https://bit.ly/3iI8XMN",
       description: "A lightweight Xamarin.Android material bottom navigation bar library. Based on @ibrahimsn98's version.",
       logo: 'libs/bottom_tab.png',
       edition: [
@@ -893,7 +1081,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/Xamarin-SmoothBottomBar/",
+               storeLink:"https://bit.ly/370apVw",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
@@ -904,7 +1092,7 @@ let apps =
    },
    {
       app: "ZoomImage-Xamarin",
-      link: "https://github.com/FANMixco/ZoomImage-Xamarin",
+      link: "https://bit.ly/36Yw948",
       description: "A simple pinch-to-zoom ImageView library for Xamarin.Android.",
       logo: 'libs/zoom.png',
       edition: [
@@ -913,7 +1101,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "nuget",
                isSupported: true,
-               storeLink:"https://www.nuget.org/packages/ZoomImage-Xamarin/",
+               storeLink:"https://bit.ly/3hYH7N4",
                preview:"",
                technologies: [
                   [{type: "img", id: "id_nuget", icon: "nuget.svg", tooltip: "NuGet" }], "mdi mdi-android-head", "mdi mdi-xamarin", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-git", "mdi mdi-github-circle"
@@ -924,7 +1112,7 @@ let apps =
    },
    {
       app: "Timing Field",
-      link: "https://github.com/FANMixco/TimingField",
+      link: "https://bit.ly/3i7xtIl",
       description: "A jquery plugin to transform a timestamp field into an hours/minutes/seconds selector.",
       logo: 'libs/timePicker.png',
       edition: [
@@ -944,7 +1132,7 @@ let apps =
    },
    {
       app: "7 Segment OCR",
-      link: "https://github.com/FANMixco/7-segment-ocr-reader",
+      link: "https://bit.ly/3iLSOpw",
       description: "Class for reading 7 segment displays with C#.",
       logo: 'libs/7segment.png',
       edition: [
@@ -975,7 +1163,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview:"https://www.behance.net/gallery/76883225/Personal-website",
+               preview:"https://bit.ly/3x6P9b4",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
@@ -985,7 +1173,7 @@ let apps =
    },
    {
       app: "Projects Gallery",
-      link: "https://federiconavarrete.com/apps.html",
+      link: "https://bit.ly/3eMJ0dV",
       description: "My collection of projects.",
       logo: "apps.png",
       edition: [
@@ -996,7 +1184,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview:"https://www.behance.net/gallery/87607183/Projects-Gallery",
+               preview:"https://bit.ly/2UKht5R",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
@@ -1006,7 +1194,7 @@ let apps =
    },
    {
       app: "Presentations Gallery",
-      link: "https://federiconavarrete.com/prezis.html",
+      link: "https://bit.ly/3750fTf",
       description: "My collection of presentations in Prezi and PowerPoint.",
       logo: "presentations.png",
       edition: [
@@ -1017,7 +1205,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview:"https://www.behance.net/gallery/87607283/Presentations-Gallery",
+               preview:"https://bit.ly/3rv2adr",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", "mdi mdi-google-analytics"
                ],
@@ -1027,7 +1215,7 @@ let apps =
    },
    {
       app: "Booking App",
-      link: "https://github.com/FANMixco/BookingApp",
+      link: "https://bit.ly/3ruKLBE",
       description: "Simple app for reserving books in ASP .NET Core",
       logo: "book-app.png",
       edition: [
@@ -1038,7 +1226,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview: "https://www.behance.net/gallery/93836207/Library-Reservation-Site",
+               preview: "https://bit.ly/3BvUOuR",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle", [{ type:"img", id: "id_asp", icon: "asp.svg"}], [{type: "mix-left-icon", id: "id_netCore", icon: "mdi mdi-dot-net", text: "<sub>Core</sub>"}], [{type: "text", id: "id_xUnit", text: "xUnit", tooltip: "xUnit"}], [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{ type:"mix-left-img", id: "id_entity", text: "<sub>Entity</sub>", icon: "orm.svg", tooltip: "Entity Framework Core"}]
                ],
@@ -1048,7 +1236,7 @@ let apps =
    },
    {
       app: "RPA Best Practices",
-      link: "https://fanmixco.github.io/rpaBestPractices/",
+      link: "https://bit.ly/3bhknlU",
       description: "RPA Best Practices for developing the best Bots from Gathering requirements to infrastructure and even more secret details!",
       logo: "robot.png",
       edition: [
@@ -1059,7 +1247,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview: "https://www.behance.net/gallery/97845651/RPA-Best-Practices-PWA",
+               preview: "https://bit.ly/3x1IPSh",
                technologies: [
                   [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}],
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "mdi mdi-firebase", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
@@ -1080,8 +1268,8 @@ let apps =
                storeLink: "",
                mainTech: "web",
                isSupported: false,
-               link: "https://fanmixco.github.io/MatePreview/",
-               preview: "https://www.behance.net/gallery/97825755/Mate-Website",
+               link: "https://bit.ly/3BBLw0l",
+               preview: "https://bit.ly/370Absu",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
                ],
@@ -1101,8 +1289,8 @@ let apps =
                storeLink: "",
                mainTech: "web",
                isSupported: false,
-               link: "https://fanmixco.github.io/futurum/",
-               preview: "https://www.behance.net/gallery/97825947/Futurum-Website",
+               link: "https://bit.ly/2Wirl7t",
+               preview: "https://bit.ly/3kPgsEr",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
                ],
@@ -1112,7 +1300,7 @@ let apps =
    },
    {
       app: "Zero Waste",
-      link: "https://fanmixco.github.io/ZeroWaste/",
+      link: "https://bit.ly/2UIHi6u",
       description: "Your new Recycling experience powered by AI!",
       logo: "zeroWaste.png",
       edition: [
@@ -1123,7 +1311,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview: "https://www.behance.net/gallery/97826047/Zero-Waste-Website",
+               preview: "https://bit.ly/37cVM1f",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github-circle"
                ],
