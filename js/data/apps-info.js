@@ -150,6 +150,18 @@ let apps =
             {
                yearStart: 2021,
                yearEnd: undefined,
+               mainTech: "android_huawei",
+               isSupported: true,
+               storeLink:"https://bit.ly/3l6MM5O",
+               preview:"https://bit.ly/3iZaMVZ",
+               technologies: [
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 6
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
                mainTech: "android_samsung",
                isSupported: true,
                storeLink:"https://galaxy.store/tmtimerl",
@@ -208,8 +220,8 @@ let apps =
                yearEnd: undefined,
                mainTech: "android_huawei",
                isSupported: true,
-               storeLink:"https://amzn.to/3i0bdQg",
-               preview:"https://bit.ly/3eMF251",
+               storeLink:"https://bit.ly/3eMF251",
+               preview:"https://bit.ly/3mrsIrM",
                technologies: [
                   "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "icon", id: "id_uTubeTutorials", icon: "mdi mdi-youtube", tooltip: "YouTube tutorials"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -276,7 +288,7 @@ let apps =
                yearEnd: undefined,
                mainTech: "android_amazon",
                isSupported: true,
-               storeLink:"https://bit.ly/37cTxuR",
+               storeLink:"https://amzn.to/3yjg6df",
                preview:"https://bit.ly/3ztuEqI",
                technologies: [
                   "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
@@ -291,7 +303,7 @@ let apps =
                storeLink:"https://bit.ly/3zw36kC",
                preview:"https://bit.ly/3ztuEqI",
                technologies: [
-                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+                  "mdi mdi-android-head", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-xamarin", "mdi mdi-language-csharp", [{ type:"mix-left-icon", id: "id_sqlite", text: "<sub>SQLite</sub>", icon: "fas fa-database"}], [{type: "icon", id: "id_wikipediaAPI", icon: "fab fa-wikipedia-w", tooltip: "Wikipedia API"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_petal_maps", icon: "fas fa-map-marked-alt", tooltip: "Petal Maps"}], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 3
             },
@@ -359,7 +371,7 @@ let apps =
                storeLink:"https://bit.ly/3iBkjly",
                preview:"https://bit.ly/3wWGzvu",
                technologies: [
-                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], "mdi mdi-google-maps", "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+                  "mdi mdi-android-head", "mdi mdi-xamarin", "mdi mdi-language-csharp", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], [{type: "icon", id: "id_json", icon: "mdi mdi-json", tooltip: "JSON/Web Service"}], [{type: "icon", id: "id_petal_maps", icon: "fas fa-map-marked-alt", tooltip: "Petal Maps"}], "mdi mdi-crosshairs-gps", [{type: "icon", id: "id_calculus", icon: "fas fa-calculator", tooltip: "Calculus and/or Statistics"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 4
             },
