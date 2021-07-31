@@ -42,7 +42,20 @@ hr.star-black-dark:after {
   content: "";
   width: 48px;
   height: 48px;
-  background: url("../img/icons/website/star.svg") no-repeat;
+  background: url("../img/icons/website/round-star.svg") no-repeat 9px 9px;
+  display: inline-block;
+  position: absolute;
+  margin-top: -24px;
+  margin-left: -24px;
+  left: 50%;
+}
+
+hr.star-dark:after,
+hr.star-dark-teal:after {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background: url("../img/icons/website/round-star-black.svg") no-repeat 9px 9px;
   display: inline-block;
   position: absolute;
   margin-top: -24px;
