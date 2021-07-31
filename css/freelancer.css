@@ -88,7 +88,7 @@ hr.star-black {
 
 hr.star-black:after {
   color: #fff;
-  background-color: #212121;
+  background-color: #fff;
   border-radius: 50%;
 }
 
@@ -98,7 +98,7 @@ hr.star-black-dark {
 
 hr.star-black-dark:after {
   color: #fff;
-  background-color: black;
+  background-color: #fff;
   border-radius: 50%;
 }
 

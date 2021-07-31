@@ -227,14 +227,14 @@ function loadTranslations() {
     let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
     if (!smallScreenMobileOS) {
-        $("#spanMenu").html(`${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" class="hMenu ml-2" loading="lazy" />`);
+        $("#spanMenu").html(`${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`);
         setTimeout(function() {
             $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
             $("#divSkillsContainer").css("padding-top", "15px");
             $("#divSkillsContainer").css("border-radius", "20px");
         }, 100);
     } else {
-        $("#spanMenu").html(`<img src="${iconsPath}bars-solid.svg" class="hMenu" style="margin-top:0px!important" loading="lazy" />`);
+        $("#spanMenu").html(`<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" loading="lazy" />`);
         marginTop = -40;
         heightIFrame = 560;
     }
