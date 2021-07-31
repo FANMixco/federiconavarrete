@@ -4,198 +4,198 @@ let ppts = [
         preview: "p33.jpg",
         edited: "2020-01-04",
         wasPresented: false,
-        link: "https://prezi.com/view/OIhmzaYZIOWFUV2Ibs7H",
+        link: "https://bit.ly/2VoOvIF",
         type: "next",
-        order: 1
+        order: 2
     },
     {
         name: "Creative - CV, Federico Navarrete",
         preview: "p1.jpg",
         edited: "2019-10-07",
         wasPresented: false,
-        link: "https://prezi.com/view/HiN8y183svgykMtSa2St",
+        link: "https://bit.ly/3xhacrF",
         type: "next",
-        order: 2
+        order: 3
     },
     {
         name: "The goddess Áróra and her kingdom",
         preview: "p2.jpg",
         edited: "2019-06-19",
         wasPresented: true,
-        link: "https://prezi.com/view/Om1QSV7mt7TSbh2Vky7F",
+        link: "https://bit.ly/2WGKvEg",
         type: "next",
-        order: 3
+        order: 4
     },
     {
         name: "How to improve our presence online",
         preview: "p3.jpg",
         edited: "2018-08-30",
         wasPresented: true,
-        link: "https://prezi.com/view/WFmIP01XeUsnpcQUpsgt",
+        link: "https://bit.ly/3ytOEcR",
         type: "next",
-        order: 4
+        order: 5
     },
     {
         name: "The Ultimate Elevator Pitch",
         preview: "p4.jpg",
         edited: "2018-06-07",
         wasPresented: true,
-        link: "https://prezi.com/view/c17ykmHBmjsEGTZuh75c",
+        link: "https://bit.ly/3zURwzI",
         type: "next",
-        order: 5
+        order: 6
     },
     {
         name: "Are robots your friends?",
         preview: "p5.jpg",
         edited: "2019-01-24",
         wasPresented: true,
-        link: "https://prezi.com/view/WS9YlwfJlTlVgvYvvhlS",
+        link: "https://bit.ly/2WGzfb1",
         type: "next",
-        order: 6
+        order: 7
     },
     {
         name: "What's next?",
         preview: "p6.jpg",
         edited: "2019-04-25",
         wasPresented: true,
-        link: "https://prezi.com/view/myp85uY10ynzis7eEFmJ",
+        link: "https://bit.ly/2TJ4UY4",
         type: "next",
-        order: 7
+        order: 8
     },
     {
         name: "Delegation: The Finest Art",
         preview: "p7.jpg",
         edited: "2018-02-22",
         wasPresented: true,
-        link: "https://prezi.com/view/VRbPd1EEVbFqhFGF9BYZ",
+        link: "https://bit.ly/3rMAwIN",
         type: "next",
-        order: 8
+        order: 9
     },
     {
         name: "Club Officers Training 2018/2019",
         preview: "p8.jpg",
         edited: "2018-06-30",
         wasPresented: true,
-        link: "https://prezi.com/view/IrsrOLj1NfPOas6S62zB",
+        link: "https://bit.ly/3lcDFAA",
         type: "next",
-        order: 9
+        order: 10
     },
     {
         name: "The Future of the Workforce",
         preview: "p9.jpg",
         edited: "2018-11-18",
         wasPresented: true,
-        link: "https://prezi.com/view/d92HrKMdehdZyfSsMZrY",
+        link: "https://bit.ly/3llYgTf",
         type: "next",
-        order: 10
+        order: 11
     },
     {
         name: "A Goal-Oriented Life",
         preview: "p10.jpg",
         edited: "2018-02-08",
         wasPresented: true,
-        link: "https://prezi.com/view/pWl4pscZA2O6T3ps5sdV",
+        link: "https://bit.ly/3lcsIix",
         type: "next",
-        order: 11
+        order: 12
     },
     {
         name: "Make science cool!",
         preview: "p11.jpg",
         edited: "2015-01-29",
         wasPresented: true,
-        link: "https://prezi.com/5dudpkomifdz/final-make-science-cool",
-        type: "classic",
-        order: 7
+        link: "https://bit.ly/2WFj8uh",
+        type: "next",
+        order: 13
     },
     {
         name: "RPAs",
         preview: "p12.jpg",
         edited: "2018-11-08",
         wasPresented: true,
-        link: "https://prezi.com/bjyfeqa9duyy/rpas",
-        type: "classic",
-        order: 4
+        link: "https://bit.ly/3rMc624",
+        type: "next",
+        order: 14
     },
     {
         name: "Firefly - CISCO Switch Up Challenge 2016",
         preview: "p13.jpg",
         edited: "2016-03-03",
         wasPresented: true,
-        link: "https://prezi.com/view/NTDvmxrq5PySxyZ6CJLo",
-        type: "classic",
-        order: 1
+        link: "https://bit.ly/3lhNygu",
+        type: "next",
+        order: 15
     },
     {
         name: "El Salvador Impressive!",
         preview: "p14.jpg",
         edited: "2016-07-21",
         wasPresented: true,
-        link: "https://prezi.com/view/h68rYOg8MucysIIZ1AgE/",
-        type: "classic",
-        order: 9
+        link: "https://bit.ly/3C0EbYp",
+        type: "next",
+        order: 16
     },
     {
         name: "Diputado 85",
         preview: "p15.jpg",
         edited: "2013-09-07",
         wasPresented: true,
-        link: "https://prezi.com/view/pxuKqbJuWD8GA0SMbehN/",
-        type: "classic",
-        order: 5
+        link: "https://bit.ly/3xgDrdS",
+        type: "next",
+        order: 17
     },
     {
         name: "The Wet Zone - Americas Datafest",
         preview: "p16.jpg",
         edited: "2013-10-22",
         wasPresented: true,
-        link: "https://prezi.com/wzav7bgob_r0/the-wet-zone-americas-datafest",
-        type: "classic",
-        order: 6
+        link: "https://bit.ly/3yk8hDV",
+        type: "next",
+        order: 18
     },
     {
         name: "Diputado 85 - UNDP",
         preview: "p17.jpg",
         edited: "2013-11-23",
         wasPresented: true,
-        link: "https://prezi.com/gwtssbx5xozb/diputado-85",
-        type: "classic",
-        order: 3
+        link: "https://bit.ly/2TL01xH",
+        type: "next",
+        order: 19
     },
     {
         name: "From El Salvador to Poland",
         preview: "p18.jpg",
         edited: "2016-06-10",
         wasPresented: true,
-        link: "https://prezi.com/view/IVn2kSXLLjNQP9dv1fzz/",
-        type: "classic",
-        order: 8
+        link: "https://bit.ly/3lg89BJ",
+        type: "next",
+        order: 20
     },
     {
         name: "Gravity Now! SpaceApps Challenge 2014, NASA",
         preview: "p19.jpg",
         edited: "2014-04-20",
         wasPresented: true,
-        link: "https://prezi.com/view/LBzKzTdmREy0ZA6ZRqg1/",
-        type: "classic",
-        order: 2
+        link: "https://bit.ly/3yhdQmE",
+        type: "next",
+        order: 21
     },
     {
         name: "Imagine Cup!",
         preview: "p20.jpg",
         edited: "2016-11-16",
         wasPresented: true,
-        link: "https://prezi.com/slb-5v5bmlxr/imagine-cup",
-        type: "classic",
-        order: 10
+        link: "https://bit.ly/3ido3e8",
+        type: "next",
+        order: 22
     },
     {
         name: "The Internet of Things",
         preview: "p21.jpg",
         edited: "2016-02-11",
         wasPresented: true,
-        link: "https://prezi.com/sg1wbpnbzqn5/the-internet-of-things",
-        type: "classic",
-        order: 11
+        link: "https://bit.ly/3lfPLZz",
+        type: "next",
+        order: 23
     },
     {
         name: "Project Reboot",
@@ -283,9 +283,9 @@ let ppts = [
         preview: "p31.jpg",
         edited: "2019-11-07",
         wasPresented: true,
-        link: "https://prezi.com/view/l61CWrqDqpOvIvDLr02a/",
+        link: "https://bit.ly/3j4zqVa",
         type: "next",
-        order: 11
+        order: 23
     },
     {
         name: "Let's Stop Diabetes - Microsoft Imagine Cup 2016",
@@ -301,17 +301,26 @@ let ppts = [
         preview: "p34.jpg",
         edited: "2020-07-16",
         wasPresented: true,
-        link: "https://prezi.com/view/FcXeOX2hZCKHuyYPBzhI",
+        link: "https://bit.ly/2VjYmj5",
         type: "next",
-        order: 0
+        order: 1
     },
     {
         name: "Build Your Club's Personal Brand",
         preview: "p35.jpg",
         edited: "2020-12-05",
         wasPresented: true,
-        link: "https://prezi.com/view/zm8tMzGvv3vGVysbk1Aq",
+        link: "https://bit.ly/3ooxrMg",
         type: "next",
         order: 0
+    },
+    {
+        name: "Distinguished Club Program and Club Success Plan",
+        preview: "p36.jpg",
+        edited: "2021-07-24",
+        wasPresented: true,
+        link: "https://bit.ly/3yheIYs",
+        type: "next",
+        order: -1
     }
 ];

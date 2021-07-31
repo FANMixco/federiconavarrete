@@ -9,7 +9,7 @@ let tabsOptions = [
 	{
 		id: "classic",
 		name: "Prezi Classic",
-		isVisible: true,
+		isVisible: false,
 		isActive: false,
 		order: 2
 	},

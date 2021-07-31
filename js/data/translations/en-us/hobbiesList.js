@@ -2,92 +2,105 @@ const hobbiesList = {
 	"hobbies": [
 		{
 			"title": `Innovation & Entrepreneurship / Intrapreneurship`,
-			"icon": `img/bulb-money-solid.svg`,
+			"icon": `bulb-money-solid`,
 			"isIcon": false,
 			"isOpt": false,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Creating a better world",
-			"icon": "fas fa-globe-americas",
-			"isIcon": true,
-			"isOpt": false
+			"icon": "earth",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Public speaking (Storytelling & Elevator Pitching)",
-			"icon": "mdi mdi-account-voice extraIcons",
-			"isIcon": true,
-			"isOpt": false
+			"icon": "speaker",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Creative writing",
-			"icon": "fas fa-pen-fancy",
-			"isIcon": true,
-			"isOpt": false
+			"icon": "pen-nib-solid",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Photography",
-			"icon": "fas fa-camera-retro",
-			"isIcon": true,
-			"isOpt": false
+			"icon": "camera-enhance",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
-			"title": "Travelling",
-			"icon": "mdi mdi-airport extraIcons",
-			"isIcon": true,
-			"isOpt": false
+			"title": "Traveling",
+			"icon": "airport",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Video games",
-			"icon": "fas fa-gamepad",
-			"isIcon": true,
-			"isOpt": false
+			"icon": "nintendo-game-boy",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Board games",
-			"icon": "fas fa-dice",
-			"isIcon": true,
-			"isOpt": false
+			"icon": "dice-solid",
+			"isIcon": false,
+			"isOpt": false,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "History",
-			"icon": "mdi mdi-pillar",
-			"isIcon": true,
-			"isOpt": true
+			"icon": "pillar",
+			"isIcon": false,
+			"isOpt": true,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Politics",
-			"icon": "fas fa-flag-usa",
-			"isIcon": true,
-			"isOpt": true
+			"icon": "flag-usa-solid",
+			"isIcon": false,
+			"isOpt": true,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Swimming",
-			"icon": "fas fa-swimmer",
-			"isIcon": true,
-			"isOpt": true
+			"icon": "swim",
+			"isIcon": false,
+			"isOpt": true,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Theater",
-			"icon": "fas fa-theater-masks",
-			"isIcon": true,
-			"isOpt": true
+			"icon": "drama-masks",
+			"isIcon": false,
+			"isOpt": true,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Conferences & Networking",
-			"icon": "fas fa-users",
-			"isIcon": true,
-			"isOpt": true
+			"icon": "users-solid",
+			"isIcon": false,
+			"isOpt": true,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Astronomy & Science",
-			"icon": "mdi mdi-telescope extraIcons",
-			"isIcon": true,
-			"isOpt": true
+			"icon": "telescope",
+			"isIcon": false,
+			"isOpt": true,
+			"externalClass": "externalImg"
 		},
 		{
 			"title": "Mountains & Lakes",
-			"icon": "img/nature.svg",
+			"icon": "nature",
 			"isIcon": false,
 			"isOpt": true,
 			"externalClass": "externalImg"

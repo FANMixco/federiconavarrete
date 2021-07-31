@@ -22,7 +22,7 @@ $(function(){
 		$('#pptGallery').append(createTabs() + createPanes());
 		
         let preziNext = ppts.filter(x=>x.type == 'next').sort(sortByProperty('order'));
-        let preziClassic = ppts.filter(x=>x.type == 'classic').sort(sortByProperty('order'));
+        //let preziClassic = ppts.filter(x=>x.type == 'classic').sort(sortByProperty('order'));
         let powerPoint = ppts.filter(x=>x.type == 'ppt').sort(sortByProperty('order'));
 		
 		$("#galleryTitle").append(galleryTitle);
@@ -36,8 +36,8 @@ $(function(){
 
         for (let item in preziNext)
             createPPT("pptNext", preziNext[item].link, preziNext[item].preview, preziNext[item].name, preziNext[item].name, presentedOrEdited(preziNext[item].wasPresented), moment(preziNext[item].edited).format('MMM D, YYYY').toUpperCase());
-        for (let item in preziClassic)
-            createPPT("pptClassic", preziClassic[item].link, preziClassic[item].preview, preziClassic[item].name, preziClassic[item].name, presentedOrEdited(preziClassic[item].wasPresented), moment(preziClassic[item].edited).format('MMM D, YYYY').toUpperCase());
+        /*for (let item in preziClassic)
+            createPPT("pptClassic", preziClassic[item].link, preziClassic[item].preview, preziClassic[item].name, preziClassic[item].name, presentedOrEdited(preziClassic[item].wasPresented), moment(preziClassic[item].edited).format('MMM D, YYYY').toUpperCase());*/
         for (let item in powerPoint)
             createPPT("pptPowerPoint", powerPoint[item].link, powerPoint[item].preview, powerPoint[item].name, powerPoint[item].name, presentedOrEdited(powerPoint[item].wasPresented), moment(powerPoint[item].edited).format('MMM D, YYYY').toUpperCase());
     }

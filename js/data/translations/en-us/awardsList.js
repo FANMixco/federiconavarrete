@@ -2,7 +2,7 @@ const awardsList = {
 	"awards": [
 		[
 			{ 
-				"title": "1st Place Citython 2021 by the Urban Mobility. Category: Make the city healthy.",
+				"title": "1<sup>st</sup> Place Citython 2021 by the Urban Mobility. Category: Make the city healthy.",
 				"link": "https://www.citython.eu/2021eindhoven"
 			},
 			{
@@ -15,7 +15,7 @@ const awardsList = {
 				"title": "President's Distinguished Area by Toastmasters International 2019"
 			},
 			{
-				"title": `1st place Cisco Switch Up Challenge 2016, "The Internet of Everything"`
+				"title": `1<sup>st</sup> place Cisco Switch Up Challenge 2016, "The Internet of Everything"`
 			}
 		],
 		[

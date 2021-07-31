@@ -1,6 +1,7 @@
 let lang = "en-us/min";
 let langLoc = "js/data/translations/";
 const iframeElSalvador = `<iframe title='El Salvador Map' id='iframeElSalvador' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" class="previewerIframe" allowfullscreen></iframe>`;
+const iconsPath = 'img/icons/website/';
 
 $.getScript(`${langLoc}${lang}/generics.js`).done(function() {
     loadTranslations();
@@ -54,7 +55,7 @@ function loadReviews() {
                 <div id="review${currentReview}PDF"></div>
                 <div class="centerText">
                 <a class="btn" target="_blank" href="${item.pdfLocation}">
-                   <i class="fas fa-download mr-2"></i> ${genericTranslations.download}
+                <img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${genericTranslations.download}
                 </a>
                 </div>`;
             }
@@ -71,7 +72,7 @@ function loadReviews() {
             $(`#divReview${currentReview}`).append(longReview);
 
             if (item.isPDF) {
-                PDFObject.embed("/testimonials/20190603165400926.pdf", `#review${currentReview}PDF`);
+                PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
     $('[data-toggle="tooltip"]').tooltip();
             }
         });
@@ -226,14 +227,14 @@ function loadTranslations() {
     let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
     if (!smallScreenMobileOS) {
-        $("#spanMenu").html(`${genericTranslations.menu}&nbsp;<i class='fas fa-bars'></i>`);
+        $("#spanMenu").html(`${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" class="hMenu ml-2" loading="lazy" />`);
         setTimeout(function() {
             $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
             $("#divSkillsContainer").css("padding-top", "15px");
             $("#divSkillsContainer").css("border-radius", "20px");
         }, 100);
     } else {
-        $("#spanMenu").html("<i class='fas fa-bars'></i>");
+        $("#spanMenu").html(`<img src="${iconsPath}bars-solid.svg" class="hMenu" style="margin-top:0px!important" loading="lazy" />`);
         marginTop = -40;
         heightIFrame = 560;
     }
@@ -256,45 +257,45 @@ function loadBasicInfo() {
     });
 
     if (favBook.isVisible) { 
-        $("#favBook").append(`<a class="btn btn-xl btn-outline-light" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><i class="fas fa-download mr-2"></i> ${favBook.title}</a>`);
+        $("#favBook").append(`<a class="btn btn-xl btn-outline-light btn-home" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${favBook.title}</a>`);
     }
     else {
         $("#favBook").hide();
     }
 
     if (favPodcast.isVisible) {
-        $("#favPodcast").append(`<a class="btn btn-xl btn-outline-light" rel="noreferrer" target="_blank" href="${favPodcast.link}"><i class="fas fa-podcast mr-2"></i> ${favPodcast.title}</a>`);
+        $("#favPodcast").append(`<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" loading="lazy" />&nbsp;${favPodcast.title}</a>`);
     }
     else {
         $("#favPodcast").hide();
     }
 
     if (favApp.isVisible) {
-        $("#favApp").append(`<a class="btn btn-xl btn-outline-light" rel="noreferrer" target="_blank" href="${favApp.link}"><i class="fas fa-download mr-2"></i> ${favApp.title}</a>`);
+        $("#favApp").append(`<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favApp.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${favApp.title}</a>`);
     }
     else {
         $("#favApp").hide();
     }
 
     if (skype.isVisible) {
-        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.skype, `skype:${skype.id}?call`, "fab fa-fw fa-skype", false)}</li>`);
+        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.skype, `skype:${skype.id}?call`, `${iconsPath}skype.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`);
     }
 
     if (telephone.isVisible) {
-        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.telephone, `tel:${telephone.number}`, "fas fa-phone", false)}</li>`);
+        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.telephone, `tel:${telephone.number}`, `${iconsPath}phone.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`);
     }
 
     if (email.isVisible) {
-        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, "fas fa-at", false)}</li>`);
+        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, `${iconsPath}at.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`);
     }
     
     $('[data-toggle="tooltip"]').tooltip();
 
-    $("#linkContactMeAbout").click(function(e) {
+    $("#linkContactMeAbout").on("click", function(e) {
         $("#contactMe").modal("show");
     });
 
-    $("#aElSalvador").click(function(){
+    $("#aElSalvador").on("click", function(){
         if ($("#iframeElSalvador").length == 0)
             $("#divIframElSalvador").append(iframeElSalvador);
     });
@@ -310,8 +311,8 @@ function loadHobbies() {
         });
 
         $("#hobbiesList").append(`<li class="list-inline-item" id='btnExtraHobbies'>
-            <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherHobbies">
-            <i class="fas fa-plus"></i>
+            <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-toggle="modal" data-target="#otherHobbies">
+            <img src="${iconsPath}plus.svg" loading="lazy" />
             </a>
         </li>`);
 
@@ -323,7 +324,7 @@ function loadHobbies() {
 
         $('[data-toggle="tooltip"]').tooltip();
 
-        $('[data-toggle="tooltip"]').click(function(e){
+        $('[data-toggle="tooltip"]').on("click", function(e){
             e.preventDefault();
         });
     
@@ -351,7 +352,7 @@ function getHobbyImg(item) {
         externalClass = item.externalClass;
     }
 
-    return getImage(item.title, "#", item.icon, false, item.isIcon, externalClass, true);
+    return getImage(item.title, "#", `${iconsPath}${item.icon}.svg`, false, item.isIcon, externalClass, true);
 }
 
 function loadServices() {
@@ -363,10 +364,10 @@ function loadServices() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a href=${elem.link} target="_blank" class="text-warning">${elem.title}</a>`;
+                    title = `<a style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
                 else
-                    title = elem.title;
-                items += `<span class="font-weight-bold">${title}</span><br /><br />`;
+                    title = `<b>${elem.title}</b>`;
+                items += `<span>${title}</span><br /><br />`;
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
 
@@ -387,9 +388,9 @@ function loadAwards() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a href=${elem.link} target="_blank" class="text-warning">${elem.title}</a>`;
+                    title = `<a style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-warning">${elem.title}</a>`;
                 else
-                    title = elem.title;
+                    title = `<button style='width: 100%; font-weight: bold' type="button" class="btn btn-light">${elem.title}</button>`;
                 items += `${title}<br /><br />`;
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
@@ -532,13 +533,13 @@ function loadSocialMedias() {
 
     if (isVisible) {
         socialMedia.forEach(item => {
-            $("#socialMediaBasic").append(`<li class="list-inline-item">${getImage(item.title, item.link, item.icon, true, item.isIcon)}</li>`);
+            $("#socialMediaBasic").append(`<li class="list-inline-item">${getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`);
         });
 
         if (socialOthersList.isVisible) {
             $("#socialMediaBasic").append(`<li class="list-inline-item">
-                <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle" data-toggle="modal" data-target="#otherLocs">
-                <i class="fas fa-plus"></i>
+                <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-toggle="modal" data-target="#otherLocs">
+                <img src="${iconsPath}plus.svg" class="iconFooter btn-footer" loading="lazy" />
                 </a>
             </li>`);
 
@@ -549,7 +550,7 @@ function loadSocialMedias() {
                     externalClass = elem.externalClass;
                 }
 
-                $("#socialMediaOthers").append(`<li class="list-inline-item">${getImage(elem.title, elem.link, elem.icon, true, elem.isIcon,externalClass, false)}</li>`);
+                $("#socialMediaOthers").append(`<li class="list-inline-item">${getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`);
             });
         }
         $('[data-toggle="tooltip"]').tooltip();
@@ -559,11 +560,12 @@ function loadSocialMedias() {
     }
 }
 
-function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false) {
+function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
     let targetBlank = isTargetBlank ? `target="_blank"` : "";
     let ignoreClick = isIgnoredClick ? "ignore-click" : "";
     let noreferrer = link == "#" ? rel="noreferrer" : "";
-    let img = isIcon ? `<i class="${icon}"></i>` : `<img src="${icon}" loading="lazy" />`;
+    let imgClassName = imgClass == "" ? "" : `class='${imgClass}'`;
+    let img = isIcon ? `<i class="${icon}"></i>` : `<img src="${icon}" ${imgClassName} loading="lazy" />`;
 
     return `<a data-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }

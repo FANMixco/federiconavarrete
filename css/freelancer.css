@@ -39,14 +39,15 @@ hr.star-dark:after,
 hr.star-black:after,
 hr.star-dark-teal:after,
 hr.star-black-dark:after {
-  position: relative;
-  top: -.8em;
+  content: "";
+  width: 48px;
+  height: 48px;
+  background: url("../img/icons/website/star.svg") no-repeat;
   display: inline-block;
-  padding: 0 0.25em;
-  content: '\f005';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2em;
+  position: absolute;
+  margin-top: -24px;
+  margin-left: -24px;
+  left: 50%;
 }
 
 hr.star-light {
