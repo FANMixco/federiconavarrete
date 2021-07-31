@@ -67,23 +67,44 @@
 .externalImg img,.externalImg:active img{
     margin-top: -3px;
     filter: invert(100%);
+    width: 24px;
+    height: 24px;
 }
 
 .externalImg:hover img{
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%);
 }
 
-.externalImgAzure img,.externalImgAzure:active img{
-    height: 24px;
+.iconFooter {
+    width: 25px;
+    height: 25px;
+    filter: invert(100%);
+    margin-top: -1px;
 }
 
-.externalImgAzure:hover img{
-    filter: invert(85%);
+.btn-home:hover img {
+    filter: invert(0%);
+}
+
+.btn-footer:hover img {
+    filter: invert(0%);
+}
+
+.btnIcons {
+    margin-top: -2px;
+    filter: invert(1);
 }
 
 .picReviewers{
     max-height: 100px;
     max-width: 100px;
+}
+
+.hMenu {
+    height: 13px;
+    width: 11.2px;
+    margin-top: -3px;
+    filter: invert(100%);
 }
 
 #linkContactMe{

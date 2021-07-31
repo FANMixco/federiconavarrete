@@ -39,14 +39,28 @@ hr.star-dark:after,
 hr.star-black:after,
 hr.star-dark-teal:after,
 hr.star-black-dark:after {
-  position: relative;
-  top: -.8em;
+  content: "";
+  width: 48px;
+  height: 48px;
+  background: url("../img/icons/website/round-star.svg") no-repeat 9px 9px;
   display: inline-block;
-  padding: 0 0.25em;
-  content: '\f005';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2em;
+  position: absolute;
+  margin-top: -24px;
+  margin-left: -24px;
+  left: 50%;
+}
+
+hr.star-dark:after,
+hr.star-dark-teal:after {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background: url("../img/icons/website/round-star-black.svg") no-repeat 9px 9px;
+  display: inline-block;
+  position: absolute;
+  margin-top: -24px;
+  margin-left: -24px;
+  left: 50%;
 }
 
 hr.star-light {
@@ -74,7 +88,7 @@ hr.star-black {
 
 hr.star-black:after {
   color: #fff;
-  background-color: #212121;
+  background-color: #fff;
   border-radius: 50%;
 }
 
@@ -84,7 +98,7 @@ hr.star-black-dark {
 
 hr.star-black-dark:after {
   color: #fff;
-  background-color: black;
+  background-color: #fff;
   border-radius: 50%;
 }
 
