@@ -1,3 +1,5 @@
+const scrollSmallScreen = document.getElementById('scroll-small-screen');
+
 (function($) {
     "use strict"; // Start of use strict
 
@@ -16,18 +18,18 @@
     });
 
     // Scroll to top button appear
-    $(document).scroll(function() {
+    $(document).on("scroll", function() {
         var scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
-            $('.scroll-to-top').fadeIn();
+            unfade(scrollSmallScreen);
         } else {
             $('.navbar').css('margin-top', "0px");
-            $('.scroll-to-top').fadeOut();
+            fade(scrollSmallScreen);
         }
     });
 
     // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function() {
+    $('.js-scroll-trigger').on("click", function() {
         $('.navbar-collapse').collapse('hide');
     });
 
