@@ -1,17 +1,45 @@
 const scrollSmallScreen = document.getElementById('scroll-small-screen');
 
+const scrollTo = function(to, duration) {
+    const
+    element = document.scrollingElement || document.documentElement,
+    start = element.scrollTop,
+    change = to - start,
+    startDate = +new Date(),
+    // t = current time
+    // b = start value
+    // c = change in value
+    // d = duration
+    easeInOutQuad = function(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    },
+    animateScroll = function() {
+        const currentDate = +new Date();
+        const currentTime = currentDate - startDate;
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+        if(currentTime < duration) {
+            requestAnimationFrame(animateScroll);
+        }
+        else {
+            element.scrollTop = to;
+        }
+    };
+    animateScroll();
+};
+
 (function($) {
     "use strict"; // Start of use strict
 
     // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on("click", function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-                $('html, body').animate({
-                    scrollTop: (target.offset().top - 70)
-                }, 1000, "easeInOutExpo");
+                scrollTo(0, 1000);
                 return false;
             }
         }
@@ -21,10 +49,12 @@ const scrollSmallScreen = document.getElementById('scroll-small-screen');
     $(document).on("scroll", function() {
         var scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
-            unfade(scrollSmallScreen);
+            if (scrollSmallScreen.style.display == "" || scrollSmallScreen.style.display == "none")
+                unfade(scrollSmallScreen);
         } else {
             $('.navbar').css('margin-top', "0px");
-            fade(scrollSmallScreen);
+            if (scrollSmallScreen.style.display == "block")
+                fade(scrollSmallScreen);
         }
     });
 
@@ -50,7 +80,7 @@ const scrollSmallScreen = document.getElementById('scroll-small-screen');
     // Collapse now if page is not at top
     navbarCollapse();
     // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
+    $(window).on("scroll", navbarCollapse);
 
     // Floating label headings for the contact form
     $(function() {

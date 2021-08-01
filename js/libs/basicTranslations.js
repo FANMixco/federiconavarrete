@@ -176,7 +176,7 @@ function loadTranslations() {
 }
 
 function setTranslation(id, text) {
-    $(`${id}`).text(text);
+    $(id).text(text);
 }
 
 function loadBasicInfo() {

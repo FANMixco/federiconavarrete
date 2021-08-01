@@ -81,7 +81,7 @@ function loadReviews() {
 
             if (item.isPDF) {
                 PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
-    $('[data-toggle="tooltip"]').tooltip();
+                $('[data-toggle="tooltip"]').tooltip();
             }
         });
     }
@@ -384,7 +384,7 @@ function loadSocialMedias() {
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
-    let imgTemp = document.getElementById(`${imgID}`);
+    let imgTemp = document.getElementById(imgID);
     switch (WURFL.form_factor) {
         case "Smartphone":
             imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
@@ -417,9 +417,9 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         arias += `${itemCollapseID}${i} `;
     }
 
-    $(`#${btnMore}`).attr("aria-controls", arias);
+    document.getElementById(btnMore).setAttribute("aria-controls", arias);
 
-    const divOthersContainerDiv = document.getElementById(`${divOthersContainer}`);
+    const divOthersContainerDiv = document.getElementById(divOthersContainer);
 
     skillsOthers.forEach(function(item, index) {
         let items = `<div class="col-sm"><div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
