@@ -60,8 +60,8 @@ function loadReviews() {
                 <p class="text-dark m-0 centerText">${item.date}</p>
                 <div id="review${currentReview}PDF"></div>
                 <div class="centerText">
-                <a class="btn" target="_blank" href="${item.pdfLocation}">
-                <img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${genericTranslations.download}
+                <a class="btn btn btn-outline-dark" target="_blank" href="${item.pdfLocation}">
+                <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" loading="lazy" />&nbsp;${genericTranslations.download}
                 </a>
                 </div>`;
             }
@@ -75,7 +75,9 @@ function loadReviews() {
                 <p class="m-0 pt-3 text-black">${item.review}</p>`;
             }
 
-            $(`#divReview${currentReview}`).append(longReview);
+            let divTmpReviews = document.getElementById(`divReview${currentReview}`);
+
+            divTmpReviews.innerHTML += longReview;
 
             if (item.isPDF) {
                 PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
