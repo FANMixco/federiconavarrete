@@ -128,7 +128,6 @@ function loadHobbies() {
             const btnExtraHobbies = document.getElementById("btnExtraHobbies");
             btnExtraHobbies.style.display = "none";
 
-            $("#btnExtraHobbies").hide();
             if (WURFL.is_mobile) {
                 $(".btnOptional").hide();
                 btnExtraHobbies.style.display = "block";
@@ -407,7 +406,9 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         });
         items = `${items.substring(0, items.length - 12)}</p></div>`;
 
-        $(`#${divContainer}`).prepend(items);
+        let divTmp = document.getElementById(`${divContainer}`);
+
+        divTmp.innerHTML = items + divTmp.innerHTML;
     });
 
     let arias = "";
