@@ -84,7 +84,8 @@ function loadReviews() {
         });
     }
     else {
-        $("#divReviews").hide();
+        const divReviews = document.getElementById("divReviews");
+        divReviews.style.display = "none";
     }
 }
 
@@ -122,17 +123,21 @@ function loadHobbies() {
         let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
         if (!smallScreenMobileOS) {
+            const btnExtraHobbies = document.getElementById("btnExtraHobbies");
+            btnExtraHobbies.style.display = "none";
+
             $("#btnExtraHobbies").hide();
             if (WURFL.is_mobile) {
                 $(".btnOptional").hide();
-                $("#btnExtraHobbies").show();
+                btnExtraHobbies.style.display = "block";
             }
         } else {
             $(".btnOptional").hide();
         }
     }
     else {
-        $("#divHobbies").hide();
+        const divHobbies = document.getElementById("divHobbies");
+        divHobbies.style.display = "none";
     }
 }
 
@@ -378,15 +383,16 @@ function loadSocialMedias() {
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
+    let imgTemp = document.getElementById(`${imgID}`);
     switch (WURFL.form_factor) {
         case "Smartphone":
-            $(`#${imgID}`).attr("src",`${imgLoc}${imgBasic}_small.${imgFormat}`);
+            imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
             break;
         case "Tablet":
-            $(`#${imgID}`).attr("src",`${imgLoc}${imgBasic}_medium.${imgFormat}`);
+            imgTemp.src = `${imgLoc}${imgBasic}_medium.${imgFormat}`;
             break;
         default:
-            $(`#${imgID}`).attr("src",`${imgLoc}${imgBasic}.${imgFormat}`);
+            imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
             break;
     }
 }
@@ -410,6 +416,8 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
 
     $(`#${btnMore}`).attr("aria-controls", arias);
 
+    const divOthersContainerDiv = document.getElementById(`${divOthersContainer}`);
+
     skillsOthers.forEach(function(item, index) {
         let items = `<div class="col-sm"><div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
         item.forEach(elem => {
@@ -417,6 +425,6 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         });
         items = `${items.substring(0, items.length - 12)}</div></div></div>`;
 
-        $(`#${divOthersContainer}`).prepend(items);
+        divOthersContainerDiv.innerHTML = items + divOthersContainerDiv.innerHTML;
     });
 }

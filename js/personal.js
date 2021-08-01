@@ -7,12 +7,19 @@ const imgLocArticles = 'img/articles/';
 
 $(function() {
     let cYear = new Date().getFullYear();
-    $("#spanYear").text(cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`);
 
-    $("#appsFullScreen").on("click", function(){
+    const spanYear = document.getElementById("spanYear");
+
+    spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
+
+    const appsFullScreen = document.getElementById("appsFullScreen");
+    appsFullScreen.addEventListener('click', function() {
         window.open("https://federiconavarrete.com/apps.html");
     });
-    $("#pptsFullScreen").on("click", function(){
+
+    const pptsFullScreen = document.getElementById("pptsFullScreen");
+
+    pptsFullScreen.addEventListener('click', function() {
         window.open("https://federiconavarrete.com/prezis.html");
     });
 
@@ -23,18 +30,21 @@ $(function() {
     let marginTop = 0;
     let heightIFrame = 600;
 
+    const imgProfile = $("#imgProfile");
+    const imgBook = $("#imgBook");
+
     switch (WURFL.form_factor) {
         case "Smartphone":
-            $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);
-            $("#imgBook").attr("src",`img/mybook/book_small.jpg`);
+            imgProfile.attr("src", "img/photos/profile_small.jpg");
+            imgBook.attr("src", "img/mybook/book_small.jpg");
             break;
         case "Tablet":
-            $("#imgProfile").attr("src",`img/photos/profile.jpg`);
-            $("#imgBook").attr("src",`img/mybook/book_medium.jpg`);
+            imgProfile.attr("src", "img/photos/profile.jpg");
+            imgBook.attr("src", "img/mybook/book_medium.jpg");
             break;
         default:
-            $("#imgProfile").attr("src",`img/photos/profile.jpg`);
-            $("#imgBook").attr("src",`img/mybook/book_medium.jpg`);
+            imgProfile.attr("src", "img/photos/profile.jpg");
+            imgBook.attr("src", "img/mybook/book_medium.jpg");
             break;
     }
 
@@ -46,7 +56,7 @@ $(function() {
     let movement = 0;
     let lastDirection = 0;
 
-    $(window).scroll(function(event) {
+    $(window).on("scroll", function(event) {
         let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
         
         if (smallScreenMobileOS) {
@@ -83,22 +93,26 @@ $(function() {
         }
     });
 
-    $('#contactMeForm').html(`<iframe src="pages/contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`);
+    const contactMeForm = document.getElementById("contactMeForm");
 
-    $("#linkContactMe").on("click", function(e) {
-        e.preventDefault();
-        $(this).tooltip('hide');
-        $("#contactMe").modal("show");
+    contactMeForm.innerHTML += `<iframe src="pages/contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`;
+
+    const aAppsPreview = document.getElementById("aAppsPreview");
+
+    aAppsPreview.addEventListener('click', function(e) {
+        if ($("#iframeApps").length == 0) {
+            const divApps = document.getElementById("divApps");
+            divApps.innerHTML += iframeApps;
+        }
     });
 
-    $("#aAppsPreview").on("click", function(){
-        if ($("#iframeApps").length == 0)
-            $("#divApps").append(iframeApps);
-    });
+    const aPPTPreview = document.getElementById("aPPTPreview");
 
-    $("#aPPTPreview").on("click", function(){
-        if ($("#iframePrezis").length == 0)
-            $("#divPrezis").append(iframePrezis);
+    aPPTPreview.addEventListener('click', function() {
+        if ($("#iframePrezis").length == 0) {
+            const divPrezis = document.getElementById("divPrezis");
+            divPrezis.innerHTML += iframePrezis;
+        }
     });
 
     $('[data-toggle="tooltip"]').tooltip();

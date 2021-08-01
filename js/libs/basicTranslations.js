@@ -237,10 +237,14 @@ function loadBasicInfo() {
             divIframElSalvador.innerHTML += iframeElSalvador;
         }
     }, false);
-}
 
-function contactMe() {
-    $("#contactMe").modal("show");
+    const linkContactMe = document.getElementById("linkContactMe");
+
+    linkContactMe.addEventListener('click', function(e) {
+        e.preventDefault();
+        $(this).tooltip('hide');
+        $("#contactMe").modal("show");
+    });
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
