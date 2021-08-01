@@ -96,7 +96,7 @@ function loadHobbies() {
 
         $("#hobbiesList").append(`<li class="list-inline-item" id='btnExtraHobbies'>
             <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-toggle="modal" data-target="#otherHobbies">
-            <img src="${iconsPath}plus.svg" loading="lazy" />
+            <img src="${iconsPath}plus.svg" alt="extra" loading="lazy" />
             </a>
         </li>`);
 
@@ -172,7 +172,7 @@ function loadAwards() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-warning">${elem.title}</a>`;
+                    title = `<a style='width: 100%; font-weight: bold' rel="noopener" href=${elem.link} target="_blank" class="btn btn-warning">${elem.title}</a>`;
                 else
                     title = `<button style='width: 100%; font-weight: bold' type="button" class="btn btn-light">${elem.title}</button>`;
                 items += `${title}<br /><br />`;
@@ -201,7 +201,7 @@ function loadPersonalProjects() {
 
         let pp = `<div class="carousel-item${isActive}">
             <div class="carousel-video-inner">
-            <iframe title="Timer" class="iVideos" src="https://www.youtube.com/embed/${item.youTubeID}"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h4 class="text-center text-uppercase text-secondary mb-0"><a href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
             </div>
         </div>`;
@@ -221,7 +221,7 @@ function loadVideos() {
     if (isVisible) {
         presentations.forEach(item => {
             let video = `<div class="col-sm">
-                      <iframe class="iVideos" src="https://www.youtube.com/embed/${item.youTubeID}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                      <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
                       <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                    </div>`;
             $("#divVideos").append(video);
@@ -259,7 +259,7 @@ function loadOrganizedEvents() {
         events.forEach(item => {
             let event = `<div class="col-sm">
                 <a href="${item.link}" rel="noreferrer" target="_blank">
-                    <img loading="lazy" class="img-fluid" id="${item.imgID}" />
+                    <img alt='events' loading="lazy" class="img-fluid" id="${item.imgID}" />
                 </a>
                 <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
             </div>`;
@@ -323,7 +323,7 @@ function loadSocialMedias() {
         if (socialOthersList.isVisible) {
             $("#socialMediaBasic").append(`<li class="list-inline-item">
                 <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-toggle="modal" data-target="#otherLocs">
-                <img src="${iconsPath}plus.svg" class="iconFooter btn-footer" loading="lazy" />
+                <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" loading="lazy" />
                 </a>
             </li>`);
 

@@ -9,14 +9,14 @@ $(function() {
     let cYear = new Date().getFullYear();
     $("#spanYear").text(cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`);
 
-    $("#appsFullScreen").click(function(){
+    $("#appsFullScreen").on("click", function(){
         window.open("https://federiconavarrete.com/apps.html");
     });
-    $("#pptsFullScreen").click(function(){
+    $("#pptsFullScreen").on("click", function(){
         window.open("https://federiconavarrete.com/prezis.html");
     });
 
-    $(".ignore-click").click(function() {
+    $(".ignore-click").on("click", function() {
         return false;
     });
 
@@ -85,18 +85,18 @@ $(function() {
 
     $('#contactMeForm').html(`<iframe src="pages/contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`);
 
-    $("#linkContactMe").click(function(e) {
+    $("#linkContactMe").on("click", function(e) {
         e.preventDefault();
         $(this).tooltip('hide');
         $("#contactMe").modal("show");
     });
 
-    $("#aAppsPreview").click(function(){
+    $("#aAppsPreview").on("click", function(){
         if ($("#iframeApps").length == 0)
             $("#divApps").append(iframeApps);
     });
 
-    $("#aPPTPreview").click(function(){
+    $("#aPPTPreview").on("click", function(){
         if ($("#iframePrezis").length == 0)
             $("#divPrezis").append(iframePrezis);
     });
