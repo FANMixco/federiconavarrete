@@ -213,28 +213,36 @@ function loadBasicInfo() {
         favPodcastDiv.style.display = "none";
     }
 
+    const listContacts = document.getElementById('listContacts');
+
     if (skype.isVisible) {
-        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.skype, `skype:${skype.id}?call`, `${iconsPath}skype.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`);
+        listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.skype, `skype:${skype.id}?call`, `${iconsPath}skype.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
     }
 
     if (telephone.isVisible) {
-        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.telephone, `tel:${telephone.number}`, `${iconsPath}phone.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`);
+        listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.telephone, `tel:${telephone.number}`, `${iconsPath}phone.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
     }
 
     if (email.isVisible) {
-        $("#listContacts").prepend(`<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, `${iconsPath}at.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`);
+        listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, `${iconsPath}at.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
     }
     
     $('[data-toggle="tooltip"]').tooltip();
 
-    $("#linkContactMeAbout").on("click", function(e) {
-        $("#contactMe").modal("show");
-    });
+    const linkContactMeAbout = document.getElementById('linkContactMeAbout');
 
-    $("#aElSalvador").on("click", function(){
-        if ($("#iframeElSalvador").length == 0)
-            $("#divIframElSalvador").append(iframeElSalvador);
-    });
+    linkContactMeAbout.addEventListener('click', function() {
+        $("#contactMe").modal("show");
+    }, false);
+
+    const aElSalvador = document.getElementById('aElSalvador');
+
+    aElSalvador.addEventListener('click', function() {
+        if ($("#iframeElSalvador").length == 0) {
+            const divIframElSalvador = document.getElementById('divIframElSalvador');
+            divIframElSalvador.innerHTML += iframeElSalvador;
+        }
+    }, false);
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {

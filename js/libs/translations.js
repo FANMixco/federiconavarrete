@@ -27,6 +27,9 @@ function loadReviews() {
     const { reviews, isVisible } = reviewsList;
 
     if (isVisible) {
+        const divReviewsPreviews = document.getElementById('divReviewsPreviews');
+        let currentDivReview;
+
         reviews.forEach(function(item, index) {
 
             let name = item.externalLink !== "" ? `<a href="${item.externalLink}" rel="noreferrer" target="_blank" class="text-warning">${item.name}</a>` : item.name;
@@ -44,7 +47,7 @@ function loadReviews() {
                 <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-material-link" data-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
             </div>`;
 
-            $("#divReviewsPreviews").append(review);
+            divReviewsPreviews.innerHTML += review;
 
             let longReview = "";
 
@@ -89,21 +92,25 @@ function loadHobbies() {
     const { hobbies, isVisible } = hobbiesList;
 
     if (isVisible) {
+        const hobbiesList = document.getElementById('hobbiesList');
+
         hobbies.forEach(item => {
-            const btnOptional = item.isOpt ? " btnOptional" : "";
-            $("#hobbiesList").append(`<li class="list-inline-item${btnOptional}">${getHobbyImg(item)}</li>`);
+            let btnOptional = item.isOpt ? " btnOptional" : "";
+
+            hobbiesList.innerHTML += `<li class="list-inline-item${btnOptional}">${getHobbyImg(item)}</li>`;
         });
 
-        $("#hobbiesList").append(`<li class="list-inline-item" id='btnExtraHobbies'>
+        hobbiesList.innerHTML += `<li class="list-inline-item" id='btnExtraHobbies'>
             <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-toggle="modal" data-target="#otherHobbies">
             <img src="${iconsPath}plus.svg" alt="extra" loading="lazy" />
             </a>
-        </li>`);
+        </li>`;
 
         const hobbiesOthers = _.where(hobbies, { isOpt: true });
 
+        const optHobbies = document.getElementById('optHobbies');
         hobbiesOthers.forEach(elem => {
-            $("#optHobbies").append(`<li class="list-inline-item">${getHobbyImg(elem)}</li>`);
+            optHobbies.innerHTML += `<li class="list-inline-item">${getHobbyImg(elem)}</li>`;
         });
 
         $('[data-toggle="tooltip"]').tooltip();
@@ -143,6 +150,7 @@ function loadServices() {
     const { services, isVisible } = servicesList;
 
     if (isVisible) {
+        const servicesList = document.getElementById('servicesList');
         services.forEach(item => {
             let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
             item.forEach(elem => {
@@ -155,11 +163,12 @@ function loadServices() {
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
 
-            $("#servicesList").append(items);
+            servicesList.innerHTML += items;
         });
     }
     else {
-        $("#divServices").hide();
+        const divServices = document.getElementById('divServices');
+        divServices.style.display = "none";
     }
 }
 
@@ -167,6 +176,7 @@ function loadAwards() {
     const { awards, isVisible } = awardsList;
 
     if (isVisible) {
+        const awardsList = document.getElementById('awardsList');
         awards.forEach(item => {
             let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
             item.forEach(elem => {
@@ -179,11 +189,12 @@ function loadAwards() {
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
 
-            $("#awardsList").append(items);
+            awardsList.innerHTML += items;
         });
     }
     else {
-        $("#divAwards").hide();
+        const divAwards = document.getElementById('divAwards');
+        divAwards.style.display = "none";
     }
 }
 
@@ -196,6 +207,7 @@ function loadSoftSkills() {
 }
 
 function loadPersonalProjects() {
+    const personalProjectsDiv = document.getElementById('personalProjects');
     personalProjects.forEach(item => {
         let isActive = item.isActive ? " active" : "";
 
@@ -206,7 +218,7 @@ function loadPersonalProjects() {
             </div>
         </div>`;
 
-        $("#personalProjects").append(pp);
+        personalProjectsDiv.innerHTML += pp;
     });
 }
 
@@ -219,16 +231,21 @@ function loadVideos() {
     const { presentations, isVisible } = presentationsVideos;
 
     if (isVisible) {
+        const divVideos = document.getElementById('divVideos');
         presentations.forEach(item => {
             let video = `<div class="col-sm">
                       <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
                       <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                    </div>`;
-            $("#divVideos").append(video);
+            divVideos.innerHTML += video;
         });
     }
     else {
-        $("#hPublicSpeaking,#divVideos").hide();
+        const hPublicSpeaking = document.getElementById('hPublicSpeaking');
+        hPublicSpeaking.style.display = "none";
+
+        const divVideos = document.getElementById('divVideos');
+        divVideos.style.display = "none";
     }
 }
 
@@ -236,6 +253,7 @@ function loadPresentations() {
     const { presentations, isVisible } = presentationsLinks;
 
     if (isVisible) {
+        const divPPTs = document.getElementById('divPPTs');
         presentations.forEach(item => {
             let ppt = `<div class="col-sm">
                 <a href="${item.link}" rel="noreferrer" target="_blank">
@@ -243,18 +261,26 @@ function loadPresentations() {
                 </a>
                 <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
             </div>`;
-            $("#divPPTs").append(ppt);
+            divPPTs.innerHTML += ppt;
             setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
         });
     }
     else {
-        $("#hPresentations,#divPPTs,#pPPTs").hide();
+        const hPresentations = document.getElementById('hPresentations');
+        hPresentations.style.display = "none";
+
+        const divPPTs = document.getElementById('divPPTs');
+        divPPTs.style.display = "none";
+
+        const pPPTs = document.getElementById('pPPTs');
+        pPPTs.style.display = "none";
     }
 }
 
 function loadOrganizedEvents() {
     const { events, isVisible } = organizedEvents;
 
+    const divEvents = document.getElementById('divEvents');
     if (isVisible) {
         events.forEach(item => {
             let event = `<div class="col-sm">
@@ -263,12 +289,12 @@ function loadOrganizedEvents() {
                 </a>
                 <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
             </div>`;
-            $("#divEvents").append(event);
+            divEvents.innerHTML += event;
             setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
         });
     }
     else {
-        $("#divEvents").hide();
+        divEvents.style.display = "none";
     }
 }
 
@@ -276,6 +302,7 @@ function loadArticles() {
     const { articles, isVisible } = articlesList;
 
     if (isVisible) {
+        const divArticles = document.getElementById('divArticles');
         articles.forEach(item => {
             let event = `<div class="col-sm">
                 <a href="${item.link}" target="_blank" rel="noreferrer">
@@ -283,12 +310,13 @@ function loadArticles() {
                 </a>
                 <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
             </div>`;
-            $("#divArticles").append(event);
+            divArticles.innerHTML += event;
             setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
         });
     }
     else {
-        $("#articles").hide();
+        const articlesDiv = document.getElementById('articlesDiv');
+        articlesDiv.style.display = "none";
     }
 }
 
@@ -296,6 +324,7 @@ function loadNewsArticles() {
     const { articles, isVisible } = newsArticlesList;
 
     if (isVisible) {
+        const divMMArticles = document.getElementById('divMMArticles');
         articles.forEach(item => {
             let event = `<div class="col-sm">
                 <a href="${item.link}" target="_blank" rel="noreferrer">
@@ -303,12 +332,13 @@ function loadNewsArticles() {
                 </a>
                 <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
             </div>`;
-            $("#divMMArticles").append(event);
+            divMMArticles.innerHTML += event;
             setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
         });
     }
     else {
-        $("#newsArticles").hide();
+        const newsArticlesDiv = document.getElementById('newsArticles');
+        newsArticlesDiv.style.display = "none";
     }
 }
 
@@ -316,8 +346,9 @@ function loadSocialMedias() {
     const { socialMedia, isVisible} = socialBasicList;
 
     if (isVisible) {
+        const socialMediaBasic = document.getElementById('socialMediaBasic');
         socialMedia.forEach(item => {
-            $("#socialMediaBasic").append(`<li class="list-inline-item">${getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`);
+            socialMediaBasic.innerHTML += `<li class="list-inline-item">${getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`;
         });
 
         if (socialOthersList.isVisible) {
@@ -327,6 +358,7 @@ function loadSocialMedias() {
                 </a>
             </li>`);
 
+            const socialMediaOthers = document.getElementById('socialMediaOthers');
             socialOthersList.socialMedia.forEach(elem => {
                 let externalClass = "";
 
@@ -334,13 +366,14 @@ function loadSocialMedias() {
                     externalClass = elem.externalClass;
                 }
 
-                $("#socialMediaOthers").append(`<li class="list-inline-item">${getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`);
+                socialMediaOthers.innerHTML += `<li class="list-inline-item">${getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`;
             });
         }
         $('[data-toggle="tooltip"]').tooltip();
     }
     else {
-        $("#articles").hide();
+        const aroundWeb = document.getElementById('aroundWeb');
+        aroundWeb.style.display = "none";
     }
 }
 
