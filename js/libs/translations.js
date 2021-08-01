@@ -213,7 +213,7 @@ function loadPersonalProjects() {
 
         let pp = `<div class="carousel-item${isActive}">
             <div class="carousel-video-inner">
-            <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             <h4 class="text-center text-uppercase text-secondary mb-0"><a href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
             </div>
         </div>`;
