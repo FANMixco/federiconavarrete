@@ -157,14 +157,21 @@ function loadTranslations() {
     let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
     if (!smallScreenMobileOS) {
-        $("#spanMenu").html(`${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`);
+        const btnPause = document.getElementById('spanMenu');
+
+        btnPause.innerHTML = `${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`;
+
         setTimeout(function() {
-            $("#divSkillsContainer").css("background-color", "rgba(12,12,12,0.95)");
-            $("#divSkillsContainer").css("padding-top", "15px");
-            $("#divSkillsContainer").css("border-radius", "20px");
+            const divSkillsContainer = document.getElementById('divSkillsContainer');
+
+            divSkillsContainer.style.backgroundColor = "rgba(12,12,12,0.95)";
+            divSkillsContainer.style.paddingTop = "15px";
+            divSkillsContainer.style.borderRadius = "20px";
         }, 100);
     } else {
-        $("#spanMenu").html(`<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" loading="lazy" />`);
+        const spanMenu = document.getElementById('spanMenu');
+
+        spanMenu.innerHTML = `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" loading="lazy" />`;
     }
 }
 
@@ -173,36 +180,37 @@ function setTranslation(id, text) {
 }
 
 function loadBasicInfo() {
-    const { name, headline, headlineIntro, aboutDesc, favApp, favBook, favPodcast, telephone, email, skype } = basicInfo;
+    const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype } = basicInfo;
 
-    $("#linkName").html(name);
-    $("#hName").html(name);
-    $("#hHeadline").html(headline);
-    $("#hIntro").html(headlineIntro);
+    const linkName = document.getElementById('linkName');
+    const hName = document.getElementById('hName');
+    const hHeadline = document.getElementById('hHeadline');
+    const hIntro = document.getElementById('hIntro');
+    const divAbout = document.getElementById('divAbout');
+    const favBookDiv = document.getElementById('favBook');
+    const favPodcastDiv = document.getElementById('favPodcast');
+    
+    linkName.innerHTML = name;
+    hName.innerHTML = name;
+    hHeadline.innerHTML = headline;
+    hIntro.innerHTML = headlineIntro;
 
     aboutDesc.forEach(item => {
-        $("#divAbout").append(`<div class="col-sm"><p class="lead">${item}</p></div>`);
+        divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
     });
 
     if (favBook.isVisible) { 
-        $("#favBook").append(`<a class="btn btn-xl btn-outline-light btn-home" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${favBook.title}</a>`);
+        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${favBook.title}</a>`;
     }
     else {
-        $("#favBook").hide();
+        favBookDiv.style.display = "none";
     }
 
     if (favPodcast.isVisible) {
-        $("#favPodcast").append(`<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" loading="lazy" />&nbsp;${favPodcast.title}</a>`);
+        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" loading="lazy" />&nbsp;${favPodcast.title}</a>`;
     }
     else {
-        $("#favPodcast").hide();
-    }
-
-    if (favApp.isVisible) {
-        $("#favApp").append(`<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favApp.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" loading="lazy" />&nbsp;${favApp.title}</a>`);
-    }
-    else {
-        $("#favApp").hide();
+        favPodcastDiv.style.display = "none";
     }
 
     if (skype.isVisible) {

@@ -29,10 +29,11 @@ $(function() {
             $("#imgBook").attr("src",`img/mybook/book_small.jpg`);
             break;
         case "Tablet":
+            $("#imgProfile").attr("src",`img/photos/profile.jpg`);
             $("#imgBook").attr("src",`img/mybook/book_medium.jpg`);
             break;
         default:
-            $("#imgProfile").attr("src",`img/photos/profile_small.jpg`);
+            $("#imgProfile").attr("src",`img/photos/profile.jpg`);
             $("#imgBook").attr("src",`img/mybook/book_medium.jpg`);
             break;
     }
