@@ -229,12 +229,6 @@ function loadBasicInfo() {
     
     $('[data-toggle="tooltip"]').tooltip();
 
-    const linkContactMeAbout = document.getElementById('linkContactMeAbout');
-
-    linkContactMeAbout.addEventListener('click', function() {
-        $("#contactMe").modal("show");
-    }, false);
-
     const aElSalvador = document.getElementById('aElSalvador');
 
     aElSalvador.addEventListener('click', function() {
@@ -243,6 +237,10 @@ function loadBasicInfo() {
             divIframElSalvador.innerHTML += iframeElSalvador;
         }
     }, false);
+}
+
+function contactMe() {
+    $("#contactMe").modal("show");
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
