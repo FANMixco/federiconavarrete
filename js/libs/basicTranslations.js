@@ -240,17 +240,23 @@ function loadBasicInfo() {
 
     const linkContactMe = document.getElementById("linkContactMe");
 
-    linkContactMe.addEventListener('click', function(e) {
-        e.preventDefault();
-        $(this).tooltip('hide');
-        $("#contactMe").modal("show");
-    });
+    linkContactMe.addEventListener('click', contactMeForm);
+
+    const linkContactMeAbout = document.getElementById("linkContactMeAbout");
+
+    linkContactMeAbout.addEventListener('click', contactMeForm);
+}
+
+function contactMeForm(e) {
+    e.preventDefault();
+    $(this).tooltip('hide');
+    $("#contactMe").modal("show");
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
     let targetBlank = isTargetBlank ? `target="_blank"` : "";
     let ignoreClick = isIgnoredClick ? "ignore-click" : "";
-    let noreferrer = link == "#" ? rel="noreferrer" : "";
+    let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
     let imgClassName = imgClass == "" ? "" : `class='${imgClass}'`;
     let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} loading="lazy" />`;
 

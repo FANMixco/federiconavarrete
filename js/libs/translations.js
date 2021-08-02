@@ -1,27 +1,29 @@
-getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch(() => { console.error('Could not load script'); });
+window.onload = function(){
+    getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/techSkillsLists.js`)
-.then(() => { loadTechSkills(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/techSkillsLists.js`)
+    .then(() => { loadTechSkills(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/softSkillsLists.js`).then(() => { loadSoftSkills(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/softSkillsLists.js`).then(() => { loadSoftSkills(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProjects(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProjects(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch(() => { console.error('Could not load script'); });
 
-getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch(() => { console.error('Could not load script'); });
+};
 
 function loadReviews() {
     const { reviews, isVisible } = reviewsList;
@@ -162,7 +164,7 @@ function loadServices() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
+                    title = `<a style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
                 else
                     title = `<b>${elem.title}</b>`;
                 items += `<span>${title}</span><br /><br />`;
