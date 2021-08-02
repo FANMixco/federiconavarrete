@@ -36,10 +36,11 @@ const scrollTo = function(to, duration) {
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on("click", function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
+            let target = $(this.hash);
+
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
-                scrollTo(0, 1000);
+                scrollTo($($(this).attr('href')).offset().top, 1000);
                 return false;
             }
         }
@@ -47,7 +48,7 @@ const scrollTo = function(to, duration) {
 
     // Scroll to top button appear
     $(document).on("scroll", function() {
-        var scrollDistance = $(this).scrollTop();
+        let scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
             if (scrollSmallScreen.style.display == "" || scrollSmallScreen.style.display == "none")
                 unfade(scrollSmallScreen);

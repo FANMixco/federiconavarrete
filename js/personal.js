@@ -27,9 +27,6 @@ $(function() {
         return false;
     });
 
-    let marginTop = 0;
-    let heightIFrame = 600;
-
     const imgProfile = $("#imgProfile");
     const imgBook = $("#imgBook");
 
@@ -92,10 +89,6 @@ $(function() {
             lastScrollTop = st;
         }
     });
-
-    const contactMeForm = document.getElementById("contactMeForm");
-
-    contactMeForm.innerHTML += `<iframe src="pages/contact.html" height="${heightIFrame}px" width="100%" frameborder="0" scrolling="no" style="margin-top:${marginTop}px"></iframe>`;
 
     const aAppsPreview = document.getElementById("aAppsPreview");
 

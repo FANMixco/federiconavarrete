@@ -221,7 +221,8 @@ function loadPersonalProjects() {
 
         let pp = `<div class="carousel-item${isActive}">
             <div class="carousel-video-inner">
-            <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
+
             <h4 class="text-center text-uppercase text-secondary mb-0"><a href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
             </div>
         </div>`;
@@ -242,7 +243,7 @@ function loadVideos() {
         const divVideos = document.getElementById('divVideos');
         presentations.forEach(item => {
             let video = `<div class="col-sm">
-                      <iframe class="iVideos" title="${item.title}" src="https://www.youtube.com/embed/${item.youTubeID}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+                        <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
                       <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                    </div>`;
             divVideos.innerHTML += video;
@@ -398,6 +399,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
             imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
             break;
     }
+    imgTemp.setAttribute("loading", "lazy");
 }
 
 function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse, btnMore, itemCollapseID) {
