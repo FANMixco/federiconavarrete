@@ -1,0 +1,23 @@
+{
+    "name": "Federico Navarrete - Agent of Change",
+    "scope": "/",
+    "short_name": "Federico Navarrete",
+    "description": "Federico Navarrete is an IT innovator, Author and Orator who is creating a better world with technology.",
+    "icons": [
+        {
+            "src": "img/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "img/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
