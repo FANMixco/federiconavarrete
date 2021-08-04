@@ -27,25 +27,13 @@ $(function() {
         return false;
     });
 
-    const imgProfile = $("#imgProfile");
-    const imgBook = $("#imgBook");
-
-    switch (WURFL.form_factor) {
-        case "Smartphone":
-            imgProfile.attr("src", "img/photos/profile_small.jpg");
-            imgBook.attr("src", "img/mybook/book_small.jpg");
-            break;
-        case "Tablet":
-            imgProfile.attr("src", "img/photos/profile.jpg");
-            imgBook.attr("src", "img/mybook/book_medium.jpg");
-            break;
-        default:
-            imgProfile.attr("src", "img/photos/profile.jpg");
-            imgBook.attr("src", "img/mybook/book_medium.jpg");
-            break;
-    }
-
-    $("#imgProfile").show();
+    try {
+        const imgBook = document.getElementById('imgBook');
+        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+        
+        imgBook.src = `img/mybook/book${size}.jpg`;
+        imgBook.setAttribute("loading", "lazy");    
+    } catch { }
 
     let lastScrollTop = 0;
     let $navbar = $('.navbar');

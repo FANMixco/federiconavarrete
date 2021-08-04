@@ -1,4 +1,13 @@
-window.onload = function(){
+window.onload = function() {
+    let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+    const imgProfile = document.getElementById('imgProfile');
+
+    imgProfile.src = `img/photos/profile${size}.jpg`;
+    imgProfile.setAttribute("loading", "lazy");
+
+    imgProfile.style.display = "";    
+    imgProfile.style.display = "block";
+
     getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch(() => { console.error('Could not load script'); });
 
     getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch(() => { console.error('Could not load script'); });
