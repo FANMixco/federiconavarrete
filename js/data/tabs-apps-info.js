@@ -8,7 +8,7 @@ let tabsOptions = [
 	},
 	{
 		id: "windows",
-		name: "Windows 10",
+		name: "Windows 10+",
 		isVisible: true,
 		isActive: false,
 		order: 2

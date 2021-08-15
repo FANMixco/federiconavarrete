@@ -1,7 +1,7 @@
 let tabsOptions = [
 	{
 		id: "next",
-		name: "Prezi Next",
+		name: "Prezi",
 		isVisible: true,
 		isActive: true,
 		order: 1
@@ -31,7 +31,7 @@ let panesOptions =[
 				stores: [
 					{
 						id: "pptNext",
-						subTitle: `<img src="img/icons/prezi.svg" alt="prezi" class="preziIcon" /> Prezi Next`
+						subTitle: `<img src="img/icons/prezi.svg" alt="prezi" class="preziIcon" /> Prezi`
 					}
 				]
 			}
