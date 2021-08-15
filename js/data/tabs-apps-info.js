@@ -138,7 +138,7 @@ let panesOptions =[
 				stores: [
 					{
 						id: "unsupportedAndroid",
-						subTitle: `<i class="mdi mdi-android-head"></i> Android`
+						subTitle: `<i class="mdi mdi-android"></i> Android`
 					},
 					{
 						id: "unsupportedWindows10",
