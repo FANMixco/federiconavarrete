@@ -50,11 +50,11 @@ let panesOptions =[
 					},
 					{
 						id: "amazonStore",
-						subTitle: `<i class="mdi mdi-amazon"></i> Amazon App Store`
+						subTitle: `<i class="mdi mdi-amazon"></i> Amazon Appstore`
 					},
 					{
 						id: "huaweiStore",
-						subTitle: `<i class="mdi mdi-shopping"></i> Huawei App Gallery`
+						subTitle: `<i class="mdi mdi-shopping"></i> Huawei AppGallery`
 					},
 					{
 						id: "samsungStore",
