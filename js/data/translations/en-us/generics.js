@@ -29,6 +29,7 @@ const genericTranslations = {
     "personalProjects": "Personal projects",
     "projectsGallery": "Projects Gallery",
     "publicSpeaking": "Public Speaking",
+    "youTubeTraining": "YouTube Trainings",
     "pptsOrganizedEvents": "Presentations & Organized Events",
     "organizedEvents": "Organized Events",
     "recommendedBooks": "Recommended Books and Literature",
