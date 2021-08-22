@@ -814,6 +814,7 @@ let apps =
                storeLink:"",
                mainTech: "web",
                isSupported: false,
+               link: "https://clstecla.x10.ml",
                preview:"https://bit.ly/2Wb4IBH",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
