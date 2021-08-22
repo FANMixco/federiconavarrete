@@ -26,7 +26,7 @@ let apps =
                storeLink:"https://bit.ly/36Ug2EC",
                preview:"https://bit.ly/3BDz2VS",
                technologies: [
-                  "mdi mdi-microsoft-windows", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+                  "mdi mdi-microsoft-windows", [{type: "icon", id: "id_material", icon: "mdi mdi-material-design", tooltip: "Material Design"}], "mdi mdi-language-csharp", [{type: "text", id: "id_uwp", text: "UWP", tooltip: "Universal Windows Platform"}], [{ type:"mix-left-icon", id: "id_iDB", text: "<sub>IndexedDB</sub>", icon: "fas fa-database"}], "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", [{type: "icon", id: "id_excelExport", icon: "mdi mdi-file-excel-box", tooltip: "Excel export"}], [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}], [{type: "img", id: "id_ads", text: "Ads", icon: "ad.svg"}]
                ],
                order: 1
             },
@@ -810,10 +810,10 @@ let apps =
       edition: [
             {
                yearStart: 2008,
-               yearEnd: undefined,
+               yearEnd: 2020,
                storeLink:"",
                mainTech: "web",
-               isSupported: true,
+               isSupported: false,
                preview:"https://bit.ly/2Wb4IBH",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
