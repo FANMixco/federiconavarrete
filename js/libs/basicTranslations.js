@@ -126,6 +126,10 @@ function loadTranslations() {
             "value": genericTranslations.publicSpeaking
         },
         {
+            "identifier": "#spanYouTube",
+            "value": genericTranslations.youTubeTraining
+        },
+        {
             "identifier": ".hPresentationsGallery",
             "value": genericTranslations.presentationsGallery
         },

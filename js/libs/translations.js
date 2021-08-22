@@ -242,36 +242,67 @@ function loadPersonalProjects() {
 
 function loadVideosAndPresentations() {
     loadVideos();
+    loadYouTubeVideos();
     loadPresentations();
 }
 
 function loadVideos() {
     const { presentations, isVisible } = presentationsVideos;
 
+    const divVideos = document.getElementById('divVideos');
     if (isVisible) {
-        const divVideos = document.getElementById('divVideos');
+        let count = 0;
         presentations.forEach(item => {
             let video = `<div class="col-sm">
                         <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
                       <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                    </div>`;
             divVideos.innerHTML += video;
+            if (count === 0) {
+                divVideos.innerHTML += '<div class="w-100"></div>';
+            }
+            count++;
         });
     }
     else {
         const hPublicSpeaking = document.getElementById('hPublicSpeaking');
         hPublicSpeaking.style.display = "none";
 
-        const divVideos = document.getElementById('divVideos');
         divVideos.style.display = "none";
+    }
+}
+
+function loadYouTubeVideos() {
+    const { presentations, isVisible } = youtubeTrainings;
+
+    const divYouTubeVideos = document.getElementById('divYouTubeVideos');
+    if (isVisible) {
+        let count = 0;
+        presentations.forEach(item => {
+            let video = `<div class="col-sm">
+                        <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
+                      <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+                   </div>`;
+            divYouTubeVideos.innerHTML += video;
+            if (count === 0) {
+                divYouTubeVideos.innerHTML += '<div class="w-100"></div>';
+            }
+            count++;
+        });
+    }
+    else {
+        const hYouTubeTraining = document.getElementById('hYouTubeTraining');
+        hYouTubeTraining.style.display = "none";
+
+        divYouTubeVideos.style.display = "none";
     }
 }
 
 function loadPresentations() {
     const { presentations, isVisible } = presentationsLinks;
 
+    const divPPTs = document.getElementById('divPPTs');
     if (isVisible) {
-        const divPPTs = document.getElementById('divPPTs');
         presentations.forEach(item => {
             let ppt = `<div class="col-sm">
                 <a href="${item.link}" rel="noreferrer" target="_blank">
@@ -287,7 +318,6 @@ function loadPresentations() {
         const hPresentations = document.getElementById('hPresentations');
         hPresentations.style.display = "none";
 
-        const divPPTs = document.getElementById('divPPTs');
         divPPTs.style.display = "none";
 
         const pPPTs = document.getElementById('pPPTs');
