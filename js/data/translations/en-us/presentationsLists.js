@@ -2,7 +2,7 @@ const presentationsVideos = {
 	"presentations": [
 		{
 			"youTubeID": "IcWZ962uYy0",
-			"title": "<a class='text-material-link' href='https://www.citython.eu/2021eindhoven' rel='noreferrer'  target='_blank'>Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
+			"title": "<a class='text-material-link' href='https://www.citython.eu/2021eindhoven' rel='noreferrer' target='_blank'>Winning Team | Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
 		},
 		{
 			"youTubeID": 'XJyWAErkNtY',
@@ -19,16 +19,16 @@ const presentationsVideos = {
 const youtubeTrainings = {
 	"presentations": [
 		{
+			"youTubeID": 'RzCuuJdDY-A',
+			"title": "Build Your 1st App with No Code!"
+		},
+		{
 			"youTubeID": "X2bLxros-Jc",
 			"title": "From Zero to Hero, Building Amazing Presentations with Prezi Video"
 		},
 		{
 			"youTubeID": '9mXanZhm9eo',
 			"title": "It's time to Level Up ⏫ Your LinkedIn Profile!"
-		},
-		{
-			"youTubeID": '5coYf7yimMk',
-			"title": "It’s time to create High-Impact CVs ⏫!"
 		}
 	],
 	"isVisible": true

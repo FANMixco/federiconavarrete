@@ -47,6 +47,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <link href="css/freelancer.min.css" rel="stylesheet" defer />
       <link href="css/personal.min.css" rel="stylesheet" defer />
       <link href="css/carousel.min.css" rel="stylesheet" defer />
+
+      <link href="css/extras-icons.min.css" rel="stylesheet" />
+
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://federiconavarrete.com">
@@ -101,9 +104,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
             <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgProfile" style="display: none!important;" alt="image profile" />
-            <h1 class="text-uppercase mb-0" id="hName" style="color: #212121!important; text-shadow: 0 0 5px white;"></h1>
+            <h1 class="text-uppercase mb-0" id="hName"></h1>
             <hr class="star-black-dark">
-            <h2 class="font-weight-light mb-0" id="hHeadline" style="color: #263238!important; text-shadow: 0 0 5px white;"></h2>
+            <h2 class="font-weight-light mb-0" id="hHeadline"></h2>
          </div>
       </header>
       <!-- About Section -->
@@ -132,12 +135,12 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
             <br>
             <div class="container divSpace" id="divServices">
-               <h3 class="text-center text-uppercase text-white"><img src="img/icons/website/briefcase-variant.svg" alt="services" style="width:40px;height:40px;filter:invert(100%);margin-top:-5px" />&nbsp;<span id="spanServices"></span></h3>
+               <h3 class="text-center text-uppercase text-white"><img src="img/icons/website/briefcase-variant.svg" alt="services" class="size40" />&nbsp;<span id="spanServices"></span></h3>
                <hr class="star-black-dark mb-5">
                <div class="row" id="servicesList"></div>
             </div>
             <div class="container divSpace" id="divAwards">
-               <h3 class="text-center text-uppercase text-white"><img src="img/icons/website/medal.svg" loading="lazy" alt="awards" style="width:40px;height:40px;filter:invert(100%);margin-top:-5px" />&nbsp;<span id="spanAwards"></span></h3>
+               <h3 class="text-center text-uppercase text-white"><img src="img/icons/website/medal.svg" loading="lazy" alt="awards" class="size40" />&nbsp;<span id="spanAwards"></span></h3>
                <hr class="star-black-dark mb-5">
                <div class="row" id="awardsList"></div>
             </div>
@@ -151,7 +154,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- About Section -->
       <section class="bg-primary text-white mb-0" id="skillBusiness">
          <div class="container" id="divSkillsContainer">
-            <h2 class="text-center text-uppercase text-white"><img src="img/icons/website/laptop-code-solid.svg" loading="lazy" alt="tech skills" style="width:50px;height:50px;filter:invert(100%);margin-top:-7px" />&nbsp;<span id="spanTechSkills"></span></h2>
+            <h2 class="text-center text-uppercase text-white"><img src="img/icons/website/laptop-code-solid.svg" loading="lazy" alt="tech skills" class="size50_7" />&nbsp;<span id="spanTechSkills"></span></h2>
             <hr class="star-black mb-5">
             <div class="row" class="innerSkillsDiv" id="divTechSkills"></div>
             <div class="row">
@@ -161,7 +164,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                <div class="row cards-row" id="divTechSkillsOthers"></div>
             </div>
             <br />
-            <h2 class="text-center text-uppercase text-white"><img src="img/icons/website/chalkboard-teacher-solid.svg" alt="soft skills" loading="lazy" style="width:50px;height:50px;filter:invert(100%);margin-top:-5px" />&nbsp;<span id="spanSoftSkills"></span></h2>
+            <h2 class="text-center text-uppercase text-white"><img src="img/icons/website/chalkboard-teacher-solid.svg" alt="soft skills" loading="lazy" class="size50_5" />&nbsp;<span id="spanSoftSkills"></span></h2>
             <hr class="star-black mb-5">
             <div class="row" class="innerSkillsDiv" id="divSoftSkills"></div>
             <div class="row">
@@ -185,11 +188,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      </ol>
                      <div class="carousel-inner mt-4" id="divReviewsPreviews"></div>
                      <a class="carousel-control-prev" href="#carouselReviews" role="button" data-slide="prev">
-                        <img class="text-muted" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" style="width: 13.34px; height: 22px; filter:invert(0.5)" />
+                        <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
                         <span class="sr-only spanPrevious"></span>
                      </a>
                      <a class="carousel-control-next" href="#carouselReviews" role="button" data-slide="next">
-                        <img class="text-muted" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" style="width: 13.34px; height: 22px; filter:invert(0.5)" />
+                        <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
                         <span class="sr-only spanNext"></span>
                      </a>
                   </div>
@@ -202,14 +205,14 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0" id="hPersonalProjects"></h2>
             <hr class="star-dark mb-5">
-            <div id="videoCarousel" class="carousel slide" data-ride="carousel" data-interval="false" style="width: 100%;">
+            <div id="videoCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
                <div class="carousel-inner" id="personalProjects"></div>
                <a id="carousel-control-prev-video" class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
-                  <img class="text-muted" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" style="width: 13.34px; height: 22px; filter:invert(0.5)" />
+                  <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
                   <span class="sr-only spanPrevious"></span>
                </a>
                <a id="carousel-control-next-video" class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
-                  <img class="text-muted" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" style="width: 13.34px; height: 22px; filter:invert(0.5)" />
+                  <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
                   <span class="sr-only spanNext"></span>
                </a>
             </div>
@@ -224,15 +227,15 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0" id="hPPTTile"></h2>
             <hr class="star-dark mb-5">
-            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPublicSpeaking"><img src="img/icons/website/speaker.svg" loading="lazy" alt="speeches" style="width:26px;height:26px;margin-top:-4px;filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)" />&nbsp;<span id="spanPS"></span></h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPublicSpeaking"><img src="img/icons/website/speaker.svg" loading="lazy" alt="speeches" class="size26_contrast" />&nbsp;<span id="spanPS"></span></h3>
             <hr>
             <div class="row" id="divVideos"></div>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0" id="hYouTubeTraining"><img src="img/icons/website/youtube.svg" loading="lazy" alt="speeches" style="width:26px;height:26px;margin-top:-4px;filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)" />&nbsp;<span id="spanYouTube"></span></h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hYouTubeTraining"><img src="img/icons/website/youtube.svg" loading="lazy" alt="speeches" class="size38_contrast" />&nbsp;<span id="spanYouTube"></span></h3>
             <hr>
             <div class="row" id="divYouTubeVideos"></div>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPresentations"><img src="img/icons/website/presentation-play.svg" loading="lazy" alt="presentations" style="width:26px;height:26px;margin-top:-3px;filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)" />&nbsp;<span class="menuPresentations"></span></h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0" id="hPresentations"><img src="img/icons/website/presentation-play.svg" loading="lazy" alt="presentations" class="size26_contrast_3" />&nbsp;<span class="menuPresentations"></span></h3>
             <hr>
             <div class="row" id="divPPTs"></div>
             <br />
@@ -240,7 +243,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                <a id="aPPTPreview" data-toggle="modal" data-target="#pptPreview" href="#pptPreview" class="btn btn-dark hPresentationsGallery"></a>
 	   		</p>
             <hr>
-            <h3 class="text-center text-uppercase text-secondary mb-0"><img src="img/icons/website/calendar-today.svg" loading="lazy" alt="events" style="width:26px;height:26px;margin-top:-2px;filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)" />&nbsp;<span id="spanOE"></span></h3>
+            <h3 class="text-center text-uppercase text-secondary mb-0"><img src="img/icons/website/calendar-today.svg" loading="lazy" alt="events" class="size26_contrast_2" />&nbsp;<span id="spanOE"></span></h3>
             <hr>
             <div class="row" id="divEvents"></div>
          </div>
@@ -248,7 +251,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Articles Grid Section -->
       <section class="portfolio" id="articles">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0"><img src="img/icons/website/newspaper-variant-outline.svg" loading="lazy" alt="massmedia" style="width:46px;height:46px;margin-top:-7px;filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%);" />&nbsp;<span class="menuArticles"></span></h2>
+            <h2 class="text-center text-uppercase text-secondary mb-0"><img src="img/icons/website/newspaper-variant-outline.svg" loading="lazy" alt="massmedia" class="size46_contrast" />&nbsp;<span class="menuArticles"></span></h2>
             <hr class="star-dark mb-5">
             <div class="row" id="divArticles"></div>
             <div id="newsArticles">
@@ -268,7 +271,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                <iframe title="books" title="books" loading="lazy" src="pages/books.html" id="booksIframe"></iframe>
             </div>
             <hr class="wHR">
-            <h3 class="text-center text-uppercase text-white"><img loading="lazy" style="margin-top: -4px;" src="img/icons/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" />&nbsp;<span id="spanSalvadorean"></span></h3>
+            <h3 class="text-center text-uppercase text-white"><img loading="lazy" src="img/icons/el-salvador.svg" id="elSalvadorIcon" alt="el salvador" />&nbsp;<span id="spanSalvadorean"></span></h3>
             <hr class="star-black-dark mb-5">
             <div class="row">
                <iframe title="legends" title="legends" loading="lazy" src="pages/legends.html" id="legendsIframe"></iframe>
@@ -371,10 +374,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="modal-content">
                <div class="modal-header">
                   <h5 class="modal-title spanProjectsGallery"></h5>
-                  <button type="button" style="padding-top: 1.05rem;" class="close btnFullScreen" id="appsFullScreen">
-                     <span aria-hidden="true"><img alt="fullscreen" src="img/icons/website/fullscreen.svg" style="width:24px;height:24px;margin-top:-5px;" /></span>
+                  <button type="button" class="close btnFullScreen" id="appsFullScreen">
+                     <span aria-hidden="true"><img alt="fullscreen" src="img/icons/website/fullscreen.svg" class="size24" /></span>
                   </button>
-                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal">
+                  <button type="button" class="close" data-dismiss="modal">
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -387,10 +390,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="modal-content">
                <div class="modal-header">
                   <h5 class="modal-title hPresentationsGallery"></h5>
-                  <button type="button" style="padding-top: 1.05rem;" class="close" id="pptsFullScreen">
-                     <span aria-hidden="true"><img alt="fullscreen" src="img/icons/website/fullscreen.svg" style="width:24px;height:24px;margin-top:-5px;" /></span>
+                  <button type="button" class="close" id="pptsFullScreen">
+                     <span aria-hidden="true"><img alt="fullscreen" src="img/icons/website/fullscreen.svg" class="size24" /></span>
                   </button>
-                  <button type="button" class="close" style="margin-left: -1px;" data-dismiss="modal">
+                  <button type="button" class="close" data-dismiss="modal">
                      <span aria-hidden="true">&times;</span>
                   </button>
                </div>
@@ -446,7 +449,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   </div>
                   <div class="row justify-content-center">
                      <div class="col-auto mb-3">
-                        <div class="card text-center" style="width: 10rem;">
+                        <div class="card text-center" class="stores">
                            <img class="card-img-top bookIcons" src="./img/mybook/icons/amazon.png" alt="Amazon" loading="lazy" />
                            <div class="card-body text-center">
                              <h4 class="card-title">Amazon</h4>
@@ -456,7 +459,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                         </div>
                      </div>
                      <div class="col-auto mb-3">
-                        <div class="card text-center" style="width: 10rem;">
+                        <div class="card text-center" class="stores">
                            <img class="card-img-top bookIcons" src="./img/mybook/icons/b_n.jpg" alt="Barnes & Noble" loading="lazy" />
                            <div class="card-body text-center">
                              <h4 class="card-title">Barnes & Noble</h4>
@@ -466,7 +469,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                         </div>
                      </div>
                      <div class="col-auto mb-3">
-                        <div class="card text-center" style="width: 10rem;">
+                        <div class="card text-center" class="stores">
                            <img class="card-img-top bookIcons" src="./img/mybook/icons/apple.png" alt="Apple" loading="lazy" />
                            <div class="card-body text-center">
                              <h4 class="card-title">Apple</h4>
@@ -476,7 +479,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                         </div>
                      </div>
                      <div class="col-auto mb-3">
-                        <div class="card text-center" style="width: 10rem;">
+                        <div class="card text-center" class="stores">
                            <img class="card-img-top bookIcons" src="./img/mybook/icons/google.png" alt="Google" loading="lazy" />
                            <div class="card-body text-center">
                              <h4 class="card-title">Google Play Books</h4>
@@ -486,7 +489,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                         </div>
                      </div>
                      <div class="col-auto mb-3">
-                        <div class="card text-center" style="width: 10rem;">
+                        <div class="card text-center" class="stores">
                            <img class="card-img-top bookIcons" src="./img/mybook/icons/kobo.png" alt="Kobo" loading="lazy" />
                            <div class="card-body text-center">
                              <h4 class="card-title">Kobo</h4>
@@ -504,7 +507,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
       <div class="scroll-to-top d-lg-none position-fixed" id="scroll-small-screen">
          <a title="scroll-up" class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-            <img src="img/icons/website/chevron-up-solid.svg" alt="scroll-up" style="width:14px;height:16px;filter:invert(100%)" />
+            <img src="img/icons/website/chevron-up-solid.svg" alt="scroll-up" class="size14" />
          </a>
       </div>
 
