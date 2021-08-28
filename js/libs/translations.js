@@ -232,7 +232,7 @@ function loadPersonalProjects() {
             <div class="carousel-video-inner">
             <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
 
-            <h4 class="text-center text-uppercase text-secondary mb-0"><a href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
+            <h4 class="text-center text-uppercase text-secondary mb-0"><a class="text-material-link" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
             </div>
         </div>`;
 
@@ -355,8 +355,8 @@ function loadArticles() {
             let event = `<div class="col-sm">
                 <a href="${item.link}" target="_blank" rel="noreferrer">
                     <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
+                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                 </a>
-                <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
             </div>`;
             divArticles.innerHTML += event;
             setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
