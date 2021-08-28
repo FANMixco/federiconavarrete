@@ -17,12 +17,12 @@ const basicInfo = {
 		"isVisible": true
 	},
 	"favBook": {
-		"link": `booksModal`,
+		"link": "https://amzn.to/3nnbn4e",
 		"title": "Timeless Stories of El Salvador",
 		"isVisible": true
 	},
 	"telephone": {
-		"number": "+48881387085",
+		"number": "+0",
 		"isVisible": false
 	},
 	"email": {
