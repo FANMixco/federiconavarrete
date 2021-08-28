@@ -70,8 +70,8 @@
     padding-top: 1.05rem;
 }
 
-.close {
-    margin-left: -1px;
+.closeModal {
+    margin-left: -1px!important;
 }
 
 .stores {
