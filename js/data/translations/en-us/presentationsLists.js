@@ -19,12 +19,12 @@ const presentationsVideos = {
 const youtubeTrainings = {
 	"presentations": [
 		{
-			"youTubeID": 'RzCuuJdDY-A',
-			"title": "Build Your 1st App with No Code!"
+			"youTubeID": "oPg8aIlZJds",
+			"title": "Let's Create Amazing Presentations with Prezi Video"
 		},
 		{
-			"youTubeID": "X2bLxros-Jc",
-			"title": "From Zero to Hero, Building Amazing Presentations with Prezi Video"
+			"youTubeID": 'RzCuuJdDY-A',
+			"title": "Build Your 1st App with No Code!"
 		},
 		{
 			"youTubeID": '9mXanZhm9eo',

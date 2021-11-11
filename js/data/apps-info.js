@@ -506,6 +506,18 @@ let apps =
                   "mdi mdi-android", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-blogger-b", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
                order: 5
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_samsung",
+               isSupported: true,
+               storeLink:"https://galaxy.store/fstories	",
+               preview:"",
+               technologies: [
+                  "mdi mdi-android", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-blogger-b", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 5
             }
          ]
    },

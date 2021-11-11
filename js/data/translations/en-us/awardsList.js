@@ -2,7 +2,7 @@ const awardsList = {
 	"awards": [
 		[
 			{ 
-				"title": "1<sup>st</sup> Place Citython 2021 by the Urban Mobility. Category: Make the city healthy.",
+				"title": "1<sup>st</sup> Place Citython 2021, Eindhoven and Hamburg Editions. Sponsored by the EU.",
 				"link": "https://www.citython.eu/2021eindhoven"
 			},
 			{
