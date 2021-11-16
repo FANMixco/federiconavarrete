@@ -89,15 +89,20 @@
 }
 
 #hName {
-    color: #212121!important;
-    text-shadow: 0 0 5px white;
+    color: white!important;
+    text-shadow: 0 0 5px #212121;
 }
 
 #hHeadline {
-    color: #263238!important;
-    text-shadow: 0 0 5px white;
+    color: white!important;
+    text-shadow: 0 0 5px #263238;
 }
 
 #videoCarousel {
     width: 100%;
+}
+
+a#aBooksModal {
+    color: #ffff8d!important;
+    text-shadow: 0 0 5px #212121;
 }
