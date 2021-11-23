@@ -1,7 +1,7 @@
 {
-    "name": "Federico Navarrete - Agent of Change",
+    "name": "Federico Navarrete",
     "scope": "/",
-    "short_name": "Federico Navarrete",
+    "short_name": "FNavarrete",
     "description": "Federico Navarrete is an IT innovator, Author and Orator who is creating a better world with technology.",
     "icons": [
         {
@@ -17,7 +17,7 @@
             "purpose": "any maskable"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#121212",
+    "background_color": "#121212",
     "display": "standalone"
 }
