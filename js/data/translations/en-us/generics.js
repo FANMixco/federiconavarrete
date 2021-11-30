@@ -34,6 +34,7 @@ const genericTranslations = {
     "organizedEvents": "Organized Events",
     "recommendedBooks": "Recommended Books and Literature",
     "mySalvadorean": "My Salvadoran Legends and Fairy tales",
+    "aroundWeb": "Around the web",
     "moreWeb": "More around the web",
     "otherHobbies": "Other hobbies",
     "menu": "Menu",

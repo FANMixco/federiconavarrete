@@ -157,6 +157,14 @@ function loadTranslations() {
         {
             "identifier": "#hOtherHobbies",
             "value": genericTranslations.otherHobbies
+        },
+        {
+            "identifier": "#contactMeFooter",
+            "value": genericTranslations.contactMe
+        },
+        {
+            "identifier": "#aroundWebFooter",
+            "value": genericTranslations.aroundWeb
         }
     ];
 
