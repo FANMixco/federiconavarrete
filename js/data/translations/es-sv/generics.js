@@ -16,7 +16,7 @@ const genericTranslations = {
     "aboutMe": "Acerca de mí",
     "getBook": "¡Obtén una copia de mi libro!",
     "downloadFavApp": "¡Descarga mi aplicación favorita!",
-    "hPodcast": "Escuche nuestro Podcast",
+    "hPodcast": "Escucha nuestro Podcast",
     "hobbies": "Aficiones",
     "awards": "Premios",
     "services": "Mis servicios",
