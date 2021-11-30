@@ -1,6 +1,6 @@
 const basicInfo = {
 	"name": "Federico Navarrete",
-	"headline": 'Arquitecto de la Nube 💡, <a id="aBooksModal" data-toggle="modal" data-target="#booksModal" href="#booksModal">Autor</a> 📝 and Orador 🇬🇧/🇪🇸<br />Leading Digital Transformations',
+	"headline": 'Arquitecto de la Nube 💡, <a id="aBooksModal" data-toggle="modal" data-target="#booksModal" href="#booksModal">Autor</a> 📝 and Orador 🇬🇧/🇪🇸<br />Liderando Transformaciones Digitales',
 	"headlineIntro": "¡Es hora de llevar la innovación A TU VIDA! ¿Estás listo?",
 	"aboutDesc": [
 		`¡Bienvenido! Soy un arquitecto de la nube, autor y orador 🇬🇧/🇪🇸 de <a id="aElSalvador" href="#elSalvador" class="text-material-link" data-toggle="modal" data-target=" #elSalvador">El Salvador</a>. ¡Puedo ayudarte a traer innovación y cambio a tu mundo! <br /> <br />He estado en la industria de TI durante más de 10 años, donde he dirigido equipos fantásticos, co-creado <a href="https://bit.ly/3dIhfQW" class="text-material-link" rel="noreferrer" "target="_blank">aplicaciones innovadoras</a>, múltiples servicios automatizados y desarrollados importantes <a href ="https://bit.ly/3cA3SkE" rel="noreferrer" class="text-material-link" target="_blank">habilidades blandas</a> .`,
