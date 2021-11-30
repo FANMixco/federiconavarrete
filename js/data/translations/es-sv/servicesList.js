@@ -2,7 +2,7 @@ const servicesList = {
 	"services": [
 		[
 			{
-				"title": "Consultoría IT/RPA",
+				"title": "Consultoría de la Nube/TIC/RPA",
                 "link": "https://forms.gle/AuXkzzpvozAGKHWaA",
 				"icon": "user-tie-solid"
 			},

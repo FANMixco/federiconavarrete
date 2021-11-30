@@ -2,12 +2,12 @@ const awardsList = {
 	"awards": [
 		[
 			{ 
-				"title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU.",
+				"title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU",
 				"link": "https://www.citython.eu/2021eindhoven"
 			},
 			{
-				"title": "Samsung Top Developer Award 2021, Social.",
-				"link": "https://news.samsung.com/es/samsung-dev-spain-celebra-su-evento-anual-con-desarrolladores-locales"
+				"title": "Samsung Top Developer Award 2021 with Social Component",
+				"link": "https://www.europe-samsung.com/smsdev/Noticias/Detalle/estos_son_los_ganadores_de_los_top_developer_awards_2021/8e5d64d4-ff3c-4ad5-ba1e-f51b7d049422"
 			}			
 		],
 		[
