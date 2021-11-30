@@ -1,3 +1,5 @@
+let totalServices = 0;
+
 window.onload = function() {
     let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
     const imgProfile = document.getElementById('imgProfile');
@@ -8,30 +10,34 @@ window.onload = function() {
     imgProfile.style.display = "";    
     imgProfile.style.display = "block";
 
-    getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch((e) => { console.error(e); });
 
     getScript(`${langLoc}${lang}/techSkillsLists.js`)
-    .then(() => { loadTechSkills(); }).catch(() => { console.error('Could not load script'); });
+    .then(() => { loadTechSkills(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/softSkillsLists.js`).then(() => { loadSoftSkills(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/softSkillsLists.js`).then(() => { loadSoftSkills(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProjects(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProjects(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch((e) => { console.error(e); });
 
-    getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch((e) => { console.error(e); });
+
+    setTimeout(function() {
+        addIFrameModal();
+    }, 1000);
 };
 
 function loadReviews() {
@@ -173,10 +179,11 @@ function loadServices() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
+                    title = `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
                 else
                     title = `<b>${elem.title}</b>`;
                 items += `<span>${title}</span><br /><br />`;
+                totalServices++;
             });
             items = `${items.substring(0, items.length - 12)}</div>`;
 
@@ -186,6 +193,18 @@ function loadServices() {
     else {
         const divServices = document.getElementById('divServices');
         divServices.style.display = "none";
+    }
+}
+
+function addIFrameModal() {
+    for (let serv = 0; serv < totalServices; serv++) {
+        $(document).on("click", `#service${serv}`, function(e) {
+            e.preventDefault();
+            document.getElementById("serviceForm").innerHTML = `<iframe src="${$(this).attr('href')}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+        
+            $(this).tooltip('hide');
+            $("#servicesModal").modal("show");
+        });
     }
 }
 
