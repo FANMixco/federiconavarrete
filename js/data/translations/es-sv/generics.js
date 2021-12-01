@@ -16,7 +16,7 @@ const genericTranslations = {
     "aboutMe": "Acerca de mí",
     "getBook": "¡Obtén una copia de mi libro!",
     "downloadFavApp": "¡Descarga mi aplicación favorita!",
-    "hPodcast": "Escucha nuestro Podcast (en inglés)",
+    "hPodcast": "Escucha nuestro Podcast",
     "hobbies": "Aficiones",
     "awards": "Premios",
     "services": "Mis servicios",
@@ -32,11 +32,16 @@ const genericTranslations = {
     "youTubeTraining": "Capacitaciones en YouTube",
     "pptsOrganizedEvents": "Presentaciones y eventos organizados",
     "organizedEvents": "Eventos organizados",
-    "recommendedBooks": "Libros y literatura recomendados",
+    "recommendedBooks": "Libros recomendados",
     "mySalvadorean": "Mis leyendas y cuentos salvadoreños",
     "aroundWeb": "Alrededor de la web",
     "moreWeb": "Más en la web",
     "otherHobbies": "Otros pasatiempos",
     "menu": "Menú",
-    "massMedia": "Medios de comunicación en masa"
+    "massMedia": "Medios de comunicación en masa",
+    "tStoriesBody": "El <b>1<sup>er</sup> libro de folclor salvadoreño</b> en <b>inglés</b> que te trae historias legendarias como ¡la <b>Familia Guirola</b> y la <b>Cuyancua</b>!",
+    "bookMsg1": "Kindle, Tapa Blanda y Dura disponibles",
+    "bookMsg2": "Nook y Tapa Blanda (en blanco y negro y en color) disponibles",
+    "bookMsgGen": "e-Book disponible",
+    "bookMsgGet": "Obten tu copia!"
 };

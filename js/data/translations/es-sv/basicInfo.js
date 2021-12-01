@@ -13,12 +13,12 @@ const basicInfo = {
 	},
 	"favPodcast": {
 		"link": 'https://bit.ly/3vfdxWZ',
-		"title": "Cyber Prophets",
+		"title": "Cyber Prophets<br /><small>(en inglés)</small>",
 		"isVisible": true
 	},
 	"favBook": {
 		"link": "https://amzn.to/3nnbn4e",
-		"title": "Timeless Stories of El Salvador",
+		"title": "Timeless Stories of El Salvador<br /><small>(en inglés)</small>",
 		"isVisible": true
 	},
 	"telephone": {

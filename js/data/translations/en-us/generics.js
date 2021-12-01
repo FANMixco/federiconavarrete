@@ -32,11 +32,16 @@ const genericTranslations = {
     "youTubeTraining": "YouTube Trainings",
     "pptsOrganizedEvents": "Presentations & Organized Events",
     "organizedEvents": "Organized Events",
-    "recommendedBooks": "Recommended Books and Literature",
+    "recommendedBooks": "Recommended Books",
     "mySalvadorean": "My Salvadoran Legends and Fairy tales",
     "aroundWeb": "Around the web",
     "moreWeb": "More around the web",
     "otherHobbies": "Other hobbies",
     "menu": "Menu",
-    "massMedia": "Mass Media"
+    "massMedia": "Mass Media",
+    "tStoriesBody": "The <b>1<sup>st</sup> Salvadoran Folkloric Book</b> in <b>English</b> that brings you legendary stories like the <b>Guirola Family</b> and the <b>Cuyancua</b>!",
+    "bookMsg1": "Kindle, Paperback, and Hardcover Available",
+    "bookMsg2": "Nook and Paperback (in black and white, and color) Available",
+    "bookMsgGen": "e-Book Available",
+    "bookMsgGet": "Get your copy!"
 };

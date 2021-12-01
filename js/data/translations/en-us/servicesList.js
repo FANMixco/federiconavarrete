@@ -3,31 +3,31 @@ const servicesList = {
 		[
 			{
 				"title": "Cloud/IT/RPA Consultancy",
-                "link": "https://forms.gle/AuXkzzpvozAGKHWaA",
+                "link": "https://docs.google.com/forms/d/e/1FAIpQLSeU5XafQYMKc9yex7YLCWczHJIixqw4XJWCagc14306Zr8OSQ/viewform",
 				"icon": "user-tie-solid"
 			},
 			{
 				"title": "Keynote Speeches",
-                "link": "https://forms.gle/YCiDoWEm5BZhHh4R9",
+                "link": "https://docs.google.com/forms/d/e/1FAIpQLSd98BjmX0KCrie2gnArng8vnbFCWYQeGxixAUSMJguXKF0i2A/viewform",
 				"icon": "speaker"
 			}
         ],
         [
 			{ 
                 "title": "Apps Development",
-                "link": "https://forms.gle/djC8C4Ah7mRiZXTu5",
+                "link": "https://docs.google.com/forms/d/e/1FAIpQLSfAM0x_aqR8c889lvPZZF-ooJ9lT1xPkmNjlTklGlX1XrAceA/viewform",
 				"icon": "laptop-code-solid"
 			},
 			{
                 "title": "Agile Project Management",
-                "link": "https://forms.gle/6TmpeTWbsxiQ3aFp7",
+                "link": "https://docs.google.com/forms/d/e/1FAIpQLScFtB86gL0vndcS56HCmLYSseJ8LsnNKZ0B2NpoFm2D7zRT-g/viewform",
 				"icon": "clock-fast"
             }
 		],
 		[
 			{
                 "title": "Elevator Pitching and Storytelling Trainings",
-                "link": "https://forms.gle/J7i1mFp9NDeHFnFy9",
+                "link": "https://docs.google.com/forms/u/1/d/e/1FAIpQLScJTL_QYjtI8f_BWZSqqxQKfnHrCzmgQ9bGp45EJqqUgdxiCg/viewform",
 				"icon": "chalkboard-teacher-solid"
 			}
 		]
