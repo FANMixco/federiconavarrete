@@ -16,7 +16,7 @@ function loadBooks() {
 
         const book = `<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2${active}">
                     <a target="_blank" href="${item.link}">
-                        <img class="img-fluid mx-auto d-block" src="${item.img}" alt="slide ${index + 1}">
+                        <img class="img-fluid mx-auto d-block" src="${item.img}" alt="${item.title}">
                     </a>
             </div>`;
 
