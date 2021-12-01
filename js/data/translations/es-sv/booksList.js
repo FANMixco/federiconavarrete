@@ -27,6 +27,11 @@ const booksList = [
 	},
 	{
 		"title": "",
+		"img": "../img/books/en/linkedin.jpg",
+		"link": "https://amzn.to/2MOgslZ"
+	},
+	{
+		"title": "",
 		"img": "../img/books/es/monk.jpg",
 		"link": "https://amzn.to/3paJhM2",
 	},
