@@ -16,7 +16,7 @@ const reviewsList = {
 			"img": `img/photos/gabriela.jpg`,
 			"externalLink": "",
 			"review": `testimonials/references.pdf`,
-			"shortReview": "I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland …",
+			"shortReview": "I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland … ",
 			"title": `Program Quality Director 2018/2019 at <a target="_blank" class="text-material-link" rel="noreferrer" href="https://www.toastmasters.org" class="text-dark">Toastmasters International</a>, <a class="text-material-link" target="_blank" rel="noreferrer" href="https://toastmastersd108.org" class="text-dark">District 108</a>`,
 			"date": "03-06-2019",
 			"isPDF": true,

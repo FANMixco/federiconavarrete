@@ -251,7 +251,7 @@ function loadPersonalProjects() {
             <div class="carousel-video-inner">
             <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
 
-            <h4 class="text-center text-uppercase text-secondary mb-0"><a class="text-material-link" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
+            <h4 class="text-center text-uppercase text-secondary mb-0"><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
             </div>
         </div>`;
 

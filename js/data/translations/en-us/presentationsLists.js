@@ -2,7 +2,7 @@ const presentationsVideos = {
 	"presentations": [
 		{
 			"youTubeID": "IcWZ962uYy0",
-			"title": "<a class='text-material-link' href='https://www.citython.eu/2021eindhoven' rel='noreferrer' target='_blank'>Winning Team | Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
+			"title": "<a class='text-material-link-dark' href='https://www.citython.eu/2021eindhoven' rel='noreferrer' target='_blank'>Winning Team | Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
 		},
 		{
 			"youTubeID": 'XJyWAErkNtY',
