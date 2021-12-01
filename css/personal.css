@@ -200,6 +200,14 @@ a.text-material-link:hover,a.text-material-link:active {
     color: #6300ED;
 }
 
+a.text-material-link-dark {
+    color: #6300ED;
+}
+
+a.text-material-link-dark:hover,a.text-material-link-dark:active {
+    color: #7919FF;
+}
+
 .text-material-orange {
     color: #ED5218;
 }
