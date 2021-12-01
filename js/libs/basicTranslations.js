@@ -1,5 +1,6 @@
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
+let extraContact = 0;
 
 if (language.includes('es'))
     lang = "es-sv/min";
@@ -293,8 +294,26 @@ function loadBasicInfo() {
     linkContactMeAbout.addEventListener('click', contactMeForm);
 }
 
+function getHeight() {
+    let body = document.body,
+        html = document.documentElement;
+
+    return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
+}
+
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+
+    if (scroll > getHeight() * 0.35 && extraContact == 0) {
+        contactMeForm();
+        extraContact++;
+    }
+});
+
 function contactMeForm(e) {
-    e.preventDefault();
+    try {
+        e.preventDefault();
+    } catch { }
     if (document.getElementById("contactMeForm").innerHTML.trim().length == 0) {
         document.getElementById("contactMeForm").innerHTML += `<iframe src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
     }

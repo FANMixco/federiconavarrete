@@ -7,7 +7,7 @@ const genericTranslations = {
     "close": "Cerrar",
     "download": "Descargar",
     "about": "Acerca",
-    "skills": "Pericias",
+    "skills": "Habilidades",
     "projects": "Proyectos",
     "presentations": "Presentaciones",
     "presentationsGallery": "Galería de presentaciones",
