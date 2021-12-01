@@ -1,6 +1,6 @@
 const basicInfo = {
 	"name": "Federico Navarrete",
-	"headline": 'Arquitecto de la Nube 💡, <a id="aBooksModal" data-toggle="modal" data-target="#booksModal" href="#booksModal">Autor</a> 📝 y Orador 🇬🇧/🇪🇸<br />Liderando Transformaciones Digitales',
+	"headline": 'Arquitecto de la Nube 💡, <a id="aBooksModal" data-toggle="modal" data-target="#booksModal" href="#booksModal">Autor</a> 📝 y Orador 🇪🇸/🇬🇧<br />Liderando Transformaciones Digitales',
 	"headlineIntro": "¡Es hora de llevar la innovación A TU VIDA! ¿Estás listo?",
 	"aboutDesc": [
 		`Bienvenido, soy Federico, arquitecto de la nube, autor y orador 🇪🇸/🇬🇧. Me apasiona crear un mundo  🌍 mejor con tecnología e innovación, siempre persiguiendo <span class="font-weight-bold">la próxima gran novedad</span>.<br /><br />He vivido en 4 países, <a id="aElSalvador" href="#elSalvador" class="text-material-link" data-toggle="modal" data-target=" #elSalvador">El Salvador</a>, Estados Unidos de América, Polonia y España. Un viaje único que me ha permitido desarrollar una habilidad única, <i>Inteligencia Cultural.</i>`,
