@@ -165,6 +165,30 @@ function loadTranslations() {
         {
             "identifier": "#aroundWebFooter",
             "value": genericTranslations.aroundWeb
+        },
+        {
+            "identifier": "#tmIntro",
+            "value": genericTranslations.tStoriesBody
+        },
+        {
+            "identifier": "#bookMsg1",
+            "value": genericTranslations.bookMsg1
+        },
+        {
+            "identifier": "#bookMsg2",
+            "value": genericTranslations.bookMsg2
+        },
+        {
+            "identifier": "#tmIntro",
+            "value": genericTranslations.tStoriesBody
+        },
+        {
+            "identifier": ".getBtnCopy",
+            "value": genericTranslations.bookMsgGet
+        },
+        {
+            "identifier": ".bookMsgGen",
+            "value": genericTranslations.bookMsgGen
         }
     ];
 
@@ -196,7 +220,7 @@ function loadTranslations() {
 }
 
 function setTranslation(id, text) {
-    $(id).text(text);
+    $(id).html(text);
 }
 
 function loadBasicInfo() {
