@@ -1,4 +1,14 @@
-loadBooks();
+window.onload = function() {
+    let language = window.navigator.userLanguage || window.navigator.language;
+    let lang = "en-us/min";
+    
+    if (language.includes('es'))
+        lang = "es-sv/min";
+    
+    let langLoc = "../js/data/translations/";
+    
+    getScript(`${langLoc}${lang}/booksList.js`) .then(() => { loadBooks(); }).catch((e) => { console.error(e); });
+}
 
 function loadBooks() {
     booksList.forEach(function(item, index) {
