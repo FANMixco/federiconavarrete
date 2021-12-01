@@ -304,7 +304,7 @@ function getHeight() {
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
 
-    if (scroll > getHeight() * 0.35 && extraContact == 0) {
+    if (scroll > getHeight() * 0.30 && extraContact == 0) {
         contactMeForm();
         extraContact++;
     }
@@ -320,6 +320,7 @@ function contactMeForm(e) {
 
     $(this).tooltip('hide');
     $("#contactMe").modal("show");
+    extraContact++;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
