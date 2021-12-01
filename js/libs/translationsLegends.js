@@ -1,4 +1,14 @@
-loadLegends();
+window.onload = function() {
+    let language = window.navigator.userLanguage || window.navigator.language;
+    let lang = "en-us/min";
+    
+    if (language.includes('es'))
+        lang = "es-sv/min";
+    
+    let langLoc = "../js/data/translations/";
+    
+    getScript(`${langLoc}${lang}/legendsList.js`) .then(() => { loadLegends(); }).catch((e) => { console.error(e); });
+}
 
 function loadLegends() {
     legendsList.forEach(item => {

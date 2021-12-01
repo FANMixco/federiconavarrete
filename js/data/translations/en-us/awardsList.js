@@ -7,13 +7,13 @@ const awardsList = {
 			},
 			{
 				"title": "Samsung Top Developer Award 2021 with Social Component",
-				"link": "https://www.europe-samsung.com/smsdev/Noticias/Detalle/estos_son_los_ganadores_de_los_top_developer_awards_2021/8e5d64d4-ff3c-4ad5-ba1e-f51b7d049422"
+				"link": "https://bit.ly/31laqDT"
 			}			
 		],
 		[
 			{
 				"title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
-				"link": "https://www.toastmasters.org/education/distinguished-toastmaster"
+				"link": "https://bit.ly/3FXHzEo"
 			},
 			{
 				"title": "President's Distinguished Area by Toastmasters International 2019"
@@ -21,11 +21,11 @@ const awardsList = {
 		],
 		[
 			{
-				"title": `1<sup>st</sup> place Cisco Switch Up Challenge 2016, "The Internet of Everything"`
+				"title": '1<sup>st</sup> place Cisco Switch Up Challenge 2016, "The Internet of Everything"'
 			},
 			{
 				"title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
-				"link": `https://2014.spaceappschallenge.org/awards/#globalawards`
+				"link": 'https://bit.ly/3lqNR7Y'
 			}
 		]
 	],

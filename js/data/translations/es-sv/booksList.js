@@ -1,8 +1,8 @@
 const booksList = [
 	{
 		"title": "",
-		"img": "../img/books/HP.jpg",
-		"link": "https://amzn.to/2TtC6wY"
+		"img": "../img/books/es/HP.jpg",
+		"link": "https://amzn.to/3pi6YCg"
 	},
 	{
 		"title": "",
@@ -12,37 +12,42 @@ const booksList = [
 	},
 	{
 		"title": "",
-		"img": "../img/books/WF.jpg",
-		"link": "https://bit.ly/2p0eZNl"
+		"img": "../img/books/es/WF.jpg",
+		"link": "https://amzn.to/2ZEIzhg"
 	},
 	{
 		"title": "",
-		"img": "../img/books/worry.jpg",
-		"link": "https://amzn.to/2ivFURl"
+		"img": "../img/books/es/worry.jpg",
+		"link": "https://amzn.to/3EfkLzQ"
 	},
 	{
 		"title": "",
-		"img": "../img/books/monk.jpg",
-		"link": "https://amzn.to/2fjDsY5",
+		"img": "../img/books/en/moves.jpg",
+		"link": "https://amzn.to/3lriwSB"
 	},
 	{
 		"title": "",
-		"img": "../img/books/blood.jpg",
-		"link": "https://amzn.to/2XuIe9O"
+		"img": "../img/books/es/monk.jpg",
+		"link": "https://amzn.to/3paJhM2",
 	},
 	{
 		"title": "",
-		"img": "../img/books/impossible.jpg",
+		"img": "../img/books/es/blood.jpg",
+		"link": "https://amzn.to/3dn4FZb"
+	},
+	{
+		"title": "",
+		"img": "../img/books/en/impossible.jpg",
 		"link": "https://bit.ly/2L90eon"
 	},
 	{
 		"title": "",
-		"img": "../img/books/success.jpg",
-		"link": "https://bit.ly/3cMOa5W"
+		"img": "../img/books/en/arch.jpg",
+		"link": "https://bit.ly/3I29FjM"
 	},
 	{
 		"title": "",
-		"img": "../img/books/sm.jpg",
+		"img": "../img/books/en/sm.jpg",
 		"link": "https://bit.ly/377v3SN"
 	}
 ];
