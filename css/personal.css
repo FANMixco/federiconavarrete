@@ -193,11 +193,11 @@ iframe {
 }
 
 a.text-material-link {
-    color: #6300ED;
+    color: #7919FF;
 }
 
 a.text-material-link:hover,a.text-material-link:active {
-    color: #7919FF;
+    color: #6300ED;
 }
 
 .text-material-orange {
