@@ -135,7 +135,7 @@ function loadHobbies() {
 
         $('[data-toggle="tooltip"]').tooltip();
 
-        $('[data-toggle="tooltip"]').on("click", function(e){
+        $('.ignore-click,#linkContactMe').on("click", function(e) {
             e.preventDefault();
         });
     
