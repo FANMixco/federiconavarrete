@@ -31,6 +31,12 @@ const booksList = [
 		"link": "https://amzn.to/3lriwSB"
 	},
 	{
+		"title": "Cómo evitar un desastre climático",
+		"img": "../img/books/es/warming.jpg",
+		"author": "Bill Gates",
+		"link": "https://amzn.to/31sz716",
+	},
+	{
 		"title": "Personal Branding with LinkedIn: The Think Natalia Method (inglés)",
 		"img": "../img/books/en/linkedin.jpg",
 		"author": "Natalia Wiechowski",

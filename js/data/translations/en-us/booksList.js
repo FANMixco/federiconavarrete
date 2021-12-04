@@ -31,6 +31,12 @@ const booksList = [
 		"link": "https://amzn.to/3lriwSB"
 	},
 	{
+		"title": "How to Avoid a Climate Disaster",
+		"img": "../img/books/en/warming.jpg",
+		"author": "Bill Gates",
+		"link": "https://amzn.to/3dlgD5i",
+	},
+	{
 		"title": "Personal Branding with LinkedIn: The Think Natalia Method",
 		"img": "../img/books/en/linkedin.jpg",
 		"author": "Natalia Wiechowski",
