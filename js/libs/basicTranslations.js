@@ -304,7 +304,7 @@ function getHeight() {
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
 
-    if (scroll > getHeight() * 0.25 && extraContact == 0) {
+    if (scroll > getHeight() * 0.20 && extraContact == 0) {
         contactMeForm();
         extraContact++;
     }
