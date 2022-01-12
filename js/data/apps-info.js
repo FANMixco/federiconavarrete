@@ -512,8 +512,20 @@ let apps =
                yearEnd: undefined,
                mainTech: "android_samsung",
                isSupported: true,
-               storeLink:"https://galaxy.store/fstories	",
-               preview:"",
+               storeLink:"https://galaxy.store/fstories",
+               preview: "",
+               technologies: [
+                  "mdi mdi-android", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-blogger-b", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
+               ],
+               order: 5
+            },
+            {
+               yearStart: 2021,
+               yearEnd: undefined,
+               mainTech: "android_huawei",
+               isSupported: true,
+               storeLink:"https://bit.ly/3K1vTn3",
+               preview: "",
                technologies: [
                   "mdi mdi-android", "fab fa-java", [{type: "icon", id: "id_xml", icon: "mdi mdi-xml", tooltip: "XML"}], "fab fa-blogger-b", "fab fa-git", [{type: "icon", id: "id_bitbucket", icon: "mdi mdi-bitbucket", tooltip: "Bitbucket"}]
                ],
@@ -1150,6 +1162,26 @@ let apps =
                preview:"",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github"
+               ],
+               order: 1
+            }
+      ]
+   },
+   {
+      app: "Scrollable Tabs",
+      link: "https://bit.ly/3FiWFnu",
+      description: "A simple plugin to create scrollable tabs with Bootstrap 5.",
+      logo: 'libs/tab.png',
+      edition: [
+            {
+               yearStart: 2022,
+               yearEnd: undefined,
+               mainTech: "js_lib",
+               isSupported: true,
+               storeLink:"",
+               preview:"",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github", "fab fa-npm"
                ],
                order: 1
             }
