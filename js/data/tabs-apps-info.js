@@ -137,6 +137,10 @@ let panesOptions =[
 				divsTitle: '',
 				stores: [
 					{
+						id: "unsupportedXamarinForms",
+						subTitle: `<i class="mdi mdi-xamarin"></i> Xamarin.Forms`
+					},
+					{
 						id: "unsupportedAndroid",
 						subTitle: `<i class="mdi mdi-android"></i> Android`
 					},

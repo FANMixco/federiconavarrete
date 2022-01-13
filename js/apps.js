@@ -48,6 +48,7 @@ $(function(){
         let w8Unsupported = [];
         let webUnsupported = [];
         let nugetUnsupported = [];
+        let xamarinFormsUnsupported = [];
         let unsupportedTechs = [];
 
         let customIconsArray = [];
@@ -89,6 +90,8 @@ $(function(){
             filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
 
             filterElem(apps[item], 'nuget', false, nugetUnsupported);
+
+            filterElem(apps[item], 'xamarin_forms', false, xamarinFormsUnsupported);
         }
 
         setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
@@ -101,6 +104,7 @@ $(function(){
         setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
         setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
 
+        setApps(xamarinFormsUnsupported.sort(sortByProperty('order')), "unsupportedXamarinForms", unsupportedTechs, customIconsArray);
         setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
         setApps(w8Unsupported.sort(sortByProperty('order')), "unsupportedWindows8", unsupportedTechs, customIconsArray);
         setApps(w10Unsupported.sort(sortByProperty('order')), "unsupportedWindows10", unsupportedTechs, customIconsArray);
