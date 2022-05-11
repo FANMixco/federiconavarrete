@@ -448,15 +448,12 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     let imgTemp = document.getElementById(imgID);
     switch (WURFL.form_factor) {
         case "Smartphone":
-            $("#imgBook").attr("src",`img/mybook/second_small.jpg`);
             imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
             break;
         case "Tablet":
-            $("#imgBook").attr("src",`img/mybook/second.jpg`);
             imgTemp.src = `${imgLoc}${imgBasic}_medium.${imgFormat}`;
             break;
         default:
-            $("#imgBook").attr("src",`img/mybook/second.jpg`);
             imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
             break;
     }

@@ -31,7 +31,7 @@ $(function() {
         const imgBook = document.getElementById('imgBook');
         let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
         
-        imgBook.src = `img/mybook/book${size}.jpg`;
+        imgBook.src = `img/mybook/second${size}.jpg`;
         imgBook.setAttribute("loading", "lazy");    
     } catch { }
 
