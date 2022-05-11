@@ -39,9 +39,10 @@ const genericTranslations = {
     "otherHobbies": "Other hobbies",
     "menu": "Menu",
     "massMedia": "Mass Media",
-    "tStoriesBody": "The <b>1<sup>st</sup> Salvadoran Folkloric Book</b> in <b>English</b> that brings you legendary stories like the <b>Guirola Family</b> and the <b>Cuyancua</b>!",
+    "tStoriesBody": "The <b>1<sup>st</sup> Series of Salvadoran Folkloric Books</b> in <b>English</b> is here! It brings you legendary stories like the <b>Guirola Family</b>, <b>Sir Francis Drake</b>, and the <b>Cuyancua</b>!",
     "bookMsg1": "Kindle, Paperback, and Hardcover Available",
     "bookMsg2": "Nook and Paperback (in black and white, and color) Available",
     "bookMsgGen": "e-Book Available",
-    "bookMsgGet": "Get your copy!"
+    "bookMsgGet": "Get your copy!",
+    "news": "This July 1<sup>st</sup>, the 2<sup>nd</sup> Volume of the Best Salvadoran Legends is coming to you.<br />Get your copy TODAY!"
 };

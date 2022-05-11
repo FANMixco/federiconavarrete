@@ -39,9 +39,9 @@ const genericTranslations = {
     "otherHobbies": "Otros pasatiempos",
     "menu": "Menú",
     "massMedia": "Medios de comunicación en masa",
-    "tStoriesBody": "El <b>1<sup>er</sup> libro de folclor salvadoreño</b> en <b>inglés</b> que te trae historias legendarias como ¡la <b>Familia Guirola</b> y la <b>Cuyancua</b>!",
-    "bookMsg1": "Kindle, Tapa Blanda y Dura disponibles",
+    "tStoriesBody": "La <b>1<sup>ra</sup> Serie de Libros Folclóricos Salvadoreños</b> en <b>Inglés</b> ¡esta aquí! Te trae historias legendarias como la <b>Familia Guirola</b> b>, <b>Sir Francis Drake</b>, y la <b>Cuyancua</b>!",    "bookMsg1": "Kindle, Tapa Blanda y Dura disponibles",
     "bookMsg2": "Nook y Tapa Blanda (en blanco y negro y en color) disponibles",
     "bookMsgGen": "e-Book disponible",
-    "bookMsgGet": "Obten tu copia!"
+    "bookMsgGet": "Obten tu copia!",
+    "news": "Este 1<sup>ro</sup> de julio llega a ti el 2<sup>do</sup> Tomo de las Mejores Leyendas Salvadoreñas.<br />¡Obtén tu copia HOY!"
 };

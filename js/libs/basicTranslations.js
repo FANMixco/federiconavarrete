@@ -190,6 +190,10 @@ function loadTranslations() {
         {
             "identifier": ".bookMsgGen",
             "value": genericTranslations.bookMsgGen
+        },
+        {
+            "identifier": "#newsH4",
+            "value": genericTranslations.news
         }
     ];
 
