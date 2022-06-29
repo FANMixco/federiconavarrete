@@ -451,17 +451,17 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     switch (WURFL.form_factor) {
         case "Smartphone":
             if (validDate)
-                $("#imgBook").attr("src",`img/books/second_small.png`);
+                $("#imgBook").attr("src",`img/mybook/second_small.png`);
             imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
             break;
         case "Tablet":
             if (validDate)
-                $("#imgBook").attr("src",`img/books/second.png`);
+                $("#imgBook").attr("src",`img/mybook/second.png`);
             imgTemp.src = `${imgLoc}${imgBasic}_medium.${imgFormat}`;
             break;
         default:
             if (validDate)
-                $("#imgBook").attr("src",`img/books/second.png`);
+                $("#imgBook").attr("src",`img/mybook/second.png`);
             imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
             break;
     }
