@@ -22,9 +22,9 @@ const socialBasicList = {
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "podcast-solid",
-			"title": "Sharing Your Stories",
-			"link": "https://redcircle.com/shows/sharing-your-stories",
+			"icon": "tiktok",
+			"title": "TikTok",
+			"link": "https://www.tiktok.com/@federicostories",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		}
@@ -34,6 +34,13 @@ const socialBasicList = {
 
 const socialOthersList = {
 	"socialMedia": [
+		{
+			"icon": "podcast-solid",
+			"title": "Sharing Your Stories",
+			"link": "https://redcircle.com/shows/sharing-your-stories",
+			"isIcon": false,
+			"externalClass": "iconFooter"
+		},
 		{
 			"icon": "building-solid",
 			"title": "Supernova IC",

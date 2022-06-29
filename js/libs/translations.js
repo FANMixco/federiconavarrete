@@ -446,14 +446,22 @@ function loadSocialMedias() {
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     let imgTemp = document.getElementById(imgID);
+    let currentDate = new Date();
+    let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
     switch (WURFL.form_factor) {
         case "Smartphone":
+            if (validDate)
+                $("#imgBook").attr("src",`img/books/second_small.png`);
             imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
             break;
         case "Tablet":
+            if (validDate)
+                $("#imgBook").attr("src",`img/books/second.png`);
             imgTemp.src = `${imgLoc}${imgBasic}_medium.${imgFormat}`;
             break;
         default:
+            if (validDate)
+                $("#imgBook").attr("src",`img/books/second.png`);
             imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
             break;
     }
