@@ -175,7 +175,7 @@ function loadServices() {
     if (isVisible) {
         const servicesList = document.getElementById('servicesList');
         services.forEach(item => {
-            let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
+            let items = `<div class="col-lg ml-auto"><p class="lead">`;
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
@@ -450,18 +450,30 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
     switch (WURFL.form_factor) {
         case "Smartphone":
-            if (validDate)
+            if (validDate) {
                 $("#imgBook").attr("src",`img/mybook/second_small.png`);
+               $("#myBookDiv").show();
+             }
+            else
+                $("#myBookDiv").hide();
             imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
             break;
         case "Tablet":
-            if (validDate)
+            if (validDate) {
                 $("#imgBook").attr("src",`img/mybook/second.png`);
+                $("#myBookDiv").show();
+            }
+            else
+                $("#myBookDiv").hide();
             imgTemp.src = `${imgLoc}${imgBasic}_medium.${imgFormat}`;
             break;
         default:
-            if (validDate)
+            if (validDate) {
                 $("#imgBook").attr("src",`img/mybook/second.png`);
+                $("#myBookDiv").show();
+            }
+            else
+                $("#myBookDiv").hide();
             imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
             break;
     }
