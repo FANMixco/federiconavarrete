@@ -19,16 +19,28 @@ const booksList = [
 		"link": "https://amzn.to/2ZEIzhg"
 	},
 	{
-		"title": "Cómo suprimir las preocupaciones y disfrutar de la vida",
-		"img": "../img/books/es/worry.jpg",
-		"author": "Dale Carnegie",
-		"link": "https://amzn.to/3EfkLzQ"
+		"title": "Principios para enfrentarse al nuevo orden mundial: Por qué triunfan y fracasan los países",
+		"img": "../img/books/en/principles.jpg",
+		"author": "Ray Dalio",
+		"link": "https://amzn.to/3v5rqd9"
+	},
+	{
+		"title": "Superpotencias de la inteligencia artificial: China, Silicon Valley y el nuevo orden mundial",
+		"img": "../img/books/en/ai.jpg",
+		"author": "Kai-Fu Lee",
+		"link": "https://amzn.to/3B7WHQv"
 	},
 	{
 		"title": "Your Next Five Moves (inglés)",
 		"img": "../img/books/en/moves.jpg",
 		"author": "Patrick Bet-David",
 		"link": "https://amzn.to/3lriwSB"
+	},
+	{
+		"title": "Cómo suprimir las preocupaciones y disfrutar de la vida",
+		"img": "../img/books/es/worry.jpg",
+		"author": "Dale Carnegie",
+		"link": "https://amzn.to/3EfkLzQ"
 	},
 	{
 		"title": "Cómo evitar un desastre climático",

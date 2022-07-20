@@ -1,4 +1,5 @@
 let totalServices = 0;
+const bookEdition = 'second;'
 
 window.onload = function() {
     let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
@@ -445,38 +446,34 @@ function loadSocialMedias() {
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
+    let imgBookSize = '';
+    let imgSize = '';
+
     let imgTemp = document.getElementById(imgID);
+    let divBook = document.getElementById("myBookDiv");
+    divBook.style.display = 'none';
+
+    let imgBook = document.getElementById("imgBook");
     let currentDate = new Date();
     let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
+
     switch (WURFL.form_factor) {
         case "Smartphone":
-            if (validDate) {
-                $("#imgBook").attr("src",`img/mybook/second_small.png`);
-               $("#myBookDiv").show();
-             }
-            else
-                $("#myBookDiv").hide();
-            imgTemp.src = `${imgLoc}${imgBasic}_small.${imgFormat}`;
+            imgBookSize = '_small';
+            imgSize = '_small';
             break;
         case "Tablet":
-            if (validDate) {
-                $("#imgBook").attr("src",`img/mybook/second.png`);
-                $("#myBookDiv").show();
-            }
-            else
-                $("#myBookDiv").hide();
-            imgTemp.src = `${imgLoc}${imgBasic}_medium.${imgFormat}`;
-            break;
-        default:
-            if (validDate) {
-                $("#imgBook").attr("src",`img/mybook/second.png`);
-                $("#myBookDiv").show();
-            }
-            else
-                $("#myBookDiv").hide();
-            imgTemp.src = `${imgLoc}${imgBasic}.${imgFormat}`;
+            imgSize = '_medium';
             break;
     }
+    
+    imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
+
+    if (validDate) {
+        imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;
+        divBook.style.display = 'block';
+    }
+
     imgTemp.setAttribute("loading", "lazy");
 }
 

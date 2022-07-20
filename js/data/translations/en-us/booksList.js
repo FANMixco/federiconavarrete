@@ -19,16 +19,28 @@ const booksList = [
 		"link": "https://bit.ly/2p0eZNl"
 	},
 	{
-		"title": "How to Stop Worrying and Start Living",
-		"img": "../img/books/en/worry.jpg",
-		"author": "Dale Carnegie",
-		"link": "https://amzn.to/2ivFURl"
+		"title": "Principles for Dealing with the Changing World Order: Why Nations Succeed and Fail",
+		"img": "../img/books/en/principles.jpg",
+		"author": "Ray Dalio",
+		"link": "https://amzn.to/3OfRNUF"
+	},
+	{
+		"title": "AI Superpowers: China, Silicon Valley, and the New World Order",
+		"img": "../img/books/en/ai.jpg",
+		"author": "Kai-Fu Lee",
+		"link": "https://amzn.to/3PJAv35"
 	},
 	{
 		"title": "Your Next Five Moves",
 		"img": "../img/books/en/moves.jpg",
 		"author": "Patrick Bet-David",
 		"link": "https://amzn.to/3lriwSB"
+	},
+	{
+		"title": "How to Stop Worrying and Start Living",
+		"img": "../img/books/en/worry.jpg",
+		"author": "Dale Carnegie",
+		"link": "https://amzn.to/2ivFURl"
 	},
 	{
 		"title": "How to Avoid a Climate Disaster",
