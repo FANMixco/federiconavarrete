@@ -5,6 +5,23 @@ const iframePrezis = `<iframe title="Presentations" id='iframePrezis' src="prezi
 const imgLocPortfolio = 'img/portfolio/';
 const imgLocArticles = 'img/articles/';
 
+const aAppsPreview = document.getElementById("aAppsPreview");
+
+aAppsPreview.addEventListener('click', function(e) {
+    if (!document.getElementById('iframeApps')) {
+        divApps.innerHTML += iframeApps;
+    }
+});
+
+const aPPTPreview = document.getElementById("aPPTPreview");
+
+aPPTPreview.addEventListener('click', function() {
+    if (!document.getElementById('iframePrezis')) {
+        const divPrezis = document.getElementById("divPrezis");
+        divPrezis.innerHTML += iframePrezis;
+    }
+});
+
 window.addEventListener('DOMContentLoaded', (event) => {
     let cYear = new Date().getFullYear();
 
@@ -29,7 +46,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     try {
         const imgBook = document.getElementById('imgBook');
-        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+        let size = WURFL.form_factor === "Smartphone" ? "_small" : WURFL.form_factor === "Tablet" ? "_medium" : "";
         
         imgBook.src = `img/mybook/second${size}.jpg`;
         imgBook.setAttribute("loading", "lazy");    
@@ -56,7 +73,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     margin = navbarHeight;
                 }
                 margin = -margin;
-                $navbar.css('margin-top', margin + "px")
+                $navbar.css('margin-top', `${margin}px`)
 
                 lastDirection = 1;
             } else { // scroll up
@@ -68,7 +85,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     margin = navbarHeight;
                 }
                 margin = margin - navbarHeight;
-                $navbar.css('margin-top', margin + "px")
+                $navbar.css('margin-top', `${margin}px`)
 
                 lastDirection = -1;
             }
@@ -76,24 +93,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             lastScrollTop = st;
         }
     };
-
-    const aAppsPreview = document.getElementById("aAppsPreview");
-
-    aAppsPreview.addEventListener('click', function(e) {
-        if (!document.getElementById('iframeApps')) {
-            const divApps = document.getElementById("divApps");
-            divApps.innerHTML += iframeApps;
-        }
-    });
-
-    const aPPTPreview = document.getElementById("aPPTPreview");
-
-    aPPTPreview.addEventListener('click', function() {
-        if (!document.getElementById('iframePrezis')) {
-            const divPrezis = document.getElementById("divPrezis");
-            divPrezis.innerHTML += iframePrezis;
-        }
-    });
 
     $('[data-toggle="tooltip"]').tooltip();
 });
