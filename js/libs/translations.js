@@ -99,7 +99,9 @@ function loadReviews() {
 
             if (item.isPDF) {
                 PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
-                $('[data-toggle="tooltip"]').tooltip();
+                [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+                    element.tooltip();
+                });
             }
         });
     }
@@ -134,7 +136,9 @@ function loadHobbies() {
             optHobbies.innerHTML += `<li class="list-inline-item">${getHobbyImg(elem)}</li>`;
         });
 
-        $('[data-toggle="tooltip"]').tooltip();
+        [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+            element.tooltip();
+        });
 
         $('.ignore-click,#linkContactMe').on("click", function(e) {
             e.preventDefault();
@@ -437,7 +441,10 @@ function loadSocialMedias() {
                 socialMediaOthers.innerHTML += `<li class="list-inline-item">${getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`;
             });
         }
-        $('[data-toggle="tooltip"]').tooltip();
+
+        [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+            element.tooltip();
+        });
     }
     else {
         const aroundWeb = document.getElementById('aroundWeb');

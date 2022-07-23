@@ -15,7 +15,7 @@ const galleryFooter = `Copyright &copy; <a class="text-warning" href="https://fe
 
 const iconSpan = "<span class='oneLineIcon' {0}>{1}</span>";
 
-$(function(){
+window.addEventListener('DOMContentLoaded', (event) => {
     function load() {
 		$('#galleryApps').append(createTabs() + createPanes());
 		

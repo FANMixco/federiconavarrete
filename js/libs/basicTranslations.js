@@ -197,7 +197,9 @@ function loadTranslations() {
         }
     ];
 
-    $("button.close").attr("aria-label", genericTranslations.close);
+    [...document.querySelectorAll('button.close')].forEach(function(element) {
+        element.setAttribute("aria-label", genericTranslations.close);
+    });
 
     controlTranslation.forEach(item => {
         setTranslation(item.identifier, item.value);
@@ -279,7 +281,9 @@ function loadBasicInfo() {
         listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, `${iconsPath}at.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
     }
     
-    $('[data-toggle="tooltip"]').tooltip();
+    [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+        element.tooltip();
+    });
 
     const aElSalvador = document.getElementById('aElSalvador');
 
