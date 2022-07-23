@@ -225,6 +225,7 @@ function loadTranslations() {
 }
 
 function setTranslation(id, text) {
+    //document.getElementById(id).textContent = text;
     $(id).html(text);
 }
 
@@ -283,7 +284,7 @@ function loadBasicInfo() {
     const aElSalvador = document.getElementById('aElSalvador');
 
     aElSalvador.addEventListener('click', function() {
-        if ($("#iframeElSalvador").length == 0) {
+        if (!document.getElementById('iframeElSalvador')) {
             const divIframElSalvador = document.getElementById('divIframElSalvador');
             divIframElSalvador.innerHTML += iframeElSalvador;
         }
