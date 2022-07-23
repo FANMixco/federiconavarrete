@@ -5,7 +5,7 @@ const iframePrezis = `<iframe title="Presentations" id='iframePrezis' src="prezi
 const imgLocPortfolio = 'img/portfolio/';
 const imgLocArticles = 'img/articles/';
 
-$(function() {
+window.addEventListener('DOMContentLoaded', (event) => {
     let cYear = new Date().getFullYear();
 
     const spanYear = document.getElementById("spanYear");
@@ -23,8 +23,8 @@ $(function() {
         window.open("https://federiconavarrete.com/prezis.html");
     });
 
-    $(".ignore-click").on("click", function() {
-        return false;
+    [...document.getElementsByClassName('.ignore-click')].forEach(function(element) {
+        element.addEventListener('click', x => false);
     });
 
     try {
@@ -36,16 +36,15 @@ $(function() {
     } catch { }
 
     let lastScrollTop = 0;
-    let $navbar = $('.navbar');
-    let navbarHeight = $navbar.outerHeight();
+    let navbarHeight = document.getElementsByClassName('navbar')[0].offsetHeight;
     let movement = 0;
     let lastDirection = 0;
 
-    $(window).on("scroll", function(event) {
+    window.onscroll = function() {
         let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
         
         if (smallScreenMobileOS) {
-            let st = $(this).scrollTop();
+            let st = document.scrollingElement.scrollTop;
             movement += st - lastScrollTop;
 
             if (st > lastScrollTop) { // scroll down
@@ -76,12 +75,12 @@ $(function() {
 
             lastScrollTop = st;
         }
-    });
+    };
 
     const aAppsPreview = document.getElementById("aAppsPreview");
 
     aAppsPreview.addEventListener('click', function(e) {
-        if ($("#iframeApps").length == 0) {
+        if (!document.getElementById('iframeApps')) {
             const divApps = document.getElementById("divApps");
             divApps.innerHTML += iframeApps;
         }
@@ -90,7 +89,7 @@ $(function() {
     const aPPTPreview = document.getElementById("aPPTPreview");
 
     aPPTPreview.addEventListener('click', function() {
-        if ($("#iframePrezis").length == 0) {
+        if (!document.getElementById('iframePrezis')) {
             const divPrezis = document.getElementById("divPrezis");
             divPrezis.innerHTML += iframePrezis;
         }
