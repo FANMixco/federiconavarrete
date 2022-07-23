@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', (event) => {
     let language = window.navigator.userLanguage || window.navigator.language;
     let lang = "en-us/min";
     
@@ -8,7 +8,7 @@ window.onload = function() {
     let langLoc = "../js/data/translations/";
     
     getScript(`${langLoc}${lang}/booksList.js`) .then(() => { loadBooks(); }).catch((e) => { console.error(e); });
-}
+});
 
 function loadBooks() {
     booksList.forEach(function(item, index) {
