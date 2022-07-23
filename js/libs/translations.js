@@ -1,7 +1,7 @@
 let totalServices = 0;
 const bookEdition = 'second;'
 
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', (event) => {
     let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
     const imgProfile = document.getElementById('imgProfile');
 
@@ -39,7 +39,7 @@ window.onload = function() {
     setTimeout(function() {
         addIFrameModal();
     }, 1000);
-};
+});
 
 function loadReviews() {
     const { reviews, isVisible } = reviewsList;

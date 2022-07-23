@@ -30,8 +30,7 @@ const scrollTo = function(to, duration) {
     animateScroll();
 };
 
-window.onload = function() {
-    "use strict"; // Start of use strict
+window.addEventListener('DOMContentLoaded', (event) => {
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on("click", function() {
@@ -94,4 +93,4 @@ window.onload = function() {
         });
     });
 
-}; // End of use strict
+}); // End of use strict
