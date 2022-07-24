@@ -93,14 +93,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
             lastScrollTop = st;
         }
     };
-
-    /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
-        element.tooltip();
-    });*/
-    try {
-        //$('[data-toggle="tooltip"]').tooltip();
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    }
-    catch { }
 });
