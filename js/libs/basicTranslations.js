@@ -197,7 +197,7 @@ function loadTranslations() {
         }
     ];
 
-    [...document.querySelectorAll('button.close')].forEach(function(element) {
+    [...document.querySelectorAll('button.btn-close')].forEach(function(element) {
         element.setAttribute("aria-label", genericTranslations.close);
     });
 
@@ -210,7 +210,7 @@ function loadTranslations() {
     if (!smallScreenMobileOS) {
         const btnPause = document.getElementById('spanMenu');
 
-        btnPause.innerHTML = `${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`;
+        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`;
 
         setTimeout(function() {
             const divSkillsContainer = document.getElementById('divSkillsContainer');
@@ -227,15 +227,9 @@ function loadTranslations() {
 }
 
 function setTranslation(elem, text) {
-    //console.log(id);
-    //console.log(id.replace("#", ""));
-
     [...document.querySelectorAll(elem)].forEach(function(element) {
         element.innerHTML = text;
     });
-
-    //document.getElementById(id.replace("#", "")).innerHTML = text;
-    //$(id).html(text);
 }
 
 function loadBasicInfo() {
@@ -259,7 +253,7 @@ function loadBasicInfo() {
     });
 
     if (favBook.isVisible) { 
-        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;${favBook.title}</a>`;
+        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;&nbsp;${favBook.title}</a>`;
 
         //favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;${favBook.title}</a>`;
     }
@@ -268,7 +262,7 @@ function loadBasicInfo() {
     }
 
     if (favPodcast.isVisible) {
-        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' loading="lazy" />&nbsp;${favPodcast.title}</a>`;
+        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' loading="lazy" />&nbsp;&nbsp;${favPodcast.title}</a>`;
     }
     else {
         favPodcastDiv.style.display = "none";
@@ -292,7 +286,9 @@ function loadBasicInfo() {
         element.tooltip();
     });*/
     try {
-        $('[data-toggle="tooltip"]').tooltip();
+        //$('[data-toggle="tooltip"]').tooltip();
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     }
     catch { }
 
@@ -348,8 +344,18 @@ function contactMeForm(e) {
         document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
     }
 
-    $(this).tooltip('hide');
-    $("#contactMe").modal("show");
+    //$(this).tooltip('hide');
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+    for (let i = 0; i < tooltipList.length; i++) {
+        tooltipList[i].hide();
+    }
+
+    let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
+    contactMe.show();
+    //$("#contactMe").modal("show");
     extraContact++;
 }
 

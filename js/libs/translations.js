@@ -103,7 +103,9 @@ function loadReviews() {
                     element.tooltip();
                 });*/
                 try {
-                    $('[data-toggle="tooltip"]').tooltip();
+                    //$('[data-toggle="tooltip"]').tooltip();
+                    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
                 }
                 catch { }            
             }
@@ -144,7 +146,9 @@ function loadHobbies() {
             element.tooltip();
         });*/
         try {
-            $('[data-toggle="tooltip"]').tooltip();
+            //$('[data-toggle="tooltip"]').tooltip();
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         }
         catch { }    
 
@@ -201,7 +205,7 @@ function loadServices() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
+                    title = `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`;
                 else
                     title = `<b>${elem.title}</b>`;
                 items += `<span>${title}</span><br /><br />`;
@@ -224,8 +228,19 @@ function addIFrameModal() {
             e.preventDefault();
             document.getElementById("serviceForm").innerHTML = `<iframe src="${$(this).attr('href')}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
         
-            $(this).tooltip('hide');
-            $("#servicesModal").modal("show");
+            //$(this).tooltip('hide');
+
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+            for (let i = 0; i < tooltipList.length; i++) {
+                tooltipList[i].hide();
+            }
+
+            let services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
+            services.show();
+        
+            //$("#servicesModal").modal("show");
         });
     }
 }
@@ -463,7 +478,9 @@ function loadSocialMedias() {
             element.tooltip();
         });*/
         try {
-            $('[data-toggle="tooltip"]').tooltip();
+            //$('[data-toggle="tooltip"]').tooltip();
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }
         catch { }    
     }
