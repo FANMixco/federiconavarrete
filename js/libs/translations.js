@@ -2,17 +2,7 @@ let totalServices = 0;
 const bookEdition = 'second;'
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    try {
-        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
-        const imgProfile = document.getElementById('imgProfile');
-    
-        imgProfile.src = `img/photos/profile${size}.jpg`;
-        imgProfile.setAttribute("loading", "lazy");
-    
-        imgProfile.style.display = "";    
-        imgProfile.style.display = "block";    
-    }
-    catch (e) { console.error(e); }
+    loadMainImage();
 
     getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
@@ -43,6 +33,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
         addIFrameModal();
     }, 1000);
 });
+
+function loadMainImage() {
+    try {
+        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+        const imgProfile = document.getElementById('imgProfile');
+
+        imgProfile.src = `img/photos/profile${size}.jpg`;
+        imgProfile.setAttribute("loading", "lazy");
+
+        imgProfile.style.display = "";
+        imgProfile.style.display = "block";
+    }
+    catch (e) { console.error(e); }
+}
 
 function loadReviews() {
     const { reviews, isVisible } = reviewsList;
