@@ -52,45 +52,49 @@ window.addEventListener('DOMContentLoaded', (event) => {
         imgBook.setAttribute("loading", "lazy");    
     } catch { }
 
-    let lastScrollTop = 0;
-    let navbarHeight = document.getElementsByClassName('navbar')[0].offsetHeight;
-    let movement = 0;
-    let lastDirection = 0;
+    try {
+        let lastScrollTop = 0;
+        let $navbar = document.getElementsByClassName('navbar')[0];
+        let navbarHeight = $navbar.offsetHeight;
+        let movement = 0;
+        let lastDirection = 0;
 
-    window.onscroll = function() {
-        let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
-        
-        if (smallScreenMobileOS) {
-            let st = document.scrollingElement.scrollTop;
-            movement += st - lastScrollTop;
+        window.onscroll = function() {
+            let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+            
+            if (smallScreenMobileOS) {
+                let st = document.scrollingElement.scrollTop;
+                movement += st - lastScrollTop;
 
-            if (st > lastScrollTop) { // scroll down
-                if (lastDirection != 1) {
-                    movement = 0;
-                }
-                let margin = Math.abs(movement);
-                if (margin > navbarHeight) {
-                    margin = navbarHeight;
-                }
-                margin = -margin;
-                $navbar.css('margin-top', `${margin}px`)
+                if (st > lastScrollTop) { // scroll down
+                    if (lastDirection != 1) {
+                        movement = 0;
+                    }
+                    let margin = Math.abs(movement);
+                    if (margin > navbarHeight) {
+                        margin = navbarHeight;
+                    }
+                    margin = -margin;
+                    $navbar.style.marginTop = `${margin}px`;
 
-                lastDirection = 1;
-            } else { // scroll up
-                if (lastDirection != -1) {
-                    movement = 0;
-                }
-                let margin = Math.abs(movement);
-                if (margin > navbarHeight) {
-                    margin = navbarHeight;
-                }
-                margin = margin - navbarHeight;
-                $navbar.css('margin-top', `${margin}px`)
+                    lastDirection = 1;
+                } else { // scroll up
+                    if (lastDirection != -1) {
+                        movement = 0;
+                    }
+                    let margin = Math.abs(movement);
+                    if (margin > navbarHeight) {
+                        margin = navbarHeight;
+                    }
+                    margin = margin - navbarHeight;
+                    $navbar.style.marginTop = `${margin}px`;
 
-                lastDirection = -1;
+                    lastDirection = -1;
+                }
+
+                lastScrollTop = st;
             }
-
-            lastScrollTop = st;
-        }
-    };
+        };
+    }
+    catch { }
 });
