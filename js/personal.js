@@ -94,7 +94,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     };
 
-    [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+    /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
         element.tooltip();
-    });
+    });*/
+    $('[data-toggle="tooltip"]').tooltip();
 });

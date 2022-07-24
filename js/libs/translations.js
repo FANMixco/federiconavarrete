@@ -99,9 +99,10 @@ function loadReviews() {
 
             if (item.isPDF) {
                 PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
-                [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+                /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
                     element.tooltip();
-                });
+                });*/
+                $('[data-toggle="tooltip"]').tooltip();
             }
         });
     }
@@ -136,11 +137,18 @@ function loadHobbies() {
             optHobbies.innerHTML += `<li class="list-inline-item">${getHobbyImg(elem)}</li>`;
         });
 
-        [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+        /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
             element.tooltip();
+        });*/
+        $('[data-toggle="tooltip"]').tooltip();
+
+        [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
+            element.addEventListener("click", function(e) {
+                e.preventDefault();
+            });
         });
 
-        $('.ignore-click,#linkContactMe').on("click", function(e) {
+        document.getElementById("linkContactMe").addEventListener("click", function(e) {
             e.preventDefault();
         });
     
@@ -151,11 +159,14 @@ function loadHobbies() {
             btnExtraHobbies.style.display = "none";
 
             if (WURFL.is_mobile) {
-                $(".btnOptional").hide();
+                const bntOpt = document.getElementsByClassName('.btnOptional');
+                bntOpt.style.display = "none;"
+
                 btnExtraHobbies.style.display = "block";
             }
         } else {
-            $(".btnOptional").hide();
+            const bntOpt = document.getElementsByClassName('.btnOptional');
+            bntOpt.style.display = "none;"
         }
     }
     else {
@@ -442,9 +453,10 @@ function loadSocialMedias() {
             });
         }
 
-        [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(function(element) {
+        /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
             element.tooltip();
-        });
+        });*/
+        $('[data-toggle="tooltip"]').tooltip();
     }
     else {
         const aroundWeb = document.getElementById('aroundWeb');
