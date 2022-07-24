@@ -3,7 +3,7 @@ const techSkills = [
 	[
 		'Agile - Scrum',
 		'CICD — Azure DevOps',
-		'<a href="https://fanmixco.github.io/rpaBestPractices/" target="_blank" class="text-warning" rel="noreferrer">RPA</a> — UiPath &amp; Automation Anywhere'
+		'<a href="https://fanmixco.github.io/rpaBestPractices/" target="_blank" class="text-warning text-decoration-none" rel="noreferrer">RPA</a> — UiPath &amp; Automation Anywhere'
 	],
 	[
 		'Angular 12+',

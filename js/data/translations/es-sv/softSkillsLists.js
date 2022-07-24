@@ -1,8 +1,8 @@
 //soft-skills front
 const softSkills = [
 	[
-		"Narración (storytelling)",
-		"Diseño de presentación"
+		"Narrativa (storytelling)",
+		"Diseño de presentaciones"
 	],
 	[
 		"Gestión de proyectos",
@@ -17,9 +17,9 @@ const softSkills = [
 //soft-skills hidden
 const softSkillsOthers = [
 	[
-		"Organizar eventos",
+		"Organización de eventos",
 		"Escritura creativa",
-		"Lanzamiento de ascensor"
+		"Discursos elevadores"
 	],
 	[
 		"Recopilación de requisitos",
