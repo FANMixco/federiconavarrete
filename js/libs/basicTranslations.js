@@ -197,7 +197,7 @@ function loadTranslations() {
         }
     ];
 
-    [...document.querySelectorAll('button.close')].forEach(function(element) {
+    [...document.querySelectorAll('button.btn-close')].forEach(function(element) {
         element.setAttribute("aria-label", genericTranslations.close);
     });
 
@@ -210,7 +210,7 @@ function loadTranslations() {
     if (!smallScreenMobileOS) {
         const btnPause = document.getElementById('spanMenu');
 
-        btnPause.innerHTML = `${genericTranslations.menu}<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`;
+        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`;
 
         setTimeout(function() {
             const divSkillsContainer = document.getElementById('divSkillsContainer');
@@ -227,15 +227,9 @@ function loadTranslations() {
 }
 
 function setTranslation(elem, text) {
-    //console.log(id);
-    //console.log(id.replace("#", ""));
-
     [...document.querySelectorAll(elem)].forEach(function(element) {
         element.innerHTML = text;
     });
-
-    //document.getElementById(id.replace("#", "")).innerHTML = text;
-    //$(id).html(text);
 }
 
 function loadBasicInfo() {
@@ -259,16 +253,16 @@ function loadBasicInfo() {
     });
 
     if (favBook.isVisible) { 
-        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;${favBook.title}</a>`;
+        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;&nbsp;${favBook.title}</a>`;
 
-        //favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" id="aFav_${favBook.link}" data-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;${favBook.title}</a>`;
+        //favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" id="aFav_${favBook.link}" data-bs-toggle="modal" data-target="#${favBook.link}" href="#${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;${favBook.title}</a>`;
     }
     else {
         favBookDiv.style.display = "none";
     }
 
     if (favPodcast.isVisible) {
-        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' loading="lazy" />&nbsp;${favPodcast.title}</a>`;
+        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' loading="lazy" />&nbsp;&nbsp;${favPodcast.title}</a>`;
     }
     else {
         favPodcastDiv.style.display = "none";
@@ -287,14 +281,6 @@ function loadBasicInfo() {
     if (email.isVisible) {
         listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, `${iconsPath}at.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
     }
-    
-    /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
-        element.tooltip();
-    });*/
-    try {
-        $('[data-toggle="tooltip"]').tooltip();
-    }
-    catch { }
 
     const aElSalvador = document.getElementById('aElSalvador');
 
@@ -348,8 +334,17 @@ function contactMeForm(e) {
         document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
     }
 
-    $(this).tooltip('hide');
-    $("#contactMe").modal("show");
+    try {
+        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+        for (let i = 0; i < tooltipList.length; i++) {
+            tooltipList[i].hide();
+        }
+    } catch { }
+
+    let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
+    contactMe.show();
     extraContact++;
 }
 
@@ -360,5 +355,5 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let imgClassName = imgClass == "" ? "" : `class='${imgClass}'`;
     let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} loading="lazy" />`;
 
-    return `<a data-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
+    return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }

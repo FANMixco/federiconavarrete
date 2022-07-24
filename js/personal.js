@@ -93,12 +93,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
             lastScrollTop = st;
         }
     };
-
-    /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
-        element.tooltip();
-    });*/
-    try {
-        $('[data-toggle="tooltip"]').tooltip();
-    }
-    catch { }
 });

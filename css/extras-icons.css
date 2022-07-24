@@ -1,73 +1,63 @@
 .size40 {
-    width:40px;
-    height:40px;
-    filter:invert(100%);
-    margin-top:-5px
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+    margin-top: -5px
 }
 
 .size50_7 {
-    width:50px;
-    height:50px;
-    filter:invert(100%);
-    margin-top:-7px
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    margin-top: -7px
 }
 
 .size50_5 {
-    width:50px;
-    height:50px;
-    filter:invert(100%);
-    margin-top:-5px
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+    margin-top: -5px
 }
 
 .size13 {
     width: 13.34px; 
     height: 22px; 
-    filter:invert(0.5)
+    filter: invert(0.5)
 }
 
 .size26_contrast {
-    width:26px;
-    height:26px;
-    margin-top:-4px;
-    filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
+    width: 26px;
+    height: 26px;
+    margin-top: -4px;
+    filter: invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
 }
 
 .size38_contrast {
-    width:38px;
-    height:38px;
-    margin-top:-4px;
-    filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
+    width: 38px;
+    height: 38px;
+    margin-top: -4px;
+    filter: invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
 }
 
 .size26_contrast_3 {
-    width:26px;
-    height:26px;
-    margin-top:-3px;
-    filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
+    width: 26px;
+    height: 26px;
+    margin-top: -3px;
+    filter: invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
 }
 
 .size26_contrast_2 {
-    width:26px;
-    height:26px;
-    margin-top:-2px;
-    filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
+    width: 26px;
+    height: 26px;
+    margin-top: -2px;
+    filter: invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%)
 }
 
 .size46_contrast {
-    width:46px;
-    height:46px;
-    margin-top:-7px;
-    filter:invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%);
-}
-
-.size24 {
-    width:24px;
-    height:24px;
-    margin-top:-5px;
-}
-
-.btnFullScreen {
-    padding-top: 1.05rem;
+    width: 46px;
+    height: 46px;
+    margin-top: -7px;
+    filter: invert(21%) sepia(16%) saturate(1184%) hue-rotate(169deg) brightness(94%) contrast(90%);
 }
 
 .closeModal {
@@ -79,9 +69,9 @@
 }
 
 .size14 {
-    width:14px;
-    height:16px;
-    filter:invert(100%)
+    width: 14px;
+    height: 16px;
+    filter: invert(100%)
 }
 
 #elSalvadorIcon {

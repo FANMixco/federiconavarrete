@@ -2,14 +2,7 @@ let totalServices = 0;
 const bookEdition = 'second;'
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
-    const imgProfile = document.getElementById('imgProfile');
-
-    imgProfile.src = `img/photos/profile${size}.jpg`;
-    imgProfile.setAttribute("loading", "lazy");
-
-    imgProfile.style.display = "";    
-    imgProfile.style.display = "block";
+    loadMainImage();
 
     getScript(`${langLoc}${lang}/hobbiesList.js`) .then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
@@ -41,6 +34,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 1000);
 });
 
+function loadMainImage() {
+    try {
+        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+        const imgProfile = document.getElementById('imgProfile');
+
+        imgProfile.src = `img/photos/profile${size}.jpg`;
+        imgProfile.setAttribute("loading", "lazy");
+
+        imgProfile.style.display = "";
+        imgProfile.style.display = "block";
+    }
+    catch (e) { console.error(e); }
+}
+
 function loadReviews() {
     const { reviews, isVisible } = reviewsList;
 
@@ -62,7 +69,7 @@ function loadReviews() {
                 </div>
                 <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
                 <h6 class="text-white m-0">${item.title}</h6>
-                <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-material-link" data-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
+                <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-material-link" data-bs-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
             </div>`;
 
             divReviewsPreviews.innerHTML += review;
@@ -99,13 +106,6 @@ function loadReviews() {
 
             if (item.isPDF) {
                 PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
-                /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
-                    element.tooltip();
-                });*/
-                try {
-                    $('[data-toggle="tooltip"]').tooltip();
-                }
-                catch { }            
             }
         });
     }
@@ -128,7 +128,7 @@ function loadHobbies() {
         });
 
         hobbiesList.innerHTML += `<li class="list-inline-item" id='btnExtraHobbies'>
-            <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-toggle="modal" data-target="#otherHobbies">
+            <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-bs-toggle="modal" data-target="#otherHobbies">
             <img src="${iconsPath}plus.svg" alt="extra" loading="lazy" />
             </a>
         </li>`;
@@ -139,14 +139,6 @@ function loadHobbies() {
         hobbiesOthers.forEach(elem => {
             optHobbies.innerHTML += `<li class="list-inline-item">${getHobbyImg(elem)}</li>`;
         });
-
-        /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
-            element.tooltip();
-        });*/
-        try {
-            $('[data-toggle="tooltip"]').tooltip();
-        }
-        catch { }    
 
         [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
             element.addEventListener("click", function(e) {
@@ -201,7 +193,7 @@ function loadServices() {
             item.forEach(elem => {
                 let title = "";
                 if (elem.link)
-                    title = `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />${elem.title}</a>`;
+                    title = `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`;
                 else
                     title = `<b>${elem.title}</b>`;
                 items += `<span>${title}</span><br /><br />`;
@@ -220,12 +212,22 @@ function loadServices() {
 
 function addIFrameModal() {
     for (let serv = 0; serv < totalServices; serv++) {
-        $(document).on("click", `#service${serv}`, function(e) {
+        let cService = document.getElementById(`service${serv}`);
+        cService.addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById("serviceForm").innerHTML = `<iframe src="${$(this).attr('href')}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+            document.getElementById("serviceForm").innerHTML = `<iframe src="${cService.href}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
         
-            $(this).tooltip('hide');
-            $("#servicesModal").modal("show");
+            try {
+                let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+                for (let i = 0; i < tooltipList.length; i++) {
+                    tooltipList[i].hide();
+                }
+            } catch { }
+
+            let services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
+            services.show();
         });
     }
 }
@@ -441,11 +443,13 @@ function loadSocialMedias() {
         });
 
         if (socialOthersList.isVisible) {
-            $("#socialMediaBasic").append(`<li class="list-inline-item">
-                <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-toggle="modal" data-target="#otherLocs">
+            let sBasic = document.getElementById("socialMediaBasic");
+
+            sBasic.innerHTML += `<li class="list-inline-item">
+                <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-bs-toggle="modal" data-target="#otherLocs">
                 <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" loading="lazy" />
                 </a>
-            </li>`);
+            </li>`;
 
             const socialMediaOthers = document.getElementById('socialMediaOthers');
             socialOthersList.socialMedia.forEach(elem => {
@@ -458,14 +462,6 @@ function loadSocialMedias() {
                 socialMediaOthers.innerHTML += `<li class="list-inline-item">${getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`;
             });
         }
-
-        /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
-            element.tooltip();
-        });*/
-        try {
-            $('[data-toggle="tooltip"]').tooltip();
-        }
-        catch { }    
     }
     else {
         const aroundWeb = document.getElementById('aroundWeb');
