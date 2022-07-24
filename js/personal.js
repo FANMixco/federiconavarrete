@@ -97,5 +97,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
         element.tooltip();
     });*/
-    $('[data-toggle="tooltip"]').tooltip();
+    try {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    catch { }
 });

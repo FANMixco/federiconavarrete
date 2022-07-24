@@ -291,7 +291,10 @@ function loadBasicInfo() {
     /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
         element.tooltip();
     });*/
-    $('[data-toggle="tooltip"]').tooltip();
+    try {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    catch { }
 
     const aElSalvador = document.getElementById('aElSalvador');
 
