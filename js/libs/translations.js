@@ -31,20 +31,6 @@ setTimeout(function () {
     addIFrameModal();
 }, 1000);
 
-function loadMainImage() {
-    try {
-        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
-        const imgProfile = document.getElementById('imgProfile');
-
-        imgProfile.src = `img/photos/profile${size}.jpg`;
-        imgProfile.setAttribute("loading", "lazy");
-
-        imgProfile.style.display = "";
-        imgProfile.style.display = "block";
-    }
-    catch (e) { console.error(e); }
-}
-
 function loadReviews() {
     try {
         const { reviews, isVisible } = reviewsList;
@@ -270,7 +256,6 @@ function loadPersonalProjects() {
     }
     catch (e) { return e; }
 }
-
 
 function loadVideos() {
     try {
@@ -546,6 +531,20 @@ function loadVideosAndPresentations() {
     loadVideos();
     loadYouTubeVideos();
     loadPresentations();
+}
+
+function loadMainImage() {
+    try {
+        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+        const imgProfile = document.getElementById('imgProfile');
+
+        imgProfile.src = `img/photos/profile${size}.jpg`;
+        imgProfile.setAttribute("loading", "lazy");
+
+        imgProfile.style.display = "";
+        imgProfile.style.display = "block";
+    }
+    catch (e) { console.error(e); }
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
