@@ -211,7 +211,7 @@ function addIFrameModal() {
         let cService = document.getElementById(`service${serv}`);
         cService.addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById("serviceForm").innerHTML = `<iframe src="${$(this).attr('href')}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+            document.getElementById("serviceForm").innerHTML = `<iframe src="${cService.href}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
         
             try {
                 let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
