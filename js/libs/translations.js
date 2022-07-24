@@ -102,7 +102,10 @@ function loadReviews() {
                 /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
                     element.tooltip();
                 });*/
-                $('[data-toggle="tooltip"]').tooltip();
+                try {
+                    $('[data-toggle="tooltip"]').tooltip();
+                }
+                catch { }            
             }
         });
     }
@@ -140,7 +143,10 @@ function loadHobbies() {
         /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
             element.tooltip();
         });*/
-        $('[data-toggle="tooltip"]').tooltip();
+        try {
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+        catch { }    
 
         [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
             element.addEventListener("click", function(e) {
@@ -456,7 +462,10 @@ function loadSocialMedias() {
         /*[...document.querySelectorAll('[data-toggle="tooltip"]')].forEach(function(element) {
             element.tooltip();
         });*/
-        $('[data-toggle="tooltip"]').tooltip();
+        try {
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+        catch { }    
     }
     else {
         const aroundWeb = document.getElementById('aroundWeb');
