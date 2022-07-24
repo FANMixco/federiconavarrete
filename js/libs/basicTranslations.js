@@ -15,10 +15,10 @@ const heightIFrame = 600;
 getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
     loadTranslations();
-    getScript(`${langLoc}${lang}/basicInfo.js`).then(() => { loadBasicInfo(); }).catch(() => { console.error('Could not load script'); });
+    getScript(`${langLoc}${lang}/basicInfo.js`).then(() => { loadBasicInfo(); }).catch((e) => { console.error(e); });
 })
-.catch(() => {
-  console.error('Could not load script');
+.catch((e) => {
+  console.error(e);
 });
 
 function loadTranslations() {
