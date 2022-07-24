@@ -1,18 +1,18 @@
 //techskills front
 const techSkills = [
 	[
-		'Agile - Scrum',
+		'Ágil - Scrum',
 		'CICD — Azure DevOps',
-		'<a href="https://fanmixco.github.io/rpaBestPractices/" target="_blank" class="text-warning" rel="noreferrer">RPA</a> — UiPath &amp; Automation Anywhere'
+		'<a href="https://fanmixco.github.io/rpaBestPractices/" target="_blank" class="text-warning text-decoration-none" rel="noreferrer">RPA</a> — UiPath y Automation Anywhere'
 	],
 	[
 		'Angular 12+',
 		'PWA',
-		'C# & .NET Core',
+		'C# y .NET Core',
 	],
 	[
-		'Cloud Architecture (AWS)',
-		'Cloud / Mobile / Web Dev',
+		'Arquitectura en la Nube (AWS)',
+		'Desarrollo en la Nube / Móvil / Web',
 		"Xamarin.Android"
 	]
 ];
@@ -23,18 +23,18 @@ const techSkillsOthers =[
 		'ITSM — ITIL v4',
 		'ATDD',
 		'Servicios web RESTful',
-		'Versioning — Git',
+		'Versionamiento — Git',
 	],
 	[
 		'ASP MVC',
 		'Entity Framework',
 		'HTML5 / CSS3 / JS',
-		'UI & UX'
+		'UI y UX'
 	],
 	[
 		'Azure (PaaS & IaaS)',
-		'Visual Studio & Code',
-		'SQL Server & SQLite',
+		'Visual Studio y Code',
+		'SQL Server y SQLite',
 		'Google Analytics &amp; Maps API'
 	]
 ];

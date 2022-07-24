@@ -19,7 +19,7 @@ const servicesList = {
 				"icon": "laptop-code-solid"
 			},
 			{
-                "title": "Gestión de proyectos ágiles",
+                "title": "Gestión de proyectos de forma ágil",
                 "link": "https://docs.google.com/forms/d/e/1FAIpQLSdZlnUNaOregS0mFQA35y_Wf9whfdI_VeHxi8G4E1ePeSoLpg/viewform",
 				"icon": "clock-fast"
             }
