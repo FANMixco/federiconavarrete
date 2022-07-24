@@ -1,52 +1,35 @@
 let totalServices = 0;
 const bookEdition = 'second;'
 
-window.addEventListener('DOMContentLoaded', (event) => {
-        loadMainImage();
+loadMainImage();
 
-        getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/techSkillsLists.js`)
-            .then(() => { loadTechSkills(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/techSkillsLists.js`).then(() => { loadTechSkills(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/softSkillsLists.js`).then(() => { loadSoftSkills(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/softSkillsLists.js`).then(() => { loadSoftSkills(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProjects(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProjects(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch((e) => { console.error(e); });
 
-        getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch((e) => { console.error(e); });
 
-        setTimeout(function () {
-            addIFrameModal();
-        }, 1000);
-    });
-
-function loadMainImage() {
-    try {
-        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
-        const imgProfile = document.getElementById('imgProfile');
-
-        imgProfile.src = `img/photos/profile${size}.jpg`;
-        imgProfile.setAttribute("loading", "lazy");
-
-        imgProfile.style.display = "";
-        imgProfile.style.display = "block";
-    }
-    catch (e) { console.error(e); }
-}
+setTimeout(function () {
+    addIFrameModal();
+}, 1000);
 
 function loadReviews() {
     try {
@@ -273,7 +256,6 @@ function loadPersonalProjects() {
     }
     catch (e) { return e; }
 }
-
 
 function loadVideos() {
     try {
@@ -549,6 +531,20 @@ function loadVideosAndPresentations() {
     loadVideos();
     loadYouTubeVideos();
     loadPresentations();
+}
+
+function loadMainImage() {
+    try {
+        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+        const imgProfile = document.getElementById('imgProfile');
+
+        imgProfile.src = `img/photos/profile${size}.jpg`;
+        imgProfile.setAttribute("loading", "lazy");
+
+        imgProfile.style.display = "";
+        imgProfile.style.display = "block";
+    }
+    catch (e) { console.error(e); }
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
