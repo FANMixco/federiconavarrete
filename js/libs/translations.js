@@ -120,12 +120,16 @@ function loadReviews() {
 
 function loadHobbies() {
     try {
+        const smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+
         const { hobbies, isVisible } = hobbiesList;
 
         if (isVisible) {
             const hobbiesList = document.getElementById('hobbiesList');
 
-            hobbies.forEach(item => {
+            let finalH = !(smallScreenMobileOS) ? hobbies : hobbies.slice(0, 4);
+
+            finalH.forEach(item => {
                 let btnOptional = item.isOpt ? " btnOptional" : "";
 
                 hobbiesList.innerHTML += `<li class="list-inline-item${btnOptional}">${getHobbyImg(item)}</li>`;
@@ -154,8 +158,6 @@ function loadHobbies() {
                 e.preventDefault();
             });
         
-            let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
-
             if (!smallScreenMobileOS) {
                 const btnExtraHobbies = document.getElementById("btnExtraHobbies");
                 btnExtraHobbies.style.display = "none";
