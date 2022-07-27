@@ -32,28 +32,28 @@ const hobbiesList = {
 			"title": "Photography",
 			"icon": "camera-enhance",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Traveling",
 			"icon": "airport",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Video games",
 			"icon": "nintendo-game-boy",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Board games",
 			"icon": "dice-solid",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{

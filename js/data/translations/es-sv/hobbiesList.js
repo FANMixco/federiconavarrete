@@ -15,7 +15,7 @@ const hobbiesList = {
 			"externalClass": "externalImg"
 		},
 		{
-			"title": "Hablar en público (Narración y Discursos Elevadores)",
+			"title": "Oratoria pública (Narración y Discursos Elevadores)",
 			"icon": "speaker",
 			"isIcon": false,
 			"isOpt": false,
@@ -32,28 +32,28 @@ const hobbiesList = {
 			"title": "Fotografía",
 			"icon": "camera-enhance",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Viajar",
 			"icon": "airport",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Vídeo juegos",
 			"icon": "nintendo-game-boy",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
 			"title": "Juegos de mesa",
 			"icon": "dice-solid",
 			"isIcon": false,
-			"isOpt": false,
+			"isOpt": true,
 			"externalClass": "externalImg"
 		},
 		{
