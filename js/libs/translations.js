@@ -1,6 +1,7 @@
 let totalServices = 0;
 const bookEdition = 'second;'
 const iframeLinkPreviews = `<iframe title="{Title}" id='iframeLinks' src="{URL}" class="previewerIframe" loading="lazy" allowfullscreen></iframe>`;
+const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
 
 loadMainImage();
 
@@ -38,7 +39,6 @@ function loadReviews() {
 
         if (isVisible) {
             const divReviewsPreviews = document.getElementById('divReviewsPreviews');
-            let currentDivReview;
 
             reviews.forEach(function(item, index) {
 
@@ -230,11 +230,11 @@ function loadAwards() {
                 let iframeGeneric = document.getElementById('iframeGeneric');
 
                 linkPreview.addEventListener("click", () => {
-                    let lPreview = iframeLinkPreviews;
+                    let lPreview = !(item.link.includes("storage.live.com")) ? iframeLinkPreviews : imgPreview;
                     lPreview = lPreview.replace('{URL}', item.link);
                     lPreview = lPreview.replace('{Title}', item.title);
-                    iframeGeneric.innerHTML = lPreview;
-                });
+                    iframeGeneric.innerHTML = lPreview;    
+            });
             });
         }
         else {

@@ -13,15 +13,17 @@ const awardsList = {
 		[
 			{
 				"title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
-				"link": "https://bit.ly/3FXHzEo"
+				"link": "https://ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none"
 			},
 			{
-				"title": "President's Distinguished Area by Toastmasters International 2019"
+				"title": "President's Distinguished Area by Toastmasters International 2019",
+				"link": "https://ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none"
 			}
 		],
 		[
 			{
-				"title": '1<sup>st</sup> place Cisco Switch Up Challenge 2016, "The Internet of Everything"'
+				"title": '1<sup>st</sup> place Cisco Switch Up Challenge 2016, "The Internet of Everything"',
+				"link": "https://bit.ly/3b8Tu8J"
 			},
 			{
 				"title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
