@@ -235,7 +235,7 @@ function addTech(techs, tech){
 }
 
 function filterElem(item, tech, isSupported, array) {
-   let filteredElem = item.edition.filter(x=>x.mainTech == tech && x.isSupported === isSupported)[0];
+   let filteredElem = item.edition.filter(x => x.mainTech == tech && x.isSupported === isSupported)[0];
 
    if (filteredElem !== undefined) array.push(createElem(item, filteredElem));
 }

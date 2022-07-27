@@ -125,7 +125,7 @@ function loadHobbies() {
                 </a>
             </li>`;
 
-            const hobbiesOthers = _.where(hobbies, { isOpt: true });
+            const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
 
             const optHobbies = document.getElementById('optHobbies');
             hobbiesOthers.forEach(elem => {
