@@ -1,6 +1,6 @@
 let totalServices = 0;
 const bookEdition = 'second;'
-const iframeLinkPreviews = `<iframe title="{Title}" id='iframeLinks' src="{URL}" class="previewerIframe" loading="lazy" allowfullscreen></iframe>`;
+const iframeLinkPreviews = `<iframe title="{Title}" id='iframeLinks' src="{URL}" class="previewerIframe" loading="lazy" style='background: url("img/icons/loading.gif") center/7em no-repeat' allowfullscreen></iframe>`;
 const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
 
 loadMainImage();

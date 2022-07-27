@@ -20,6 +20,6 @@ function loadBooks() {
                     </a>
             </div>`;
 
-        $("#divBooks").append(book);
+        document.getElementById('divBooks').innerHTML += book;
     });
 }
