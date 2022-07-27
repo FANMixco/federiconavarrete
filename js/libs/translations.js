@@ -143,18 +143,8 @@ function loadHobbies() {
             });
         
             if (!smallScreenMobileOS) {
-                const btnExtraHobbies = document.getElementById("btnExtraHobbies");
+                let btnExtraHobbies = document.getElementById("btnExtraHobbies");
                 btnExtraHobbies.style.display = "none";
-
-                if (WURFL.is_mobile) {
-                    const bntOpt = document.getElementsByClassName('.btnOptional');
-                    bntOpt.style.display = "none;"
-
-                    btnExtraHobbies.style.display = "block";
-                }
-            } else {
-                const bntOpt = document.getElementsByClassName('.btnOptional');
-                bntOpt.style.display = "none;"
             }
         }
         else {
