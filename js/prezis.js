@@ -19,19 +19,23 @@ const galleryFooter = `<a rel="license" target="_blank"  href="http://creativeco
 
 window.addEventListener('DOMContentLoaded', (event) => {
     function load() {
-		$('#pptGallery').append(createTabs() + createPanes());
+
+        document.getElementById('pptGallery').innerHTML += createTabs() + createPanes();
 		
         let preziNext = ppts.filter(x=>x.type == 'next').sort(sortByProperty('order'));
         //let preziClassic = ppts.filter(x=>x.type == 'classic').sort(sortByProperty('order'));
         let powerPoint = ppts.filter(x=>x.type == 'ppt').sort(sortByProperty('order'));
 		
-		$("#galleryTitle").append(galleryTitle);
-		
-		$("#galleryFooter").append(galleryFooter);
+        document.getElementById('galleryTitle').innerHTML += galleryTitle;
+
+        document.getElementById('galleryFooter').innerHTML += galleryFooter;
 
         if (!new URLSearchParams(window.location.search).get('isIframe')) {
-            $("#header").show();
-            $(".gallery-block").css('padding-top', '60px');
+            document.getElementById('header').style.display = "block";
+
+            [...document.getElementsByClassName('.gallery-block')].forEach(function(element) {
+                element.style.paddingTop = '60px';
+            });
         }
 
         for (let item in preziNext)
@@ -47,7 +51,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function createPPT(control, url, src, alt, name, presented, edited) {
-        $(`#${control}`).append(cardTemplate.format(url, src, alt, name, presented, edited));
+        document.getElementById(`${control}`).innerHTML += cardTemplate.format(url, src, alt, name, presented, edited);
     }
 
     load();

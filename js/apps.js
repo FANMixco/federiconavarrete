@@ -17,15 +17,15 @@ const iconSpan = "<span class='oneLineIcon' {0}>{1}</span>";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     function load() {
-		$('#galleryApps').append(createTabs() + createPanes());
+        document.getElementById('galleryApps').innerHTML += createTabs() + createPanes();
 		
-		$("#galleryTitle").append(galleryTitle);
+        document.getElementById('galleryTitle').innerHTML += galleryTitle;
 		
 		let cYear = new Date().getFullYear();
 		
 		cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
-		
-		$("#galleryFooter").append(galleryFooter.format(cYear));
+
+        document.getElementById('galleryFooter').innerHTML += galleryFooter.format(cYear);
 		
         let androidSupported = [];
         let androidHuaweiSupported = [];
@@ -54,8 +54,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let customIconsArray = [];
 
         if (!new URLSearchParams(window.location.search).get('isIframe')) {
-            $("#header").show();
-            $(".gallery-block").css('padding-top', '60px');
+            document.getElementById('header').style.display = "block";
+
+            [...document.getElementsByClassName('.gallery-block')].forEach(function(element) {
+                element.style.paddingTop = '60px';
+            });
         }
 
         for(let item in apps) {
@@ -146,7 +149,7 @@ function setTechUsed(techs, container, customIcons) {
 
     for (let item in sortable) conclusions += (!sortable[item][0].includes("id_")) ? getTechPrint(sortable[item][0], `×${sortable[item][1]}`, 3): getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `×${sortable[item][1]}`, 3);
 
-    $(`#${container}`).append(conclusions);
+    document.getElementById(`${container}`).innerHTML += conclusions;
 }
 
 function getTechPrint(tech, extra, noSpaces) {
@@ -219,7 +222,7 @@ function setApps(appCollection, control, techs, customIcons) {
 
         tooltip += `<br><br><b>Technologies:<b><br><br><div class='iconsDiv'>${technologies.replaceAll('"', "'")}</div>`;
 
-        $(`#${control}`).append(cardTemplate.format(appCollection[item].logo, appCollection[item].app, appCollection[item].app, content, appCollection[item].app, tooltip));
+        document.getElementById(`${control}`).innerHTML += cardTemplate.format(appCollection[item].logo, appCollection[item].app, appCollection[item].app, content, appCollection[item].app, tooltip);
     }
 }
 

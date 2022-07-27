@@ -27,6 +27,6 @@ function loadLegends() {
             </div>
         </div>`;
 
-        $("#divLegends").append(legend);
+        document.getElementById('divLegends').innerHTML += legend;
     });
 }
