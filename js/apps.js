@@ -134,9 +134,9 @@ function setTechUsed(techs, container, customIcons) {
 
     for (let i = 0; i < techs.length; i++) result[techs[i]] = (result[techs[i]] || 0) + 1;
 
-    var sortable = [];
-    for (var item in result)
-        sortable.push([item, result[item]]);
+    let sortable = [];
+
+    for (let item in result) sortable.push([item, result[item]]);
     
     sortable.sort(function(a, b) {
         return b[1] - a[1];
@@ -144,18 +144,14 @@ function setTechUsed(techs, container, customIcons) {
 
     let conclusions = "";
 
-    for (let item in sortable)
-        if (!sortable[item][0].includes("id_"))
-            conclusions += getTechPrint(sortable[item][0], `×${sortable[item][1]}`, 3);
-        else
-            conclusions += getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `×${sortable[item][1]}`, 3);
+    for (let item in sortable) conclusions += (!sortable[item][0].includes("id_")) ? getTechPrint(sortable[item][0], `×${sortable[item][1]}`, 3): getTechPrint(customIcons.filter(x=>x.id == sortable[item][0]), `×${sortable[item][1]}`, 3);
 
     $(`#${container}`).append(conclusions);
 }
 
 function getTechPrint(tech, extra, noSpaces) {
     let totalSpaces = "";
-    for (let i=0; i<=noSpaces; i++)
+    for (let i = 0; i <= noSpaces; i++)
         totalSpaces += "&nbsp;";
 
     if (!Array.isArray(tech))

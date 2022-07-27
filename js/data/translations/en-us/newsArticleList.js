@@ -9,7 +9,7 @@ const newsArticlesList = {
 		},
 		{
 			"link": `https://1drv.ms/b/s!AhpAtowYvNcyj_Mcu_Nc5bBJOHhAUA?e=Y66ESz`,
-			"title": `Dos salvadoreños destacan en concurso de la NASA (Spanish)`,
+			"title": `Dos salvadoreños destacan en concurso de la NASA (in Spanish)`,
 			"imgID": "imgNews2",
 			"imgBasicName": "news2",
 			"imgFormat": "jpg"

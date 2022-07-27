@@ -1,5 +1,6 @@
 let totalServices = 0;
 const bookEdition = 'second;'
+const iframeLinkPreviews = `<iframe title="{Title}" id='iframeLinks' src="{URL}" class="previewerIframe" loading="lazy" allowfullscreen></iframe>`;
 
 loadMainImage();
 
@@ -200,19 +201,40 @@ function loadAwards() {
 
         if (isVisible) {
             const awardsList = document.getElementById('awardsList');
+            let availableLinks = [];
+            let i = 0;
             awards.forEach(item => {
                 let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
                 item.forEach(elem => {
                     let title = "";
-                    if (elem.link)
-                        title = `<a style='width: 100%; font-weight: bold' rel="noopener" href=${elem.link} target="_blank" class="btn btn-warning">${elem.title}</a>`;
+                    if (elem.link) {
+                        title = `<a id="linkPreview${i}" data-bs-toggle="modal" data-bs-target="#linkPreviews" class="btn btn-warning" style='width: 100%; font-weight: bold'>${elem.title}</a>`;
+                        availableLinks.push({ 
+                            id: i,
+                            title: elem.title,
+                            link: elem.link,
+                        });
+                    }
                     else
                         title = `<button style='width: 100%; font-weight: bold' type="button" class="btn btn-light">${elem.title}</button>`;
                     items += `${title}<br /><br />`;
+                    i++;
                 });
                 items = `${items.substring(0, items.length - 12)}</div>`;
 
                 awardsList.innerHTML += items;
+            });
+
+            availableLinks.forEach(item => {
+                const linkPreview = document.getElementById(`linkPreview${item.id}`);
+                let iframeGeneric = document.getElementById('iframeGeneric');
+
+                linkPreview.addEventListener("click", () => {
+                    let lPreview = iframeLinkPreviews;
+                    lPreview = lPreview.replace('{URL}', item.link);
+                    lPreview = lPreview.replace('{Title}', item.title);
+                    iframeGeneric.innerHTML = lPreview;
+                });
             });
         }
         else {
@@ -404,8 +426,8 @@ function loadNewsArticles() {
                 let event = `<div class="col-sm">
                     <a href="${item.link}" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
+                        <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                     </a>
-                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                 </div>`;
                 divMMArticles.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
