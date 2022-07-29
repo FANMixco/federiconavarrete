@@ -1,12 +1,12 @@
 /*This code is property of Federico Navarrete and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
 const tabs = `<ul class="nav nav-tabs" role="tablist">{0}</ul>`;
-const tabElem = `<li class="nav-item"><a class="nav-link{0}" href="#{1}" role="tab" data-toggle="tab">{2}</a></li>`;
+const tabElem = `<li class="nav-item"><a class="nav-link{0}" href="#{1}" role="tab" data-bs-toggle="tab">{2}</a></li>`;
 
 const panes = `<div class="tab-content">{0}</div>`;
 
 const panElem = `<div role="tabpanel" class="tab-pane{0}" id="{1}">{2}</div>`;
 
-const headerElem = `<div class="row row-container full-width"><h4 class="text-center full-width">{0}</h4></div>`;
+const headerElem = `<div class="row row-container full-width"><h4 class="text-center full-width mt-3">{0}</h4></div>`;
 
 const storeElem = `<div id="{0}" class="row row-container justify-content-center"></div>`;
 
@@ -53,7 +53,7 @@ function createPanes() {
 		
 		let techsInvolvedFinal = panesOptions[pane].techsInvolvedId != '' ? techsInvolved.format(panesOptions[pane].techsInvolvedId, techsInvolvedStr) : '';
 		
-		print = print.format(mainTitle + printElem+techsInvolvedFinal);
+		print = print.format(mainTitle + printElem + techsInvolvedFinal);
 	}
 	return tabContent.format(print);
 }

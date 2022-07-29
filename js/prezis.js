@@ -7,7 +7,7 @@ const cardTemplate =
     <img src="../img/prezis/{1}" alt="{2}" class="card-img-top">
    </a>
    <div class="card-body">
-      <h6><a href="#">{3}</a></h6>
+      <h6><a href="#" class="text-decoration-none">{3}</a></h6>
       <p class="text-muted card-text">{4} {5}</p>
    </div>
 </div>
@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById('pptGallery').innerHTML += createTabs() + createPanes();
 		
         let preziNext = ppts.filter(x=>x.type == 'next').sort(sortByProperty('order'));
-        //let preziClassic = ppts.filter(x=>x.type == 'classic').sort(sortByProperty('order'));
         let powerPoint = ppts.filter(x=>x.type == 'ppt').sort(sortByProperty('order'));
 		
         document.getElementById('galleryTitle').innerHTML += galleryTitle;
@@ -32,6 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         if (!new URLSearchParams(window.location.search).get('isIframe')) {
             document.getElementById('header').style.display = "block";
+            document.getElementById('header').classList.add("pt-4");
 
             [...document.getElementsByClassName('.gallery-block')].forEach(function(element) {
                 element.style.paddingTop = '60px';
@@ -40,8 +40,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         for (let item in preziNext)
             createPPT("pptNext", preziNext[item].link, preziNext[item].preview, preziNext[item].name, preziNext[item].name, presentedOrEdited(preziNext[item].wasPresented), moment(preziNext[item].edited).format('MMM D, YYYY').toUpperCase());
-        /*for (let item in preziClassic)
-            createPPT("pptClassic", preziClassic[item].link, preziClassic[item].preview, preziClassic[item].name, preziClassic[item].name, presentedOrEdited(preziClassic[item].wasPresented), moment(preziClassic[item].edited).format('MMM D, YYYY').toUpperCase());*/
         for (let item in powerPoint)
             createPPT("pptPowerPoint", powerPoint[item].link, powerPoint[item].preview, powerPoint[item].name, powerPoint[item].name, presentedOrEdited(powerPoint[item].wasPresented), moment(powerPoint[item].edited).format('MMM D, YYYY').toUpperCase());
     }

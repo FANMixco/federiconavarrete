@@ -2,7 +2,7 @@ const servicesList = {
 	"services": [
 		[
 			{
-				"title": "IT Consultancy or Apps development",
+				"title": "IT Consultancy or Apps Development",
                 "link": "https://supernovaic.com/#contact",
 				"icon": "laptop-code-solid"
 			},
