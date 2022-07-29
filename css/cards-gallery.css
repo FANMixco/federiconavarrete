@@ -1,14 +1,14 @@
-.gallery-block{
+.gallery-block {
 	padding-bottom: 60px;
 	padding-top: 60px;
 }
 
-.gallery-block .heading{
+.gallery-block .heading {
     margin-bottom: 50px;
     text-align: center;
 }
 
-.gallery-block .heading h2{
+.gallery-block .heading h2 {
     font-weight: bold;
     font-size: 1.4rem;
     text-transform: uppercase;

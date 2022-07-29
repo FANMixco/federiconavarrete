@@ -1,11 +1,11 @@
 /*This code is property of Federico Navarrete and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
 
 const cardTemplate = 
-`<div class="card border-0 transform-on-hover">
+`<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;">
    <img src="img/apps/{0}" alt="{1}" class="card-img-top">
    <div class="card-body">
-      <h6><a href="#">{2}</a></h6>
-      <p class="card-text">{3}<a tabindex="0" data-trigger="focus" data-html="true" data-placement="top" data-toggle="popover" data-container="body" title="{4}" data-content="{5}" role="button" class="popMore btn btn-warning btn-circle text-white"><i class="fas fa-ellipsis-h"></i></a></p>
+      <h6><a href="#" class="text-decoration-none">{2}</a></h6>
+      <p class="card-text">{3}<a tabindex="0" data-bs-trigger="focus" data-bs-html="true" data-bs-placement="top" data-bs-toggle="popover" data-bs-container="body" title="{4}" data-bs-content="{5}" role="button" class="popMore btn btn-warning btn-circle text-white"><i class="fas fa-ellipsis-h"></i></a></p>
    </div>
 </div>`;
 
@@ -13,7 +13,7 @@ const galleryTitle = "Federico Navarrete — Projects Gallery";
 
 const galleryFooter = `Copyright &copy; <a class="text-warning" href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> {0}. Some icons were provided by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>`;
 
-const iconSpan = "<span class='oneLineIcon' {0}>{1}</span>";
+const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>";
 
 window.addEventListener('DOMContentLoaded', (event) => {
     function load() {
@@ -55,6 +55,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         if (!new URLSearchParams(window.location.search).get('isIframe')) {
             document.getElementById('header').style.display = "block";
+            document.getElementById('header').classList.add("pt-4");
 
             [...document.getElementsByClassName('.gallery-block')].forEach(function(element) {
                 element.style.paddingTop = '60px';
@@ -122,11 +123,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
         setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
         setTechUsed(libsSupportedTechs, "techsLibsStore", customIconsArray);
 
-        $('[data-toggle="popover"]').popover();
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+});
+
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+});
+
+        /*$('[data-toggle="popover"]').popover();
 
         $('.popover-dismiss').popover({ trigger: 'focus' });
 
-        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip();*/
     }
 
     load();
@@ -162,7 +173,7 @@ function getTechPrint(tech, extra, noSpaces) {
     else {
         let tooltip = '';
         if (tech[0].tooltip)
-            tooltip = `data-toggle="tooltip" title="${tech[0].tooltip}"`;
+            tooltip = `data-bs-toggle="tooltip" title="${tech[0].tooltip}"`;
 
         switch (tech[0].type) {
             case "text":
