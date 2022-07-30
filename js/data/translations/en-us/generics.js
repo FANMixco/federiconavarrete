@@ -44,5 +44,6 @@ const genericTranslations = {
     "bookMsg2": "Nook and Paperback (in black and white, and color) Available",
     "bookMsgGen": "e-Book Available",
     "bookMsgGet": "Get your copy!",
-    "news": "This July 1<sup>st</sup>, the 2<sup>nd</sup> Volume of the Best Salvadoran Legends is coming to you.<br />Get your copy TODAY!"
+    "news": "This July 1<sup>st</sup>, the 2<sup>nd</sup> Volume of the Best Salvadoran Legends is coming to you.<br />Get your copy TODAY!",
+    "winning": "Winning Elevator Pitch"
 };

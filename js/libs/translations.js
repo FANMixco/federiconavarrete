@@ -220,6 +220,8 @@ function loadAwards() {
                 let iframeGeneric = document.getElementById('iframeGeneric');
 
                 linkPreview.addEventListener("click", () => {
+                    const gTitle = document.getElementById('gTitle');
+                    gTitle.style.display = "none";
                     let lPreview = !(item.link.includes("storage.live.com")) ? iframeLinkPreviews : imgPreview;
                     lPreview = lPreview.replace('{URL}', item.link);
                     lPreview = lPreview.replace('{Title}', item.title);

@@ -306,6 +306,9 @@ function loadBasicInfo() {
     let iframeGeneric = document.getElementById('iframeGeneric');
 
     linkPreview.addEventListener("click", () => {
+        const gTitle = document.getElementById('gTitle');
+        gTitle.innerHTML = genericTranslations.winning;
+        gTitle.style.display = "block";
         iframeGeneric.innerHTML = iframeYoutube;
     });
 }
