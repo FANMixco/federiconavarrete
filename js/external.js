@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
-    gtag('config', 'UA-7438484-9');
+
+    gtag('config', 'G-4X4X4PDHN7');
 });
 
 function googleTranslateElementInit() {
