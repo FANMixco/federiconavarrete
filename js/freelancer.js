@@ -3,7 +3,7 @@
 * Copyright 2013-2022 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 */
-window.addEventListener('DOMContentLoaded', event => {
+function onReadyFreelancer() {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -71,5 +71,10 @@ window.addEventListener('DOMContentLoaded', event => {
             // window.addEventListener
         }
         // if
-    }
-});
+    }    // ...your code here...
+}
+if (document.readyState !== "loading") {
+    onReadyFreelancer(); // Or setTimeout(onReady, 0); if you want it consistently async
+} else {
+    document.addEventListener("DOMContentLoaded", onReadyFreelancer);
+}

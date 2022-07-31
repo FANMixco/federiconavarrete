@@ -5,96 +5,47 @@ const iframePrezis = `<iframe title="Presentations" id='iframePrezis' src="prezi
 const imgLocPortfolio = 'img/portfolio/';
 const imgLocArticles = 'img/articles/';
 
-const aAppsPreview = document.getElementById("aAppsPreview");
+function onReadyPersonal() {
+    const aAppsPreview = document.getElementById("aAppsPreview");
 
-aAppsPreview.addEventListener('click', function(e) {
-    if (!document.getElementById('iframeApps')) {
-        divApps.innerHTML += iframeApps;
-    }
-});
-
-const aPPTPreview = document.getElementById("aPPTPreview");
-
-aPPTPreview.addEventListener('click', function() {
-    if (!document.getElementById('iframePrezis')) {
-        const divPrezis = document.getElementById("divPrezis");
-        divPrezis.innerHTML += iframePrezis;
-    }
-});
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    let cYear = new Date().getFullYear();
-
-    const spanYear = document.getElementById("spanYear");
-
-    spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
-
+    aAppsPreview.addEventListener('click', function(e) {
+        if (!document.getElementById('iframeApps')) {
+            divApps.innerHTML += iframeApps;
+        }
+    });
+    
+    const aPPTPreview = document.getElementById("aPPTPreview");
+    
+    aPPTPreview.addEventListener('click', function() {
+        if (!document.getElementById('iframePrezis')) {
+            const divPrezis = document.getElementById("divPrezis");
+            divPrezis.innerHTML += iframePrezis;
+        }
+    });
+    
     const appsFullScreen = document.getElementById("appsFullScreen");
     appsFullScreen.addEventListener('click', function() {
         window.open("https://federiconavarrete.com/apps.html");
     });
-
+    
     const pptsFullScreen = document.getElementById("pptsFullScreen");
-
+    
     pptsFullScreen.addEventListener('click', function() {
         window.open("https://federiconavarrete.com/prezis.html");
     });
-
+    
+    let cYear = new Date().getFullYear();
+    
+    const spanYear = document.getElementById("spanYear");
+    
+    spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
+    
     [...document.getElementsByClassName('.ignore-click')].forEach(function(element) {
         element.addEventListener('click', x => false);
     });
-
-    try {
-        const imgBook = document.getElementById('imgBook');
-        let size = WURFL.form_factor === "Smartphone" ? "_small" : WURFL.form_factor === "Tablet" ? "_medium" : "";
-        
-        imgBook.src = `img/mybook/second${size}.jpg`;
-        imgBook.setAttribute("loading", "lazy");    
-    } catch { }
-
-    try {
-        let lastScrollTop = 0;
-        let $navbar = document.getElementsByClassName('navbar')[0];
-        let navbarHeight = $navbar.offsetHeight;
-        let movement = 0;
-        let lastDirection = 0;
-
-        window.onscroll = function() {
-            let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
-            
-            if (smallScreenMobileOS) {
-                let st = document.scrollingElement.scrollTop;
-                movement += st - lastScrollTop;
-
-                if (st > lastScrollTop) { // scroll down
-                    if (lastDirection != 1) {
-                        movement = 0;
-                    }
-                    let margin = Math.abs(movement);
-                    if (margin > navbarHeight) {
-                        margin = navbarHeight;
-                    }
-                    margin = -margin;
-                    $navbar.style.marginTop = `${margin}px`;
-
-                    lastDirection = 1;
-                } else { // scroll up
-                    if (lastDirection != -1) {
-                        movement = 0;
-                    }
-                    let margin = Math.abs(movement);
-                    if (margin > navbarHeight) {
-                        margin = navbarHeight;
-                    }
-                    margin = margin - navbarHeight;
-                    $navbar.style.marginTop = `${margin}px`;
-
-                    lastDirection = -1;
-                }
-
-                lastScrollTop = st;
-            }
-        };
-    }
-    catch { }
-});
+}
+if (document.readyState !== "loading") {
+    onReadyPersonal(); // Or setTimeout(onReady, 0); if you want it consistently async
+} else {
+    document.addEventListener("DOMContentLoaded", onReadyPersonal);
+}
