@@ -393,8 +393,8 @@ function loadArticles() {
                 let event = `<div class="col-sm">
                     <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
-                        <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                     </a>
+                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                 </div>`;
                 divArticles.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
@@ -418,8 +418,8 @@ function loadNewsArticles() {
                 let event = `<div class="col-sm">
                     <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
-                        <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                     </a>
+                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                 </div>`;
                 divMMArticles.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);

@@ -48,17 +48,22 @@ function onReadyFreelancer() {
     });
 
     if (WURFL.form_factor === "Smartphone") {
+
         var el_autohide = document.querySelector('.autohide');
  
         // add padding-top to bady (if necessary)
         var navbar_height = document.querySelector('.navbar').offsetHeight;
         document.body.style.paddingTop = `${navbar_height}px`;
 
-        if(el_autohide){
+        if (el_autohide) {
             var last_scroll_top = 0;
             window.addEventListener('scroll', function() {
+                if (document.getElementById("navbarResponsive").classList.contains("show")) {
+                    document.getElementById("menuExpander").click();
+                }
+
                 let scroll_top = window.scrollY;
-                if(scroll_top < last_scroll_top) {
+                if (scroll_top < last_scroll_top) {
                     el_autohide.classList.remove('scrolled-down');
                     el_autohide.classList.add('scrolled-up');
                 }
@@ -80,6 +85,7 @@ function onReadyFreelancer() {
         }
     });
 }
+
 if (document.readyState !== "loading") {
     onReadyFreelancer(); // Or setTimeout(onReady, 0); if you want it consistently async
 } else {
