@@ -6,9 +6,9 @@ const legendsList = [
 		"isActive": true
 	},
 	{
-		"title": "The Siguanaba’s hammock",
-		"img": "../img/legends/siguanaba.jpg",
-		"link": "https://bit.ly/2MECcAB"
+		"title": "The Pirate Treasures of Meanguera Island",
+		"img": "../img/legends/treasure.jpg",
+		"link": "https://bit.ly/3ByeTmB"
 	},
 	{
 		"title": "The Guirola Family",
@@ -16,9 +16,14 @@ const legendsList = [
 		"link": "https://bit.ly/3h2WUrJ"
 	},
 	{
-		"title": "Chasca “The virgin of the water”",
-		"img": "../img/legends/chasca.jpg",
-		"link": "https://bit.ly/2Uj9edI"
+		"title": "The Mulus",
+		"img": "../img/legends/mulus.jpg",
+		"link": "https://bit.ly/3BAoUQe"
+	},
+	{
+		"title": "The Arbolarios",
+		"img": "../img/legends/arbolario.jpg",
+		"link": "https://bit.ly/3Byf7tX"
 	},
 	{
 		"title": "The Squeaky Wagon",
@@ -31,9 +36,14 @@ const legendsList = [
 		"link": "https://bit.ly/3eWnT6s"
 	},
 	{
-		"title": "Mr. Money and Mrs. Fortune",
-		"img": "../img/legends/money.jpg",
-		"link": "https://bit.ly/3f58Jfr"
+		"title": "The Siguanaba’s hammock",
+		"img": "../img/legends/siguanaba.jpg",
+		"link": "https://bit.ly/2MECcAB"
+	},
+	{
+		"title": "Chasca “The virgin of the water”",
+		"img": "../img/legends/chasca.jpg",
+		"link": "https://bit.ly/2Uj9edI"
 	},
 	{
 		"title": "The Moon’s cave",

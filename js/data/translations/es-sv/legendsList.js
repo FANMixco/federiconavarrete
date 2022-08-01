@@ -1,42 +1,52 @@
 const legendsList = [
 	{
-		"title": "El bueno y el malo Cadejo (inglés)",
+		"title": "El Cadejo bueno y el malo (en inglés)",
 		"img": "../img/legends/cadejo.jpg",
 		"link": "https://bit.ly/3eSMZTI",
 		"isActive": true
 	},
 	{
-		"title": "La Hamaca de la Siguanaba (inglés)",
-		"img": "../img/legends/siguanaba.jpg",
-		"link": "https://bit.ly/2MECcAB"
+		"title": "Los tesoros piratas de la isla Meanguera (en inglés)",
+		"img": "../img/legends/treasure.jpg",
+		"link": "https://bit.ly/3ByeTmB"
 	},
 	{
-		"title": "La Familia Guirola (inglés)",
+		"title": "La familia Guirola (en inglés)",
 		"img": "../img/legends/guirola.jpg",
 		"link": "https://bit.ly/3h2WUrJ"
 	},
 	{
-		"title": "Chasca “La virgen del agua” (inglés)",
-		"img": "../img/legends/chasca.jpg",
-		"link": "https://bit.ly/2Uj9edI"
+		"title": "El Mulus (en inglés)",
+		"img": "../img/legends/mulus.jpg",
+		"link": "https://bit.ly/3BAoUQe"
 	},
 	{
-		"title": "El carreta chillona (inglés)",
+		"title": "Los Arbolarios (en inglés)",
+		"img": "../img/legends/arbolario.jpg",
+		"link": "https://bit.ly/3Byf7tX"
+	},
+	{
+		"title": "La carreta chillona (en inglés)",
 		"img": "../img/legends/wagon.jpg",
 		"link": "https://bit.ly/37789L6"
 	},
 	{
-		"title": "La Cuyancua (inglés)",
+		"title": "La Cuyancua (en inglés)",
 		"img": "../img/legends/cuyancua.jpg",
 		"link": "https://bit.ly/3eWnT6s"
 	},
 	{
-		"title": "Don Dinero y Doña Fortuna (inglés)",
-		"img": "../img/legends/money.jpg",
-		"link": "https://bit.ly/3f58Jfr"
+		"title": "La hamaca de la Siguanaba (en inglés)",
+		"img": "../img/legends/siguanaba.jpg",
+		"link": "https://bit.ly/2MECcAB"
 	},
 	{
-		"title": "La cueva de la Luna (inglés)",
+		"title": "Chasca “La virgen del agua” (en inglés)",
+		"img": "../img/legends/chasca.jpg",
+		"link": "https://bit.ly/2Uj9edI"
+	},
+	{
+		"title": "La cueva de la luna (en inglés)",
 		"img": "../img/legends/cave.jpg",
 		"link": "https://bit.ly/3dLg3wk"
 	}
