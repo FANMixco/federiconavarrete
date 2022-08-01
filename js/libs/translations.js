@@ -566,12 +566,12 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     let imgSize = '';
 
     let imgTemp = document.getElementById(imgID);
-    let divBook = document.getElementById("myBookDiv");
-    divBook.style.display = 'none';
+    //let divBook = document.getElementById("myBookDiv");
+    //divBook.style.display = 'none';
 
-    let imgBook = document.getElementById("imgBook");
-    let currentDate = new Date();
-    let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
+    //let imgBook = document.getElementById("imgBook");
+    //let currentDate = new Date();
+    //let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
 
     switch (WURFL.form_factor) {
         case "Smartphone":
@@ -585,10 +585,10 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
 
-    if (validDate) {
+    /*if (validDate) {
         imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;
         divBook.style.display = 'block';
-    }
+    }*/
 
     imgTemp.setAttribute("loading", "lazy");
 }
