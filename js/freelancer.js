@@ -72,6 +72,13 @@ function onReadyFreelancer() {
         }
         // if
     }    // ...your code here...
+
+    document.addEventListener("click", function (event) {
+        // if the clicked element isn't child of the navbar, you must close it if is open
+        if (!event.target.closest("#mainNav") && document.getElementById("navbarResponsive").classList.contains("show")) {
+            document.getElementById("menuExpander").click();
+        }
+    });
 }
 if (document.readyState !== "loading") {
     onReadyFreelancer(); // Or setTimeout(onReady, 0); if you want it consistently async
