@@ -391,7 +391,7 @@ function loadArticles() {
             const divArticles = document.getElementById('divArticles');
             articles.forEach(item => {
                 let event = `<div class="col-sm">
-                    <a href="${item.link}" target="_blank" rel="noreferrer">
+                    <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
                         <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                     </a>
@@ -416,7 +416,7 @@ function loadNewsArticles() {
             const divMMArticles = document.getElementById('divMMArticles');
             articles.forEach(item => {
                 let event = `<div class="col-sm">
-                    <a href="${item.link}" target="_blank" rel="noreferrer">
+                    <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
                         <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
                     </a>
