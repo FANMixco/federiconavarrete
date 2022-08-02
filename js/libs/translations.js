@@ -29,9 +29,17 @@ getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedia
 
 getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).catch((e) => { console.error(e); });
 
+loadBookPreview();
+
 setTimeout(function () {
     addIFrameModal();
 }, 1000);
+
+function loadBookPreview() {
+    let bookPreview = document.getElementById("bookPreview");
+
+    bookPreview.innerHTML += `<iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%;margin:auto;display:block" src="https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3"></iframe>`;
+}
 
 function loadReviews() {
     try {
