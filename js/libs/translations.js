@@ -268,7 +268,7 @@ function loadPersonalProjects() {
             let pp = `<div class="carousel-item${isActive}">
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
-                    <h4 class="text-center text-uppercase text-secondary mb-0"><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4 fw-bolder mt-2 mb-2"><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</p>
                 </div>
             </div>`;
 
@@ -339,7 +339,7 @@ function loadPresentations() {
                     <a href="${item.link}" rel="noreferrer" target="_blank">
                         <img id="${item.imgID}" loading="lazy" class="img-fluid" alt="${item.title}" />
                     </a>
-                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4 fw-bolder mt-2 mb-2">${item.title}</p>
                 </div>`;
                 divPPTs.innerHTML += ppt;
                 setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
@@ -369,7 +369,7 @@ function loadOrganizedEvents() {
                     <a href="${item.link}" rel="noreferrer" target="_blank">
                         <img alt='events' loading="lazy" class="img-fluid" id="${item.imgID}" />
                     </a>
-                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4 fw-bolder mt-2 mb-2">${item.title}</p>
                 </div>`;
                 divEvents.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
@@ -393,7 +393,7 @@ function loadArticles() {
                     <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
                     </a>
-                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4 fw-bolder mt-2 mb-2">${item.title}</p>
                 </div>`;
                 divArticles.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
@@ -595,7 +595,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 function getUTubeContainer(item) {
     return `<div class="col-sm">
         ${getUTubeLite(item)}
-    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+    <p class="text-center text-uppercase text-secondary mb-0 h4 fw-bolder mt-2 mb-2">${item.title}</p>
     </div>`;
 }
 
