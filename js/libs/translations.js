@@ -1,4 +1,6 @@
 let totalServices = 0;
+let fullReviews = [];
+
 const bookEdition = 'second;'
 const iframeLinkPreviews = `<iframe title="{Title}" id='iframeLinks' src="{URL}" class="previewerIframe" loading="lazy" style='background: url("img/icons/loading.gif") center/7em no-repeat' allowfullscreen></iframe>`;
 const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
@@ -56,56 +58,54 @@ function loadReviews() {
 
                 let currentReview = index + 1;
 
+                let rTmp = `${item.shortReview}<a class="text-material-link" data-bs-toggle="modal" data-target="#reviewGeneric" href="#reviewGeneric" id="readMore${currentReview}">${genericTranslations.readMore}</a>`;
                 let review = `<div class="carousel-item text-center${active}">
-                    <div class="img-box p-1 border rounded-circle m-auto">
-                        <img loading="lazy" class="d-block w-100 rounded-circle" src="${item.img}" alt="review${currentReview} slide" />
-                    </div>
-                    <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
-                    <h6 class="text-white m-0">${item.title}</h6>
-                    <p class="m-0 pt-3 text-white">${item.shortReview}<a class="text-material-link" data-bs-toggle="modal" data-target="#review${currentReview}" href="#review${currentReview}">${genericTranslations.readMore}</a></p>
-                </div>`;
+                                ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp)}
+                                </div>`;
 
                 divReviewsPreviews.innerHTML += review;
 
                 let longReview = "";
 
                 if (item.isPDF) {
-                    longReview = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
-                    <img class="d-block w-100 rounded-circle" loading="lazy" src="${item.img}" alt="review${currentReview} slide" />
-                    </div>
-                    <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
-                    <h6 class="text-dark m-0">${item.title}</h6>
-                    <p class="text-dark m-0 centerText">${item.date}</p>
+                    longReview = `${getImgName(name, item.img, currentReview, "picReviewers")}
+                    ${getReviewTitle('dark', item.title)}
+                    ${getInnerTitle(item.date)}
                     <div id="review${currentReview}PDF"></div>
                     <div class="centerText">
-                    <a class="btn btn btn-outline-dark" target="_blank" href="${item.pdfLocation}">
-                    <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" loading="lazy" />&nbsp;${genericTranslations.download}
-                    </a>
+                        <a class="btn btn btn-outline-dark" target="_blank" href="${item.pdfLocation}">
+                            <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" loading="lazy" />&nbsp;${genericTranslations.download}
+                        </a>
                     </div>`;
                 }
                 else {
-                    longReview = `<div class="picReviewers img-box p-1 border rounded-circle m-auto">
-                    <img class="d-block w-100 rounded-circle" src="${item.img}" loading="lazy" alt="review${index + 1} slide" />
-                    </div>
-                    <h5 class="mt-4 mb-0"><strong class="text-material-orange text-uppercase">${name}</strong></h5>
-                    <p class="text-dark m-0">${item.title}</p>
-                    <h6 class="text-dark m-0 centerText">${item.date}</h6>
-                    <p class="m-0 pt-3 text-black">${item.review}</p>`;
+                    longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title), 'dark', 'black', item.review, "centerText");
                 }
 
-                let divTmpReviews = document.getElementById(`divReview${currentReview}`);
-
-                divTmpReviews.innerHTML += longReview;
-
-                if (item.isPDF) {
-                    PDFObject.embed("/testimonials/references.pdf", `#review${currentReview}PDF`);
-                }
+                fullReviews.push({ 
+                    review: longReview,
+                    isPDF: item.isPDF
+                });
             });
         }
         else {
             const divReviews = document.getElementById("divReviews");
             divReviews.style.display = "none";
         }
+
+        fullReviews.forEach(function(item, index) { 
+
+            let rmCurrent = document.getElementById(`readMore${index + 1}`);
+            rmCurrent.addEventListener("click", (e) => {
+                e.preventDefault();
+                let divGenericContent = document.getElementById('divGenericContent');
+                divGenericContent.innerHTML = item.review;
+
+                if (item.isPDF) {
+                    PDFObject.embed("/testimonials/references.pdf", `#review${index + 1}PDF`);
+                }
+            });
+        });
     }
     catch (e) { return e; }
 }
@@ -601,4 +601,38 @@ function getUTubeContainer(item) {
 
 function getUTubeLite(item) {
     return `<lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>`;
+}
+
+function getImgPreview(img, currentReview, extraClass) {
+    return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">
+                ${getImgReview(img, currentReview)}
+            </div>`;
+}
+
+function getReviewName(name) {
+    return `<p class="mt-4 mb-0 fw-bolder text-center h5 p-1"><strong class="text-material-orange text-uppercase">${name}</strong></p>`;
+}
+
+function getReviewTitle(color, title, cssCentered) {
+    return `<p class="text-${color} m-0 ${cssCentered} fw-bolder text-center h6 p-1">${title}</p>`;
+}
+
+function getInnerTitle(title) {
+    return `<p class="text-dark m-0 text-center fw-bolder p-2">${title}</p>`;
+}
+
+function getImgReview(src, rev) {
+    return `<img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`;
+}
+
+function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered = "") {
+    return `${getImgName(name, img, currentReview, extraClass)}
+    ${extraTitle}
+    ${getReviewTitle(txtColor, title, cssCentered)}
+    <p class="m-0 pt-3 text-${txtColor2}">${content}</p>`;
+}
+
+function getImgName(name, img, currentReview, extraClass) {
+    return `${getImgPreview(img, currentReview, extraClass)}
+    ${getReviewName(name)}`;
 }
