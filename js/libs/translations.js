@@ -267,9 +267,8 @@ function loadPersonalProjects() {
 
             let pp = `<div class="carousel-item${isActive}">
                 <div class="carousel-video-inner">
-                <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
-
-                <h4 class="text-center text-uppercase text-secondary mb-0"><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
+                    ${getUTubeLite(item)}
+                    <h4 class="text-center text-uppercase text-secondary mb-0"><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</h4>
                 </div>
             </div>`;
 
@@ -287,11 +286,7 @@ function loadVideos() {
         if (isVisible) {
             let count = 0;
             presentations.forEach(item => {
-                let video = `<div class="col-sm">
-                            <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
-                        <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
-                    </div>`;
-                divVideos.innerHTML += video;
+                divVideos.innerHTML += getUTubeContainer(item);
                 if (count === 0) {
                     divVideos.innerHTML += '<div class="w-100"></div>';
                 }
@@ -316,11 +311,7 @@ function loadYouTubeVideos() {
         if (isVisible) {
             let count = 0;
             presentations.forEach(item => {
-                let video = `<div class="col-sm">
-                            <lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>
-                        <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
-                    </div>`;
-                divYouTubeVideos.innerHTML += video;
+                divYouTubeVideos.innerHTML += getUTubeContainer(item);
                 if (count === 0) {
                     divYouTubeVideos.innerHTML += '<div class="w-100"></div>';
                 }
@@ -599,4 +590,15 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     }*/
 
     imgTemp.setAttribute("loading", "lazy");
+}
+
+function getUTubeContainer(item) {
+    return `<div class="col-sm">
+        ${getUTubeLite(item)}
+    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+    </div>`;
+}
+
+function getUTubeLite(item) {
+    return `<lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>`;
 }
