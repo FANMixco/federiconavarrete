@@ -367,6 +367,6 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }
 
-function getIframe(title, src, extras, lazy = `loading="lazy"`, fullscreen = 'allowfullscreen') {
+function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = `loading="lazy"`) {
     return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
 }
