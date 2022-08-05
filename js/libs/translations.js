@@ -615,11 +615,7 @@ function getInnerTitle(title) {
 }
 
 function getImgReview(src, rev) {
-    return `<picture>
-                <source srcset="${src.replace('.jpg', '.webp')}" type="image/webp">
-                <source srcset="${src}" type="image/jpeg"> 
-                <img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />
-            </picture>`;
+    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, `<img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`);
 }
 
 function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
@@ -634,12 +630,16 @@ function getImgName(name, img, currentReview, extraClass, isLarge) {
     ${getReviewName(name, isLarge)}`;
 }
 
-function setWebPImage(id, img) {
+function getPicture(src1, src2, img) {
     return `<picture>
-                <source id='srcWebP${id}' type="image/webp">
-                <source id='srcJPG${id}' type="image/jpeg"> 
+                <source ${src1} type="image/webp">
+                <source ${src2} type="image/jpeg"> 
                 ${img}
             </picture>`;
+}
+
+function setWebPImage(id, img) {
+    return getPicture(`id='srcWebP${id}'`, `id='srcJPG${id}'`, img);
 }
 
 function getImgContainer(link, img, title) {
