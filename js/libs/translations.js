@@ -173,10 +173,8 @@ function loadServices() {
                 let items = `<div class="col-lg ml-auto"><p class="lead">`;
                 item.forEach(elem => {
                     let title = "";
-                    if (elem.link)
-                        title = `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`;
-                    else
-                        title = `<b>${elem.title}</b>`;
+                    title = (elem.link) ? `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`
+                                        : title = `<b>${elem.title}</b>`;
                     items += `<span>${title}</span><br /><br />`;
                     totalServices++;
                 });
@@ -206,7 +204,7 @@ function loadAwards() {
                 item.forEach(elem => {
                     let title = "";
                     if (elem.link) {
-                        title = `<a id="linkPreview${i}" data-bs-toggle="modal" data-bs-target="#linkPreviews" class="btn btn-warning" style='width: 100%; font-weight: bold'>${elem.title}</a>`;
+                        title = `<button id="linkPreview${i}" data-bs-toggle="modal" data-bs-target="#linkPreviews" class="btn btn-warning" style='width: 100%; font-weight: bold'>${elem.title}</button>`;
                         availableLinks.push({ 
                             id: i,
                             title: elem.title,
