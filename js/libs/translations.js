@@ -2,8 +2,9 @@ let totalServices = 0;
 let fullReviews = [];
 
 const bookEdition = 'second;'
-const iframeLinkPreviews = `<iframe title="{Title}" id='iframeLinks' src="{URL}" class="previewerIframe" loading="lazy" style='background: url("img/icons/loading.gif") center/7em no-repeat' allowfullscreen></iframe>`;
 const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
+const noreferrer = `rel="noreferrer"`;
+const tBlank = `target="_blank"`;
 
 loadMainImage();
 
@@ -40,7 +41,7 @@ setTimeout(function () {
 function loadBookPreview() {
     let bookPreview = document.getElementById("bookPreview");
 
-    bookPreview.innerHTML += `<iframe title='Timeless Stories of El Salvador' type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" allowfullscreen style="max-width:100%;margin:auto;display:block" src="https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3"></iframe>`;
+    bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', 'https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3', `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`);
 }
 
 function loadReviews() {
@@ -52,7 +53,7 @@ function loadReviews() {
 
             reviews.forEach(function(item, index) {
 
-                let name = item.externalLink !== "" ? `<a href="${item.externalLink}" rel="noreferrer" target="_blank" class="text-warning">${item.name}</a>` : item.name;
+                let name = item.externalLink !== "" ? `<a href="${item.externalLink}" ${noreferrer} ${tBlank} class="text-warning">${item.name}</a>` : item.name;
 
                 let active = item.isActive ? " active" : "";
 
@@ -73,8 +74,8 @@ function loadReviews() {
                     ${getInnerTitle(item.date)}
                     <div id="review${currentReview}PDF"></div>
                     <div class="centerText">
-                        <a class="btn btn btn-outline-dark" target="_blank" href="${item.pdfLocation}">
-                            <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" loading="lazy" />&nbsp;${genericTranslations.download}
+                        <a class="btn btn btn-outline-dark" ${tBlank} href="${item.pdfLocation}">
+                            <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" ${lazyLoading} />&nbsp;${genericTranslations.download}
                         </a>
                     </div>`;
                 }
@@ -129,7 +130,7 @@ function loadHobbies() {
 
             hobbiesList.innerHTML += `<li class="list-inline-item" id='btnExtraHobbies'>
                 <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-bs-toggle="modal" data-target="#otherHobbies">
-                    <img src="${iconsPath}plus.svg" alt="extra" loading="lazy" />
+                    <img src="${iconsPath}plus.svg" alt="extra" ${lazyLoading} />
                 </a>
             </li>`;
 
@@ -173,7 +174,7 @@ function loadServices() {
                 let items = `<div class="col-lg ml-auto"><p class="lead">`;
                 item.forEach(elem => {
                     let title = "";
-                    title = (elem.link) ? `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} target="_blank" class="btn btn-light serviceLink" rel="noreferrer"><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' loading="lazy" class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`
+                    title = (elem.link) ? `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} ${tBlank} class="btn btn-light serviceLink" ${noreferrer}><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' ${lazyLoading} class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`
                                         : title = `<b>${elem.title}</b>`;
                     items += `<span>${title}</span><br /><br />`;
                     totalServices++;
@@ -228,11 +229,10 @@ function loadAwards() {
                 linkPreview.addEventListener("click", () => {
                     const gTitle = document.getElementById('gTitle');
                     gTitle.style.display = "none";
-                    let lPreview = !(item.link.includes("storage.live.com")) ? iframeLinkPreviews : imgPreview;
-                    lPreview = lPreview.replace('{URL}', item.link);
-                    lPreview = lPreview.replace('{Title}', item.title);
+
+                    let lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview;
                     iframeGeneric.innerHTML = lPreview;    
-            });
+                });
             });
         }
         else {
@@ -268,7 +268,7 @@ function loadPersonalProjects() {
             let pp = `<div class="carousel-item${isActive}">
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
-                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${hOpt}><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</p>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${hOpt}><a class="text-material-link-dark" href="${item.link}" ${noreferrer} ${tBlank}>${item.title}</a>, ${item.timeFrame}</p>
                 </div>
             </div>`;
 
@@ -427,7 +427,7 @@ function loadSocialMedias() {
 
                 sBasic.innerHTML += `<li class="list-inline-item">
                     <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-bs-toggle="modal" data-target="#otherLocs">
-                        <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" loading="lazy" />
+                        <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" ${lazyLoading} />
                     </a>
                 </li>`;
 
@@ -503,7 +503,7 @@ function addIFrameModal() {
         let cService = document.getElementById(`service${serv}`);
         cService.addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById("serviceForm").innerHTML = `<iframe src="${cService.href}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+            document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
         
             try {
                 let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
@@ -615,7 +615,7 @@ function getInnerTitle(title) {
 }
 
 function getImgReview(src, rev) {
-    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, `<img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`);
+    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, `<img ${lazyLoading} class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`);
 }
 
 function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
@@ -644,7 +644,7 @@ function setWebPImage(id, img) {
 
 function getImgContainer(link, img, title) {
     return `<div class="col-sm">
-        <a href="${link}" rel="noreferrer" target="_blank">
+        <a href="${link}" ${noreferrer} ${tBlank}>
             ${img}
         </a>
         <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${title}</p>
@@ -652,5 +652,5 @@ function getImgContainer(link, img, title) {
 }
 
 function getImgTag(id, alt) {
-    return `<img id="${id}" loading="lazy" class="img-fluid" alt="${alt}" />`;
+    return `<img id="${id}" ${lazyLoading} class="img-fluid" alt="${alt}" />`;
 }
