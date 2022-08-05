@@ -254,14 +254,14 @@ function loadBasicInfo() {
     });
 
     if (favBook.isVisible) { 
-        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' loading="lazy" />&nbsp;&nbsp;${favBook.title}</a>`;
+        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} />&nbsp;&nbsp;${favBook.title}</a>`;
     }
     else {
         favBookDiv.style.display = "none";
     }
 
     if (favPodcast.isVisible) {
-        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' loading="lazy" />&nbsp;&nbsp;${favPodcast.title}</a>`;
+        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' ${lazyLoading} />&nbsp;&nbsp;${favPodcast.title}</a>`;
     }
     else {
         favPodcastDiv.style.display = "none";
@@ -362,11 +362,11 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let ignoreClick = isIgnoredClick ? "ignore-click" : "";
     let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
     let imgClassName = imgClass == "" ? "" : `class='${imgClass}'`;
-    let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} loading="lazy" />`;
+    let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} ${lazyLoading} />`;
 
     return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }
 
-function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = `loading="lazy"`) {
+function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
     return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
 }
