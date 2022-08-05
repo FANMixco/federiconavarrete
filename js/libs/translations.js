@@ -566,7 +566,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
 
-    srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webP`;
+    srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
     srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
     /*if (validDate) {
