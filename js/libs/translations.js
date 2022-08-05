@@ -60,7 +60,7 @@ function loadReviews() {
 
                 let rTmp = `${item.shortReview}<a class="text-material-link" data-bs-toggle="modal" data-target="#reviewGeneric" href="#reviewGeneric" id="readMore${currentReview}">${genericTranslations.readMore}</a>`;
                 let review = `<div class="carousel-item text-center${active}">
-                                ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp)}
+                                ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
                                 </div>`;
 
                 divReviewsPreviews.innerHTML += review;
@@ -79,7 +79,7 @@ function loadReviews() {
                     </div>`;
                 }
                 else {
-                    longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title), 'dark', 'black', item.review, "centerText");
+                    longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title), 'dark', 'black', item.review, "centerText", false);
                 }
 
                 fullReviews.push({ 
@@ -263,10 +263,12 @@ function loadPersonalProjects() {
         personalProjects.forEach(item => {
             let isActive = item.isActive ? " active" : "";
 
+            let hOpt = WURFL.is_mobile && WURFL.form_factor === "Smartphone" ? "style='font-size: larger!important'" : "";
+
             let pp = `<div class="carousel-item${isActive}">
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
-                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2"><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</p>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${hOpt}><a class="text-material-link-dark" href="${item.link}" rel="noreferrer" target="_blank">${item.title}</a>, ${item.timeFrame}</p>
                 </div>
             </div>`;
 
@@ -416,7 +418,7 @@ function loadNewsArticles() {
                     <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
                         <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
                     </a>
-                    <h4 class="text-center text-uppercase text-secondary mb-0">${item.title}</h4>
+                    <p class="text-center text-uppercase text-secondary mb-0 h4">${item.title}</p>
                 </div>`;
                 divMMArticles.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
@@ -593,7 +595,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 function getUTubeContainer(item) {
     return `<div class="col-sm">
         ${getUTubeLite(item)}
-    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
+        <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
     </div>`;
 }
 
@@ -607,8 +609,9 @@ function getImgPreview(img, currentReview, extraClass) {
             </div>`;
 }
 
-function getReviewName(name) {
-    return `<p class="mt-4 mb-0 text-center h5 p-1"><strong class="text-material-orange text-uppercase">${name}</strong></p>`;
+function getReviewName(name, isLarge) {
+    let extraCss = (WURFL.is_mobile && WURFL.form_factor === "Smartphone") && isLarge ? "style='font-size: larger!important'" : '';
+    return `<p class="mt-4 mb-0 text-center h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
 }
 
 function getReviewTitle(color, title, cssCentered) {
@@ -623,14 +626,14 @@ function getImgReview(src, rev) {
     return `<img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`;
 }
 
-function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered = "") {
-    return `${getImgName(name, img, currentReview, extraClass)}
+function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
+    return `${getImgName(name, img, currentReview, extraClass, isLarge)}
     ${extraTitle}
     ${getReviewTitle(txtColor, title, cssCentered)}
     <p class="m-0 pt-3 text-${txtColor2}">${content}</p>`;
 }
 
-function getImgName(name, img, currentReview, extraClass) {
+function getImgName(name, img, currentReview, extraClass, isLarge) {
     return `${getImgPreview(img, currentReview, extraClass)}
-    ${getReviewName(name)}`;
+    ${getReviewName(name, isLarge)}`;
 }
