@@ -22,11 +22,15 @@
 @media screen and (max-width: 682px) {
     #mainBackground {
         background-image: url('../img/lake_small.jpg');
+        background-image: -webkit-image-set(url("../img/lake_small.webp") 1x, url("../img/lake_small.jpg") 1x);
+        background-image: image-set(url("../img/lake_small.webp") type("image/webp"), url("lake_small.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
     #skillBusiness {
         background-image: url('../img/business_small.jpg');
+        background-image: -webkit-image-set(url("../img/business_small.webp") 1x, url("../img/business_small.jpg") 1x);
+        background-image: image-set(url("../img/business_small.webp") type("image/webp"), url("../img/business_small.jpg") type("image/jpeg"));
         background-size: cover;
     }
 }
@@ -34,11 +38,15 @@
 @media screen and (max-width: 1364px) and (min-width: 683px) {
     #mainBackground {
         background-image: url('../img/lake_medium.jpg');
+        background-image: -webkit-image-set(url("../img/lake_medium.webp") 1x, url("../img/lake_medium.jpg") 1x);
+        background-image: image-set(url("../img/lake_medium.webp") type("image/webp"), url("../img/lake_medium.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
     #skillBusiness {
         background-image: url('../img/business_medium.jpg');
+        background-image: -webkit-image-set(url("../img/business_medium.webp") 1x, url("../img/business_medium.jpg") 1x);
+        background-image: image-set(url("../img/business_medium.webp") type("image/webp"), url("../img/business_medium.jpg") type("image/jpeg"));
         background-size: cover;
     }
 }
@@ -46,11 +54,15 @@
 @media screen and (min-width: 1365px) {
     #mainBackground {
         background-image: url('../img/lake_large.jpg');
+        background-image: -webkit-image-set(url("../img/lake_large.webp") 1x, url("../img/lake_large.jpg") 1x);
+        background-image: image-set(url("../img/lake_large.webp") type("image/webp"), url("../img/lake_large.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
     #skillBusiness {
         background-image: url('../img/business_large.jpg');
+        background-image: -webkit-image-set(url("../img/business_large.webp") 1x, url("../img/business_large.jpg") 1x);
+        background-image: image-set(url("../img/business_large.webp") type("image/webp"), url("../img/business_large.jpg") type("image/jpeg"));
         background-size: cover;
     }
 }
