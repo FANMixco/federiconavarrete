@@ -1,14 +1,12 @@
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
 let extraContact = 0;
+const lazyLoading = `loading="lazy"`;
 
 if (language.includes('es'))
     lang = "es-sv/min";
 
 let langLoc = "js/data/translations/";
-
-const iframeElSalvador = `<iframe title="El Salvador Map" id="iframeElSalvador" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat' loading="lazy" allowfullscreen></iframe>`;
-const iframeYoutube = `<iframe src="https://www.youtube.com/embed/IcWZ962uYy0" title="Federico Navarrete" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat' loading="lazy" allowfullscreen></iframe>`;
 
 const iconsPath = 'img/icons/website/';
 
@@ -213,7 +211,7 @@ function loadTranslations() {
     if (!smallScreenMobileOS) {
         const btnPause = document.getElementById('spanMenu');
 
-        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" loading="lazy" />`;
+        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" ${lazyLoading} />`;
 
         setTimeout(function() {
             const divSkillsContainer = document.getElementById('divSkillsContainer');
@@ -225,7 +223,7 @@ function loadTranslations() {
     } else {
         const spanMenu = document.getElementById('spanMenu');
 
-        spanMenu.innerHTML = `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" loading="lazy" />`;
+        spanMenu.innerHTML = `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" ${lazyLoading} />`;
     }
 }
 
@@ -288,7 +286,7 @@ function loadBasicInfo() {
     aElSalvador.addEventListener('click', function() {
         if (!document.getElementById('iframeElSalvador')) {
             const divIframElSalvador = document.getElementById('divIframElSalvador');
-            divIframElSalvador.innerHTML += iframeElSalvador;
+            divIframElSalvador.innerHTML += getIframe('El Salvador Map', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl', `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
         }
     }, false);
 
@@ -307,7 +305,7 @@ function loadBasicInfo() {
         const gTitle = document.getElementById('gTitle');
         gTitle.innerHTML = genericTranslations.winning;
         gTitle.style.display = "block";
-        iframeGeneric.innerHTML = iframeYoutube;
+        iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
     });
 }
 
@@ -367,4 +365,8 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} loading="lazy" />`;
 
     return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
+}
+
+function getIframe(title, src, extras, lazy = `loading="lazy"`, fullscreen = 'allowfullscreen') {
+    return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
 }
