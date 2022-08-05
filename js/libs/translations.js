@@ -129,7 +129,7 @@ function loadHobbies() {
 
             hobbiesList.innerHTML += `<li class="list-inline-item" id='btnExtraHobbies'>
                 <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-bs-toggle="modal" data-target="#otherHobbies">
-                <img src="${iconsPath}plus.svg" alt="extra" loading="lazy" />
+                    <img src="${iconsPath}plus.svg" alt="extra" loading="lazy" />
                 </a>
             </li>`;
 
@@ -529,6 +529,13 @@ function loadVideosAndPresentations() {
 function loadMainImage() {
     try {
         let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
+
+        const imgSrcP1 = document.getElementById('imgSrcP1');
+        const imgSrcP2 = document.getElementById('imgSrcP2');
+
+        imgSrcP1.srcset = `img/photos/profile${size}.webp`;
+        imgSrcP2.srcset = `img/photos/profile${size}.jpg`;
+
         const imgProfile = document.getElementById('imgProfile');
 
         imgProfile.src = `img/photos/profile${size}.jpg`;
@@ -608,7 +615,11 @@ function getInnerTitle(title) {
 }
 
 function getImgReview(src, rev) {
-    return `<img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`;
+    return `<picture>
+                <source srcset="${src.replace('.jpg', '.webp')}" type="image/webp">
+                <source srcset="${src}" type="image/jpeg"> 
+                <img loading="lazy" class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />
+            </picture>`;
 }
 
 function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {

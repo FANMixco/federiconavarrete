@@ -112,7 +112,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Header -->
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
-            <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgProfile" style="display: none!important;" alt="image profile" height="300" width="300" />
+            <picture>
+               <source id="imgSrcP1" type="image/webp">
+               <source id="imgSrcP2" type="image/jpeg"> 
+               <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgProfile" style="display: none!important;" alt="image profile" height="300" width="300" />
+            </picture>
             <h1 class="text-uppercase mb-0" id="hName"></h1>
             <hr class="star-black-dark">
             <h2 class="fw-light mb-0" id="hHeadline"></h2>
@@ -444,13 +448,21 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                      <div class="row justify-content-center">
                         <div class="col-sm mb-2">
                            <a href="https://linkmix.co/9855605" target="_blank">
-                              <img src="/img/mybook/book_medium.jpg" class="img-fluid mb-3" alt="Timeless Stories of El Salvador" loading="lazy" />
+                              <picture>
+                                 <source srcset="/img/mybook/book_medium.webp" type="image/webp">
+                                 <source srcset="/img/mybook/book_medium.jpg" type="image/jpeg"> 
+                                 <img src="/img/mybook/book_medium.jpg" class="img-fluid mb-3" alt="Timeless Stories of El Salvador" loading="lazy" />
+                              </picture>
                            </a>
                            <a href="https://linkmix.co/9855605" target="_blank" class="btn btn-primary getBtnCopy"></a>
                         </div>
                         <div class="col-sm mb-2">
                            <a href="https://linkmix.co/9852263" target="_blank">
-                              <img src="/img/mybook/second_medium.jpg" class="img-fluid mb-3" alt="Timeless Stories of El Salvador v2" loading="lazy" />           
+                              <picture>
+                                 <source srcset="/img/mybook/second_medium.webp" type="image/webp">
+                                 <source srcset="/img/mybook/second_medium.jpg" type="image/jpeg"> 
+                                 <img src="/img/mybook/book_medium.jpg" class="img-fluid mb-3" alt="Timeless Stories of El Salvador" loading="lazy" />
+                              </picture>
                            </a>
                            <a href="https://linkmix.co/9852263" target="_blank" class="btn btn-primary getBtnCopy"></a>
                         </div>
