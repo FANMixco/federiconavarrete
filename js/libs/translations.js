@@ -335,12 +335,7 @@ function loadPresentations() {
         const divPPTs = document.getElementById('divPPTs');
         if (isVisible) {
             presentations.forEach(item => {
-                let ppt = `<div class="col-sm">
-                    <a href="${item.link}" rel="noreferrer" target="_blank">
-                        <img id="${item.imgID}" loading="lazy" class="img-fluid" alt="${item.title}" />
-                    </a>
-                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
-                </div>`;
+                let ppt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
                 divPPTs.innerHTML += ppt;
                 setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
             });
@@ -365,12 +360,7 @@ function loadOrganizedEvents() {
         const divEvents = document.getElementById('divEvents');
         if (isVisible) {
             events.forEach(item => {
-                let event = `<div class="col-sm">
-                    <a href="${item.link}" rel="noreferrer" target="_blank">
-                        <img alt='events' loading="lazy" class="img-fluid" id="${item.imgID}" />
-                    </a>
-                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
-                </div>`;
+                let event = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, 'events')), item.title);
                 divEvents.innerHTML += event;
                 setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
             });
@@ -389,13 +379,8 @@ function loadArticles() {
         if (isVisible) {
             const divArticles = document.getElementById('divArticles');
             articles.forEach(item => {
-                let event = `<div class="col-sm">
-                    <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
-                        <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
-                    </a>
-                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
-                </div>`;
-                divArticles.innerHTML += event;
+                let art = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+                divArticles.innerHTML += art;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
             });
         }
@@ -414,13 +399,8 @@ function loadNewsArticles() {
         if (isVisible) {
             const divMMArticles = document.getElementById('divMMArticles');
             articles.forEach(item => {
-                let event = `<div class="col-sm">
-                    <a href="${item.link}" class="text-decoration-none" target="_blank" rel="noreferrer">
-                        <img loading="lazy" class="img-fluid" id="${item.imgID}" alt="${item.title}" />
-                    </a>
-                    <p class="text-center text-uppercase text-secondary mb-0 h4">${item.title}</p>
-                </div>`;
-                divMMArticles.innerHTML += event;
+                let nArt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+                divMMArticles.innerHTML += nArt;
                 setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
             });
         }
@@ -447,7 +427,7 @@ function loadSocialMedias() {
 
                 sBasic.innerHTML += `<li class="list-inline-item">
                     <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-bs-toggle="modal" data-target="#otherLocs">
-                    <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" loading="lazy" />
+                        <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" loading="lazy" />
                     </a>
                 </li>`;
 
@@ -561,10 +541,12 @@ function loadMainImage() {
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
-    let imgBookSize = '';
+    //let imgBookSize = '';
     let imgSize = '';
 
     let imgTemp = document.getElementById(imgID);
+    let srcWebP = document.getElementById(`srcWebP${imgID}`);
+    let srcJPG = document.getElementById(`srcJPG${imgID}`);
     //let divBook = document.getElementById("myBookDiv");
     //divBook.style.display = 'none';
 
@@ -583,6 +565,9 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     }
     
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
+
+    srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webP`;
+    srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
     /*if (validDate) {
         imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;
@@ -636,4 +621,25 @@ function getReviewContainer(extraClass, img, currentReview, name, title, extraTi
 function getImgName(name, img, currentReview, extraClass, isLarge) {
     return `${getImgPreview(img, currentReview, extraClass)}
     ${getReviewName(name, isLarge)}`;
+}
+
+function setWebPImage(id, img) {
+    return `<picture>
+                <source id='srcWebP${id}' type="image/webp">
+                <source id='srcJPG${id}' type="image/jpeg"> 
+                ${img}
+            </picture>`;
+}
+
+function getImgContainer(link, img, title) {
+    return `<div class="col-sm">
+        <a href="${link}" rel="noreferrer" target="_blank">
+            ${img}
+        </a>
+        <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${title}</p>
+    </div>`
+}
+
+function getImgTag(id, alt) {
+    return `<img id="${id}" loading="lazy" class="img-fluid" alt="${alt}" />`;
 }
