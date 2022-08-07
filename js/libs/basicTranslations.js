@@ -3,6 +3,8 @@ let lang = "en-us/min";
 let extraContact = 0;
 const lazyLoading = `loading="lazy"`;
 const smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
+const eClick = 'click';
+const nVis = 'none';
 
 if (language.includes('es'))
     lang = "es-sv/min";
@@ -232,14 +234,6 @@ function setTranslation(elem, text) {
     });
 }
 
-function getActionBtn(link, iconsPath, icon, title, extras = "") {
-    return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}"><img src="${iconsPath}${icon}.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} ${extras} />&nbsp;&nbsp;${title}</a>`;
-}
-
-function getInLineBtn(btnAction, action, icon) {
-    return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`;
-}
-
 function loadBasicInfo() {
     const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype } = basicInfo;
 
@@ -264,14 +258,14 @@ function loadBasicInfo() {
         favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title);
     }
     else {
-        favBookDiv.style.display = "none";
+        favBookDiv.style.display = nVis;
     }
 
     if (favPodcast.isVisible) {
         favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'podcast-solid', favPodcast.title, ` style="height:24px;width:24px"`);
     }
     else {
-        favPodcastDiv.style.display = "none";
+        favPodcastDiv.style.display = nVis;
     }
 
     const listContacts = document.getElementById('listContacts');
@@ -290,7 +284,7 @@ function loadBasicInfo() {
 
     const aElSalvador = document.getElementById('aElSalvador');
 
-    aElSalvador.addEventListener('click', function() {
+    aElSalvador.addEventListener(eClick, function() {
         if (!document.getElementById('iframeElSalvador')) {
             const divIframElSalvador = document.getElementById('divIframElSalvador');
             divIframElSalvador.innerHTML += getIframe('El Salvador Map', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl', `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
@@ -299,16 +293,16 @@ function loadBasicInfo() {
 
     const linkContactMe = document.getElementById("linkContactMe");
 
-    linkContactMe.addEventListener('click', contactMeForm);
+    linkContactMe.addEventListener(eClick, contactMeForm);
 
     const linkContactMeAbout = document.getElementById("linkContactMeAbout");
 
-    linkContactMeAbout.addEventListener('click', contactMeForm);
+    linkContactMeAbout.addEventListener(eClick, contactMeForm);
 
     const linkPreview = document.getElementById('youTubePreview');
     let iframeGeneric = document.getElementById('iframeGeneric');
 
-    linkPreview.addEventListener("click", () => {
+    linkPreview.addEventListener(eClick, () => {
         const gTitle = document.getElementById('gTitle');
         gTitle.innerHTML = genericTranslations.winning;
         gTitle.style.display = "block";
@@ -376,4 +370,12 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
 
 function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
     return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
+}
+
+function getActionBtn(link, iconsPath, icon, title, extras = "") {
+    return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}"><img src="${iconsPath}${icon}.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} ${extras} />&nbsp;&nbsp;${title}</a>`;
+}
+
+function getInLineBtn(btnAction, action, icon) {
+    return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`;
 }
