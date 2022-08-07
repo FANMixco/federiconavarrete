@@ -124,20 +124,16 @@ function loadHobbies() {
             finalH.forEach(item => {
                 let btnOptional = item.isOpt ? " btnOptional" : "";
 
-                hobbiesList.innerHTML += `<li class="list-inline-item${btnOptional}">${getHobbyImg(item)}</li>`;
+                hobbiesList.innerHTML += getListItem(getHobbyImg(item), '', btnOptional);
             });
 
-            hobbiesList.innerHTML += `<li class="list-inline-item" id='btnExtraHobbies'>
-                <a href="#otherHobbies" class="btn btn-outline-light btn-social text-center rounded-circle externalImg" data-bs-toggle="modal" data-target="#otherHobbies">
-                    <img src="${iconsPath}plus.svg" alt="extra" ${lazyLoading} />
-                </a>
-            </li>`;
+            hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', "id='btnExtraHobbies'");
 
             const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
 
             const optHobbies = document.getElementById('optHobbies');
             hobbiesOthers.forEach(elem => {
-                optHobbies.innerHTML += `<li class="list-inline-item">${getHobbyImg(elem)}</li>`;
+                optHobbies.innerHTML += getListItem(getHobbyImg(elem));
             });
 
             [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
@@ -411,6 +407,7 @@ function loadNewsArticles() {
     catch (e) { return e; }
 }
 
+
 function loadSocialMedias() {
     try {
         const { socialMedia, isVisible} = socialBasicList;
@@ -418,17 +415,13 @@ function loadSocialMedias() {
         if (isVisible) {
             const socialMediaBasic = document.getElementById('socialMediaBasic');
             socialMedia.forEach(item => {
-                socialMediaBasic.innerHTML += `<li class="list-inline-item">${getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`;
+                socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
             });
 
             if (socialOthersList.isVisible) {
                 let sBasic = document.getElementById("socialMediaBasic");
-
-                sBasic.innerHTML += `<li class="list-inline-item">
-                    <a href="#otherLocs" class="btn btn-outline-light btn-social text-center rounded-circle btn-footer" data-bs-toggle="modal" data-target="#otherLocs">
-                        <img src="${iconsPath}plus.svg" alt="extra" class="iconFooter btn-footer" ${lazyLoading} />
-                    </a>
-                </li>`;
+                
+                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", 'class="iconFooter btn-footer"');
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
@@ -438,7 +431,7 @@ function loadSocialMedias() {
                         externalClass = elem.externalClass;
                     }
 
-                    socialMediaOthers.innerHTML += `<li class="list-inline-item">${getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter")}</li>`;
+                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
                 });
             }
         }
@@ -631,4 +624,14 @@ function getImgContainer(link, img, title) {
 
 function getImgTag(id, alt) {
     return `<img id="${id}" ${lazyLoading} class="img-fluid" alt="${alt}" />`;
+}
+
+function getListItem(elem, extra = "", extraCls = "") {
+    return `<li class="list-inline-item${extraCls}" ${extra}>${elem}</li>`;
+}
+
+function getBtnOthers(loc, cls, extra = "", imgExtra = "") {
+    return getListItem(`<a href="#${loc}" class="btn btn-outline-light btn-social text-center rounded-circle ${cls}"     data-bs-toggle="modal" data-target="#${loc}">
+    <img src="${iconsPath}plus.svg" alt="extra" ${imgExtra} ${lazyLoading} />
+</a>`, extra);
 }
