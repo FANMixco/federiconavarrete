@@ -18,7 +18,15 @@ function loadLegends() {
             <div class="card">
             <div class="img-thumbnail">
                 <a class="text-warning" target="_blank" href="${item.link}">
-                    <img src="${item.img}" alt="Cadejo" class="cards-row">
+                    <picture>
+                        <source
+                            srcset="${item.img.replace(".jpg", ".webp")}"
+                            type="image/webp">
+                        <source
+                            srcset="${item.img}" 
+                            type="image/jpeg">
+                        <img src="${item.img}" alt="${item.title}" class="cards-row">
+                    </picture>
                     <div class="caption">
                         <p>${item.title}</p>
                     </div>
