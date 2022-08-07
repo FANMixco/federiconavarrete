@@ -224,7 +224,7 @@ function loadTranslations() {
     if (!smallScreenMobileOS) {
         const btnPause = document.getElementById('spanMenu');
 
-        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" />`;
+        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;${getHMenu()}`;
 
         setTimeout(function() {
             const divSkillsContainer = document.getElementById('divSkillsContainer');
@@ -236,7 +236,7 @@ function loadTranslations() {
     } else {
         const spanMenu = document.getElementById('spanMenu');
 
-        spanMenu.innerHTML = `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" />`;
+        spanMenu.innerHTML = getHMenu('style="margin-top:0px!important"');
     }
 }
 
@@ -390,4 +390,8 @@ function getActionBtn(link, iconsPath, icon, title, extras = "") {
 
 function getInLineBtn(btnAction, action, icon) {
     return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`;
+}
+
+function getHMenu(extras = "") {
+    return `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" height="13" width="11.2" ${extras} />`;
 }
