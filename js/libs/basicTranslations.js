@@ -224,7 +224,7 @@ function loadTranslations() {
     if (!smallScreenMobileOS) {
         const btnPause = document.getElementById('spanMenu');
 
-        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" ${lazyLoading} />`;
+        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" />`;
 
         setTimeout(function() {
             const divSkillsContainer = document.getElementById('divSkillsContainer');
@@ -236,7 +236,7 @@ function loadTranslations() {
     } else {
         const spanMenu = document.getElementById('spanMenu');
 
-        spanMenu.innerHTML = `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" ${lazyLoading} />`;
+        spanMenu.innerHTML = `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu" style="margin-top:0px!important" />`;
     }
 }
 
