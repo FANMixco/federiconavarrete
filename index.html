@@ -114,16 +114,27 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
             <picture>
-               <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 320px)">
-               <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 320px)">
+               <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 769px)">
+               <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 768px)">
+               <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 480px)">
 
-               <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 480px)">
-               <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 480px)">
+               <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 769px)">
+               <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 768px)">
+               <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 480px)">
 
-               <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 481px)">
-               <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 481px)">
+               <img 
+                  srcset="img/photos/profile.jpg 1024w, 
+                          img/photos/profile_medium.jpg 768w,
+                          img/photos/profile_small.jpg 500w"
 
-               <img src="img/photos/profile_medium.jpg" alt="Federico Navarrete" class="img-fluid mb-5 d-block mx-auto" id="imgProfile" height="300" width="300">
+                  sizes="(max-width: 1024px) 1024w,
+                         (max-width: 768px) 768px,
+                         (max-width: 480px) 480px"
+
+                  src="img/photos/profile_medium.jpg" 
+                  alt="Federico's pic"
+                  class="img-fluid mb-5 d-block mx-auto"
+                  id="imgProfile" height="300" width="300">
             </picture>
 
             <!--picture>
