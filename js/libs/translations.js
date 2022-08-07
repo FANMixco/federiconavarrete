@@ -593,7 +593,7 @@ function getInnerTitle(title) {
 }
 
 function getImgReview(src, rev) {
-    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, `<img ${lazyLoading} class="d-block w-100 rounded-circle" src="${src}" alt="review${rev} slide" />`);
+    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, `<img ${lazyLoading} class="d-block w-100 h-auto rounded-circle" src="${src}" alt="review${rev} slide" height="151" width="151" />`);
 }
 
 function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
