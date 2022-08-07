@@ -100,23 +100,45 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          </div>
       </nav>
 
-      <header id="myBookDiv" class="masthead bg-primary text-black text-center" style="background-color: white!important; display: none;">
+      <!--Books display-->
+      <!--header id="myBookDiv" class="masthead bg-primary text-black text-center" style="background-color: white!important; display: none;">
          <div class="container">
             <a href="https://linkmix.co/9852263" target="_blank">
                <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgBook" class="img-fluid" />
                <h4 id="newsH4"></h4>
             </a>
          </div>
-      </header>
+      </header-->
 
       <!-- Header -->
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
             <picture>
+               <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 320px)">
+               <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 320px)">
+
+               <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 480px)">
+               <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 480px)">
+
+               <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 481px)">
+               <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 481px)">
+
+               <img src="img/photos/profile_medium.jpg" alt="Federico Navarrete" class="img-fluid mb-5 d-block mx-auto" id="imgProfile" height="300" width="300">
+            </picture>
+
+            <!--picture>
                <source id="imgSrcP1" type="image/webp">
                <source id="imgSrcP2" type="image/jpeg"> 
+               <img srcset="img/photos/profile_small.jpg 320w,
+                            img/photos/profile_medium.jpg 480w,
+                            img/photos/profile.jpg 800w"
+                  sizes="(max-width: 320px) 280px,
+                        (max-width: 480px) 440px,
+                        800px"
+                  src="img/photos/profile_medium.jpg" alt="Bengal tiger">
+
                <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgProfile" style="display: none!important;" alt="image profile" height="300" width="300" />
-            </picture>
+            </picture-->
             <h1 class="text-uppercase mb-0" id="hName"></h1>
             <hr class="star-black-dark">
             <h2 class="fw-light mb-0" id="hHeadline"></h2>

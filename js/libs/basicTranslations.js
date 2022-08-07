@@ -2,6 +2,7 @@ let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
 let extraContact = 0;
 const lazyLoading = `loading="lazy"`;
+const smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
 
 if (language.includes('es'))
     lang = "es-sv/min";
@@ -206,8 +207,6 @@ function loadTranslations() {
         setTranslation(item.identifier, item.value);
     });
 
-    let smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
-
     if (!smallScreenMobileOS) {
         const btnPause = document.getElementById('spanMenu');
 
@@ -233,6 +232,14 @@ function setTranslation(elem, text) {
     });
 }
 
+function getActionBtn(link, iconsPath, icon, title, extras = "") {
+    return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}"><img src="${iconsPath}${icon}.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} ${extras} />&nbsp;&nbsp;${title}</a>`;
+}
+
+function getInLineBtn(btnAction, action, icon) {
+    return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`;
+}
+
 function loadBasicInfo() {
     const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype } = basicInfo;
 
@@ -254,14 +261,14 @@ function loadBasicInfo() {
     });
 
     if (favBook.isVisible) { 
-        favBookDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favBook.link}"><img src="${iconsPath}download.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} />&nbsp;&nbsp;${favBook.title}</a>`;
+        favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title);
     }
     else {
         favBookDiv.style.display = "none";
     }
 
     if (favPodcast.isVisible) {
-        favPodcastDiv.innerHTML += `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${favPodcast.link}"><img src="${iconsPath}podcast-solid.svg" class="mr-2 btnIcons" style="height:24px;width:24px" alt='podcast' ${lazyLoading} />&nbsp;&nbsp;${favPodcast.title}</a>`;
+        favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'podcast-solid', favPodcast.title, ` style="height:24px;width:24px"`);
     }
     else {
         favPodcastDiv.style.display = "none";
@@ -270,15 +277,15 @@ function loadBasicInfo() {
     const listContacts = document.getElementById('listContacts');
 
     if (skype.isVisible) {
-        listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.skype, `skype:${skype.id}?call`, `${iconsPath}skype.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
+        listContacts.innerHTML = getInLineBtn(genericTranslations.skype, `skype:${skype.id}?call`, 'skype') + listContacts.innerHTML;
     }
 
     if (telephone.isVisible) {
-        listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.telephone, `tel:${telephone.number}`, `${iconsPath}phone.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
+        listContacts.innerHTML = getInLineBtn(genericTranslations.telephone, `tel:${telephone.number}`, 'phone') + listContacts.innerHTML;
     }
 
     if (email.isVisible) {
-        listContacts.innerHTML = `<li class="list-inline-item">${getImage(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, `${iconsPath}at.svg`, false, false, "btn-footer", false, "iconFooter")}</li>` + listContacts.innerHTML;
+        listContacts.innerHTML = getInLineBtn(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, 'at') + listContacts.innerHTML;
     }
 
     const aElSalvador = document.getElementById('aElSalvador');

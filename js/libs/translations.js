@@ -6,8 +6,6 @@ const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
 const noreferrer = `rel="noreferrer"`;
 const tBlank = `target="_blank"`;
 
-loadMainImage();
-
 getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch((e) => { console.error(e); });
@@ -113,8 +111,6 @@ function loadReviews() {
 
 function loadHobbies() {
     try {
-        const smallScreenMobileOS = WURFL.is_mobile && WURFL.form_factor === "Smartphone";
-
         const { hobbies, isVisible } = hobbiesList;
 
         if (isVisible) {
@@ -263,7 +259,7 @@ function loadPersonalProjects() {
         personalProjects.forEach(item => {
             let isActive = item.isActive ? " active" : "";
 
-            let hOpt = WURFL.is_mobile && WURFL.form_factor === "Smartphone" ? "style='font-size: larger!important'" : "";
+            let hOpt = smallScreenMobileOS ? "style='font-size: larger!important'" : "";
 
             let pp = `<div class="carousel-item${isActive}">
                 <div class="carousel-video-inner">
@@ -526,27 +522,6 @@ function loadVideosAndPresentations() {
     loadPresentations();
 }
 
-function loadMainImage() {
-    try {
-        let size = WURFL.form_factor == "Smartphone" ? "_small" : WURFL.form_factor == "Tablet" ? "_medium" : "";
-
-        const imgSrcP1 = document.getElementById('imgSrcP1');
-        const imgSrcP2 = document.getElementById('imgSrcP2');
-
-        imgSrcP1.srcset = `img/photos/profile${size}.webp`;
-        imgSrcP2.srcset = `img/photos/profile${size}.jpg`;
-
-        const imgProfile = document.getElementById('imgProfile');
-
-        imgProfile.src = `img/photos/profile${size}.jpg`;
-        imgProfile.setAttribute("loading", "lazy");
-
-        imgProfile.style.display = "";
-        imgProfile.style.display = "block";
-    }
-    catch (e) { console.error(e); }
-}
-
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     //let imgBookSize = '';
     let imgSize = '';
@@ -602,7 +577,7 @@ function getImgPreview(img, currentReview, extraClass) {
 }
 
 function getReviewName(name, isLarge) {
-    let extraCss = (WURFL.is_mobile && WURFL.form_factor === "Smartphone") && isLarge ? "style='font-size: larger!important'" : '';
+    let extraCss = smallScreenMobileOS && isLarge ? "style='font-size: larger!important'" : '';
     return `<p class="mt-4 mb-0 text-center h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
 }
 
