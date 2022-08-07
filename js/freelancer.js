@@ -47,7 +47,7 @@ function onReadyFreelancer() {
         });
     });
 
-    if (WURFL.form_factor === "Smartphone") {
+    if (deviceType() === "Smartphone") {
 
         var el_autohide = document.querySelector('.autohide');
  

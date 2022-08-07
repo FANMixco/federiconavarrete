@@ -539,9 +539,9 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     //let currentDate = new Date();
     //let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
 
-    switch (WURFL.form_factor) {
+    switch (deviceType()) {
         case "Smartphone":
-            imgBookSize = '_small';
+            //imgBookSize = '_small';
             imgSize = '_small';
             break;
         case "Tablet":
