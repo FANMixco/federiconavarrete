@@ -229,7 +229,7 @@ function loadAwards() {
                     const gTitle = document.getElementById('gTitle');
                     gTitle.style.display = nVis;
 
-                    let lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview;
+                    let lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
                     iframeGeneric.innerHTML = lPreview;    
                 });
             });
