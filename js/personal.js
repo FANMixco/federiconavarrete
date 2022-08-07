@@ -1,6 +1,8 @@
-const iframeApps = `<iframe title='Projects' id='iframeApps' src="apps.html?isIframe=true" class="previewerIframe" allowfullscreen></iframe>`;
+const iframeApps = getIframe('Projects', 'apps.html?isIframe=true', 'class="previewerIframe" allowfullscreen');
 
-const iframePrezis = `<iframe title="Presentations" id='iframePrezis' src="prezis.html?isIframe=true" class="previewerIframe" allowfullscreen></iframe>`;
+const iframePrezis = getIframe("Presentations", "prezis.html?isIframe=true", `class="previewerIframe" allowfullscreen id='iframePrezis'`);
+
+const fURL = 'https://federiconavarrete.com/';
 
 const imgLocPortfolio = 'img/portfolio/';
 const imgLocArticles = 'img/articles/';
@@ -25,13 +27,13 @@ function onReadyPersonal() {
     
     const appsFullScreen = document.getElementById("appsFullScreen");
     appsFullScreen.addEventListener('click', function() {
-        window.open("https://federiconavarrete.com/apps.html");
+        window.open(`${fURL}/apps.html`);
     });
     
     const pptsFullScreen = document.getElementById("pptsFullScreen");
     
     pptsFullScreen.addEventListener('click', function() {
-        window.open("https://federiconavarrete.com/prezis.html");
+        window.open(`${fURL}/prezis.html`);
     });
     
     let cYear = new Date().getFullYear();
@@ -45,7 +47,7 @@ function onReadyPersonal() {
     });
 }
 if (document.readyState !== "loading") {
-    onReadyPersonal(); // Or setTimeout(onReady, 0); if you want it consistently async
+    onReadyPersonal();
 } else {
     document.addEventListener("DOMContentLoaded", onReadyPersonal);
 }
