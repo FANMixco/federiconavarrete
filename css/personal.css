@@ -133,6 +133,7 @@
 
 #elSalvadorIcon{
     height: 1.3em;
+    width: auto;
     filter: invert(1);
 }
 
