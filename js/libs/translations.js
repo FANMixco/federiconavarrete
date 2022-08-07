@@ -3,8 +3,11 @@ let fullReviews = [];
 
 const bookEdition = 'second;'
 const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
-const noreferrer = `rel="noreferrer"`;
-const tBlank = `target="_blank"`;
+const noreferrer = 'rel="noreferrer"';
+const tBlank = 'target="_blank"';
+const divSmall = '<div class="col-sm">';
+const cDiv = '</div>';
+const w100 = 'class="w-100"';
 
 getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
@@ -60,7 +63,7 @@ function loadReviews() {
                 let rTmp = `${item.shortReview}<a class="text-material-link" data-bs-toggle="modal" data-target="#reviewGeneric" href="#reviewGeneric" id="readMore${currentReview}">${genericTranslations.readMore}</a>`;
                 let review = `<div class="carousel-item text-center${active}">
                                 ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
-                                </div>`;
+                                ${cDiv}`;
 
                 divReviewsPreviews.innerHTML += review;
 
@@ -70,12 +73,12 @@ function loadReviews() {
                     longReview = `${getImgName(name, item.img, currentReview, "picReviewers")}
                     ${getReviewTitle('dark', item.title)}
                     ${getInnerTitle(item.date)}
-                    <div id="review${currentReview}PDF"></div>
+                    <div id="review${currentReview}PDF">${cDiv}
                     <div class="centerText">
                         <a class="btn btn btn-outline-dark" ${tBlank} href="${item.pdfLocation}">
                             <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" ${lazyLoading} />&nbsp;${genericTranslations.download}
                         </a>
-                    </div>`;
+                    ${cDiv}`;
                 }
                 else {
                     longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title), 'dark', 'black', item.review, "centerText", false);
@@ -89,13 +92,13 @@ function loadReviews() {
         }
         else {
             const divReviews = document.getElementById("divReviews");
-            divReviews.style.display = "none";
+            divReviews.style.display = nVis;
         }
 
         fullReviews.forEach(function(item, index) { 
 
             let rmCurrent = document.getElementById(`readMore${index + 1}`);
-            rmCurrent.addEventListener("click", (e) => {
+            rmCurrent.addEventListener(eClick, (e) => {
                 e.preventDefault();
                 let divGenericContent = document.getElementById('divGenericContent');
                 divGenericContent.innerHTML = item.review;
@@ -138,23 +141,23 @@ function loadHobbies() {
             });
 
             [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
-                element.addEventListener("click", function(e) {
+                element.addEventListener(eClick, function(e) {
                     e.preventDefault();
                 });
             });
 
-            document.getElementById("linkContactMe").addEventListener("click", function(e) {
+            document.getElementById("linkContactMe").addEventListener(eClick, function(e) {
                 e.preventDefault();
             });
         
             if (!smallScreenMobileOS) {
                 let btnExtraHobbies = document.getElementById("btnExtraHobbies");
-                btnExtraHobbies.style.display = "none";
+                btnExtraHobbies.style.display = nVis;
             }
         }
         else {
             const divHobbies = document.getElementById("divHobbies");
-            divHobbies.style.display = "none";
+            divHobbies.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -175,14 +178,14 @@ function loadServices() {
                     items += `<span>${title}</span><br /><br />`;
                     totalServices++;
                 });
-                items = `${items.substring(0, items.length - 12)}</div>`;
+                items = `${items.substring(0, items.length - 12)}${cDiv}`;
 
                 servicesList.innerHTML += items;
             });
         }
         else {
             const divServices = document.getElementById('divServices');
-            divServices.style.display = "none";
+            divServices.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -213,7 +216,7 @@ function loadAwards() {
                     items += `${title}<br /><br />`;
                     i++;
                 });
-                items = `${items.substring(0, items.length - 12)}</div>`;
+                items = `${items.substring(0, items.length - 12)}${cDiv}`;
 
                 awardsList.innerHTML += items;
             });
@@ -222,9 +225,9 @@ function loadAwards() {
                 const linkPreview = document.getElementById(`linkPreview${item.id}`);
                 let iframeGeneric = document.getElementById('iframeGeneric');
 
-                linkPreview.addEventListener("click", () => {
+                linkPreview.addEventListener(eClick, () => {
                     const gTitle = document.getElementById('gTitle');
-                    gTitle.style.display = "none";
+                    gTitle.style.display = nVis;
 
                     let lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview;
                     iframeGeneric.innerHTML = lPreview;    
@@ -233,7 +236,7 @@ function loadAwards() {
         }
         else {
             const divAwards = document.getElementById('divAwards');
-            divAwards.style.display = "none";
+            divAwards.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -265,8 +268,8 @@ function loadPersonalProjects() {
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
                     <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${hOpt}><a class="text-material-link-dark" href="${item.link}" ${noreferrer} ${tBlank}>${item.title}</a>, ${item.timeFrame}</p>
-                </div>
-            </div>`;
+                    ${cDiv}
+                ${cDiv}`;
 
             personalProjectsDiv.innerHTML += pp;
         });
@@ -284,16 +287,16 @@ function loadVideos() {
             presentations.forEach(item => {
                 divVideos.innerHTML += getUTubeContainer(item);
                 if (count === 0) {
-                    divVideos.innerHTML += '<div class="w-100"></div>';
+                    divVideos.innerHTML += `<div ${w100}>${cDiv}`;
                 }
                 count++;
             });
         }
         else {
             const hPublicSpeaking = document.getElementById('hPublicSpeaking');
-            hPublicSpeaking.style.display = "none";
+            hPublicSpeaking.style.display = nVis;
 
-            divVideos.style.display = "none";
+            divVideos.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -309,16 +312,16 @@ function loadYouTubeVideos() {
             presentations.forEach(item => {
                 divYouTubeVideos.innerHTML += getUTubeContainer(item);
                 if (count === 0) {
-                    divYouTubeVideos.innerHTML += '<div class="w-100"></div>';
+                    divYouTubeVideos.innerHTML += `<div ${w100}>${cDiv}`;
                 }
                 count++;
             });
         }
         else {
             const hYouTubeTraining = document.getElementById('hYouTubeTraining');
-            hYouTubeTraining.style.display = "none";
+            hYouTubeTraining.style.display = nVis;
 
-            divYouTubeVideos.style.display = "none";
+            divYouTubeVideos.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -338,12 +341,12 @@ function loadPresentations() {
         }
         else {
             const hPresentations = document.getElementById('hPresentations');
-            hPresentations.style.display = "none";
+            hPresentations.style.display = nVis;
 
-            divPPTs.style.display = "none";
+            divPPTs.style.display = nVis;
 
             const pPPTs = document.getElementById('pPPTs');
-            pPPTs.style.display = "none";
+            pPPTs.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -362,7 +365,7 @@ function loadOrganizedEvents() {
             });
         }
         else {
-            divEvents.style.display = "none";
+            divEvents.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -382,7 +385,7 @@ function loadArticles() {
         }
         else {
             const articlesDiv = document.getElementById('articlesDiv');
-            articlesDiv.style.display = "none";
+            articlesDiv.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -402,7 +405,7 @@ function loadNewsArticles() {
         }
         else {
             const newsArticlesDiv = document.getElementById('newsArticles');
-            newsArticlesDiv.style.display = "none";
+            newsArticlesDiv.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -441,7 +444,7 @@ function loadSocialMedias() {
         }
         else {
             const aroundWeb = document.getElementById('aroundWeb');
-            aroundWeb.style.display = "none";
+            aroundWeb.style.display = nVis;
         }
     }
     catch (e) { return e; }
@@ -450,11 +453,11 @@ function loadSocialMedias() {
 function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse, btnMore, itemCollapseID) {
     try {
         skills.forEach(item => {
-            let items = `<div class="col-sm"><p class="lead">`;
+            let items = `${divSmall}<p class="lead">`;
             item.forEach(elem => {
                 items += `${elem}<br /><br />`;
             });
-            items = `${items.substring(0, items.length - 12)}</p></div>`;
+            items = `${items.substring(0, items.length - 12)}</p>${cDiv}`;
 
             let divTmp = document.getElementById(`${divContainer}`);
 
@@ -472,11 +475,11 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         const divOthersContainerDiv = document.getElementById(divOthersContainer);
 
         skillsOthers.forEach(function(item, index) {
-            let items = `<div class="col-sm"><div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
+            let items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
             item.forEach(elem => {
                 items += `${elem}<br /><br />`;
             });
-            items = `${items.substring(0, items.length - 12)}</div></div></div>`;
+            items = `${items.substring(0, items.length - 12)}${cDiv}${cDiv}${cDiv}`;
 
             divOthersContainerDiv.innerHTML = items + divOthersContainerDiv.innerHTML;
         });
@@ -497,7 +500,7 @@ function getHobbyImg(item) {
 function addIFrameModal() {
     for (let serv = 0; serv < totalServices; serv++) {
         let cService = document.getElementById(`service${serv}`);
-        cService.addEventListener('click', function(e) {
+        cService.addEventListener(eClick, function(e) {
             e.preventDefault();
             document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
         
@@ -560,10 +563,10 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 }
 
 function getUTubeContainer(item) {
-    return `<div class="col-sm">
+    return `${divSmall}
         ${getUTubeLite(item)}
         <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
-    </div>`;
+        ${cDiv}`;
 }
 
 function getUTubeLite(item) {
@@ -573,7 +576,7 @@ function getUTubeLite(item) {
 function getImgPreview(img, currentReview, extraClass) {
     return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">
                 ${getImgReview(img, currentReview)}
-            </div>`;
+            ${cDiv}`;
 }
 
 function getReviewName(name, isLarge) {
@@ -618,12 +621,12 @@ function setWebPImage(id, img) {
 }
 
 function getImgContainer(link, img, title) {
-    return `<div class="col-sm">
+    return `${divSmall}
         <a href="${link}" ${noreferrer} ${tBlank}>
             ${img}
         </a>
         <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${title}</p>
-    </div>`
+    ${cDiv}`
 }
 
 function getImgTag(id, alt) {
