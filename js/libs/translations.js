@@ -590,11 +590,16 @@ function getH4Tag(body, extras) {
 }
 
 function getImgTag(id, alt) {
-    return `<img id="${id}" ${lazyLoading} class="img-fluid" alt="${alt.split(" ")[0]}" />`;
+    return getFinalImg(id, 'img-fluid', alt, '');
 }
 
 function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '', extras = '') {
-    return `<img src='${src}' id="${id}" ${lazyLoading} class="${extraClass}" alt="${alt.split(" ")[0]}" ${extras} />`;
+    return getFinalImg(id, extraClass, alt, `src='${src}' ${extras}`, lazyLoading);
+}
+
+function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
+    const tagRegExp = new RegExp('<\s*[^>]*>', 'g');
+    return `<img id="${id}" ${lazyLoading} class="${imgCls}" ${lLoading} ${extras} alt="${alt.replace(tagRegExp, '')}" />`
 }
 
 function getListItem(elem, extra = "", extraCls = "") {
