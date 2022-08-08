@@ -526,7 +526,7 @@ function getUTubeContainer(item) {
 }
 
 function getUTubeLite(item) {
-    return `<lite-youtube style="margin: auto" class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>`;
+    return `<lite-youtube class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>`;
 }
 
 function getImgPreview(img, currentReview, extraClass) {
