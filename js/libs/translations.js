@@ -23,11 +23,20 @@ getScript(`${langLoc}${lang}/personalProjects.js`).then(() => { loadPersonalProj
 
 getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndPresentations(); }).catch((e) => { console.error(e); });
 
-getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { loadOrganizedEvents(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { 
+    const { events, isVisible } = organizedEvents;
+    loadImgSection(events, isVisible, 'divEvents', 'divEvents', imgLocPortfolio);
+}).catch((e) => { console.error(e); });
 
-getScript(`${langLoc}${lang}/articlesList.js`).then(() => { loadArticles(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/articlesList.js`).then(() => {
+    const { articles, isVisible } = articlesList;
+    loadImgSection(articles, isVisible, 'divArticles', 'articlesDiv', imgLocArticles);
+}).catch((e) => { console.error(e); });
 
-getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { loadNewsArticles(); }).catch((e) => { console.error(e); });
+getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { 
+    const { articles, isVisible } = newsArticlesList;
+    loadImgSection(articles, isVisible, 'divMMArticles', 'newsArticles', imgLocArticles);
+}).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch((e) => { console.error(e); });
 
@@ -350,65 +359,23 @@ function loadPresentations() {
     catch (e) { return e; }
 }
 
-function loadOrganizedEvents() {
+function loadImgSection(list, isVisible, section, divSection, imgPath) {
     try {
-        const { events, isVisible } = organizedEvents;
-
-        const divEvents = document.getElementById('divEvents');
         if (isVisible) {
-            events.forEach(item => {
-                let event = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, 'events')), item.title);
-                divEvents.innerHTML += event;
-                setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
+            const divSection = document.getElementById(section);
+            list.forEach(item => {
+                const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+                divSection.innerHTML += tmpImg;
+                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat);
             });
         }
         else {
-            divEvents.style.display = nVis;
+            const secDiv = document.getElementById(divSection);
+            secDiv.style.display = nVis;
         }
     }
     catch (e) { return e; }
 }
-
-function loadArticles() {
-    try {
-        const { articles, isVisible } = articlesList;
-
-        if (isVisible) {
-            const divArticles = document.getElementById('divArticles');
-            articles.forEach(item => {
-                let art = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
-                divArticles.innerHTML += art;
-                setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
-            });
-        }
-        else {
-            const articlesDiv = document.getElementById('articlesDiv');
-            articlesDiv.style.display = nVis;
-        }
-    }
-    catch (e) { return e; }
-}
-
-function loadNewsArticles() {
-    try {
-        const { articles, isVisible } = newsArticlesList;
-
-        if (isVisible) {
-            const divMMArticles = document.getElementById('divMMArticles');
-            articles.forEach(item => {
-                let nArt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
-                divMMArticles.innerHTML += nArt;
-                setImage(item.imgID, item.imgBasicName, imgLocArticles, item.imgFormat);
-            });
-        }
-        else {
-            const newsArticlesDiv = document.getElementById('newsArticles');
-            newsArticlesDiv.style.display = nVis;
-        }
-    }
-    catch (e) { return e; }
-}
-
 
 function loadSocialMedias() {
     try {
@@ -427,12 +394,6 @@ function loadSocialMedias() {
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
-                    let externalClass = "";
-
-                    if (elem.externalClass) {
-                        externalClass = elem.externalClass;
-                    }
-
                     socialMediaOthers.innerHTML += getListItem(getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
                 });
             }
