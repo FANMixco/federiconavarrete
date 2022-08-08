@@ -619,7 +619,7 @@ function getImgContainer(link, img, title) {
         <a href="${link}" ${noreferrer} ${tBlank}>
             ${img}
         </a>
-        ${getH4Tag(title)};
+        ${getH4Tag(title)}
     ${cDiv}`
 }
 
