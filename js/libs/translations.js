@@ -60,8 +60,9 @@ function loadReviews() {
 
                 let currentReview = index + 1;
 
-                let rTmp = `${item.shortReview}<a class="text-material-link" data-bs-toggle="modal" data-target="#reviewGeneric" href="#reviewGeneric" id="readMore${currentReview}">${genericTranslations.readMore}</a>`;
-                let review = `<div class="carousel-item text-center${active}">
+                let rTmp = `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`;
+
+                let review = `${getCItem(`text-center${active}`)}
                                 ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
                                 ${cDiv}`;
 
@@ -201,7 +202,7 @@ function loadAwards() {
                 item.forEach(elem => {
                     let title = "";
                     if (elem.link) {
-                        title = `<button id="linkPreview${i}" data-bs-toggle="modal" data-bs-target="#linkPreviews" class="btn btn-warning" style='width: 100%; font-weight: bold'>${elem.title}</button>`;
+                        title = getBtnModal('linkPreviews', 'btn btn-warning', `linkPreview${i}`, elem.title, "style='width: 100%; font-weight: bold'", '', true);
                         availableLinks.push({ 
                             id: i,
                             title: elem.title,
@@ -261,7 +262,7 @@ function loadPersonalProjects() {
 
             let hOpt = smallScreenMobileOS ? "style='font-size: larger!important'" : "";
 
-            let pp = `<div class="carousel-item${isActive}">
+            let pp = `${getCItem(isActive)}
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
                     ${getH4Tag(`<a class="text-material-link-dark" href="${item.link}" ${noreferrer} ${tBlank}>${item.title}</a>, ${item.timeFrame}`, hOpt)}
@@ -639,8 +640,17 @@ function getListItem(elem, extra = "", extraCls = "") {
     return `<li class="list-inline-item${extraCls}" ${extra}>${elem}</li>`;
 }
 
+function getBtnModal(target, cls, id, body, extras, href='', isBtn = false) {
+    let tmpTag = (isBtn) ? 'button' : 'a';
+    let tmpRef = (isBtn) ? '' : `href="#${href}"`;
+
+    return `<${tmpTag} id="${id}" class="${cls}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
+}
+
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
-    return getListItem(`<a href="#${loc}" id="${id}" class="btn btn-outline-light btn-social text-center rounded-circle ${cls}" data-bs-toggle="modal" data-target="#${loc}">
-    ${getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)}
-    </a>`, extra);
+    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social text-center rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
+}
+
+function getCItem(extras) {
+    return `<div class="carousel-item ${extras}">`;
 }
