@@ -2,7 +2,7 @@ let totalServices = 0;
 let fullReviews = [];
 
 const bookEdition = 'second;'
-const imgPreview = '<img src="{URL}" alt="{Title}" style="width: 90%" />';
+const imgPreview = getImgBasicTag('{URL}', '', '{Title}', '', '', 'style="width: 90%"');
 const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
@@ -76,7 +76,7 @@ function loadReviews() {
                     <div id="review${currentReview}PDF">${cDiv}
                     <div class="centerText">
                         <a class="btn btn btn-outline-dark" ${tBlank} href="${item.pdfLocation}">
-                            <img src="${iconsPath}download.svg" alt="download" style="filter: invert(0)!important" class="mr-2 btnIcons" ${lazyLoading} />&nbsp;${genericTranslations.download}
+                            ${getImgBasicTag(`${iconsPath}download.svg`, lazyLoading, "mr-2 btnIcons", '', 'download', 'style="filter: invert(0)!important" height="24" width="24"')}&nbsp;${genericTranslations.download}
                         </a>
                     ${cDiv}`;
                 }
@@ -127,7 +127,7 @@ function loadHobbies() {
                 hobbiesList.innerHTML += getListItem(getHobbyImg(item), '', btnOptional);
             });
 
-            hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', "id='btnExtraHobbies'");
+            hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', '', '', "btnExtraHobbies");
 
             const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
 
@@ -169,7 +169,8 @@ function loadServices() {
                 let items = `<div class="col-lg ml-auto"><p class="lead">`;
                 item.forEach(elem => {
                     let title = "";
-                    title = (elem.link) ? `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} ${tBlank} class="btn btn-light serviceLink" ${noreferrer}><img src='${iconsPath}${elem.icon}.svg' alt='${elem.title}' style='height:24px;width:24px' ${lazyLoading} class='mr-2' />&nbsp;&nbsp;${elem.title}</a>`
+                    title = (elem.link) ? `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} ${tBlank} class="btn btn-light serviceLink" ${noreferrer}>
+                    ${getImgBasicTag(`${iconsPath}${elem.icon}.svg`, lazyLoading, 'mr-2', '', elem.title, "style='height:24px;width:24px'")}&nbsp;&nbsp;${elem.title}</a>`
                                         : title = `<b>${elem.title}</b>`;
                     items += `<span>${title}</span><br /><br />`;
                     totalServices++;
@@ -263,7 +264,7 @@ function loadPersonalProjects() {
             let pp = `<div class="carousel-item${isActive}">
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
-                    <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${hOpt}><a class="text-material-link-dark" href="${item.link}" ${noreferrer} ${tBlank}>${item.title}</a>, ${item.timeFrame}</p>
+                    ${getH4Tag(`<a class="text-material-link-dark" href="${item.link}" ${noreferrer} ${tBlank}>${item.title}</a>, ${item.timeFrame}`, hOpt)}
                     ${cDiv}
                 ${cDiv}`;
 
@@ -421,7 +422,7 @@ function loadSocialMedias() {
             if (socialOthersList.isVisible) {
                 let sBasic = document.getElementById("socialMediaBasic");
                 
-                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", 'class="iconFooter btn-footer"');
+                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer');
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
@@ -558,7 +559,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 function getUTubeContainer(item) {
     return `${divSmall}
         ${getUTubeLite(item)}
-        <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${item.title}</p>
+        ${getH4Tag(item.title)}
         ${cDiv}`;
 }
 
@@ -586,7 +587,7 @@ function getInnerTitle(title) {
 }
 
 function getImgReview(src, rev) {
-    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, `<img ${lazyLoading} class="d-block w-100 h-auto rounded-circle" src="${src}" alt="review${rev} slide" height="151" width="151" />`);
+    return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, getImgBasicTag(src, lazyLoading, 'd-block w-100 h-auto rounded-circle', '', `review${rev} slide`, 'height="151" width="151"'));
 }
 
 function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
@@ -618,20 +619,28 @@ function getImgContainer(link, img, title) {
         <a href="${link}" ${noreferrer} ${tBlank}>
             ${img}
         </a>
-        <p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2">${title}</p>
+        ${getH4Tag(title)};
     ${cDiv}`
+}
+
+function getH4Tag(body, extras) {
+    return `<p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${extras}>${body}</p>`;
 }
 
 function getImgTag(id, alt) {
     return `<img id="${id}" ${lazyLoading} class="img-fluid" alt="${alt}" />`;
 }
 
+function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '', extras = '') {
+    return `<img src='${src}' id="${id}" ${lazyLoading} class="${extraClass}" alt="${alt}" ${extras} />`;
+}
+
 function getListItem(elem, extra = "", extraCls = "") {
     return `<li class="list-inline-item${extraCls}" ${extra}>${elem}</li>`;
 }
 
-function getBtnOthers(loc, cls, extra = "", imgExtra = "") {
+function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
     return getListItem(`<a href="#${loc}" class="btn btn-outline-light btn-social text-center rounded-circle ${cls}"     data-bs-toggle="modal" data-target="#${loc}">
-    <img src="${iconsPath}plus.svg" alt="extra" ${imgExtra} ${lazyLoading} />
-</a>`, extra);
+    ${getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, id, 'extra', imgExtra)}
+    </a>`, extra);
 }
