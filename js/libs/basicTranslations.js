@@ -267,7 +267,7 @@ function loadBasicInfo() {
     });
 
     if (favBook.isVisible) { 
-        favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title);
+        favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title, 'height="24" width="24"');
     }
     else {
         favBookDiv.style.display = nVis;

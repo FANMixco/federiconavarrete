@@ -640,7 +640,7 @@ function getListItem(elem, extra = "", extraCls = "") {
 }
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
-    return getListItem(`<a href="#${loc}" class="btn btn-outline-light btn-social text-center rounded-circle ${cls}"     data-bs-toggle="modal" data-target="#${loc}">
-    ${getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, id, 'extra', imgExtra)}
+    return getListItem(`<a href="#${loc}" id="${id}" class="btn btn-outline-light btn-social text-center rounded-circle ${cls}" data-bs-toggle="modal" data-target="#${loc}">
+    ${getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)}
     </a>`, extra);
 }
