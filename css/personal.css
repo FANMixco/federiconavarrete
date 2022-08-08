@@ -17,6 +17,7 @@
 .iVideos {
     width: 100%;
     height: 315px;
+    margin: auto!important;
 }
 
 @media screen and (max-width: 682px) {

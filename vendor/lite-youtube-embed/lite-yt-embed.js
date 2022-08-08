@@ -29,8 +29,7 @@
          */
         if (!this.style.backgroundImage) {
           this.style = 
-                `margin: auto!important;
-                 background-image: url('https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg');
+                `background-image: url('https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg');
                  background-image: -webkit-image-set(url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.webp") 1x, url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg") 1x);
                  background-image: image-set(url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.webp") type("image/webp"), url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg") type("image/jpeg"));`;
         }
