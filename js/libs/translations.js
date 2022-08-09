@@ -72,7 +72,7 @@ function loadReviews() {
 
                 let rTmp = `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`;
 
-                let review = `${getCItem(`text-center${active}`)}
+                let review = `${getCItem(`${tCenter}${active}`)}
                                 ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
                                 ${cDiv}`;
 
@@ -538,15 +538,15 @@ function getImgPreview(img, currentReview, extraClass) {
 
 function getReviewName(name, isLarge) {
     let extraCss = smallScreenMobileOS && isLarge ? "style='font-size: larger!important'" : '';
-    return `<p class="mt-4 mb-0 text-center h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
+    return `<p class="mt-4 mb-0 ${tCenter} h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
 }
 
 function getReviewTitle(color, title, cssCentered) {
-    return `<p class="text-${color} m-0 ${cssCentered} text-center h6 p-1">${title}</p>`;
+    return `<p class="text-${color} m-0 ${cssCentered} ${tCenter} h6 p-1">${title}</p>`;
 }
 
 function getInnerTitle(title) {
-    return `<p class="text-dark m-0 text-center p-2">${title}</p>`;
+    return `<p class="text-dark m-0 ${tCenter} p-2">${title}</p>`;
 }
 
 function getImgReview(src, rev) {
@@ -587,7 +587,7 @@ function getImgContainer(link, img, title) {
 }
 
 function getH4Tag(body, extras = '') {
-    return `<p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${extras}>${body}</p>`;
+    return `<p class="${tCenter} text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${extras}>${body}</p>`;
 }
 
 function getImgTag(id, alt) {
@@ -619,7 +619,7 @@ function getBtnModal(target, cls, id, body, extras, href='', isBtn = false) {
 }
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
-    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social text-center rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
+    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
 }
 
 function getCItem(extras) {

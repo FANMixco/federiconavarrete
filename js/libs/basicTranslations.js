@@ -27,6 +27,7 @@ const iconsPath = 'img/icons/website/';
 
 const marginTop = 0;
 const heightIFrame = 600;
+const tCenter = "text-center";
 
 getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
@@ -247,7 +248,7 @@ function setTranslation(elem, text) {
 }
 
 function loadBasicInfo() {
-    const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype } = basicInfo;
+    const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype, company } = basicInfo;
 
     const linkName = document.getElementById('linkName');
     const hName = document.getElementById('hName');
@@ -292,6 +293,10 @@ function loadBasicInfo() {
 
     if (email.isVisible) {
         listContacts.innerHTML = getInLineBtn(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, 'at') + listContacts.innerHTML;
+    }
+
+    if (company.isVisible) {
+        listContacts.innerHTML = getInLineBtn(company.name, company.link, "building-solid", true) + listContacts.innerHTML;
     }
 
     const aElSalvador = document.getElementById('aElSalvador');
@@ -377,7 +382,7 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let imgClassName = imgClass == "" ? "" : `class='${imgClass}'`;
     let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} ${lazyLoading} />`;
 
-    return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social text-center rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
+    return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }
 
 function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
@@ -388,8 +393,8 @@ function getActionBtn(link, iconsPath, icon, title, extras = "") {
     return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}"><img src="${iconsPath}${icon}.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} ${extras} />&nbsp;&nbsp;${title}</a>`;
 }
 
-function getInLineBtn(btnAction, action, icon) {
-    return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter")}</li>`;
+function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
+    return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, isTargetBlank, false, "btn-footer", false, "iconFooter")}</li>`;
 }
 
 function getHMenu(extras = "") {

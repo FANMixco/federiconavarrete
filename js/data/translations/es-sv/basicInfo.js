@@ -33,5 +33,11 @@ const basicInfo = {
 	"skype": {
 		"id": "fanmixco",
 		"isVisible": true
+	},
+	"company": {
+		"id": "supernova",
+		"name": "Supernova IC",
+		"link": "https://supernovaic.com",
+		"isVisible": true
 	}
 };

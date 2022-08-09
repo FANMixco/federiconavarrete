@@ -42,13 +42,6 @@ const socialOthersList = {
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "building-solid",
-			"title": "Supernova IC",
-			"link": "https://supernovaic.com",
-			"isIcon": false,
-			"externalClass": "iconFooter"
-		},
-		{
 			"icon": "amazon-brands",
 			"title": "Amazon",
 			"link": "https://www.amazon.com/Federico-Navarrete/e/B08NJTXQRV",
