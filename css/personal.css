@@ -73,10 +73,6 @@
     border-radius: 50%;
 }
 
-.innerSkillsDiv {
-    background: rgba(44, 62, 80, .3);
-}
-
 .externalImg img,.externalImg:active img{
     margin-top: -3px;
     filter: invert(100%);
