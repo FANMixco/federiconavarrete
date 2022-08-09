@@ -579,14 +579,14 @@ function setWebPImage(id, img) {
 
 function getImgContainer(link, img, title) {
     return `${divSmall}
-        <a href="${link}" ${noreferrer} ${tBlank}>
+        <a href="${link}" ${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'>
             ${img}
         </a>
         ${getH4Tag(title)}
     ${cDiv}`
 }
 
-function getH4Tag(body, extras) {
+function getH4Tag(body, extras = '') {
     return `<p class="text-center text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${extras}>${body}</p>`;
 }
 
@@ -598,9 +598,13 @@ function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '
     return getFinalImg(id, extraClass, alt, `src='${src}' ${extras}`, lazyLoading);
 }
 
-function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
+function getCleanTitle(alt) {
     tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
-    return `<img id="${id}" ${lazyLoading} class="${imgCls}" ${lLoading} ${extras} alt="${alt.replace(tagRegExp, '')}" />`
+    return alt.replace(tagRegExp, '');
+}
+
+function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
+    return `<img id="${id}" ${lazyLoading} class="${imgCls}" ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
 }
 
 function getListItem(elem, extra = "", extraCls = "") {
