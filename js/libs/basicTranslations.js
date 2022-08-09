@@ -1,7 +1,16 @@
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
+let langLoc = "js/data/translations/";
 let extraContact = 0;
-const lazyLoading = `loading="lazy"`;
+let isMenuTriggered = false;
+
+const lazyLoading = 'loading="lazy"';
+const eClick = 'click';
+const nVis = 'none';
+const iconsPath = 'img/icons/website/';
+const tCenter = "text-center";
+const marginTop = 0;
+const heightIFrame = 600;
 
 const deviceType = () => {
     const ua = navigator.userAgent;
@@ -15,19 +24,8 @@ const deviceType = () => {
 };
 
 const smallScreenMobileOS = deviceType() === "Smartphone";
-const eClick = 'click';
-const nVis = 'none';
 
-if (language.includes('es'))
-    lang = "es-sv/min";
-
-let langLoc = "js/data/translations/";
-
-const iconsPath = 'img/icons/website/';
-
-const marginTop = 0;
-const heightIFrame = 600;
-const tCenter = "text-center";
+lang = (language.includes('es')) ? "es-sv/min" : lang;
 
 getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
@@ -257,6 +255,17 @@ function loadBasicInfo() {
     const divAbout = document.getElementById('divAbout');
     const favBookDiv = document.getElementById('favBook');
     const favPodcastDiv = document.getElementById('favPodcast');
+
+    [...document.querySelectorAll('.nav-link')].forEach(function(element) {
+        element.addEventListener(eClick, function(e) {
+            if (!isMenuTriggered) {
+                setTimeout(function() {
+                    contactMeForm();
+                }, 3500);
+                isMenuTriggered = true;    
+            }
+        });
+    });
     
     linkName.innerHTML = name;
     hName.innerHTML = name;
@@ -337,7 +346,7 @@ function getHeight() {
 window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
 
-    if (scroll > getHeight() * 0.20 && extraContact == 0) {
+    if (scroll > getHeight() * 0.20 && extraContact == 0 && !isMenuTriggered) {
         contactMeForm();
         extraContact++;
     }
