@@ -6,6 +6,7 @@ let langLoc = "js/data/translations/";
 let extraContact = 0;
 let isMenuTriggered = false;
 let tagRegExp;
+let currentLoc = '';
 
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
@@ -46,6 +47,28 @@ function loadTranslations() {
 
     document.querySelectorAll('[data-translation]').forEach(item => {
         item.innerHTML = genericTranslations[`${item.dataset.translation}`];
+    });
+
+    [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
+        element.addEventListener(eClick, function(e) {
+            currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
+            const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
+
+            const iframePreview = getIframe(pTitle, `${currentLoc}.html?isIframe=true`, 'class="previewerIframe" allowfullscreen');
+
+            const divPreview = document.getElementById("divPreview");
+
+            const title = document.getElementById('zoomTitle');
+            title.innerHTML = pTitle;
+
+            divPreview.innerHTML = iframePreview;
+
+            const btnFullScreen = document.getElementById('btn-full-screen');
+
+            btnFullScreen.addEventListener(eClick, function(e) {
+                window.open(`${fURL}/${currentLoc}.html`);
+            });
+        });
     });
 
     if (!smallScreenMobileOS) {
