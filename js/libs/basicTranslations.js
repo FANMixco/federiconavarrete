@@ -247,6 +247,14 @@ function setTranslation(elem, text) {
     });
 }
 
+function closeMenu() {
+    setTimeout(function() {
+        if (document.getElementById("navbarResponsive").classList.contains("show")) {
+            document.getElementById("menuExpander").click();
+        }
+    }, 500);
+}
+
 function loadBasicInfo() {
     const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype, company } = basicInfo;
 
@@ -263,7 +271,7 @@ function loadBasicInfo() {
             if (!isMenuTriggered) {
                 setTimeout(function() {
                     contactMeForm();
-                }, 3500);
+                }, 5000);
                 isMenuTriggered = true;    
             }
         });
@@ -274,6 +282,7 @@ function loadBasicInfo() {
             tErr1 = setTimeout(function(self) {
                 self.click();
                 clearTimeout(tErr1);
+                closeMenu();
             }, 500, this);
         });
     });
