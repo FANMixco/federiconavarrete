@@ -12,7 +12,7 @@ function onReadyPersonal() {
 
     aAppsPreview.addEventListener('click', function(e) {
         if (!document.getElementById('iframeApps')) {
-            divApps.innerHTML += iframeApps;
+            divApps.innerHTML = iframeApps;
         }
     });
     
@@ -21,7 +21,7 @@ function onReadyPersonal() {
     aPPTPreview.addEventListener('click', function() {
         if (!document.getElementById('iframePrezis')) {
             const divPrezis = document.getElementById("divPrezis");
-            divPrezis.innerHTML += iframePrezis;
+            divPrezis.innerHTML = iframePrezis;
         }
     });
     

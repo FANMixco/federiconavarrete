@@ -40,187 +40,12 @@ getScript(`${langLoc}${lang}/generics.js`)
 });
 
 function loadTranslations() {
-    const controlTranslation = [
-        {
-            "identifier": "#menuAbout",
-            "value": genericTranslations.about
-        },
-        {
-            "identifier": "#menuSkills",
-            "value": genericTranslations.skills
-        },
-        {
-            "identifier": "#menuProjects",
-            "value": genericTranslations.projects
-        },
-        {
-            "identifier": ".menuPresentations",
-            "value": genericTranslations.presentations
-        },
-        {
-            "identifier": ".menuArticles",
-            "value": genericTranslations.articles
-        },
-        {
-            "identifier": ".hMassMedia",
-            "value": genericTranslations.massMedia
-        },
-        {
-            "identifier": "#menuBooks",
-            "value": genericTranslations.books
-        },
-        {
-            "identifier": "#hAboutMe",
-            "value": genericTranslations.aboutMe
-        },
-        {
-            "identifier": "#hDownloadFavApp",
-            "value": genericTranslations.downloadFavApp
-        },
-        {
-            "identifier": "#hDownloadFavBook",
-            "value": genericTranslations.getBook
-        },
-        {
-            "identifier": "#hPodcast",
-            "value": genericTranslations.hPodcast
-        },
-        {
-            "identifier": "#hHobbies",
-            "value": genericTranslations.hobbies
-        },
-        {
-            "identifier": "#spanAwards",
-            "value": genericTranslations.awards
-        },
-        {
-            "identifier": "#spanServices",
-            "value": genericTranslations.services
-        },
-        {
-            "identifier": "#spanTechSkills",
-            "value": genericTranslations.techSkills
-        },
-        {
-            "identifier": "#spanTechSkills",
-            "value": genericTranslations.techSkills
-        },
-        {
-            "identifier": "#spanSoftSkills",
-            "value": genericTranslations.softSkills
-        },
-        {
-            "identifier": "#spanTestimonials",
-            "value": genericTranslations.testimonials
-        },
-        {
-            "identifier": "#hPersonalProjects",
-            "value": genericTranslations.personalProjects
-        },
-        {
-            "identifier": "#aAppsPreview",
-            "value": genericTranslations.projectsGallery
-        },
-        {
-            "identifier": ".spanProjectsGallery",
-            "value": genericTranslations.projectsGallery
-        },
-        {
-            "identifier": ".spanPrevious",
-            "value": genericTranslations.previous
-        },
-        {
-            "identifier": ".spanNext",
-            "value": genericTranslations.next
-        },
-        {
-            "identifier": ".btnMore",
-            "value": genericTranslations.more
-        },
-        {
-            "identifier": "#hPPTTile",
-            "value": genericTranslations.pptsOrganizedEvents
-        },
-        {
-            "identifier": "#hPPTTile",
-            "value": genericTranslations.pptsOrganizedEvents
-        },
-        {
-            "identifier": "#spanPS",
-            "value": genericTranslations.publicSpeaking
-        },
-        {
-            "identifier": "#spanYouTube",
-            "value": genericTranslations.youTubeTraining
-        },
-        {
-            "identifier": ".hPresentationsGallery",
-            "value": genericTranslations.presentationsGallery
-        },
-        {
-            "identifier": "#spanOE",
-            "value": genericTranslations.organizedEvents
-        },
-        {
-            "identifier": "#hRecommendedBooks",
-            "value": genericTranslations.recommendedBooks
-        },
-        {
-            "identifier": "#spanSalvadorean",
-            "value": genericTranslations.mySalvadorean
-        },
-        {
-            "identifier": "#hMoreWeb",
-            "value": genericTranslations.moreWeb
-        },
-        {
-            "identifier": "#hOtherHobbies",
-            "value": genericTranslations.otherHobbies
-        },
-        {
-            "identifier": "#contactMeFooter",
-            "value": genericTranslations.contactMe
-        },
-        {
-            "identifier": "#aroundWebFooter",
-            "value": genericTranslations.aroundWeb
-        },
-        {
-            "identifier": "#tmIntro",
-            "value": genericTranslations.tStoriesBody
-        },
-        {
-            "identifier": "#bookMsg1",
-            "value": genericTranslations.bookMsg1
-        },
-        {
-            "identifier": "#bookMsg2",
-            "value": genericTranslations.bookMsg2
-        },
-        {
-            "identifier": "#tmIntro",
-            "value": genericTranslations.tStoriesBody
-        },
-        {
-            "identifier": ".getBtnCopy",
-            "value": genericTranslations.bookMsgGet
-        },
-        {
-            "identifier": ".bookMsgGen",
-            "value": genericTranslations.bookMsgGen
-        },
-        {
-            "identifier": "#newsH4",
-            "value": genericTranslations.news
-        }
-    ];
-
-    [...document.querySelectorAll('button.btn-close')].forEach(function(element) {
+    [...document.querySelectorAll('button.btn-close')].forEach(element => {
         element.setAttribute("aria-label", genericTranslations.close);
     });
 
-    controlTranslation.forEach(item => {
-        setTranslation(item.identifier, item.value);
+    document.querySelectorAll('[data-translation]').forEach(item => {
+        item.innerHTML = genericTranslations[`${item.dataset.translation}`];
     });
 
     if (!smallScreenMobileOS) {
@@ -423,7 +248,11 @@ function getActionBtn(link, iconsPath, icon, title, extras = "") {
 }
 
 function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
-    return `<li class="list-inline-item">${getImage(btnAction, action, `${iconsPath}${icon}.svg`, isTargetBlank, false, "btn-footer", false, "iconFooter")}</li>`;
+    return getInLi(getImage(btnAction, action, `${iconsPath}${icon}.svg`, isTargetBlank, false, "btn-footer", false, "iconFooter"));
+}
+
+function getInLi(body, extraCls = '', extras = '') {
+    return `<li class="list-inline-item${extraCls}" ${extras}>${body}</li>`;
 }
 
 function getHMenu(extras = "") {

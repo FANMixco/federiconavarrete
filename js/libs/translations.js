@@ -598,7 +598,7 @@ function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '
 }
 
 function getListItem(elem, extra = "", extraCls = "") {
-    return `<li class="list-inline-item${extraCls}" ${extra}>${elem}</li>`;
+    return getInLi(elem, extraCls, extra);
 }
 
 function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false) {
