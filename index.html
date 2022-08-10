@@ -245,7 +245,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
             <br />
             <p class="btn-more">
-               <a id="aAppsPreview" data-translation="projectsGallery" data-bs-toggle="modal" data-bs-target="#appsPreview" href="#appsPreview" class="btn btn-dark"><span data-translation="projectsGallery"></span></a>
+               <a data-translation="projectsGallery" data-bs-toggle="modal" data-bs-target="#zoomPreview" href="#zoomPreview" data-action="apps" class="btn btn-dark btn-preview"><span data-translation="projectsGallery"></span></a>
             </p>
          </div>
       </section>
@@ -267,7 +267,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="row" id="divPPTs"></div>
             <br />
    			<p class="btn-more" id="pPPTs">
-               <a id="aPPTPreview" data-bs-toggle="modal" data-bs-target="#pptPreview" href="#pptPreview" class="btn btn-dark" data-translation="presentationsGallery"></a>
+               <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="#zoomPreview" data-action="prezis" class="btn btn-dark btn-preview" data-translation="presentationsGallery"></a>
 	   		</p>
             <hr />
             <h3 class="text-center text-uppercase text-secondary mb-0"><img src="img/icons/website/calendar-today.svg" loading="lazy" alt="events" class="size26_contrast_2" />&nbsp;<span data-translation="organizedEvents"></span></h3>
@@ -388,27 +388,15 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
       </div>
-      <div class="modal" tabindex="-1" role="dialog" id="appsPreview">
+      <div class="modal" tabindex="-1" role="dialog" id="zoomPreview">
          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" data-translation="projectsGallery"></h5>
-                  <button type="button" class="btn-close btnFullScreen" id="appsFullScreen" style="background: url('img/icons/website/fullscreen.svg') center/1.4em no-repeat; margin-right: 0.8rem!important"></button>
+                  <h5 class="modal-title" id="zoomTitle"></h5>
+                  <button type="button" class="btn-close" id="btn-full-screen" style="background: url('img/icons/website/fullscreen.svg') center/1.4em no-repeat; margin-right: 0.8rem!important"></button>
                   <button type="button" class="btn-close closeModal" data-bs-dismiss="modal"></button>
                </div>
-               <div class="modal-body" id="divApps"></div>
-            </div>
-         </div>
-      </div>
-      <div class="modal" tabindex="-1" role="dialog" id="pptPreview">
-         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" data-translation="presentationsGallery"></h5>
-                  <button type="button" class="btn-close" id="pptsFullScreen" style="background: url('img/icons/website/fullscreen.svg') center/1.4em no-repeat; margin-right: 0.8rem!important"></button>
-                  <button type="button" class="btn-close closeModal" data-bs-dismiss="modal"></button>
-               </div>
-               <div class="modal-body" id="divPrezis"></div>
+               <div class="modal-body" id="divPreview"></div>
             </div>
          </div>
       </div>
