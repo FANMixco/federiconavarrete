@@ -1,3 +1,5 @@
+var tErr1;
+
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
 let langLoc = "js/data/translations/";
@@ -264,6 +266,15 @@ function loadBasicInfo() {
                 }, 3500);
                 isMenuTriggered = true;    
             }
+        });
+    });
+
+    [...document.querySelectorAll('.mFix')].forEach(function(element) {
+        element.addEventListener(eClick, function(e) {
+            tErr1 = setTimeout(function(self) {
+                self.click();
+                clearTimeout(tErr1);
+            }, 500, this);
         });
     });
     
