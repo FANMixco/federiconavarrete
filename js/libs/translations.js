@@ -601,11 +601,12 @@ function getListItem(elem, extra = "", extraCls = "") {
     return `<li class="list-inline-item${extraCls}" ${extra}>${elem}</li>`;
 }
 
-function getBtnModal(target, cls, id, body, extras, href='', isBtn = false) {
+function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false) {
     let tmpTag = (isBtn) ? 'button' : 'a';
     let tmpRef = (isBtn) ? '' : `href="#${href}"`;
+    let idT = (id != '') ? `id="${id}"` : '';
 
-    return `<${tmpTag} id="${id}" class="${cls}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
+    return `<${tmpTag} ${idT} class="${cls}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
 }
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
