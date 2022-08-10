@@ -5,6 +5,7 @@ let lang = "en-us/min";
 let langLoc = "js/data/translations/";
 let extraContact = 0;
 let isMenuTriggered = false;
+let tagRegExp;
 
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
@@ -408,8 +409,7 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let targetBlank = isTargetBlank ? `target="_blank"` : "";
     let ignoreClick = isIgnoredClick ? "ignore-click" : "";
     let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
-    let imgClassName = imgClass == "" ? "" : `class='${imgClass}'`;
-    let img = isIcon ? `<i class="${icon}"></i>` : `<img alt='${title}' src="${icon}" ${imgClassName} ${lazyLoading} />`;
+    let img = isIcon ? `<i class="${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
     return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
 }
@@ -419,7 +419,7 @@ function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = la
 }
 
 function getActionBtn(link, iconsPath, icon, title, extras = "") {
-    return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}"><img src="${iconsPath}${icon}.svg" class="mr-2 btnIcons" alt='download' ${lazyLoading} ${extras} />&nbsp;&nbsp;${title}</a>`;
+    return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}">${getFinalImg('', 'mr-2 btnIcons', 'download', `src="${iconsPath}${icon}.svg"  alt='download' ${lazyLoading} ${extras}`)}&nbsp;&nbsp;${title}</a>`;
 }
 
 function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
@@ -427,5 +427,16 @@ function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
 }
 
 function getHMenu(extras = "") {
-    return `<img src="${iconsPath}bars-solid.svg" alt='menu' class="hMenu ml-2" height="13" width="11.2" ${extras} />`;
+    return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
+}
+
+function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
+    let idT = (id != '') ? `id="${id}"` : '';
+    let clsT = (imgCls != '') ? `class="${imgCls}"` : '';
+    return `<img ${idT} ${lazyLoading} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
+}
+
+function getCleanTitle(alt) {
+    tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
+    return alt.replace(tagRegExp, '');
 }

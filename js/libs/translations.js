@@ -1,6 +1,5 @@
 let totalServices = 0;
 let fullReviews = [];
-let tagRegExp;
 
 const bookEdition = 'second;'
 const imgPreview = getImgBasicTag('{URL}', '', '{Title}', '', '', 'style="width: 90%"');
@@ -596,15 +595,6 @@ function getImgTag(id, alt) {
 
 function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '', extras = '') {
     return getFinalImg(id, extraClass, alt, `src='${src}' ${extras}`, lazyLoading);
-}
-
-function getCleanTitle(alt) {
-    tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
-    return alt.replace(tagRegExp, '');
-}
-
-function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
-    return `<img id="${id}" ${lazyLoading} class="${imgCls}" ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
 }
 
 function getListItem(elem, extra = "", extraCls = "") {
