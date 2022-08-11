@@ -3,10 +3,10 @@ var tErr1;
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
 let langLoc = "js/data/translations/";
-let extraContact = 0;
 let isMenuTriggered = false;
 let tagRegExp;
 let currentLoc = '';
+let extraContact = 0;
 
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
@@ -117,11 +117,10 @@ function loadBasicInfo() {
 
     [...document.querySelectorAll('.nav-link')].forEach(function(element) {
         element.addEventListener(eClick, function(e) {
-            if (!isMenuTriggered) {
+            if (extraContact == 0) {
                 setTimeout(function() {
                     contactMeForm();
                 }, 5000);
-                isMenuTriggered = true;    
             }
         });
     });
