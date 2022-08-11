@@ -240,15 +240,19 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
     let img = isIcon ? `<i class="${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
-    return `<a data-bs-toggle="tooltip" title="${title}" ${targetBlank} class="btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}" href="${link}" ${noreferrer}>${img}</a>`;
+    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
 }
 
 function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
     return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
 }
 
+function getFLink(cls, link, body, extras = '') {
+    return `<a class='${cls}' href="${link}" ${extras}>${body}</a>`;
+}
+
 function getActionBtn(link, iconsPath, icon, title, extras = "") {
-    return `<a class="btn btn-xl btn-outline-light btn-home" rel="noreferrer" target="_blank" href="${link}">${getFinalImg('', 'mr-2 btnIcons', 'download', `src="${iconsPath}${icon}.svg"  alt='download' ${lazyLoading} ${extras}`)}&nbsp;&nbsp;${title}</a>`;
+    return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
 }
 
 function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
@@ -266,7 +270,7 @@ function getHMenu(extras = "") {
 function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
     let idT = (id != '') ? `id="${id}"` : '';
     let clsT = (imgCls != '') ? `class="${imgCls}"` : '';
-    return `<img ${idT} ${lazyLoading} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
+    return `<img ${idT} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
 }
 
 function getCleanTitle(alt) {
