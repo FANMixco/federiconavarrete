@@ -231,6 +231,7 @@ function contactMeForm(e) {
     let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
     contactMe.show();
     extraContact++;
+    isMenuTriggered = true;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {

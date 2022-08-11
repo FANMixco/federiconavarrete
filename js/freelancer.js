@@ -81,7 +81,7 @@ function onReadyFreelancer() {
 }
 
 function extraEvents(scroll) {
-    if (scroll > getHeight() * 0.20 && extraContact == 0) {
+    if (scroll > getHeight() * 0.20 && extraContact == 0 && !isMenuTriggered) {
         contactMeForm();
         extraContact++;
     }
