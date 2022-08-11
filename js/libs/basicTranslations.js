@@ -212,25 +212,6 @@ function getHeight() {
     return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
 }
 
-window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-
-    if (scroll > getHeight() * 0.20 && extraContact == 0 && !isMenuTriggered) {
-        contactMeForm();
-        extraContact++;
-    }
-    else if (scroll > getHeight() * 0.7) {
-        const gScriptExist = document.getElementById('g_translate');
-        
-        if (!gScriptExist) {
-            const script = document.createElement('script');
-            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-            script.id = 'g_translate';
-            document.body.appendChild(script);
-        }
-    }
-});
-
 function contactMeForm(e) {
     try {
         e.preventDefault();
