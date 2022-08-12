@@ -1,5 +1,6 @@
 let tagRegExp;
 let extraContact = 0;
+let isMenuTriggered = false;
 
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';

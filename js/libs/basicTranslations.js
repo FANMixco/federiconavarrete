@@ -2,7 +2,6 @@ var tErr1;
 
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
-let isMenuTriggered = false;
 let currentLoc = '';
 
 const langLoc = "js/data/translations/";
