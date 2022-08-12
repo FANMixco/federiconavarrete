@@ -7,19 +7,6 @@ let currentLoc = '';
 
 const langLoc = "js/data/translations/";
 
-const deviceType = () => {
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        return "Tablet";
-    }
-    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-        return "Smartphone";
-    }
-    return "Desktop";
-};
-
-const smallScreenMobileOS = deviceType() === "Smartphone";
-
 lang = (language.includes('es')) ? "es-sv/min" : lang;
 
 getScript(`${langLoc}${lang}/generics.js`)
