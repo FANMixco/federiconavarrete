@@ -5,23 +5,6 @@
 */
 function onReadyFreelancer() {
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        let scroll = window.scrollY;
-
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (scroll === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-        extraEvents(scroll);
-    };
-
     // Shrink the navbar 
     navbarShrink();
 
@@ -33,6 +16,7 @@ function onReadyFreelancer() {
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
+
     responsiveNavItems.map(function (responsiveNavItem) {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
@@ -43,14 +27,14 @@ function onReadyFreelancer() {
 
     if (deviceType() === "Smartphone") {
 
-        var el_autohide = document.querySelector('.autohide');
+        let el_autohide = document.querySelector('.autohide');
  
         // add padding-top to bady (if necessary)
-        var navbar_height = document.querySelector('.navbar').offsetHeight;
+        let navbar_height = document.querySelector('.navbar').offsetHeight;
         document.body.style.paddingTop = `${navbar_height}px`;
 
         if (el_autohide) {
-            var last_scroll_top = 0;
+            let last_scroll_top = 0;
             window.addEventListener('scroll', function() {
                 if (document.getElementById("navbarResponsive").classList.contains("show")) {
                     document.getElementById("menuExpander").click();
@@ -74,11 +58,26 @@ function onReadyFreelancer() {
 
     document.addEventListener("click", function (event) {
         // if the clicked element isn't child of the navbar, you must close it if is open
-        if (!event.target.closest("#mainNav") && document.getElementById("navbarResponsive").classList.contains("show")) {
-            document.getElementById("menuExpander").click();
-        }
+        closeMenu();
     });
 }
+
+// Navbar shrink function
+var navbarShrink = function () {
+    const navbarCollapsible = document.body.querySelector('#mainNav');
+    let scroll = window.scrollY;
+
+    if (!navbarCollapsible) {
+        return;
+    }
+    if (scroll === 0) {
+        navbarCollapsible.classList.remove('navbar-shrink')
+    } else {
+        navbarCollapsible.classList.add('navbar-shrink')
+    }
+
+    extraEvents(scroll);
+};
 
 function extraEvents(scroll) {
     if (scroll > getHeight() * 0.20 && extraContact == 0 && !isMenuTriggered) {

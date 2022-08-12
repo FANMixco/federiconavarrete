@@ -2,19 +2,10 @@ var tErr1;
 
 let language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
-let langLoc = "js/data/translations/";
 let isMenuTriggered = false;
-let tagRegExp;
 let currentLoc = '';
-let extraContact = 0;
 
-const lazyLoading = 'loading="lazy"';
-const eClick = 'click';
-const nVis = 'none';
-const iconsPath = 'img/icons/website/';
-const tCenter = "text-center";
-const marginTop = 0;
-const heightIFrame = 600;
+const langLoc = "js/data/translations/";
 
 const deviceType = () => {
     const ua = navigator.userAgent;
@@ -96,14 +87,6 @@ function setTranslation(elem, text) {
     });
 }
 
-function closeMenu() {
-    setTimeout(function() {
-        if (document.getElementById("navbarResponsive").classList.contains("show")) {
-            document.getElementById("menuExpander").click();
-        }
-    }, 500);
-}
-
 function loadBasicInfo() {
     const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype, company } = basicInfo;
 
@@ -132,7 +115,7 @@ function loadBasicInfo() {
             tErr1 = setTimeout(function(self) {
                 self.click();
                 clearTimeout(tErr1);
-                closeMenu();
+                hFixCMenu();
             }, 500, this);
         });
     });
@@ -204,77 +187,4 @@ function loadBasicInfo() {
         gTitle.style.display = "block";
         iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
     });
-}
-
-function getHeight() {
-    let body = document.body,
-        html = document.documentElement;
-
-    return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
-}
-
-function contactMeForm(e) {
-    try {
-        e.preventDefault();
-    } catch { }
-    if (document.getElementById("contactMeForm").innerHTML.trim().length == 0) {
-        document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
-    }
-
-    try {
-        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
-        for (let i = 0; i < tooltipList.length; i++) {
-            tooltipList[i].hide();
-        }
-    } catch { }
-
-    let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
-    contactMe.show();
-    extraContact++;
-}
-
-function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
-    let targetBlank = isTargetBlank ? `target="_blank"` : "";
-    let ignoreClick = isIgnoredClick ? "ignore-click" : "";
-    let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
-    let img = isIcon ? `<i class="${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
-
-    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
-}
-
-function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
-    return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
-}
-
-function getFLink(cls, link, body, extras = '') {
-    return `<a class='${cls}' href="${link}" ${extras}>${body}</a>`;
-}
-
-function getActionBtn(link, iconsPath, icon, title, extras = "") {
-    return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
-}
-
-function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
-    return getInLi(getImage(btnAction, action, `${iconsPath}${icon}.svg`, isTargetBlank, false, "btn-footer", false, "iconFooter"));
-}
-
-function getInLi(body, extraCls = '', extras = '') {
-    return `<li class="list-inline-item${extraCls}" ${extras}>${body}</li>`;
-}
-
-function getHMenu(extras = "") {
-    return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
-}
-
-function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
-    let idT = (id != '') ? `id="${id}"` : '';
-    let clsT = (imgCls != '') ? `class="${imgCls}"` : '';
-    return `<img ${idT} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
-}
-
-function getCleanTitle(alt) {
-    tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
-    return alt.replace(tagRegExp, '');
 }
