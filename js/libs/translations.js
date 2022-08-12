@@ -63,7 +63,9 @@ function loadReviews() {
 
             reviews.forEach(function(item, index) {
 
-                let name = item.externalLink !== "" ? `<a href="${item.externalLink}" ${noreferrer} ${tBlank} class="text-warning">${item.name}</a>` : item.name;
+                
+
+                let name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
 
                 let active = item.isActive ? " active" : "";
 
@@ -85,9 +87,7 @@ function loadReviews() {
                     ${getInnerTitle(item.date)}
                     <div id="review${currentReview}PDF">${cDiv}
                     <div class="centerText">
-                        <a class="btn btn btn-outline-dark" ${tBlank} href="${item.pdfLocation}">
-                            ${getImgBasicTag(`${iconsPath}download.svg`, lazyLoading, "mr-2 btnIcons", '', 'download', 'style="filter: invert(0)!important" height="24" width="24"')}&nbsp;${genericTranslations.download}
-                        </a>
+                        ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getImgBasicTag(`${iconsPath}download.svg`, lazyLoading, "mr-2 btnIcons", '', 'download', 'style="filter: invert(0)!important" height="24" width="24"')}&nbsp;${genericTranslations.download}`, tBlank)}
                     ${cDiv}`;
                 }
                 else {
@@ -179,8 +179,7 @@ function loadServices() {
                 let items = `<div class="col-lg ml-auto"><p class="lead">`;
                 item.forEach(elem => {
                     let title = "";
-                    title = (elem.link) ? `<a id="service${totalServices}" style='width: 100%; font-weight: bold' href=${elem.link} ${tBlank} class="btn btn-light serviceLink" ${noreferrer}>
-                    ${getImgBasicTag(`${iconsPath}${elem.icon}.svg`, lazyLoading, 'mr-2', '', elem.title, "style='height:24px;width:24px'")}&nbsp;&nbsp;${elem.title}</a>`
+                    title = (elem.link) ? getFLink("btn btn-light serviceLink", elem.link, `${getImgBasicTag(`${iconsPath}${elem.icon}.svg`, lazyLoading, 'mr-2', '', elem.title, "style='height:24px;width:24px'")}&nbsp;&nbsp;${elem.title}`, `id="service${totalServices}" style='width: 100%; font-weight: bold' ${noreferrer}`)
                                         : title = `<b>${elem.title}</b>`;
                     items += `<span>${title}</span><br /><br />`;
                     totalServices++;
@@ -274,7 +273,7 @@ function loadPersonalProjects() {
             let pp = `${getCItem(isActive)}
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
-                    ${getH4Tag(`<a class="text-material-link-dark" href="${item.link}" ${noreferrer} ${tBlank}>${item.title}</a>, ${item.timeFrame}`, hOpt)}
+                    ${getH4Tag(`${getFLink("text-material-link-dark", item.link, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}
                     ${cDiv}
                 ${cDiv}`;
 
@@ -578,9 +577,7 @@ function setWebPImage(id, img) {
 
 function getImgContainer(link, img, title) {
     return `${divSmall}
-        <a href="${link}" ${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'>
-            ${img}
-        </a>
+        ${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}
         ${getH4Tag(title)}
     ${cDiv}`
 }
