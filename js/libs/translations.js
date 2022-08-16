@@ -129,7 +129,7 @@ function loadHobbies() {
         if (isVisible) {
             const hobbiesList = document.getElementById('hobbiesList');
 
-            let finalH = !(smallScreenMobileOS) ? hobbies : hobbies.slice(0, 4);
+            const finalH = !(smallScreenMobileOS) ? hobbies : hobbies.filter(({isOpt}) => isOpt === false);
 
             finalH.forEach(item => {
                 let btnOptional = item.isOpt ? " btnOptional" : "";
