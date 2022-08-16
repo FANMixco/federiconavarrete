@@ -137,7 +137,9 @@ function loadHobbies() {
                 hobbiesList.innerHTML += getListItem(getHobbyImg(item), '', btnOptional);
             });
 
-            hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', '', '', "btnExtraHobbies");
+            if (smallScreenMobileOS) {
+                hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', '', '', "btnExtraHobbies");
+            }
 
             const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
 
@@ -155,11 +157,6 @@ function loadHobbies() {
             document.getElementById("linkContactMe").addEventListener(eClick, function(e) {
                 e.preventDefault();
             });
-        
-            if (!smallScreenMobileOS) {
-                let btnExtraHobbies = document.getElementById("btnExtraHobbies");
-                btnExtraHobbies.style.display = nVis;
-            }
         }
         else {
             const divHobbies = document.getElementById("divHobbies");
