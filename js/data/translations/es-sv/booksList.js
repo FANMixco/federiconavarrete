@@ -6,7 +6,7 @@ const booksList = [
 		"link": "https://amzn.to/3pi6YCg"
 	},
 	{
-		"title": "Timeless Stories of El Salvador",
+		"title": "Historias Eternas de El Salvador (inglés)",
 		"img": "../img/books/mybook1.jpg",
 		"author": "Federico Navarrete",
 		"link": "https://amzn.to/3nnbn4e",
@@ -31,7 +31,7 @@ const booksList = [
 		"link": "https://amzn.to/3B7WHQv"
 	},
 	{
-		"title": "Your Next Five Moves (inglés)",
+		"title": "Tus próximos cinco movimientos (inglés)",
 		"img": "../img/books/en/moves.jpg",
 		"author": "Patrick Bet-David",
 		"link": "https://amzn.to/3lriwSB"
@@ -49,19 +49,19 @@ const booksList = [
 		"link": "https://amzn.to/31sz716",
 	},
 	{
-		"title": "Personal Branding with LinkedIn: The Think Natalia Method (inglés)",
+		"title": "Marca Personal en LinkedIn: El Método de Think Natalia (inglés)",
 		"img": "../img/books/en/linkedin.jpg",
 		"author": "Natalia Wiechowski",
 		"link": "https://amzn.to/2MOgslZ"
 	},
 	{
-		"title": "El coach de Sillicon Valley / Trillion Dollar Coach",
+		"title": "El coach de Sillicon Valley/Trillion Dollar Coach",
 		"img": "../img/books/es/coach.jpg",
 		"author": "Alan Eagle, Eric Schmidt, y Jonathan Rosenberg",
 		"link": "https://amzn.to/3ElMq1Y",
 	},
 	{
-		"title": "Targeted: The Cambridge Analytica Whistleblower's Inside Story of How Big Data, Trump, and Facebook Broke Democracy and How It Can Happen Again (inglés)",
+		"title": "Objetivo: la historia interna del denunciante de Cambridge Analytica sobre cómo Big Data, Trump y Facebook rompieron la democracia y cómo puede volver a suceder (inglés)",
 		"img": "../img/books/en/targeted.jpg",
 		"author": "Brittany Kaiser",
 		"link": "https://amzn.to/31h16AM"
@@ -73,19 +73,19 @@ const booksList = [
 		"link": "https://amzn.to/3dn4FZb"
 	},
 	{
-		"title": "The 25 Laws for Doing The Impossible (inglés)",
+		"title": "Las 25 leyes para hacer lo imposible (inglés)",
 		"img": "../img/books/en/impossible.jpg",
 		"author": "Patrick Bet-David",
 		"link": "https://bit.ly/2L90eon"
 	},
 	{
-		"title": "Software Architecture for Developers (inglés)",
+		"title": "Arquitectura de software para desarrolladores (inglés)",
 		"img": "../img/books/en/arch.jpg",
 		"author": "Simon Brown",
 		"link": "https://bit.ly/3I29FjM"
 	},
 	{
-		"title": "User Story Mapping: Discover the Whole Story, Build the Right Product",
+		"title": "Mapeo de historias de usuario: descubra la historia completa, cree el producto adecuado",
 		"img": "../img/books/en/sm.jpg",
 		"author": "Jeff Patton",
 		"link": "https://bit.ly/377v3SN"
