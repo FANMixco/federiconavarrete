@@ -231,7 +231,7 @@ let apps =
                yearStart: 2015,
                yearEnd: undefined,
                mainTech: "windows10",
-               isSupported: true,
+               isSupported: false,
                storeLink: "https://bit.ly/2V4goFY",
                preview: "https://bit.ly/3yfklGk",
                technologies: [
@@ -323,7 +323,7 @@ let apps =
                yearStart: 2015,
                yearEnd: undefined,
                mainTech: "windows10",
-               isSupported: true,
+               isSupported: false,
                storeLink: "https://bit.ly/3i1nX9l",
                preview: "https://bit.ly/3eRddIy",
                technologies: [
@@ -403,7 +403,7 @@ let apps =
                yearStart: 2015,
                yearEnd: undefined,
                mainTech: "windows10",
-               isSupported: true,
+               isSupported: false,
                storeLink: "https://bit.ly/36ZaRTW",
                preview: "https://bit.ly/3i1in6O",
                technologies: [
@@ -603,7 +603,7 @@ let apps =
                yearStart: 2013,
                yearEnd: undefined,
                mainTech: "windows10",
-               isSupported: true,
+               isSupported: false,
                storeLink: "https://bit.ly/36YeWaS",
                preview: "https://bit.ly/36VHthc",
                technologies: [
@@ -1281,7 +1281,7 @@ let apps =
                yearEnd: undefined,
                storeLink: "",
                mainTech: "web",
-               isSupported: true,
+               isSupported: false,
                link: "",
                preview: "https://bit.ly/3BvUOuR",
                technologies: [
@@ -1366,7 +1366,7 @@ let apps =
                yearEnd: undefined,
                storeLink: "",
                mainTech: "web",
-               isSupported: true,
+               isSupported: false,
                link: "",
                preview: "https://bit.ly/37cVM1f",
                technologies: [
