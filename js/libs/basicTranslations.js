@@ -6,7 +6,7 @@ let currentLoc = '';
 
 const langLoc = "js/data/translations/";
 
-lang = (language.includes('es')) ? "es-sv/min" : lang;
+lang = (language.includes('es')) ? "es-sv/min": (language.includes('zh')) ? 'zh-zh/min' : lang;
 
 getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
