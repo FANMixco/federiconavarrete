@@ -2974,3 +2974,8 @@ h6 {
 .switch-wrap p {
   margin: 0;
 }
+
+.list-group-numbered { list-style: decimal inside; }
+.list-group-alpha { list-style: lower-alpha inside; }
+.list-group-roman { list-style: lower-roman inside; }
+.list-group-alpha >li, .list-group-numbered >li { display: list-item }

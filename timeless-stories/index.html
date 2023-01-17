@@ -25,10 +25,17 @@
 	CSS
 	============================================= -->
 	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="css/nice-select.css">					
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+	 <!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+	integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+	crossorigin=""></script>	
 </head>
 	<body>
 		<header id="header" id="home">
@@ -98,7 +105,7 @@
 								As a person, he believes that everyone should be their own heroes. He shares with everyone he meets that the only person who can reshape their destiny is the one they see in the mirror daily. Dare to be your own hero TODAY.
 							</p>
 							<br>
-							<img style="max-width: 70%;" src="img/signature.png" alt="">
+							<img style="max-width: 70%;" src="img/signature.png" alt="Federico Navarrete">
 						</div>
 					</div>
 				</div>
@@ -217,10 +224,59 @@
 					</div>
 				</div>						
 				<div class="row">
-					<iframe allowfullscreen="" frameborder="0" height="550" sandbox="allow-scripts allow-same-origin allow-popups" src="https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_MGWEVRFZ3TAK6GK5T8A3" style="max-width: 100%; margin: auto" type="text/html" width="336"></iframe>					
+					<iframe allowfullscreen="" frameborder="0" height="550" sandbox="allow-scripts allow-same-origin allow-popups" src="https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&amp;preview=inline&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_MGWEVRFZ3TAK6GK5T8A3" style="max-width: 100%; margin: auto" type="text/html" width="336"></iframe>
 				</div>
 				<div class="row mt-5" style="text-align: center;">
-					<img src="img/map.jpg" id="map" alt="legends" />
+					<div id="map" style="width: 700px; height: 450px; max-width: 100%;"></div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-sm">
+						<ol class="list-group list-group-numbered">
+							<li>Sir Francis Drake, The First Pirate of The Pacific</li>
+							<li>The Death of The Sorcerer of La Nahuaterique</li>
+							<li>The Mulus</li>
+							<li>The Almighty Tlaloc</li>
+							<li>The Mysterious Woman of The Toad River</li>
+							<li>Lake Ilopango</li>
+							<li>The Bewitched Wagon</li>
+							<li>The Dwarf</li>
+						</ol>						
+					</div>
+					<div class="col-sm">
+						<ol class="list-group list-group-numbered" start="9">
+							<li>The Bandari Witch</li>
+							<li>The Weeping Woman</li>
+							<li>The Virgin of Izalco</li>
+							<li>The Headless Horseman</li>
+							<li>Tenancin, Cipitio’s girlfriend</li>
+							<li>Prince Atonal</li>
+							<li>The Pirate Treasures of Meanguera Island</li>
+							<li>The Black Horse</li>
+						</ol>						
+					</div>
+					<div class="col-sm">
+						<ol class="list-group list-group-numbered" start="17">
+							<li>Tangaloa “The Guardian of The Sea”</li>
+							<li>The Cocoa</li>
+							<li>Lake Coatepeque Snake</li>
+							<li>The Woman of The Chinchontepec</li>
+							<li>The Amate Flower</li>
+							<li>Titilcíhuat “The Fire Woman”</li>
+							<li>The Arbolarios</li>
+							<li>Devil’s Pool and its twin</li>
+						</ol>						
+					</div>
+					<div class="col-sm">
+						<ol class="list-group list-group-numbered" start="25">
+							<li>The Frogfish</li>
+							<li>The Eruption of The San Salvador Volcano</li>
+							<li>The Giantess of Jocoro</li>
+							<li>The Bewitched Rock</li>
+							<li>The Old Church of San Dionisio</li>
+							<li>The Cukinca Cave</li>
+							<li>Cuicuizcatl and The Chinchontepec Underworlds</li>
+						</ol>						
+					</div>
 				</div>
 			</div>	
 		</section>
@@ -282,13 +338,13 @@
 					<div class="col-sm mMedia-container">
 						<a target="_blank" href="https://rree.gob.sv/embajada-de-el-salvador-en-austria-apoya-obra-de-escritor-salvadoreno-en-feria-del-libro-en-viena/">
 							<img class="mMedia mt-2" alt="diario el salvador" src="img/fair/buch_viena.jpg" />
-							<p>Embajada de El Salvador en Austria apoya obra de escritor salvadoreño en Feria del Libro en Viena (Buch Wien)</p>
+							<p>Embassy of El Salvador in Austria supports the work of the Salvadoran writer at the Book Fair in Vienna, Buch Wien (in Spanish)</p>
 						</a>
 					</div>
 					<div class="col mMedia-container">
 						<a target="_blank" href="https://diarioelsalvador.com/el-narrador-de-historias-magicas-de-cuscatlan/15042">
 							<img class="mMedia mt-2" alt="diario el salvador" src="img/fair/diario_el_salvador.jpg" />
-							<p>Libro sobre mitología salvadoreña causa furor en Alemania</p>
+							<p>Book on Salvadoran mythology causes a furore in Germany (in Spanish)</p>
 						</a>
 					</div>
 				</div>
@@ -320,11 +376,11 @@
 						<div class="single-footer-widget">
 							<h6>About Us</h6>
 							<p>
-								Timeless Stories is a series of books focused on legends and stories about El Salvador and Latin America.
+								Timeless Stories is a series of books focused on legends and fairytales about El Salvador and Latin America.
 							</p>
 							<p class="footer-text">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								© Copyright Supernova IC. <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+								© Copyright Federico Navarrete. <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</p>								
 						</div>
@@ -354,5 +410,17 @@
 		<script src="js/superfish.min.js"></script>
 		<script src="js/jquery.sticky.js"></script>
 		<script src="js/main.js"></script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3K2NVBX01"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-L3K2NVBX01');
+		</script>
+
+		<script src="js/map.js"></script>
 	</body>
 </html>
