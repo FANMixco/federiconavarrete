@@ -30,19 +30,19 @@ $(function() {
       'id': ''
     });
     $('body').append($mobile_nav);
-    $('body').prepend('<button type="button" id="mobile-nav-toggle" title="menu"><i class="lnr lnr-menu"></i></button>');
+    $('body').prepend('<button type="button" id="mobile-nav-toggle" title="menu"><i class="fas fa-bars"></i></button>');
     $('body').append('<div id="mobile-body-overly"></div>');
-    $('#mobile-nav').find('.menu-has-children').prepend('<i class="lnr lnr-chevron-down"></i>');
+    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fas fa-chevron-down"></i>');
 
     $(document).on('click', '.menu-has-children i', function(e) {
       $(this).next().toggleClass('menu-item-active');
       $(this).nextAll('ul').eq(0).slideToggle();
-      $(this).toggleClass("lnr-chevron-up lnr-chevron-down");
+      $(this).toggleClass("fa-chevron-up fa-chevron-down");
     });
 
     $(document).on('click', '#mobile-nav-toggle', function(e) {
       $('body').toggleClass('mobile-nav-active');
-      $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+      $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
       $('#mobile-body-overly').toggle();
     });
 
@@ -51,7 +51,7 @@ $(function() {
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('lnr-cross lnr-menu');
+          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
           $('#mobile-body-overly').fadeOut();
         }
       }
@@ -90,7 +90,7 @@ $(function() {
 
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('lnr-times lnr-bars');
+          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
           $('#mobile-body-overly').fadeOut();
         }
         return false;
