@@ -11,7 +11,6 @@ lang = supportedLang.includes(nLang) ? nLang : lang;
 getScript(`js/i18n/lang-${lang}.js`)
 .then(() => {
     document.querySelectorAll('[data-translation]').forEach(item => {
-        console.log(item);
         item.innerHTML = translations[`${item.dataset.translation}`];
     });
 })
