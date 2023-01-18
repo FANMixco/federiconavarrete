@@ -4,7 +4,7 @@ let nLang = (navigator.languages
     ? navigator.languages[0]
     : (navigator.language || navigator.userLanguage)).split('-')[0];
 
-let supportedLang = ['en', 'es'];
+let supportedLang = ['en', 'es', 'zh'];
 
 lang = supportedLang.includes(nLang) ? nLang : lang;
 

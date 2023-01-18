@@ -19,38 +19,38 @@
 
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #777777;
+  color: #404040;
   font-weight: 300;
 }
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #777777;
+  color: #404040;
   opacity: 1;
   font-weight: 300;
 }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #777777;
+  color: #404040;
   opacity: 1;
   font-weight: 300;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #777777;
+  color: #404040;
   font-weight: 300;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #777777;
+  color: #404040;
   font-weight: 300;
 }
 
 body {
-  color: #777777;
+  color: #404040;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -833,7 +833,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
-  color: #777777;
+  color: #404040;
 }
 
 .button-area {
@@ -1234,7 +1234,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ordered-list li span {
   font-weight: 300;
-  color: #777777;
+  color: #404040;
 }
 
 .ordered-list-alpha li {
@@ -1247,7 +1247,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ordered-list-alpha li span {
   font-weight: 300;
-  color: #777777;
+  color: #404040;
 }
 
 .ordered-list-roman li {
@@ -1260,7 +1260,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ordered-list-roman li span {
   font-weight: 300;
-  color: #777777;
+  color: #404040;
 }
 
 .single-input {
@@ -2846,43 +2846,43 @@ h6 {
 .single-footer-widget ::-moz-selection {
   /* Code for Firefox */
   background-color: #191919 !important;
-  color: #777777;
+  color: #404040;
 }
 
 .single-footer-widget ::selection {
   background-color: #191919 !important;
-  color: #777777;
+  color: #404040;
 }
 
 .single-footer-widget ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #777777;
+  color: #404040;
   font-weight: 300;
 }
 
 .single-footer-widget :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #777777;
+  color: #404040;
   opacity: 1;
   font-weight: 300;
 }
 
 .single-footer-widget ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #777777;
+  color: #404040;
   opacity: 1;
   font-weight: 300;
 }
 
 .single-footer-widget :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #777777;
+  color: #404040;
   font-weight: 300;
 }
 
 .single-footer-widget ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #777777;
+  color: #404040;
   font-weight: 300;
 }
 
