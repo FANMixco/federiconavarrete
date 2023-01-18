@@ -66,7 +66,7 @@ const translations = {
     "mMedia1": "Embassy of El Salvador in Austria supports the work of the Salvadoran writer at the Book Fair in Vienna, Buch Wien (in Spanish)",
     "mMedia2": "Book on Salvadoran mythology causes a sensation in Germany (in Spanish)",
     "prezi1": "Are you a bilingual parent?",
-    "prezi2": "Would you like to start sharing your origins with your children in a bilingual mode (Spanish and English)?",
+    "prezi2": "Would you like to start sharing your origins with your children in a bilingual mode (English and Spanish)?",
     "prezi3": "Then <b>Timeless Stories of El Salvador, Children's Edition</b> is for <b>YOU!</b>",
     "footer1": "About Us",
     "footer2": "Timeless Stories is a series of books focused on legends and fairytales about El Salvador and Latin America.",
