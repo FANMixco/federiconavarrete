@@ -7,7 +7,7 @@ const translations = {
     "menu5": "Mass Media",
     "intro1": "Author: Federico Navarrete",
     "intro2": "Timeless Stories of El Salvador V2: Epiphany",
-    "intro3": "The 2<sup style='color: white!important;'>nd</sup> volume of Timeless Stories of El Salvador. A new book full of epic adventures that teleports you to the past of El Salvador. Enjoy 31 new fully illustrated folkloric legends and fairytales.",
+    "intro3": "The 2<sup style='color: white!important;'>nd</sup> volume of Timeless Stories of El Salvador. A new book full of epic adventures that teleports you to the past of El Salvador. Enjoy <a data-toggle='modal' data-target='#mStories' class='text-dark' href='#mStories'>31</a> new fully illustrated folkloric legends and fairytales.",
     "price0": "Get Your Copy For $4.99",
     "price1": "<span>$</span> 4.99",
     "price2": "<span>$</span> 10.99",
@@ -72,5 +72,6 @@ const translations = {
     "footer2": "Timeless Stories is a series of books focused on legends and fairytales about El Salvador and Latin America.",
     "footer3": "Follow Me",
     "footer4": "Let us be social",
-    "name": "Federico Navarrete"
+    "name": "Federico Navarrete",
+    "stories": "Stories"
 };
