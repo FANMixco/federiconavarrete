@@ -33,9 +33,9 @@ let legends = [
 ];
 
 function load() {
-    var map = L.map('map').setView([13.8029939, -88.9053364], 13);
+    var map = L.map('map').setView([13.8029939, -88.9053364], 8.4);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 8.4,
+        maxZoom: 20,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
