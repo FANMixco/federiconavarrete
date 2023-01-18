@@ -33,6 +33,19 @@
 	<!-- Make sure you put this AFTER Leaflet's CSS -->
 	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://federiconavarrete.com/timeless-stories">
+	<meta property="og:title" content="Timeless Stories of El Salvador">
+	<meta property="og:description" content="Official website of Timeless Stories of El Salvador.">
+	<meta property="og:image" content="https://federiconavarrete.com/timeless-stories/img/preview.jpg">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://federiconavarrete.com/timeless-stories">
+	<meta property="twitter:title" content="Timeless Stories of El Salvador">
+	<meta property="twitter:description" content="Official website of Timeless Stories of El Salvador.">
+	<meta property="twitter:image" content="https://federiconavarrete.com/timeless-stories/img/preview.jpg">
+
 	<script src="js/get-script.min.js"></script>
 </head>
 	<body>
@@ -91,7 +104,11 @@
 				<div class="single-info row mt-40 align-items-center">
 					<div class="col-lg-6 col-md-12 text-center no-padding info-left">
 						<div class="info-thumb">
-							<img src="img/about-img.jpg" class="img-fluid info-img" alt="">
+							<picture>
+								<source type="image/webp" srcset="img/about-img.webp">
+								<source type="image/jpeg" srcset="img/about-img.jpg">
+								<img src="img/about-img.jpg" class="img-fluid info-img" alt="Federico Navarrete" loading="lazy" />
+							</picture>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-12 no-padding info-rigth">
@@ -102,7 +119,11 @@
 							<p data-translation="author3"></p>
 							<p data-translation="author4"></p>
 							<br>
-							<img class="signature" src="img/signature.png" alt="Federico Navarrete">
+							<picture>
+								<source type="image/webp" srcset="img/signature.webp">
+								<source type="image/png" srcset="img/signature.png">
+								<img class="signature" src="img/signature.png" alt="Signature" loading="lazy" />
+							</picture>
 						</div>
 					</div>
 				</div>
@@ -315,13 +336,21 @@
 				<div class="row">
 					<div class="col-sm mMedia-container">
 						<a target="_blank" href="https://rree.gob.sv/embajada-de-el-salvador-en-austria-apoya-obra-de-escritor-salvadoreno-en-feria-del-libro-en-viena/">
-							<img class="mMedia mt-2" alt="diario el salvador" src="img/fair/buch_viena.jpg" />
+							<picture>
+								<source type="image/webp" srcset="img/fair/buch_viena.webp">
+								<source type="image/jpeg" srcset="img/fair/buch_viena.jpg">
+								<img class="mMedia mt-2" alt="diario el salvador" src="img/fair/buch_viena.jpg" loading="lazy" />
+							</picture>
 							<p data-translation="mMedia1"></p>
 						</a>
 					</div>
 					<div class="col mMedia-container">
 						<a target="_blank" href="https://diarioelsalvador.com/el-narrador-de-historias-magicas-de-cuscatlan/15042">
-							<img class="mMedia mt-2" alt="diario el salvador" src="img/fair/diario_el_salvador.jpg" />
+							<picture>
+								<source type="image/webp" srcset="img/fair/diario_el_salvador.webp">
+								<source type="image/jpeg" srcset="img/fair/diario_el_salvador.jpg">
+								<img class="mMedia mt-2" alt="diario el salvador" src="img/fair/diario_el_salvador.jpg" loading="lazy" />
+							</picture>
 							<p data-translation="mMedia2"></p>
 						</a>
 					</div>
@@ -353,8 +382,8 @@
 					<div class="col-lg-5 col-md-6 col-sm-6">
 						<div class="single-footer-widget">
 							<h6 data-translation="footer1"></h6>
-							<p data-translation="footer2"></p>
-							<p class="footer-text">
+							<p class="footer-txt" data-translation="footer2"></p>
+							<p class="footer-text footer-txt">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 								© Copyright Federico Navarrete. <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -367,7 +396,7 @@
 					<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
 						<div class="single-footer-widget">
 							<h6 data-translation="footer3"></h6>
-							<p data-translation="footer4"></p>
+							<p data-translation="footer4" class="footer-txt"></p>
 							<div class="footer-social d-flex align-items-center">
 								<a title="amazon" target="_blank" href="https://www.amazon.com/stores/Federico-Navarrete/author/B08NJTXQRV"><i class="fab fa-amazon"></i></a>
 								<a title="goodreads" target="_blank" href="https://www.goodreads.com/author/show/21125413.Federico_Navarrete"><i class="fab fa-goodreads"></i></a>
