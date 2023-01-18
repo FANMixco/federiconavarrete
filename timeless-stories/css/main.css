@@ -2979,3 +2979,23 @@ h6 {
 .list-group-alpha { list-style: lower-alpha inside; }
 .list-group-roman { list-style: lower-roman inside; }
 .list-group-alpha >li, .list-group-numbered >li { display: list-item }
+
+.signature {
+  max-width: 70%;
+}
+
+.bookPreview {
+  max-width: 100%;
+  margin: auto;
+}
+
+.mapPreview {
+  width: 700px;
+  height: 450px;
+  max-width: 100%;
+}
+
+.preziPreview {
+  max-width: 100%;
+  margin: auto!important;
+}
