@@ -36,7 +36,7 @@ const translations = {
     "legend6": "伊洛潘戈湖",
     "legend7": "被蛊惑的货车",
     "legend8": "矮人",
-    "legend9": "班达里女巫",
+    "legend9": "女猴女巫",
     "legend10": "哭泣的女人",
     "legend11": "伊萨尔科圣母",
     "legend12": "无头骑士",

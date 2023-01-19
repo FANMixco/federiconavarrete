@@ -120,6 +120,15 @@ $(function() {
   })
 });
 
+const gScriptExist = document.getElementById('g_translate');
+        
+if (!gScriptExist) {
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.id = 'g_translate';
+    document.body.appendChild(script);
+}
+
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
       pageLanguage: 'en',
