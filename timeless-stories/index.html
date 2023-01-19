@@ -20,18 +20,20 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"></noscript>
+
+	<link rel="preload" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"></noscript>
 
 	<!-- CSS ============================================= -->
-	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.14.0/css/all.css">
 	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
+
+	<link rel="preload" href="css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/animate.min.css"></noscript>
+
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="css/book.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-
-	<!-- Make sure you put this AFTER Leaflet's CSS -->
-	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
@@ -467,6 +469,11 @@
 				</div>
 			</div>
 		</div>
+
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>	
 
 		<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
