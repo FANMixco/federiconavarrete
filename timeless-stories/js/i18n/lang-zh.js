@@ -7,7 +7,7 @@ const translations = {
     "menu5": "大众媒体",
     "intro1": "作者:费德里科·纳瓦雷特",
     "intro2": "萨尔瓦多永恒的故事V2:显灵",
-    "intro3": "《萨尔瓦多永恒的故事》第二卷。一本充满史诗般的冒险故事的新书,将你带到萨尔瓦多的过去。欣赏<a data-toggle='modal' data-target='#mStories' class='text-dark' href='#mStories'>31</a>个新的、插图完整的民间传说和童话故事。",
+    "intro3": "萨尔瓦多永恒故事的第二卷。一本充满史诗冒险的新书，将你传送到 <a data-toggle='modal' data-target='#mPastSV' class='text-dark ' href='#mPastSV'>萨尔瓦多的过去</a>。享受 <a data-toggle='modal' data-target='#mStories' class='text-dark' href='#mStories'>31 </a> 全新的插图丰富的民俗传说和童话故事。",
     "price0": "以4.99美元获得副本",
     "price1": "<span>美元</span>4.99",
     "price2": "<span>美元</span>10.99",
