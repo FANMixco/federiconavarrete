@@ -57,7 +57,13 @@
 			<div class="container">
 				<div class="row align-items-center justify-content-between d-flex">
 					<div id="logo">
-						<a href="index.html"><img src="img/rsz_logo-full.png" id="img-logo" width="130" alt="logo" title="logo" /></a>
+						<a href="index.html">
+							<picture>
+								<source type="image/webp" srcset="img/rsz_logo-full.webp">
+								<source type="image/png" srcset="img/rsz_logo-full.png">
+								<img src="img/rsz_logo-full.png" id="img-logo" width="130" alt="logo" title="logo" />
+							</picture>
+						</a>
 					</div>
 					<nav id="nav-menu-container">
 						<ul class="nav-menu">
@@ -109,9 +115,28 @@
 					<div class="col-lg-6 col-md-12 text-center no-padding info-left">
 						<div class="info-thumb">
 							<picture>
-								<source type="image/webp" srcset="img/about-img.webp">
-								<source type="image/jpeg" srcset="img/about-img.jpg">
-								<img src="img/about-img.jpg" class="img-fluid info-img" alt="Federico Navarrete" loading="lazy" />
+								<source srcset="img/about/about-img-large.webp" type="image/webp" media="(min-width: 769px)">
+								<source srcset="img/about/about-img-medium.webp" type="image/webp" media="(max-width: 768px)">
+								<source srcset="img/about/about-img-small.webp" type="image/webp" media="(max-width: 480px)">
+				 
+								<source srcset="img/about/about-img-large.jpg" type="image/jpeg" media="(min-width: 769px)">
+								<source srcset="img/about/about-img-medium.jpg" type="image/jpeg" media="(max-width: 768px)">
+								<source srcset="img/about/about-img-small.jpg" type="image/jpeg" media="(max-width: 480px)">
+				 
+								<img 
+								   srcset="img/about/about-img-large.jpg 1024w,
+										   img/about/about-img-medium.jpg 768w,
+										   img/about/about-img-small.jpg 500w"
+				 
+								   sizes="(max-width: 1024px) 1024w,
+										  (max-width: 768px) 768px,
+										  (max-width: 480px) 480px"
+				 
+								   src="img/photos/about-img-medium.jpg" 
+								   alt="Federico Navarrete's pic"
+								   id="imgProfile"
+								   class="img-fluid info-img"
+								   loading="lazy"/>
 							</picture>
 						</div>
 					</div>
