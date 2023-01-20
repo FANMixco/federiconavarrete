@@ -137,3 +137,5 @@ function googleTranslateElementInit() {
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
   }, 'google_translate_element');
 }
+
+document.getElementById("sDate").innerHTML = new Date().getFullYear();

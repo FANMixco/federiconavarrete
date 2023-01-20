@@ -3007,3 +3007,12 @@ h6 {
 .img-logo {
   width: 130px;
 }
+
+.yVideo {
+  margin: auto;
+}
+
+#yVideoFrame {
+  max-width: 100%!important; 
+  max-height: 100%!important;
+}
