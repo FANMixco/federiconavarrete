@@ -51,7 +51,7 @@
 
 body {
   color: #404040;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.625em;
@@ -3015,4 +3015,16 @@ h6 {
 #yVideoFrame {
   max-width: 100%!important; 
   max-height: 100%!important;
+}
+
+.icons {
+  width: auto;
+  filter: invert(1);
+  height: 32px;
+}
+
+.hMenu {
+  width: auto;
+  height: 24.67px;
+  filter: invert(1);
 }
