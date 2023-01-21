@@ -3028,3 +3028,8 @@ h6 {
   height: 24.67px;
   filter: invert(1);
 }
+
+.eIcons {
+  width: 40px;
+  height: auto;
+}
