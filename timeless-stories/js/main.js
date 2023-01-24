@@ -29,7 +29,7 @@ $(function() {
       });
       $('body').append($mobile_nav);
       //<img src="img/icons/bars-solid.svg" loading="lazy" alt="menu" class="hMenu" />
-      $('body').prepend('<button type="button" id="mobile-nav-toggle" title="menu"><img src="img/icons/bars-solid.svg" loading="lazy" alt="menu" class="hMenu" /></button>');
+      $('body').prepend('<button type="button" id="mobile-nav-toggle" title="menu"><img src="img/icons/bars-solid.svg" loading="lazy" alt="menu" class="hMenu" width="21.58" height="24.67" /></button>');
       $('body').append('<div id="mobile-body-overly"></div>');
       /*$('#mobile-nav').find('.menu-has-children').prepend('<i class="fas fa-chevron-down"></i>');
 
@@ -43,8 +43,12 @@ $(function() {
           $('body').toggleClass('mobile-nav-active');
           if ($('#mobile-nav-toggle img').attr('src') == 'img/icons/close-thick.svg') {
             $('#mobile-nav-toggle img').attr('src', 'img/icons/bars-solid.svg');
+            $('#mobile-nav-toggle img').attr('width', '21.58');
+            $('#mobile-nav-toggle img').attr('height', '24.67');
           } else {
             $('#mobile-nav-toggle img').attr('src', 'img/icons/close-thick.svg');
+            $('#mobile-nav-toggle img').attr('width', '24.67');
+            $('#mobile-nav-toggle img').attr('height', '24.67');
           }
           //$('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
           $('#mobile-body-overly').toggle();

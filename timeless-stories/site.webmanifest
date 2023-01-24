@@ -1,22 +1,22 @@
 {
-    "name": "Timeless Stories of El Salvador",
-    "short_name": "Timeless Stories",
-    "description": "Official website of Timeless Stories of El Salvador",
-    "icons": [
-      {
-        "src": "img/maskable_icon_x192.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "any maskable"
+  "name": "Timeless Stories of El Salvador",
+  "short_name": "Timeless Stories",
+  "description": "Official website of Timeless Stories of El Salvador",
+  "icons": [
+    {
+      "src": "img/favicons/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
-      {
-        "src": "img/maskable_icon_x512.png",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "any maskable"
-      }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
-  }
+    {
+      "src": "img/favicons/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

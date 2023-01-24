@@ -7,7 +7,7 @@ const translations = {
     "menu5": "Medios de comunicación",
     "intro1": "Autor: Federico Navarrete",
     "intro2": "Timeless Stories of El Salvador V2: Epiphany",
-    "intro3": "El 2<sup style='color: white!important;'>o</sup> volumen de Timeless Stories of El Salvador. Un nuevo libro lleno de épicas aventuras que te teletransporta al <a data-toggle='modal' data-target='#mPastSV' class='text-dark' href='#mPastSV'>pasado de El Salvador</a>. Disfruta de <a data-toggle='modal' data-target='#mStories' class='text-dark' href='#mStories'>31</a> nuevas leyendas folclóricas y cuentos de hadas completamente ilustrados.",
+    "intro3": "El 2<sup style='color: white!important;'>o</sup> volumen de Timeless Stories of El Salvador. Un nuevo libro lleno de épicas aventuras que te teletransporta al <a data-toggle='modal' data-target='#mPastSV' class='text-warning' href='#mPastSV'>pasado de El Salvador</a>. Disfruta de <a data-toggle='modal' data-target='#mStories' class='text-warning' href='#mStories'>31</a> nuevas leyendas folclóricas y cuentos de hadas completamente ilustrados.",
     "price0": "Obtén tu copia por $4.99",
     "price1": "<span>$</span> 4.99",
     "price2": "<span>$</span> 10.99",
