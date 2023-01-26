@@ -134,6 +134,14 @@ $(function() {
 window.onscroll = function(evt) { 
     let scroll = window.scrollY;
 
+    if (scroll > getHeight() * 0.55) { 
+        if (document.getElementById('aReviews').innerHTML === "") {
+            const aScript = document.createElement('script');
+            aScript.src = 'https://apps.elfsight.com/p/platform.js';
+            document.body.appendChild(aScript);
+        }
+    }
+
     if (scroll > getHeight() * 0.7) {
         const gScriptExist = document.getElementById('g_translate');
         
