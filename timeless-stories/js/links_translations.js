@@ -27,8 +27,8 @@ const links_translations = {
 
 const validLinks = links_translations[lang];
 
-document.getElementById("bookPreviewFrame").setAttribute("src", `https://prezi.com/p/embed/${validLinks.book}`);
-document.getElementById("preziPreviewFrame").setAttribute("src", validLinks.prezi);
+document.getElementById("bookPreviewFrame").setAttribute("src", validLinks.book);
+document.getElementById("preziPreviewFrame").setAttribute("src", `https://prezi.com/p/embed/${validLinks.book}`);
 
 $('#mContactUs').on('show.bs.modal', function (e) {
     console.log('opened');
