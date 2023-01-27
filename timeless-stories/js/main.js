@@ -128,7 +128,7 @@ $(function() {
       } else {
           $('#header').removeClass('header-scrolled');
       }
-  })
+  });
 });
 
 window.onscroll = function(evt) { 
@@ -150,7 +150,7 @@ window.onscroll = function(evt) {
             script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
             script.id = 'g_translate';
             document.body.appendChild(script);
-        }        
+        }
     }
 }
 

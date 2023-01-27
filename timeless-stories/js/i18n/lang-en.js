@@ -73,5 +73,6 @@ const translations = {
     "footer3": "Follow Me",
     "footer4": "Let us be social",
     "name": "Federico Navarrete",
-    "stories": "Stories"
+    "stories": "Stories",
+    "contactMe": "Contact me"
 };

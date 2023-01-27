@@ -72,5 +72,6 @@ const translations = {
     "footer3": "关注我",
     "footer4": "让我们社交",
     "name": "费德里科·纳瓦雷特",
-    "stories": "故事"
+    "stories": "故事",
+    "contactMe": "联系我"
 }

@@ -73,5 +73,6 @@ const translations = {
     "footer3": "Sígueme",
     "footer4": "Seamos sociales",
     "name": "Federico Navarrete",
-    "stories": "Historias"
+    "stories": "Historias",
+    "contactMe": "Contáctame"
 };
