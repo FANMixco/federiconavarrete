@@ -3,7 +3,7 @@ const socialBasicList = {
 		{
 			"icon": "linkedin",
 			"title": "LinkedIn",
-			"link": "https://www.linkedin.com/in/fanmixco",
+			"link": "https://www.linkedin.com/in/federiconavarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
