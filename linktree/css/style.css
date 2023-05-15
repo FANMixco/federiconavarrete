@@ -136,10 +136,18 @@ body {
     max-width: 600px; /* Adjust the width as needed */
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: center; /* Adjust as needed */
     flex-wrap: wrap;
     text-align: center;
     margin: 27px auto;
+  }
+
+  @media (max-width: 600px) {
+    /* Adjust the max-width value to the appropriate screen size */
+    #sub-links {
+      justify-content: center; /* Center the sub-links horizontally */
+      align-items: center; /* Center the sub-links vertically */
+    }
   }
   
   .sub-link {
