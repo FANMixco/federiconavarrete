@@ -8,6 +8,23 @@
     --delay: .3s;
 }
 
+#qr-link {
+    color: var(--accentColor);
+  }
+  
+  #qr-link:visited {
+    color: var(--accentColor);
+  }
+  
+  #qr-link:hover {
+    color: var(--accentColor);
+  }
+  
+  #qr-link:active {
+    color: var(--accentColor);
+  }
+  
+
 body {
     margin: 0;
     padding: 0;
@@ -103,6 +120,41 @@ body {
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
+#sub-links {
+    max-width: 500px; /* Adjust the width as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 27px auto;
+  }
+  
+  .sub-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust the width and height for the desired circle size */
+    height: 50px;
+    border: solid var(--accentColor) 2px;
+    border-radius: 50%;
+    margin: 9px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(.08, .59, .29, .99);
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .sub-link:hover {
+    background-color: var(--accentColor);
+    color: var(--bgColor) !important;
+  }
+  
+  .sub-link {
+    font-size: 1.5rem; /* Adjust the font size for the icon */
+    line-height: 1; /* Remove the fixed line-height */
+    color: var(--accentColor);
+  }
 
 /*-------------------------animations-----------------------*/
 @keyframes transitionAnimation {
