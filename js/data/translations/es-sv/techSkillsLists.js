@@ -7,7 +7,7 @@ const techSkills = [
 	],
 	[
 		'Angular 12+',
-		'PWA',
+		'Open AI API / ChatGPT',
 		'C# y .NET Core',
 	],
 	[
@@ -28,7 +28,7 @@ const techSkillsOthers =[
 	[
 		'ASP MVC',
 		'Entity Framework',
-		'HTML5 / CSS3 / JS',
+		'PWA / HTML5 / CSS3 / JS',
 		'UI y UX'
 	],
 	[

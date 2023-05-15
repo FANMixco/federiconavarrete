@@ -6,24 +6,7 @@
     --accentColor: #FFF;
     --font: 'Karla', sans-serif;
     --delay: .3s;
-}
-
-#qr-link {
-    color: var(--accentColor);
-  }
-  
-  #qr-link:visited {
-    color: var(--accentColor);
-  }
-  
-  #qr-link:hover {
-    color: var(--accentColor);
-  }
-  
-  #qr-link:active {
-    color: var(--accentColor);
-  }
-  
+}  
 
 body {
     margin: 0;
@@ -45,7 +28,7 @@ body {
     width: 96px;
     height: 96px;
     display: block;
-    margin: 40px auto 20px;
+    margin: 5px auto 20px;
     border-radius: 50%;
     -webkit-tap-highlight-color: transparent;
 }
@@ -60,6 +43,35 @@ body {
     width: 100%;
     text-align: center;
     text-decoration: none;
+}
+
+#qr-link {
+    color: var(--accentColor);
+  }
+  
+  #qr-link:visited {
+    color: var(--accentColor);
+  }
+  
+  #qr-link:hover {
+    color: var(--accentColor);
+  }
+  
+  #qr-link:active {
+    color: var(--accentColor);
+  }
+
+#share-section {
+    margin-top: 40px!important;
+    max-width: 675px;
+    width: auto;
+    display: block;
+    text-align: right;
+    margin: auto;
+}
+
+#share-section a { 
+    color: var(--accentColor)!important;
 }
 
 #links {
@@ -121,7 +133,7 @@ body {
 }
 
 #sub-links {
-    max-width: 500px; /* Adjust the width as needed */
+    max-width: 600px; /* Adjust the width as needed */
     margin: 0 auto;
     display: flex;
     justify-content: space-between; /* Adjust as needed */

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Federico Navarrete is an IT innovator, Author and Orator who is creating a better world with technology.">
-    <meta name="keywords" content="Web Development,RPA,Consultancy,Public Speaking,Toastmasters,Agent of Change,Innovation,IT Consultancy,Traning,Soft skills,Storytelling,Speeches,Travelling,Traveller,Planning,Project Management,Xamarin,Mobile Development,History,Politics,El Salvador,Elevator Pitch,NASA,Cisco,Microsoft,MSP,Architect,Technology,Mountains,Hiking,ITSM,ITIL,Intrapreneurship,Low Code,Timeless Stories of El Salvador,AWS,Docker,EU,Citython,aws">
+    <meta name="keywords" content="Web Development,RPA,Consultancy,Public Speaking,Toastmasters,Agent of Change,Innovation,IT Consultancy,Traning,Soft skills,Storytelling,Speeches,Travelling,Traveller,Planning,Project Management,Xamarin,Mobile Development,History,Politics,El Salvador,Elevator Pitch,NASA,Cisco,Microsoft,MSP,Architect,Technology,Mountains,Hiking,ITSM,ITIL,Intrapreneurship,Low Code,Timeless Stories of El Salvador,AWS,Docker,EU,Citython,aws,ai,openai,chatgpt">
     <meta name="author" content="Federico Navarrete">
 
-    <title>Federico Navarrete | Linktree</title>
+    <title>Federico Navarrete | LinkedIn, Amazon, YouTube, Spotify, Twitter, TikTok, GitHub</title>
     <!-- Favicon -->
     <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
@@ -19,7 +19,21 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- Core theme CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://federiconavarrete.com/linktree">
+    <meta property="og:title" content="Federico Navarrete - Agent of Change">
+    <meta property="og:description" content="Federico Navarrete is an IT innovator and Orator who is creating a better world with technology.">
+    <meta property="og:image" content="https://federiconavarrete.com/linktree/img/preview.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://federiconavarrete.com/linktree">
+    <meta property="twitter:title" content="Federico Navarrete - Agent of Change">
+    <meta property="twitter:description" content="Federico Navarrete is an IT innovator and Orator who is creating a better world with technology.">
+    <meta property="twitter:image" content="https://federiconavarrete.com/linktree/img/preview.jpg">
+
   </head>
 
   <body>
@@ -31,7 +45,12 @@
     </section>
     <!-- End of Parallax Pixel Background Animation -->
 
-    <a id="profilePicture" href="#popup">
+    <div id="share-section">
+      <a href="#share-icon" id="shareIcon" aria-label="Share Profile">
+        <i class="fa fa-share-alt"></i> <!-- Replace "fa fa-share" with the appropriate share icon class -->
+      </a>  
+    </div>
+    <a id="profilePicture" href="#popup" aria-label="Personal Message">
       <picture>
         <source srcset="../img/photos/profile_medium.jpg" type="image/webp">
         <source srcset="../img/photos/profile_medium.webp" type="image/jpeg">
@@ -42,7 +61,7 @@
     <div class="overlay" id="popup">
       <div class="popup">
         <div class="popup-photo">
-          <a href="https://federiconavarrete.com" target="_blank">
+          <a href="https://federiconavarrete.com" aria-label="Personal Website" target="_blank">
             <picture>
               <source srcset="../img/photos/profile_medium.jpg" type="image/webp">
               <source srcset="../img/photos/profile_medium.webp" type="image/jpeg">
@@ -60,9 +79,7 @@
     <div class="overlay" id="popup-qr">
       <div class="popup">
         <div class="popup-photo">
-          <a href="#" target="_blank">
-            <img src="img/qr.png" alt="QR" />
-          </a>
+          <img src="img/qr.png" alt="QR" />
         </div>
         <a class="popup-close" onclick="history.back()">&times;</a>
       </div>
@@ -70,39 +87,43 @@
 
     <div id="userName">
       <a href="#popup-qr" id="qr-link">
-        @federiconavarrete
+        Federico Navarrete
       </a>
+      <p>Creating a better 🌍 through Technology!</p>
     </div>
 
     <div id="links">
-      <a class="link" href="https://www.linkedin.com/in/federiconavarrete" target="_blank">
+      <a class="link" href="https://www.linkedin.com/in/federiconavarrete" aria-label="LinkedIn" target="_blank">
         <i class="fab fa-linkedin">&nbsp;</i>Linkedin
       </a>
-      <a class="link" href="https://open.spotify.com/show/3AgBmUA1wIMQmOOWWardQb" target="_blank">
+      <a class="link" href="https://open.spotify.com/show/3AgBmUA1wIMQmOOWWardQb" aria-label="Spotify - Cyber Prophets" target="_blank">
         <i class="fab fa-spotify">&nbsp;</i>Cyber Prophets
       </a>
-      <a class="link" href="https://www.youtube.com/c/FedericoNavarrete" target="_blank">
+      <a class="link" href="https://www.youtube.com/c/FedericoNavarrete" aria-label="YouTube" target="_blank">
         <i class="fab fa-youtube">&nbsp;</i>YouTube
       </a>
-      <a class="link" href="https://www.amazon.com/stores/Federico-Navarrete/author/B08NJTXQRV" target="_blank">
-        <i class="fab fa-amazon">&nbsp;</i>Amazon
+      <a class="link" href="https://www.amazon.com/stores/Federico-Navarrete/author/B08NJTXQRV" aria-label="Amazon Author Page" target="_blank">
+        <i class="fab fa-amazon">&nbsp;</i>Amazon Author Page
       </a>
-      <a class="link" href="https://www.instagram.com/federico_the_consultant" target="_blank">
+      <a class="link" href="https://www.instagram.com/federico_the_consultant" aria-label="Instagram" target="_blank">
         <i class="fab fa-instagram">&nbsp;</i>Instagram
       </a>
     </div>
 
     <div id="sub-links">
-      <a class="sub-link" href="https://www.tiktok.com/@federicostories" target="_blank">
+      <a class="sub-link" href="https://www.tiktok.com/@federicostories" aria-label="TikTok" target="_blank">
         <i class="fab fa-tiktok"></i>
       </a>
-      <a class="sub-link" href="https://twitter.com/FedeStories" target="_blank">
+      <a class="sub-link" href="https://twitter.com/FedeStories" aria-label="Twitter" target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a class="sub-link" href="https://github.com/FANMixco" target="_blank">
+      <a class="sub-link" href="https://federiconavarrete.com" aria-label="Personal Website" target="_blank">
+        <i class="fas fa-user-tie"></i>
+      </a>
+      <a class="sub-link" href="https://github.com/FANMixco" aria-label="GitHub" target="_blank">
         <i class="fab fa-github"></i>
       </a>
-      <a class="sub-link" href="mailto:fanmixco@gmail.com?subject=Contact me (LinkTree's site)" target="_blank">
+      <a class="sub-link" href="mailto:fanmixco@gmail.com?subject=Contact me (LinkTree's site)" aria-label="Contact Me" target="_blank">
         <i class="fa fa-at"></i>
       </a>
     </div>
@@ -110,5 +131,7 @@
     <div id="hashtag">
       #BeAnAgentOfChange
     </div>
+
+    <script src="js/share.min.js"></script>
   </body>
 </html>
