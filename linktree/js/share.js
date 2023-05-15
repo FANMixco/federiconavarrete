@@ -8,7 +8,7 @@ shareIcon.addEventListener('click', () => {
     // Use the Web Share API to share the current page
     navigator.share({
       title: "Get to know Federico Navarrete!",
-      text: 'Here you can check his official websites: https://bit.ly/3I7FmKc',
+      text: 'Here you can check Federico Navarrete's official websites: https://bit.ly/3I7FmKc',
       url: window.location.href
     })
       .then(() => {
