@@ -33,6 +33,10 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+.imgPopup {
+    display: none;
+}
+
 #userName {
     color: var(--accentColor);
     font-size: 1rem;
