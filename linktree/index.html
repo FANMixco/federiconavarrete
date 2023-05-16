@@ -78,7 +78,11 @@
     <div class="overlay" id="popup-qr">
       <div class="popup">
         <div class="popup-photo">
-          <img src="img/qr.png" alt="QR" loading="lazy" />
+          <picture>
+            <source srcset="img/qr.webp" type="image/webp">
+            <source srcset="img/qr.jpg" type="image/jpeg">
+            <img src="img/qr.jpg" loading="lazy" alt="QR" />
+          </picture>
         </div>
         <a class="popup-close" alt="close button" onclick="history.back()">&times;</a>
       </div>
