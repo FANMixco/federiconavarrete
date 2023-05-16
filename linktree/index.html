@@ -17,7 +17,8 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"></noscript>
     <!-- Core theme CSS -->
     <link rel="stylesheet" href="css/style.min.css">
 
@@ -133,7 +134,7 @@
     <script src="js/share.min.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WR9ZRLLN09" defer></script>
-    <script src="js/analytics.js" defer></script>
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-WR9ZRLLN09"></script>
+    <script defer src="js/analytics.js"></script>
   </body>
 </html>
