@@ -309,6 +309,10 @@ body {
     }
 }
 
+#profile-name {
+    font-size: large;
+}
+
 .popup-close:active {
     background-color: var(--accentColor);
     color: var(--bgColor);
