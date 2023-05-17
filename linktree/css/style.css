@@ -287,7 +287,7 @@ body {
     top: -1rem;
     width: 3rem;
     height: 3rem;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: 400;
     border-radius: 100%;
     background-color: var(--bgColor);
@@ -298,6 +298,8 @@ body {
     cursor: pointer;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+    border: none;
+    outline: none;
 }
 
 @media (hover: hover) {
