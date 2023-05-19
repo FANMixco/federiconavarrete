@@ -1,6 +1,8 @@
 {
   "name": "Timeless Stories of El Salvador",
   "short_name": "Timeless Stories",
+  "scope": "/timeless-stories",
+  "start_url": "/timeless-stories",
   "description": "Official website of Timeless Stories of El Salvador",
   "icons": [
     {
@@ -16,7 +18,7 @@
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#5A5A5A",
   "background_color": "#ffffff",
   "display": "standalone"
 }

@@ -1,1 +1,24 @@
-{"name":"Federico Navarrete - LinkTree","short_name":"FANMixco - LinkTree","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+    "name": "Federico Navarrete - LinkTree",
+    "short_name": "FANMixco - LinkTree",
+    "scope": "/linktree",
+    "start_url": "/linktree",
+    "description": "Federico Navarrete is an IT innovator, Author and Orator who is creating a better world through technology.",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "theme_color": "#223344",
+    "background_color": "#ffffff",
+    "display": "standalone"
+  }
