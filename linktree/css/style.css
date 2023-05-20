@@ -74,6 +74,10 @@ body {
     margin: auto;
 }
 
+#shareIcon {
+    text-decoration:none;
+}
+
 #share-section a { 
     color: var(--accentColor)!important;
 }
