@@ -3,6 +3,8 @@
     "short_name": "FANMixco - LinkTree",
     "scope": "/linktree",
     "start_url": "/linktree",
+    "orientation": "portrait-primary",
+    "lang": "en",
     "description": "Federico Navarrete is an IT innovator, Author and Orator who is creating a better world through technology.",
     "icons": [
       {
@@ -20,5 +22,10 @@
     ],
     "theme_color": "#223344",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "dir": "ltr",
+    "categories": [
+      "business",
+      "social"
+    ]
   }

@@ -3,6 +3,8 @@
   "short_name": "Timeless Stories",
   "scope": "/timeless-stories",
   "start_url": "/timeless-stories",
+  "orientation": "portrait-primary",
+  "lang": "en",
   "description": "Official website of Timeless Stories of El Salvador",
   "icons": [
     {
@@ -20,5 +22,11 @@
   ],
   "theme_color": "#5A5A5A",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "entertainment",
+    "social"
+  ]
 }

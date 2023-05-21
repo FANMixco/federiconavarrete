@@ -4,6 +4,7 @@
     "start_url": "/",
     "short_name": "FNavarrete",
     "description": "Federico Navarrete is an IT innovator, Author and Orator who is creating a better world through technology.",
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "img/favicons/android-chrome-192x192.png",
@@ -20,5 +21,11 @@
     ],
     "theme_color": "#121212",
     "background_color": "#121212",
-    "display": "standalone"
+    "display": "standalone",
+    "dir": "ltr",
+    "categories": [
+      "business",
+      "entertainment",
+      "social"
+    ]
 }
