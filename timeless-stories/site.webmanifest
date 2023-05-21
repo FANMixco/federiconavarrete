@@ -2,7 +2,7 @@
   "name": "Timeless Stories of El Salvador",
   "short_name": "Timeless Stories",
   "scope": "/timeless-stories",
-  "start_url": "/timeless-stories",
+  "start_url": "https://federiconavarrete.com/timeless-stories",
   "orientation": "portrait-primary",
   "lang": "en",
   "description": "Official website of Timeless Stories of El Salvador",
