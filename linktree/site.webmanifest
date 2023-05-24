@@ -87,5 +87,31 @@
     "categories": [
       "business",
       "social"
+    ],
+    "shortcuts": [
+      {
+        "name": "Contact me",
+        "url": "https://www.cognitoforms.com/FedericoNavarrete1/letsgetintouch",
+        "description": "Contact me"
+      }
+    ],
+    "edge_side_panel": {
+      "preferred_width": 300
+    },
+    "screenshots" : [
+      {
+        "src": "screenshot1.webp",
+        "sizes": "750x1334",
+        "type": "image/jpeg",
+        "platform": "narrow",
+        "label": "https://federiconavarrete.com/linktree/img/preview_mobile.jpg"
+      },
+      {
+        "src": "https://federiconavarrete.com/linktree/img/preview_desktop.jpg",
+        "sizes": "3390x1788",
+        "type": "image/jpeg",
+        "platform": "wide",
+        "label": "Homescreen in Landscape"
+      }
     ]
   }
