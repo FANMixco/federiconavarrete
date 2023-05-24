@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?tov6e2');
-  src:  url('fonts/icomoon.eot?tov6e2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?tov6e2') format('truetype'),
-    url('fonts/icomoon.woff?tov6e2') format('woff'),
-    url('fonts/icomoon.svg?tov6e2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ay4g2b');
+  src:  url('fonts/icomoon.eot?ay4g2b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ay4g2b') format('truetype'),
+    url('fonts/icomoon.woff?ay4g2b') format('woff'),
+    url('fonts/icomoon.svg?ay4g2b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -45,6 +45,18 @@
 }
 .icon-tiktok:before {
   content: "\e904";
+}
+.icon-behance:before {
+  content: "\e909";
+}
+.icon-podcast:before {
+  content: "\e906";
+}
+.icon-address-card-o:before {
+  content: "\e907";
+}
+.icon-vcard-o:before {
+  content: "\e907";
 }
 .icon-handshake-o:before {
   content: "\e905";
