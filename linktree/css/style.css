@@ -38,7 +38,6 @@ body {
 #userName {
     color: var(--accentColor);
     font-size: 1rem;
-    font-weight: bold;
     line-height: 1.25;
     display: block;
     font-family: var(--font);
@@ -160,11 +159,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Adjust the width and height for the desired circle size */
-    height: 50px;
-    border: solid var(--accentColor) 2px;
+    width: 40px; /* Adjust the width and height for the desired circle size */
+    height: 40px;
+    border: 0; /*solid var(--accentColor) 2px;
+    */
+    margin-left: 4px;
+    margin-right: 4px;
     border-radius: 50%;
-    margin: 9px;
     text-align: center;
     text-decoration: none;
     transition: all 0.25s cubic-bezier(.08, .59, .29, .99);
