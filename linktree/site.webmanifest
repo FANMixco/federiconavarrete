@@ -113,5 +113,10 @@
         "platform": "wide",
         "label": "Homescreen in Landscape"
       }
-    ]
+    ],
+    "display_override": [
+      "window-control-overlay",
+      "standalone",
+      "browser"
+    ]    
   }

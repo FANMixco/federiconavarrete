@@ -2,16 +2,20 @@
 <h3 align="center">Simple site to group all my profiles on social networks in one place.</h3>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/johnggli/linktree?color=04D361&labelColor=000000">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fanmixco/federiconavarrete?color=04D361&labelColor=000000">
   
-  <a href="https://www.linkedin.com/in/johnggli/">
-    <img alt="Made by" src="https://img.shields.io/static/v1?label=made%20by&message=John%20Emerson&color=04D361&labelColor=000000">
+  <a href="https://www.linkedin.com/in/federiconavarrete/">
+    <img alt="Forked by" src="https://img.shields.io/static/v1?label=forked%20by&message=Federico%20Navarrete&color=04D361&labelColor=000000">
   </a>
   
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/johnggli/linktree?color=04D361&labelColor=000000">
+  <a href="https://www.linkedin.com/in/johnggli/">
+    <img alt="Made by" src="https://img.shields.io/static/v1?label=made%20by&message=John%20Emerson&color=E53935&labelColor=000000">
+  </a>
   
-  <a href="https://github.com/johnggli/linktree/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/johnggli/linktree?color=04D361&labelColor=000000">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/fanmixco/federiconavarrete?color=04D361&labelColor=000000">
+  
+  <a href="https://github.com/fanmixco/federiconavarrete/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/fanmixco/federiconavarrete?color=04D361&labelColor=000000">
   </a>
 </p>
 
@@ -25,7 +29,7 @@
 ---
 
 <p align="center">
-  <img alt="screenshot" src="screenshot.png">
+  <img alt="screenshot" src="img/preview.jpg">
 </p>
 
 ---
