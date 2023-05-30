@@ -63,6 +63,8 @@ body {
   }
 
 #share-section {
+    padding-right: 30px;
+    font-size: 1.4rem;
     margin-top: 40px!important;
     max-width: 675px;
     width: auto;
