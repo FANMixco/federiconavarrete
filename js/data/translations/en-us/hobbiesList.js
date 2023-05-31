@@ -106,5 +106,5 @@ const hobbiesList = {
 			"externalClass": "externalImg"
 		}
 	],
-	"isVisible": true
+	"isVisible": false
 };

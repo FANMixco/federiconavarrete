@@ -28,7 +28,7 @@ const basicInfo = {
 	"email": {
 		"address": "fanmixco@gmail.com",
 		"subject": "Contáctame (sitio de FANMixco)",
-		"isVisible": true
+		"isVisible": false
 	},
 	"skype": {
 		"id": "fanmixco",
