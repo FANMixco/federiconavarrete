@@ -32,7 +32,7 @@ const basicInfo = {
 	},
 	"skype": {
 		"id": "fanmixco",
-		"isVisible": true
+		"isVisible": false
 	},
 	"company": {
 		"id": "supernova",
