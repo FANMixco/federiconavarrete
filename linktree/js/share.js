@@ -1,6 +1,3 @@
-// Select the share icon element
-const shareIcon = document.getElementById('shareIcon');
-
 // Add a click event listener to the share icon
 shareIcon.addEventListener('click', (e) => {
   e.preventDefault();

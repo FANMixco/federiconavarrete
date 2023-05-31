@@ -5,7 +5,8 @@ window.addEventListener('load', function() {
     }
 });
 
-let shareIcon = document.getElementById('share-icon');
+// Select the share icon element
+const shareIcon = document.getElementById('shareIcon');
 
 // Check if the Web Share API is supported by the browser
 if (navigator.share) { 
