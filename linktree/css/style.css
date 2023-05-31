@@ -5,11 +5,14 @@
     --font: "Karla", sans-serif;
     --delay: 0.3s;
   }
+
+  html {
+    min-height: 100%;
+  }
   
   body {
     margin: 0;
     padding: 0;
-    /*min-height: 100vh;*/
     font-family: var(--font);
     font-display: swap;
     background: radial-gradient(
