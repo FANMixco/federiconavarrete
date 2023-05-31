@@ -2,7 +2,8 @@
 const shareIcon = document.getElementById('shareIcon');
 
 // Add a click event listener to the share icon
-shareIcon.addEventListener('click', () => {
+shareIcon.addEventListener('click', (e) => {
+  e.preventDefault();
   // Check if the Web Share API is supported by the browser
   if (navigator.share) {
     // Use the Web Share API to share the current page
