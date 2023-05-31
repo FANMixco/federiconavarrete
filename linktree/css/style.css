@@ -50,6 +50,11 @@
     text-decoration: none;
   }
   
+  #sub-title {
+    font-size: small;
+    font-weight: lighter;
+  }
+
   #qr-link {
     color: var(--accentColor);
   }
