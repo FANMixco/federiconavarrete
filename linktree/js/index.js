@@ -13,21 +13,3 @@ if (matches && matches.length > 0) {
   shareIcon.classList.remove('icon-share-alt');
   shareIcon.classList.add('icon-ios_share');
 }
-
-// Get a reference to the element
-let hashtag = document.getElementById("hashtag");
-
-// Create an observer instance
-let observer = new IntersectionObserver(function(entries) {
-  // Loop through the entries
-  for (let entry of entries) {
-    // If the element is visible
-    if (entry.isIntersecting) {
-      // Hide the scrollbar
-      document.body.style.overflowY = "hidden";
-    }
-  }
-});
-
-// Start observing the element
-observer.observe(hashtag);
