@@ -11,6 +11,6 @@ shareIcon.addEventListener('click', (e) => {
       console.log('Shared successfully!');
     })
     .catch((error) => {
-      alert('Error sharing:', error);
+      console.log('Error sharing:', error);
     });
 });
