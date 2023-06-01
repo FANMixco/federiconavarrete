@@ -5,18 +5,7 @@ window.addEventListener('load', function() {
     }
 });
 
-// Select the share icon element
-const shareIcon = document.getElementById('shareIcon');
-
-// Check if the Web Share API is supported by the browser
-if (navigator.share) { 
-  // Check if the user agent string indicates macOS or iOS
-  let matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
-  // Check if the array is not null or empty
-  if (matches && matches.length > 0) {
-    shareIcon.classList.remove('icon-share-alt');
-    shareIcon.classList.add('icon-ios_share');
-  }
-} else {
-  shareIcon.style.display = 'none';
-}
+// Get the viewport height and multiply it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);

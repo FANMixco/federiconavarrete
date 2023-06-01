@@ -4,6 +4,7 @@
     --accentColor: #fff;
     --font: "Karla", sans-serif;
     --delay: 0.3s;
+    --vh: 1vh; /* Fallback value */
   }
 
   html {
@@ -140,6 +141,10 @@
     margin: 27px auto;
   }
   
+  #profile-name {
+    font-size: large;
+  }
+  
   @media (max-width: 600px) {
     /* Adjust the max-width value to the appropriate screen size */
     #sub-links {
@@ -258,6 +263,7 @@
     overflow: hidden;
     min-height: 100vh;
     transition: 0.5s ease-in-out;
+    height: calc(var(--vh) * 100);
   }
   
   .popup {
@@ -337,10 +343,6 @@
       background-color: var(--accentColor);
       color: var(--bgColor);
     }
-  }
-  
-  #profile-name {
-    font-size: large;
   }
   
   .popup-close:active {
