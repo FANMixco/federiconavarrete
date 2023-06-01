@@ -4,6 +4,7 @@
     --accentColor: #fff;
     --font: "Karla", sans-serif;
     --delay: 0.3s;
+    --vh: 1vh; /* Fallback value */
   }
 
   html {
@@ -262,7 +263,7 @@
     overflow: hidden;
     min-height: 100vh;
     transition: 0.5s ease-in-out;
-    height: calc(100vh - calc(100vh - 100%))
+    height: calc(var(--vh) * 100);
   }
   
   .popup {
