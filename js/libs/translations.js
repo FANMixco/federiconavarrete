@@ -172,19 +172,22 @@ function loadServices() {
 
         if (isVisible) {
             const servicesList = document.getElementById('servicesList');
+            let items = `<div class="row justify-content-center"><p class="lead">`;
             services.forEach(item => {
-                let items = `<div class="col-lg ml-auto"><p class="lead">`;
+                //console.log(item);
                 item.forEach(elem => {
                     let title = "";
-                    title = (elem.link) ? getFLink("btn btn-light serviceLink", elem.link, `${getImgBasicTag(`${iconsPath}${elem.icon}.svg`, lazyLoading, 'mr-2', '', elem.title, "style='height:24px;width:24px'")}&nbsp;&nbsp;${elem.title}`, `id="service${totalServices}" style='width: 100%; font-weight: bold' ${noreferrer}`)
-                                        : title = `<b>${elem.title}</b>`;
-                    items += `<span>${title}</span><br /><br />`;
+                    /*title = (elem.link) ? getFLink("btn btn-light serviceLink", elem.link, `${getImgBasicTag(`${iconsPath}${elem.icon}.svg`, lazyLoading, 'mr-2', '', elem.title, "style='height:24px;width:24px'")}&nbsp;&nbsp;${elem.title}`, `id="service${totalServices}" style='width: 100%; font-weight: bold' ${noreferrer}`)
+                                        : title = `<b>${elem.title}</b>`;*/
+
+                    title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', 'max-height: 270px!important', true, `service${totalServices}`);
+                    items += `<div class='col-md-4 p-2 text-center'>${title}</div>`;
                     totalServices++;
                 });
-                items = `${items.substring(0, items.length - 12)}${cDiv}`;
-
-                servicesList.innerHTML += items;
             });
+            items = `${items.substring(0, items.length - 12)}${cDiv}`;
+
+            servicesList.innerHTML += items;
         }
         else {
             const divServices = document.getElementById('divServices');
@@ -202,11 +205,13 @@ function loadAwards() {
             const awardsList = document.getElementById('awardsList');
             let availableLinks = [];
             let i = 0;
+            let items = `<div class="row justify-content-center"><p class="lead">`;
             awards.forEach(item => {
-                let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
+                console.log(item);
+                //let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
                 item.forEach(elem => {
                     let title = "";
-                    if (elem.link) {
+                    /*if (elem.link) {
                         title = getBtnModal('linkPreviews', 'btn btn-warning', `linkPreview${i}`, elem.title, "style='width: 100%; font-weight: bold'", '', true);
                         availableLinks.push({ 
                             id: i,
@@ -216,13 +221,25 @@ function loadAwards() {
                     }
                     else
                         title = `<button style='width: 100%; font-weight: bold' type="button" class="btn btn-light">${elem.title}</button>`;
-                    items += `${title}<br /><br />`;
+                    items += `${title}<br /><br />`;*/
+
+                    title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', 'max-height: 270px!important'), '', '', true)
+
+                    availableLinks.push({ 
+                        id: i,
+                        title: elem.title,
+                        link: elem.link,
+                    });                    
+
+                    //title = getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', 'max-height: 270px!important');
+                    items += `<div class='col-md-4 p-2 text-center'>${title}</div>`;
+    
                     i++;
                 });
-                items = `${items.substring(0, items.length - 12)}${cDiv}`;
-
-                awardsList.innerHTML += items;
             });
+            items = `${items.substring(0, items.length - 12)}${cDiv}`;
+
+            awardsList.innerHTML += items;
 
             availableLinks.forEach(item => {
                 const linkPreview = document.getElementById(`linkPreview${item.id}`);
@@ -379,8 +396,11 @@ function loadSocialMedias() {
 
         if (isVisible) {
             const socialMediaBasic = document.getElementById('socialMediaBasic');
+            const socialMediaBasicExtended = document.getElementById('social-medias-extended');
+
             socialMedia.forEach(item => {
                 socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
+                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
             });
 
             if (socialOthersList.isVisible) {
@@ -599,8 +619,9 @@ function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false) {
     let tmpTag = (isBtn) ? 'button' : 'a';
     let tmpRef = (isBtn) ? '' : `href="#${href}"`;
     let idT = (id != '') ? `id="${id}"` : '';
+    let tNone = (!isBtn) ? 'text-decoration-none' : '';
 
-    return `<${tmpTag} ${idT} class="${cls}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
+    return `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
 }
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {

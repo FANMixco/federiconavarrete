@@ -53,13 +53,13 @@ function loadTranslations() {
 
         btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;${getHMenu()}`;
 
-        setTimeout(function() {
+        /*setTimeout(function() {
             const divSkillsContainer = document.getElementById('divSkillsContainer');
 
             divSkillsContainer.style.backgroundColor = "rgba(12,12,12,0.95)";
             divSkillsContainer.style.paddingTop = "15px";
             divSkillsContainer.style.borderRadius = "20px";
-        }, 100);
+        }, 100);*/
     } else {
         const spanMenu = document.getElementById('spanMenu');
 

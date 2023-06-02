@@ -92,7 +92,7 @@ hr.star-dark:after {
 }
 
 hr.star-black {
-  border-color: #fff;
+  border-color: black;
 }
 
 hr.star-black:after {

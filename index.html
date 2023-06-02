@@ -80,9 +80,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <li class="nav-item mx-0 mx-lg-1">
                      <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about" data-translation="about"></a>
                   </li>
-                  <li class="nav-item mx-0 mx-lg-1">
+                  <!--li class="nav-item mx-0 mx-lg-1">
                      <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skillBusiness" data-translation="skills"></a>
-                  </li>
+                  </li-->
                   <li class="nav-item mx-0 mx-lg-1">
                      <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#projects" data-translation="projects"></a>
                   </li>
@@ -113,32 +113,39 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Header -->
       <header class="masthead bg-primary text-white text-center" id="mainBackground">
          <div class="container">
-            <picture>
-               <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 769px)">
-               <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 768px)">
-               <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 480px)">
-
-               <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 769px)">
-               <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 768px)">
-               <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 480px)">
-
-               <img 
-                  srcset="img/photos/profile.jpg 1024w, 
-                          img/photos/profile_medium.jpg 768w,
-                          img/photos/profile_small.jpg 500w"
-
-                  sizes="(max-width: 1024px) 1024w,
-                         (max-width: 768px) 768px,
-                         (max-width: 480px) 480px"
-
-                  src="img/photos/profile_medium.jpg" 
-                  alt="Federico's pic"
-                  class="img-fluid mb-5 d-block mx-auto"
-                  id="imgProfile" height="300" width="300" />
-            </picture>
-            <h1 class="text-uppercase mb-0" id="hName"></h1>
-            <hr class="star-black-dark">
-            <h2 class="fw-light mb-0" id="hHeadline"></h2>
+            <div class="row align-items-center">
+               <div class="col-sm-auto">
+                  <picture>
+                     <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 769px)">
+                     <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 768px)">
+                     <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 480px)">
+      
+                     <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 769px)">
+                     <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 768px)">
+                     <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 480px)">
+      
+                     <img 
+                        srcset="img/photos/profile.jpg 1024w, 
+                                img/photos/profile_medium.jpg 768w,
+                                img/photos/profile_small.jpg 500w"
+      
+                        sizes="(max-width: 1024px) 1024w,
+                               (max-width: 768px) 768px,
+                               (max-width: 480px) 480px"
+      
+                        src="img/photos/profile_medium.jpg" 
+                        alt="Federico's pic"
+                        class="img-fluid mb-5 d-block mx-auto"
+                        id="imgProfile" height="300" width="300" />
+                  </picture>
+               </div>
+               <div class="col">
+                  <h1 class="text-uppercase mb-0" id="hName"></h1>
+                  <hr class="star-black-dark">
+                  <h2 class="fw-light mb-0" id="hHeadline"></h2>
+                  <div id="social-medias-extended" style="transform: scale(75%);"></div>
+               </div>
+            </div>
          </div>
       </header>
       <!-- About Section -->
@@ -159,6 +166,13 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   </div>
                </div>
                <div class="col-sm">
+                  <div class="text-center mt-4">
+                     <h3 class="text-center text-uppercase text-white" data-translation="skills"></h3>
+                     <br />
+                     <button type="button" class="btn btn-xl btn-outline-light btn-home" data-bs-toggle="modal" data-bs-target="#skillsModal"><img class="mr-2 btnIcons" loading="lazy" src="img/icons/website/pencil-ruler-outline.svg" height="24" width="24" alt="My Skills">&nbsp;&nbsp;<span data-translation="checkThem"></span></button>
+                  </div>
+               </div>
+               <div class="col-sm">
                   <div class="text-center mt-4" id="favPodcast">
                      <h3 class="text-center text-uppercase text-white" data-translation="hPodcast"></h3>
                      <br />
@@ -166,7 +180,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
             </div>
             <br />
-            <div class="container divSpace" id="divServices">
+            <div class="container divSpace mb-4 mt-4" id="divServices">
                <h3 class="text-center text-uppercase text-white"><img src="img/icons/website/briefcase-variant.svg" alt="services" class="size40" loading="lazy" />&nbsp;<span data-translation="services"></span></h3>
                <hr class="star-black-dark mb-5" />
                <div class="row" id="servicesList"></div>
@@ -180,30 +194,6 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                <h3 class="text-center text-uppercase text-white" data-translation="hobbies"></h3>
                <hr class="star-black-dark mb-5" />
                <ul class="list-inline mb-0" id="hobbiesList"></ul>
-            </div>
-         </div>
-      </section>
-      <!-- About Section -->
-      <section class="bg-primary text-white mb-0" id="skillBusiness">
-         <div class="container" id="divSkillsContainer">
-            <h2 class="text-center text-uppercase text-white"><img src="img/icons/website/laptop-code-solid.svg" loading="lazy" alt="tech skills" class="size50_7" />&nbsp;<span data-translation="techSkills"></span></h2>
-            <hr class="star-black mb-5" />
-            <div class="row" id="divTechSkills"></div>
-            <div class="row">
-               <p class="btn-more">
-                  <button id="btnMoreTechSkills" class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"><span data-translation="more"></span></button>
-               </p>
-               <div class="row cards-row" id="divTechSkillsOthers"></div>
-            </div>
-            <br />
-            <h2 class="text-center text-uppercase text-white"><img src="img/icons/website/chalkboard-teacher-solid.svg" alt="soft skills" loading="lazy" class="size50_5" />&nbsp;<span data-translation="softSkills"></span></h2>
-            <hr class="star-black mb-5" />
-            <div class="row" id="divSoftSkills"></div>
-            <div class="row">
-               <p class="btn-more">
-                  <button id="btnMoreSoftSkills" class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-business" aria-expanded="false"><span data-translation="more"></span></button>
-               </p>
-               <div class="row cards-row" id="divSoftSkillsOther"></div>
             </div>
          </div>
       </section>
@@ -342,6 +332,48 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </small>
          </div>
       </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id="skillsModal">
+
+         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="modal-header border-0">
+                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div>
+                     <div class="container">
+                        <h2 class="text-center text-uppercase"><img src="img/icons/website/laptop-code-solid.svg" loading="lazy" alt="tech skills" class="size50_7" />&nbsp;<span data-translation="techSkills"></span></h2>
+                        <hr class="star-black mb-5" />
+                        <div class="row" id="divTechSkills"></div>
+                        <div class="row">
+                           <p class="btn-more">
+                              <button id="btnMoreTechSkills" class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"><span data-translation="more"></span></button>
+                           </p>
+                           <div class="row cards-row" id="divTechSkillsOthers"></div>
+                        </div>
+                        <br />
+                        <h2 class="text-center text-uppercase"><img src="img/icons/website/chalkboard-teacher-solid.svg" alt="soft skills" loading="lazy" class="size50_5" />&nbsp;<span data-translation="softSkills"></span></h2>
+                        <hr class="star-black mb-5" />
+                        <div class="row" id="divSoftSkills"></div>
+                        <div class="row">
+                           <p class="btn-more">
+                              <button id="btnMoreSoftSkills" class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse-business" aria-expanded="false"><span data-translation="more"></span></button>
+                           </p>
+                           <div class="row cards-row" id="divSoftSkillsOther"></div>
+                        </div>
+                     </div>            
+                  </div>
+               </div>
+            </div>
+         </div>
+
+               <!-- About Section -->
+      <!--section class="bg-primary text-white mb-0" id="skillBusiness">
+      </section-->
+
+      </div>
+
       <div class="modal" tabindex="-1" role="dialog" id="reviewGeneric">
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
