@@ -19,12 +19,12 @@ const presentationsVideos = {
 const youtubeTrainings = {
 	"presentations": [
 		{
-			"youTubeID": "oPg8aIlZJds",
-			"title": "Creemos presentaciones asombrosas con Prezi Video (inglés)"
+			"youTubeID": 'VJF9NZOehTE',
+			"title": "¡Cuando Low-Code se encuentra con #ChatGPT! ¿Puedes crear tu primer Chatbot con Low-Code? (inglés)"
 		},
 		{
-			"youTubeID": 'RzCuuJdDY-A',
-			"title": "¡Cree su primera aplicación sin código! (inglés)"
+			"youTubeID": "oPg8aIlZJds",
+			"title": "Creemos presentaciones asombrosas con Prezi Video (inglés)"
 		},
 		{
 			"youTubeID": '9mXanZhm9eo',
