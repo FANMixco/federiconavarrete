@@ -81,6 +81,21 @@ function getFLink(cls, link, body, extras = '') {
     return `<a class='${cls}' href="${link}" ${extras}>${body}</a>`;
 }
 
+function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth, invert = '0%', extras = '', hasLink = false, idL = '') {
+    let idC = idL != '' ? `id='${idL}'` : '';
+    let lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor}' style='text-decoration: none;'>` : '';
+    let lEnd = hasLink ? '</a>' : '';
+
+    return `${lStart}<div class="card ${cOption}" style="width: 18rem; ${extras}">
+    <div class="card-body text-center">
+      <h5 class="card-title"><div class='${iOption}'>${getImgBasicTag(icon, lazyLoading, 'mr-2', '', title, `style='height:${iHeight}px;width:${iWidth}px; filter: invert(${invert});'`)}</div></h5>
+      <br />
+      <h6 class="card-subtitle mb-2">${title}</h6>
+      <!--p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p-->
+    </div>
+  </div>${lEnd}`
+}
+
 function getActionBtn(link, iconsPath, icon, title, extras = "") {
     return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
 }

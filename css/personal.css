@@ -22,9 +22,9 @@
 
 @media screen and (max-width: 682px) {
     #mainBackground {
-        background-image: url('../img/lake_small.jpg');
-        background-image: -webkit-image-set(url("../img/lake_small.webp") 1x, url("../img/lake_small.jpg") 1x);
-        background-image: image-set(url("../img/lake_small.webp") type("image/webp"), url("lake_small.jpg") type("image/jpeg"));
+        background-image: url('../img/astronomy_small.jpg');
+        background-image: -webkit-image-set(url("../img/astronomy_small.webp") 1x, url("../img/astronomy_small.jpg") 1x);
+        background-image: image-set(url("../img/astronomy_small.webp") type("image/webp"), url("astronomy_small.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
@@ -38,9 +38,9 @@
 
 @media screen and (max-width: 1364px) and (min-width: 683px) {
     #mainBackground {
-        background-image: url('../img/lake_medium.jpg');
-        background-image: -webkit-image-set(url("../img/lake_medium.webp") 1x, url("../img/lake_medium.jpg") 1x);
-        background-image: image-set(url("../img/lake_medium.webp") type("image/webp"), url("../img/lake_medium.jpg") type("image/jpeg"));
+        background-image: url('../img/astronomy_medium.jpg');
+        background-image: -webkit-image-set(url("../img/astronomy_medium.webp") 1x, url("../img/astronomy_medium.jpg") 1x);
+        background-image: image-set(url("../img/astronomy_medium.webp") type("image/webp"), url("../img/astronomy_medium.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
@@ -54,9 +54,9 @@
 
 @media screen and (min-width: 1365px) {
     #mainBackground {
-        background-image: url('../img/lake_large.jpg');
-        background-image: -webkit-image-set(url("../img/lake_large.webp") 1x, url("../img/lake_large.jpg") 1x);
-        background-image: image-set(url("../img/lake_large.webp") type("image/webp"), url("../img/lake_large.jpg") type("image/jpeg"));
+        background-image: url('../img/astronomy_large.jpg');
+        background-image: -webkit-image-set(url("../img/astronomy_large.webp") 1x, url("../img/astronomy_large.jpg") 1x);
+        background-image: image-set(url("../img/astronomy_large.webp") type("image/webp"), url("../img/astronomy_large.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
@@ -226,4 +226,78 @@ a.text-material-link-dark:hover,a.text-material-link-dark:active {
     width: 96px;
     padding: 5px;
     margin: auto;
+}
+
+.card-link:hover .card {
+    transform:scale(1.1);
+}
+
+.card-services:before, .card-awards:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 1;
+    transform: skewY(-5deg) scale(1.5);
+}
+
+.card-services {
+    position: relative;
+    min-width: 300px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    transition: .5s;
+    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.fa-icon-services {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    background: linear-gradient(-45deg, #9a4eff, #24ff72);
+}
+
+.card-awards {
+    position: relative;
+    min-width: 300px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    transition: .5s;
+    background: linear-gradient(-45deg, #FFEB3B, #EEEEEE);
+}
+
+.fa-icon-awards {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    background: linear-gradient(-45deg, #EEEEEE, #FFEB3B);
+}
+
+.clean-btn {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
