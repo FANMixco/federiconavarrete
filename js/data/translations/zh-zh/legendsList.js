@@ -1,52 +1,52 @@
 const legendsList = [
 	{
-		"title": "The Good and The Bad Cadejo (in English)",
+		"title": "好的和坏的卡德若（英语）",
 		"img": "../img/legends/cadejo.jpg",
 		"link": "https://bit.ly/3eSMZTI",
 		"isActive": true
 	},
 	{
-		"title": "The Pirate Treasures of Meanguera Island (in English)",
+		"title": "米格拉岛的海盗宝藏（英文）",
 		"img": "../img/legends/treasure.jpg",
 		"link": "https://bit.ly/3ByeTmB"
 	},
 	{
-		"title": "The Guirola Family (in English)",
+		"title": "吉罗拉家族（英文）",
 		"img": "../img/legends/guirola.jpg",
 		"link": "https://bit.ly/3h2WUrJ"
 	},
 	{
-		"title": "The Mulus (in English)",
+		"title": "骡子（英语）",
 		"img": "../img/legends/mulus.jpg",
 		"link": "https://bit.ly/3BAoUQe"
 	},
 	{
-		"title": "The Arbolarios (in English)",
-		"img": "../img/legends/arbolario.jpg (in English)",
+		"title": "树枝（英语）",
+		"img": "../img/legends/arbolario.jpg",
 		"link": "https://bit.ly/3Byf7tX"
 	},
 	{
-		"title": "The Squeaky Wagon (in English)",
+		"title": "吱吱作响的马车（英文）",
 		"img": "../img/legends/wagon.jpg",
 		"link": "https://bit.ly/37789L6"
 	},
 	{
-		"title": "The Cuyancua (in English)",
+		"title": "粗延粗（英文）",
 		"img": "../img/legends/cuyancua.jpg",
 		"link": "https://bit.ly/3eWnT6s"
 	},
 	{
-		"title": "The Siguanaba’s hammock (in English)",
+		"title": "西瓜纳巴的吊床（英文）",
 		"img": "../img/legends/siguanaba.jpg",
 		"link": "https://bit.ly/2MECcAB"
 	},
 	{
-		"title": "Chasca “The virgin of the water” (in English)",
+		"title": "查斯卡“水上圣母”（英文）",
 		"img": "../img/legends/chasca.jpg",
 		"link": "https://bit.ly/2Uj9edI"
 	},
 	{
-		"title": "The Moon’s cave (in English)",
+		"title": "月亮的洞穴（英文）",
 		"img": "../img/legends/cave.jpg",
 		"link": "https://bit.ly/3dLg3wk"
 	}
