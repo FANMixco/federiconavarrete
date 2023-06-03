@@ -46,7 +46,7 @@ const legendsList = [
 		"link": "https://bit.ly/2Uj9edI"
 	},
 	{
-		"title": "The Moon’s cave",
+		"title": "The Moon’s Cave",
 		"img": "../img/legends/cave.jpg",
 		"link": "https://bit.ly/3dLg3wk"
 	}
