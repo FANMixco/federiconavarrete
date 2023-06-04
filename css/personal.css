@@ -24,16 +24,16 @@
     #mainBackground {
         background-image: url('../img/astronomy_small.jpg');
         background-image: -webkit-image-set(url("../img/astronomy_small.webp") 1x, url("../img/astronomy_small.jpg") 1x);
-        background-image: image-set(url("../img/astronomy_small.webp") type("image/webp"), url("astronomy_small.jpg") type("image/jpeg"));
+        background-image: image-set(url("../img/astronomy_small.webp") type("image/webp"), url("../img/astronomy_small.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
-    #skillBusiness {
+    /*#skillBusiness {
         background-image: url('../img/business_small.jpg');
         background-image: -webkit-image-set(url("../img/business_small.webp") 1x, url("../img/business_small.jpg") 1x);
         background-image: image-set(url("../img/business_small.webp") type("image/webp"), url("../img/business_small.jpg") type("image/jpeg"));
         background-size: cover;
-    }
+    }*/
 }
 
 @media screen and (max-width: 1364px) and (min-width: 683px) {
@@ -44,12 +44,12 @@
         background-size: cover;
     }
 
-    #skillBusiness {
+    /*#skillBusiness {
         background-image: url('../img/business_medium.jpg');
         background-image: -webkit-image-set(url("../img/business_medium.webp") 1x, url("../img/business_medium.jpg") 1x);
         background-image: image-set(url("../img/business_medium.webp") type("image/webp"), url("../img/business_medium.jpg") type("image/jpeg"));
         background-size: cover;
-    }
+    }*/
 }
 
 @media screen and (min-width: 1365px) {
@@ -60,12 +60,12 @@
         background-size: cover;
     }
 
-    #skillBusiness {
+    /*#skillBusiness {
         background-image: url('../img/business_large.jpg');
         background-image: -webkit-image-set(url("../img/business_large.webp") 1x, url("../img/business_large.jpg") 1x);
         background-image: image-set(url("../img/business_large.webp") type("image/webp"), url("../img/business_large.jpg") type("image/jpeg"));
         background-size: cover;
-    }
+    }*/
 }
 
 #imgProfile {

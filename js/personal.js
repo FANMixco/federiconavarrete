@@ -19,3 +19,10 @@ if (document.readyState !== "loading") {
 } else {
     document.addEventListener("DOMContentLoaded", onReadyPersonal);
 }
+
+const ua = navigator.userAgent.toLowerCase().match(/android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
+  // Check if the array is not null or empty
+if (ua && ua.length > 0 && window.matchMedia('(max-width: 768px)').matches) {
+  const imgProfile = document.getElementById('imgProfile');
+  imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
+}
