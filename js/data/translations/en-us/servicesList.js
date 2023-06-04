@@ -3,7 +3,7 @@ const servicesList = {
 		[
 			{
 				"title": "IT Consultancy or Apps Development",
-                "link": "https://supernovaic.com/#contact",
+                "link": "https://form.jotform.com/202595846674065",
 				"icon": "laptop-code-solid"
 			},
 			{

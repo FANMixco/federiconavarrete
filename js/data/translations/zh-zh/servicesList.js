@@ -3,7 +3,7 @@ const servicesList = {
 		[
 			{
 				"title": "IT咨询或应用程序开发（英语或西班牙语）",
-                "link": "https://supernovaic.com/#contact",
+                "link": "https://form.jotform.com/202595846674065",
 				"icon": "laptop-code-solid"
 			},
 			{

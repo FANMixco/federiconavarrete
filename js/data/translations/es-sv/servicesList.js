@@ -3,7 +3,7 @@ const servicesList = {
 		[
 			{
 				"title": "Consultoría de TIC o Desarrollo de aplicaciones",
-                "link": "https://supernovaic.com/#contact",
+                "link": "https://form.jotform.com/202595846674065",
 				"icon": "user-tie-solid"
 			},
 			{
