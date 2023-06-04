@@ -13,11 +13,11 @@ const servicesList = {
 			}			
         ],
         [
-			{
+			/*{
                 "title": "Gestión de proyectos de forma ágil",
                 "link": "https://docs.google.com/forms/d/e/1FAIpQLSdZlnUNaOregS0mFQA35y_Wf9whfdI_VeHxi8G4E1ePeSoLpg/viewform",
 				"icon": "clock-fast"
-            },
+            },*/
 			{
                 "title": "Entrenamientos de Discursos Elevadores y Narración (storytelling)",
                 "link": "https://docs.google.com/forms/d/e/1FAIpQLSdpZ1Add6n9rRvqy3zEE4P1HBDL09HYW8j8Gstywg_SZT2P2w/viewform",
