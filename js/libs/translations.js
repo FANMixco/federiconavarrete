@@ -377,7 +377,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
             list.forEach(item => {
                 const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, (optTitle != '') ? item.title : optTitle)), item.title);
                 divSection.innerHTML += tmpImg;
-                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat, item.title);
+                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat, (optTitle != '') ? item.title : optTitle);
             });
         }
         else {
