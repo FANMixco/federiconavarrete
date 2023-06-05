@@ -237,6 +237,15 @@ header.masthead {
   padding-bottom: 6rem;
 }
 
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile devices */
+  header.masthead {
+    padding-top: calc(5rem);
+    padding-bottom: 6rem;
+  }  
+}
+
 header.masthead h1 {
   font-size: 3rem;
   line-height: 3rem;
