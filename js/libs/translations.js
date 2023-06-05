@@ -172,13 +172,8 @@ function loadServices() {
             const servicesList = document.getElementById('servicesList');
             let items = `<div class="row justify-content-center"><p class="lead">`;
             services.forEach(item => {
-                //console.log(item);
                 item.forEach(elem => {
-                    let title = "";
-                    /*title = (elem.link) ? getFLink("btn btn-light serviceLink", elem.link, `${getImgBasicTag(`${iconsPath}${elem.icon}.svg`, lazyLoading, 'mr-2', '', elem.title, "style='height:24px;width:24px'")}&nbsp;&nbsp;${elem.title}`, `id="service${totalServices}" style='width: 100%; font-weight: bold' ${noreferrer}`)
-                                        : title = `<b>${elem.title}</b>`;*/
-
-                    title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', 'max-height: 270px!important', true, `service${totalServices}`);
+                    let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', 'max-height: 270px!important', true, `service${totalServices}`);
                     items += `<div class='col-md-4 p-2 text-center'>${title}</div>`;
                     totalServices++;
                 });
@@ -205,31 +200,15 @@ function loadAwards() {
             let i = 0;
             let items = `<div class="row justify-content-center"><p class="lead">`;
             awards.forEach(item => {
-                console.log(item);
-                //let items = `<div class="col-lg-4 ml-auto"><p class="lead">`;
                 item.forEach(elem => {
-                    let title = "";
-                    /*if (elem.link) {
-                        title = getBtnModal('linkPreviews', 'btn btn-warning', `linkPreview${i}`, elem.title, "style='width: 100%; font-weight: bold'", '', true);
-                        availableLinks.push({ 
-                            id: i,
-                            title: elem.title,
-                            link: elem.link,
-                        });
-                    }
-                    else
-                        title = `<button style='width: 100%; font-weight: bold' type="button" class="btn btn-light">${elem.title}</button>`;
-                    items += `${title}<br /><br />`;*/
-
-                    title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', 'max-height: 270px!important'), '', '', true)
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', 'max-height: 270px!important'), '', '', true)
 
                     availableLinks.push({ 
                         id: i,
                         title: elem.title,
                         link: elem.link,
-                    });                    
-
-                    //title = getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', 'max-height: 270px!important');
+                    });
+                    
                     items += `<div class='col-md-4 p-2 text-center'>${title}</div>`;
     
                     i++;
@@ -375,9 +354,9 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
         if (isVisible) {
             const divSection = document.getElementById(section);
             list.forEach(item => {
-                const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, (optTitle != '') ? item.title : optTitle)), item.title);
+                const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title);
                 divSection.innerHTML += tmpImg;
-                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat, (optTitle != '') ? item.title : optTitle);
+                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat);
             });
         }
         else {
@@ -514,7 +493,7 @@ function loadVideosAndPresentations() {
     loadPresentations();
 }
 
-function setImage(imgID, imgBasic, imgLoc, imgFormat, alt = '') {
+function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     //let imgBookSize = '';
     let imgSize = '';
 
@@ -539,7 +518,6 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat, alt = '') {
     }
     
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
-    imgTemp.alt = alt;
 
     srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
     srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;    
