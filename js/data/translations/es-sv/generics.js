@@ -45,5 +45,9 @@ const genericTranslations = {
     "bookMsgGen": "e-Book disponible",
     "bookMsgGet": "Obten tu copia!",
     "news": "Este 1<sup>ro</sup> de julio llega a ti el 2<sup>do</sup> Tomo de las Mejores Leyendas Salvadoreñas.<br />¡Obtén tu copia HOY!",
-    "winning": "Discurso Elevador Ganador (en inglés)"
+    "winning": "Discurso Elevador Ganador (en inglés)",
+    "knowMoreTitle": "¡Conoce a Federico Navarrete!",
+    "knowMoreBody": "Aquí puedes consultar las webs oficiales de Federico Navarrete: https://federiconavarrete.com",
+    "share": "Comparte",
+    "extras": "Extras"
 };

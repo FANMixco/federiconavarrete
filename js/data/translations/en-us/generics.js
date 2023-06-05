@@ -46,5 +46,9 @@ const genericTranslations = {
     "bookMsgGen": "e-Book Available",
     "bookMsgGet": "Get your copy!",
     "news": "This July 1<sup>st</sup>, the 2<sup>nd</sup> Volume of the Best Salvadoran Legends is coming to you.<br />Get your copy TODAY!",
-    "winning": "Winning Elevator Pitch"
+    "winning": "Winning Elevator Pitch",
+    "knowMoreTitle": "Get to know Federico Navarrete!",
+    "knowMoreBody": "Here you can check Federico Navarrete’s official websites: https://federiconavarrete.com",
+    "share": "Share",
+    "extras": "Extras"
 };

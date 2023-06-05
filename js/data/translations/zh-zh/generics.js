@@ -46,5 +46,9 @@ const genericTranslations = {
     "bookMsgGen": "可用的电子书",
     "bookMsgGet": "拿到你的副本！",
     "news": "今年 7 月 1 日，《萨尔瓦多最佳传奇》第二卷即将面世。<br />今天就下载吧！",
-    "winning": "赢得电梯广告"
+    "winning": "赢得电梯广告",
+    "knowMoreTitle": "认识 Federico Navarrete！",
+    "knowMoreBody": "在这里您可以查看 Federico Navarrete 的官方网站：https://federiconavarrete.com",
+    "分享": "分享",
+    "额外": "额外"
 };

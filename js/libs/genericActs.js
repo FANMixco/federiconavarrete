@@ -64,13 +64,13 @@ function contactMeForm(e) {
     extraContact++;
 }
 
-function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "") {
+function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
     let targetBlank = isTargetBlank ? `target="_blank"` : "";
     let ignoreClick = isIgnoredClick ? "ignore-click" : "";
     let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
     let img = isIcon ? `<i class="${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
-    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
+    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `${extras} title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
 }
 
 function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {

@@ -402,11 +402,30 @@ function loadSocialMedias() {
                 socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
                 socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
             });
+            socialMediaBasicExtended.innerHTML += getBtnShare();
+
+            const btnShare = document.getElementById('btnShare');
+
+            btnShare.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                navigator.share({
+                    title: genericTranslations.knowMoreTitle,
+                    text: genericTranslations.knowMoreBody,
+                    url: window.location.href
+                  })
+                    .then(() => {
+                      console.log('Shared successfully!');
+                    })
+                    .catch((error) => {
+                      console.log('Error sharing:', error);
+                    });
+            });
 
             if (socialOthersList.isVisible) {
-                let sBasic = document.getElementById("socialMediaBasic");
+                const sBasic = document.getElementById("socialMediaBasic");
                 
-                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer');
+                sBasic.innerHTML += getBtnOthers('', 'btn-footer', "", '', '', 'iconFooter btn-footer');
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
@@ -624,7 +643,18 @@ function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false) {
     return `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
 }
 
+function getBtnShare() {
+    let icon = 'share-android-svgrepo-com';
+    let matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
+    if (matches && matches.length > 0) { 
+        icon = 'share-ios-export-svgrepo-com';
+    }
+
+    return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title='${genericTranslations.share}'`));
+}
+
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
+    extra += `title='${genericTranslations.extras}'"`;
     return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
 }
 
