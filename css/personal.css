@@ -68,6 +68,15 @@
     }*/
 }
 
+#btn-full-screen {
+    background: url('../img/icons/website/fullscreen.svg') center/1.4em no-repeat;
+    margin-right: 0.8rem!important;
+}
+
+#social-medias-extended {
+    transform: scale(90%);
+}
+
 #imgProfile {
     max-width: 300px;
     border-radius: 50%;
