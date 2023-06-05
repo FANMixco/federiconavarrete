@@ -63,8 +63,6 @@ function loadReviews() {
 
             reviews.forEach(function(item, index) {
 
-                
-
                 let name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
 
                 let active = item.isActive ? " active" : "";
@@ -379,7 +377,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
             list.forEach(item => {
                 const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, (optTitle != '') ? item.title : optTitle)), item.title);
                 divSection.innerHTML += tmpImg;
-                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat);
+                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat, item.title);
             });
         }
         else {
@@ -516,7 +514,7 @@ function loadVideosAndPresentations() {
     loadPresentations();
 }
 
-function setImage(imgID, imgBasic, imgLoc, imgFormat) {
+function setImage(imgID, imgBasic, imgLoc, imgFormat, alt = '') {
     //let imgBookSize = '';
     let imgSize = '';
 
@@ -541,9 +539,10 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     }
     
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
+    imgTemp.alt = alt;
 
     srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
-    srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
+    srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;    
 
     /*if (validDate) {
         imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;
@@ -650,11 +649,11 @@ function getBtnShare() {
         icon = 'share-ios-export-svgrepo-com';
     }
 
-    return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title='${genericTranslations.share}'`));
+    return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title='${genericTranslations.share}' alt='${genericTranslations.share}'`));
 }
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
-    extra += `title='${genericTranslations.extras}'"`;
+    extra += `title='${genericTranslations.extras}' alt='${genericTranslations.extras}'"`;
     return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
 }
 
