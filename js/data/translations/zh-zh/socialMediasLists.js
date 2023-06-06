@@ -9,14 +9,14 @@ const socialBasicList = {
 		},
 		{
 			"icon": "youtube",
-			"title": "YouTube Channel",
+			"title": "YouTube频道",
 			"link": "https://www.youtube.com/c/FedericoNavarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
 		{
 			"icon": "behance-brands",
-			"title": "Portfolio",
+			"title": "文件夹",
 			"link": "https://www.behance.net/fanmixco",
 			"isIcon": false,
 			"externalClass": "iconFooter"

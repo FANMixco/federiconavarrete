@@ -30,7 +30,7 @@ const reviewsList = {
 			"review": `<p><small>En inglés originalmente.</small></p>Conozco a Federico desde hace unos 20 años, así que hablo por experiencia real cuando digo que es digno de confianza, responsable, inteligente y leal a sus principios. Federico y yo fuimos compañeros de clase en la escuela y la universidad. Durante este tiempo desarrollé una fuerte relación de amistad con él. Mi estrecha asociación con él me hizo ser testigo de su estupendo crecimiento como persona y como profesional. Es el desarrollador más ágil que he conocido. Crea código limpio y fácil de mantener en la mitad del tiempo que sus compañeros. Ésta es una consecuencia de su análisis altamente analítico.
 			personalidad y gran pasión por la informática.<br /><br />Por otro lado, Federico ha estado trabajando duro para desarrollar sus habilidades interpersonales. Para ello, participó en diversas comunidades que le exigen asumir un rol de liderazgo, como Microsoft Student Partners y Toastmasters. En este último, Federico ganó confianza y desarrolló el arte de hablar en público.<br /><br />No hay duda de que Federico es una persona íntegra, con un conjunto bien equilibrado de habilidades técnicas e interpersonales. Por todo esto, es un placer para mí recomendar a Federico.`,
 			"shortReview": "Conozco a Federico desde hace unos 20 años, así que hablo por experiencia real cuando digo que es digno de confianza, responsable, inteligente y leal a sus principios. Federico y yo fuimos compañeros de clase en la escuela y la universidad … ",
-			"title": "Desarrollador Java Senior en Deutsche Börse, República Checa",
+			"title": "Desarrollador Java Senior en Deutsche Börse, Alemania",
 			"date": "30-10-2016",
 			"isPDF": false,
 			"isActive": false
