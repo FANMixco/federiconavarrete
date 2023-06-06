@@ -9,7 +9,7 @@ const divSmall = '<div class="col-sm">';
 const cDiv = '</div>';
 const w100 = 'class="w-100"';
 
-getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
+//getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch((e) => { console.error(e); });
 
@@ -120,7 +120,7 @@ function loadReviews() {
     catch (e) { return e; }
 }
 
-function loadHobbies() {
+/*function loadHobbies() {
     try {
         const { hobbies, isVisible } = hobbiesList;
 
@@ -162,7 +162,7 @@ function loadHobbies() {
         }
     }
     catch (e) { return e; }
-}
+}*/
 
 function loadServices() {
     try {
@@ -402,7 +402,7 @@ function loadSocialMedias() {
             if (socialOthersList.isVisible) {
                 const sBasic = document.getElementById("socialMediaBasic");
                 
-                sBasic.innerHTML += getBtnOthers('', 'btn-footer', "", '', '', 'iconFooter btn-footer');
+                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer');
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
