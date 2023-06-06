@@ -1,23 +1,5 @@
-.extraIcons {
-    font-size: x-large;
-}
-
-.divSpace {
-    padding-top: 15px;
-}
-
-.yLinks {
-    color: yellow!important;
-}
-
-.wHR {
-    border-top: 1px solid rgba(255,255,255,0.5);
-}
-
-.iVideos {
-    width: 100%;
-    height: 315px;
-    margin: auto!important;
+iframe {
+    border:none;
 }
 
 @media screen and (max-width: 682px) {
@@ -82,6 +64,88 @@
     border-radius: 50%;
 }
 
+#linkContactMe{
+    color: white;
+}
+
+#linkContactMe:hover,#linkContactMe:active{
+    color: #212529;
+}
+
+#testimonialsRow{
+    margin-top: -80px;
+}
+
+#elSalvadorIcon{
+    height: 1.3em;
+    width: auto;
+    filter: invert(1);
+}
+
+#booksIframe {
+    width: 100%;
+    border: 0;
+    height: 250px;
+}
+
+#icon-skills {
+    filter: invert(100%)!important;
+}
+
+#legendsIframe {
+    width: 100%;
+    border: 0;
+    height: 325px;
+}
+
+#modelDark {
+    background-color: #2C3E50;
+    text-align: center;
+}
+
+#modalBlack {
+    background-color: #121212;
+    text-align: center
+}
+
+#carousel-control-prev-video {
+    left: 0px;
+}
+
+#carousel-control-next-video {
+    right: 0px;
+}
+
+#google_translate_element {
+    padding:1em;
+}
+
+.extraIcons {
+    font-size: x-large;
+}
+
+.divSpace {
+    padding-top: 15px;
+}
+
+.yLinks {
+    color: yellow!important;
+}
+
+.wHR {
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.iVideos {
+    width: 100%;
+    height: 315px;
+    margin: auto!important;
+}
+
+.carousel-video-inner {
+    text-align: center;
+}
+
 .externalImg img,.externalImg:active img{
     margin-top: -3px;
     filter: invert(100%);
@@ -125,69 +189,15 @@
     filter: invert(100%);
 }
 
-#linkContactMe{
-    color: white;
-}
-
-#linkContactMe:hover,#linkContactMe:active{
-    color: #212529;
-}
-
-#testimonialsRow{
-    margin-top: -80px;
-}
-
-#elSalvadorIcon{
-    height: 1.3em;
-    width: auto;
-    filter: invert(1);
-}
-
 .previewerIframe{
     width: 100%;
     height: 450px;
     border: 0;
 }
 
-#booksIframe {
-    width: 100%;
-    border: 0;
-    height: 250px;
-}
-
-iframe {
-    border:none;
-}
-
-#legendsIframe {
-    width: 100%;
-    border: 0;
-    height: 325px;
-}
-
 .centerText {
     text-align: center;
 }
-
-#modelDark {
-    background-color: #2C3E50;
-    text-align: center;
-}
-
-#modalBlack {
-    background-color: #121212;
-    text-align: center
-}
-
-#carousel-control-prev-video {
-    left: 0px;
- }
- #carousel-control-next-video {
-    right: 0px;
- }
- .carousel-video-inner {
-    text-align: center;
- }
 
 .mini-cards {
     background: rgba(51, 170, 51, 0);
@@ -205,10 +215,6 @@ iframe {
 
 .row-auto {
     margin: auto;
-}
-
-#google_translate_element {
-    padding:1em;
 }
 
 a.text-material-link {
