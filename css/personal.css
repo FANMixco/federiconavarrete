@@ -18,6 +18,20 @@ iframe {
     }*/
 }
 
+@media screen and (max-width: 318px) and (orientation: portrait) { 
+    #imgProfile {
+        max-width: 70%;
+    }
+
+    #hName {
+        transform: scale(80%);
+    }
+
+    #mainNav {
+        width: 100vw!important;
+    }
+}
+
 @media screen and (max-width: 682px) and (orientation: landscape) {
     #mainBackground {
         background-image: url('../img/astronomy_small_landscape.jpg');

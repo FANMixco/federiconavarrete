@@ -111,6 +111,22 @@ function loadBasicInfo() {
     hHeadline.innerHTML = headline;
     hIntro.innerHTML = headlineIntro;
 
+    const mediaQuery = window.matchMedia('screen and (max-width: 318px) and (orientation: portrait)');
+
+    function handleMediaQueryChange(mediaQuery) {
+      if (mediaQuery.matches) {
+        // Media query matches
+        let sName = name.split(' ');
+        linkName.innerHTML = Array.from(sName[0])[0] + '. ' + sName[1];
+      }
+    }
+    
+    // Initial check
+    handleMediaQueryChange(mediaQuery);
+    
+    // Add listener for changes to the media query
+    mediaQuery.addEventListener('change', handleMediaQueryChange);    
+
     aboutDesc.forEach(item => {
         divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
     });
