@@ -2,18 +2,34 @@ iframe {
     border:none;
 }
 
-@media screen and (max-width: 682px) {
+@media screen and (max-width: 682px) and (orientation: portrait) {
     #mainBackground {
-        background-image: url('../img/astronomy_small.jpg');
-        background-image: -webkit-image-set(url("../img/astronomy_small.webp") 1x, url("../img/astronomy_small.jpg") 1x);
-        background-image: image-set(url("../img/astronomy_small.webp") type("image/webp"), url("../img/astronomy_small.jpg") type("image/jpeg"));
+        background-image: url('../img/astronomy_small_portrait.jpg');
+        background-image: -webkit-image-set(url("../img/astronomy_small_portrait.webp") 1x, url("../img/astronomy_small_portrait.jpg") 1x);
+        background-image: image-set(url("../img/astronomy_small_portrait.webp") type("image/webp"), url("../img/astronomy_small_portrait.jpg") type("image/jpeg"));
         background-size: cover;
     }
 
     /*#skillBusiness {
-        background-image: url('../img/business_small.jpg');
-        background-image: -webkit-image-set(url("../img/business_small.webp") 1x, url("../img/business_small.jpg") 1x);
-        background-image: image-set(url("../img/business_small.webp") type("image/webp"), url("../img/business_small.jpg") type("image/jpeg"));
+        background-image: url('../img/business_small_portrait.jpg');
+        background-image: -webkit-image-set(url("../img/business_small_portrait.webp") 1x, url("../img/business_small_portrait.jpg") 1x);
+        background-image: image-set(url("../img/business_small_portrait.webp") type("image/webp"), url("../img/business_small_portrait.jpg") type("image/jpeg"));
+        background-size: cover;
+    }*/
+}
+
+@media screen and (max-width: 682px) and (orientation: landscape) {
+    #mainBackground {
+        background-image: url('../img/astronomy_small_landscape.jpg');
+        background-image: -webkit-image-set(url("../img/astronomy_small_landscape.webp") 1x, url("../img/astronomy_small_landscape.jpg") 1x);
+        background-image: image-set(url("../img/astronomy_small_landscape.webp") type("image/webp"), url("../img/astronomy_small_landscape.jpg") type("image/jpeg"));
+        background-size: cover;
+    }
+
+    /*#skillBusiness {
+        background-image: url('../img/business_small_landscape.jpg');
+        background-image: -webkit-image-set(url("../img/business_small_landscape.webp") 1x, url("../img/business_small_landscape.jpg") 1x);
+        background-image: image-set(url("../img/business_small_landscape.webp") type("image/webp"), url("../img/business_small_landscape.jpg") type("image/jpeg"));
         background-size: cover;
     }*/
 }
