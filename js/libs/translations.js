@@ -173,8 +173,8 @@ function loadServices() {
             let items = `<div class="row justify-content-center"><p class="lead">`;
             services.forEach(item => {
                 item.forEach(elem => {
-                    let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', 'max-height: 270px!important', true, `service${totalServices}`);
-                    items += `<div class='col-md-4 p-2 text-center'>${title}</div>`;
+                    let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
+                    items += `<div class='col-lg-4 col-12 p-2 text-center'>${title}</div>`;
                     totalServices++;
                 });
             });
@@ -201,7 +201,7 @@ function loadAwards() {
             let items = `<div class="row justify-content-center"><p class="lead">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', 'max-height: 270px!important'), '', '', true)
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true)
 
                     availableLinks.push({ 
                         id: i,
@@ -209,7 +209,7 @@ function loadAwards() {
                         link: elem.link,
                     });
                     
-                    items += `<div class='col-md-4 p-2 text-center'>${title}</div>`;
+                    items += `<div class='col-lg-4 col-12 p-2 text-center'>${title}</div>`;
     
                     i++;
                 });
