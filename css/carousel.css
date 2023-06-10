@@ -11,8 +11,8 @@
     right: -100px
 }
 
-.carousel-indicators {
-    top: 320px
+#c-indicators {
+    position: inherit!important;
 }
 
 @media (min-width:320px) and (max-width:640px) {
@@ -26,9 +26,5 @@
 
     .carousel-control-next {
         right: -40px
-    }
-
-    .carousel-indicators {
-        top: 400px
     }
 }
