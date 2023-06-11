@@ -28,7 +28,7 @@ function loadLegends() {
                         <img src="${item.img}" alt="${item.title}" class="cards-row">
                     </picture>
                     <div class="caption">
-                        <p>${item.title}</p>
+                        <p><b>${item.title}</b></p>
                     </div>
                 </a>
             </div>

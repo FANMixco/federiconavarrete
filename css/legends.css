@@ -1,10 +1,11 @@
+body {
+    font-family: "Lato","Lucida Grande",Tahoma,Sans-Serif;
+    background: #121212!important
+}
+a
 .cards-row {
     height: 250px;
     width: 100%
-}
-
-body {
-    background: #121212!important
 }
 
 .caption {
