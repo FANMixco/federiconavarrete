@@ -12,10 +12,10 @@ const heightIFrame = 600;
 
 const deviceType = () => {
     const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua) && /android/i.test(ua)) {
+    if (/(tablet|ipad|playbook|silk|Kindle Fire)|(android(?!.*mobi))/i.test(ua) && /android/i.test(ua)) {
         return "Tablet";
     }
-    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)|Tizen|HarmonyOS|KAIOS/.test(ua)) {
+    else if (/Mobile|Android|iP(hone|od)|Windows Phone|IEMobile|BlackBerry|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)|Tizen|HarmonyOS|KAIOS/.test(ua)) {
         return "Smartphone";
     }
     return "Desktop";
