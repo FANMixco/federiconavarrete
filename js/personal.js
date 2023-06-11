@@ -20,9 +20,7 @@ if (document.readyState !== "loading") {
     document.addEventListener("DOMContentLoaded", onReadyPersonal);
 }
 
-const ua = navigator.userAgent.toLowerCase().match(/android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
-  // Check if the array is not null or empty
-if (ua && ua.length > 0 && window.matchMedia('(max-width: 768px)').matches) {
+if (smallScreenMobileOS) {
   const imgProfile = document.getElementById('imgProfile');
   imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
 } else {
@@ -33,10 +31,9 @@ if (ua && ua.length > 0 && window.matchMedia('(max-width: 768px)').matches) {
     // Check if the media query is true
     if (!e.matches) {
       profileDiv.classList.remove('col-sm-auto');
-      profileDiv.classList.add('col-sm', 'pt-4', 'pt-4');
+      profileDiv.classList.add('col-sm', 'pt-4', 'pb-4');
     } else {
-      profileDiv.classList.remove('col-sm');
-      profileDiv.classList.remove('pt-2');
+      profileDiv.classList.remove('col-sm', 'pt-4', 'pb-4');
       profileDiv.classList.add('col-sm-auto');
     }
   }

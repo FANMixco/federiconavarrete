@@ -48,21 +48,10 @@ function loadTranslations() {
         });
     });
 
+    const spanMenu = document.getElementById('spanMenu');
     if (!smallScreenMobileOS) {
-        const btnPause = document.getElementById('spanMenu');
-
-        btnPause.innerHTML = `${genericTranslations.menu}&nbsp;&nbsp;${getHMenu()}`;
-
-        /*setTimeout(function() {
-            const divSkillsContainer = document.getElementById('divSkillsContainer');
-
-            divSkillsContainer.style.backgroundColor = "rgba(12,12,12,0.95)";
-            divSkillsContainer.style.paddingTop = "15px";
-            divSkillsContainer.style.borderRadius = "20px";
-        }, 100);*/
+        spanMenu.innerHTML = `${getHMenu()}`;
     } else {
-        const spanMenu = document.getElementById('spanMenu');
-
         spanMenu.innerHTML = getHMenu('style="margin-top:0px!important"');
     }
 }
