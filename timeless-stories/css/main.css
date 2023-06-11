@@ -3033,3 +3033,13 @@ h6 {
   width: 40px;
   height: auto;
 }
+
+@media screen and (max-width:318px) and (orientation:portrait) {
+  body, html, .download-button {
+      width: 100vw!important
+  }
+
+  body, html {
+      overflow-x: hidden
+  }
+}
