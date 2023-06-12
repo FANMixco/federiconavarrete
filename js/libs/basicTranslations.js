@@ -107,6 +107,8 @@ function loadBasicInfo() {
         // Media query matches
         let sName = name.split(' ');
         linkName.innerHTML = Array.from(sName[0])[0] + '. ' + sName[1];
+      } else {
+        linkName.innerHTML = name;
       }
     }
     
