@@ -52,7 +52,7 @@ function changeHClass() {
   // Get the current width of the window
   var width = window.innerWidth;
   // Check if the width is smaller than 992px
-  if (width < 992) {
+  if (width < 1200) {
     // Change the class to container-fluid
     element.className = "container-fluid";
   } else {
