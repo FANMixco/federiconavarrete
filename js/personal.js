@@ -44,3 +44,25 @@ if (smallScreenMobileOS) {
   // Initial check
   handleTabletChange(mediaQuery);
 }
+
+// Define a function to change the class based on screen size
+function changeHClass() {
+  // Get the div element
+  var element = document.getElementById("hContent");
+  // Get the current width of the window
+  var width = window.innerWidth;
+  // Check if the width is smaller than 992px
+  if (width < 992) {
+    // Change the class to container-fluid
+    element.className = "container-fluid";
+  } else {
+    // Change the class to container
+    element.className = "container";
+  }
+}
+
+// Call the function when the page loads
+changeHClass();
+
+// Call the function when the window is resized
+window.addEventListener("resize", changeHClass);
