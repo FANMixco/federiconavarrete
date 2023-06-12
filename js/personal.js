@@ -31,9 +31,9 @@ if (smallScreenMobileOS) {
     // Check if the media query is true
     if (!e.matches) {
       profileDiv.classList.remove('col-sm-auto');
-      profileDiv.classList.add('col-sm', 'pt-4', 'pb-4');
+      profileDiv.classList.add('col-sm', 'pt-4', 'mt-4', 'pb-4');
     } else {
-      profileDiv.classList.remove('col-sm', 'pt-4', 'pb-4');
+      profileDiv.classList.remove('col-sm', 'pt-4', 'mt-4', 'pb-4');
       profileDiv.classList.add('col-sm-auto');
     }
   }
