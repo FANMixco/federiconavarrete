@@ -174,7 +174,7 @@ function loadServices() {
             services.forEach(item => {
                 item.forEach(elem => {
                     let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
-                    items += `<div class='col-lg-4 col-12 p-2 text-center'>${title}</div>`;
+                    items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
                     totalServices++;
                 });
             });
@@ -209,7 +209,7 @@ function loadAwards() {
                         link: elem.link,
                     });
                     
-                    items += `<div class='col-lg-4 col-12 p-2 text-center'>${title}</div>`;
+                    items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
     
                     i++;
                 });

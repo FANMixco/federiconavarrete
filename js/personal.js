@@ -46,23 +46,27 @@ if (smallScreenMobileOS) {
 }
 
 // Define a function to change the class based on screen size
-function changeHClass() {
+function screenResize() {
   // Get the div element
-  var element = document.getElementById("hContent");
+  const element = document.getElementById("hContent");
   // Get the current width of the window
-  var width = window.innerWidth;
-  // Check if the width is smaller than 992px
-  if (width < 1200) {
-    // Change the class to container-fluid
-    element.className = "container-fluid";
-  } else {
-    // Change the class to container
-    element.className = "container";
-  }
+  const width = window.innerWidth;
+
+  element.className = (width < 1200) ? "container-fluid" :  "container";
+
+  const divs = document.querySelectorAll(".card-holder");
+
+  divs.forEach(function(div) {
+    if (width < 992) {
+      div.style.width =  "auto";
+    } else {
+      div.style.removeProperty("width");
+    }
+  });
 }
 
 // Call the function when the page loads
-changeHClass();
+screenResize();
 
 // Call the function when the window is resized
-window.addEventListener("resize", changeHClass);
+window.addEventListener("resize", screenResize);
