@@ -53,16 +53,6 @@ function screenResize() {
   const width = window.innerWidth;
 
   element.className = (width < 1200) ? "container-fluid" :  "container";
-
-  const divs = document.querySelectorAll(".card-holder");
-
-  divs.forEach(function(div) {
-    if (width < 992) {
-      div.style.width =  "auto";
-    } else {
-      div.style.removeProperty("width");
-    }
-  });
 }
 
 // Call the function when the page loads

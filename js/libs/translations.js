@@ -181,6 +181,7 @@ function loadServices() {
             items = `${items.substring(0, items.length - 12)}${cDiv}`;
 
             servicesList.innerHTML += items;
+            screenResizeCardHolders();
         }
         else {
             const divServices = document.getElementById('divServices');
@@ -230,6 +231,7 @@ function loadAwards() {
                     iframeGeneric.innerHTML = lPreview;    
                 });
             });
+            screenResizeCardHolders();
         }
         else {
             const divAwards = document.getElementById('divAwards');
@@ -638,3 +640,20 @@ function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '')
 function getCItem(extras) {
     return `<div class="carousel-item ${extras}">`;
 }
+
+// Define a function to change the class based on screen size
+function screenResizeCardHolders() {
+    const divs = document.querySelectorAll(".card-holder");
+    const width = window.innerWidth;
+
+    divs.forEach(function(div) {
+        if (width < 992) {
+        div.style.width =  "auto";
+        } else {
+        div.style.removeProperty("width");
+        }
+    });
+}
+
+// Call the function when the window is resized
+window.addEventListener("resize", screenResizeCardHolders);
