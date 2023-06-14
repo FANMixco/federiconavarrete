@@ -288,6 +288,12 @@ a.text-material-link-dark:active,a.text-material-link-dark:hover {
     }
 }
 
+@media screen and (max-width:768px) and (orientation:portrait) {
+    .btn-home {
+        width: 80vw!important;
+    }
+}
+
 @media screen and (max-width:318px) and (orientation:portrait) {
     #mainNav, body, html {
         width: 100vw!important
