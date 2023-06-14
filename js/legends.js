@@ -1,40 +1,41 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-  $("#legendsCarousel").on("slide.bs.carousel", function(e) {
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
+window.addEventListener('DOMContentLoaded', function (event) {
+  var legendsCarousel = document.getElementById('legendsCarousel');
+  legendsCarousel.addEventListener('slide.bs.carousel', function (e) {
+    var relatedTarget = e.relatedTarget;
+    var index = Array.from(relatedTarget.parentNode.children).indexOf(relatedTarget);
     var itemsPerSlide = 3;
-    var totalItems = $(".carousel-item").length;
+    var totalItems = document.getElementsByClassName('carousel-item').length;
 
-    if (idx >= totalItems - (itemsPerSlide - 1)) {
-      var it = itemsPerSlide - (totalItems - idx);
+    if (index >= totalItems - (itemsPerSlide - 1)) {
+      var it = itemsPerSlide - (totalItems - index);
+      var carouselItems = document.getElementsByClassName('carousel-item');
+
       for (var i = 0; i < it; i++) {
         // append slides to end
         if (e.direction == "left") {
-          $(".carousel-item")
-            .eq(i)
-            .appendTo(".carousel-inner");
+          carouselItems[i].parentNode.appendChild(carouselItems[i]);
         } else {
-          $(".carousel-item")
-            .eq(0)
-            .appendTo($(this).find(".carousel-inner"));
+          legendsCarousel.querySelector('.carousel-inner').appendChild(carouselItems[0]);
         }
       }
     }
   });
-  
-	$(".carousel").on("touchstart", function(event){
-        var xClick = event.originalEvent.touches[0].pageX;
-		$(this).one("touchmove", function(event){
-			var xMove = event.originalEvent.touches[0].pageX;
-			if( Math.floor(xClick - xMove) > 5 ){
-				$(this).carousel('next');
-			}
-			else if( Math.floor(xClick - xMove) < -5 ){
-				$(this).carousel('prev');
-			}
-		});
-		$(".carousel").on("touchend", function(){
-				$(this).off("touchmove");
-		});
-	});
+
+  var carousels = document.querySelectorAll('.carousel');
+  carousels.forEach(function (carousel) {
+    carousel.addEventListener('touchstart', function (event) {
+      var xClick = event.touches[0].pageX;
+      carousel.addEventListener('touchmove', function (event) {
+        var xMove = event.touches[0].pageX;
+        if (Math.floor(xClick - xMove) > 5) {
+          carousel.carousel('next');
+        } else if (Math.floor(xClick - xMove) < -5) {
+          carousel.carousel('prev');
+        }
+      });
+      carousel.addEventListener('touchend', function () {
+        carousel.removeEventListener('touchmove');
+      });
+    });
+  });
 });
