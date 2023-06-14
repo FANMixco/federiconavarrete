@@ -170,7 +170,7 @@ function loadServices() {
 
         if (isVisible) {
             const servicesList = document.getElementById('servicesList');
-            let items = `<div class="row justify-content-center"><p class="lead">`;
+            let items = `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
                     let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
@@ -199,7 +199,7 @@ function loadAwards() {
             const awardsList = document.getElementById('awardsList');
             let availableLinks = [];
             let i = 0;
-            let items = `<div class="row justify-content-center"><p class="lead">`;
+            let items = `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
                     let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true)

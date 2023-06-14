@@ -323,6 +323,10 @@ a.text-material-link-dark:active,a.text-material-link-dark:hover {
         transition: .5s
     }
 
+    .card-holder {
+        max-width: initial;
+    }
+
     .btn-home {
         width: 90vw!important;
     }
