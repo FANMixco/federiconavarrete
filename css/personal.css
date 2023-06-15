@@ -292,6 +292,11 @@ a.text-material-link-dark:active,a.text-material-link-dark:hover {
     .btn-home {
         width: 80vw!important;
     }
+
+    #divAbout {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 @media screen and (max-width:318px) and (orientation:portrait) {
