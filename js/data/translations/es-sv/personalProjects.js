@@ -8,7 +8,7 @@ const personalProjects = [
 	},
 	{
 		"youTubeID": '0S8ybMuA4vA',
-		"link": 'https://fanmixco.github.io/toastmasters-timer-material-design',
+		"link": 'https://fanmixco.github.io/toastmasters-timer',
 		"title": "Cronómetro de Toastmasters",
 		"timeFrame": "2018 - now",
 		"isActive": false
