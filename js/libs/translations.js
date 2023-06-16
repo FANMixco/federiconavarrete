@@ -233,6 +233,13 @@ function loadAwards() {
 
                         const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
 
+                        const modalPreview = document.getElementById('modal-preview');
+
+                        if (item.type === "img")
+                            modalPreview.classList.add('modal-xl');
+                        else
+                            modalPreview.classList.remove('modal-xl');
+
                         btnFullScreenPreview.href = item.link;
                         btnFullScreenPreview.setAttribute('title', item.title);
                         btnFullScreenPreview.setAttribute('aria-label', item.title);
