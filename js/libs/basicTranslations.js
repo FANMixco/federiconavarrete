@@ -177,7 +177,12 @@ function loadBasicInfo() {
     linkPreview.addEventListener(eClick, () => {
         const gTitle = document.getElementById('gTitle');
         gTitle.innerHTML = genericTranslations.winning;
-        gTitle.style.display = "block";
+        gTitle.style.display = "block!important";
         iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+
+        const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
+        btnFullScreenPreview.href = 'https://www.youtube.com/watch?v=IcWZ962uYy0';
+        btnFullScreenPreview.setAttribute('title', genericTranslations.winning);
+        btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
     });
 }
