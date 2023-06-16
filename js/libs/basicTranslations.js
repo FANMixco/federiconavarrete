@@ -177,7 +177,11 @@ function loadBasicInfo() {
     linkPreview.addEventListener(eClick, () => {
         const gTitle = document.getElementById('gTitle');
         gTitle.innerHTML = genericTranslations.winning;
-        gTitle.style.display = "block!important";
+        gTitle.classList.remove('d-none');
+
+        const modalPreview = document.getElementById('modal-preview');
+        modalPreview.classList.add('modal-xl');
+
         iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
         const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
