@@ -13,7 +13,7 @@ iframe {
     border: 0
 }
 
-#btn-full-screen {
+.btn-full-screen {
     background: url(../img/icons/website/fullscreen.svg)center/1.4em no-repeat;
     margin-right: .8rem!important
 }

@@ -202,12 +202,13 @@ function loadAwards() {
             let items = `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true)
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true, elem.type, elem.link);
 
                     availableLinks.push({ 
                         id: i,
                         title: elem.title,
                         link: elem.link,
+                        type: elem.type
                     });
                     
                     items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
@@ -220,16 +221,25 @@ function loadAwards() {
             awardsList.innerHTML += items;
 
             availableLinks.forEach(item => {
-                const linkPreview = document.getElementById(`linkPreview${item.id}`);
-                let iframeGeneric = document.getElementById('iframeGeneric');
+                if (item.type !== "_blank") {
+                    const linkPreview = document.getElementById(`linkPreview${item.id}`);
 
-                linkPreview.addEventListener(eClick, () => {
-                    const gTitle = document.getElementById('gTitle');
-                    gTitle.style.display = nVis;
+                    linkPreview.addEventListener(eClick, () => {
+                        const iframeGeneric = document.getElementById('iframeGeneric');
+                        const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
+                        const gTitle = document.getElementById('gTitle');
 
-                    let lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
-                    iframeGeneric.innerHTML = lPreview;    
-                });
+                        gTitle.style.display = nVis;
+
+                        const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
+
+                        btnFullScreenPreview.href = item.link;
+                        btnFullScreenPreview.setAttribute('title', item.title);
+                        btnFullScreenPreview.setAttribute('aria-label', item.title);
+                    
+                        iframeGeneric.innerHTML = lPreview;    
+                    });
+                }
             });
             screenResizeCardHolders();
         }
@@ -613,18 +623,18 @@ function getListItem(elem, extra = "", extraCls = "") {
     return getInLi(elem, extraCls, extra);
 }
 
-function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false) {
-    let tmpTag = (isBtn) ? 'button' : 'a';
-    let tmpRef = (isBtn) ? '' : `href="#${href}"`;
-    let idT = (id != '') ? `id="${id}"` : '';
-    let tNone = (!isBtn) ? 'text-decoration-none' : '';
+function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false, targetBlank = '', link = '') {
+    const tmpTag = (isBtn) ? 'button' : 'a';
+    const tmpRef = (isBtn) ? '' : `href="#${href}"`;
+    const idT = (id != '') ? `id="${id}"` : '';
+    const tNone = (!isBtn) ? 'text-decoration-none' : '';
 
-    return `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>`;
+    return (targetBlank != '_blank') ? `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>` : `<a href='${link}' target='${targetBlank}' class="${cls} text-decoration-none" ${extras}>${body}</a>`;
 }
 
 function getBtnShare() {
     let icon = 'share-android-svgrepo-com';
-    let matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
+    const matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
     if (matches && matches.length > 0) { 
         icon = 'share-ios-export-svgrepo-com';
     }
