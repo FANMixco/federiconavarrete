@@ -112,28 +112,30 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div class="container">
             <div class="row align-items-center">
                <div id="profile-div" class="col-sm-auto">
-                  <picture>
-                     <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 769px)">
-                     <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 768px)">
-                     <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 480px)">
-      
-                     <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 769px)">
-                     <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 768px)">
-                     <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 480px)">
-      
-                     <img 
-                        srcset="img/photos/profile.jpg 1024w, 
-                                img/photos/profile_medium.jpg 768w,
-                                img/photos/profile_small.jpg 500w"
-      
-                        sizes="(max-width: 1024px) 1024w,
-                               (max-width: 768px) 768px,
-                               (max-width: 480px) 480px"
-      
-                        src="img/photos/profile_medium.jpg" 
-                        alt="Federico's pic"
-                        id="imgProfile" height="300" width="300" />
-                  </picture>
+                  <a data-bs-toggle="modal" title="QR Preview" data-bs-target="#qrPreview" aria-label="QR Preview" href="#qrPreview">
+                     <picture>
+                        <source srcset="img/photos/profile.webp" type="image/webp" media="(min-width: 769px)">
+                        <source srcset="img/photos/profile_medium.webp" type="image/webp" media="(max-width: 768px)">
+                        <source srcset="img/photos/profile_small.webp" type="image/webp" media="(max-width: 480px)">
+         
+                        <source srcset="img/photos/profile.jpg" type="image/jpeg" media="(min-width: 769px)">
+                        <source srcset="img/photos/profile_medium.jpg" type="image/jpeg" media="(max-width: 768px)">
+                        <source srcset="img/photos/profile_small.jpg" type="image/jpeg" media="(max-width: 480px)">
+         
+                        <img 
+                           srcset="img/photos/profile.jpg 1024w, 
+                                 img/photos/profile_medium.jpg 768w,
+                                 img/photos/profile_small.jpg 500w"
+         
+                           sizes="(max-width: 1024px) 1024w,
+                                 (max-width: 768px) 768px,
+                                 (max-width: 480px) 480px"
+         
+                           src="img/photos/profile_medium.jpg" 
+                           alt="Federico's pic"
+                           id="imgProfile" height="300" width="300" />
+                     </picture>
+                  </a>
                </div>
                <div class="col">
                   <h1 class="text-uppercase mb-0" id="hName"></h1>
@@ -327,7 +329,6 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </div>
 
       <div class="modal" tabindex="-1" role="dialog" id="skillsModal">
-
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                <div class="modal-body">
@@ -423,6 +424,23 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                </div>
                <div class="modal-body" id="divPreview"></div>
             </div>
+         </div>
+      </div>
+
+      <div class="modal" tabindex="-1" role="dialog" id="qrPreview">
+         <div class="modal-dialog modal-dialog-centered">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+               <picture>
+                  <source srcset="img/qr.webp" type="image/webp">
+                  <source srcset="img/qr.jpg" type="image/jpeg">
+                  <img src="img/qr.jpg" alt="QR" class="img-fluid" loading="lazy" />
+                </picture>
+             </div>
+           </div>
          </div>
       </div>
 
