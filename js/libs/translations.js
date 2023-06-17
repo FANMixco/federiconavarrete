@@ -113,6 +113,8 @@ function loadReviews() {
 
                 if (item.isPDF) {
                     PDFObject.embed("/testimonials/references.pdf", `#review${index + 1}PDF`);
+                    if (deviceType() === "Smartphone" || deviceType() === "Tablet")
+                        document.getElementById("review2PDF").style.height = "auto";
                 }
             });
         });
