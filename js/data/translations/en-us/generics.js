@@ -8,7 +8,7 @@ const genericTranslations = {
     "download": "Download",
     "about": "About",
     "skills": "My Skills",
-    "checkThem": "Check them!",
+    "checkThem": "Discover them!",
     "projects": "Projects",
     "presentations": "Presentations",
     "presentationsGallery": "Presentations Gallery",
