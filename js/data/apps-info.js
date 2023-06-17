@@ -1396,5 +1396,26 @@ let apps =
                order: 1
             }
       ]
+   },
+   {
+      app: "LinkTree",
+      link: "https://federiconavarrete.com/linktree",
+      description: "My LinkTree.",
+      logo: "personal.png",
+      edition: [
+            {
+               yearStart: 2023,
+               yearEnd: undefined,
+               storeLink: "",
+               mainTech: "web",
+               isSupported: true,
+               link: "",
+               preview: "https://bit.ly/3x6P9b4",
+               technologies: [
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github", "mdi mdi-google-analytics"
+               ],
+               order: 7
+            }
+      ]
    }
 ];
