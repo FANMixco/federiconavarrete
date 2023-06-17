@@ -179,6 +179,9 @@ function loadBasicInfo() {
         gTitle.innerHTML = genericTranslations.winning;
         gTitle.classList.remove('d-none');
 
+        const gDivTitle = document.getElementById('gDivTitle');
+        gDivTitle.classList.remove('border-0');
+
         const modalPreview = document.getElementById('modal-preview');
         modalPreview.classList.add('modal-xl');
 

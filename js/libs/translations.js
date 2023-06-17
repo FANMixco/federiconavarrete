@@ -231,6 +231,9 @@ function loadAwards() {
 
                         gTitle.classList.add(nVis);
 
+                        const gDivTitle = document.getElementById('gDivTitle');
+                        gDivTitle.classList.add('border-0');
+
                         const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
 
                         const modalPreview = document.getElementById('modal-preview');
@@ -659,7 +662,6 @@ function getCItem(extras) {
     return `<div class="carousel-item ${extras}">`;
 }
 
-// Define a function to change the class based on screen size
 function screenResizeCardHolders() {
     const divs = document.querySelectorAll(".card-holder");
     const width = window.innerWidth;
@@ -672,6 +674,16 @@ function screenResizeCardHolders() {
         }
     });
 }
+function changeModalType() {
+    if (smallScreenMobileOS) {
+        const mModals = document.getElementsByClassName("mFullScreen");
+        for (let i = 0; i < mModals.length; i++) {
+            mModals[i].classList.remove("modal-xl");
+            mModals[i].classList.add("modal-fullscreen");
+        }
+    }
+}
 
-// Call the function when the window is resized
+changeModalType();
+
 window.addEventListener("resize", screenResizeCardHolders);
