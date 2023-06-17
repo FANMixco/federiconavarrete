@@ -50,7 +50,7 @@ function retry(maxRetries, delay, fn, callback) {
   
 // wrap loadTranslations with retry and delay
 let loadTranslationsWithRetry = function(callback) {
-    retry(3, 100, loadTranslations, callback);
+    retry(3, 150, loadTranslations, callback);
 };  
 
 function loadTranslations() {
