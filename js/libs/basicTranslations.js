@@ -126,14 +126,14 @@ function loadBasicInfo() {
         favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title, 'height="24" width="24"');
     }
     else {
-        favBookDiv.style.display = nVis;
+        favBookDiv.classList.add(nVis);
     }
 
     if (favPodcast.isVisible) {
         favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'podcast-solid', favPodcast.title, ` style="height:24px;width:24px"`);
     }
     else {
-        favPodcastDiv.style.display = nVis;
+        favPodcastDiv.classList.add(nVis);
     }
 
     const listContacts = document.getElementById('listContacts');

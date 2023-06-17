@@ -4,7 +4,7 @@ let isMenuTriggered = false;
 
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
-const nVis = 'none';
+const nVis = 'd-none';
 const tCenter = "text-center";
 const iconsPath = 'img/icons/website/';
 const marginTop = 0;

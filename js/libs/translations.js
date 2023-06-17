@@ -100,7 +100,7 @@ function loadReviews() {
         }
         else {
             const divReviews = document.getElementById("divReviews");
-            divReviews.style.display = nVis;
+            divReviews.classList.add(nVis);
         }
 
         fullReviews.forEach(function(item, index) { 
@@ -158,7 +158,7 @@ function loadReviews() {
         }
         else {
             const divHobbies = document.getElementById("divHobbies");
-            divHobbies.style.display = nVis;
+            divHobbies.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -185,7 +185,7 @@ function loadServices() {
         }
         else {
             const divServices = document.getElementById('divServices');
-            divServices.style.display = nVis;
+            divServices.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -229,16 +229,17 @@ function loadAwards() {
                         const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
                         const gTitle = document.getElementById('gTitle');
 
-                        gTitle.classList.add('d-none');
+                        gTitle.classList.add(nVis);
 
                         const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
 
                         const modalPreview = document.getElementById('modal-preview');
 
-                        if (item.type === "img")
+                        modalPreview.classList.remove('modal-xl');
+
+                        if (item.type === "img") {
                             modalPreview.classList.add('modal-xl');
-                        else
-                            modalPreview.classList.remove('modal-xl');
+                        }
 
                         btnFullScreenPreview.href = item.link;
                         btnFullScreenPreview.setAttribute('title', item.title);
@@ -252,7 +253,7 @@ function loadAwards() {
         }
         else {
             const divAwards = document.getElementById('divAwards');
-            divAwards.style.display = nVis;
+            divAwards.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -310,9 +311,9 @@ function loadVideos() {
         }
         else {
             const hPublicSpeaking = document.getElementById('hPublicSpeaking');
-            hPublicSpeaking.style.display = nVis;
+            hPublicSpeaking.classList.add(nVis);
 
-            divVideos.style.display = nVis;
+            divVideos.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -335,9 +336,9 @@ function loadYouTubeVideos() {
         }
         else {
             const hYouTubeTraining = document.getElementById('hYouTubeTraining');
-            hYouTubeTraining.style.display = nVis;
+            hYouTubeTraining.classList.add(nVis);
 
-            divYouTubeVideos.style.display = nVis;
+            divYouTubeVideos.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -357,12 +358,12 @@ function loadPresentations() {
         }
         else {
             const hPresentations = document.getElementById('hPresentations');
-            hPresentations.style.display = nVis;
+            hPresentations.classList.add(nVis);
 
-            divPPTs.style.display = nVis;
+            divPPTs.classList.add(nVis);
 
             const pPPTs = document.getElementById('pPPTs');
-            pPPTs.style.display = nVis;
+            pPPTs.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -380,7 +381,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
         }
         else {
             const secDiv = document.getElementById(divSection);
-            secDiv.style.display = nVis;
+            secDiv.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -431,7 +432,7 @@ function loadSocialMedias() {
         }
         else {
             const aroundWeb = document.getElementById('aroundWeb');
-            aroundWeb.style.display = nVis;
+            aroundWeb.classList.add(nVis);
         }
     }
     catch (e) { return e; }
@@ -520,7 +521,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     let srcWebP = document.getElementById(`srcWebP${imgID}`);
     let srcJPG = document.getElementById(`srcJPG${imgID}`);
     //let divBook = document.getElementById("myBookDiv");
-    //divBook.style.display = 'none';
+    //divBook.classList.add(nVis);
 
     //let imgBook = document.getElementById("imgBook");
     //let currentDate = new Date();
@@ -543,7 +544,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 
     /*if (validDate) {
         imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;
-        divBook.style.display = 'block';
+        divBook.classList.add('block');
     }*/
 
     imgTemp.setAttribute("loading", "lazy");
