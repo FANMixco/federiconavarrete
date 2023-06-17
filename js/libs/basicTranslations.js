@@ -10,49 +10,92 @@ lang = (language.includes('es')) ? "es-sv/min": (language.includes('zh')) ? 'zh-
 
 getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
-    loadTranslations();
-    getScript(`${langLoc}${lang}/basicInfo.js`).then(() => { loadBasicInfo(); }).catch((e) => { console.error(e); });
+    // call loadTranslationsWithRetry and handle the result or error
+    loadTranslationsWithRetry(function(err, result) {
+        if (err) {
+            // handle error
+            console.error(err.message);
+        } else {
+            // handle result
+            getScript(`${langLoc}${lang}/basicInfo.js`).then(() => { loadBasicInfo(); }).catch((e) => { console.error(e); });
+        }
+    });      
 })
 .catch((e) => {
   console.error(e);
 });
 
-function loadTranslations() {
-    [...document.querySelectorAll('button.btn-close')].forEach(element => {
-        element.setAttribute("aria-label", genericTranslations.close);
-    });
-
-    document.querySelectorAll('[data-translation]').forEach(item => {
-        item.innerHTML = genericTranslations[`${item.dataset.translation}`];
-    });
-
-    [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
-        element.addEventListener(eClick, function(e) {
-            currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
-            const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
-
-            const iframePreview = getIframe(pTitle, `${currentLoc}.html?isIframe=true`, 'class="previewerIframe" allowfullscreen');
-
-            const divPreview = document.getElementById("divPreview");
-
-            const title = document.getElementById('zoomTitle');
-            title.innerHTML = pTitle;
-
-            divPreview.innerHTML = iframePreview;
-
-            const btnFullScreen = document.getElementById('btn-full-screen');
-
-            btnFullScreen.href = `${fURL}${currentLoc}.html`;
-            btnFullScreen.setAttribute('title', pTitle);
-            btnFullScreen.setAttribute('aria-label', pTitle);
-        });
-    });
-
-    const spanMenu = document.getElementById('spanMenu');
-    if (!smallScreenMobileOS) {
-        spanMenu.innerHTML = `${getHMenu()}`;
+// the retry function that takes a callback
+function retry(maxRetries, delay, fn, callback) {
+    // call the function and get a result
+    var result = fn();
+    // check the result
+    if (result) {
+      // if the result is truthy, call the callback with the result
+      callback(null, result);
     } else {
-        spanMenu.innerHTML = getHMenu('style="margin-top:0px!important"');
+      // if the result is falsy, check the maxRetries and delay
+      if (maxRetries <= 0) {
+        // if no more retries left, call the callback with an error
+        callback(new Error('Max retries reached'));
+      } else {
+        // if there are retries left, wait for the delay and try again
+        setTimeout(function() {
+          // call retry recursively with one less retry
+          retry(maxRetries - 1, delay, fn, callback);
+        }, delay);
+      }
+    }
+  }
+  
+// wrap loadTranslations with retry and delay
+let loadTranslationsWithRetry = function(callback) {
+    retry(3, 100, loadTranslations, callback);
+};  
+
+function loadTranslations() {
+    try {
+        [...document.querySelectorAll('button.btn-close')].forEach(element => {
+            element.setAttribute("aria-label", genericTranslations.close);
+        });
+
+        document.querySelectorAll('[data-translation]').forEach(item => {
+            item.innerHTML = genericTranslations[`${item.dataset.translation}`];
+        });
+
+        [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
+            element.addEventListener(eClick, function(e) {
+                currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
+                const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
+
+                const iframePreview = getIframe(pTitle, `${currentLoc}.html?isIframe=true`, 'class="previewerIframe" allowfullscreen');
+
+                const divPreview = document.getElementById("divPreview");
+
+                const title = document.getElementById('zoomTitle');
+                title.innerHTML = pTitle;
+
+                divPreview.innerHTML = iframePreview;
+
+                const btnFullScreen = document.getElementById('btn-full-screen');
+
+                btnFullScreen.href = `${fURL}${currentLoc}.html`;
+                btnFullScreen.setAttribute('title', pTitle);
+                btnFullScreen.setAttribute('aria-label', pTitle);
+            });
+        });
+
+        const spanMenu = document.getElementById('spanMenu');
+        if (!smallScreenMobileOS) {
+            spanMenu.innerHTML = getHMenu();
+        } else {
+            spanMenu.innerHTML = getHMenu('style="margin-top:0px!important"');
+        }
+        
+        return true;
+    }
+    catch {
+        return false;
     }
 }
 
@@ -188,7 +231,7 @@ function loadBasicInfo() {
         iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
         const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
-        btnFullScreenPreview.href = 'https://www.youtube.com/watch?v=IcWZ962uYy0';
+        btnFullScreenPreview.href = 'https://bit.ly/3p9hMGJ';
         btnFullScreenPreview.setAttribute('title', genericTranslations.winning);
         btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
     });
