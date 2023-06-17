@@ -2,7 +2,7 @@ let apps =
 [
    {
       app: "Toastasters Timer",
-      link: "https://bit.ly/3kMjYiS",
+      link: "https://bit.ly/3phGZPb",
       description: "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
       logo: "timer.png",
       edition: [
@@ -119,7 +119,7 @@ let apps =
    },
    {
       app: "Toastasters Timer Lite",
-      link: "https://bit.ly/3kMjYiS",
+      link: "https://bit.ly/3phGZPb",
       description: "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
       logo: "tm_lite.png",
       edition: [
