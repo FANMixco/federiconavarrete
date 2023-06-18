@@ -1410,7 +1410,7 @@ let apps =
                mainTech: "web",
                isSupported: true,
                link: "",
-               preview: "https://bit.ly/3x6P9b4",
+               preview: "",
                technologies: [
                   "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "fab fa-bootstrap", [{type: "text", id: "id_pwa", text: "PWA", tooltip: "Progressive Web App"}], "fab fa-git", "mdi mdi-github", "mdi mdi-google-analytics"
                ],
