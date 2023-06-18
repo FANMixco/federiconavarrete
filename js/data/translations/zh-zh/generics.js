@@ -7,7 +7,7 @@ const genericTranslations = {
     "close": "阅读更多信息",
     "download": "下载",
     "about": "关于",
-    "skills": "我的技能",
+    "skills": "发现我的技能",
     "checkThem": "检查他们！",
     "projects": "项目",
     "presentations": "演示文稿",
