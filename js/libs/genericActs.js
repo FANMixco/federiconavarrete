@@ -11,13 +11,19 @@ const marginTop = 0;
 const heightIFrame = 600;
 
 const deviceType = () => {
-    const ua = navigator.userAgent;
-    if (/(tablet|ipad|playbook|silk|Kindle Fire)|(android(?!.*mobi))/i.test(ua) && /android/i.test(ua)) {
-        return "Tablet";
+    const ua = navigator.userAgent.toLowerCase();
+  
+    if (
+      ua.match(/(tablet|ipad|playbook|silk|kindle fire)|(android(?!.*mobi))/i) !== null
+    ) {
+      return "Tablet";
+    } else if (
+      ua.match(/iphone|ipod/i) !== null ||
+      ua.match(/mobile|android|ip(hone|od)|windows phone|iemobile|blackberry|silk-accelerated|(hpw|web)os|opera m(obi|ini)|tizen|harmonyos|kaios/) !== null
+    ) {
+      return "Smartphone";
     }
-    else if (/Mobile|Android|iP(hone|od)|Windows Phone|IEMobile|BlackBerry|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)|Tizen|HarmonyOS|KAIOS/.test(ua)) {
-        return "Smartphone";
-    }
+  
     return "Desktop";
 };
 
