@@ -56,7 +56,7 @@
     font-weight: lighter;
   }
 
-  #qr-link {
+/*  #qr-link {
     color: var(--accentColor);
   }
   
@@ -70,7 +70,7 @@
   
   #qr-link:active {
     color: var(--accentColor);
-  }
+  }*/
   
   #share-section {
     padding-right: 30px;
@@ -161,8 +161,8 @@
     position: relative;
     background-color: transparent;
     color: var(--accentColor);
-    border: solid var(--accentColor) 2px;
-    border-radius: 10px;
+    border: solid var(--accentColor) 1.5px;
+    border-radius: 8px;
     font-size: 1rem;
     text-align: center;
     display: block;

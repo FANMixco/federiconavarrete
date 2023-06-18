@@ -50,15 +50,6 @@ function contactMeForm(e) {
         document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
     }
 
-    try {
-        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
-        for (let i = 0; i < tooltipList.length; i++) {
-            tooltipList[i].hide();
-        }
-    } catch { }
-
     let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
     contactMe.show();
     extraContact++;
@@ -122,3 +113,18 @@ function getCleanTitle(alt) {
     tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
     return alt.replace(tagRegExp, '');
 }
+
+window.addEventListener("load", function() {
+    if (window.matchMedia('(hover: hover)').matches) {
+      try {
+        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  
+        for (let i = 0; i < tooltipList.length; i++) {
+          tooltipList[i].hide();
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+});

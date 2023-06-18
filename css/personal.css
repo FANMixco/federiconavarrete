@@ -31,7 +31,7 @@ iframe {
     color: #fff
 }
 
-#linkContactMe:active,#linkContactMe:hover {
+#linkContactMe:active {
     color: #212529
 }
 
@@ -115,18 +115,10 @@ iframe {
     height: 24px
 }
 
-.externalImg:hover img {
-    filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%)
-}
-
 .iconFooter {
     width: 25px;
     height: 25px;
     margin-top: -1px
-}
-
-.btn-footer:hover img,.btn-home:hover img {
-    filter: invert(0%)
 }
 
 .btnIcons {
@@ -177,7 +169,7 @@ a.text-material-link {
     color: #bb86fc
 }
 
-a.text-material-link:active,a.text-material-link:hover {
+a.text-material-link:active {
     color: #997efb
 }
 
@@ -185,7 +177,7 @@ a.text-material-link-dark {
     color: #6300ed
 }
 
-a.text-material-link-dark:active,a.text-material-link-dark:hover {
+a.text-material-link-dark:active {
     color: #7919ff
 }
 
@@ -197,10 +189,6 @@ a.text-material-link-dark:active,a.text-material-link-dark:hover {
     width: 96px;
     padding: 5px;
     margin: auto
-}
-
-.card-link:hover .card {
-    transform: scale(1.1)
 }
 
 .card-awards:before,.card-services:before {
@@ -260,6 +248,40 @@ a.text-material-link-dark:active,a.text-material-link-dark:hover {
     font: inherit;
     cursor: pointer;
     outline: inherit
+}
+
+.btn-footer:focus img,.btn-home:focus img {
+    filter: invert(0%)
+}
+
+.externalImg:focus img {
+    filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%)
+}
+
+@media (hover: hover) {
+    #linkContactMe:hover {
+        color: #212529
+    }
+
+    .card-link:hover .card {
+        transform: scale(1.1)
+    }
+    
+    a.text-material-link-dark:hover {
+        color: #7919ff
+    }
+    
+    a.text-material-link:hover {
+        color: #997efb
+    }    
+
+    .btn-footer:hover img,.btn-home:hover img {
+        filter: invert(0%)
+    }
+
+    .externalImg:hover img {
+        filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%)
+    }
 }
 
 @media screen and (max-width:682px) and (orientation:portrait) {
