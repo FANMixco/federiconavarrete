@@ -250,11 +250,11 @@ a.text-material-link-dark:active {
     outline: inherit
 }
 
-.btn-footer:focus img,.btn-home:focus img {
+.btn-footer:focus img,.btn-home:focus img, .btn-footer:active img,.btn-home:active img {
     filter: invert(0%)
 }
 
-.externalImg:focus img {
+.externalImg:focus img, .externalImg:active img {
     filter: invert(14%) sepia(14%) saturate(390%) hue-rotate(169deg) brightness(94%) contrast(98%)
 }
 
