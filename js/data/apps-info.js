@@ -1222,7 +1222,7 @@ let apps =
                link: "",
                preview: "https://bit.ly/3x6P9b4",
                technologies: [
-                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github", "mdi mdi-google-analytics"
+                  "fab fa-html5", "fab fa-css3-alt", "fab fa-js-square", "mdi mdi-jquery", "fab fa-bootstrap", "fab fa-git", "mdi mdi-github", [{type: "icon", id: "id_multiLanguage", icon: "fas fa-language", tooltip: "Multi-language"}], "mdi mdi-google-analytics"
                ],
                order: 5
             }
