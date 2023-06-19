@@ -5,15 +5,6 @@
     perspective: 600px;
   }
   
-  @keyframes initAnimation {
-    0% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(-30deg);
-    }
-  }
-  
   .book {
     width: 200px;
     height: 320px;
@@ -22,10 +13,6 @@
     transform: rotateY(-30deg);
     transition: 1s ease;
     animation: 1s ease 0s 1 initAnimation;
-  }
-  
-  .book:hover {
-    transform: rotateY(0deg);
   }
   
   .book > :first-child {
@@ -87,3 +74,26 @@
     border-radius: 0 2px 2px 0;
     box-shadow: -10px 0 50px 10px #666;
   }
+
+  /* Styles for when hover is available */
+@media (hover: hover) {
+  .book:hover {
+    transform: rotateY(0deg);
+  }
+  
+  @keyframes initAnimation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(-30deg);
+    }
+  }
+}
+
+/* Styles for when hover is not available */
+@media (hover: none) {
+  .book {
+    transform: rotateY(0deg);
+  }
+}
