@@ -3043,3 +3043,7 @@ h6 {
       overflow-x: hidden
   }
 }
+
+#price0 {
+  z-index: 500;
+}
