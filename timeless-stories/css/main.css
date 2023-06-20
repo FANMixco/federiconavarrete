@@ -3047,3 +3047,9 @@ h6 {
 #price0 {
   z-index: 500;
 }
+
+@media (hover: none) {
+  #div-book {
+    padding-top: 2.5rem;
+  }
+}
