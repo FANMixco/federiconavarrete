@@ -62,7 +62,7 @@ function contactMeForm(e) {
     extraContact++;
 }
 
-function iFrameHResize(id, percentage = 0.75) {
+function iFrameHResize(id, percentage = 0.7) {
     let landscape = window.matchMedia("(orientation: landscape)");
     if (landscape.matches)
         document.getElementById(id).style.height = `${document.documentElement.clientHeight * percentage}px`;
