@@ -689,9 +689,7 @@ function changeModalType() {
         }
 
         let landscape = window.matchMedia("(orientation: landscape)");
-        console.log(landscape);
         if (landscape.matches)  {
-            //console.log('matches');
             const mModalsH = document.getElementsByClassName("mFullScreenH");
             for (let i = 0; i < mModalsH.length; i++) {
                 mModalsH[i].classList.remove("modal-xl");

@@ -90,6 +90,8 @@ function loadTranslations() {
                     } else {
                         document.getElementById('gPreview').style.height = `${document.documentElement.clientHeight * 0.7}px`;
                     }
+                } else {
+                    document.getElementById('gPreview').style.height = `450px`;
                 }
             });
         });
