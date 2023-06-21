@@ -1,6 +1,6 @@
 // Select the share icon element
-const shareIcon = document.getElementById('shareIcon');
-const shareIconI = document.getElementById('share-icon');
+const shareLink = document.getElementById('shareLink');
+const shareIcon = document.getElementById('share-icon');
 
 // Check if the Web Share API is supported by the browser
 if (navigator.share) { 
@@ -8,15 +8,15 @@ if (navigator.share) {
   const matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
   // Check if the array is not null or empty
   if (matches && matches.length > 0) {
-    shareIconI.classList.remove('icon-share-alt');
-    shareIconI.classList.add('icon-ios_share');
+    shareIcon.classList.remove('icon-share-alt');
+    shareIcon.classList.add('icon-ios_share');
   }
 } else {
-  shareIcon.style.display = 'none';
+  shareLink.style.display = 'none';
 }
 
 // Add a click event listener to the share icon
-shareIcon.addEventListener('click', (e) => {
+shareLink.addEventListener('click', (e) => {
   e.preventDefault();
   // Use the Web Share API to share the current page
   navigator.share({

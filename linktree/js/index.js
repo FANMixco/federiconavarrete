@@ -1,3 +1,8 @@
+if (window.location.hash) {
+  let urlWithoutHash = window.location.href.split('#')[0];
+  window.location.href = urlWithoutHash;
+}
+
 window.addEventListener('load', function() {
     var imgPopups = document.getElementsByClassName('imgPopup');
     for (var i = 0; i < imgPopups.length; i++) {
@@ -15,4 +20,11 @@ const ua = navigator.userAgent.toLowerCase().match(/android|iphone|ipod|kaios|ti
 if (ua && ua.length > 0) {
   const uTubeLink = document.getElementById('uTubeLink');
   uTubeLink.href = uTubeLink.href.replace('www', 'm');
+}
+
+document.getElementById("popup").addEventListener("click", goBack);
+document.getElementById("popup-close").addEventListener("click", goBack);
+
+function goBack() {
+  history.back();
 }
