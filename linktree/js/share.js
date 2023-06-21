@@ -8,8 +8,8 @@ if (navigator.share) {
   const matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
   // Check if the array is not null or empty
   if (matches && matches.length > 0) {
-    shareIcon.classList.remove('icon-share-alt');
-    shareIcon.classList.add('icon-ios_share');
+    shareIconI.classList.remove('icon-share-alt');
+    shareIconI.classList.add('icon-ios_share');
   }
 } else {
   shareIcon.style.display = 'none';
