@@ -37,21 +37,21 @@ const socialOthersList = {
 		{
 			"icon": "podcast-solid",
 			"title": "Sharing Your Stories",
-			"link": "https://redcircle.com/shows/sharing-your-stories",
+			"link": "https://apple.co/3NfRDhz",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
 		{
 			"icon": "amazon-brands",
 			"title": "Amazon",
-			"link": "https://www.amazon.com/Federico-Navarrete/e/B08NJTXQRV",
+			"link": "https://amzn.to/3Jqgsq1",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "podcast-solid",
+			"icon": "spotify",
 			"title": "Cyber Prophets",
-			"link": "https://redcircle.com/shows/cyber-prophets",
+			"link": "https://spoti.fi/3cD1743",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},

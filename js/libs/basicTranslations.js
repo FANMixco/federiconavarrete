@@ -182,7 +182,7 @@ function loadBasicInfo() {
     }
 
     if (favPodcast.isVisible) {
-        favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'podcast-solid', favPodcast.title, ` style="height:24px;width:24px"`);
+        favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'spotify', favPodcast.title, ` style="height:24px;width:24px"`);
     }
     else {
         favPodcastDiv.classList.add(nVis);

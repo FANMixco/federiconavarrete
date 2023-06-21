@@ -22,9 +22,9 @@ const socialBasicList = {
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "podcast-solid",
-			"title": "Sharing Your Stories",
-			"link": "https://redcircle.com/shows/sharing-your-stories",
+			"icon": "tiktok",
+			"title": "TikTok",
+			"link": "https://www.tiktok.com/@federicostories",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		}
@@ -35,16 +35,23 @@ const socialBasicList = {
 const socialOthersList = {
 	"socialMedia": [
 		{
-			"icon": "amazon-brands",
-			"title": "Amazon",
-			"link": "https://www.amazon.com/Federico-Navarrete/e/B08NJTXQRV",
+			"icon": "podcast-solid",
+			"title": "Sharing Your Stories",
+			"link": "https://apple.co/3NfRDhz",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "podcast-solid",
+			"icon": "amazon-brands",
+			"title": "Amazon",
+			"link": "https://amzn.to/3Jqgsq1",
+			"isIcon": false,
+			"externalClass": "iconFooter"
+		},
+		{
+			"icon": "spotify",
 			"title": "Cyber Prophets",
-			"link": "https://redcircle.com/shows/cyber-prophets",
+			"link": "https://spoti.fi/3cD1743",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},

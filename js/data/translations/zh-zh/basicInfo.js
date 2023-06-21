@@ -12,7 +12,7 @@ const basicInfo = {
 		"isVisible": false
 	},
 	"favPodcast": {
-		"link": 'https://bit.ly/3vfdxWZ',
+		"link": 'https://spoti.fi/3cD1743',
 		"title": "Cyber Prophets",
 		"isVisible": true
 	},
