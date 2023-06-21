@@ -204,11 +204,6 @@
     -webkit-tap-highlight-color: transparent;
   }
   
-  .sub-link:hover {
-    background-color: var(--accentColor);
-    color: var(--bgColor) !important;
-  }
-  
   .sub-link {
     font-size: 1.5rem; /* Adjust the font size for the icon */
     line-height: 1; /* Remove the fixed line-height */
@@ -301,7 +296,40 @@
   
   .popup-photo img {
     width: 100%;
-    /*height: 100%;*/
+  }
+
+  @media screen and (orientation: landscape) and (max-device-height: 480px) and (pointer: coarse) and (hover: none) {  
+    .popup-photo {
+      height: 100%;
+      text-align: center;
+    }
+    
+    .popup-photo img {
+      width: 100%;
+      height: 200px;
+    }
+  
+    .imgPopup {
+      margin: auto;
+    }
+    
+    .popup {
+      position: absolute;
+      top: -43%;
+      /* right: -100vh; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      /* max-height: 500px; */
+      width: auto;
+      height: auto;
+      margin: 56px;
+      background-color: var(--bgColor);
+      /* transform: rotate(32deg); */
+      transform: scale(0);
+      transition: 0.5s ease-in-out;
+    }
   }
   
   .overlay:target {
@@ -341,6 +369,11 @@
     .popup-close:hover {
       background-color: var(--accentColor);
       color: var(--bgColor);
+    }
+  
+    .sub-link:hover {
+      background-color: var(--accentColor);
+      color: var(--bgColor) !important;
     }
   }
   

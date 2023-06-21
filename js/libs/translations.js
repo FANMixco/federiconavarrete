@@ -2,7 +2,7 @@ let totalServices = 0;
 let fullReviews = [];
 
 const bookEdition = 'second;'
-const imgPreview = getImgBasicTag('{URL}', '', '{Title}', '', '', 'style="width: 90%"');
+const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"');
 const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
@@ -236,7 +236,7 @@ function loadAwards() {
                         const gDivTitle = document.getElementById('gDivTitle');
                         gDivTitle.classList.add('border-0');
 
-                        const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
+                        const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, `class="previewerIframe" id="previewerIframeI" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
 
                         const modalPreview = document.getElementById('modal-preview');
 
@@ -250,7 +250,9 @@ function loadAwards() {
                         btnFullScreenPreview.setAttribute('title', item.title);
                         btnFullScreenPreview.setAttribute('aria-label', item.title);
                     
-                        iframeGeneric.innerHTML = lPreview;    
+                        iframeGeneric.innerHTML = lPreview;
+
+                        iFrameHResize('previewerIframeI');
                     });
                 }
             });
@@ -495,8 +497,10 @@ function addIFrameModal() {
         let cService = document.getElementById(`service${serv}`);
         cService.addEventListener(eClick, function(e) {
             e.preventDefault();
-            document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
-        
+            document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
+
+            iFrameHResize('serviceFormI');
+            
             try {
                 let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
                 let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -682,6 +686,17 @@ function changeModalType() {
         for (let i = 0; i < mModals.length; i++) {
             mModals[i].classList.remove("modal-xl");
             mModals[i].classList.add("modal-fullscreen");
+        }
+
+        let landscape = window.matchMedia("(orientation: landscape)");
+        console.log(landscape);
+        if (landscape.matches)  {
+            //console.log('matches');
+            const mModalsH = document.getElementsByClassName("mFullScreenH");
+            for (let i = 0; i < mModalsH.length; i++) {
+                mModalsH[i].classList.remove("modal-xl");
+                mModalsH[i].classList.add("modal-fullscreen");
+            }
         }
     }
 }

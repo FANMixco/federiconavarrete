@@ -53,12 +53,19 @@ function contactMeForm(e) {
         e.preventDefault();
     } catch { }
     if (document.getElementById("contactMeForm").innerHTML.trim().length == 0) {
-        document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+        document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" id="contactMeI" src="pages/contact${language.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+        iFrameHResize('contactMeI');
     }
 
     let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
     contactMe.show();
     extraContact++;
+}
+
+function iFrameHResize(id, percentage = 0.75) {
+    let landscape = window.matchMedia("(orientation: landscape)");
+    if (landscape.matches)
+        document.getElementById(id).style.height = `${document.documentElement.clientHeight * percentage}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {

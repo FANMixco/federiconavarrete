@@ -68,7 +68,7 @@ function loadTranslations() {
                 currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
                 const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
 
-                const iframePreview = getIframe(pTitle, `${currentLoc}.html?isIframe=true`, 'class="previewerIframe" allowfullscreen');
+                const iframePreview = getIframe(pTitle, `${currentLoc}.html?isIframe=true`, 'id="gPreview" allowfullscreen');
 
                 const divPreview = document.getElementById("divPreview");
 
@@ -82,6 +82,15 @@ function loadTranslations() {
                 btnFullScreen.href = `${fURL}${currentLoc}.html`;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
+
+                if (smallScreenMobileOS) {
+                    let portrait = window.matchMedia("(orientation: portrait)");
+                    if (portrait.matches)  {
+                        document.getElementById('gPreview').style.height = `${document.documentElement.clientHeight * 0.85}px`;
+                    } else {
+                        document.getElementById('gPreview').style.height = `${document.documentElement.clientHeight * 0.7}px`;
+                    }
+                }
             });
         });
 
@@ -203,6 +212,8 @@ function loadBasicInfo() {
         if (!document.getElementById('iframeElSalvador')) {
             const divIframElSalvador = document.getElementById('divIframElSalvador');
             divIframElSalvador.innerHTML += getIframe('El Salvador Map', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl', `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+
+            iFrameHResize('iframeElSalvador');
         }
     }, false);
 
@@ -228,7 +239,9 @@ function loadBasicInfo() {
         const modalPreview = document.getElementById('modal-preview');
         modalPreview.classList.add('modal-xl');
 
-        iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', ` class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+        iframeGeneric.innerHTML = getIframe('Federico Navarrete', 'https://www.youtube.com/embed/IcWZ962uYy0', `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+
+        iFrameHResize('yIframeP', 0.7);
 
         const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
         btnFullScreenPreview.href = 'https://bit.ly/3p9hMGJ';
