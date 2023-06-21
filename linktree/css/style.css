@@ -175,13 +175,6 @@
     -webkit-tap-highlight-color: transparent;
   }
   
-  @media (hover: hover) {
-    .link:hover {
-      background-color: var(--accentColor);
-      color: var(--bgColor);
-    }
-  }
-  
   .link:active {
     background-color: var(--accentColor);
     color: var(--bgColor);
@@ -333,6 +326,11 @@
   
   @media (hover: hover) {
     .popup-close:hover {
+      background-color: var(--accentColor);
+      color: var(--bgColor);
+    }
+
+    .link:hover {
       background-color: var(--accentColor);
       color: var(--bgColor);
     }
