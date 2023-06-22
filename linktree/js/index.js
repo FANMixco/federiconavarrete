@@ -23,8 +23,20 @@ if (ua && ua.length > 0) {
 }
 
 document.getElementById("popup").addEventListener("click", goBack);
-document.getElementById("popup-close").addEventListener("click", goBack);
+//document.getElementById("popup-close").addEventListener("click", goBack);
 
 function goBack() {
   history.back();
 }
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    var overlay = document.querySelector(".overlay");
+    var overlayStyles = getComputedStyle(overlay);
+    var isOverlayVisible = overlayStyles.display !== "none";
+    
+    if (isOverlayVisible) {
+      goBack();
+    }
+  }
+});
