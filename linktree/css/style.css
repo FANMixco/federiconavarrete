@@ -232,6 +232,12 @@
       transform: translateY(-2000px);
     }
   }
+
+  .link {
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: center; /* Align vertical */
+  }
   
   /*-------------------------popup------------------------*/
   /* credits: https://www.youtube.com/watch?v=lAS2glU0xlc */
