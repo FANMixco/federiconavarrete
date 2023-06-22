@@ -1,6 +1,7 @@
 [
     {
       "link": "https://federiconavarrete.com",
+      "id": "",
       "aria-label": "Personal Website",
       "title": "Personal Website",
       "target": "_blank",
@@ -9,6 +10,7 @@
     },
     {
       "link": "https://be.net/fanmixco",
+      "id": "",
       "aria-label": "Check My Portfolio",
       "title": "Check My Portfolio",
       "target": "_blank",
@@ -17,6 +19,7 @@
     },
     {
       "link": "https://spoti.fi/43hUjBU",
+      "id": "",
       "aria-label": "Spotify - Cyber Prophets Podcast",
       "title": "Listen to My Podcast Cyber Prophets",
       "target": "_blank",
@@ -25,6 +28,7 @@
     },
     {
       "link": "https://amzn.to/3zdbI0Y",
+      "id": "",
       "aria-label": "Read Timeless Stories of El Salvador",
       "title": "Read Timeless Stories of El Salvador",
       "target": "_blank",

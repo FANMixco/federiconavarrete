@@ -17,13 +17,16 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const ua = navigator.userAgent.toLowerCase().match(/android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
   // Check if the array is not null or empty
-if (ua && ua.length > 0) {
-  const uTubeLink = document.getElementById('uTubeLink');
-  uTubeLink.href = uTubeLink.href.replace('www', 'm');
-}
+document.addEventListener('DOMContentLoaded', function() {
+  if (ua && ua.length > 0) {
+    const uTubeLink = document.getElementById('uTubeLink');
+    uTubeLink.href = uTubeLink.href.replace('www', 'm');
+  }
+});
+
 
 const popup = document.getElementById("popup");
-popup.getElementById("popup").addEventListener("click", goBack);
+popup.addEventListener("click", goBack);
 popup.addEventListener("touchstart", goBack);
 document.getElementById("popup-close").addEventListener("touchstart", goBack);
 

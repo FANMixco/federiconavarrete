@@ -2,6 +2,7 @@
     {
       "link": "https://www.tiktok.com/@federicostories",
       "aria-label": "Follow me on TikTok",
+      "id": "",
       "title": "Follow me on TikTok",
       "target": "_blank",
       "icon": "icon-tiktok"
@@ -9,6 +10,7 @@
     {
       "link": "https://www.instagram.com/federico_the_consultant",
       "aria-label": "Follow me on Instagram",
+      "id": "",
       "title": "Follow me on Instagram",
       "target": "_blank",
       "icon": "icon-instagram"
@@ -16,12 +18,14 @@
     {
       "link": "https://www.linkedin.com/in/federiconavarrete",
       "aria-label": "Contact me on LinkedIn",
+      "id": "",
       "title": "Contact me on LinkedIn",
       "target": "_blank",
       "icon": "icon-linkedin"
     },
     {
       "link": "https://bit.ly/3P6wkBn",
+      "id": "",
       "aria-label": "Download Business Card",
       "title": "Download Business Card",
       "icon": "icon-vcard-o"
@@ -29,6 +33,7 @@
     {
       "link": "https://github.com/FANMixco",
       "aria-label": "Fork me on GitHub",
+      "id": "",
       "title": "Fork me on GitHub",
       "target": "_blank",
       "icon": "icon-github"
@@ -36,6 +41,7 @@
     {
       "link": "https://twitter.com/FedeStories",
       "aria-label": "Follow me on Twitter",
+      "id": "",
       "title": "Follow me on Twitter",
       "target": "_blank",
       "icon": "icon-twitter"
@@ -43,6 +49,7 @@
     {
       "link": "https://www.cognitoforms.com/FedericoNavarrete1/letsgetintouch",
       "aria-label": "Contact Me",
+      "id": "",
       "title": "Contact Me",
       "target": "_blank",
       "icon": "icon-at"
