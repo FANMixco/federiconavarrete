@@ -22,8 +22,10 @@ if (ua && ua.length > 0) {
   uTubeLink.href = uTubeLink.href.replace('www', 'm');
 }
 
-document.getElementById("popup").addEventListener("click", goBack);
-//document.getElementById("popup-close").addEventListener("click", goBack);
+const popup = document.getElementById("popup");
+popup.getElementById("popup").addEventListener("click", goBack);
+popup.addEventListener("touchstart", goBack);
+document.getElementById("popup-close").addEventListener("touchstart", goBack);
 
 function goBack() {
   history.back();
