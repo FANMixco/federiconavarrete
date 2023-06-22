@@ -100,11 +100,11 @@
     },
     "screenshots" : [
       {
-        "src": "screenshot1.webp",
+        "src": "https://federiconavarrete.com/linktree/img/preview_mobile.jpg",
         "sizes": "750x1334",
         "type": "image/jpeg",
         "platform": "narrow",
-        "label": "https://federiconavarrete.com/linktree/img/preview_mobile.jpg"
+        "label": "Homescreen in Portrait"
       },
       {
         "src": "https://federiconavarrete.com/linktree/img/preview_desktop.jpg",
