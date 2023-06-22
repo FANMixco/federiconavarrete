@@ -1,0 +1,43 @@
+[
+    {
+      "link": "https://federiconavarrete.com",
+      "aria-label": "Personal Website",
+      "title": "Personal Website",
+      "target": "_blank",
+      "icon": "icon-handshake-o",
+      "text": "Hire Me"
+    },
+    {
+      "link": "https://be.net/fanmixco",
+      "aria-label": "Check My Portfolio",
+      "title": "Check My Portfolio",
+      "target": "_blank",
+      "icon": "icon-behance",
+      "text": "Check My Portfolio"
+    },
+    {
+      "link": "https://spoti.fi/43hUjBU",
+      "aria-label": "Spotify - Cyber Prophets Podcast",
+      "title": "Listen to My Podcast Cyber Prophets",
+      "target": "_blank",
+      "icon": "icon-spotify",
+      "text": "Listen to My Podcast Cyber Prophets"
+    },
+    {
+      "link": "https://amzn.to/3zdbI0Y",
+      "aria-label": "Read Timeless Stories of El Salvador",
+      "title": "Read Timeless Stories of El Salvador",
+      "target": "_blank",
+      "icon": "icon-amazon",
+      "text": "Read Timeless Stories of El Salvador"
+    },
+    {
+      "link": "https://www.youtube.com/@FedericoNavarrete",
+      "id": "uTubeLink",
+      "aria-label": "Subscribe to my YouTube Channel",
+      "title": "Subscribe to my YouTube Channel",
+      "target": "_blank",
+      "icon": "icon-youtube",
+      "text": "Subscribe to My YouTube Channel"
+    }
+]  

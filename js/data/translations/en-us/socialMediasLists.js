@@ -10,7 +10,7 @@ const socialBasicList = {
 		{
 			"icon": "youtube",
 			"title": "YouTube Channel",
-			"link": "https://www.youtube.com/c/FedericoNavarrete",
+			"link": "https://youtube.com/@FedericoNavarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
