@@ -26,7 +26,7 @@ window.onload = function() {
 const popup = document.getElementById("popup");
 popup.addEventListener("click", goBack);
 popup.addEventListener("touchstart", goBack);
-document.getElementById("popup-close").addEventListener("touchstart", goBack);
+//document.getElementById("popup-close").addEventListener("touchstart", goBack);
 
 function goBack() {
   history.back();
