@@ -15,6 +15,19 @@ let vh = window.innerHeight * 0.01;
 // Set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+window.addEventListener('load', function () {
+  // Add a new history entry when the app is loaded
+  window.history.pushState({}, '')
+})
+
+window.addEventListener('popstate', function () {
+  // Check if the history state has an identifier
+  if (history.state && history.state.id === 'prevent-back') {
+    // Re-push the history entry when the user presses back
+    window.history.pushState({ id: 'prevent-back' }, '')
+  }
+});
+
 window.onload = function() {
   const ua = navigator.userAgent.toLowerCase().match(/android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
   if (ua && ua.length > 0) {
