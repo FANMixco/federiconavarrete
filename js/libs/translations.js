@@ -682,7 +682,7 @@ function screenResizeCardHolders() {
 }
 
 function changeModalType() {
-    let equalScreen = windowWidth == window.innerWidth;
+    let equalScreen = window.innerWidth == window.innerHeight;
     if (smallScreenMobileOS || equalScreen) {
         const mModals = document.getElementsByClassName("mFullScreen");
         for (let i = 0; i < mModals.length; i++) {
