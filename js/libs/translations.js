@@ -680,8 +680,10 @@ function screenResizeCardHolders() {
         }
     });
 }
+
 function changeModalType() {
-    if (smallScreenMobileOS) {
+    let equalScreen = windowWidth == window.innerWidth;
+    if (smallScreenMobileOS || equalScreen) {
         const mModals = document.getElementsByClassName("mFullScreen");
         for (let i = 0; i < mModals.length; i++) {
             mModals[i].classList.remove("modal-xl");
@@ -689,7 +691,7 @@ function changeModalType() {
         }
 
         let landscape = window.matchMedia("(orientation: landscape)");
-        if (landscape.matches)  {
+        if (landscape.matches || equalScreen)  {
             const mModalsH = document.getElementsByClassName("mFullScreenH");
             for (let i = 0; i < mModalsH.length; i++) {
                 mModalsH[i].classList.remove("modal-xl");
