@@ -1,7 +1,7 @@
 const articlesList = {
 	"articles": [
 		{
-			"link": `https://shorturl.at/pBCJ5`,
+			"link": `https://bit.ly/46lgLMv`,
 			"title": `¿Puede ChatGPT ser tu copiloto? (inglés)`,
 			"imgID": "chatGPT",
 			"imgBasicName": "chatGPT",

@@ -1,7 +1,7 @@
 const articlesList = {
 	"articles": [
 		{
-			"link": `https://shorturl.at/pBCJ5`,
+			"link": `https://bit.ly/46lgLMv`,
 			"title": `ChatGPT 可以成为您的副驾驶吗？`,
 			"imgID": "chatGPT",
 			"imgBasicName": "chatGPT",

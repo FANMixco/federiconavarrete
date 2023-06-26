@@ -1,14 +1,14 @@
 const newsArticlesList = {
 	"articles": [
 		{
-			"link": `https://1drv.ms/b/s!AhpAtowYvNcyj_M2_ahMVkrvljb3sQ?e=ZI9H71`,
+			"link": `https://bit.ly/442bojU`,
 			"title": `Apoyo de profesionales en el camino hacia el éxito en Lodz (páginas 22 y 23. En inglés)`,
 			"imgID": "imgNews1",
 			"imgBasicName": "news1",
 			"imgFormat": "jpg"
 		},
 		{
-			"link": `https://1drv.ms/b/s!AhpAtowYvNcyj_Mcu_Nc5bBJOHhAUA?e=Y66ESz`,
+			"link": `https://bit.ly/3NODKZ4`,
 			"title": `Dos salvadoreños destacan en concurso de la NASA`,
 			"imgID": "imgNews2",
 			"imgBasicName": "news2",
