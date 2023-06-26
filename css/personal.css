@@ -302,7 +302,7 @@ a.text-material-link-dark:active {
     }
 }
 
-@media not screen and (max-width:318px) and (orientation:portrait) {
+@media not screen and (max-width:318px) and (orientation:portrait), screen and (aspect-ratio: 1/1) {
     .card-awards,.card-services {
         min-width: 300px;
     }
@@ -313,7 +313,7 @@ a.text-material-link-dark:active {
     }
 }
 
-@media screen and (max-width:318px) and (orientation:landscape) {
+@media screen and (max-width:318px) and (orientation:landscape), screen and (aspect-ratio: 1/1) {
     #profile-div {
         margin: auto!important
     }
@@ -330,7 +330,7 @@ a.text-material-link-dark:active {
     }
 }
 
-@media screen and (max-width:318px) and (orientation:portrait) {
+@media screen and (max-width:318px) and (orientation:portrait), screen and (aspect-ratio: 1/1) {
     #mainNav, body, html {
         width: 100vw!important
     }

@@ -20,7 +20,7 @@ if (document.readyState !== "loading") {
     document.addEventListener("DOMContentLoaded", onReadyPersonal);
 }
 
-if (smallScreenMobileOS) {
+if (smallScreenMobileOS || equalScreen) {
   const imgProfile = document.getElementById('imgProfile');
   imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
 } else {

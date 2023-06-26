@@ -286,7 +286,7 @@ function loadPersonalProjects() {
         personalProjects.forEach(item => {
             let isActive = item.isActive ? " active" : "";
 
-            let hOpt = smallScreenMobileOS ? "style='font-size: larger!important'" : "";
+            let hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
 
             let pp = `${getCItem(isActive)}
                 <div class="carousel-video-inner">
@@ -577,7 +577,7 @@ function getImgPreview(img, currentReview, extraClass) {
 }
 
 function getReviewName(name, isLarge) {
-    let extraCss = smallScreenMobileOS && isLarge ? "style='font-size: larger!important'" : '';
+    let extraCss = (smallScreenMobileOS || equalScreen) && isLarge ? "style='font-size: larger!important'" : '';
     return `<p class="mt-4 mb-0 ${tCenter} h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
 }
 
@@ -682,7 +682,6 @@ function screenResizeCardHolders() {
 }
 
 function changeModalType() {
-    let equalScreen = window.innerWidth == window.innerHeight;
     if (smallScreenMobileOS || equalScreen) {
         const mModals = document.getElementsByClassName("mFullScreen");
         for (let i = 0; i < mModals.length; i++) {

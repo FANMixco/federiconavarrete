@@ -85,25 +85,19 @@ function loadTranslations() {
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
-                if (smallScreenMobileOS) {
+                let gPreview = document.getElementById('gPreview');
+                let hPreviewHeight = '450px'; 
+                if (smallScreenMobileOS || equalScreen) {
                     let portrait = window.matchMedia("(orientation: portrait)");
-                    if (portrait.matches)  {
-                        document.getElementById('gPreview').style.height = `${document.documentElement.clientHeight * 0.85}px`;
-                    } else {
-                        document.getElementById('gPreview').style.height = `${document.documentElement.clientHeight * 0.7}px`;
-                    }
-                } else {
-                    document.getElementById('gPreview').style.height = `450px`;
+                    let height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
+                    hPreviewHeight = `${height}px`;
                 }
+                gPreview.style.height = hPreviewHeight;
             });
         });
 
         const spanMenu = document.getElementById('spanMenu');
-        if (!smallScreenMobileOS) {
-            spanMenu.innerHTML = getHMenu();
-        } else {
-            spanMenu.innerHTML = getHMenu('style="margin-top:0px!important"');
-        }
+        spanMenu.innerHTML = (!(smallScreenMobileOS || equalScreen)) ? getHMenu() : getHMenu('style="margin-top:0px!important"');
         
         return true;
     }
@@ -154,7 +148,7 @@ function loadBasicInfo() {
         const detectScreenSize = window.matchMedia('screen and (max-width: 318px) and (orientation: portrait)');
 
         function resizeTitleName(detectScreenSize) {
-            if (detectScreenSize.matches) {
+            if (detectScreenSize.matches || equalScreen) {
                 // Media query matches
                 let sName = name.split(' ');
                 linkName.innerHTML = Array.from(sName[0])[0] + '. ' + sName[1];

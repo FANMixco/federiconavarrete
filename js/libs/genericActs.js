@@ -28,6 +28,7 @@ const deviceType = () => {
 };
 
 const smallScreenMobileOS = deviceType() === "Smartphone";
+const equalScreen = window.innerWidth == window.innerHeight;
 
 function hFixCMenu() {
     setTimeout(function() {
@@ -64,7 +65,9 @@ function contactMeForm(e) {
 
 function iFrameHResize(id, percentage = 0.7) {
     let landscape = window.matchMedia("(orientation: landscape)");
-    if (landscape.matches)
+    if (equalScreen)
+        document.getElementById(id).style.height = `${document.documentElement.clientHeight * 0.7}px`;
+    else if (landscape.matches)
         document.getElementById(id).style.height = `${document.documentElement.clientHeight * percentage}px`;
 }
 
