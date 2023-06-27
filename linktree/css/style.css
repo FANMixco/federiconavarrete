@@ -352,7 +352,7 @@
     color: var(--bgColor);
   }
 
-  @media screen and (orientation: landscape) and (max-device-height: 480px) and (pointer: coarse) and (hover: none) {  
+  @media screen and (orientation: landscape) and (max-device-height: 480px) and (pointer: coarse) and (hover: none), screen and (aspect-ratio: 1/1) {  
     .popup-photo {
       height: 100%;
       text-align: center;
@@ -389,6 +389,13 @@
       transform: scale(0);
       transition: 0.5s ease-in-out;
     }
+  }
+
+  @media screen and (aspect-ratio: 1/1) {
+    .popup-close {
+      background-color: var(--bgColor);
+      color: var(--accentColor);
+    }    
   }
   
   /*-----------------------parallax-----------------------*/
