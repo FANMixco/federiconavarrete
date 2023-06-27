@@ -145,7 +145,7 @@ function loadBasicInfo() {
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;
 
-        const detectScreenSize = window.matchMedia('screen and (max-width: 318px) and (orientation: portrait)');
+        const detectScreenSize = window.matchMedia('screen and (max-width: 320px) and (orientation: portrait)');
 
         function resizeTitleName(detectScreenSize) {
             if (detectScreenSize.matches || equalScreen) {
