@@ -6,6 +6,12 @@ const langLoc = "js/data/";
 
 lang = (language.includes('es')) ? "es" : lang;
 
+var validLang = ['en', 'es'];
+
+if (validLang.indexOf(lang) === -1) { 
+    addTranslateElement();
+}
+
 async function fetchData(url) {
     try {
         const response = await fetch(url);
@@ -13,6 +19,25 @@ async function fetchData(url) {
     } catch (error) {
         console.error('Error loading JSON:', error);
     }
+}
+
+function addTranslateElement() {
+    const script = document.createElement('script');
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.id = 'g_translate';
+    document.body.appendChild(script);
+    setTimeout(() => { 
+        const targetDiv = document.getElementById('userName');
+        const newDiv = document.createElement('div');
+
+        newDiv.setAttribute('id', 'google_translate_element');
+
+        targetDiv.insertAdjacentElement('afterend', newDiv);
+
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,pl,pt,zh-CN', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        
+        newDiv.style.textAlign = 'center';
+    }, 1000);
 }
 
 function createLink(item, className) {
