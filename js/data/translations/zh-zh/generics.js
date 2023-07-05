@@ -6,6 +6,7 @@ const genericTranslations = {
     "readMore": "阅读更多信息",
     "close": "阅读更多信息",
     "download": "下载",
+    "discover": "发现🗺️",
     "about": "关于",
     "skills": "发现我的技能",
     "checkThem": "检查他们！",
