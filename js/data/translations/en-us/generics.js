@@ -6,7 +6,7 @@ const genericTranslations = {
     "readMore": "Read more",
     "close": "Close",
     "download": "Download",
-    "discover": "Discover 🗺️",
+    "discover": "Discover 🗺️!",
     "about": "About",
     "skills": "Discover My Skills",
     "checkThem": "Unleash them!",
