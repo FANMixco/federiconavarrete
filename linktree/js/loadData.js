@@ -1,4 +1,4 @@
-let language = window.navigator.userLanguage || window.navigator.language;
+const language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en";
 let currentLoc = '';
 
@@ -6,9 +6,9 @@ const langLoc = "js/data/";
 
 lang = (language.includes('es')) ? "es" : lang;
 
-var validLang = ['en', 'es'];
+const validLang = ['en', 'es'];
 
-if (validLang.indexOf(lang) === -1) { 
+if (validLang.indexOf(lang) === -1) {
     addTranslateElement();
 }
 

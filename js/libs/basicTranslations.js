@@ -1,10 +1,12 @@
 var tErr1;
 
-let language = window.navigator.userLanguage || window.navigator.language;
+const language = window.navigator.userLanguage || window.navigator.language;
 let lang = "en-us/min";
 let currentLoc = '';
 
 const langLoc = "js/data/translations/";
+
+const validLang = ['en', 'es', 'zh'];
 
 lang = (language.includes('es')) ? "es-sv/min": (language.includes('zh')) ? 'zh-zh/min' : lang;
 
