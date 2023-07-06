@@ -424,3 +424,7 @@ a.text-material-link-dark:active {
 #review2PDF {
     height: 450px;
 }
+
+.fancy {
+    text-shadow: 0 0 0.1em #fff, 0 0 0.3em #fe05e1, 0 0 0.4em #fe05e1;
+}
