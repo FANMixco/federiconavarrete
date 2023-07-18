@@ -18,6 +18,15 @@
       "text": "Mira Mi Portafolio"
     },
     {
+      "link": "https://amzn.to/3zdbI0Y",
+      "aria-label": "Lee Timeless Stories of El Salvador",
+      "id": "priority",
+      "title": "Lee Timeless Stories of El Salvador",
+      "target": "_blank",
+      "icon": "icon-amazon",
+      "text": "Lee Timeless Stories of El Salvador"
+    },
+    {
       "link": "https://spoti.fi/43hUjBU",
       "aria-label": "Spotify - Cyber Prophets Podcast",
       "id": "",
@@ -25,15 +34,6 @@
       "target": "_blank",
       "icon": "icon-spotify",
       "text": "Escucha Mi Podcast Cyber Prophets"
-    },
-    {
-      "link": "https://amzn.to/3zdbI0Y",
-      "aria-label": "Lee Timeless Stories of El Salvador",
-      "id": "",
-      "title": "Lee Timeless Stories of El Salvador",
-      "target": "_blank",
-      "icon": "icon-amazon",
-      "text": "Lee Timeless Stories of El Salvador"
     },
     {
       "link": "https://www.youtube.com/@FedericoNavarrete",
