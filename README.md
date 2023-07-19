@@ -2,6 +2,10 @@
 
 [![preview][1]][1]
 
+Get a copy of my **folkloric books**, **Timeless Stories of El Salvador**:
+
+[![Timeless Stories of El Salvador](https://federiconavarrete.com/img/mybook/second_small.png)](https://a.co/d/asfWClh).
+
 ## My Recommended Books:
 
 |Business|Personal Branding|Life and Discovery|Climate Change|Literature|IT|
@@ -20,7 +24,7 @@
 
 Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE) license.
 
-  [1]: https://i.stack.imgur.com/GweU8.jpg
+  [1]: https://i.stack.imgur.com/ucQSG.jpg
   [9]: https://federiconavarrete.com/img/books/en/moves.jpg
   [10]: https://federiconavarrete.com/img/books/en/linkedin.jpg
   [11]: https://federiconavarrete.com/img/books/en/WF.jpg
