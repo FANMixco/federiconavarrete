@@ -8,7 +8,7 @@ let tabsOptions = [
 	},
 	{
 		id: "windows",
-		name: "Windows 10+",
+		name: "Windows 11",
 		isVisible: true,
 		isActive: false,
 		order: 2
@@ -120,7 +120,7 @@ let panesOptions =[
 					},
 					{
 						id: "uwpLibStore",
-						subTitle: `<i class="fab fa-windows"></i> Windows 10`
+						subTitle: `<i class="fab fa-microsoft"></i> Windows 11`
 					}
 				]
 			}
