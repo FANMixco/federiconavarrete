@@ -4,7 +4,7 @@
 
 Get a copy of my **folkloric books**, **Timeless Stories of El Salvador**:
 
-[![Timeless Stories of El Salvador](https://federiconavarrete.com/img/mybook/second_small.png)](https://a.co/d/asfWClh).
+[![Timeless Stories of El Salvador](https://federiconavarrete.com/img/mybook/second_small.png)](https://a.co/d/asfWClh)
 
 ## My Recommended Books:
 
