@@ -87,8 +87,8 @@ fetchData(`${langLoc}${lang}/links.json`)
     const linksContainer = document.getElementById('links');
 
     data.forEach(item => {
-    const link = createLink(item, 'link');
-    const text = createTextElement(`&ensp;${item.text}`);
+        const link = createLink(item, 'link');
+        const text = createTextElement(`&ensp;${item.text}`);
         link.appendChild(text);
         linksContainer.appendChild(link);
     });
