@@ -5,11 +5,16 @@ const shareIcon = document.getElementById('share-icon');
 // Check if the Web Share API is supported by the browser
 if (navigator.share) { 
   // Check if the user agent string indicates macOS or iOS
-  const matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
+  const matchesMacOS = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
+  // Check if the user agent string indicates Windows
+  const matchesWindows = navigator.userAgent.match(/Windows/g);
   // Check if the array is not null or empty
-  if (matches && matches.length > 0) {
+  if (matchesMacOS && matches.length > 0) {
     shareIcon.classList.remove('icon-share-alt');
     shareIcon.classList.add('icon-ios_share');
+  } else if (matchesWindows && matchesWindows.length > 0) {
+    shareIcon.classList.remove('icon-share-alt');
+    shareIcon.classList.add('icon-share_windows');
   }
 } else {
   shareLink.style.display = 'none';

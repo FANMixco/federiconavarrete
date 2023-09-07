@@ -57,7 +57,7 @@ const socialOthersList = {
 		},
 		{
 			"icon": "twitter",
-			"title": "Twitter",
+			"title": "X",
 			"link": "https://twitter.com/FedeStories",
 			"isIcon": false,
 			"externalClass": "iconFooter"

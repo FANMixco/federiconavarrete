@@ -42,7 +42,13 @@ popup.addEventListener("touchstart", goBack);
 //document.getElementById("popup-close").addEventListener("touchstart", goBack);
 
 function goBack() {
-  history.back();
+  if (document.referrer === "" || new URL(document.referrer).hostname !== window.location.hostname) {
+    const currentURL = window.location.href;
+    const baseUrl = currentURL.split('/').slice(0, -1).join('/');
+    window.location.href = `${baseUrl}/index.html`; // Replace with the appropriate URL of your index page
+  } else {
+    history.back();
+  }
 }
 
 document.addEventListener("keydown", function(event) {

@@ -40,7 +40,7 @@ function addTranslateElement() {
     }, 1000);
 }
 
-function createLink(item, className) {
+function createLink(item, className, addIcon = true) {
     const link = document.createElement('a');
     link.classList.add(className);
     link.href = item.link;
@@ -52,11 +52,18 @@ function createLink(item, className) {
         link.target = item.target;
     }
 
+    if (addIcon) {
+        createIcon(item, link);
+    }
+
+    return link;
+}
+
+function createIcon(item, loc) {
     const icon = document.createElement('i');
     icon.classList.add(item.icon);
 
-    link.appendChild(icon);
-    return link;
+    loc.appendChild(icon);
 }
 
 function createTextElement(text) {
@@ -87,9 +94,49 @@ fetchData(`${langLoc}${lang}/links.json`)
     const linksContainer = document.getElementById('links');
 
     data.forEach(item => {
-        const link = createLink(item, 'link');
-        const text = createTextElement(`&ensp;${item.text}`);
-        link.appendChild(text);
+        const link = createLink(item, 'link', false);
+
+        // Create a container div
+        const container = document.createElement("div");
+        // Set the container style
+        container.style.width = "100%";
+        container.style.display = "flex";
+        container.style.justifyContent = "space-between";
+        container.style.alignItems = "center";
+        // Append the container to the body
+        link.appendChild(container);
+        
+        // Loop through the colors and create divs
+        for (let i = 0; i < 3; i++) {
+            // Create a div element
+            const div = document.createElement("div");
+            // Set the div style
+            if (i == 0 || i == 2) {
+                //const btnShare = document.createElement('a');
+                //btnShare.classList.add('sub-link');
+                //btnShare.href = "https://google.com";
+
+                // Set the width to 40px for the first and last divs
+                div.style.width = "40px";
+
+                /*if (i == 2) {
+                    btnShare.text = '...';
+                    div.appendChild(btnShare);
+                }*/
+            } else {
+                // Set the width to auto for the middle div
+                div.style.width = "auto";
+                // Set the flex-grow property to 1 to make it fill the remaining space
+                div.style.flexGrow = "1";
+                const text = createTextElement(`&ensp;${item.text}`);
+
+                createIcon(item, div);
+                div.appendChild(text);
+            }
+            //div.style.backgroundColor = colors[i];
+            // Append the div to the container
+            container.appendChild(div);
+        }
         linksContainer.appendChild(link);
     });
 });

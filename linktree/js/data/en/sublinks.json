@@ -40,9 +40,9 @@
     },
     {
       "link": "https://twitter.com/FedeStories",
-      "aria-label": "Follow me on Twitter",
+      "aria-label": "Follow me on X",
       "id": "",
-      "title": "Follow me on Twitter",
+      "title": "Follow me on X",
       "target": "_blank",
       "icon": "icon-twitter"
     },
