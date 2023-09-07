@@ -117,10 +117,13 @@ fetchData(`${langLoc}${lang}/links.json`)
                 //btnShare.href = "https://google.com";
 
                 // Set the width to 40px for the first and last divs
-                div.style.width = "40px";
+                div.style.width = "0px";
 
                 /*if (i == 2) {
-                    btnShare.text = '...';
+                    const icon = document.createElement('i');
+                    icon.classList.add('icon-ellipsis');
+
+                    btnShare.appendChild(icon);
                     div.appendChild(btnShare);
                 }*/
             } else {
