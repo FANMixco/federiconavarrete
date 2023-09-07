@@ -129,6 +129,7 @@ fetchData(`${langLoc}${lang}/links.json`)
             } else {
                 // Set the width to auto for the middle div
                 div.style.width = "auto";
+                div.classList.add('link-center');
                 // Set the flex-grow property to 1 to make it fill the remaining space
                 div.style.flexGrow = "1";
                 const text = createTextElement(`&ensp;${item.text}`);
