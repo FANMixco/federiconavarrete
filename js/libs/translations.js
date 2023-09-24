@@ -652,8 +652,11 @@ function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false, t
 function getBtnShare() {
     let icon = 'share-android-svgrepo-com';
     const matches = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
+    const matchesWindows = navigator.userAgent.match(/Windows/g);
     if (matches && matches.length > 0) { 
         icon = 'share-ios-export-svgrepo-com';
+    } else if (matchesWindows && matchesWindows.length > 0) {
+        icon = 'share-windows-svgrepo-com';
     }
 
     return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title='${genericTranslations.share}' alt='${genericTranslations.share}'`));
