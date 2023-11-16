@@ -9,6 +9,15 @@
       "text": "Hire Me"
     },
     {
+      "link": "https://bit.ly/47hmCm1",
+      "id": "",
+      "aria-label": "Meet Me (15”)",
+      "title": "Meet Me (15”)",
+      "target": "_blank",
+      "icon": "icon-calendar-check-o",
+      "text": "Meet Me (15”)"
+    },
+    {
       "link": "https://be.net/fanmixco",
       "id": "",
       "aria-label": "Check My Portfolio",
@@ -18,7 +27,7 @@
       "text": "Check My Portfolio"
     },
     {
-      "link": "https://amzn.to/3zdbI0Y",
+      "link": "https://a.co/d/4l5qaLk",
       "id": "priority",
       "aria-label": "Read Timeless Stories of El Salvador",
       "title": "Read Timeless Stories of El Salvador",
@@ -43,5 +52,14 @@
       "target": "_blank",
       "icon": "icon-youtube",
       "text": "Subscribe to My YouTube Channel"
+    },
+    {
+      "link": "https://apple.co/3NfRDhz",
+      "id": "",
+      "aria-label": "Sharing Your Stories Podcast",
+      "title": "Discover Sharing Your Stories Podcast",
+      "target": "_blank",
+      "icon": "icon-podcast",
+      "text": "Discover Sharing Your Stories Podcast"
     }
 ]  

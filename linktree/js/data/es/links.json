@@ -9,6 +9,15 @@
       "text": "Contrátame"
     },
     {
+      "link": "https://bit.ly/47hmCm1",
+      "id": "",
+      "aria-label": "Hablemos (15”)",
+      "title": "Hablemos (15”)",
+      "target": "_blank",
+      "icon": "icon-calendar-check-o",
+      "text": "Hablemos (15”)"
+    },
+    {
       "link": "https://be.net/fanmixco",
       "aria-label": "Mira Mi Portafolio",
       "id": "",
@@ -18,22 +27,22 @@
       "text": "Mira Mi Portafolio"
     },
     {
-      "link": "https://amzn.to/3zdbI0Y",
-      "aria-label": "Lee Timeless Stories of El Salvador",
+      "link": "https://a.co/d/9Mqyp4j",
+      "aria-label": "Lee Historias Eternas de El Salvador",
       "id": "priority",
-      "title": "Lee Timeless Stories of El Salvador",
+      "title": "Lee Historias Eternas de El Salvador",
       "target": "_blank",
       "icon": "icon-amazon",
-      "text": "Lee Timeless Stories of El Salvador"
+      "text": "Lee Historias Eternas de El Salvador"
     },
     {
       "link": "https://spoti.fi/43hUjBU",
-      "aria-label": "Spotify - Cyber Prophets Podcast",
+      "aria-label": "Spotify - Cyber Prophets Podcast (inglés)",
       "id": "",
-      "title": "Escucha Mi Podcast Cyber Prophets",
+      "title": "Escucha Mi Podcast Cyber Prophets (inglés)",
       "target": "_blank",
       "icon": "icon-spotify",
-      "text": "Escucha Mi Podcast Cyber Prophets"
+      "text": "Escucha Mi Podcast Cyber Prophets (inglés)"
     },
     {
       "link": "https://www.youtube.com/@FedericoNavarrete",
@@ -43,5 +52,14 @@
       "target": "_blank",
       "icon": "icon-youtube",
       "text": "Suscríbete a mi canal de YouTube"
+    },
+    {
+      "link": "https://apple.co/3NfRDhz",
+      "id": "",
+      "aria-label": "Sharing Your Stories Podcast (inglés)",
+      "title": "Descubre Sharing Your Stories Podcast (inglés)",
+      "target": "_blank",
+      "icon": "icon-podcast",
+      "text": "Descubre Sharing Your Stories Podcast (inglés)"
     }
 ]  
