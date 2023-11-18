@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?3d2c91');
-  src:  url('fonts/icomoon.eot?3d2c91#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?3d2c91') format('truetype'),
-    url('fonts/icomoon.woff?3d2c91') format('woff'),
-    url('fonts/icomoon.svg?3d2c91#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?btom7l');
+  src:  url('fonts/icomoon.eot?btom7l#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?btom7l') format('truetype'),
+    url('fonts/icomoon.woff?btom7l') format('woff'),
+    url('fonts/icomoon.svg?btom7l#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ios_share:before {
+  content: "\e907";
+}
 .icon-at:before {
   content: "\e900";
 }
 .icon-email:before {
   content: "\e900";
+}
+.icon-share_windows:before {
+  content: "\ea7d";
 }
 .icon-amazon:before {
   content: "\ea87";
@@ -51,6 +57,9 @@
 }
 .icon-linkedin:before {
   content: "\eaca";
+}
+.icon-share-alt:before {
+  content: "\e908";
 }
 .icon-handshake-o:before {
   content: "\e906";
