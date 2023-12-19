@@ -6,14 +6,14 @@ const techSkills = [
 		'<a href="https://fanmixco.github.io/rpaBestPractices/" target="_blank" class="text-warning text-decoration-none" rel="noreferrer">RPA</a> — UiPath y Automation Anywhere'
 	],
 	[
-		'Angular 12+',
+		'Angular 17+',
 		'Open AI API / ChatGPT',
 		'C# y .NET Core',
 	],
 	[
 		'Arquitectura en la Nube (AWS)',
 		'Desarrollo en la Nube / Móvil / Web',
-		"Xamarin.Android"
+		"Xamarin.Android y MAUI"
 	]
 ];
 

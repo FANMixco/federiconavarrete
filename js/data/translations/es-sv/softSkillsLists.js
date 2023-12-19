@@ -1,16 +1,16 @@
 //soft-skills front
 const softSkills = [
 	[
-		"Narrativa (storytelling)",
-		"Diseño de presentaciones"
+		"Gestión de proyectos",
+		"Tutoría y Entrenamiento"
 	],
 	[
-		"Gestión de proyectos",
-		"Consultoría informática"
+		"Consultoría y estrategia TI",
+		"Investigación en tecnologías emergentes",
 	],
 	[
 		"Liderazgo",
-		"Formación de empleados"
+		"Narrativa (storytelling) y Discursos elevadores"
 	]
 ];
 
@@ -19,16 +19,16 @@ const softSkillsOthers = [
 	[
 		"Organización de eventos",
 		"Escritura creativa",
-		"Discursos elevadores"
+		"Inteligencia cultural"
 	],
 	[
-		"Recopilación de requisitos",
+		"Recolección de requisitos",
 		"Planificación innovadora",
-		"Análisis comercial"
+		"Análisis de negocios"
 	],
 	[
-		"Investigación de tecnologías emergentes",
-		"Mentoría y entrenamiento (coaching)",
+		"Diseño de presentación",
+		"Formación de los empleados",
 		"Formación de equipos"
 	]
 ];
