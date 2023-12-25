@@ -1,19 +1,19 @@
+const popup = document.getElementById("popup");
+popup.addEventListener("click", goBack);
+popup.addEventListener("touchstart", goBack);
+//document.getElementById("popup-close").addEventListener("touchstart", goBack);
+
 if (window.location.hash) {
   let urlWithoutHash = window.location.href.split('#')[0];
   window.location.href = urlWithoutHash;
 }
 
 window.addEventListener('load', function() {
-    var imgPopups = document.getElementsByClassName('imgPopup');
-    for (var i = 0; i < imgPopups.length; i++) {
+    let imgPopups = document.getElementsByClassName('imgPopup');
+    for (let i = 0; i < imgPopups.length; i++) {
       imgPopups[i].style.display = 'block';
     }
 });
-
-// Get the viewport height and multiply it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('load', function () {
   // Add a new history entry when the app is loaded
@@ -29,17 +29,39 @@ window.addEventListener('popstate', function () {
 });
 
 window.onload = function() {
-  const ua = navigator.userAgent.toLowerCase().match(/android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
+  const ua = navigator.userAgent.toLowerCase().match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch|android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
+
   if (ua && ua.length > 0) {
     const uTubeLink = document.getElementById('uTubeLink');
     uTubeLink.href = uTubeLink.href.replace('www', 'm');
+
+    // Get the viewport height and multiply it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  const uaWatches = navigator.userAgent.toLowerCase().match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch/g);
+
+  if (uaWatches && uaWatches.length > 0 || isSquareScreen()) { 
+    popup.style.height = `${window.screen.height}px`;
   }
 };
 
-const popup = document.getElementById("popup");
-popup.addEventListener("click", goBack);
-popup.addEventListener("touchstart", goBack);
-//document.getElementById("popup-close").addEventListener("touchstart", goBack);
+function isSquareScreen() {
+  // Get the screen width and height in pixels
+  let screenWidth = window.screen.width;
+  let screenHeight = window.screen.height;
+
+  // Calculate the difference between width and height
+  let diff = Math.abs(screenWidth - screenHeight);
+
+  // Define a threshold for the difference (you can adjust this value)
+  const threshold = 10;
+
+  // Return true if the difference is less than or equal to the threshold, false otherwise
+  return diff <= threshold;
+}
 
 function goBack() {
   if (document.referrer === "" || new URL(document.referrer).hostname !== window.location.hostname) {
@@ -53,9 +75,9 @@ function goBack() {
 
 document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") {
-    var overlay = document.querySelector(".overlay");
-    var overlayStyles = getComputedStyle(overlay);
-    var isOverlayVisible = overlayStyles.display !== "none";
+    let overlay = document.querySelector(".overlay");
+    let overlayStyles = getComputedStyle(overlay);
+    let isOverlayVisible = overlayStyles.display !== "none";
     
     if (isOverlayVisible) {
       goBack();

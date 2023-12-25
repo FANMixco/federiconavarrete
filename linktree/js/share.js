@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check if the Web Share API is supported by the browser
   if (navigator.share) { 
     // Check if the user agent string indicates macOS or iOS
-    const matchesMacOS = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod/g);
+    const matchesMacOS = navigator.userAgent.match(/Macintosh|MacIntel|iPad|iPhone|iPod|Watch/g);
     // Check if the user agent string indicates Windows
     const matchesWindows = navigator.userAgent.match(/Windows/g);
     // Check if the array is not null or empty
