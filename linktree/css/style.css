@@ -335,6 +335,10 @@
     /* right: 0; */
     /* transform: rotate(0); */
   }
+
+  body.no-scroll {
+    overflow: hidden; /* Set overflow: hidden for the body when the overlay is targeted */
+  }
   
   .popup-close {
     position: absolute;

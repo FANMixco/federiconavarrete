@@ -75,12 +75,28 @@ function goBack() {
 
 document.addEventListener("keydown", function(event) {
   if (event.key === "Escape") {
-    let overlay = document.querySelector(".overlay");
-    let overlayStyles = getComputedStyle(overlay);
-    let isOverlayVisible = overlayStyles.display !== "none";
+    const overlay = document.querySelector(".overlay");
+    const overlayStyles = getComputedStyle(overlay);
+    const isOverlayVisible = overlayStyles.display !== "none";
     
     if (isOverlayVisible) {
       goBack();
     }
   }
+});
+
+// JavaScript to handle body overflow
+document.addEventListener('DOMContentLoaded', function () {
+  const overlayTmp = document.querySelector('.overlay');
+
+  // Function to toggle body class when overlay is targeted
+  function toggleBodyOverflow() {
+    document.body.classList.toggle('no-scroll', overlayTmp.matches(':target'));
+  }
+
+  // Event listener for hash change (when overlay is targeted)
+  window.addEventListener('hashchange', toggleBodyOverflow);
+
+  // Initial check in case there's an initial target
+  toggleBodyOverflow();
 });
