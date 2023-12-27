@@ -31,7 +31,7 @@ window.addEventListener('popstate', function () {
 window.onload = function() {
   const ua = navigator.userAgent.toLowerCase().match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch|android|iphone|ipod|kaios|tizen|harmonyos|bdos/g);
 
-  if (ua && ua.length > 0) {
+  if (ua) {
     const uTubeLink = document.getElementById('uTubeLink');
     uTubeLink.href = uTubeLink.href.replace('www', 'm');
 
@@ -43,7 +43,7 @@ window.onload = function() {
 
   const uaWatches = navigator.userAgent.toLowerCase().match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch/g);
 
-  if (uaWatches && uaWatches.length > 0 || isSquareScreen()) { 
+  if (uaWatches || isSquareScreen()) { 
     popup.style.height = `${window.screen.height}px`;
   }
 };
