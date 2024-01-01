@@ -45,7 +45,7 @@ Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://g
 
 ![logo](https://raw.githubusercontent.com/FANMixco/federiconavarrete/master/img/favicons/favicon.png)
 
-> Like a Phoenix, rise stronger from the ashes every time.
+> Like a Phoenix, rise stronger from your ashes every time.
 
 
 ## Follow me on
