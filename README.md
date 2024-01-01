@@ -41,7 +41,7 @@ Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://g
   [22]: https://federiconavarrete.com/img/books/en/principles.jpg
   [23]: https://federiconavarrete.com/img/books/en/ai.jpg
 
-##
+### All Rights Reserved, Federico Navarrete
 
 ![logo](https://raw.githubusercontent.com/FANMixco/federiconavarrete/master/img/favicons/favicon.png)
 
