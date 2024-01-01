@@ -52,5 +52,5 @@ const genericTranslations = {
     "knowMoreBody": "Here you can check Federico Navarrete’s official websites: https://federiconavarrete.com",
     "share": "Share",
     "extras": "Extras",
-    "quote": "Like the Phoenix, Rise from YOUR ashes stronger each time."
+    "quote": "Like the Phoenix, Rise from YOUR ashes stronger every time."
 };
