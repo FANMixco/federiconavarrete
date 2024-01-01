@@ -40,3 +40,9 @@ Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://g
   [21]: https://federiconavarrete.com/img/books/en/monk.jpg
   [22]: https://federiconavarrete.com/img/books/en/principles.jpg
   [23]: https://federiconavarrete.com/img/books/en/ai.jpg
+
+##
+
+![logo](https://raw.githubusercontent.com/FANMixco/federiconavarrete/master/img/favicons/favicon.png)
+
+> Like a Phoenix, rise from the ashes stronger every time.
