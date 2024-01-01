@@ -50,6 +50,7 @@ const genericTranslations = {
     "winning": "赢得电梯广告",
     "knowMoreTitle": "认识 Federico Navarrete！",
     "knowMoreBody": "在这里您可以查看 Federico Navarrete 的官方网站：https://federiconavarrete.com",
-    "分享": "分享",
-    "额外": "额外"
+    "share": "分享",
+    "extras": "额外",
+    "quote": "Just like a phoenix, it rises from the ashes and becomes stronger every time."
 };
