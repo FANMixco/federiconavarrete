@@ -53,5 +53,5 @@ const genericTranslations = {
     "share": "Share",
     "extras": "Extras",
     "quote": "Like a Phoenix, Rise stronger from YOUR ashes every time.",
-    "asSeen": "As seen as in"
+    "asSeen": "As seen in"
 };
