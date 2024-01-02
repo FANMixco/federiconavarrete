@@ -52,5 +52,6 @@ const genericTranslations = {
     "knowMoreBody": "Aquí puedes consultar las webs oficiales de Federico Navarrete: https://federiconavarrete.com",
     "share": "Comparte",
     "extras": "Extras",
-    "quote": "Como el Fénix, resurge de TUS cenizas cada vez más fuerte."
+    "quote": "Como un Fénix, resurge de TUS cenizas cada vez más fuerte.",
+    "asSeen": "Tal como se vio en"
 };

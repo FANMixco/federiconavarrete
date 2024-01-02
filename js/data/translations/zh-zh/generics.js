@@ -52,5 +52,6 @@ const genericTranslations = {
     "knowMoreBody": "在这里您可以查看 Federico Navarrete 的官方网站：https://federiconavarrete.com",
     "share": "分享",
     "extras": "额外",
-    "quote": "Just like a phoenix, it rises from the ashes and becomes stronger every time."
+    "quote": "就像凤凰一样，每次都从灰烬中涅槃重生。",
+    "asSeen": "正如所见"
 };
