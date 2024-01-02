@@ -13,7 +13,7 @@
   }
   
   .clients img {
-    max-height: 5rem!important;
+    max-height: 80px!important;
     filter: grayscale(100);
     transition: all 0.4s ease-in-out;
     display: inline-block;
