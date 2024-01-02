@@ -112,7 +112,7 @@ function loadBasicInfo() {
     try {
         const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype, company } = basicInfo;
 
-        const linkName = document.getElementById('linkName');
+        //const linkName = document.getElementById('linkName');
         const hName = document.getElementById('hName');
         const hHeadline = document.getElementById('hHeadline');
         const hIntro = document.getElementById('hIntro');
@@ -142,14 +142,14 @@ function loadBasicInfo() {
             });
         });
         
-        linkName.innerHTML = name;
+        //linkName.innerHTML = name;
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;
 
         const detectScreenSize = window.matchMedia('screen and (max-width: 320px) and (orientation: portrait)');
 
-        function resizeTitleName(detectScreenSize) {
+        /*function resizeTitleName(detectScreenSize) {
             if (detectScreenSize.matches || equalScreen) {
                 // Media query matches
                 let sName = name.split(' ');
@@ -163,7 +163,7 @@ function loadBasicInfo() {
         resizeTitleName(detectScreenSize);
         
         // Add listener for changes to the media query
-        detectScreenSize.addEventListener('change', resizeTitleName);    
+        detectScreenSize.addEventListener('change', resizeTitleName);*/  
 
         aboutDesc.forEach(item => {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;

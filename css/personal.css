@@ -428,3 +428,22 @@ a.text-material-link-dark:active {
 .fancy {
     text-shadow: 0 0 0.1em #fff, 0 0 0.3em #fe05e1, 0 0 0.4em #fe05e1;
 }
+
+/* Default style for all devices */
+#navBarImg {
+    max-width: 160px;
+}
+
+/* Tablet styles (up to 767px width) */
+@media only screen and (max-width: 767px) {
+    #navBarImg {
+        max-width: 160px;
+    }
+}
+
+/* Mobile styles (up to 479px width) */
+@media only screen and (max-width: 479px) {
+    #navBarImg {
+        max-width: 128px;
+    }
+}
