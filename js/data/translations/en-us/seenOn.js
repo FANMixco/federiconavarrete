@@ -20,9 +20,9 @@ const seenOnList = {
                 "label": "Download link"
 			},
 			{ 
-				"title": "SpaceApps Challenge - NASA",
-				"link": "https://shorturl.at/klvwM",
-				"image": "contest-4",
+				"title": "Samsung Dev Spain",
+				"link": "https://shorturl.at/nsM56",
+				"image": "contest-10",
                 "label": "Read more"
 			},
 			{ 
@@ -36,6 +36,30 @@ const seenOnList = {
 				"link": "https://shorturl.at/alnL2",
 				"image": "contest-8",
                 "label": "Read more"
+			},
+			{ 
+				"title": "SpaceApps Challenge - NASA",
+				"link": "https://shorturl.at/klvwM",
+				"image": "contest-4",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Imagine Cup",
+				"link": "https://shorturl.at/atHLU",
+				"image": "contest-7",
+                "label": "Read more"
+			},
+			{ 
+				"title": "SwitchUp Challenge",
+				"link": "https://shorturl.at/cvZ28",
+				"image": "contest-3",
+                "label": "Read more"
+			},
+			{ 
+				"title": "TIC Americas",
+				"link": "https://shorturl.at/coxy4",
+				"image": "contest-6",
+                "label": "Download link"
 			}
     ]
 };
