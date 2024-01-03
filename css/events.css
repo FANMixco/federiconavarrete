@@ -3,7 +3,7 @@ body {
 }
 
 .carousel-item img {
-    max-height: 80px!important;
+    height: 80px!important;
     filter: grayscale(100);
     transition: all 0.4s ease-in-out;
     display: inline-block;
