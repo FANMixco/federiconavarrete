@@ -22,6 +22,10 @@ iframe {
     transform: scale(90%)
 }
 
+#eventsIframe {
+    width: 100%;
+}
+
 #imgProfile {
     max-width: 300px;
     border-radius: 50%

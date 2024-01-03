@@ -36,6 +36,18 @@ const seenOnList = {
 				"link": "https://shorturl.at/alnL2",
 				"image": "contest-8",
                 "label": "Leer más"
+			},
+			{ 
+				"title": "Career Show",
+				"link": "https://shorturl.at/alnL2",
+				"image": "contest-8",
+                "label": "Leer más"
+			},
+			{ 
+				"title": "Career Show",
+				"link": "https://shorturl.at/coxy4",
+				"image": "contest-6",
+                "label": "Leer más"
 			}
 		]
 };
