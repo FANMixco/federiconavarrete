@@ -15,7 +15,7 @@ const seenOnList = {
 			},
 			{ 
 				"title": "Instituto Cervantes",
-				"link": "https://shorturl.at/lprW3",
+				"link": "https://shorturl.at/nwBLR",
 				"image": "contest-2",
                 "label": "Enlace de descarga"
 			},
