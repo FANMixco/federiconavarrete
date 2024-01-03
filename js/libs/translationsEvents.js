@@ -35,7 +35,6 @@ function loadSeenOn() {
                                     </div>
                                 </div>
                             </div>`;
-        console.log(seenOnDiv);
 
         document.getElementById('divEvents').innerHTML += seenOnDiv;
     });
