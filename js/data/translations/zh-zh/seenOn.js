@@ -5,43 +5,61 @@ const seenOnList = {
 				"title": "Citython",
 				"link": "https://shorturl.at/bfIV4",
 				"image": "contest-1",
-                "label": "Read more"
+                "label": "阅读更多"
 			},
 			{ 
 				"title": "Warszawskie Dni Informatyki",
 				"link": "https://1drv.ms/f/s!AhpAtowYvNcykLoruCz-FmiCY-FrMA",
 				"image": "contest-9",
-                "label": "Read more"
+                "label": "阅读更多"
 			},
 			{ 
 				"title": "Instituto Cervantes",
 				"link": "https://shorturl.at/lprW3",
 				"image": "contest-2",
-                "label": "Download link"
+                "label": "Enlace de descarga"
 			},
 			{ 
 				"title": "Samsung Dev Spain",
 				"link": "https://shorturl.at/nsM56",
 				"image": "contest-10",
-                "label": "Read more"
+                "label": "阅读更多"
 			},
 			{ 
 				"title": "Młodzi w Łodzi",
 				"link": "https://bit.ly/442bojU",
 				"image": "contest-5",
-                "label": "Download link"
+                "label": "下载链接"
 			},
 			{ 
 				"title": "Career Show",
 				"link": "https://shorturl.at/alnL2",
 				"image": "contest-8",
-                "label": "Read more"
+                "label": "阅读更多"
 			},
 			{ 
 				"title": "SpaceApps Challenge - NASA",
 				"link": "https://shorturl.at/klvwM",
 				"image": "contest-4",
-                "label": "Read more"
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Buch Wien",
+				"link": "https://shorturl.at/vxJX6",
+				"image": "contest-15",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "IST World Congress",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-11",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Smart City",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-14",
+                "label": "阅读更多"
 			},
 			{ 
 				"title": "Imagine Cup",
@@ -62,12 +80,6 @@ const seenOnList = {
                 "label": "下载链接"
 			},
 			{ 
-				"title": "IST World Congress",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-11",
-                "label": "阅读更多"
-			},
-			{ 
 				"title": "WOWZAPP",
 				"link": "https://shorturl.at/aIW05",
 				"image": "contest-12",
@@ -77,12 +89,6 @@ const seenOnList = {
 				"title": "Hackathon Gobierno Abierto",
 				"link": "https://shorturl.at/aIW05",
 				"image": "contest-13",
-                "label": "阅读更多"
-			},
-			{ 
-				"title": "Smart City",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-14",
                 "label": "阅读更多"
 			}
     ]

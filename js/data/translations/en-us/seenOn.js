@@ -44,6 +44,24 @@ const seenOnList = {
                 "label": "Read more"
 			},
 			{ 
+				"title": "Buch Wien",
+				"link": "https://shorturl.at/vxJX6",
+				"image": "contest-15",
+                "label": "Read more"
+			},
+			{ 
+				"title": "IST World Congress",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-11",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Smart City",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-14",
+                "label": "Read more"
+			},
+			{ 
 				"title": "Imagine Cup",
 				"link": "https://shorturl.at/atHLU",
 				"image": "contest-7",
@@ -62,12 +80,6 @@ const seenOnList = {
                 "label": "Download link"
 			},
 			{ 
-				"title": "IST World Congress",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-11",
-                "label": "Read more"
-			},
-			{ 
 				"title": "WOWZAPP",
 				"link": "https://shorturl.at/aIW05",
 				"image": "contest-12",
@@ -77,12 +89,6 @@ const seenOnList = {
 				"title": "Hackathon Gobierno Abierto",
 				"link": "https://shorturl.at/aIW05",
 				"image": "contest-13",
-                "label": "Read more"
-			},
-			{ 
-				"title": "Smart City",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-14",
                 "label": "Read more"
 			}
     ]
