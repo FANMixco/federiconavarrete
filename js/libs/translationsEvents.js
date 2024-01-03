@@ -2,8 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let language = window.navigator.userLanguage || window.navigator.language;
     let lang = "en-us/min";
     
-    if (language.includes('es'))
-        lang = "es-sv/min";
+    lang = (language.includes('es')) ? "es-sv/min": (language.includes('zh')) ? 'zh-zh/min' : lang;
     
     let langLoc = "../js/data/translations/";
     

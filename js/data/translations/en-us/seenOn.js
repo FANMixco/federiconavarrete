@@ -69,14 +69,20 @@ const seenOnList = {
 			},
 			{ 
 				"title": "WOWZAPP",
-				"link": "#",
+				"link": "https://shorturl.at/aIW05",
 				"image": "contest-12",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Hackathon Gobierno Abierto",
-				"link": "#",
+				"link": "https://shorturl.at/aIW05",
 				"image": "contest-13",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Smart City",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-14",
                 "label": "Read more"
 			}
     ]
