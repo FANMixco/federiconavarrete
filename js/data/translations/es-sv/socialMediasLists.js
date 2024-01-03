@@ -107,7 +107,7 @@ const socialOthersList = {
 		{
 			"icon": "stack-overflow",
 			"title": "StackOverflow",
-			"link": "https://stackoverflow.com/users/2889347/federico-navarrete",
+			"link": "https://stackoverflow.com/users/1928691/federico-navarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},

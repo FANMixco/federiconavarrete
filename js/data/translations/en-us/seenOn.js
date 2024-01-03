@@ -96,6 +96,18 @@ const seenOnList = {
 				"link": "https://shorturl.at/DGJK8",
 				"image": "contest-16",
                 "label": "Read more"
+			},
+			{ 
+				"title": "International Boat of Culture",
+				"link": "https://shorturl.at/aowN3",
+				"image": "contest-17",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Barcelo Hotel",
+				"link": "https://shorturl.at/hkBI3",
+				"image": "contest-18",
+                "label": "Read more"
 			}
     ]
 };
