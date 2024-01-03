@@ -8,9 +8,9 @@ const seenOnList = {
                 "label": "Leer más"
 			},
 			{ 
-				"title": "SwitchUp Challenge",
-				"link": "https://shorturl.at/cvZ28",
-				"image": "contest-3",
+				"title": "Warszawskie Dni Informatyki",
+				"link": "https://1drv.ms/f/s!AhpAtowYvNcykLoruCz-FmiCY-FrMA",
+				"image": "contest-9",
                 "label": "Leer más"
 			},
 			{ 
@@ -32,10 +32,10 @@ const seenOnList = {
                 "label": "Enlace de descarga"
 			},
 			{ 
-				"title": "TIC Americas",
-				"link": "https://shorturl.at/coxy4",
-				"image": "contest-6",
-                "label": "Enlace de descarga"
+				"title": "Career Show",
+				"link": "https://shorturl.at/alnL2",
+				"image": "contest-8",
+                "label": "Leer más"
 			}
 		]
 };

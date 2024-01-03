@@ -8,9 +8,9 @@ const seenOnList = {
                 "label": "阅读更多"
 			},
 			{ 
-				"title": "SwitchUp Challenge",
-				"link": "https://shorturl.at/cvZ28",
-				"image": "contest-3",
+				"title": "Warszawskie Dni Informatyki",
+				"link": "https://1drv.ms/f/s!AhpAtowYvNcykLoruCz-FmiCY-FrMA",
+				"image": "contest-9",
                 "label": "阅读更多"
 			},
 			{ 
@@ -32,10 +32,10 @@ const seenOnList = {
                 "label": "下载链接"
 			},
 			{ 
-				"title": "TIC Americas",
-				"link": "https://shorturl.at/coxy4",
-				"image": "contest-6",
-                "label": "下载链接"
+				"title": "Career Show",
+				"link": "https://shorturl.at/alnL2",
+				"image": "contest-8",
+                "label": "阅读更多"
 			}
 		]
 };
