@@ -2,7 +2,7 @@ const servicesList = {
 	"services": [
 		[
 			{
-				"title": "IT Consultancy or Apps Development",
+				"title": "IT Consultancy",
                 "link": "https://form.jotform.com/202595846674065",
 				"icon": "laptop-code-solid"
 			},

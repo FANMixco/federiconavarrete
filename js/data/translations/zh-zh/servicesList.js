@@ -2,7 +2,7 @@ const servicesList = {
 	"services": [
 		[
 			{
-				"title": "IT咨询或应用程序开发（英语或西班牙语）",
+				"title": "资讯科技顾问",
                 "link": "https://form.jotform.com/202595846674065",
 				"icon": "laptop-code-solid"
 			},
