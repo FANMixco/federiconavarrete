@@ -11,6 +11,8 @@ const w100 = 'class="w-100"';
 
 //getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
+getScript(`${langLoc}${lang}/seenOn.js`).then(() => { loadSeenOn(); }).catch((e) => { console.error(e); });
+
 getScript(`${langLoc}${lang}/awardsList.js`).then(() => { loadAwards(); }).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/servicesList.js`).then(() => { loadServices(); }).catch((e) => { console.error(e); });
@@ -52,6 +54,32 @@ function loadBookPreview() {
     let bookPreview = document.getElementById("bookPreview");
 
     bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', 'https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3', `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
+}
+
+function loadSeenOn() {
+    const { seenOn } = seenOnList;
+    
+    const seenOnDiv = document.getElementById('seenOnDiv');
+    const tmpSeenOn = `<div class="col-lg-2 col-md-4 col-12">
+        <a href="{0}" rel="noopener noreferrer" target="_blank" aria-label="{1}">
+        <picture>
+            <source srcset="img/events/{2}.webp" type="image/webp">
+            <source srcset="img/events/{2}.png" type="image/png">
+            <img src="img/events/{2}.png" class="img-fluid" alt="{3}">
+        </picture>
+        </a>
+    </div>`;
+
+    seenOn.forEach(item => {
+        let tmpCopy = tmpSeenOn;
+
+        tmpCopy = tmpCopy.replace('{0}', item.link);
+        tmpCopy = tmpCopy.replace('{1}', item.label);
+        tmpCopy = tmpCopy.replaceAll('{2}', item.image);
+        tmpCopy = tmpCopy.replace('{3}', item.title);
+
+        seenOnDiv.innerHTML += tmpCopy;
+    });
 }
 
 function loadReviews() {
@@ -422,7 +450,7 @@ function loadSocialMedias() {
                       console.log('Shared successfully!');
                     })
                     .catch((error) => {
-                      console.log('Error sharing:', error);
+                      console.error('Error sharing:', error);
                     });
             });
 
