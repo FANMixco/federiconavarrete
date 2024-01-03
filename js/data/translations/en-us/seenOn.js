@@ -60,6 +60,24 @@ const seenOnList = {
 				"link": "https://shorturl.at/coxy4",
 				"image": "contest-6",
                 "label": "Download link"
+			},
+			{ 
+				"title": "IST World Congress",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-11",
+                "label": "Read more"
+			},
+			{ 
+				"title": "WOWZAPP",
+				"link": "#",
+				"image": "contest-12",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Hackathon Gobierno Abierto",
+				"link": "#",
+				"image": "contest-13",
+                "label": "Read more"
 			}
     ]
 };

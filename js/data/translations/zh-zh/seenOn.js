@@ -20,10 +20,10 @@ const seenOnList = {
                 "label": "下载链接"
 			},
 			{ 
-				"title": "SpaceApps Challenge - NASA",
-				"link": "https://shorturl.at/klvwM",
-				"image": "contest-4",
-                "label": "阅读更多"
+				"title": "Samsung Dev Spain",
+				"link": "https://shorturl.at/nsM56",
+				"image": "contest-10",
+                "label": "Read more"
 			},
 			{ 
 				"title": "Młodzi w Łodzi",
@@ -36,6 +36,54 @@ const seenOnList = {
 				"link": "https://shorturl.at/alnL2",
 				"image": "contest-8",
                 "label": "阅读更多"
+			},
+			{ 
+				"title": "SpaceApps Challenge - NASA",
+				"link": "https://shorturl.at/klvwM",
+				"image": "contest-4",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "SpaceApps Challenge - NASA",
+				"link": "https://shorturl.at/klvwM",
+				"image": "contest-4",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Imagine Cup",
+				"link": "https://shorturl.at/atHLU",
+				"image": "contest-7",
+                "label": "Read more"
+			},
+			{ 
+				"title": "SwitchUp Challenge",
+				"link": "https://shorturl.at/cvZ28",
+				"image": "contest-3",
+                "label": "Read more"
+			},
+			{ 
+				"title": "TIC Americas",
+				"link": "https://shorturl.at/coxy4",
+				"image": "contest-6",
+                "label": "Download link"
+			},
+			{ 
+				"title": "IST World Congress",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-11",
+                "label": "Read more"
+			},
+			{ 
+				"title": "WOWZAPP",
+				"link": "#",
+				"image": "contest-12",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Hackathon Gobierno Abierto",
+				"link": "#",
+				"image": "contest-13",
+                "label": "Read more"
 			}
 		]
 };
