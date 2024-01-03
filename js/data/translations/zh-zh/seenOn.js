@@ -90,6 +90,12 @@ const seenOnList = {
 				"link": "https://shorturl.at/aIW05",
 				"image": "contest-13",
                 "label": "阅读更多"
+			},
+			{ 
+				"title": "Hispanic Society of Victoria",
+				"link": "https://shorturl.at/DGJK8",
+				"image": "contest-16",
+                "label": "阅读更多"
 			}
     ]
 };
