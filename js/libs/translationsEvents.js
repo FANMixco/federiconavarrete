@@ -13,8 +13,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function loadSeenOn() {
     const { seenOn } = seenOnList;
 
-    console.log(seenOn);
-
     seenOn.forEach((item, index) => {
         const active = index == 0 ? " active" : "";
 
