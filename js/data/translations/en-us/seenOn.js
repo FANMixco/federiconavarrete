@@ -17,7 +17,7 @@ const seenOnList = {
 				"title": "Instituto Cervantes",
 				"link": "https://shorturl.at/nwBLR",
 				"image": "contest-2",
-                "label": "Download link"
+                "label": "Watch it"
 			},
 			{ 
 				"title": "Samsung Dev Spain",
@@ -50,15 +50,45 @@ const seenOnList = {
                 "label": "Read more"
 			},
 			{ 
-				"title": "IST World Congress",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-11",
+				"title": "Toastmasters",
+				"link": "https://shorturl.at/lmvK0",
+				"image": "contest-20",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Barcelo Hotel",
+				"link": "https://shorturl.at/hkBI3",
+				"image": "contest-18",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Hispanic Society of Victoria",
+				"link": "https://shorturl.at/DGJK8",
+				"image": "contest-16",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Smart City",
 				"link": "https://shorturl.at/bfIV4",
 				"image": "contest-14",
+                "label": "Read more"
+			},
+			{ 
+				"title": "IST World Congress",
+				"link": "https://shorturl.at/bfIV4",
+				"image": "contest-11",
+                "label": "Read more"
+			},
+			{ 
+				"title": "IEEE",
+				"link": "https://shorturl.at/ghwKN",
+				"image": "contest-19",
+                "label": "Read more"
+			},
+			{ 
+				"title": "International Boat of Culture",
+				"link": "https://shorturl.at/aowN3",
+				"image": "contest-17",
                 "label": "Read more"
 			},
 			{ 
@@ -74,10 +104,10 @@ const seenOnList = {
                 "label": "Read more"
 			},
 			{ 
-				"title": "TIC Americas",
-				"link": "https://shorturl.at/coxy4",
-				"image": "contest-6",
-                "label": "Download link"
+				"title": "Hackathon Gobierno Abierto",
+				"link": "https://shorturl.at/aIW05",
+				"image": "contest-13",
+                "label": "Read more"
 			},
 			{ 
 				"title": "WOWZAPP",
@@ -86,28 +116,10 @@ const seenOnList = {
                 "label": "Read more"
 			},
 			{ 
-				"title": "Hackathon Gobierno Abierto",
-				"link": "https://shorturl.at/aIW05",
-				"image": "contest-13",
-                "label": "Read more"
-			},
-			{ 
-				"title": "Hispanic Society of Victoria",
-				"link": "https://shorturl.at/DGJK8",
-				"image": "contest-16",
-                "label": "Read more"
-			},
-			{ 
-				"title": "International Boat of Culture",
-				"link": "https://shorturl.at/aowN3",
-				"image": "contest-17",
-                "label": "Read more"
-			},
-			{ 
-				"title": "Barcelo Hotel",
-				"link": "https://shorturl.at/hkBI3",
-				"image": "contest-18",
-                "label": "Read more"
+				"title": "TIC Americas",
+				"link": "https://shorturl.at/coxy4",
+				"image": "contest-6",
+                "label": "Download link"
 			}
     ]
 };
