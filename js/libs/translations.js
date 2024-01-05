@@ -172,15 +172,31 @@ function loadServices() {
 
         if (isVisible) {
             const servicesList = document.getElementById('servicesList');
-            let items = `<div class="row justify-content-center">`;
+            let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
                     let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
-                    items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
+
+
+                    if (smallScreenMobileOS || equalScreen) {
+                        let activeS = (totalServices == 0) ? "active" : "";
+                        items += `<div class="carousel-item ${activeS}"><div class='text-center card-holder'>${title}</div></div>`;
+                    }
+                    else {
+                        items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    }
+
                     totalServices++;
                 });
             });
-            items = `${items.substring(0, items.length - 12)}${cDiv}`;
+            items = (smallScreenMobileOS || equalScreen) ? items : `${items.substring(0, items.length - 12)}${cDiv}`;
+
+            if (smallScreenMobileOS || equalScreen) {
+                items = getCarousel(items, "carouselServices");
+                const servicesListDiv = document.getElementById("servicesList");
+                servicesListDiv.classList.remove("row");
+                servicesListDiv.classList.add("container");
+            }
 
             servicesList.innerHTML += items;
             screenResizeCardHolders();
@@ -193,6 +209,22 @@ function loadServices() {
     catch (e) { return e; }
 }
 
+function getCarousel(items, cId) {
+    return `<div class="container-fluid" id="div${cId}">
+    <div id="${cId}" class="carousel slide">
+    <div class="carousel-inner">
+        ${items}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#${cId}" data-bs-slide="prev">
+        <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#${cId}" data-bs-slide="next">
+        <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
+    </button>
+    </div>
+</div>`;
+}
+
 function loadAwards() {
     try {
         const { awards, isVisible } = awardsList;
@@ -201,7 +233,7 @@ function loadAwards() {
             const awardsList = document.getElementById('awardsList');
             let availableLinks = [];
             let i = 0;
-            let items = `<div class="row justify-content-center">`;
+            let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
                     let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true, elem.type, elem.link);
@@ -213,12 +245,25 @@ function loadAwards() {
                         type: elem.type
                     });
                     
-                    items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    if (smallScreenMobileOS || equalScreen) {
+                        let active = (i == 0) ? "active" : "";
+                        items += `<div class="carousel-item ${active}"><div class='text-center card-holder'>${title}</div></div>`;
+                    }
+                    else {
+                        items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    }
     
                     i++;
                 });
             });
-            items = `${items.substring(0, items.length - 12)}${cDiv}`;
+            items = (smallScreenMobileOS || equalScreen) ? items : `${items.substring(0, items.length - 12)}${cDiv}`;
+
+            if (smallScreenMobileOS || equalScreen) {
+                items = getCarousel(items, "carouselAwards");
+                const awardsListDiv = document.getElementById("awardsList");
+                awardsListDiv.classList.remove("row");
+                awardsListDiv.classList.add("container");
+            }
 
             awardsList.innerHTML += items;
 

@@ -66,20 +66,3 @@
 #elSalvadorIcon {
     margin-top: -4px
 }
-
-#hHeadline,#hName,a#aBooksModal {
-    color: #fff!important;
-    text-shadow: 0 0 5px #212121
-}
-
-#hHeadline {
-    text-shadow: 0 0 5px #263238
-}
-
-#videoCarousel {
-    width: 100%
-}
-
-a#aBooksModal {
-    color: #ffff8d!important
-}
