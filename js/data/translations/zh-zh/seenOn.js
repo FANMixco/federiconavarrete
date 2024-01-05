@@ -57,7 +57,7 @@ const seenOnList = {
 			},
 			{ 
 				"title": "Barcelo Hotel",
-				"link": "https://shorturl.at/hkBI3",
+				"link": "https://shorturl.at/ajDX3",
 				"image": "contest-18",
                 "label": "阅读更多"
 			},
