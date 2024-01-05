@@ -364,7 +364,7 @@ function loadVideos() {
 
         const divVideos = document.getElementById('divVideos');
         if (isVisible) {
-            loadVideosUTube(presentations, divVideos);
+            loadVideosUTube(presentations, divVideos, 'publicSpeakingDiv');
         }
         else {
             const hPublicSpeaking = document.getElementById('hPublicSpeaking');
@@ -376,9 +376,7 @@ function loadVideos() {
     catch (e) { return e; }
 }
 
-function loadVideosUTube(presentations, divVideo) {
-    console.log(presentations);
-    console.log(divVideo);
+function loadVideosUTube(presentations, divVideo, divCar) {
     let count = 0;
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
@@ -390,7 +388,7 @@ function loadVideosUTube(presentations, divVideo) {
             items += vTmp;
             count++;
         });
-        items = getVideoCarousel(items, 'myUTubeVideosDiv');
+        items = getVideoCarousel(items, divCar);
         divVideo.innerHTML = items;
     }
     else {
@@ -410,7 +408,7 @@ function loadYouTubeVideos() {
 
         const divYouTubeVideos = document.getElementById('divYouTubeVideos');
         if (isVisible) {
-            loadVideosUTube(presentations, divYouTubeVideos);
+            loadVideosUTube(presentations, divYouTubeVideos, 'uTubeDiv');
         }
         else {
             const hYouTubeTraining = document.getElementById('hYouTubeTraining');
