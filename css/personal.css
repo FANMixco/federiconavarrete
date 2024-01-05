@@ -386,7 +386,7 @@ a.text-material-link-dark:active {
 
     .card-awards,.card-services {
         position: relative;
-        max-width: 80vw!important;
+        max-width: 100%!important;
         height: auto;
         overflow: hidden;
         border-radius: 15px;
