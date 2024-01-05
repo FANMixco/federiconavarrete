@@ -335,7 +335,7 @@ a.text-material-link-dark:active {
 
 @media not screen and (max-width:320px) and (orientation:portrait), screen and (aspect-ratio: 1/1) {
     .card-awards,.card-services {
-        min-width: 300px;
+        max-width: 100%;
     }
 
     .card-ser {
