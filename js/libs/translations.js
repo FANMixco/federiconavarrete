@@ -199,6 +199,10 @@ function loadServices() {
             }
 
             servicesList.innerHTML += items;
+
+            if (smallScreenMobileOS || equalScreen)
+                new bootstrap.Carousel(`#carouselServices`);
+
             screenResizeCardHolders();
         }
         else {
@@ -266,6 +270,9 @@ function loadAwards() {
             }
 
             awardsList.innerHTML += items;
+
+            if (smallScreenMobileOS || equalScreen)
+                new bootstrap.Carousel(`#carouselAwards`);
 
             availableLinks.forEach(item => {
                 if (item.type !== "_blank") {
@@ -390,6 +397,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
         });
         items = getVideoCarousel(items, divCar);
         divVideo.innerHTML = items;
+        new bootstrap.Carousel(`#${divCar}`);
     }
     else {
         presentations.forEach(item => {
