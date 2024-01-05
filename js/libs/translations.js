@@ -346,20 +346,25 @@ function loadPersonalProjects() {
     catch (e) { return e; }
 }
 
+function getVideoCarousel(items, id) {
+    return `<div id="${id}" class="carousel slide">
+    <div class="carousel-inner">${items}</div>
+    <a id="carousel-control-prev-video" class="carousel-control-prev" href="#${id}" role="button" data-bs-slide="prev">
+       <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
+    </a>
+    <a id="carousel-control-next-video" class="carousel-control-next" href="#${id}" role="button" data-bs-slide="next">
+       <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
+    </a>
+ </div>`;
+}
+
 function loadVideos() {
     try {
         const { presentations, isVisible } = presentationsVideos;
 
         const divVideos = document.getElementById('divVideos');
         if (isVisible) {
-            let count = 0;
-            presentations.forEach(item => {
-                divVideos.innerHTML += getUTubeContainer(item);
-                if (count === 0) {
-                    divVideos.innerHTML += `<div ${w100}>${cDiv}`;
-                }
-                count++;
-            });
+            loadVideosUTube(presentations, divVideos);
         }
         else {
             const hPublicSpeaking = document.getElementById('hPublicSpeaking');
@@ -371,20 +376,41 @@ function loadVideos() {
     catch (e) { return e; }
 }
 
+function loadVideosUTube(presentations, divVideo) {
+    console.log(presentations);
+    console.log(divVideo);
+    let count = 0;
+    if (smallScreenMobileOS || equalScreen) {
+        let items = '';
+        presentations.forEach(item => {
+            let vTmp = getUTubeContainer(item);
+            let active = (count == 0) ? 'active' : '';
+            vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
+            vTmp = `<div class="carousel-item ${active}">${vTmp}</div>`;
+            items += vTmp;
+            count++;
+        });
+        items = getVideoCarousel(items, 'myUTubeVideosDiv');
+        divVideo.innerHTML = items;
+    }
+    else {
+        presentations.forEach(item => {
+            divVideo.innerHTML += getUTubeContainer(item);
+            if (count === 0) {
+                divVideo.innerHTML += `<div ${w100}>${cDiv}`;
+            }
+            count++;
+        });
+    }   
+}
+
 function loadYouTubeVideos() {
     try {
         const { presentations, isVisible } = youtubeTrainings;
 
         const divYouTubeVideos = document.getElementById('divYouTubeVideos');
         if (isVisible) {
-            let count = 0;
-            presentations.forEach(item => {
-                divYouTubeVideos.innerHTML += getUTubeContainer(item);
-                if (count === 0) {
-                    divYouTubeVideos.innerHTML += `<div ${w100}>${cDiv}`;
-                }
-                count++;
-            });
+            loadVideosUTube(presentations, divYouTubeVideos);
         }
         else {
             const hYouTubeTraining = document.getElementById('hYouTubeTraining');
