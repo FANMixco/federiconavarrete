@@ -50,7 +50,7 @@ a#aBooksModal {
 }
 
 #servicesList, #awardsList {
-    max-width: 95%;
+    max-width: 100%;
 }
 
 #imgProfile {
@@ -339,7 +339,7 @@ a.text-material-link-dark:active {
     }
 
     .card-ser {
-        width: 100%;
+        width: 18rem;;
         max-height: 270px!important;
     }
 }
@@ -358,6 +358,15 @@ a.text-material-link-dark:active {
     #divAbout {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    #servicesList, #awardsList {
+        max-width: 95%;
+    }
+    .card-ser {
+        width: 100%!important;
     }
 }
 
@@ -386,7 +395,7 @@ a.text-material-link-dark:active {
 
     .card-awards,.card-services {
         position: relative;
-        max-width: 100%!important;
+        width: 100%!important;
         height: auto;
         overflow: hidden;
         border-radius: 15px;
