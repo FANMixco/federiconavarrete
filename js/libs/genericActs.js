@@ -92,8 +92,9 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth,
     let idC = idL != '' ? `id='${idL}'` : '';
     let lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor}' style='text-decoration: none;'>` : '';
     let lEnd = hasLink ? '</a>' : '';
+    let style = (!extras) ? '' : `style="${extras}"`;
 
-    return `${lStart}<div class="card card-ser ${cOption}" style="${extras}">
+    return `${lStart}<div class="card card-ser ${cOption}" ${style}>
     <div class="card-body text-center">
       <h5 class="card-title"><div class='${iOption}'>${getImgBasicTag(icon, lazyLoading, 'mr-2', '', title, `style='height:${iHeight}px;width:${iWidth}px; filter: invert(${invert});'`)}</div></h5>
       <br />
