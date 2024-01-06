@@ -461,20 +461,25 @@ a.text-material-link-dark:active {
 }
 
 /* Default style for all devices */
-#navBarImg {
+#linkName {
     max-width: 160px;
 }
 
 /* Tablet styles (up to 767px width) */
 @media only screen and (max-width: 767px) {
-    #navBarImg {
+    #linkName {
         max-width: 160px;
     }
 }
 
 /* Mobile styles (up to 479px width) */
 @media only screen and (max-width: 479px) {
-    #navBarImg {
+    #linkName {
         max-width: 128px;
     }
+}
+
+#navBarImg {
+    object-fit: cover;
+    width: 100%;
 }
