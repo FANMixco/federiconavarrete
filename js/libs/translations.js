@@ -65,13 +65,11 @@ function loadReviews() {
 
                 let name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
 
-                let active = item.isActive ? " active" : "";
-
                 let currentReview = index + 1;
 
                 let rTmp = `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`;
 
-                let review = `${getCItem(`${tCenter}${active}`)}
+                let review = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}
                                 ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
                                 ${cDiv}`;
 
@@ -177,19 +175,15 @@ function loadServices() {
                 item.forEach(elem => {
                     let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
 
-
-                    if (smallScreenMobileOS || equalScreen) {
-                        let activeS = (totalServices == 0) ? "active" : "";
-                        items += `<div class="carousel-item ${activeS}"><div class='text-center card-holder'>${title}</div></div>`;
-                    }
-                    else {
-                        items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
-                    }
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
 
                     totalServices++;
                 });
             });
-            items = (smallScreenMobileOS || equalScreen) ? items : `${items.substring(0, items.length - 12)}${cDiv}`;
+
+            console.log(items);
+
+            items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
 
             if (smallScreenMobileOS || equalScreen) {
                 items = getCarousel(items, "carouselServices");
@@ -197,6 +191,8 @@ function loadServices() {
                 servicesListDiv.classList.remove("row");
                 servicesListDiv.classList.add("container");
             }
+
+            //console.log(items);
 
             servicesList.innerHTML += items;
 
@@ -249,18 +245,13 @@ function loadAwards() {
                         type: elem.type
                     });
                     
-                    if (smallScreenMobileOS || equalScreen) {
-                        let active = (i == 0) ? "active" : "";
-                        items += `<div class="carousel-item ${active}"><div class='text-center card-holder'>${title}</div></div>`;
-                    }
-                    else {
-                        items += `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
-                    }
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
     
                     i++;
                 });
             });
-            items = (smallScreenMobileOS || equalScreen) ? items : `${items.substring(0, items.length - 12)}${cDiv}`;
+            //console.log(items);
+            items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
 
             if (smallScreenMobileOS || equalScreen) {
                 items = getCarousel(items, "carouselAwards");
@@ -268,6 +259,8 @@ function loadAwards() {
                 awardsListDiv.classList.remove("row");
                 awardsListDiv.classList.add("container");
             }
+
+            //console.log(items);
 
             awardsList.innerHTML += items;
 
@@ -384,16 +377,15 @@ function loadVideos() {
 }
 
 function loadVideosUTube(presentations, divVideo, divCar) {
-    let count = 0;
+    let cUTube = 0;
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
             let vTmp = getUTubeContainer(item);
-            let active = (count == 0) ? 'active' : '';
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${active}">${vTmp}</div>`;
+            vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
-            count++;
+            cUTube++;
         });
         items = getVideoCarousel(items, divCar);
         divVideo.innerHTML = items;
@@ -402,10 +394,10 @@ function loadVideosUTube(presentations, divVideo, divCar) {
     else {
         presentations.forEach(item => {
             divVideo.innerHTML += getUTubeContainer(item);
-            if (count === 0) {
+            if (cUTube === 0) {
                 divVideo.innerHTML += `<div ${w100}>${cDiv}`;
             }
-            count++;
+            cUTube++;
         });
     }   
 }
@@ -507,6 +499,8 @@ function loadSocialMedias() {
                 const sBasic = document.getElementById("socialMediaBasic");
                 
                 sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer');
+
+                //console.log(getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer'));
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
@@ -736,11 +730,11 @@ function getBtnShare() {
         icon = 'share-windows-svgrepo-com';
     }
 
-    return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title='${genericTranslations.share}' alt='${genericTranslations.share}'`));
+    return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title="${genericTranslations.share}" alt="${genericTranslations.share}"`));
 }
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
-    extra += `title='${genericTranslations.extras}' alt='${genericTranslations.extras}'"`;
+    extra += `title="${genericTranslations.extras}" alt="${genericTranslations.extras}"`;
     return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
 }
 
@@ -753,11 +747,7 @@ function screenResizeCardHolders() {
     const width = window.innerWidth;
 
     divs.forEach(function(div) {
-        if (width < 992) {
-        div.style.width =  "auto";
-        } else {
-        div.style.removeProperty("width");
-        }
+        div.style.width = (width < 992) ? "auto" : div.style.removeProperty("width");
     });
 }
 

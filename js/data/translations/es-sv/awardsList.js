@@ -26,7 +26,7 @@ const awardsList = {
 		],
 		[
 			{
-				"title": '1<sup>er</sup> lugar en el Cisco Switch Up Challenge 2016, "El Internet de todo"',
+				"title": '1<sup>er</sup> lugar en el Cisco Switch Up Challenge 2016, “El Internet de todo”',
 				"link": "https://bit.ly/3b8Tu8J",
 				"type": "iframe"
 			},

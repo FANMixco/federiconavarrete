@@ -98,7 +98,6 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth,
       <h5 class="card-title"><div class='${iOption}'>${getImgBasicTag(icon, lazyLoading, 'mr-2', '', title, `style='height:${iHeight}px;width:${iWidth}px; filter: invert(${invert});'`)}</div></h5>
       <br />
       <h6 class="card-subtitle mb-2">${title}</h6>
-      <!--p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p-->
     </div>
   </div>${lEnd}`
 }

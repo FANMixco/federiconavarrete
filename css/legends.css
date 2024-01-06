@@ -19,6 +19,10 @@ a
     transform: translateY(40%)
 }
 
+.legend-link {
+    text-decoration: none!important;
+}
+
 .img-thumbnail {
     background: #2c3e50!important
 }

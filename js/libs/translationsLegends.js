@@ -17,7 +17,7 @@ function loadLegends() {
         const legend = `<div class="carousel-item col-md-4${active}">
             <div class="card">
             <div class="img-thumbnail">
-                <a class="text-warning" target="_blank" href="${item.link}">
+                <a class="text-warning legend-link" target="_blank" href="${item.link}">
                     <picture>
                         <source
                             srcset="${item.img.replace(".jpg", ".webp")}"
