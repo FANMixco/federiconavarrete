@@ -120,6 +120,12 @@ const seenOnList = {
 				"link": "https://shorturl.at/coxy4",
 				"image": "contest-6",
                 "label": "Download link"
+			},
+			{ 
+				"title": "Embassies",
+				"link": "https://shorturl.at/gryS7",
+				"image": "contest-21",
+                "label": "Read more"
 			}
     ]
 };

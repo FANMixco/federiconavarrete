@@ -120,6 +120,12 @@ const seenOnList = {
 				"link": "https://shorturl.at/coxy4",
 				"image": "contest-6",
                 "label": "Enlace de descarga"
+			},
+			{ 
+				"title": "Embajadas",
+				"link": "https://shorturl.at/gryS7",
+				"image": "contest-21",
+                "label": "Leer más"
 			}
     ]
 };

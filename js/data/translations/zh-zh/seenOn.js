@@ -120,6 +120,12 @@ const seenOnList = {
 				"link": "https://shorturl.at/coxy4",
 				"image": "contest-6",
                 "label": "下载链接"
+			},
+			{ 
+				"title": "Embassies",
+				"link": "https://shorturl.at/gryS7",
+				"image": "contest-21",
+                "label": "阅读更多"
 			}
     ]
 };
