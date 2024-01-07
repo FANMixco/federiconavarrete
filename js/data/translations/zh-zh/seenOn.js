@@ -126,6 +126,18 @@ const seenOnList = {
 				"link": "https://shorturl.at/gryS7",
 				"image": "contest-21",
                 "label": "阅读更多"
+			},
+			{ 
+				"title": "Feria del Libro de Madrid",
+				"link": "https://shorturl.at/ejPSU",
+				"image": "contest-22",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Día E en China",
+				"link": "https://shorturl.at/pqrEV",
+				"image": "contest-23",
+                "label": "阅读更多"
 			}
     ]
 };
