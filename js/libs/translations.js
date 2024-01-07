@@ -349,10 +349,10 @@ function loadPersonalProjects() {
 function getVideoCarousel(items, id) {
     return `<div id="${id}" class="carousel slide">
     <div class="carousel-inner">${items}</div>
-    <a id="carousel-control-prev-video" class="carousel-control-prev" href="#${id}" role="button" data-bs-slide="prev">
+    <a class="carousel-control-prev carousel-control-prev-video" href="#${id}" role="button" data-bs-slide="prev">
        <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
     </a>
-    <a id="carousel-control-next-video" class="carousel-control-next" href="#${id}" role="button" data-bs-slide="next">
+    <a class="carousel-control-next carousel-control-next-video" href="#${id}" role="button" data-bs-slide="next">
        <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
     </a>
  </div>`;

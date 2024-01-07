@@ -101,12 +101,12 @@ a#aBooksModal {
     background-color: #121212
 }
 
-#carousel-control-prev-video {
-    left: 0
+.carousel-control-prev-video {
+    left: 0!important;
 }
 
-#carousel-control-next-video {
-    right: 0
+.carousel-control-next-video {
+    right: 0!important;
 }
 
 #google_translate_element {
