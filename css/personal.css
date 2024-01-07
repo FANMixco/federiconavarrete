@@ -490,5 +490,6 @@ a.text-material-link-dark:active {
 
 #navBarImg {
     object-fit: cover;
-    width: 100%;
+    width: 100%!important;
+    height: 100%!important;
 }
