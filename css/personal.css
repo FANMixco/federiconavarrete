@@ -364,6 +364,7 @@ a.text-material-link-dark:active {
 @media only screen and (max-width: 768px) and (orientation: portrait) {
     #servicesList, #awardsList {
         max-width: 95%;
+        margin: auto;
     }
     .card-ser {
         width: 100%!important;
