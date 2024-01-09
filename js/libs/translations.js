@@ -181,8 +181,6 @@ function loadServices() {
                 });
             });
 
-            console.log(items);
-
             items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
 
             if (smallScreenMobileOS || equalScreen) {
@@ -192,14 +190,10 @@ function loadServices() {
                 servicesListDiv.classList.add("container");
             }
 
-            //console.log(items);
-
             servicesList.innerHTML += items;
 
             if (smallScreenMobileOS || equalScreen)
                 new bootstrap.Carousel(`#carouselServices`);
-
-            //screenResizeCardHolders();
         }
         else {
             const divServices = document.getElementById('divServices');
@@ -250,7 +244,7 @@ function loadAwards() {
                     i++;
                 });
             });
-            //console.log(items);
+
             items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
 
             if (smallScreenMobileOS || equalScreen) {
@@ -259,8 +253,6 @@ function loadAwards() {
                 awardsListDiv.classList.remove("row");
                 awardsListDiv.classList.add("container");
             }
-
-            //console.log(items);
 
             awardsList.innerHTML += items;
 
@@ -499,8 +491,6 @@ function loadSocialMedias() {
                 const sBasic = document.getElementById("socialMediaBasic");
                 
                 sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer');
-
-                //console.log(getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer'));
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
