@@ -747,7 +747,7 @@ function screenResizeCardHolders() {
     const width = window.innerWidth;
 
     divs.forEach(function(div) {
-        div.style.width = (width < 992) ? "auto" : div.style.removeProperty("width");
+        div.style.width = (width < 992) ? "auto" : "revert-layer";
     });
 }
 
