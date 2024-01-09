@@ -175,7 +175,7 @@ function loadServices() {
                 item.forEach(elem => {
                     let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
 
-                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
                     totalServices++;
                 });
@@ -199,7 +199,7 @@ function loadServices() {
             if (smallScreenMobileOS || equalScreen)
                 new bootstrap.Carousel(`#carouselServices`);
 
-            screenResizeCardHolders();
+            //screenResizeCardHolders();
         }
         else {
             const divServices = document.getElementById('divServices');
@@ -245,7 +245,7 @@ function loadAwards() {
                         type: elem.type
                     });
                     
-                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
     
                     i++;
                 });
@@ -301,7 +301,7 @@ function loadAwards() {
                     });
                 }
             });
-            screenResizeCardHolders();
+            //screenResizeCardHolders();
         }
         else {
             const divAwards = document.getElementById('divAwards');
@@ -742,14 +742,14 @@ function getCItem(extras) {
     return `<div class="carousel-item ${extras}">`;
 }
 
-function screenResizeCardHolders() {
+/*function screenResizeCardHolders() {
     const divs = document.querySelectorAll(".card-holder");
     const width = window.innerWidth;
 
     divs.forEach(function(div) {
         div.style.width = (width < 992) ? "auto" : "revert-layer";
     });
-}
+}*/
 
 function changeModalType() {
     if (smallScreenMobileOS || equalScreen) {
@@ -772,4 +772,4 @@ function changeModalType() {
 
 changeModalType();
 
-window.addEventListener("resize", screenResizeCardHolders);
+//window.addEventListener("resize", screenResizeCardHolders);
