@@ -8,7 +8,7 @@ const servicesList = {
 			},
 			{
 				"title": "Discursos de apertura",
-                "link": "https://docs.google.com/forms/d/e/1FAIpQLSfzWOwM5rpwwZdCIyWn4Mbsgtp8xrhULsjoq7QNzkH8QbUzIg/viewform",
+                "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/7",
 				"icon": "speaker"
 			}			
         ],
@@ -20,7 +20,7 @@ const servicesList = {
             },*/
 			{
                 "title": "Entrenamientos de Discursos Elevadores y Narración (storytelling)",
-                "link": "https://docs.google.com/forms/d/e/1FAIpQLSdpZ1Add6n9rRvqy3zEE4P1HBDL09HYW8j8Gstywg_SZT2P2w/viewform",
+                "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/8",
 				"icon": "chalkboard-teacher-solid"
 			}
 		]

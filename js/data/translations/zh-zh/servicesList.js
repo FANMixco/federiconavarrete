@@ -8,7 +8,7 @@ const servicesList = {
 			},
 			{
 				"title": "主题报告（英语或西班牙语）",
-                "link": "https://docs.google.com/forms/d/e/1FAIpQLSd98BjmX0KCrie2gnArng8vnbFCWYQeGxixAUSMJguXKF0i2A/viewform",
+                "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/5",
 				"icon": "speaker"
 			}
 		],
@@ -20,7 +20,7 @@ const servicesList = {
             },*/
 			{
                 "title": "电梯推介和讲故事培训（英语或西班牙语）",
-                "link": "https://docs.google.com/forms/u/1/d/e/1FAIpQLScJTL_QYjtI8f_BWZSqqxQKfnHrCzmgQ9bGp45EJqqUgdxiCg/viewform",
+                "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/6",
 				"icon": "chalkboard-teacher-solid"
 			}
 		]
