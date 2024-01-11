@@ -138,6 +138,48 @@ const seenOnList = {
 				"link": "https://shorturl.at/coxy4",
 				"image": "contest-6",
                 "label": "下载链接"
+			},
+			{ 
+				"title": "Diario El Salvador",
+				"link": "https://shorturl.at/iyBQ0",
+				"image": "contest-24",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Joven 360",
+				"link": "https://shorturl.at/stNRY",
+				"image": "contest-25",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Guanacos.com",
+				"link": "https://shorturl.at/gtCZ4",
+				"image": "contest-26",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "La Prensa Gráfica",
+				"link": "https://shorturl.at/cikL5",
+				"image": "contest-27",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Universidad Don Bosco",
+				"link": "https://shorturl.at/wMQRS",
+				"image": "contest-28",
+                "label": "阅读更多"
+			},
+			{ 
+				"title": "Politechnika Lodzka",
+				"link": "https://shorturl.at/eoFJ3",
+				"image": "contest-29",
+                "label": "下载链接"
+			},
+			{ 
+				"title": "Radio Lodz",
+				"link": "https://bit.ly/3O1b6DT",
+				"image": "contest-30",
+                "label": "阅读更多"
 			}
     ]
 };

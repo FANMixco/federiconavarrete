@@ -138,6 +138,48 @@ const seenOnList = {
 				"link": "https://shorturl.at/coxy4",
 				"image": "contest-6",
                 "label": "Download link"
+			},
+			{ 
+				"title": "Diario El Salvador",
+				"link": "https://shorturl.at/iyBQ0",
+				"image": "contest-24",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Joven 360",
+				"link": "https://shorturl.at/stNRY",
+				"image": "contest-25",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Guanacos.com",
+				"link": "https://shorturl.at/gtCZ4",
+				"image": "contest-26",
+                "label": "Read more"
+			},
+			{ 
+				"title": "La Prensa Gráfica",
+				"link": "https://shorturl.at/cikL5",
+				"image": "contest-27",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Universidad Don Bosco",
+				"link": "https://shorturl.at/wMQRS",
+				"image": "contest-28",
+                "label": "Read more"
+			},
+			{ 
+				"title": "Politechnika Lodzka",
+				"link": "https://shorturl.at/eoFJ3",
+				"image": "contest-29",
+                "label": "Download link"
+			},
+			{ 
+				"title": "Radio Lodz",
+				"link": "https://bit.ly/3O1b6DT",
+				"image": "contest-30",
+                "label": "Read more"
 			}
     ]
 };
