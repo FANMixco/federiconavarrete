@@ -53,6 +53,9 @@ function screenResize() {
   const width = window.innerWidth;
 
   element.className = (width < 1200) ? "container-fluid" :  "container";
+
+  if (document.getElementById('contactMeI'))
+    iFrameHResize('contactMeI');
 }
 
 // Call the function when the page loads

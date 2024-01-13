@@ -750,7 +750,7 @@ function changeModalType() {
         }
 
         let landscape = window.matchMedia("(orientation: landscape)");
-        if (landscape.matches || equalScreen)  {
+        if (landscape.matches || equalScreen || actualDev === "Watch") {
             const mModalsH = document.getElementsByClassName("mFullScreenH");
             for (let i = 0; i < mModalsH.length; i++) {
                 mModalsH[i].classList.remove("modal-xl");
