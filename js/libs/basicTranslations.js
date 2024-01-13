@@ -88,14 +88,15 @@ function loadTranslations() {
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
                 let gPreview = document.getElementById('gPreview');
-                let hPreviewHeight = '450px'; 
+                const hFrameGeneric = 450;
+                let hPreviewHeight = `${hFrameGeneric}px`; 
                 if (smallScreenMobileOS || equalScreen) {
                     let portrait = window.matchMedia("(orientation: portrait)");
                     let height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
                     hPreviewHeight = `${height}px`;
                 }
                 else if (devicePortraitAndLong) 
-                    hPreviewHeight = `${450 * 1.5}px`;
+                    hPreviewHeight = `${hFrameGeneric * 1.5}px`;
                 gPreview.style.height = hPreviewHeight;
             });
         });
