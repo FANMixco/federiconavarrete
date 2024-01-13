@@ -18,6 +18,10 @@ const deviceType = () => {
     ) {
       return "Tablet";
     } else if (
+        ua.match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch/g) !== null
+    ) {
+        return "Watch";
+    } else if (
       ua.match(/iphone|ipod/i) !== null ||
       ua.match(/mobile|android|ip(hone|od)|windows phone|iemobile|blackberry|silk-accelerated|(hpw|web)os|opera m(obi|ini)|tizen|harmonyos|kaios/) !== null
     ) {
@@ -27,7 +31,9 @@ const deviceType = () => {
     return "Desktop";
 };
 
-const smallScreenMobileOS = deviceType() === "Smartphone";
+const actualDev = deviceType();
+const smallScreenMobileOS = (actualDev === "Smartphone" || actualDev === "Watch");
+let devicePortraitAndLong = (actualDev === "Desktop" || actualDev === "Tablet") && window.innerHeight > window.innerWidth;
 const equalScreen = window.innerWidth == window.innerHeight;
 
 function hFixCMenu() {
@@ -69,6 +75,8 @@ function iFrameHResize(id, percentage = 0.7) {
         document.getElementById(id).style.height = `${document.documentElement.clientHeight * 0.7}px`;
     else if (landscape.matches)
         document.getElementById(id).style.height = `${document.documentElement.clientHeight * percentage}px`;
+    else if (devicePortraitAndLong)
+        document.getElementById(id).style.height = `${heightIFrame * 1.2}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
