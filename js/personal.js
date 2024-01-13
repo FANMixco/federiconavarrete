@@ -54,6 +54,8 @@ function screenResize() {
 
   element.className = (width < 1200) ? "container-fluid" :  "container";
 
+  devicePortraitAndLong = (actualDev === "Desktop" || actualDev === "Tablet") && window.innerHeight > window.innerWidth;
+
   if (document.getElementById('contactMeI'))
     iFrameHResize('contactMeI');
 }
