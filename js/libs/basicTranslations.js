@@ -37,7 +37,7 @@ function addExtraIcons() {
     });
   
     [...document.getElementsByClassName('btn-book')].forEach(function(element) {
-      element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="19" width="19" ${dStyle}`)}&nbsp;&nbsp;` + element.innerHTML;
+      element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="18" width="18" ${dStyle}`)}&nbsp;&nbsp;` + element.innerHTML;
     });
 }
 
