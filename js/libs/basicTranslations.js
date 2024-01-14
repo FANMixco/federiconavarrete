@@ -18,6 +18,7 @@ getScript(`${langLoc}${lang}/generics.js`)
             // handle result
             getScript(`${langLoc}${lang}/basicInfo.js`).then(() => {
                 loadTranslationsWithRetry(loadBasicInfo, function(err, result) { });
+                addExtraIcons();
             })
             .catch((e) => { 
                 console.error(e);
@@ -28,6 +29,17 @@ getScript(`${langLoc}${lang}/generics.js`)
 .catch((e) => {
     console.error(e);
 });
+
+function addExtraIcons() {
+    const dStyle = `style='filter: invert(1)'`;
+    [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
+      element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="22" width="22" ${dStyle}`)}&ensp;` + element.innerHTML;
+    });
+  
+    [...document.getElementsByClassName('btn-book')].forEach(function(element) {
+      element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="19" width="19" ${dStyle}`)}&nbsp;&nbsp;` + element.innerHTML;
+    });
+}
 
 // the retry function that takes a callback
 function retry(maxRetries, delay, fn, callback) {
