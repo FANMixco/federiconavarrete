@@ -63,7 +63,7 @@ function screenResize() {
 function addExtraIcons() {
   const dStyle = `style='filter: invert(1)'`;
   [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
-    element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="26" width="26" ${dStyle}`)}&ensp;` + element.innerHTML;
+    element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="24" width="24" ${dStyle}`)}&ensp;` + element.innerHTML;
   });
 
   [...document.getElementsByClassName('btn-book')].forEach(function(element) {
