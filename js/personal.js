@@ -10,7 +10,7 @@ function onReadyPersonal() {
     
     spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
     
-    [...document.getElementsByClassName('.ignore-click')].forEach(function(element) {
+    [...document.getElementsByClassName('ignore-click')].forEach(function(element) {
         element.addEventListener('click', x => false);
     });
 }
@@ -60,8 +60,21 @@ function screenResize() {
     iFrameHResize('contactMeI');
 }
 
+function addExtraIcons() {
+  const dStyle = `style='filter: invert(1)'`;
+  [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
+    element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="26" width="26" ${dStyle}`)}&ensp;` + element.innerHTML;
+  });
+
+  [...document.getElementsByClassName('btn-book')].forEach(function(element) {
+    element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="19" width="19" ${dStyle}`)}&ensp;` + element.innerHTML;
+  });
+}
+
 // Call the function when the page loads
 screenResize();
 
 // Call the function when the window is resized
 window.addEventListener("resize", screenResize);
+
+addExtraIcons();

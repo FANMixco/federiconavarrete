@@ -494,3 +494,9 @@ a.text-material-link-dark:active {
     width: 100%!important;
     height: 100%!important;
 }
+
+.btn-preview, .btn-book {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
