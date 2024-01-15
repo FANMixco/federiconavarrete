@@ -537,3 +537,11 @@ a.text-material-link-dark:active {
 .icon-size-34 {
     font-size: 34px;
 }
+
+.closeModal {
+    margin-left: -1px!important
+}
+
+.stores {
+    width: 10rem
+}
