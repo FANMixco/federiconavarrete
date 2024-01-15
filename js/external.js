@@ -11,6 +11,11 @@ function onReadyExternal() {
     .catch((e) => {
         console.error(e);
     });
+
+    getScript('https://cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js')
+    .catch((e) => {
+        console.error(e);
+    });
 }
 
 function loadAnalytics() {
