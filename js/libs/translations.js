@@ -173,7 +173,7 @@ function loadServices() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
-                    let title = getCard(elem.link, `${iconsPath}${elem.icon}.svg`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
+                    let title = getCard(elem.link, `${elem.icon}`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
 
                     items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
@@ -206,17 +206,17 @@ function loadServices() {
 function getCarousel(items, cId) {
     return `<div class="container-fluid" id="div${cId}">
     <div id="${cId}" class="carousel slide">
-    <div class="carousel-inner">
-        ${items}
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#${cId}" data-bs-slide="prev">
-        <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#${cId}" data-bs-slide="next">
-        <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
-    </button>
-    </div>
-</div>`;
+        <div class="carousel-inner">
+            ${items}
+        </div>
+        <a class="carousel-control-prev text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev">
+            <span class="text-muted icon-chevron-left-solid"></span>
+        </a>
+        <a class="carousel-control-next text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next">
+            <span class="text-muted icon-chevron-right-solid"></span>
+        </a>
+        </div>
+    </div>`;
 }
 
 function loadAwards() {
@@ -230,7 +230,7 @@ function loadAwards() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `${iconsPath}trophy.svg`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true, elem.type, elem.link);
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `trophy`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true, elem.type, elem.link);
 
                     availableLinks.push({ 
                         id: i,
@@ -341,11 +341,11 @@ function loadPersonalProjects() {
 function getVideoCarousel(items, id) {
     return `<div id="${id}" class="carousel slide">
     <div class="carousel-inner">${items}</div>
-    <a class="carousel-control-prev carousel-control-prev-video" href="#${id}" role="button" data-bs-slide="prev">
-       <img class="text-muted size13" alt="back" loading="lazy" src="img/icons/website/chevron-left-solid.svg" />
+    <a class="carousel-control-prev carousel-control-prev-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="prev">
+        <span class="text-muted icon-chevron-left-solid"></span>
     </a>
-    <a class="carousel-control-next carousel-control-next-video" href="#${id}" role="button" data-bs-slide="next">
-       <img class="text-muted size13" alt="forward" loading="lazy" src="img/icons/website/chevron-right-solid.svg" />
+    <a class="carousel-control-next carousel-control-next-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="next">
+        <span class="text-muted icon-chevron-right-solid"></span>
     </a>
  </div>`;
 }
@@ -464,8 +464,8 @@ function loadSocialMedias() {
             const socialMediaBasicExtended = document.getElementById('social-medias-extended-list');
 
             socialMedia.forEach(item => {
-                socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
-                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${iconsPath}${item.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
+                socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, "btn-footer", false, "iconFooter"));
+                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, "btn-footer", false, "iconFooter"));
             });
             socialMediaBasicExtended.innerHTML += getBtnShare();
 
@@ -550,7 +550,7 @@ function getHobbyImg(item) {
         externalClass = item.externalClass;
     }
 
-    return getImage(item.title, "#", `${iconsPath}${item.icon}.svg`, false, item.isIcon, externalClass, true);
+    return getImage(item.title, "#", `${item.icon}`, true, item.isIcon, externalClass, true);
 }
 
 function addIFrameModal() {
@@ -725,7 +725,7 @@ function getBtnShare() {
 
 function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
     extra += `title="${genericTranslations.extras}" alt="${genericTranslations.extras}"`;
-    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getImgBasicTag(`${iconsPath}plus.svg`, lazyLoading, clsImg, '', 'extra', imgExtra)), extra);
+    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon(`plus`)), extra);
 }
 
 function getCItem(extras) {

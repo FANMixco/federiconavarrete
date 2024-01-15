@@ -290,6 +290,13 @@ a.text-material-link-dark:active {
     outline: inherit
 }
 
+.btn-footer {
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn-footer:focus img,.btn-home:focus img, .btn-footer:active img,.btn-home:active img {
     filter: invert(0%)
 }
@@ -495,7 +502,7 @@ a.text-material-link-dark:active {
     height: 100%!important;
 }
 
-.btn-preview, .btn-book {
+.btn-preview, .btn-book, .card-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -507,4 +514,34 @@ a.text-material-link-dark:active {
         align-items: center;
         justify-content: center;
     }
+}
+
+.text-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-size-40 {
+    font-size: 40px;
+}
+
+.icon-size-46 {
+    font-size: 46px;
+}
+
+.icon-size-26 {
+    font-size: 26px;
+}
+
+.icon-size-38 {
+    font-size: 38px;
+}
+
+.icon-size-22 {
+    font-size: 22px;
+}
+
+.icon-size-34 {
+    font-size: 34px;
 }
