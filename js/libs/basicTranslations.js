@@ -33,11 +33,13 @@ getScript(`${langLoc}${lang}/generics.js`)
 function addExtraIcons() {
     const dStyle = `style='filter: invert(1)'`;
     [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
-      element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="22" width="22" ${dStyle}`)}&ensp;` + element.innerHTML;
+        element.innerHTML = getFinalIcon(`gallery`, 21) + '&ensp;' + element.innerHTML;
+        //element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="22" width="22" ${dStyle}`)}&ensp;` + element.innerHTML;
     });
   
     [...document.getElementsByClassName('btn-book')].forEach(function(element) {
-      element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="18" width="18" ${dStyle}`)}&nbsp;&nbsp;` + element.innerHTML;
+        element.innerHTML = getFinalIcon(`download`, 21) + '&nbsp;&nbsp;' + element.innerHTML;
+        //element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="18" width="18" ${dStyle}`)}&nbsp;&nbsp;` + element.innerHTML;
     });
 }
 
@@ -184,7 +186,7 @@ function loadBasicInfo() {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
         });
 
-        if (favBook.isVisible) { 
+        if (favBook.isVisible) {
             favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title, 'height="24" width="24"');
         }
         else {

@@ -83,7 +83,7 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     let targetBlank = isTargetBlank ? `target="_blank"` : "";
     let ignoreClick = isIgnoredClick ? "ignore-click" : "";
     let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
-    let img = isIcon ? `<i class="${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
+    let img = isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
     return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `${extras} title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
 }
@@ -104,7 +104,7 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth,
 
     return `${lStart}<div class="card card-ser ${cOption}" ${style}>
     <div class="card-body text-center">
-      <h5 class="card-title"><div class='${iOption}'>${getImgBasicTag(icon, lazyLoading, 'mr-2', '', title, `style='height:${iHeight}px;width:${iWidth}px; filter: invert(${invert});'`)}</div></h5>
+      <h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight, `filter: invert(${invert});')`)}</div></h5>
       <br />
       <h6 class="card-subtitle mb-2">${title}</h6>
     </div>
@@ -112,11 +112,12 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth,
 }
 
 function getActionBtn(link, iconsPath, icon, title, extras = "") {
-    return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
+    return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
+    //return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
 }
 
 function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
-    return getInLi(getImage(btnAction, action, `${iconsPath}${icon}.svg`, isTargetBlank, false, "btn-footer", false, "iconFooter"));
+    return getInLi(getImage(btnAction, action, `${icon}`, isTargetBlank, true, "btn-footer", false, "iconFooter"));
 }
 
 function getInLi(body, extraCls = '', extras = '') {
@@ -124,13 +125,19 @@ function getInLi(body, extraCls = '', extras = '') {
 }
 
 function getHMenu(extras = "") {
-    return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
+    return getFinalIcon('bars-solid');
+    //return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
 }
 
 function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
     let idT = (id != '') ? `id="${id}"` : '';
     let clsT = (imgCls != '') ? `class="${imgCls}"` : '';
     return `<img ${idT} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
+}
+
+function getFinalIcon(id, fontSize = '', extraCls = '') {
+    const font = (fontSize) ? `style="font-size: ${fontSize}px; max-height: ${fontSize}px;"` : '';
+    return `<span class="icon-${id} ${extraCls}" ${font}></span>`;
 }
 
 function getCleanTitle(alt) {
