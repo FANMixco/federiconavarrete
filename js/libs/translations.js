@@ -209,12 +209,12 @@ function getCarousel(items, cId) {
         <div class="carousel-inner">
             ${items}
         </div>
-        <a class="carousel-control-prev text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous">
+        <button class="carousel-control-prev text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous">
             <span class="text-muted icon-chevron-left-solid"></span>
-        </a>
-        <a class="carousel-control-next text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next">
+        </button>
+        <button class="carousel-control-next text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next">
             <span class="text-muted icon-chevron-right-solid"></span>
-        </a>
+        </button>
         </div>
     </div>`;
 }
@@ -341,12 +341,12 @@ function loadPersonalProjects() {
 function getVideoCarousel(items, id) {
     return `<div id="${id}" class="carousel slide">
     <div class="carousel-inner">${items}</div>
-    <a class="carousel-control-prev carousel-control-prev-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous">
+    <button class="carousel-control-prev carousel-control-prev-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous">
         <span class="text-muted icon-chevron-left-solid"></span>
-    </a>
-    <a class="carousel-control-next carousel-control-next-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next">
+    </button>
+    <button class="carousel-control-next carousel-control-next-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next">
         <span class="text-muted icon-chevron-right-solid"></span>
-    </a>
+    </button>
  </div>`;
 }
 
