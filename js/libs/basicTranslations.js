@@ -31,7 +31,7 @@ getScript(`${langLoc}${lang}/generics.js`)
 });
 
 function addExtraIcons() {
-    const dStyle = `style='filter: invert(1)'`;
+    //const dStyle = `style='filter: invert(1)'`;
     [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
         element.innerHTML = getFinalIcon(`gallery`, 21) + '&ensp;' + element.innerHTML;
         //element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="22" width="22" ${dStyle}`)}&ensp;` + element.innerHTML;

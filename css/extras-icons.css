@@ -1,4 +1,4 @@
-.size40 {
+/*.size40 {
     width: 40px;
     height: 40px;
     filter: invert(100%);
@@ -49,18 +49,18 @@
     margin-top: -7px
 }
 
+.size14 {
+    width: 14px;
+    height: 16px;
+    filter: invert(100%)
+}*/
+
 .closeModal {
     margin-left: -1px!important
 }
 
 .stores {
     width: 10rem
-}
-
-.size14 {
-    width: 14px;
-    height: 16px;
-    filter: invert(100%)
 }
 
 #elSalvadorIcon {

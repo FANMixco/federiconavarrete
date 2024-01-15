@@ -83,7 +83,7 @@ function loadReviews() {
                     ${getInnerTitle(item.date)}
                     <div id="review${currentReview}PDF">${cDiv}
                     <div class="centerText">
-                        ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`)}&nbsp;${genericTranslations.download}`, tBlank)}
+                        ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}
                     ${cDiv}`;
                 }
                 else {
