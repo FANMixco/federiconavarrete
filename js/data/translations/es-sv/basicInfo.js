@@ -13,7 +13,7 @@ const basicInfo = {
 	},
 	"favPodcast": {
 		"link": 'https://spoti.fi/3cD1743',
-		"title": "Cyber Prophets <small>(en inglés)</small>",
+		"title": "Cyber Prophets&nbsp;<small>(en inglés)</small>",
 		"isVisible": true
 	},
 	"favBook": {
