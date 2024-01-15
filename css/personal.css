@@ -502,18 +502,10 @@ a.text-material-link-dark:active {
     height: 100%!important;
 }
 
-.btn-preview, .btn-book, .card-icon {
+.btn-preview, .btn-book, .card-icon, .btn-home {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-@media only screen and (min-width: 1401px), only screen and (min-width: 446px) and (max-width: 767px) {
-    .btn-home {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 .text-title {
