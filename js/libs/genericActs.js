@@ -104,7 +104,7 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth,
 
     return `${lStart}<div class="card card-ser ${cOption}" ${style}>
     <div class="card-body text-center">
-      <h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight, `filter: invert(${invert});')`)}</div></h5>
+      <h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5>
       <br />
       <h6 class="card-subtitle mb-2">${title}</h6>
     </div>

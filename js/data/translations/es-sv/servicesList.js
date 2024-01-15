@@ -4,7 +4,7 @@ const servicesList = {
 			{
 				"title": "Consultoría de TICs",
                 "link": "https://form.jotform.com/202595846674065",
-				"icon": "user-tie-solid"
+				"icon": "laptop-code-solid"
 			},
 			{
 				"title": "Discursos de apertura",

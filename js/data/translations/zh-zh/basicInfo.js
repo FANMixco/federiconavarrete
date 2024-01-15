@@ -17,7 +17,7 @@ const basicInfo = {
 		"isVisible": true
 	},
 	"favBook": {
-		"link": "https://amzn.to/3zdbI0Y",
+		"link": "https://bit.ly/3ShazAe",
 		"title": "萨尔瓦多的历久弥新故事 （英语）",
 		"isVisible": true
 	},

@@ -17,7 +17,7 @@ const basicInfo = {
 		"isVisible": true
 	},
 	"favBook": {
-		"link": "https://amzn.to/3zdbI0Y",
+		"link": "https://a.co/d/4PLMTJM",
 		"title": "Timeless Stories of El Salvador",
 		"isVisible": true
 	},

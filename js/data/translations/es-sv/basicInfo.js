@@ -13,12 +13,12 @@ const basicInfo = {
 	},
 	"favPodcast": {
 		"link": 'https://spoti.fi/3cD1743',
-		"title": "Cyber Prophets<br /><small>(en inglés)</small>",
+		"title": "Cyber Prophets <small>(en inglés)</small>",
 		"isVisible": true
 	},
 	"favBook": {
-		"link": "https://amzn.to/3nnbn4e",
-		"title": "Timeless Stories of El Salvador<br /><small>(en inglés)</small>",
+		"link": "https://a.co/d/h7yXzXb",
+		"title": "Historias Eternas de El Salvador",
 		"isVisible": true
 	},
 	"telephone": {
