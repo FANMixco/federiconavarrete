@@ -83,7 +83,7 @@ function loadReviews() {
                     ${getInnerTitle(item.date)}
                     <div id="review${currentReview}PDF">${cDiv}
                     <div class="centerText">
-                        ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getImgBasicTag(`${iconsPath}download.svg`, lazyLoading, "mr-2 btnIcons", '', 'download', 'style="filter: invert(0)!important" height="24" width="24"')}&nbsp;${genericTranslations.download}`, tBlank)}
+                        ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`)}&nbsp;${genericTranslations.download}`, tBlank)}
                     ${cDiv}`;
                 }
                 else {
@@ -494,7 +494,7 @@ function loadSocialMedias() {
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
-                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, elem.link, `${iconsPath}${elem.icon}.svg`, true, false, "btn-footer", false, "iconFooter"));
+                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, elem.link, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
                 });
             }
         }
