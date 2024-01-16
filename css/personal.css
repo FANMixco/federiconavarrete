@@ -558,3 +558,7 @@ a.text-material-link-dark:active {
     background-color: transparent;
     border: none;
 }
+
+#menuExpander {
+    padding-top: 16px;
+}
