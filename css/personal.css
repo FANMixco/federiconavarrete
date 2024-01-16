@@ -545,3 +545,16 @@ a.text-material-link-dark:active {
 .stores {
     width: 10rem
 }
+
+.btn-nav {
+    background-color: transparent;
+    border: none;
+    font-size: x-large!important;
+}
+
+.btn-nav:focus,
+.btn-nav:hover {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
