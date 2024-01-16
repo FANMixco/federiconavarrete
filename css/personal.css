@@ -559,6 +559,26 @@ a.text-material-link-dark:active {
     border: none;
 }
 
-#menuExpander {
-    padding-top: 16px!important;
+/* This will apply 0.1 padding to the navbar when the screen width is less than 576px (the sm breakpoint) */
+@media (max-width: 575.98px) {
+    .navbar {
+      padding-top: 0.1rem !important;
+      padding-bottom: 0.1rem !important;
+    }
+  }
+
+/* This will apply 0.2 padding to the navbar when the screen width is between 576px and 1200px (the sm and xl breakpoints) */
+@media (min-width: 576px) and (max-width: 1199.98px) {
+    .navbar {
+        padding-top: 0.2rem !important;
+        padding-bottom: 0.2rem !important;
+    }
+}
+
+/* This will apply the padding classes to the navbar when the screen width is greater than or equal to 1200px (the xl breakpoint) */
+@media (min-width: 1200px) {
+    .navbar {
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.5rem !important;
+    }
 }
