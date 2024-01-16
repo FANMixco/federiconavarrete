@@ -560,5 +560,5 @@ a.text-material-link-dark:active {
 }
 
 #menuExpander {
-    padding-top: 16px;
+    padding-top: 16px!important;
 }
