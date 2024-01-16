@@ -555,9 +555,9 @@ a.text-material-link-dark:active {
 .btn-nav:focus,
 .btn-nav:hover,
 .btn-nav:active {
-    outline: none;
-    background-color: transparent;
-    border: none;
+    outline: none!important;
+    background-color: transparent!important;
+    border: none!important;
 }
 
 /* This will apply 0.1 padding to the navbar when the screen width is less than 576px (the sm breakpoint) */
@@ -565,6 +565,14 @@ a.text-material-link-dark:active {
     .navbar {
       padding-top: 0.1rem !important;
       padding-bottom: 0.1rem !important;
+    }
+    
+    #menuExpander {
+        margin-left: -0.35rem!important;
+    }
+
+    #discoverIcon {
+        margin-right: -0.5rem!important;
     }
   }
 
