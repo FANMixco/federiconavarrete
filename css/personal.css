@@ -553,7 +553,8 @@ a.text-material-link-dark:active {
 }
 
 .btn-nav:focus,
-.btn-nav:hover {
+.btn-nav:hover,
+.btn-nav:active {
     outline: none;
     background-color: transparent;
     border: none;
