@@ -582,6 +582,10 @@ a.text-material-link-dark:active {
         padding-top: 0.2rem !important;
         padding-bottom: 0.2rem !important;
     }
+
+    #menuExpander, #discoverIcon {
+        font-size: xx-large!important;
+    }
 }
 
 /* This will apply the padding classes to the navbar when the screen width is greater than or equal to 1200px (the xl breakpoint) */
