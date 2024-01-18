@@ -32,10 +32,6 @@ iframe {
     text-shadow: 0 0 5px #263238
 }
 
-#videoCarousel, #carouselAwards, #carouselServices {
-    width: 100%
-}
-
 a#aBooksModal {
     color: #ffff8d!important
 }
@@ -596,8 +592,20 @@ a.text-material-link-dark:active {
     }
 }
 
-@media only screen and (max-width: 1000px) and (max-height: 460px) and (orientation: portrait) {
-    #carouselServices, #divcarouselAwards {
-        width: 90%;
+#videoCarousel, #carouselAwards, #carouselServices {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 460px) and (orientation: landscape) {
+    #videoCarousel, #carouselAwards, #carouselServices {
+        width: 90%!important;
+    }
+
+    #divcarouselAwards, #divcarouselServices, #publicSpeakingDiv, #uTubeDiv, #videoCarousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
     }
 }
