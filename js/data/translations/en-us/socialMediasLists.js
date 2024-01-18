@@ -3,6 +3,7 @@ const socialBasicList = {
 		{
 			"icon": "linkedin",
 			"title": "LinkedIn",
+			"id": "",
 			"link": "https://www.linkedin.com/in/federiconavarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
@@ -10,13 +11,15 @@ const socialBasicList = {
 		{
 			"icon": "youtube",
 			"title": "YouTube Channel",
-			"link": "https://youtube.com/@FedericoNavarrete",
+			"id": "uTubeLink",
+			"link": "https://www.youtube.com/@FedericoNavarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		},
 		{
 			"icon": "behance-brands",
 			"title": "Portfolio",
+			"id": "",
 			"link": "https://www.behance.net/fanmixco",
 			"isIcon": false,
 			"externalClass": "iconFooter"
@@ -24,6 +27,7 @@ const socialBasicList = {
 		{
 			"icon": "tiktok",
 			"title": "TikTok",
+			"id": "",
 			"link": "https://www.tiktok.com/@federicostories",
 			"isIcon": false,
 			"externalClass": "iconFooter"

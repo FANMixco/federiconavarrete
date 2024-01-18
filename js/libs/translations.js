@@ -465,7 +465,7 @@ function loadSocialMedias() {
 
             socialMedia.forEach(item => {
                 socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, "btn-footer", false, "iconFooter"));
-                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, "btn-footer", false, "iconFooter"));
+                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
             });
             socialMediaBasicExtended.innerHTML += getBtnShare();
 
@@ -478,13 +478,13 @@ function loadSocialMedias() {
                     title: genericTranslations.knowMoreTitle,
                     text: genericTranslations.knowMoreBody,
                     url: window.location.href
-                  })
-                    .then(() => {
-                      console.log('Shared successfully!');
-                    })
-                    .catch((error) => {
-                      console.error('Error sharing:', error);
-                    });
+                })
+                .then(() => {
+                    console.log('Shared successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error sharing:', error);
+                });
             });
 
             if (socialOthersList.isVisible) {
@@ -501,6 +501,12 @@ function loadSocialMedias() {
         else {
             const aroundWeb = document.getElementById('aroundWeb');
             aroundWeb.classList.add(nVis);
+        }
+
+        if (smallScreenMobileOS) {
+            [...document.getElementsByClassName('uTubeLink')].forEach(function(element) {
+                element.href = element.href.replace('www', 'm');    
+            });
         }
     }
     catch (e) { return e; }
