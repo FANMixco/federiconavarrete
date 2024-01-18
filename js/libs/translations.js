@@ -769,3 +769,4 @@ function changeModalType() {
 changeModalType();
 
 window.matchMedia("(orientation: portrait)").addEventListener("change", changeModalType);
+window.matchMedia("(orientation: landscape)").addEventListener("change", changeModalType);
