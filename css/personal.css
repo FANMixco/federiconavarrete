@@ -498,6 +498,10 @@ a.text-material-link-dark:active {
     height: 100%!important;
 }
 
+#profile-div {
+    margin: auto;
+}
+
 .btn-preview, .btn-book, .card-icon, .btn-home {
     display: inline-flex;
     align-items: center;
