@@ -599,7 +599,7 @@ a.text-material-link-dark:active {
 
 @media only screen and (max-width: 1000px) and (max-height: 460px) and (orientation: landscape) {
     #videoCarousel, #carouselAwards, #carouselServices {
-        width: 90%!important;
+        width: 80%!important;
     }
 
     #divcarouselAwards, #divcarouselServices, #publicSpeakingDiv, #uTubeDiv, #videoCarousel {
