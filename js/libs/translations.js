@@ -768,4 +768,4 @@ function changeModalType() {
 
 changeModalType();
 
-window.addEventListener("change", changeModalType());
+window.addEventListener("change", changeModalType);
