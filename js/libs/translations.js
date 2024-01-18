@@ -768,4 +768,4 @@ function changeModalType() {
 
 changeModalType();
 
-//window.addEventListener("resize", screenResizeCardHolders);
+window.addEventListener("change", changeModalType());
