@@ -747,6 +747,25 @@ function getCItem(extras) {
     });
 }*/
 
+function rotatedModal() {
+    //Clean old changes
+    if (smallScreenMobileOS || equalScreen) {
+        const mModals = document.getElementsByClassName("mFullScreen");
+        for (let i = 0; i < mModals.length; i++) {
+            mModals[i].classList.remove("modal-fullscreen");
+        }
+        const mModalsH = document.getElementsByClassName("mFullScreenH");
+        for (let i = 0; i < mModalsH.length; i++) {
+            mModalsH[i].classList.remove("modal-fullscreen");
+        }
+    }
+
+    if (document.getElementById('contactMeI'))
+        iFrameHResize('contactMeI');
+
+    changeModalType();
+}
+
 function changeModalType() {
     if (smallScreenMobileOS || equalScreen) {
         const mModals = document.getElementsByClassName("mFullScreen");
@@ -768,5 +787,9 @@ function changeModalType() {
 
 changeModalType();
 
-window.matchMedia("(orientation: portrait)").addEventListener("change", changeModalType);
-window.matchMedia("(orientation: landscape)").addEventListener("change", changeModalType);
+if (window.matchMedia) {
+    window.matchMedia("(orientation: portrait)").addEventListener("change", rotatedModal);
+    window.matchMedia("(orientation: landscape)").addEventListener("change", rotatedModal);
+} else {
+    window.addEventListener("orientationchange", rotatedModal);
+}

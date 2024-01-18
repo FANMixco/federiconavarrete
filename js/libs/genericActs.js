@@ -77,6 +77,8 @@ function iFrameHResize(id, percentage = 0.7) {
         document.getElementById(id).style.height = `${document.documentElement.clientHeight * percentage}px`;
     else if (devicePortraitAndLong)
         document.getElementById(id).style.height = `${heightIFrame * 1.2}px`;
+    else
+        document.getElementById(id).style.height = `${heightIFrame * 0.8}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
