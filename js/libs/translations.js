@@ -464,7 +464,7 @@ function loadSocialMedias() {
             const socialMediaBasicExtended = document.getElementById('social-medias-extended-list');
 
             socialMedia.forEach(item => {
-                socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, "btn-footer", false, "iconFooter"));
+                socialMediaBasic.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
                 socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, item.link, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
             });
             socialMediaBasicExtended.innerHTML += getBtnShare();
