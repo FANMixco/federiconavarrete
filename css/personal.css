@@ -369,6 +369,14 @@ a.text-material-link-dark:active {
         max-width: 95%;
         margin: auto;
     }
+
+    #divcarouselAwards, #divcarouselServices, #publicSpeakingDiv, #uTubeDiv, #videoCarousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
     .card-ser {
         width: 100%!important;
     }
