@@ -627,6 +627,10 @@ a.text-material-link-dark:active {
         width: 80%!important;
     }
 
+    h2 {
+        word-wrap: break-word;
+    }
+
     #divcarouselAwards, #divcarouselServices, #publicSpeakingDiv, #uTubeDiv, #videoCarousel {
         display: flex;
         align-items: center;
