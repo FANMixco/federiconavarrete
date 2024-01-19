@@ -75,7 +75,7 @@ const socialOthersList = {
 		},
 		{
 			"icon": "blogger-brands",
-			"title": "Blog de Supernova IC (inglés)",
+			"title": "Blog de Supernova IC (en inglés)",
 			"link": "https://supernovaic.blogspot.com/",
 			"isIcon": false,
 			"externalClass": "iconFooter"
