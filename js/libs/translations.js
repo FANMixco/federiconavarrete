@@ -49,7 +49,7 @@ setTimeout(function () {
 }, 1000);
 
 function loadBookPreview() {
-    let bookPreview = document.getElementById("bookPreview");
+    const bookPreview = document.getElementById("bookPreview");
 
     bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', 'https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3', `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
 }
@@ -63,13 +63,13 @@ function loadReviews() {
 
             reviews.forEach(function(item, index) {
 
-                let name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
+                const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
 
-                let currentReview = index + 1;
+                const currentReview = index + 1;
 
                 let rTmp = `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`;
 
-                let review = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}
+                const review = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}
                                 ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
                                 ${cDiv}`;
 
@@ -321,11 +321,11 @@ function loadPersonalProjects() {
     try {
         const personalProjectsDiv = document.getElementById('personalProjects');
         personalProjects.forEach(item => {
-            let isActive = item.isActive ? " active" : "";
+            const isActive = item.isActive ? " active" : "";
 
-            let hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
+            const hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
 
-            let pp = `${getCItem(isActive)}
+            const pp = `${getCItem(isActive)}
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
                     ${getH4Tag(`${getFLink("text-material-link-dark", item.link, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}
@@ -391,7 +391,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
             }
             cUTube++;
         });
-    }   
+    }
 }
 
 function loadYouTubeVideos() {
@@ -412,17 +412,45 @@ function loadYouTubeVideos() {
     catch (e) { return e; }
 }
 
+function loadDivPresentations(presentations, divPicture, divCar) {
+    let cPresentation = 0;
+    if (smallScreenMobileOS || equalScreen) {
+        let items = '';
+        presentations.forEach(item => {
+            let vTmp = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+            vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
+            vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
+            items += vTmp;
+            cPresentation++;
+        });
+        items = getVideoCarousel(items, divCar);
+        divPicture.innerHTML = items;
+        presentations.forEach(item => {
+            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
+        });
+        new bootstrap.Carousel(`#${divCar}`);
+    }
+    else {
+        presentations.forEach(item => {
+            const ppt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+            divPPTs.innerHTML += ppt;
+            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
+        });
+    }   
+}
+
 function loadPresentations() {
     try {
         const { presentations, isVisible } = presentationsLinks;
 
         const divPPTs = document.getElementById('divPPTs');
         if (isVisible) {
-            presentations.forEach(item => {
+            /*presentations.forEach(item => {
                 let ppt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
                 divPPTs.innerHTML += ppt;
                 setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
-            });
+            });*/
+            loadDivPresentations(presentations, divPPTs, 'presentationsDiv');
         }
         else {
             const hPresentations = document.getElementById('hPresentations');
@@ -593,9 +621,9 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     //let imgBookSize = '';
     let imgSize = '';
 
-    let imgTemp = document.getElementById(imgID);
-    let srcWebP = document.getElementById(`srcWebP${imgID}`);
-    let srcJPG = document.getElementById(`srcJPG${imgID}`);
+    const imgTemp = document.getElementById(imgID);
+    const srcWebP = document.getElementById(`srcWebP${imgID}`);
+    const srcJPG = document.getElementById(`srcJPG${imgID}`);
     //let divBook = document.getElementById("myBookDiv");
     //divBook.classList.add(nVis);
 
