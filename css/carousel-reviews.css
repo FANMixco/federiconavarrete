@@ -1,0 +1,30 @@
+#carouselReviews .carousel-inner .carousel-item .img-box {
+    width: 135px;
+    height: 135px
+}
+
+#carouselReviews .carousel-control-prev {
+    left: -100px
+}
+
+#carouselReviews .carousel-control-next {
+    right: -100px
+}
+
+#carouselReviews #c-indicators {
+    position: inherit!important;
+}
+
+@media (min-width:320px) and (max-width:640px) {
+    #carouselReviews .carousel-inner .carousel-item p {
+        font-size: 14px
+    }
+
+    #carouselReviews .carousel-control-prev {
+        left: -40px
+    }
+
+    #carouselReviews .carousel-control-next {
+        right: -40px
+    }
+}
