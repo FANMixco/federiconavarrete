@@ -8,6 +8,7 @@ const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
 const cDiv = '</div>';
 const w100 = 'class="w-100"';
+const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 
 //getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
@@ -25,17 +26,17 @@ getScript(`${langLoc}${lang}/presentationsLists.js`).then(() => { loadVideosAndP
 
 getScript(`${langLoc}${lang}/organizedEvents.js`).then(() => { 
     const { events, isVisible } = organizedEvents;
-    loadImgSection(events, isVisible, 'divEvents', 'divEvents', imgLocPortfolio, 'Łódźarts');
+    loadImgSection(events, isVisible, 'divEvents', 'divEvents', imgLocPortfolio, 'Łódźarts', fontMobile);
 }).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/articlesList.js`).then(() => {
     const { articles, isVisible } = articlesList;
-    loadImgSection(articles, isVisible, 'divArticles', 'articlesDiv', imgLocArticles);
+    loadImgSection(articles, isVisible, 'divArticles', 'articlesDiv', imgLocArticles, '', fontMobile);
 }).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/newsArticleList.js`).then(() => { 
     const { articles, isVisible } = newsArticlesList;
-    loadImgSection(articles, isVisible, 'divMMArticles', 'newsArticles', imgLocArticles);
+    loadImgSection(articles, isVisible, 'divMMArticles', 'newsArticles', imgLocArticles, fontMobile);
 }).catch((e) => { console.error(e); });
 
 getScript(`${langLoc}${lang}/socialMediasLists.js`).then(() => { loadSocialMedias(); }).catch((e) => { console.error(e); });
@@ -373,7 +374,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
-            let vTmp = getUTubeContainer(item);
+            let vTmp = getUTubeContainer(item, fontMobile);
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
@@ -417,7 +418,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
-            let vTmp = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+            let vTmp = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
@@ -465,12 +466,12 @@ function loadPresentations() {
     catch (e) { return e; }
 }
 
-function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle = '') {
+function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle = '', cls = '') {
     try {
         if (isVisible) {
             const divSection = document.getElementById(section);
             list.forEach(item => {
-                const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title);
+                const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
                 divSection.innerHTML += tmpImg;
                 setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat);
             });
@@ -654,10 +655,10 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
     imgTemp.setAttribute("loading", "lazy");
 }
 
-function getUTubeContainer(item) {
+function getUTubeContainer(item, cls) {
     return `${divSmall}
         ${getUTubeLite(item)}
-        ${getH4Tag(item.title)}
+        ${getH4Tag(item.title, '', cls)}
         ${cDiv}`;
 }
 
@@ -712,15 +713,15 @@ function setWebPImage(id, img) {
     return getPicture(`id='srcWebP${id}'`, `id='srcJPG${id}'`, img);
 }
 
-function getImgContainer(link, img, title) {
+function getImgContainer(link, img, title, cls) {
     return `${divSmall}
         ${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}
-        ${getH4Tag(title)}
+        ${getH4Tag(title, '', cls)}
     ${cDiv}`
 }
 
-function getH4Tag(body, extras = '') {
-    return `<p class="${tCenter} text-uppercase text-secondary mb-0 h4 mt-2 mb-2" ${extras}>${body}</p>`;
+function getH4Tag(body, extras = '', cls = '') {
+    return `<p class="${tCenter} text-uppercase text-secondary mb-0 h4 mt-2 mb-2 ${cls}" ${extras}>${body}</p>`;
 }
 
 function getImgTag(id, alt) {

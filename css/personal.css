@@ -638,3 +638,7 @@ a.text-material-link-dark:active {
         margin: auto;
     }
 }
+
+.font-mobile {
+    font-size: larger!important;
+}
