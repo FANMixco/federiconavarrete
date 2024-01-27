@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?yytodx');
-  src:  url('fonts/icomoon.eot?yytodx#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?yytodx') format('truetype'),
-    url('fonts/icomoon.woff?yytodx') format('woff'),
-    url('fonts/icomoon.svg?yytodx#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?h7x093');
+  src:  url('fonts/icomoon.eot?h7x093#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?h7x093') format('truetype'),
+    url('fonts/icomoon.woff?h7x093') format('woff'),
+    url('fonts/icomoon.svg?h7x093#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,12 +25,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-color_lens:before {
-  content: "\e900";
+.icon-cancel:before {
+  content: "\e906";
 }
-.icon-download:before {
-  content: "\e908";
+.icon-close:before {
+  content: "\e906";
+}
+.icon-blog:before {
+  content: "\e909";
 }
 .icon-pen:before {
   content: "\e909";
+}
+.icon-amazon:before {
+  content: "\ea87";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-th-menu:before {
+  content: "\e905";
+}
+.icon-color_lens:before {
+  content: "\e903";
+}
+.icon-palette:before {
+  content: "\e903";
+}
+.icon-tiktok:before {
+  content: "\e902";
+}
+.icon-goodreads-brands:before {
+  content: "\e900";
+}
+.icon-x:before {
+  content: "\e901";
+}
+.icon-tiktok:before {
+  content: "\e902";
+}
+.icon-download:before {
+  content: "\e904";
 }
