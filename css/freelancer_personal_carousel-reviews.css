@@ -986,8 +986,8 @@ a.text-material-link-dark:active {
         font-size: 1.75rem;
     }
 
-    .carousel-control-next,
-   .carousel-control-prev {
+    #carouselReviews .carousel-control-next,
+    #carouselReviews .carousel-control-prev {
         display: none !important;
     }
 }
