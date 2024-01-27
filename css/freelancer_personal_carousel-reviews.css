@@ -72,6 +72,11 @@ h6 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+header.masthead h2 {
+	font-size: 1.3rem;
+	font-family: Lato,"Lucida Grande",Tahoma,Sans-Serif!important
+}
+
 hr.star-black,
 hr.star-black-dark,
 hr.star-dark,
