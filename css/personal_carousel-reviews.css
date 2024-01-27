@@ -329,9 +329,9 @@ a.text-material-link-dark:active {
 
 @media screen and (max-width:682px) and (orientation:portrait) {
     #mainBackground {
-        background-image: url(../img/astronomy_small_portrait.jpg);
-        background-image: -webkit-image-set(url(../img/astronomy_small_portrait.webp)1x,url(../img/astronomy_small_portrait.jpg)1x);
-        background-image: image-set(url(../img/astronomy_small_portrait.webp)type("image/webp"),url(../img/astronomy_small_portrait.jpg)type("image/jpeg"));
+        background-image: url(../img/northern_light_small_portrait.jpg);
+        background-image: -webkit-image-set(url(../img/northern_light_small_portrait.webp)1x,url(../img/northern_light_small_portrait.jpg)1x);
+        background-image: image-set(url(../img/northern_light_small_portrait.webp)type("image/webp"),url(../img/northern_light_small_portrait.jpg)type("image/jpeg"));
         background-size: cover
     }
 }
@@ -457,18 +457,18 @@ a.text-material-link-dark:active {
 
 @media screen and (max-width:1364px) and (min-width:683px) {
     #mainBackground {
-        background-image: url(../img/astronomy_medium.jpg);
-        background-image: -webkit-image-set(url(../img/astronomy_medium.webp)1x,url(../img/astronomy_medium.jpg)1x);
-        background-image: image-set(url(../img/astronomy_medium.webp)type("image/webp"),url(../img/astronomy_medium.jpg)type("image/jpeg"));
+        background-image: url(../img/northern_light_medium.jpg);
+        background-image: -webkit-image-set(url(../img/northern_light_medium.webp)1x,url(../img/northern_light_medium.jpg)1x);
+        background-image: image-set(url(../img/northern_light_medium.webp)type("image/webp"),url(../img/northern_light_medium.jpg)type("image/jpeg"));
         background-size: cover
     }
 }
 
 @media screen and (min-width:1365px) {
     #mainBackground {
-        background-image: url(../img/astronomy_large.jpg);
-        background-image: -webkit-image-set(url(../img/astronomy_large.webp)1x,url(../img/astronomy_large.jpg)1x);
-        background-image: image-set(url(../img/astronomy_large.webp)type("image/webp"),url(../img/astronomy_large.jpg)type("image/jpeg"));
+        background-image: url(../img/northern_light_large.jpg);
+        background-image: -webkit-image-set(url(../img/northern_light_large.webp)1x,url(../img/northern_light_large.jpg)1x);
+        background-image: image-set(url(../img/northern_light_large.webp)type("image/webp"),url(../img/northern_light_large.jpg)type("image/jpeg"));
         background-size: cover
     }
 }
