@@ -1083,7 +1083,7 @@ a.text-material-link-dark:active {
 
 @media (min-width: 1200px) {
 	.navbar {
-		padding-top: 0.25rem !important;
+		padding-top: 0.5rem !important;
 		padding-bottom: 0.5rem !important;
 	}
 }
