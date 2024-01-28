@@ -5,7 +5,7 @@
  */
 
  :root {
-	--green: #24ff72;
+	--green: #228b22;
 	--purple: #9a4eff;
 	--yellow: #ffeb3b;
 	--gray: #eeeeee;
@@ -20,8 +20,8 @@
 	--light-purple: #997efb;
 	--middle-purple: #7919ff;
 	--pink: #fe05e1;
-	--green-purple-gradient: linear-gradient(-45deg, var(--light-green), var(--middle-purple));
-	--purple-green-gradient: linear-gradient(-45deg, var(--middle-purple), var(--light-green));
+	--green-purple-gradient: linear-gradient(-45deg, var(--green), var(--middle-purple));
+	--purple-green-gradient: linear-gradient(-45deg, var(--middle-purple), var(--green));
 	--yellow-gray-gradient: linear-gradient(-45deg, var(--yellow), var(--gray));
 	--gray-yellow-gradient: linear-gradient(-45deg, var(--gray), var(--yellow));
 	--trans-black: rgba(0, 0, 0, 0.3);
