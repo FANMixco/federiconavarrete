@@ -78,9 +78,10 @@ function loadReviews() {
 
                 let longReview = "";
 
+                const tTemp = item.title.replaceAll('text-material-link', "text-material-link-dark");
                 if (item.isPDF) {
                     longReview = `${getImgName(name, item.img, currentReview, "picReviewers")}
-                    ${getReviewTitle('dark', item.title)}
+                    ${getReviewTitle('dark', tTemp)}
                     ${getInnerTitle(item.date)}
                     <div id="review${currentReview}PDF">${cDiv}
                     <div class="centerText">
@@ -88,7 +89,7 @@ function loadReviews() {
                     ${cDiv}`;
                 }
                 else {
-                    longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title), 'dark', 'black', item.review, "centerText", false);
+                    longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(tTemp), 'dark', 'black', item.review, "centerText", false);
                 }
 
                 fullReviews.push({ 
