@@ -186,9 +186,9 @@ function loadBasicInfo() {
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;
 
-        const detectScreenSize = window.matchMedia('screen and (max-width: 320px) and (orientation: portrait)');
+        /*const detectScreenSize = window.matchMedia('screen and (max-width: 320px) and (orientation: portrait)');
 
-        /*function resizeTitleName(detectScreenSize) {
+        function resizeTitleName(detectScreenSize) {
             if (detectScreenSize.matches || equalScreen) {
                 // Media query matches
                 let sName = name.split(' ');
@@ -209,14 +209,14 @@ function loadBasicInfo() {
         });
 
         if (favBook.isVisible) {
-            favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title, 'height="24" width="24"');
+            favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title);
         }
         else {
             favBookDiv.classList.add(nVis);
         }
 
         if (favPodcast.isVisible) {
-            favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'spotify', favPodcast.title, ` style="height:24px;width:24px"`);
+            favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'spotify', favPodcast.title);
         }
         else {
             favPodcastDiv.classList.add(nVis);
