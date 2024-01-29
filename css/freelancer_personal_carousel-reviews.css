@@ -837,6 +837,15 @@ a.text-material-link-dark:active {
 	position: inherit !important;
 }
 
+.fSize65 {
+	font-size: 65px;
+	max-height: 65px;
+}
+.fSize50 {
+	font-size: 50px;
+	max-height: 50px;
+}
+
 @media (hover: hover) {
 	#linkContactMe:hover {
 		color: #212529;

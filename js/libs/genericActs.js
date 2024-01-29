@@ -100,7 +100,7 @@ function getFLink(cls, link, body, extras = '') {
 
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth, invert = '0%', extras = '', hasLink = false, idL = '') {
     let idC = idL != '' ? `id='${idL}'` : '';
-    let lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor}' style='text-decoration: none;'>` : '';
+    let lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor} text-decoration-none'>` : '';
     let lEnd = hasLink ? '</a>' : '';
     let style = (!extras) ? '' : `style="${extras}"`;
 

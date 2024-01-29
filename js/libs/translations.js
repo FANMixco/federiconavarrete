@@ -175,7 +175,7 @@ function loadServices() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
-                    let title = getCard(elem.link, `${elem.icon}`, 'text-white', elem.title, 'card-services', 'fa-icon-services', 65, 65, '100%', '', true, `service${totalServices}`);
+                    let title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, null, '100%', '', true, `service${totalServices}`);
 
                     items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
@@ -186,7 +186,7 @@ function loadServices() {
             items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
 
             if (smallScreenMobileOS || equalScreen) {
-                items = getCarousel(items, "carouselServices");
+                items = getCarousel(items, "carouselServices", 'text-dark');
                 const servicesListDiv = document.getElementById("servicesList");
                 servicesListDiv.classList.remove("row");
                 servicesListDiv.classList.add("container");
@@ -205,17 +205,17 @@ function loadServices() {
     catch (e) { return e; }
 }
 
-function getCarousel(items, cId) {
+function getCarousel(items, cId, arrowsColor = 'text-muted') {
     return `<div class="container-fluid" id="div${cId}">
     <div id="${cId}" class="carousel slide">
         <div class="carousel-inner">
             ${items}
         </div>
         <button class="carousel-control-prev text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous">
-            <span class="text-muted icon-chevron-left-solid"></span>
+            <span class="${arrowsColor} icon-chevron-left-solid"></span>
         </button>
         <button class="carousel-control-next text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next">
-            <span class="text-muted icon-chevron-right-solid"></span>
+            <span class="${arrowsColor} icon-chevron-right-solid"></span>
         </button>
         </div>
     </div>`;
@@ -232,7 +232,7 @@ function loadAwards() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `trophy`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', 50, 50, '0%', ''), '', '', true, elem.type, elem.link);
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, null, '0%', ''), '', '', true, elem.type, elem.link);
 
                     availableLinks.push({ 
                         id: i,
@@ -250,7 +250,7 @@ function loadAwards() {
             items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
 
             if (smallScreenMobileOS || equalScreen) {
-                items = getCarousel(items, "carouselAwards");
+                items = getCarousel(items, "carouselAwards", 'text-dark');
                 const awardsListDiv = document.getElementById("awardsList");
                 awardsListDiv.classList.remove("row");
                 awardsListDiv.classList.add("container");
