@@ -98,7 +98,7 @@ function getFLink(cls, link, body, extras = '') {
     return `<a class='${cls}' href="${link}" ${extras}>${body}</a>`;
 }
 
-function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth, invert = '0%', extras = '', hasLink = false, idL = '') {
+function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
     let idC = idL != '' ? `id='${idL}'` : '';
     let lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor} text-decoration-none'>` : '';
     let lEnd = hasLink ? '</a>' : '';
@@ -113,7 +113,7 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, iWidth,
   </div>${lEnd}`
 }
 
-function getActionBtn(link, iconsPath, icon, title, extras = "") {
+function getActionBtn(link, iconsPath, icon, title) {
     return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
     //return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
 }
@@ -126,7 +126,7 @@ function getInLi(body, extraCls = '', extras = '') {
     return `<li class="list-inline-item${extraCls}" ${extras}>${body}</li>`;
 }
 
-function getHMenu(extras = "") {
+function getHMenu() {
     return getFinalIcon('bars-solid');
     //return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
 }

@@ -56,10 +56,7 @@ function onReadyFreelancer() {
         // if
     }    // ...your code here...
 
-    document.addEventListener("click", function (event) {
-        // if the clicked element isn't child of the navbar, you must close it if is open
-        closeMenu();
-    });
+    document.addEventListener("click", closeMenu);
 }
 
 // Navbar shrink function
