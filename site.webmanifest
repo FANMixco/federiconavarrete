@@ -35,7 +35,7 @@
     "background_color": "#121212",
     "display": "standalone",
     "dir": "ltr",
-    "id": 4,
+    "id": 5,
     "categories": [
       "business",
       "entertainment",
@@ -43,6 +43,7 @@
     ],
     "lang": "en",
     "display_override": [
+      "standalone",
       "browser",
       "window-controls-overlay"
     ]
