@@ -45,6 +45,7 @@
         "browser-sync": "^2.23.7",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
+        "eslint": "^8.56.0",
         "postcss": "8.4.31",
         "prettier": "2.6.0",
         "pug": "3.0.2",
