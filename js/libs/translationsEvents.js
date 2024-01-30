@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function loadSeenOn() {
+    const defTxt = 'contest-';
     const { seenOn } = seenOnList;
 
     seenOn.forEach((item, index) => {
@@ -18,15 +19,15 @@ function loadSeenOn() {
         const seenOnDiv = `<div class="carousel-item col-md-3${active}">
                                 <div class="panel panel-default">
                                     <div class="panel-thumbnail">
-                                        <a target="_blank" href="${item.link}" class="thumb">
+                                        <a target="_blank" href="https://${item.link}" class="thumb">
                                             <picture>
                                                 <source
-                                                    srcset="../img/events/${item.image}.webp"
+                                                    srcset="../img/events/${defTxt}${item.image}.webp"
                                                     type="image/webp">
                                                 <source
-                                                    srcset="../img/events/${item.image}.png" 
+                                                    srcset="../img/events/${defTxt}${item.image}.png" 
                                                     type="image/png">
-                                                <img src="../img/events/${item.image}.png" alt="${item.title}" class="img-fluid mx-auto d-block">
+                                                <img src="../img/events/${defTxt}${item.image}.png" alt="${item.title}" class="img-fluid mx-auto d-block">
                                             </picture>
                                         </a>
                                     </div>
