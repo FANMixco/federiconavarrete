@@ -1,99 +1,99 @@
 const booksList = [
 	{
 		"title": "Harry Potter y la Orden del Fénix",
-		"img": "../img/books/es/HP.jpg",
+		"img": "es/HP",
 		"author": "J.K. Rowling",
-		"link": "https://amzn.to/3pi6YCg"
+		"link": "amzn.to/3pi6YCg"
 	},
 	{
 		"title": "Historias Eternas de El Salvador (en inglés)",
-		"img": "../img/books/mybook1.jpg",
+		"img": "mybook1",
 		"author": "Federico Navarrete",
-		"link": "https://amzn.to/3nnbn4e",
+		"link": "amzn.to/3nnbn4e",
 		"isActive": true
 	},
 	{
 		"title": "Como ganar amigos e influir sobre las personas",
-		"img": "../img/books/es/WF.jpg",
+		"img": "es/WF",
 		"author": "Dale Carnegie",
-		"link": "https://amzn.to/2ZEIzhg"
+		"link": "amzn.to/2ZEIzhg"
 	},
 	{
 		"title": "Principios para enfrentarse al nuevo orden mundial: Por qué triunfan y fracasan los países",
-		"img": "../img/books/en/principles.jpg",
+		"img": "es/principles",
 		"author": "Ray Dalio",
-		"link": "https://amzn.to/3v5rqd9"
+		"link": "amzn.to/3v5rqd9"
 	},
 	{
 		"title": "Superpotencias de la inteligencia artificial: China, Silicon Valley y el nuevo orden mundial",
-		"img": "../img/books/en/ai.jpg",
+		"img": "es/ai",
 		"author": "Kai-Fu Lee",
-		"link": "https://amzn.to/3B7WHQv"
+		"link": "amzn.to/3B7WHQv"
 	},
 	{
-		"title": "Tus próximos cinco movimientos (en inglés)",
-		"img": "../img/books/en/moves.jpg",
+		"title": "Tus próximas cinco jugadas: Domina el arte de la estrategia en los negocios",
+		"img": "es/moves",
 		"author": "Patrick Bet-David",
-		"link": "https://amzn.to/3lriwSB"
+		"link": "amzn.eu/d/2s7Unwd"
 	},
 	{
 		"title": "Cómo suprimir las preocupaciones y disfrutar de la vida",
-		"img": "../img/books/es/worry.jpg",
+		"img": "es/worry",
 		"author": "Dale Carnegie",
-		"link": "https://amzn.to/3EfkLzQ"
+		"link": "amzn.to/3EfkLzQ"
 	},
 	{
 		"title": "Cómo evitar un desastre climático",
-		"img": "../img/books/es/warming.jpg",
+		"img": "es/warming",
 		"author": "Bill Gates",
-		"link": "https://amzn.to/31sz716",
+		"link": "amzn.to/31sz716",
 	},
 	{
 		"title": "Marca Personal en LinkedIn: El Método de Think Natalia (en inglés)",
-		"img": "../img/books/en/linkedin.jpg",
+		"img": "en/linkedin",
 		"author": "Natalia Wiechowski",
-		"link": "https://amzn.to/2MOgslZ"
+		"link": "amzn.to/2MOgslZ"
 	},
 	{
 		"title": "El coach de Sillicon Valley/Trillion Dollar Coach",
-		"img": "../img/books/es/coach.jpg",
+		"img": "es/coach",
 		"author": "Alan Eagle, Eric Schmidt, y Jonathan Rosenberg",
-		"link": "https://amzn.to/3ElMq1Y",
+		"link": "amzn.to/3ElMq1Y",
 	},
 	{
 		"title": "Objetivo: la historia interna del denunciante de Cambridge Analytica sobre cómo Big Data, Trump y Facebook rompieron la democracia y cómo puede volver a suceder (en inglés)",
-		"img": "../img/books/en/targeted.jpg",
+		"img": "en/targeted",
 		"author": "Brittany Kaiser",
-		"link": "https://amzn.to/31h16AM"
+		"link": "amzn.to/31h16AM"
 	},
 	{
 		"title": "Mala sangre: Secretos y mentiras en una startup de Silicon Valley",
-		"img": "../img/books/es/blood.jpg",
+		"img": "es/blood",
 		"author": "John Carreyrou",
-		"link": "https://amzn.to/3dn4FZb"
+		"link": "amzn.to/3dn4FZb"
 	},
 	{
 		"title": "Las 25 leyes para hacer lo imposible (en inglés)",
-		"img": "../img/books/en/impossible.jpg",
+		"img": "en/impossible",
 		"author": "Patrick Bet-David",
-		"link": "https://bit.ly/2L90eon"
+		"link": "bit.ly/2L90eon"
 	},
 	{
 		"title": "Arquitectura de software para desarrolladores (en inglés)",
-		"img": "../img/books/en/arch.jpg",
+		"img": "en/arch",
 		"author": "Simon Brown",
-		"link": "https://bit.ly/3I29FjM"
+		"link": "bit.ly/3I29FjM"
 	},
 	{
 		"title": "Mapeo de historias de usuario: descubra la historia completa, cree el producto adecuado",
-		"img": "../img/books/en/sm.jpg",
+		"img": "en/sm",
 		"author": "Jeff Patton",
-		"link": "https://bit.ly/377v3SN"
+		"link": "bit.ly/377v3SN"
 	},
 	{
 		"title": "El monje que vendió su Ferrari",
-		"img": "../img/books/es/monk.jpg",
+		"img": "es/monk",
 		"author": "Robin Sharma",
-		"link": "https://amzn.to/3paJhM2",
+		"link": "amzn.to/3paJhM2",
 	}
 ];

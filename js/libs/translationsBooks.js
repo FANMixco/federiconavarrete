@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
     let language = window.navigator.userLanguage || window.navigator.language;
     let lang = "en-us/min";
     
@@ -11,19 +11,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function loadBooks() {
-    booksList.forEach(function(item, index) {
+    booksList.forEach(function(item) {
         const active = item.isActive ? " active" : "";
+        const urlI = '../img/books/';
 
         const book = `<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2${active}">
-                    <a target="_blank" href="${item.link}">
+                    <a target="_blank" href="https://${item.link}">
                         <picture>
                             <source
-                                srcset="${item.img.replace(".jpg", ".webp")}"
+                                srcset="${urlI}${item.img}.webp"
                                 type="image/webp">
                             <source
-                                srcset="${item.img}" 
+                                srcset="${urlI}${item.img}.jpg"
                                 type="image/jpeg">
-                            <img class="img-fluid mx-auto d-block" src="${item.img}" alt="${item.title}">
+                            <img class="img-fluid mx-auto d-block" src="${urlI}${item.img}" alt="${item.title}">
                         </picture>
                     </a>
             </div>`;
