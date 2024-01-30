@@ -739,7 +739,7 @@ function getListItem(elem, extra = "", extraCls = "") {
     return getInLi(elem, extraCls, extra);
 }
 
-function getBtnModal(target, cls, id, body, extras='', href='', isBtn = false, targetBlank = '', link = '') {
+function getBtnModal(target, cls, id, body, extras = '', href = '', isBtn = false, targetBlank = '', link = '') {
     const tmpTag = (isBtn) ? 'button' : 'a';
     const tmpRef = (isBtn) ? '' : `href="#${href}"`;
     const idT = (id != '') ? `id="${id}"` : '';
@@ -762,8 +762,8 @@ function getBtnShare() {
 }
 
 function getBtnOthers(loc, cls, extra = "", id = '') {
-    extra += `title="${genericTranslations.extras}" alt="${genericTranslations.extras}"`;
-    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon(`plus`)), extra);
+    extra += `title="${genericTranslations.extras}" aria-label="${genericTranslations.extras}"`;
+    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon(`plus`), extra));
 }
 
 function getCItem(extras) {
