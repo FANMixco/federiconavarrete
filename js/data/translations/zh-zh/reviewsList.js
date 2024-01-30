@@ -3,7 +3,7 @@ const reviewsList = {
 		{
 			"name": "Dr. Natalia Wiechowski",
 			"img": `img/photos/nataliawiechowski.jpg`,
-			"externalLink": "https://thinknatalia.com",
+			"externalLink": "https://www.drnataliawiechowski.com",
 			"review": `弗雷德里克是一个了不起的人，我很高兴在马德里的#DES2019上见到他。我们还为他的TM俱乐部/地区录制了一段关于我的演讲会之旅的采访。弗雷德里克也是一位出色的面试官。他准备充分，是一个很好的倾听者，并根据我们的谈话制作了一个精彩的视频。此外，弗雷德里克似乎是一个真正关心的人，他想增加价值并有所作为。继续努力，谢谢你抽出时间！`,
 			"shortReview": "弗雷德里克是一个了不起的人，我很高兴在马德里的#DES2019上见到他。我们还为他的TM俱乐部/地区录制了一段关于我的演讲会之旅的采访…",
 			"title": "领英🦄|个人品牌专家| Edutainer：通过有机领英营销帮助咨询师发展活力",

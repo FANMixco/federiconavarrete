@@ -180,21 +180,23 @@ function loadBasicInfo() {
         resizeTitleName(detectScreenSize);
         
         // Add listener for changes to the media query
-        detectScreenSize.addEventListener('change', resizeTitleName);*/  
+        detectScreenSize.addEventListener('change', resizeTitleName);*/
+
+        const urlI = 'https://';
 
         aboutDesc.forEach(item => {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
         });
 
         if (favBook.isVisible) {
-            favBookDiv.innerHTML += getActionBtn(favBook.link, iconsPath, 'download', favBook.title);
+            favBookDiv.innerHTML += getActionBtn(`${urlI}${favBook.link}`, iconsPath, 'download', favBook.title);
         }
         else {
             favBookDiv.classList.add(nVis);
         }
 
         if (favPodcast.isVisible) {
-            favPodcastDiv.innerHTML += getActionBtn(favPodcast.link, iconsPath, 'spotify', favPodcast.title);
+            favPodcastDiv.innerHTML += getActionBtn(`${urlI}${favPodcast.link}`, iconsPath, 'spotify', favPodcast.title);
         }
         else {
             favPodcastDiv.classList.add(nVis);
@@ -215,7 +217,7 @@ function loadBasicInfo() {
         }
 
         if (company.isVisible) {
-            listContacts.innerHTML = getInLineBtn(company.name, company.link, "building-solid", true) + listContacts.innerHTML;
+            listContacts.innerHTML = getInLineBtn(company.name, `${urlI}${company.link}`, "building-solid", true) + listContacts.innerHTML;
         }
 
         const aElSalvador = document.getElementById('aElSalvador');

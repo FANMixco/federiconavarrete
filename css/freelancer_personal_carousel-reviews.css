@@ -620,6 +620,15 @@ a#aBooksModal {
 	border: 0;
 }
 
+a {
+	text-decoration: none!important;
+}
+
+#linkContactMeAbout {
+	cursor: pointer;
+	font-size:1.75rem;
+}
+
 .btn-more,
 .cards-row {
 	width: 100%;

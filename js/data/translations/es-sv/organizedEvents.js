@@ -2,7 +2,7 @@ const organizedEvents = {
 	"events": [
 		{
 			"link": 'https://bit.ly/43ZR9TJ',
-			"title": 'Łódźarts - Conferencia de Toastmasters - 2019 (en inglés), División A, <a href="https://toastmastersd108.org" rel="noreferrer" target="_blank" class="text-material-link-dark">District 108</a>',
+			"title": 'Łódźarts - Conferencia de Toastmasters - 2019 (en inglés), División A, District 108',
 			"imgID": "imgLodzarts",
 			"imgBasicName": "lodzarts",
 			"imgFormat": "jpg"

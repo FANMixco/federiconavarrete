@@ -3,7 +3,7 @@ const reviewsList = {
 		{
 			"name": "Dr. Natalia Wiechowski",
 			"img": `img/photos/nataliawiechowski.jpg`,
-			"externalLink": "https://thinknatalia.com",
+			"externalLink": "https://www.drnataliawiechowski.com",
 			"review": `Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!`,
 			"shortReview": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … ",
 			"title": "LinkedIn🦄|Personal Branding Pro|Edutainer: Helping Coachsultants to grow their bizz through ORGANIC LinkedIn marketing",

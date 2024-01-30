@@ -3,7 +3,7 @@ const reviewsList = {
 		{
 			"name": "Dr. Natalia Wiechowski",
 			"img": `img/photos/nataliawiechowski.jpg`,
-			"externalLink": "https://thinknatalia.com",
+			"externalLink": "https://www.drnataliawiechowski.com",
 			"review": `<p><small>En inglés originalmente.</small></p>Frederico es un ser humano maravilloso que tuve el placer de conocer en # DES2019 en Madrid. También grabamos una entrevista sobre mi viaje de Toastmasters para su club/región TM. Frederico también es un excelente entrevistador. Estaba bien preparado, es un buen oyente y creó un video maravilloso a partir de nuestra conversación. Además, Frederico parece ser una persona que realmente se preocupa, que quiere agregar valor y marcar la diferencia. ¡Sigan con el gran trabajo y gracias por su tiempo!`,
 			"shortReview": "Frederico es un ser humano maravilloso que tuve el placer de conocer en # DES2019 en Madrid. También grabamos una entrevista sobre mi viaje de Toastmasters para su club/región TM … ",
 			"title": "LinkedIn🦄 | Personal Branding Pro | Edutainer: Ayudando a los asesores a desarrollar su negocio a través del marketing ORGÁNICO de LinkedIn",

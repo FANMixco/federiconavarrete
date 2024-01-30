@@ -211,10 +211,10 @@ function getCarousel(items, cId, arrowsColor = 'text-muted') {
         <div class="carousel-inner">
             ${items}
         </div>
-        <button class="carousel-control-prev text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous">
+        <button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous">
             <span class="${arrowsColor} icon-chevron-left-solid"></span>
         </button>
-        <button class="carousel-control-next text-decoration-none icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next">
+        <button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next">
             <span class="${arrowsColor} icon-chevron-right-solid"></span>
         </button>
         </div>
@@ -343,10 +343,10 @@ function loadPersonalProjects() {
 function getVideoCarousel(items, id) {
     return `<div id="${id}" class="carousel slide">
     <div class="carousel-inner">${items}</div>
-    <button class="carousel-control-prev carousel-control-prev-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous">
+    <button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous">
         <span class="text-muted icon-chevron-left-solid"></span>
     </button>
-    <button class="carousel-control-next carousel-control-next-video text-decoration-none icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next">
+    <button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next">
         <span class="text-muted icon-chevron-right-solid"></span>
     </button>
  </div>`;
@@ -745,7 +745,7 @@ function getBtnModal(target, cls, id, body, extras = '', href = '', isBtn = fals
     const idT = (id != '') ? `id="${id}"` : '';
     const tNone = (!isBtn) ? 'text-decoration-none' : '';
 
-    return (targetBlank != '_blank') ? `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>` : `<a href='${link}' target='${targetBlank}' class="${cls} text-decoration-none" ${extras}>${body}</a>`;
+    return (targetBlank != '_blank') ? `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>` : `<a href='${link}' target='${targetBlank}' class="${cls}" ${extras}>${body}</a>`;
 }
 
 function getBtnShare() {
