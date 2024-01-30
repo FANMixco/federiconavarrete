@@ -25,10 +25,10 @@ const socialBasicList = {
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "tiktok",
-			"title": "TikTok",
+			"icon": "calendar-today",
+			"title": "用英语跟我见面 (15”)",
 			"id": "",
-			"link": "https://www.tiktok.com/@federicostories",
+			"link": "https://bit.ly/47hmCm1",
 			"isIcon": false,
 			"externalClass": "iconFooter"
 		}
@@ -38,6 +38,14 @@ const socialBasicList = {
 
 const socialOthersList = {
 	"socialMedia": [
+		{
+			"icon": "tiktok",
+			"title": "TikTok",
+			"id": "",
+			"link": "https://www.tiktok.com/@federicostories",
+			"isIcon": false,
+			"externalClass": "iconFooter"
+		},
 		{
 			"icon": "podcast-solid",
 			"title": "Sharing Your Stories",
@@ -121,14 +129,14 @@ const socialOthersList = {
 			"link": "https://dev.to/fanmixco",
 			"isIcon": false,
 			"externalClass": "iconFooter"
-		},
+		}/*,
 		{
 			"icon": "AzureDevOps",
 			"title": "Azure DevOps",
 			"link": "https://dev.azure.com/federiconavarrete",
 			"isIcon": false,
 			"externalClass": "iconFooter"
-		}
+		}*/
 	],
 	"isVisible": true
 };

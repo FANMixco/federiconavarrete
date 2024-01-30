@@ -3,182 +3,182 @@ const seenOnList = {
 		[
 			{ 
 				"title": "Citython",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-1",
+				"link": "shorturl.at/bfIV4",
+				"image": "1",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Warszawskie Dni Informatyki",
-				"link": "https://1drv.ms/f/s!AhpAtowYvNcykLoruCz-FmiCY-FrMA",
-				"image": "contest-9",
+				"link": "1drv.ms/f/s!AhpAtowYvNcykLoruCz-FmiCY-FrMA",
+				"image": "9",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Instituto Cervantes",
-				"link": "https://shorturl.at/nwBLR",
-				"image": "contest-2",
+				"link": "shorturl.at/nwBLR",
+				"image": "2",
                 "label": "Watch it"
 			},
 			{ 
 				"title": "Samsung Dev Spain",
-				"link": "https://shorturl.at/nsM56",
-				"image": "contest-10",
+				"link": "shorturl.at/nsM56",
+				"image": "10",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Młodzi w Łodzi",
-				"link": "https://bit.ly/442bojU",
-				"image": "contest-5",
+				"link": "bit.ly/442bojU",
+				"image": "5",
                 "label": "Download link"
 			},
 			{ 
 				"title": "Career Show",
-				"link": "https://shorturl.at/alnL2",
-				"image": "contest-8",
+				"link": "shorturl.at/alnL2",
+				"image": "8",
                 "label": "Read more"
 			},
 			{ 
 				"title": "SpaceApps Challenge - NASA",
-				"link": "https://shorturl.at/klvwM",
-				"image": "contest-4",
+				"link": "shorturl.at/klvwM",
+				"image": "4",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Buch Wien",
-				"link": "https://shorturl.at/vxJX6",
-				"image": "contest-15",
+				"link": "shorturl.at/vxJX6",
+				"image": "15",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Toastmasters",
-				"link": "https://shorturl.at/lmvK0",
-				"image": "contest-20",
+				"link": "shorturl.at/lmvK0",
+				"image": "20",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Barcelo Hotel",
-				"link": "https://shorturl.at/ajDX3",
-				"image": "contest-18",
+				"link": "shorturl.at/ajDX3",
+				"image": "18",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Hispanic Society of Victoria",
-				"link": "https://shorturl.at/DGJK8",
-				"image": "contest-16",
+				"link": "shorturl.at/DGJK8",
+				"image": "16",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Smart City",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-14",
+				"link": "shorturl.at/bfIV4",
+				"image": "14",
                 "label": "Read more"
 			},
 			{ 
 				"title": "IST World Congress",
-				"link": "https://shorturl.at/bfIV4",
-				"image": "contest-11",
+				"link": "shorturl.at/bfIV4",
+				"image": "11",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Embassies",
-				"link": "https://shorturl.at/gryS7",
-				"image": "contest-21",
+				"link": "shorturl.at/gryS7",
+				"image": "21",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Feria del Libro de Madrid",
-				"link": "https://shorturl.at/ejPSU",
-				"image": "contest-22",
+				"link": "shorturl.at/ejPSU",
+				"image": "22",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Día E en China",
-				"link": "https://shorturl.at/pqrEV",
-				"image": "contest-23",
+				"link": "shorturl.at/pqrEV",
+				"image": "23",
                 "label": "Read more"
 			},
 			{ 
 				"title": "IEEE",
-				"link": "https://shorturl.at/ghwKN",
-				"image": "contest-19",
+				"link": "shorturl.at/ghwKN",
+				"image": "19",
                 "label": "Read more"
 			},
 			{ 
 				"title": "International Boat of Culture",
-				"link": "https://shorturl.at/aowN3",
-				"image": "contest-17",
+				"link": "shorturl.at/aowN3",
+				"image": "17",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Imagine Cup",
-				"link": "https://shorturl.at/atHLU",
-				"image": "contest-7",
+				"link": "shorturl.at/atHLU",
+				"image": "7",
                 "label": "Read more"
 			},
 			{ 
 				"title": "SwitchUp Challenge",
-				"link": "https://shorturl.at/cvZ28",
-				"image": "contest-3",
+				"link": "shorturl.at/cvZ28",
+				"image": "3",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Hackathon Gobierno Abierto",
-				"link": "https://shorturl.at/aIW05",
-				"image": "contest-13",
+				"link": "shorturl.at/aIW05",
+				"image": "13",
                 "label": "Read more"
 			},
 			{ 
 				"title": "WOWZAPP",
-				"link": "https://shorturl.at/aIW05",
-				"image": "contest-12",
+				"link": "shorturl.at/aIW05",
+				"image": "12",
                 "label": "Read more"
 			},
 			{ 
 				"title": "TIC Americas",
-				"link": "https://shorturl.at/coxy4",
-				"image": "contest-6",
+				"link": "shorturl.at/coxy4",
+				"image": "6",
                 "label": "Download link"
 			},
 			{ 
 				"title": "Diario El Salvador",
-				"link": "https://shorturl.at/iyBQ0",
-				"image": "contest-24",
+				"link": "shorturl.at/iyBQ0",
+				"image": "24",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Joven 360",
-				"link": "https://shorturl.at/stNRY",
-				"image": "contest-25",
+				"link": "shorturl.at/stNRY",
+				"image": "25",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Guanacos.com",
-				"link": "https://shorturl.at/gtCZ4",
-				"image": "contest-26",
+				"link": "shorturl.at/gtCZ4",
+				"image": "26",
                 "label": "Read more"
 			},
 			{ 
 				"title": "La Prensa Gráfica",
-				"link": "https://shorturl.at/cikL5",
-				"image": "contest-27",
+				"link": "shorturl.at/cikL5",
+				"image": "27",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Universidad Don Bosco",
-				"link": "https://shorturl.at/wMQRS",
-				"image": "contest-28",
+				"link": "shorturl.at/wMQRS",
+				"image": "28",
                 "label": "Read more"
 			},
 			{ 
 				"title": "Politechnika Lodzka",
-				"link": "https://shorturl.at/eoFJ3",
-				"image": "contest-29",
+				"link": "shorturl.at/eoFJ3",
+				"image": "29",
                 "label": "Download link"
 			},
 			{ 
 				"title": "Radio Lodz",
-				"link": "https://bit.ly/3O1b6DT",
-				"image": "contest-30",
+				"link": "bit.ly/3O1b6DT",
+				"image": "30",
                 "label": "Read more"
 			}
     ]
