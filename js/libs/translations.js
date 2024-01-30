@@ -1,7 +1,7 @@
 let totalServices = 0;
 let fullReviews = [];
 
-const bookEdition = 'second;'
+//const bookEdition = 'second;'
 const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"');
 const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
@@ -175,7 +175,7 @@ function loadServices() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
-                    let title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, null, '100%', '', true, `service${totalServices}`);
+                    let title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
                     items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
@@ -232,7 +232,7 @@ function loadAwards() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, null, '0%', ''), '', '', true, elem.type, elem.link);
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, elem.link);
 
                     availableLinks.push({ 
                         id: i,
@@ -520,7 +520,8 @@ function loadSocialMedias() {
             if (socialOthersList.isVisible) {
                 const sBasic = document.getElementById("socialMediaBasic");
                 
-                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "", '', '', 'iconFooter btn-footer');
+                //(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '')
+                sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
@@ -579,7 +580,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
     catch (e) { return e; }
 }
 
-function getHobbyImg(item) {
+/*function getHobbyImg(item) {
     let externalClass = "";
 
     if (item.externalClass) {
@@ -587,7 +588,7 @@ function getHobbyImg(item) {
     }
 
     return getImage(item.title, "#", `${item.icon}`, true, item.isIcon, externalClass, true);
-}
+}*/
 
 function addIFrameModal() {
     for (let serv = 0; serv < totalServices; serv++) {
@@ -759,7 +760,7 @@ function getBtnShare() {
     return getListItem(getImage('', '#', `${iconsPath}${icon}.svg`, false, false, "btn-footer", false, "iconFooter", `id="btnShare" title="${genericTranslations.share}" alt="${genericTranslations.share}"`));
 }
 
-function getBtnOthers(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '') {
+function getBtnOthers(loc, cls, extra = "", id = '') {
     extra += `title="${genericTranslations.extras}" alt="${genericTranslations.extras}"`;
     return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon(`plus`)), extra);
 }
