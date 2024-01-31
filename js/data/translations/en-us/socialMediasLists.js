@@ -18,7 +18,7 @@ const socialBasicList = {
 		},
 		{
 			"icon": "behance-brands",
-			"title": "Portfolio",
+			"title": "My Portfolio",
 			"id": "",
 			"link": "www.behance.net/fanmixco",
 			"isIcon": false,
