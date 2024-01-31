@@ -276,6 +276,10 @@ a.text-material-link-dark:active {
     background: var(--gray-yellow-gradient)
 }
 
+#youTubePreview {
+    cursor: pointer;
+}
+
 .clean-btn {
     background: 0 0;
     color: inherit;

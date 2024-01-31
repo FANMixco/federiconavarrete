@@ -629,6 +629,10 @@ a {
 	font-size:1.75rem;
 }
 
+#youTubePreview {
+    cursor: pointer;
+}
+
 .btn-more,
 .cards-row {
 	width: 100%;

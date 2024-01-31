@@ -4,7 +4,7 @@ const basicInfo = {
 	"headlineIntro": "是时候给你的生活带来创新了！你准备好了吗？",
 	"aboutDesc": [
 		`欢迎，我是Federico，云架构师、作家和演说家🇬🇧/🇪🇸. 我热衷于创造一个更美好的世界🌍 通过技术和创新，始终追求下一件大事.<br /><br />我住在四个国家，<a id="aElSalvador" href="#elSalvador" class="text-material-link" data-bs-toggle="modal" data-bs-target="#elSalvador" class="text-decoration-none">萨尔瓦多</a>，美国、波兰和西班牙，我在那里与30多个不同国籍的公民合作，使我能够建立<i>文化智能。</i>`,
-		`我独特的旅程让我能够带领出色的团队，共同创造 <a href="https://bit.ly/3dIhfQW" class="text-material-link" rel="noreferrer" target="_blank">创新应用程序</a>, 自动化多种服务，并开发出令人印象深刻的 <a id="youTubePreview" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#linkPreviews" class="text-material-link" target="_blank">公共演讲技巧</a>。<br /><br /><span class="text-uppercase fw-bold text-center d-block"><i>那你呢？你准备好迎接下一个挑战了吗？</i><br><a id="linkContactMeAbout" class="text-warning">联系我 💡</a></span>`
+		`我独特的旅程让我能够带领出色的团队，共同创造 <a href="https://bit.ly/3dIhfQW" class="text-material-link" rel="noreferrer" target="_blank">创新应用程序</a>, 出版开创性的萨尔瓦多民俗书籍, 自动化多种服务，并开发出令人印象深刻的 <a id="youTubePreview" data-bs-toggle="modal" data-bs-target="#linkPreviews" class="text-material-link" target="_blank">公共演讲技巧</a>。<br /><br /><span class="text-uppercase fw-bold text-center d-block"><i>那你呢？你准备好迎接下一个挑战了吗？</i><br><a id="linkContactMeAbout" class="text-warning">联系我 💡</a></span>`
 	],
 	"favApp": {
 		"link": 'https://bit.ly/2UkxmMZ',
