@@ -181,7 +181,7 @@ function loadServices() {
                 item.forEach(elem => {
 
                     let newListItem = document.createElement('li');
-                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${elem.link}">${elem.title}</a>`;
+                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${elem.link}">➤&nbsp;${elem.title}</a>`;
                     dropdownMenu.appendChild(newListItem);
 
                     const title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
