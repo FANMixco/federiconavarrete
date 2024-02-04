@@ -868,7 +868,11 @@ a.text-material-link-dark:active {
 	/*Without this, clicking will make it sticky*/
 	pointer-events: none;
 }
-  
+
+.dropdown-menu-dark {
+	background-color: var(--darker-purple)!important;
+}
+
 @media (hover: hover) {
 	#linkContactMe:hover {
 		color: #212529;
