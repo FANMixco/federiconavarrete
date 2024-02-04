@@ -1,5 +1,6 @@
 let totalServices = 0;
 let fullReviews = [];
+let isHandlingVisibility = false;
 
 //const bookEdition = 'second;'
 const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"');
@@ -9,6 +10,7 @@ const divSmall = '<div class="col-sm">';
 const cDiv = '</div>';
 const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
+const navbarCollapse = document.getElementById('navbarResponsive');
 
 //getScript(`${langLoc}${lang}/hobbiesList.js`).then(() => { loadHobbies(); }).catch((e) => { console.error(e); });
 
@@ -833,17 +835,24 @@ if (window.matchMedia) {
     window.addEventListener("orientationchange", rotatedModal);
 }
 
-const navbarCollapse = document.getElementById('navbarResponsive');
 function handleNavbarVisibility() {
-    const dynamicNavItem = document.getElementById('dynamicNavItem');
+    if (isHandlingVisibility) {
+        return;
+    }
 
-    console.log(window.getComputedStyle(navbarCollapse).display);
+    isHandlingVisibility = true;
+
+    const dynamicNavItem = document.getElementById('dynamicNavItem');
+    const sMenu = document.getElementById('sMenu');
+    const dMenu = document.getElementById('dMenu');
 
     if (window.getComputedStyle(navbarCollapse).display === 'flex') {
         // Navbar is not visible, remove the dynamicNavItem
         if (dynamicNavItem) {
             dynamicNavItem.parentNode.removeChild(dynamicNavItem);
         }
+        sMenu.style.display = 'block';
+        dMenu.style.display = 'block';
     }
     else {
         // Navbar is visible, add the dynamicNavItem
@@ -858,12 +867,30 @@ function handleNavbarVisibility() {
                 ul.insertBefore(li, ul.children[1]);
             }, 250);
         }
+        sMenu.style.display = 'none';
+        dMenu.style.display = 'none';
     }
+
+    isHandlingVisibility = false;
 }
 
-window.addEventListener('resize', function () {
-    handleNavbarVisibility();
-});
+function debounce(func, wait) {
+    let timeout;
+    return function () {
+        const context = this;
+        const args = arguments;
+        const later = function () {
+            timeout = null;
+            func.apply(context, args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+const debouncedHandleNavbarVisibility = debounce(handleNavbarVisibility, 250);
+
+window.addEventListener('resize', debouncedHandleNavbarVisibility);
 
 if (document.readyState !== "loading") {
     handleNavbarVisibility();
