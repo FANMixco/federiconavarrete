@@ -173,13 +173,14 @@ function loadServices() {
 
         if (isVisible) {
             const servicesList = document.getElementById('servicesList');
+            const dropdownMenu = document.getElementById('dServices');
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
-                    const tmpLink = document.getElementById(`lSer${totalServices}`);
 
-                    tmpLink.href = elem.link;
-                    tmpLink.text = elem.title;
+                    let newListItem = document.createElement('li');
+                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${elem.link}">${elem.title}</a>`;
+                    dropdownMenu.appendChild(newListItem);
 
                     const title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
