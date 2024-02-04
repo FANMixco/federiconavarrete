@@ -46,7 +46,8 @@ getScript(`${langLoc}${lang}/reviewsList.js`).then(() => { loadReviews(); }).cat
 loadBookPreview();
 
 setTimeout(function () {
-    addIFrameModal();
+    addIFrameModal('service');
+    addIFrameModal('lSer');
 }, 1000);
 
 function loadBookPreview() {
@@ -175,7 +176,12 @@ function loadServices() {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             services.forEach(item => {
                 item.forEach(elem => {
-                    let title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
+                    const tmpLink = document.getElementById(`lSer${totalServices}`);
+
+                    tmpLink.href = elem.link;
+                    tmpLink.text = elem.title;
+
+                    const title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
                     items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
@@ -502,7 +508,7 @@ function loadSocialMedias() {
 
             const btnShare = document.getElementById('btnShare');
 
-            btnShare.addEventListener("click", (event) => {
+            btnShare.addEventListener(eClick, (event) => {
                 event.preventDefault();
 
                 navigator.share({
@@ -591,9 +597,9 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
     return getImage(item.title, "#", `${item.icon}`, true, item.isIcon, externalClass, true);
 }*/
 
-function addIFrameModal() {
+function addIFrameModal(opt) {
     for (let serv = 0; serv < totalServices; serv++) {
-        let cService = document.getElementById(`service${serv}`);
+        let cService = document.getElementById(`${opt}${serv}`);
         cService.addEventListener(eClick, function(e) {
             e.preventDefault();
             document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);

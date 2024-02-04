@@ -854,11 +854,21 @@ a.text-material-link-dark:active {
 	font-size: 65px;
 	max-height: 65px;
 }
+
 .fSize50 {
 	font-size: 50px;
 	max-height: 50px;
 }
 
+.dropdown:hover>.dropdown-menu {
+	display: block;
+}
+  
+.dropdown>.dropdown-toggle:active {
+	/*Without this, clicking will make it sticky*/
+	pointer-events: none;
+}
+  
 @media (hover: hover) {
 	#linkContactMe:hover {
 		color: #212529;

@@ -53,5 +53,6 @@ const genericTranslations = {
     "share": "Comparte",
     "extras": "Extras",
     "quote": "Como un Fénix 🐦‍🔥, resurge de TUS cenizas cada vez más fuerte 💪.",
-    "asSeen": "Tal como se vio en 🎙️"
+    "asSeen": "Tal como se vio en 🎙️",
+    "servicesM": "Servicios"
 };
