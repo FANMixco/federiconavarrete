@@ -832,3 +832,41 @@ if (window.matchMedia) {
 } else {
     window.addEventListener("orientationchange", rotatedModal);
 }
+
+const navbarCollapse = document.getElementById('navbarResponsive');
+function handleNavbarVisibility() {
+    const dynamicNavItem = document.getElementById('dynamicNavItem');
+
+    console.log(window.getComputedStyle(navbarCollapse).display);
+
+    if (window.getComputedStyle(navbarCollapse).display === 'flex') {
+        // Navbar is not visible, remove the dynamicNavItem
+        if (dynamicNavItem) {
+            dynamicNavItem.parentNode.removeChild(dynamicNavItem);
+        }
+    }
+    else {
+        // Navbar is visible, add the dynamicNavItem
+        if (!dynamicNavItem) {
+            setTimeout(function () {
+                const ul = document.getElementById('nElems');
+                const li = document.createElement('li');
+                li.className = 'nav-item mx-0 mx-lg-1';
+                li.id = 'dynamicNavItem';
+                li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
+
+                ul.insertBefore(li, ul.children[1]);
+            }, 250);
+        }
+    }
+}
+
+window.addEventListener('resize', function () {
+    handleNavbarVisibility();
+});
+
+if (document.readyState !== "loading") {
+    handleNavbarVisibility();
+} else {
+    document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
+}

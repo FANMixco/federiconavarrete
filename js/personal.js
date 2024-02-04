@@ -15,9 +15,9 @@ function onReadyPersonal() {
     });
 }
 if (document.readyState !== "loading") {
-    onReadyPersonal();
+  onReadyPersonal();
 } else {
-    document.addEventListener("DOMContentLoaded", onReadyPersonal);
+  document.addEventListener("DOMContentLoaded", onReadyPersonal);
 }
 
 if (smallScreenMobileOS || equalScreen) {
