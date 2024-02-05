@@ -138,8 +138,8 @@ function loadTranslations() {
             });
         });
 
-        const spanMenu = document.getElementById('spanMenu');
-        spanMenu.innerHTML = getHMenu();
+        //const spanMenu = document.getElementById('spanMenu');
+        //spanMenu.innerHTML = getHMenu();
         //spanMenu.innerHTML = (!(smallScreenMobileOS || equalScreen)) ? getHMenu() : getHMenu('style="margin-top:0px!important"');
         
         return true;
