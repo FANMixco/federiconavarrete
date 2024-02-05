@@ -17,7 +17,7 @@ const socialBasicList = {
 			"externalClass": "iconFooter"
 		},
 		{
-			"icon": "behance-brands",
+			"icon": "behance",
 			"title": "My Portfolio",
 			"id": "",
 			"link": "www.behance.net/fanmixco",
