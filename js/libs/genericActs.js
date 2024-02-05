@@ -138,8 +138,9 @@ function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
 }
 
 function getFinalIcon(id, fontSize = '', extraCls = '') {
-    const font = (fontSize) ? `style="font-size: ${fontSize}px; max-height: ${fontSize}px;"` : '';
-    return `<span class="icon-${id} ${extraCls}" ${font}></span>`;
+    const font = (fontSize) ? ` style="font-size: ${fontSize}px; max-height: ${fontSize}px;"` : '';
+    const eCls = (extraCls) ? ` ${extraCls}` : extraCls;
+    return `<span class="icon-${id}${eCls}"${font}></span>`;
 }
 
 function getCleanTitle(alt) {

@@ -294,14 +294,12 @@ function loadBasicInfo() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navbarCollapse = document.getElementById('navbarResponsive');
-    const spanMenu = document.getElementById('spanMenu');
+    const menuExpander = document.getElementById('menuExpander');
+    const hMenu = getHMenu();
+    const cMenu = getHMenu('close');
 
-    navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-        spanMenu.innerHTML = getHMenu();
-    });
-
-    navbarCollapse.addEventListener('shown.bs.collapse', function () {
-        spanMenu.innerHTML = getHMenu('close');
+    // Toggle between getHMenu() and getHMenu('close') on button click
+    menuExpander.addEventListener('click', function() {
+        spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? cMenu : hMenu;
     });
 });
