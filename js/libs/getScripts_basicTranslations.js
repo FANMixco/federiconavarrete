@@ -20,9 +20,10 @@ const getScript = url => new Promise((resolve, reject) => {
 });
 
 //basicTranslations.js
-var tErr1;
+let tErr1;
 
 const language = window.navigator.userLanguage || window.navigator.language;
+
 let lang = "en-us/min";
 let currentLoc = '';
 
@@ -35,11 +36,11 @@ lang = (language.includes('es')) ? "es-sv/min": (language.includes('zh')) ? 'zh-
 getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
     // call loadTranslationsWithRetry and handle the result or error
-    loadTranslationsWithRetry(loadTranslations, function(err, result) {
+    loadTranslationsWithRetry(loadTranslations, function(err) {
         if (!err) {
             // handle result
             getScript(`${langLoc}${lang}/basicInfo.js`).then(() => {
-                loadTranslationsWithRetry(loadBasicInfo, function(err, result) { });
+                loadTranslationsWithRetry(loadBasicInfo, function() { });
                 addExtraIcons();
             })
             .catch((e) => { 
@@ -138,7 +139,8 @@ function loadTranslations() {
         });
 
         const spanMenu = document.getElementById('spanMenu');
-        spanMenu.innerHTML = (!(smallScreenMobileOS || equalScreen)) ? getHMenu() : getHMenu('style="margin-top:0px!important"');
+        spanMenu.innerHTML = getHMenu();
+        //spanMenu.innerHTML = (!(smallScreenMobileOS || equalScreen)) ? getHMenu() : getHMenu('style="margin-top:0px!important"');
         
         return true;
     }
@@ -290,3 +292,16 @@ function loadBasicInfo() {
         return false;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navbarCollapse = document.getElementById('navbarResponsive');
+    const spanMenu = document.getElementById('spanMenu');
+
+    navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+        spanMenu.innerHTML = getHMenu();
+    });
+
+    navbarCollapse.addEventListener('shown.bs.collapse', function () {
+        spanMenu.innerHTML = getHMenu('close');
+    });
+});

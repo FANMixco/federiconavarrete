@@ -126,8 +126,8 @@ function getInLi(body, extraCls = '', extras = '') {
     return `<li class="list-inline-item${extraCls}" ${extras}>${body}</li>`;
 }
 
-function getHMenu() {
-    return getFinalIcon('bars-solid');
+function getHMenu(icon = 'bars-solid') {
+    return getFinalIcon(icon);
     //return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
 }
 
