@@ -873,6 +873,12 @@ a.text-material-link-dark:active {
 	background-color: var(--darker-purple)!important;
 }
 
+#spanMenu {
+    display: inline-block; /* Make sure the span behaves like a block element */
+    width: 28px; /* Set your desired fixed width */
+    text-align: center;
+}
+
 @media (hover: hover) {
 	#linkContactMe:hover {
 		color: #212529;
@@ -1114,6 +1120,12 @@ a.text-material-link-dark:active {
 	#discoverIcon,
     #menuExpander {
 		font-size: xx-large !important;
+	}
+
+	#spanMenu {
+		display: inline-block; /* Make sure the span behaves like a block element */
+		width: 32px; /* Set your desired fixed width */
+		text-align: center;
 	}
 }
 
