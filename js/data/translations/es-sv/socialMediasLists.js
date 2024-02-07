@@ -80,14 +80,14 @@ const socialOthersList = {
 			"link": "federicostories.blogspot.com",
 			"isIcon": false,
 			"externalClass": "iconFooter"
-		},
+		}/*,
 		{
 			"icon": "blogger-brands",
 			"title": "Blog de Supernova IC (en inglés)",
 			"link": "supernovaic.blogspot.com/",
 			"isIcon": false,
 			"externalClass": "iconFooter"
-		},
+		}*/,
 		{
 			"icon": "goodreads-brands",
 			"title": "Goodreads",
