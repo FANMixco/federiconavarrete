@@ -1,6 +1,6 @@
 const basicInfo = {
 	"name": "Federico Navarrete",
-	"headline": 'Cloud Architect & Consultant 💡, <a id="aBooksModal" data-bs-toggle="modal" data-target="#booksModal" href="#booksModal">Author</a> 📝 and Orator 🇬🇧/🇪🇸<br />Leading Digital Transformations 🌐',
+	"headline": 'Technovator 💡, <a id="aBooksModal" data-bs-toggle="modal" data-target="#booksModal" href="#booksModal">Author</a> 📝, Cloud Consultant and Orator 🇬🇧/🇪🇸<br />Leading Digital Transformations 🌐',
 	"headlineIntro": "It’s time to bring innovation TO YOUR LIFE! Are you ready?",
 	"aboutDesc": [
 		`Welcome my fellow, nice to e-meet you. I’m Federico, and I’m passionate about shaping a better world 🌍 via <span class="fst-italic" data-bs-toggle="tooltip" data-bs-placement="top" title="tech innovations">technovations</span>, always chasing <span class="fw-bold">the next big thing</span>. Hopefully, we can together work on them soon.<br /><br />I have lived in four countries, <a id="aElSalvador" href="#elSalvador" class="text-material-link" data-bs-toggle="modal" data-bs-target="#elSalvador">El Salvador</a>, the USA, Poland, and Spain, where I have collaborated with citizens of 30+ different nationalities, allowing me to build, <span class="fw-bold fst-italic">Cultural Intelligence.</span>`,
