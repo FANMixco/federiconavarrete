@@ -1,6 +1,6 @@
 const basicInfo = {
 	"name": "Federico Navarrete",
-	"headline": 'Tecnonovador 💡, <a id="aBooksModal" data-bs-toggle="modal" data-target="#booksModal" href="#booksModal" class="text-decoration-none">Autor</a> 📝, Consultor de la Nube y Orador 🇪🇸/🇬🇧<br />Liderando Transformaciones Digitales 🌐',
+	"headline": 'Tecnonovador 💡, <a id="aBooksModal" data-bs-toggle="modal" data-target="#booksModal" href="#booksModal" class="text-decoration-none">Autor</a> 📝, Orador 🇪🇸/🇬🇧 y Consultor de la Nube,<br />Liderando Transformaciones Digitales 🌐',
 	"headlineIntro": "¡Es hora de llevar la innovación A TU VIDA! ¿Estás listo?",
 	"aboutDesc": [
 		`Bienvenido compañero, encantado de conocerte en línea. Soy Federico y me apasiona dar forma a un mundo mejor 🌍 a través de innovaciones tecnológicas, siempre persiguiendo <span class="fw-bold">la próxima gran novedad</span>. Espero que pronto podamos trabajar juntos en ellas.<br /><br />He vivido en cuatro países, <a id="aElSalvador" href="#elSalvador" class="text-material-link" data-bs-toggle="modal" data-bs-target="#elSalvador">El Salvador</a>, Estados Unidos de América, Polonia y España, dónde he trabajado con ciudadanos de 30 más de nacionalidades, permitiéndome desarrollar, <span class="fw-bold fst-italic">Inteligencia Cultural.</span>`,
