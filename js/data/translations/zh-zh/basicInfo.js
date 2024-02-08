@@ -1,6 +1,6 @@
 const basicInfo = {
 	"name": "Federico Navarrete",
-	"headline": '云架构师 💡, <a id="aBooksModal" data-bs-toggle="modal" data-target="#booksModal" href="#booksModal">著者</a> ✍️ 和演说家 🎤<br />领先的数字化转型 🌐',
+	"headline": '云架构师 💡, <a id="aBooksModal" data-bs-toggle="modal" data-target="#booksModal" href="#booksModal">著者</a> ✍️ 和演说家 🎤<br />领先的数字化转型 🛰️',
 	"headlineIntro": "是时候给你的生活带来创新了！你准备好了吗？",
 	"aboutDesc": [
 		`欢迎，我的朋友，很高兴与您见面。我是费德里科，我热衷于塑造一个更美好的世界🌍 通过创新和技术，始终追求下一个大目标。希望我们能尽快合作。<br /><br />我住在四个国家，<a id="aElSalvador" href="#elSalvador" class="text-material-link" data-bs-toggle="modal" data-bs-target="#elSalvador" class="text-decoration-none">萨尔瓦多</a>，美国、波兰和西班牙，我在那里与30多个不同国籍的公民合作，使我能够建立<<span class="fw-bold fst-italic">>文化智能。</span>`,
