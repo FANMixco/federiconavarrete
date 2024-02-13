@@ -63,5 +63,12 @@ function screenResize() {
 // Call the function when the page loads
 screenResize();
 
-// Call the function when the window is resized
-window.addEventListener("resize", screenResize);
+if (smallScreenMobileOS) {
+  let lastScrollTop = 0;
+
+  window.addEventListener("scroll", function() {
+    let currentScroll = window.scrollY || document.documentElement.scrollTop;
+    document.getElementById("contactMeFloat").style.display = (currentScroll > lastScrollTop) ? 'none' : 'block';
+    lastScrollTop = currentScroll;
+  }, false);
+}
