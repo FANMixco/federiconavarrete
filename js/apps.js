@@ -1,4 +1,4 @@
-/*This code is property of Federico Navarrete and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
+/*This code is Federico Navarrete's property and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
 
 const cardTemplate = 
 `<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;">
@@ -18,7 +18,7 @@ const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>"
 let apps, panesOptions, tabsOptions;
 
 window.addEventListener('DOMContentLoaded', () => {
-    fetchData(`js/data/translations/en-us/external/apps.json`)
+    fetchData(`js/data/translations/en-us/external/apps.min.json`)
     .then(data => {
         apps = data.apps;
         panesOptions = data.panesOptions;
