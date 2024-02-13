@@ -13,7 +13,7 @@ const techSkills = [
 	[
 		'云架构（AWS）',
 		'云/移动/Web开发',
-		"Xamarin.Android 和 MAUI"
+		"Android 和 MAUI"
 	]
 ];
 

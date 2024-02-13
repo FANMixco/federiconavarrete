@@ -1,4 +1,4 @@
-const genericTranslations = {
+{
     "telephone": "Teléfono",
     "email": "Email",
     "contactMe": "Contáctame",
@@ -55,4 +55,4 @@ const genericTranslations = {
     "quote": "Como un Fénix 🐦‍🔥, resurge de TUS cenizas cada vez más fuerte 💪.",
     "asSeen": "Tal como se vio en 🎙️",
     "servicesM": "Servicios"
-};
+}
