@@ -144,7 +144,7 @@ function loadTranslations() {
                 currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
                 const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
 
-                const iframePreview = getIframe(pTitle, `${currentLoc}.html?isIframe=true`, 'id="gPreview" allowfullscreen');
+                const iframePreview = getIframe(pTitle, `pages/${currentLoc}.html?isIframe=true`, 'id="gPreview" allowfullscreen');
 
                 const divPreview = document.getElementById("divPreview");
 

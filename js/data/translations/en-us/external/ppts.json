@@ -358,7 +358,7 @@
                     "stores": [
                         {
                             "id": "pptNext",
-                            "subTitle": "<img src='img/icons/prezi.svg' alt='prezi' class='preziIcon' /> Prezi"
+                            "subTitle": "<img src='../img/icons/prezi.svg' alt='prezi' class='preziIcon' /> Prezi"
                         }
                     ]
                 }
@@ -376,7 +376,7 @@
                     "stores": [
                         {
                             "id": "pptClassic",
-                            "subTitle": "<img src='img/icons/prezi.svg' class='preziIcon' /> Prezi Classic"
+                            "subTitle": "<img src='../img/icons/prezi.svg' class='preziIcon' /> Prezi Classic"
                         }
                     ]
                 }
