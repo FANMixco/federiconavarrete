@@ -7,10 +7,10 @@ function onReadyExternal() {
         console.error(e);
     });
 
-    getScript('https://code.jivosite.com/widget/1D5ncamsoj')
+    /*getScript('https://code.jivosite.com/widget/1D5ncamsoj')
     .catch((e) => {
         console.error(e);
-    });
+    });*/
 
     getScript('https://cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js')
     .catch((e) => {

@@ -19,21 +19,51 @@ const getScript = url => new Promise((resolve, reject) => {
     document.head.appendChild(script);
 });
 
+async function fetchData(url) {
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading JSON:', error);
+    }
+}
+
 //basicTranslations.js
-let tErr1;
 
 const language = window.navigator.userLanguage || window.navigator.language;
-
-let lang = "en-us/min";
-let currentLoc = '';
-
 const langLoc = "js/data/translations/";
-
 const validLang = ['en', 'es', 'zh'];
+const lMin = '';
 
-lang = (language.includes('es')) ? "es-sv/min": (language.includes('zh')) ? 'zh-zh/min' : lang;
+let tErr1;
 
-getScript(`${langLoc}${lang}/generics.js`)
+let currentLoc = '';
+let lang = `en-us${lMin}`;
+
+let genericTranslations, basicInfo;
+
+lang = (language.includes('es')) ? `es-sv${lMin}`: (language.includes('zh')) ? `zh-zh${lMin}` : lang;
+
+fetchData(`${langLoc}${lang}/generics.json`)
+.then(data => {
+    genericTranslations = data;
+
+    loadTranslationsWithRetry(loadTranslations, function(err) {
+        if (!err) {
+            // handle result
+            fetchData(`${langLoc}${lang}/basicInfo.json`).then(data => {
+                basicInfo = data;
+                loadTranslationsWithRetry(loadBasicInfo, function() { });
+                addExtraIcons();
+            })
+            .catch((e) => { 
+                console.error(e);
+            });
+        }
+    });
+}).catch((e) => { console.error(e); });
+
+/*getScript(`${langLoc}${lang}/generics.js`)
 .then(() => {
     // call loadTranslationsWithRetry and handle the result or error
     loadTranslationsWithRetry(loadTranslations, function(err) {
@@ -51,7 +81,7 @@ getScript(`${langLoc}${lang}/generics.js`)
 })
 .catch((e) => {
     console.error(e);
-});
+});*/
 
 function addExtraIcons() {
     //const dStyle = `style='filter: invert(1)'`;
@@ -256,12 +286,13 @@ function loadBasicInfo() {
         }, false);
 
         const linkContactMe = document.getElementById("linkContactMe");
-
         linkContactMe.addEventListener(eClick, contactMeForm);
 
         const linkContactMeAbout = document.getElementById("linkContactMeAbout");
-
         linkContactMeAbout.addEventListener(eClick, contactMeForm);
+
+        const contactMeFloat = document.getElementById("contactMeFloat");
+        contactMeFloat.addEventListener(eClick, contactMeForm);
 
         const linkPreview = document.getElementById('youTubePreview');
         let iframeGeneric = document.getElementById('iframeGeneric');

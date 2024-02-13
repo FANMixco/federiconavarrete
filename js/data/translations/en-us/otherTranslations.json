@@ -1,0 +1,427 @@
+{
+    "articlesList": {
+        "articles": [
+            {
+                "link": "https://bit.ly/46lgLMv",
+                "title": "Can ChatGPT be your Copilot?",
+                "imgID": "chatGPT",
+                "imgBasicName": "chatGPT",
+                "imgFormat": "jpg"
+            },
+            {
+                "link": "https://bit.ly/377HDCm",
+                "title": "Is there any RPA platform for Android/iOS? 🤔",
+                "imgID": "imgArt1",
+                "imgBasicName": "rpas1",
+                "imgFormat": "jpg"
+            }
+        ],
+        "isVisible": true
+    },
+    "awardsList": {
+        "awards": [
+            [
+                { 
+                    "title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU",
+                    "link": "https://www.citython.eu/2021eindhoven",
+                    "type": "iframe"
+                },
+                {
+                    "title": "Samsung Top Developer Award 2021 with Social Component",
+                    "link": "https://bit.ly/31laqDT",
+                    "type": "_blank"
+                }
+            ],
+            [
+                {
+                    "title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
+                    "link": "https://ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none",
+                    "type": "img"
+                },
+                {
+                    "title": "President's Distinguished Area by Toastmasters International 2019",
+                    "link": "https://ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none",
+                    "type": "img"
+                }
+            ],
+            [
+                {
+                    "title": "1<sup>st</sup> place Cisco Switch Up Challenge 2016, “The Internet of Everything”",
+                    "link": "https://bit.ly/3b8Tu8J",
+                    "type": "iframe"
+                },
+                {
+                    "title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
+                    "link": "https://bit.ly/3lqNR7Y",
+                    "type": "iframe"
+                }
+            ]
+        ],
+        "isVisible": true
+    },
+    "newsArticlesList": {
+        "articles": [
+            {
+                "link": "https://bit.ly/442bojU",
+                "title": "Professionals support on the road to success in Lodz (Pages 22 & 23)",
+                "imgID": "imgNews1",
+                "imgBasicName": "news1",
+                "imgFormat": "jpg"
+            },
+            {
+                "link": "https://bit.ly/3NODKZ4",
+                "title": "Two Salvadorans stand out in a NASA contest (in Spanish)",
+                "imgID": "imgNews2",
+                "imgBasicName": "news2",
+                "imgFormat": "jpg"
+            }
+        ],
+        "isVisible": true
+    },
+    "organizedEvents": {
+        "events": [
+            {
+                "link": "https://bit.ly/43ZR9TJ",
+                "title": "Łódźarts - Toastmasters Conference - 2019, Division A, District 108",
+                "imgID": "imgLodzarts",
+                "imgBasicName": "lodzarts",
+                "imgFormat": "jpg"
+            }
+        ],
+        "isVisible": true
+    },
+    "personalProjects": [
+        {
+            "youTubeID": "2_iI-uGmjcc",
+            "link": "https://bit.ly/37cTxuR",
+            "title": "The Mayan Route",
+            "timeFrame": "2013 - now",
+            "isActive": true	
+        },
+        {
+            "youTubeID": "0S8ybMuA4vA",
+            "link": "https://bit.ly/3phGZPb",
+            "title": "Toastmasters Timer",
+            "timeFrame": "2018 - now",
+            "isActive": false
+        },
+        {
+            "youTubeID": "77KYtHlTrsI",
+            "link": "https://bit.ly/3XsCTAn",
+            "title": "Gravity Now!",
+            "timeFrame": "2014 - now",
+            "isActive": false	
+        }
+    ],
+    "presentationsVideos": {
+        "presentations": [
+            {
+                "youTubeID": "IcWZ962uYy0",
+                "title": "<a class='text-material-link-dark' href='https://www.citython.eu/2021eindhoven' rel='noreferrer' target='_blank'>Winning Team | Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
+            },
+            {
+                "youTubeID": "XJyWAErkNtY",
+                "title": "Moments of Truth with Dr Natalia Wiechowski"
+            },
+            {
+                "youTubeID": "-c2zayFv14Y",
+                "title": "The Missing Variable"
+            }
+        ],
+        "isVisible": true
+    },
+    "youtubeTrainings": {
+        "presentations": [
+            {
+                "youTubeID": "VJF9NZOehTE",
+                "title": "When Low-Code meets #ChatGPT! Can you create your 1st Chatbot with Low-Code?"
+            },
+            {
+                "youTubeID": "oPg8aIlZJds",
+                "title": "Let's Create Amazing Presentations with Prezi Video"
+            },
+            {
+                "youTubeID": "9mXanZhm9eo",
+                "title": "It's time to Level Up ⏫ Your LinkedIn Profile!"
+            }
+        ],
+        "isVisible": true
+    },
+    "presentationsLinks": {
+        "presentations": [
+            {
+                "link": "https://bit.ly/3zURwzI",
+                "title": "The Ultimate Elevator Pitch",
+                "imgID": "imgPPT2",
+                "imgBasicName": "elevator",
+                "imgFormat": "jpg"
+            },
+            {
+                "link": "https://bit.ly/2WGzfb1",
+                "title": "Are robots your friends?",
+                "imgID": "imgPPT1",
+                "imgBasicName": "rfriends",
+                "imgFormat": "jpg"
+            }
+        ],
+        "isVisible": true
+    },
+    "reviewsList": {
+        "reviews": [
+            {
+                "name": "Dr. Natalia Wiechowski",
+                "img": "img/photos/nataliawiechowski.jpg",
+                "externalLink": "https://www.drnataliawiechowski.com",
+                "review": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!",
+                "shortReview": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … ",
+                "title": "LinkedIn🦄|Personal Branding Pro|Edutainer: Helping Coachsultants to grow their bizz through ORGANIC LinkedIn marketing",
+                "date": "27-05-2019",
+                "isPDF": false,
+                "isActive": true
+            },
+            {
+                "name": "Gabriela Roivainen",
+                "img": "img/photos/gabriela.jpg",
+                "externalLink": "",
+                "review": "testimonials/references.pdf",
+                "shortReview": "I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland … ",
+                "title": "Program Quality Director 2018/2019 at <a target='_blank' class='text-material-link' rel='noreferrer' href='https://www.toastmasters.org' class='text-dark'>Toastmasters International</a>, <a class='text-material-link' target='_blank' rel='noreferrer' href='https://toastmastersd108.org' class='text-dark'>District 108</a>",
+                "date": "03-06-2019",
+                "isPDF": true,
+                "pdfLocation": "testimonials/references.pdf",
+                "isActive": false
+            },
+            {
+                "name": "Edgar Regalado",
+                "img": "img/photos/edgar.jpg",
+                "externalLink": "",
+                "review": "I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college. During this time I developed a strong friendship relationship with him. My close association to him made me witness his stupendous growth as a person and as a professional. He's the most agile developer I've ever known. He creates clean, maintainable code in half the time of his peers. This is a consequence of his highly analytical personality and strong passion for computer science.<br /><br />On the other hand, Federico has been working hard to develop his interpersonal skills. To do so, he participated in various communities that require him to take a leadership role, such as Microsoft Student Partners and Toastmasters. In the latter, Federico gained confidence and developed the art of public speaking.<br /><br />There's no doubt that Federico is a person of integrity, with a well-balanced set of technical and interpersonal skills. For all of this, it is my pleasure to recommend Federico.",
+                "shortReview": "I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college … ",
+                "title": "Senior Java Developer at Deutsche Börse, Germany",
+                "date": "30-10-2016",
+                "isPDF": false,
+                "isActive": false
+            }
+        ],
+        "isVisible": true
+    },
+    "servicesList": {
+        "services": [
+            [
+                {
+                    "title": "IT Consultancy",
+                    "link": "https://form.jotform.com/202595846674065",
+                    "icon": "laptop-code-solid"
+                },
+                {
+                    "title": "Keynote Speeches",
+                    "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/5",
+                    "icon": "speaker"
+                }
+            ],
+            [
+                {
+                    "title": "Elevator Pitching and Storytelling Trainings",
+                    "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/6",
+                    "icon": "chalkboard-teacher-solid"
+                }
+            ]
+        ],
+        "isVisible": true
+    },
+    "socialBasicList": {
+        "socialMedia": [
+            {
+                "icon": "linkedin",
+                "title": "LinkedIn",
+                "id": "",
+                "link": "www.linkedin.com/in/federiconavarrete",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "youtube",
+                "title": "YouTube Channel",
+                "id": "uTubeLink",
+                "link": "www.youtube.com/@FedericoNavarrete",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "behance",
+                "title": "My Portfolio",
+                "id": "",
+                "link": "www.behance.net/fanmixco",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "calendar-today",
+                "title": "Meet Me (15”)",
+                "id": "",
+                "link": "bit.ly/47hmCm1",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            }
+        ],
+        "isVisible": true
+    },
+    "socialOthersList": {
+        "socialMedia": [
+            {
+                "icon": "tiktok",
+                "title": "TikTok",
+                "id": "",
+                "link": "www.tiktok.com/@federicostories",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "podcast-solid",
+                "title": "Sharing Your Stories",
+                "link": "apple.co/3NfRDhz",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "amazon-brands",
+                "title": "Amazon",
+                "link": "amzn.to/3Jqgsq1",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "spotify",
+                "title": "Cyber Prophets",
+                "link": "spoti.fi/3cD1743",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "twitter",
+                "title": "X",
+                "link": "x.com/FedeStories",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "blogger-b-brands",
+                "title": "Federico Stories",
+                "link": "federicostories.blogspot.com",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "goodreads-brands",
+                "title": "Goodreads",
+                "link": "www.goodreads.com/fanmixco",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "github",
+                "title": "GitHub",
+                "link": "github.com/FANMixco",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "instagram",
+                "title": "Instagram",
+                "link": "www.instagram.com/federico_the_consultant",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "quora",
+                "title": "Quora",
+                "link": "www.quora.com/profile/Federico-Navarrete-1",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "stack-overflow",
+                "title": "StackOverflow",
+                "link": "stackoverflow.com/users/1928691/federico-navarrete",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            },
+            {
+                "icon": "dev-brands",
+                "title": "Dev Community",
+                "link": "dev.to/fanmixco",
+                "isIcon": false,
+                "externalClass": "iconFooter"
+            }
+        ],
+        "isVisible": true
+    },
+    "softSkills": [
+        [
+            "Project management",
+            "Mentoring & Coaching"
+        ],
+        [
+            "IT consultancy & strategy",
+            "Emerging technologies research"
+        ],
+        [
+            "Leadership",
+            "Storytelling & Elevator pitching"
+        ]
+    ],
+    "softSkillsOthers": [
+        [
+            "Organizing events",
+            "Creative writing",
+            "Cultural intelligence"
+        ],
+        [
+            "Gathering requirements",
+            "Innovative planning",
+            "Business analysis"
+        ],
+        [
+            "Presentation design",
+            "Employee training",
+            "Team building"
+        ]
+    ],
+    "techSkills": [
+        [
+            "Agile - Scrum",
+            "CICD — Azure DevOps",
+            "<a href='https://fanmixco.github.io/rpaBestPractices' target='_blank' class='text-warning' rel='noreferrer'>RPA</a> — UiPath &amp; Automation Anywhere"
+        ],
+        [
+            "Angular 17+",
+            "Open AI API / ChatGPT",
+            "C# & .NET Core"
+        ],
+        [
+            "Cloud Architecture (AWS)",
+            "Cloud / Mobile / Web Dev",
+            "Xamarin.Android & MAUI"
+        ]
+    ],
+    "techSkillsOthers": [
+        [
+            "ITSM — ITIL v4",
+            "ATDD",
+            "RESTful Web Services",
+            "Versioning — Git"
+        ],
+        [
+            "ASP MVC",
+            "Entity Framework",
+            "PWA / HTML5 / CSS3 / JS",
+            "UI & UX"
+        ],
+        [
+            "Azure (PaaS & IaaS)",
+            "Visual Studio & Code",
+            "SQL Server & SQLite",
+            "Google Analytics &amp; Maps API"
+        ]
+    ]
+}
