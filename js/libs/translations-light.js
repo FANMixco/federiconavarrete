@@ -12,53 +12,33 @@ const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
 
-let awardsList, articlesList, booksList, legendsList, newsArticlesList, organizedEvents, personalProjects, presentationsLists, reviewsList, servicesList, socialMediasLists, softSkillsLists, techSkillsLists, presentationsVideos, youtubeTrainings, presentationsLinks, socialBasicList, socialOthersList;
-
 fetchData(`${langLoc}${lang}/otherTranslations.json`)
 .then(data => {
-    awardsList = data.awardsList;
-    articlesList = data.articlesList;
-    booksList = data.booksList;
-    legendsList = data.legendsList;
-    newsArticlesList = data.newsArticlesList;
-    organizedEvents = data.organizedEvents;
-    personalProjects = data.personalProjects;
-    presentationsLists = data.presentationsLists;
-    reviewsList = data.reviewsList;
-    servicesList = data.servicesList;
-    socialMediasLists = data.socialMediasLists;
-    softSkillsLists = data.softSkillsLists;
-    techSkillsLists = data.techSkillsLists;
-    presentationsVideos = data.presentationsVideos;
-    youtubeTrainings = data.youtubeTrainings;
-    presentationsLinks = data.presentationsLinks;
-    socialBasicList = data.socialBasicList;
-    socialOthersList = data.socialOthersList;
+    loadAwards(data.awardsList);
+    loadServices(data.servicesList);
+    loadTechSkills(data.techSkills, data.techSkillsOthers);
+    loadSoftSkills(data.softSkills, data.softSkillsOthers);
+    loadPersonalProjects(personalProjects);
+    loadOrganizedEvents(data.organizedEvents);
+    loadArticles(data.articlesList);
+    loadNewsArticles(data.newsArticlesList);
+    loadSocialMedias(data.socialBasicList, data.socialOthersList);
+    loadReviews(data.reviewsList);    
 
-    loadAwards();
-    loadServices();
-    loadTechSkills();
-    loadSoftSkills();
-    loadPersonalProjects();
     loadVideosAndPresentations();
-    loadOrganizedEvents();
-    loadArticles();
-    loadNewsArticles();
-    loadSocialMedias();
-    loadReviews();    
 }).catch((e) => { console.error(e); });
 
-function loadOrganizedEvents() {
+function loadOrganizedEvents(organizedEvents) {
     const { events, isVisible } = organizedEvents;
     loadImgSection(events, isVisible, 'divEvents', 'divEvents', imgLocPortfolio, 'Łódźarts', fontMobile);
 }
 
-function loadArticles() {
+function loadArticles(articlesList) {
     const { articles, isVisible } = articlesList;
     loadImgSection(articles, isVisible, 'divArticles', 'articlesDiv', imgLocArticles, '', fontMobile);
 }
 
-function loadNewsArticles() {
+function loadNewsArticles(newsArticlesList) {
     const { articles, isVisible } = newsArticlesList;
     loadImgSection(articles, isVisible, 'divMMArticles', 'newsArticles', imgLocArticles, fontMobile);
 }
@@ -76,7 +56,7 @@ function loadBookPreview() {
     bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', 'https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3', `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
 }
 
-function loadReviews() {
+function loadReviews(reviewsList) {
     try {
         const { reviews, isVisible } = reviewsList;
 
@@ -143,51 +123,7 @@ function loadReviews() {
     catch (e) { return e; }
 }
 
-/*function loadHobbies() {
-    try {
-        const { hobbies, isVisible } = hobbiesList;
-
-        if (isVisible) {
-            const hobbiesList = document.getElementById('hobbiesList');
-
-            const finalH = !(smallScreenMobileOS) ? hobbies : hobbies.filter(({isOpt}) => isOpt === false);
-
-            finalH.forEach(item => {
-                let btnOptional = item.isOpt ? " btnOptional" : "";
-
-                hobbiesList.innerHTML += getListItem(getHobbyImg(item), '', btnOptional);
-            });
-
-            if (smallScreenMobileOS) {
-                hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', '', '', "btnExtraHobbies");
-            }
-
-            const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
-
-            const optHobbies = document.getElementById('optHobbies');
-            hobbiesOthers.forEach(elem => {
-                optHobbies.innerHTML += getListItem(getHobbyImg(elem));
-            });
-
-            [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
-                element.addEventListener(eClick, function(e) {
-                    e.preventDefault();
-                });
-            });
-
-            document.getElementById("linkContactMe").addEventListener(eClick, function(e) {
-                e.preventDefault();
-            });
-        }
-        else {
-            const divHobbies = document.getElementById("divHobbies");
-            divHobbies.classList.add(nVis);
-        }
-    }
-    catch (e) { return e; }
-}*/
-
-function loadServices() {
+function loadServices(servicesList) {
     try {
         const { services, isVisible } = servicesList;
 
@@ -248,7 +184,7 @@ function getCarousel(items, cId, arrowsColor = 'text-muted') {
     </div>`;
 }
 
-function loadAwards() {
+function loadAwards(awardsList) {
     try {
         const { awards, isVisible } = awardsList;
 
@@ -332,21 +268,21 @@ function loadAwards() {
     catch (e) { return e; }
 }
 
-function loadTechSkills() {
+function loadTechSkills(techSkills, techSkillsOthers) {
     try {
         loadSkills(techSkills, techSkillsOthers, "divTechSkills", "divTechSkillsOthers", "", "btnMoreTechSkills", "multiDev");
     }
     catch (e) { return e; }
 }
 
-function loadSoftSkills() {
+function loadSoftSkills(softSkills, softSkillsOthers) {
     try {
         loadSkills(softSkills, softSkillsOthers, "divSoftSkills", "divSoftSkillsOther", "-business", "btnMoreSoftSkills", "multiBS");
     }
     catch (e) { return e; }
 }
 
-function loadPersonalProjects() {
+function loadPersonalProjects(personalProjects) {
     try {
         const personalProjectsDiv = document.getElementById('personalProjects');
         personalProjects.forEach(item => {
@@ -512,7 +448,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
     catch (e) { return e; }
 }
 
-function loadSocialMedias() {
+function loadSocialMedias(socialBasicList, socialOthersList) {
     try {
         const { socialMedia, isVisible} = socialBasicList;
 
@@ -915,3 +851,47 @@ if (document.readyState !== "loading") {
 } else {
     document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
 }
+
+/*function loadHobbies() {
+    try {
+        const { hobbies, isVisible } = hobbiesList;
+
+        if (isVisible) {
+            const hobbiesList = document.getElementById('hobbiesList');
+
+            const finalH = !(smallScreenMobileOS) ? hobbies : hobbies.filter(({isOpt}) => isOpt === false);
+
+            finalH.forEach(item => {
+                let btnOptional = item.isOpt ? " btnOptional" : "";
+
+                hobbiesList.innerHTML += getListItem(getHobbyImg(item), '', btnOptional);
+            });
+
+            if (smallScreenMobileOS) {
+                hobbiesList.innerHTML += getBtnOthers('otherHobbies', 'externalImg', '', '', "btnExtraHobbies");
+            }
+
+            const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
+
+            const optHobbies = document.getElementById('optHobbies');
+            hobbiesOthers.forEach(elem => {
+                optHobbies.innerHTML += getListItem(getHobbyImg(elem));
+            });
+
+            [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
+                element.addEventListener(eClick, function(e) {
+                    e.preventDefault();
+                });
+            });
+
+            document.getElementById("linkContactMe").addEventListener(eClick, function(e) {
+                e.preventDefault();
+            });
+        }
+        else {
+            const divHobbies = document.getElementById("divHobbies");
+            divHobbies.classList.add(nVis);
+        }
+    }
+    catch (e) { return e; }
+}*/

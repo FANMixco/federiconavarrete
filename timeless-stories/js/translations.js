@@ -6,10 +6,13 @@ let nLang = (navigator.languages
 
 let supportedLang = ['en', 'es', 'zh'];
 
+let translations;
+
 lang = supportedLang.includes(nLang) ? nLang : lang;
 
-getScript(`js/i18n/lang-${lang}.js`)
-.then(() => {
+fetchData(`js/i18n/lang-${lang}.json`)
+.then((data) => {
+    translations = data.translations;
     document.querySelectorAll('[data-translation]').forEach(item => {
         item.innerHTML = translations[`${item.dataset.translation}`];
     });

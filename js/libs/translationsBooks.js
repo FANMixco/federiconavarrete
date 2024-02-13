@@ -7,10 +7,12 @@ window.addEventListener('DOMContentLoaded', () => {
     
     let langLoc = "../js/data/translations/";
     
-    getScript(`${langLoc}${lang}/booksList.js`) .then(() => { loadBooks(); }).catch((e) => { console.error(e); });
+    fetchData(`${langLoc}${lang}/booksList.json`) .then((data) => { 
+        loadBooks(data.booksList); 
+    }).catch((e) => { console.error(e); });
 });
 
-function loadBooks() {
+function loadBooks(booksList) {
     booksList.forEach(function(item) {
         const active = item.isActive ? " active" : "";
         const urlI = '../img/books/';

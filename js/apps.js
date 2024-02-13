@@ -1,4 +1,4 @@
-/*This code is property of Federico Navarrete and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
+/*This code is Federico Navarrete's property and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
 
 const cardTemplate = 
 `<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;">
@@ -15,127 +15,135 @@ const galleryFooter = `Some icons were created by <a href="https://www.flaticon.
 
 const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>";
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    function load() {
-        document.getElementById('galleryApps').innerHTML += createTabs() + createPanes();
-		
-        document.getElementById('galleryTitle').innerHTML += galleryTitle;
-		
-		let cYear = new Date().getFullYear();
-		
-		cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
+let apps, panesOptions, tabsOptions;
 
-        document.getElementById('galleryFooter').innerHTML += galleryFooter.format(cYear);
-		
-        let androidSupported = [];
-        let androidHuaweiSupported = [];
-        let androidSamsungSupported = [];
-        let androidAmazonSupported = [];
-        let androidSupportedTechs = [];
-        let w10Supported = [];
-        let w10SupportedTechs = [];
-        let webSupported = [];
-        let webSupportedTechs = [];
-        let nugetSupported = [];
-        let libsSupportedTechs = [];
-        let jsLibSupported = [];
-        let uwpLibSupported = [];
-        
-        let androidUnsupported = [];
-        let w10Unsupported = [];
-        let wXPUnsupported = [];
-        let wpUnsupported = [];
-        let w8Unsupported = [];
-        let webUnsupported = [];
-        let nugetUnsupported = [];
-        let xamarinFormsUnsupported = [];
-        let unsupportedTechs = [];
+window.addEventListener('DOMContentLoaded', () => {
+    fetchData(`js/data/translations/en-us/external/apps.min.json`)
+    .then(data => {
+        apps = data.apps;
+        panesOptions = data.panesOptions;
+        tabsOptions = data.tabsOptions;
+        load();
+    }).catch((e) => { console.error(e); });
+});
 
-        let customIconsArray = [];
+function load() {
+    document.getElementById('galleryApps').innerHTML += createTabs() + createPanes();
+    
+    document.getElementById('galleryTitle').innerHTML += galleryTitle;
+    
+    let cYear = new Date().getFullYear();
+    
+    cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
 
-        if (!new URLSearchParams(window.location.search).get('isIframe')) {
-            document.getElementById('header').style.display = "block";
-            document.getElementById('header').classList.add("pt-4");
+    document.getElementById('galleryFooter').innerHTML += galleryFooter.format(cYear);
+    
+    let androidSupported = [];
+    let androidHuaweiSupported = [];
+    let androidSamsungSupported = [];
+    let androidAmazonSupported = [];
+    let androidSupportedTechs = [];
+    let w10Supported = [];
+    let w10SupportedTechs = [];
+    let webSupported = [];
+    let webSupportedTechs = [];
+    let nugetSupported = [];
+    let libsSupportedTechs = [];
+    let jsLibSupported = [];
+    let uwpLibSupported = [];
+    
+    let androidUnsupported = [];
+    let w10Unsupported = [];
+    let wXPUnsupported = [];
+    let wpUnsupported = [];
+    let w8Unsupported = [];
+    let webUnsupported = [];
+    let nugetUnsupported = [];
+    let xamarinFormsUnsupported = [];
+    let unsupportedTechs = [];
 
-            [...document.getElementsByClassName('.gallery-block')].forEach(function(element) {
-                element.style.paddingTop = '60px';
-            });
-        }
+    let customIconsArray = [];
 
-        for(let item in apps) {
-            filterElem(apps[item], 'android', true, androidSupported);
+    if (!new URLSearchParams(window.location.search).get('isIframe')) {
+        document.getElementById('header').style.display = "block";
+        document.getElementById('header').classList.add("pt-4");
 
-            filterElem(apps[item], 'android_huawei', true, androidHuaweiSupported);
-
-            filterElem(apps[item], 'android_samsung', true, androidSamsungSupported);
-
-            filterElem(apps[item], 'android_amazon', true, androidAmazonSupported);
-
-            filterElem(apps[item], 'windows10', true, w10Supported);
-
-            filterElem(apps[item], 'android', false, androidUnsupported);
-
-            filterElem(apps[item], 'windows10', false, w10Unsupported);
-
-            filterElem(apps[item], 'windowsPhone', false, wpUnsupported);
-
-            filterElem(apps[item], 'windows8', false, w8Unsupported);
-
-            filterElem(apps[item], 'web', true, webSupported);
-
-            filterElem(apps[item], 'web', false, webUnsupported);
-
-            filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
-
-            filterElem(apps[item], 'nuget', true, nugetSupported);
-
-            filterElem(apps[item], 'js_lib', true, jsLibSupported);
-
-            filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
-
-            filterElem(apps[item], 'nuget', false, nugetUnsupported);
-
-            filterElem(apps[item], 'xamarin_forms', false, xamarinFormsUnsupported);
-        }
-
-        setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
-        setApps(androidHuaweiSupported.sort(sortByProperty('order')), "huaweiStore", androidSupportedTechs, customIconsArray);
-        setApps(androidSamsungSupported.sort(sortByProperty('order')), "samsungStore", androidSupportedTechs, customIconsArray);
-        setApps(androidAmazonSupported.sort(sortByProperty('order')), "amazonStore", androidSupportedTechs, customIconsArray);
-        setApps(w10Supported.sort(sortByProperty('order')), "msStore", w10SupportedTechs, customIconsArray);
-        setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
-        setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
-        setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
-        setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
-
-        setApps(xamarinFormsUnsupported.sort(sortByProperty('order')), "unsupportedXamarinForms", unsupportedTechs, customIconsArray);
-        setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
-        setApps(w8Unsupported.sort(sortByProperty('order')), "unsupportedWindows8", unsupportedTechs, customIconsArray);
-        setApps(w10Unsupported.sort(sortByProperty('order')), "unsupportedWindows10", unsupportedTechs, customIconsArray);
-        setApps(wpUnsupported.sort(sortByProperty('order')), "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
-        setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
-        setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
-        setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
-
-        setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
-        setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
-        setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
-        setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
-        setTechUsed(libsSupportedTechs, "techsLibsStore", customIconsArray);
-
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
-
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-            return new bootstrap.Popover(popoverTriggerEl)
+        [...document.getElementsByClassName('.gallery-block')].forEach(function(element) {
+            element.style.paddingTop = '60px';
         });
     }
 
-    load();
-});
+    for(let item in apps) {
+        filterElem(apps[item], 'android', true, androidSupported);
+
+        filterElem(apps[item], 'android_huawei', true, androidHuaweiSupported);
+
+        filterElem(apps[item], 'android_samsung', true, androidSamsungSupported);
+
+        filterElem(apps[item], 'android_amazon', true, androidAmazonSupported);
+
+        filterElem(apps[item], 'windows10', true, w10Supported);
+
+        filterElem(apps[item], 'android', false, androidUnsupported);
+
+        filterElem(apps[item], 'windows10', false, w10Unsupported);
+
+        filterElem(apps[item], 'windowsPhone', false, wpUnsupported);
+
+        filterElem(apps[item], 'windows8', false, w8Unsupported);
+
+        filterElem(apps[item], 'web', true, webSupported);
+
+        filterElem(apps[item], 'web', false, webUnsupported);
+
+        filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
+
+        filterElem(apps[item], 'nuget', true, nugetSupported);
+
+        filterElem(apps[item], 'js_lib', true, jsLibSupported);
+
+        filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
+
+        filterElem(apps[item], 'nuget', false, nugetUnsupported);
+
+        filterElem(apps[item], 'xamarin_forms', false, xamarinFormsUnsupported);
+    }
+
+    setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
+    setApps(androidHuaweiSupported.sort(sortByProperty('order')), "huaweiStore", androidSupportedTechs, customIconsArray);
+    setApps(androidSamsungSupported.sort(sortByProperty('order')), "samsungStore", androidSupportedTechs, customIconsArray);
+    setApps(androidAmazonSupported.sort(sortByProperty('order')), "amazonStore", androidSupportedTechs, customIconsArray);
+    setApps(w10Supported.sort(sortByProperty('order')), "msStore", w10SupportedTechs, customIconsArray);
+    setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
+    setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
+    setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
+    setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
+
+    setApps(xamarinFormsUnsupported.sort(sortByProperty('order')), "unsupportedXamarinForms", unsupportedTechs, customIconsArray);
+    setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
+    setApps(w8Unsupported.sort(sortByProperty('order')), "unsupportedWindows8", unsupportedTechs, customIconsArray);
+    setApps(w10Unsupported.sort(sortByProperty('order')), "unsupportedWindows10", unsupportedTechs, customIconsArray);
+    setApps(wpUnsupported.sort(sortByProperty('order')), "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
+    setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
+    setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
+    setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
+
+    setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
+    setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
+    setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
+    setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
+    setTechUsed(libsSupportedTechs, "techsLibsStore", customIconsArray);
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    });
+}
 
 function setTechUsed(techs, container, customIcons) {
     const result = { }
@@ -262,3 +270,19 @@ function createElem(item, edition) {
          order: edition.order
    };
 }
+
+function gAnalytics() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WQKJ9Y00XJ');
+}
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'es,nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+
+googleTranslateElementInit();
+
+gAnalytics();

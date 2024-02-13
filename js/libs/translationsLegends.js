@@ -7,10 +7,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     let langLoc = "../js/data/translations/";
     
-    getScript(`${langLoc}${lang}/legendsList.js`) .then(() => { loadLegends(); }).catch((e) => { console.error(e); });
+    fetchData(`${langLoc}${lang}/legendsList.json`) .then((data) => {
+        loadLegends(data.legendsList); 
+    }).catch((e) => { console.error(e); });
 });
 
-function loadLegends() {
+function loadLegends(legendsList) {
     legendsList.forEach(item => {
         const active = item.isActive ? " active" : "";
         const urlI = '../img/legends/';
