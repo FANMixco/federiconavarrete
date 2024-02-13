@@ -133,6 +133,11 @@ function loadTranslations() {
         document.querySelectorAll('[data-translation]').forEach(item => {
             item.innerHTML = genericTranslations[`${item.dataset.translation}`];
         });
+        
+        document.querySelectorAll('[data-title-translation]').forEach(item => {
+            item.setAttribute("aria-label", genericTranslations[`${item.dataset.titleTranslation}`]);
+            item.title = genericTranslations[`${item.dataset.titleTranslation}`];
+        });
 
         [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
             element.addEventListener(eClick, function(e) {
