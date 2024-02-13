@@ -1,0 +1,130 @@
+{
+    "basic": {
+        "name": "Federico Navarrete",
+        "sub-title": "Cloud Consultant 💡, Author ✍️ and Orator 🇬🇧/🇪🇸<br />Shaping a better world 🌍 via technovations!",
+        "hashtag": "#BeAnAgentOfChange",
+        "quote": "Like a Phoenix, Rise stronger from YOUR ashes every time."
+    },
+    "links": [
+        {
+            "link": "https://bit.ly/hireflinkedin",
+            "id": "",
+            "aria-label": "Hire Me On LinkedIn",
+            "title": "Hire Me On LinkedIn",
+            "target": "_blank",
+            "icon": "icon-handshake-o",
+            "text": "Hire Me"
+        },
+        {
+            "link": "https://bit.ly/47hmCm1",
+            "id": "",
+            "aria-label": "Meet Me (15”)",
+            "title": "Meet Me (15”)",
+            "target": "_blank",
+            "icon": "icon-calendar-check-o",
+            "text": "Meet Me (15”)"
+        },
+        {
+            "link": "https://be.net/fanmixco",
+            "id": "",
+            "aria-label": "Check My Portfolio",
+            "title": "Check My Portfolio",
+            "target": "_blank",
+            "icon": "icon-behance",
+            "text": "Check My Portfolio"
+        },
+        {
+            "link": "https://a.co/d/4l5qaLk",
+            "id": "priority",
+            "aria-label": "Read Timeless Stories of El Salvador",
+            "title": "Read Timeless Stories of El Salvador",
+            "target": "_blank",
+            "icon": "icon-amazon",
+            "text": "Read Timeless Stories of El Salvador"
+        },
+        {
+            "link": "https://spoti.fi/43hUjBU",
+            "id": "",
+            "aria-label": "Spotify - Cyber Prophets Podcast",
+            "title": "Listen to The Cyber Prophets",
+            "target": "_blank",
+            "icon": "icon-spotify",
+            "text": "Listen to The Cyber Prophets"
+        },
+        {
+            "link": "https://www.youtube.com/@FedericoNavarrete",
+            "id": "uTubeLink",
+            "aria-label": "Subscribe to my YouTube Channel",
+            "title": "Subscribe to my YouTube Channel",
+            "target": "_blank",
+            "icon": "icon-youtube",
+            "text": "Subscribe to My YouTube Channel"
+        },
+        {
+            "link": "https://apple.co/3NfRDhz",
+            "id": "",
+            "aria-label": "Sharing Your Stories",
+            "title": "Discover Sharing Your Stories",
+            "target": "_blank",
+            "icon": "icon-podcast",
+            "text": "Discover Sharing Your Stories"
+        }
+    ],
+    "sublinks": [
+        {
+            "link": "https://www.tiktok.com/@federicostories",
+            "aria-label": "Follow me on TikTok",
+            "id": "",
+            "title": "Follow me on TikTok",
+            "target": "_blank",
+            "icon": "icon-tiktok"
+        },
+        {
+            "link": "https://www.instagram.com/federico_the_consultant",
+            "aria-label": "Follow me on Instagram",
+            "id": "",
+            "title": "Follow me on Instagram",
+            "target": "_blank",
+            "icon": "icon-instagram"
+        },
+        {
+            "link": "https://www.linkedin.com/in/federiconavarrete",
+            "aria-label": "Contact me on LinkedIn",
+            "id": "",
+            "title": "Contact me on LinkedIn",
+            "target": "_blank",
+            "icon": "icon-linkedin"
+        },
+        {
+            "link": "https://bit.ly/3P6wkBn",
+            "id": "",
+            "aria-label": "Download Business Card",
+            "title": "Download Business Card",
+            "icon": "icon-vcard-o"
+        },
+        {
+            "link": "https://github.com/FANMixco",
+            "aria-label": "Fork me on GitHub",
+            "id": "",
+            "title": "Fork me on GitHub",
+            "target": "_blank",
+            "icon": "icon-github"
+        },
+        {
+            "link": "https://x.com/FedeStories",
+            "aria-label": "Follow me on X",
+            "id": "",
+            "title": "Follow me on X",
+            "target": "_blank",
+            "icon": "icon-twitter"
+        },
+        {
+            "link": "https://bit.ly/3sLFZVb",
+            "aria-label": "Contact Me",
+            "id": "",
+            "title": "Contact Me",
+            "target": "_blank",
+            "icon": "icon-at"
+        }
+    ]
+}

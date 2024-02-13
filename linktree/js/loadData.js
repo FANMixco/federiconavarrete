@@ -72,25 +72,29 @@ function createTextElement(text) {
     return span;
 }
 
-fetchData(`${langLoc}${lang}/basic.json`)
+fetchData(`${langLoc}${lang}/translations.min.json`)
 .then(data => {
+    loadBasics(data.basic);
+    loadLinks(data.links);
+    loadSubLinks(data.sublinks);
+});
+
+function loadBasics(data) {
     document.querySelectorAll('[data-translation]').forEach(item => {
         item.innerHTML = data[item.dataset.translation];
     });
-});
+}
 
-fetchData(`${langLoc}${lang}/sublinks.json`)
-.then(data => {
+function loadSubLinks(data) {
     const linksContainer = document.getElementById('sub-links');
 
     data.forEach(item => {
         const link = createLink(item, 'sub-link');
         linksContainer.appendChild(link);
     });
-});
+}
 
-fetchData(`${langLoc}${lang}/links.json`)
-.then(data => {
+function loadLinks(data) {
     const linksContainer = document.getElementById('links');
 
     data.forEach(item => {
@@ -143,4 +147,4 @@ fetchData(`${langLoc}${lang}/links.json`)
         }
         linksContainer.appendChild(link);
     });
-});
+}
