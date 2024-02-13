@@ -25,7 +25,7 @@ fetchData(`${langLoc}${lang}/otherTranslations.json`)
     loadReviews(data.reviewsList);
 }).catch((e) => { console.error(e); });
 
-const sections = document.querySelectorAll('section, div');
+const sections = document.querySelectorAll('section');
 
 const loadSectionIfVisible = () => {
     sections.forEach(section => {
