@@ -22,7 +22,6 @@ fetchData(`${langLoc}${lang}/otherTranslations.json`)
     loadTechSkills(data.techSkills, data.techSkillsOthers);
     loadSoftSkills(data.softSkills, data.softSkillsOthers);
     loadSocialMedias(data.socialBasicList, data.socialOthersList);
-    loadReviews(data.reviewsList);
 }).catch((e) => { console.error(e); });
 
 const sections = document.querySelectorAll('section');
@@ -37,6 +36,9 @@ const loadSectionIfVisible = () => {
         if (rect.top < windowHeight - triggerPoint && rect.bottom >= 0 && loaded === "false") {
             const sectionId = section.getAttribute('id');
             switch (sectionId) {
+                case 'divReviews':
+                    loadReviews(fullData.reviewsList);
+                    break;
                 case 'projects':
                     loadPersonalProjects(fullData.personalProjects);
                     break;
