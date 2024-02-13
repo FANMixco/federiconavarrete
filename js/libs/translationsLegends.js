@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
     let language = window.navigator.userLanguage || window.navigator.language;
     let lang = "en-us/min";
     

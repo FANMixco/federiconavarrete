@@ -18,14 +18,13 @@ fetchData(`${langLoc}${lang}/otherTranslations.json`)
     loadServices(data.servicesList);
     loadTechSkills(data.techSkills, data.techSkillsOthers);
     loadSoftSkills(data.softSkills, data.softSkillsOthers);
-    loadPersonalProjects(personalProjects);
+    loadPersonalProjects(data.personalProjects);
+    loadVideosAndPresentations(data.youtubeTrainings, data.presentationsLinks, data.presentationsVideos);
     loadOrganizedEvents(data.organizedEvents);
     loadArticles(data.articlesList);
     loadNewsArticles(data.newsArticlesList);
     loadSocialMedias(data.socialBasicList, data.socialOthersList);
-    loadReviews(data.reviewsList);    
-
-    loadVideosAndPresentations();
+    loadReviews(data.reviewsList);
 }).catch((e) => { console.error(e); });
 
 function loadOrganizedEvents(organizedEvents) {
@@ -315,7 +314,7 @@ function getVideoCarousel(items, id) {
  </div>`;
 }
 
-function loadVideos() {
+function loadVideos(presentationsVideos) {
     try {
         const { presentations, isVisible } = presentationsVideos;
 
@@ -359,7 +358,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
     }
 }
 
-function loadYouTubeVideos() {
+function loadYouTubeVideos(youtubeTrainings) {
     try {
         const { presentations, isVisible } = youtubeTrainings;
 
@@ -404,7 +403,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     }   
 }
 
-function loadPresentations() {
+function loadPresentations(presentationsLinks) {
     try {
         const { presentations, isVisible } = presentationsLinks;
 
@@ -578,10 +577,10 @@ function addIFrameModal(opt) {
     }
 }
 
-function loadVideosAndPresentations() {
-    loadVideos();
-    loadYouTubeVideos();
-    loadPresentations();
+function loadVideosAndPresentations(youtubeTrainings, presentationsLinks, presentationsVideos) {
+    loadVideos(presentationsVideos);
+    loadYouTubeVideos(youtubeTrainings);
+    loadPresentations(presentationsLinks);
 }
 
 function setImage(imgID, imgBasic, imgLoc, imgFormat) {
