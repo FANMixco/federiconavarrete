@@ -12,20 +12,57 @@ const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
 
+let fullData;
+
 fetchData(`${langLoc}${lang}/otherTranslations.json`)
 .then(data => {
+    fullData = data;
     loadAwards(data.awardsList);
     loadServices(data.servicesList);
     loadTechSkills(data.techSkills, data.techSkillsOthers);
     loadSoftSkills(data.softSkills, data.softSkillsOthers);
-    loadPersonalProjects(data.personalProjects);
-    loadVideosAndPresentations(data.youtubeTrainings, data.presentationsLinks, data.presentationsVideos);
-    loadOrganizedEvents(data.organizedEvents);
-    loadArticles(data.articlesList);
-    loadNewsArticles(data.newsArticlesList);
     loadSocialMedias(data.socialBasicList, data.socialOthersList);
     loadReviews(data.reviewsList);
 }).catch((e) => { console.error(e); });
+
+const sections = document.querySelectorAll('section, div');
+
+const loadSectionIfVisible = () => {
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const triggerPoint = windowHeight * 0.15; // 15% of window height
+        const loaded = section.getAttribute('data-loaded');
+
+        if (rect.top < windowHeight - triggerPoint && rect.bottom >= 0 && loaded === "false") {
+            const sectionId = section.getAttribute('id');
+            switch (sectionId) {
+                case 'projects':
+                    loadPersonalProjects(fullData.personalProjects);
+                    break;
+                case 'presentations':
+                    loadVideosAndPresentations(fullData.youtubeTrainings, fullData.presentationsLinks, fullData.presentationsVideos);
+                    loadOrganizedEvents(fullData.organizedEvents);
+                    break;
+                case 'articles':
+                    loadArticles(fullData.articlesList);
+                    break;
+                case 'newsArticles':
+                    loadNewsArticles(fullData.newsArticlesList);
+                    break;
+                default:
+                    break;
+            }
+            section.setAttribute('data-loaded', 'true'); // Mark section as loaded
+        }
+    });
+};
+
+window.addEventListener('scroll', loadSectionIfVisible);
+window.addEventListener('resize', loadSectionIfVisible);
+
+// Initial load check
+loadSectionIfVisible();
 
 function loadOrganizedEvents(organizedEvents) {
     const { events, isVisible } = organizedEvents;
