@@ -6,10 +6,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     let langLoc = "../js/data/translations/";
     
-    getScript(`${langLoc}${lang}/seenOn.js`) .then(() => { loadSeenOn(); }).catch((e) => { console.error(e); });
+    fetchData(`${langLoc}${lang}/seenOn.json`).then((data) => {
+        loadSeenOn(data); 
+    }).catch((e) => { console.error(e); });
 });
 
-function loadSeenOn() {
+function loadSeenOn(seenOnList) {
     const defTxt = 'contest-';
     const { seenOn } = seenOnList;
 
