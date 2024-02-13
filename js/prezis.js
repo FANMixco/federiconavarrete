@@ -62,3 +62,19 @@ function presentedOrEdited(wasPresented) {
 function createPPT(control, url, src, alt, name, presented, edited) {
     document.getElementById(`${control}`).innerHTML += cardTemplate.format(url, src, alt, name, presented, edited);
 }
+
+function loadGAnalytics() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XVR5MCP27M');
+}
+    
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'es,nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+
+googleTranslateElementInit();
+
+loadGAnalytics();

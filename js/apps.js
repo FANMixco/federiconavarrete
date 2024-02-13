@@ -277,10 +277,12 @@ function gAnalytics() {
     gtag('js', new Date());
 
     gtag('config', 'G-WQKJ9Y00XJ');
-
-    function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'es,nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    }
 }
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'es,nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+
+googleTranslateElementInit();
 
 gAnalytics();
