@@ -881,8 +881,8 @@ a.text-material-link-dark:active {
 
 .floatingButton {
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	bottom: 15px;
+	right: 15px;
 	transition: all 0.3s ease-in-out;
 	border-radius: 50%;
 	width: 56px;
