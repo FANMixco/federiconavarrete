@@ -84,7 +84,7 @@ function extraEvents(scroll) {
     else if (scroll > getHeight() * 0.7) {
         const gScriptExist = document.getElementById('g_translate');
         
-        if (!gScriptExist && validLang.indexOf(lang) === -1) {
+        if (!gScriptExist && validLang.includes(language)) {
             const script = document.createElement('script');
             script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
             script.id = 'g_translate';
