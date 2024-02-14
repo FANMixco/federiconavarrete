@@ -33,7 +33,3 @@ $(".carousel").on("touchstart", function(event){
             $(this).off("touchmove");
     });
 });
-
-$('#eventsCarousel').carousel({ 
-    interval: 2000
-});
