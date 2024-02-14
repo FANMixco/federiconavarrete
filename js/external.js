@@ -30,7 +30,7 @@ window.onload = function() {
     onReadyExternal();
 };
 
-if (!validLang.includes(language)) {
+if (!validLang.includes(language.split('-')[0])) {
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
     }

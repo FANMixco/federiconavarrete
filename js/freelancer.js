@@ -84,15 +84,12 @@ function extraEvents(scroll) {
     else if (scroll > getHeight() * 0.7) {
         const gScriptExist = document.getElementById('g_translate');
         
-        if (!gScriptExist && validLang.includes(language)) {
+        if (!gScriptExist && validLang.includes(language.split('-')[0])) {
             const script = document.createElement('script');
             script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
             script.id = 'g_translate';
             document.body.appendChild(script);
-        }
-        else {
-            const gte = document.getElementById('google_translate_element');
-            gte.style.display = 'none';
+            document.getElementById('google_translate_element').classList.remove('d-none');
         }
     }
 }
