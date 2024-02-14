@@ -2,8 +2,7 @@ body {
     font-family: "Montserrat",Arial,Helvetica,sans-serif;
     background: #07060e!important
 }
-a
-.cards-row {
+a .cards-row {
     height: 250px;
     width: 100%
 }
