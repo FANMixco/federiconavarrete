@@ -49,6 +49,8 @@ const loadSectionIfVisible = () => {
                 case 'articles':
                     loadArticles(fullData.articlesList);
                     loadNewsArticles(fullData.newsArticlesList);
+                    break;
+                case 'books':
                     loadBookPreview();
                     break;
                 default:
