@@ -49,6 +49,7 @@ const loadSectionIfVisible = () => {
                 case 'articles':
                     loadArticles(fullData.articlesList);
                     loadNewsArticles(fullData.newsArticlesList);
+                    loadBookPreview();
                     break;
                 default:
                     break;
@@ -78,8 +79,6 @@ function loadNewsArticles(newsArticlesList) {
     const { articles, isVisible } = newsArticlesList;
     loadImgSection(articles, isVisible, 'divMMArticles', 'newsArticles', imgLocArticles, fontMobile);
 }
-
-loadBookPreview();
 
 setTimeout(function () {
     addIFrameModal('service');
