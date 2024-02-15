@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6a28ed');
-  src:  url('fonts/icomoon.eot?6a28ed#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?6a28ed') format('truetype'),
-    url('fonts/icomoon.woff?6a28ed') format('woff'),
-    url('fonts/icomoon.svg?6a28ed#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?dntnbg');
+  src:  url('fonts/icomoon.eot?dntnbg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dntnbg') format('truetype'),
+    url('fonts/icomoon.woff?dntnbg') format('woff'),
+    url('fonts/icomoon.svg?dntnbg#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,99 +26,90 @@
 }
 
 .icon-el-salvador:before {
-  content: "\e900";
-}
-.icon-medal:before {
-  content: "\e901";
-}
-.icon-AzureDevOps:before {
   content: "\e902";
 }
-.icon-goodreads-brands:before {
+.icon-medal:before {
   content: "\e903";
 }
+.icon-goodreads-brands:before {
+  content: "\e905";
+}
 .icon-x:before {
-  content: "\e905";
-}
-.icon-twitter:before {
-  content: "\e905";
-}
-.icon-tiktok:before {
   content: "\e906";
 }
-.icon-quora:before {
+.icon-tiktok:before {
   content: "\e907";
 }
-.icon-open-email:before {
+.icon-quora:before {
   content: "\e908";
 }
-.icon-podcast-solid:before {
+.icon-open-email:before {
   content: "\e909";
 }
-.icon-building-solid:before {
+.icon-podcast-solid:before {
   content: "\e90a";
 }
-.icon-chevron-right-solid:before {
+.icon-building-solid:before {
   content: "\e90b";
 }
-.icon-chevron-left-solid:before {
+.icon-chevron-right-solid:before {
   content: "\e90c";
 }
-.icon-linkedin:before {
+.icon-chevron-left-solid:before {
   content: "\e90d";
 }
-.icon-newspaper:before {
+.icon-linkedin:before {
   content: "\e90e";
 }
-.icon-download:before {
+.icon-newspaper:before {
   content: "\e90f";
 }
-.icon-presentation-play:before {
+.icon-download:before {
   content: "\e910";
 }
-.icon-speaker:before {
+.icon-presentation-play:before {
   content: "\e911";
 }
-.icon-chalkboard-teacher-solid:before {
+.icon-speaker:before {
   content: "\e912";
 }
-.icon-pencil-ruler-outline:before {
+.icon-chalkboard-teacher-solid:before {
   content: "\e913";
 }
-.icon-laptop-code-solid:before {
+.icon-pencil-ruler-outline:before {
   content: "\e914";
 }
-.icon-trophy:before {
+.icon-laptop-code-solid:before {
   content: "\e915";
 }
-.icon-gallery:before {
+.icon-trophy:before {
   content: "\e916";
 }
-.icon-fullscreen:before {
+.icon-gallery:before {
   content: "\e917";
 }
 .icon-briefcase-variant:before {
-  content: "\e918";
-}
-.icon-bars-solid:before {
   content: "\e919";
 }
-.icon-calendar-today:before {
+.icon-bars-solid:before {
   content: "\e91a";
 }
-.icon-dev-brands:before {
+.icon-calendar-today:before {
   content: "\e91b";
+}
+.icon-dev-brands:before {
+  content: "\e91c";
 }
 .icon-plus:before {
   content: "\ea0a";
+}
+.icon-cross:before {
+  content: "\ea0f";
 }
 .icon-icon-share-windows-svgrepo-com:before {
   content: "\ea7d";
 }
 .icon-amazon:before {
-  content: "\ea87";
-}
-.icon-amazon-brands:before {
   content: "\ea87";
 }
 .icon-instagram:before {
@@ -139,24 +130,6 @@
 .icon-blogger:before {
   content: "\eab7";
 }
-.icon-blogger-b-brands:before {
-  content: "\eab7";
-}
-.icon-blogger2:before {
-  content: "\eab8";
-}
-.icon-blogger-brands:before {
-  content: "\eab8";
-}
 .icon-stackoverflow:before {
   content: "\ead0";
-}
-.icon-stack-overflow:before {
-  content: "\ead0";
-}
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-close:before {
-  content: "\ea0f";
 }

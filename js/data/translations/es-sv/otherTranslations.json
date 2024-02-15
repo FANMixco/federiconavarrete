@@ -284,7 +284,7 @@
                 "externalClass": "iconFooter"
             },
             {
-                "icon": "amazon-brands",
+                "icon": "amazon",
                 "title": "Amazon",
                 "link": "amzn.to/3Jqgsq1",
                 "isIcon": false,
@@ -298,14 +298,14 @@
                 "externalClass": "iconFooter"
             },
             {
-                "icon": "twitter",
+                "icon": "x",
                 "title": "X",
                 "link": "x.com/FedeStories",
                 "isIcon": false,
                 "externalClass": "iconFooter"
             },
             {
-                "icon": "blogger-b-brands",
+                "icon": "blogger",
                 "title": "Federico Stories",
                 "link": "federicostories.blogspot.com",
                 "isIcon": false,
@@ -340,7 +340,7 @@
                 "externalClass": "iconFooter"
             },
             {
-                "icon": "stack-overflow",
+                "icon": "stackoverflow",
                 "title": "StackOverflow",
                 "link": "stackoverflow.com/users/1928691/federico-navarrete",
                 "isIcon": false,
