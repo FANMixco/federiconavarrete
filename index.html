@@ -74,27 +74,19 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
      
             <a id="linkName" class="navbar-brand mx-auto" href="#page-top">
                <picture>
-                  <!-- For screens with width greater than 1080px -->
-                  <source srcset="img/navbar-image-large.webp" type="image/webp" media="(min-width: 1081px)">
-                  <source srcset="img/navbar-image-large.png" type="image/png" media="(min-width: 1081px)">
+                  <!-- For screens greater than 178px, use medium image -->
+                  <source srcset="img/navbar-image-medium.png" media="(min-width: 178px)">
                   
-                  <!-- For screens with width between 178px and 1080px -->
-                  <source srcset="img/navbar-image-medium.webp" type="image/webp" media="(min-width: 178px) and (max-width: 1080px)">
-                  <source srcset="img/navbar-image-medium.png" type="image/png" media="(min-width: 178px) and (max-width: 1080px)">
-                  
-                  <!-- For screens with width under 178px -->
-                  <source srcset="img/navbar-image-small.webp" type="image/webp" media="(max-width: 178px)">
-                  <source srcset="img/navbar-image-small.png" type="image/png" media="(max-width: 178px)">
+                  <!-- For screens under 178px, use small image -->
+                  <source srcset="img/navbar-image-small.png" media="(max-width: 178px)">
                   
                   <!-- Fallback image for browsers that do not support the <picture> element -->
-                  <img
+                  <img 
                      id="navBarImg"
-                     srcset="img/navbar-image-large.png 1080w,
-                             img/navbar-image-medium.png 178w,
-                             img/navbar-image-small.png 128w"
-                     sizes="(min-width: 1081px) 1080px,
-                            (min-width: 178px) and (max-width: 1080px) 178px,
-                            (max-width: 178px) 128px"
+                     srcset="img/navbar-image-medium.png 178w,
+                              img/navbar-image-small.png 128w"
+                     sizes="(min-width: 178px) 178px,
+                              128px"
                      src="img/navbar-image-small.png"
                      alt="Like a Phoenix, Rise stronger from YOUR ashes every time."
                      class="img"
