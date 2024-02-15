@@ -26,7 +26,7 @@ function loadBooks(booksList) {
                             <source
                                 srcset="${urlI}${item.img}.jpg"
                                 type="image/jpeg">
-                            <img class="img-fluid mx-auto d-block" src="${urlI}${item.img}" alt="${item.title}">
+                            <img class="img-fluid mx-auto d-block" src="${urlI}${item.img}.jpg" alt="${item.title}">
                         </picture>
                     </a>
             </div>`;

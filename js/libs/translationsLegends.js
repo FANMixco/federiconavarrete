@@ -28,7 +28,7 @@ function loadLegends(legendsList) {
                         <source
                             srcset="${urlI}${item.img}.jpg"
                             type="image/jpeg">
-                        <img src="${urlI}${item.img}" alt="${item.title}" class="cards-row">
+                        <img src="${urlI}${item.img}.jpg" alt="${item.title}" class="cards-row">
                     </picture>
                     <div class="caption">
                         <p><b>${item.title}</b></p>
