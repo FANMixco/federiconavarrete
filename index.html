@@ -74,9 +74,16 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
      
             <a id="linkName" class="navbar-brand mx-auto" href="#page-top">
                <picture>
-                  <source srcset="img/navbar-image-small.webp" type="image/webp">
-                  <source srcset="img/navbar-image-small.png" type="image/png">
-                  <img id="navBarImg" src="img/navbar-image-small.png" class="img" alt="Like a Phoenix, Rise stronger from YOUR ashes every time." height="42" width="128" />
+                  <!-- For screens with greater or equal to 179px -->
+                  <source srcset="img/navbar-image-normal.webp" type="image/webp" media="(min-width: 179px)">
+                  <source srcset="img/navbar-image-normal.png" type="image/png" media="(min-width: 179px)">
+                  
+                  <!-- For screens with width up to 178px -->
+                  <source srcset="img/navbar-image-small.webp" type="image/webp" media="(max-width: 178px)">
+                  <source srcset="img/navbar-image-small.png" type="image/png" media="(max-width: 178px)">
+                  
+                  <!-- Fallback image for browsers that do not support the <picture> element -->
+                  <img id="navBarImg" src="img/navbar-image-normal.png" class="img" alt="Like a Phoenix, Rise stronger from YOUR ashes every time." height="42" width="128">
                </picture>
             </a>
      
