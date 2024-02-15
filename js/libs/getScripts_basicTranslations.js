@@ -332,7 +332,7 @@ function loadBasicInfo() {
 document.addEventListener('DOMContentLoaded', function () {
     const menuExpander = document.getElementById('menuExpander');
     const hMenu = getHMenu();
-    const cMenu = getHMenu('close');
+    const cMenu = getHMenu('cross');
 
     // Toggle between getHMenu() and getHMenu('close') on button click
     menuExpander.addEventListener('click', function() {
