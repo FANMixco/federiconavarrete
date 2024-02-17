@@ -155,4 +155,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let customScript = document.createElement("script");
   customScript.src = "js/analytics.js";
   document.body.appendChild(customScript);
+
+  let script = document.createElement('script');
+  script.id = 'Cookiebot';
+  script.src = 'https://consent.cookiebot.com/uc.js';
+  script.setAttribute('data-cbid', '080a2037-f12f-476c-98f4-fdce5fdb77c7');
+  script.setAttribute('data-blockingmode', 'auto');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.defer = true;
+
+  document.body.appendChild(script);
 });
