@@ -1,36 +1,34 @@
-window.addEventListener('DOMContentLoaded', () => {
-    let language = window.navigator.userLanguage || window.navigator.language;
-    let lang = "en-us/min";
-    
-    if (language.includes('es'))
-        lang = "es-sv/min";
-    
-    let langLoc = "../js/data/translations/";
-    
-    fetchData(`${langLoc}${lang}/booksList.json`) .then((data) => { 
-        loadBooks(data.booksList); 
-    }).catch((e) => { console.error(e); });
+window.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const language = window.navigator.userLanguage || window.navigator.language;
+        const lang = language.includes('es') ?  lang = "es-sv/min" : "en-us/min";
+        const langLoc = "../js/data/translations/";
+
+        const data = await fetchData(`${langLoc}${lang}/booksList.json`);
+        loadBooks(data.booksList);
+    } catch (e) {
+        console.error(e);
+    }
 });
 
 function loadBooks(booksList) {
-    booksList.forEach(function(item) {
+    const urlI = '../img/books/';
+    const fragment = document.createDocumentFragment();
+
+    booksList.forEach((item) => {
         const active = item.isActive ? " active" : "";
-        const urlI = '../img/books/';
 
-        const book = `<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2${active}">
-                    <a target="_blank" href="https://${item.link}">
-                        <picture>
-                            <source
-                                srcset="${urlI}${item.img}.webp"
-                                type="image/webp">
-                            <source
-                                srcset="${urlI}${item.img}.jpg"
-                                type="image/jpeg">
-                            <img class="img-fluid mx-auto d-block" src="${urlI}${item.img}.jpg" alt="${item.title}">
-                        </picture>
-                    </a>
-            </div>`;
-
-        document.getElementById('divBooks').innerHTML += book;
+        const bookDiv = document.createElement('div');
+        bookDiv.className = `carousel-item col-12 col-sm-6 col-md-4 col-lg-2${active}`;
+        bookDiv.innerHTML = `<a target="_blank" href="https://${item.link}">
+                                <picture>
+                                    <source srcset="${urlI}${item.img}.webp" type="image/webp">
+                                    <source srcset="${urlI}${item.img}.jpg" type="image/jpeg">
+                                    <img class="img-fluid mx-auto d-block" src="${urlI}${item.img}.jpg" alt="${item.title}">
+                                </picture>
+                            </a>`;
+        fragment.appendChild(bookDiv);
     });
+
+    document.getElementById('divBooks').appendChild(fragment);
 }
