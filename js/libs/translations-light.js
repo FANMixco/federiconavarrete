@@ -97,56 +97,41 @@ function loadReviews(reviewsList) {
     try {
         const { reviews, isVisible } = reviewsList;
 
+        const divReviewsPreviews = document.getElementById('divReviewsPreviews');
+        const divReviews = document.getElementById("divReviews");
+        const divGenericContent = document.getElementById('divGenericContent');
+
         if (isVisible) {
-            const divReviewsPreviews = document.getElementById('divReviewsPreviews');
-
-            reviews.forEach(function(item, index) {
-
-                const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
-
+            let reviewsHTML = '';
+            reviews.forEach((item, index) => {
                 const currentReview = index + 1;
+                const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
+                const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}
+                                    ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}
+                                    ${cDiv}`;
+                reviewsHTML += reviewPreview;
 
-                let rTmp = `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`;
-
-                const review = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}
-                                ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", rTmp, "", true)}
-                                ${cDiv}`;
-
-                divReviewsPreviews.innerHTML += review;
-
-                let longReview = "";
-
-                const tTemp = item.title.replaceAll('text-material-link', "text-material-link-dark");
-                if (item.isPDF) {
-                    longReview = `${getImgName(name, item.img, currentReview, "picReviewers")}
-                    ${getReviewTitle('dark', tTemp)}
-                    ${getInnerTitle(item.date)}
-                    <div id="review${currentReview}PDF">${cDiv}
-                    <div class="centerText">
-                        ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}
-                    ${cDiv}`;
-                }
-                else {
-                    longReview = getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(tTemp), 'dark', 'black', item.review, "centerText", false);
-                }
-
-                fullReviews.push({ 
-                    review: longReview,
-                    isPDF: item.isPDF
-                });
+                const longReview = item.isPDF ? `${getImgName(name, item.img, currentReview, "picReviewers")}
+                                        ${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}
+                                        ${getInnerTitle(item.date)}
+                                        <div id="review${currentReview}PDF">${cDiv}
+                                        <div class="centerText">
+                                            ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}
+                                        ${cDiv}` :
+                                        getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title.replaceAll('text-material-link', "text-material-link-dark")), 'dark', 'black', item.review, "centerText", false);
+                
+                fullReviews.push({ review: longReview, isPDF: item.isPDF });
             });
-        }
-        else {
-            const divReviews = document.getElementById("divReviews");
+
+            divReviewsPreviews.innerHTML = reviewsHTML;
+        } else {
             divReviews.classList.add(nVis);
         }
 
-        fullReviews.forEach(function(item, index) { 
-
-            let rmCurrent = document.getElementById(`readMore${index + 1}`);
+        fullReviews.forEach((item, index) => {
+            const rmCurrent = document.getElementById(`readMore${index + 1}`);
             rmCurrent.addEventListener(eClick, (e) => {
                 e.preventDefault();
-                let divGenericContent = document.getElementById('divGenericContent');
                 divGenericContent.innerHTML = item.review;
 
                 if (item.isPDF) {
@@ -156,8 +141,9 @@ function loadReviews(reviewsList) {
                 }
             });
         });
+    } catch (e) {
+        return e;
     }
-    catch (e) { return e; }
 }
 
 function loadServices(servicesList) {
@@ -399,8 +385,8 @@ function loadVideosUTube(presentations, divVideo, divCar) {
 function loadYouTubeVideos(youtubeTrainings) {
     try {
         const { presentations, isVisible } = youtubeTrainings;
-
         const divYouTubeVideos = document.getElementById('divYouTubeVideos');
+
         if (isVisible) {
             loadVideosUTube(presentations, divYouTubeVideos, 'uTubeDiv');
         }
