@@ -1,10 +1,9 @@
 const language = window.navigator.userLanguage || window.navigator.language;
-let lang = "en";
 let currentLoc = '';
 
 const langLoc = "js/data/";
 
-lang = (language.includes('es')) ? "es" : lang;
+const lang = (language.includes('es')) ? "es" : "en";
 
 const validLang = ['en', 'es'];
 
