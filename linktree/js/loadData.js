@@ -7,6 +7,8 @@ const lang = (language.includes('es')) ? "es" : "en";
 
 const validLang = ['en', 'es'];
 
+let shareTrans;
+
 if (validLang.indexOf(lang) === -1) {
     addTranslateElement();
 }
@@ -73,6 +75,7 @@ function createTextElement(text) {
 
 fetchData(`${langLoc}${lang}/translations.min.json`)
 .then(data => {
+    shareTrans = data.basic.share;
     loadBasics(data.basic);
     loadLinks(data.links);
     loadSubLinks(data.sublinks);

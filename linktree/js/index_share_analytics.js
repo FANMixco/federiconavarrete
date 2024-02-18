@@ -132,8 +132,8 @@ shareLink.addEventListener('click', (e) => {
   e.preventDefault();
   // Use the Web Share API to share the current page
   navigator.share({
-    title: "Get to know Federico Navarrete!",
-    text: 'Here you can check Federico Navarrete’s official websites: https://bit.ly/fanmixco',
+    title: shareTrans.title,
+    text: shareTrans.desc,
     url: window.location.href
   })
     .then(() => {
