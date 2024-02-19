@@ -17,14 +17,13 @@ let fullData;
 fetchData(`${langLoc}${lang}/otherTranslations.json`)
 .then(data => {
     fullData = data;
-    loadAwards(data.awardsList);
     loadServices(data.servicesList);
-    loadTechSkills(data.techSkills, data.techSkillsOthers);
     loadSoftSkills(data.softSkills, data.softSkillsOthers);
+    loadTechSkills(data.techSkills, data.techSkillsOthers);
     loadSocialMedias(data.socialBasicList, data.socialOthersList);
 }).catch((e) => { console.error(e); });
 
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section, div');
 
 const loadSectionIfVisible = () => {
     sections.forEach(section => {
@@ -36,6 +35,9 @@ const loadSectionIfVisible = () => {
         if (rect.top < windowHeight - triggerPoint && rect.bottom >= 0 && loaded === "false") {
             const sectionId = section.getAttribute('id');
             switch (sectionId) {
+                case 'divAwards':
+                    loadAwards(fullData.awardsList);
+                    break;
                 case 'divReviews':
                     loadReviews(fullData.reviewsList);
                     break;
@@ -48,6 +50,8 @@ const loadSectionIfVisible = () => {
                     break;
                 case 'articles':
                     loadArticles(fullData.articlesList);
+                    break;
+                case 'newsArticles':
                     loadNewsArticles(fullData.newsArticlesList);
                     break;
                 case 'books':
