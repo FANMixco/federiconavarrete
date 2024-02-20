@@ -19,16 +19,16 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     $('#eventsCarousel').on('slide.bs.carousel', function (e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 4;
-        var totalItems = $('.carousel-item').length;
+        let $e = $(e.relatedTarget);
+        let idx = $e.index();
+        let itemsPerSlide = 4;
+        let totalItems = $('.carousel-item').length;
         
-        if (idx >= totalItems-(itemsPerSlide-1)) {
-            var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
+            let it = itemsPerSlide - (totalItems - idx);
+            for (let i = 0; i < it; i++) {
                 // append slides to end
-                if (e.direction=="left") {
+                if (e.direction == "left") {
                     $('.carousel-item').eq(i).appendTo('.carousel-inner');
                 }
                 else {
@@ -39,18 +39,18 @@ window.addEventListener('DOMContentLoaded', async () => {
     });
       
     $(".carousel").on("touchstart", function(event){
-        var xClick = event.originalEvent.touches[0].pageX;
-        $(this).one("touchmove", function(event){
-            var xMove = event.originalEvent.touches[0].pageX;
-            if( Math.floor(xClick - xMove) > 5 ){
+        let xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function(event) {
+            let xMove = event.originalEvent.touches[0].pageX;
+            if (Math.floor(xClick - xMove) > 5) {
                 $(".carousel").carousel('next');
             }
-            else if( Math.floor(xClick - xMove) < -5 ){
+            else if( Math.floor(xClick - xMove) < -5) {
                 $(".carousel").carousel('prev');
             }
         });
-        $(".carousel").on("touchend", function(){
-                $(this).off("touchmove");
+        $(".carousel").on("touchend", function() {
+            $(this).off("touchmove");
         });
     });
 });

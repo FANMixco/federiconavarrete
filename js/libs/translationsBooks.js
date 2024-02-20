@@ -45,16 +45,16 @@ function loadBooks(booksList) {
             CC 2.0 License Iatek LLC 2018
             Attribution required
         */
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 7;
-        var totalItems = $('.carousel-item').length;
+        let $e = $(e.relatedTarget);
+        let idx = $e.index();
+        let itemsPerSlide = 7;
+        let totalItems = $('.carousel-item').length;
         
-        if (idx >= totalItems-(itemsPerSlide-1)) {
-            var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
+            let it = itemsPerSlide - (totalItems - idx);
+            for (let i = 0; i < it; i++) {
                 // append slides to end
-                if (e.direction=="left") {
+                if (e.direction == "left") {
                     $('.carousel-item').eq(i).appendTo('.carousel-inner');
                 }
                 else {
