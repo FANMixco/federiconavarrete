@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', async () => {
     try {
         const language = window.navigator.userLanguage || window.navigator.language;
-        const lang = language.includes('es') ?  lang = "es-sv/min" : "en-us/min";
+        const lang = language.includes('es') ? "es-sv/min" : "en-us/min";
         const langLoc = "../js/data/translations/";
 
         const data = await fetchData(`${langLoc}${lang}/booksList.json`);
