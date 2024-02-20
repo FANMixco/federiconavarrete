@@ -8,56 +8,51 @@ async function fetchData(url) {
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const language = window.navigator.userLanguage || window.navigator.language;
-    const lang = language.includes('es') ? "es-sv/min" : "en-us/min";
+    try {
+        const language = window.navigator.userLanguage || window.navigator.language;
+        const lang = language.includes('es') ? "es-sv/min" : "en-us/min";
 
-    const data = await fetchData(`../js/data/translations/${lang}/legendsList.json`);
-    loadLegends(data.legendsList);
-  } catch (e) {
-      console.error(e);
-  }
+        const data = await fetchData(`../js/data/translations/${lang}/legendsList.json`);
+        loadLegends(data.legendsList);
+    } catch (e) {
+        console.error(e);
+    }
 
-  let legendsCarousel = document.getElementById('legendsCarousel');
-  legendsCarousel.addEventListener('slide.bs.carousel', function (e) {
-    let relatedTarget = e.relatedTarget;
-    let index = Array.from(relatedTarget.parentNode.children).indexOf(relatedTarget);
-    let itemsPerSlide = 3;
-    let totalItems = document.getElementsByClassName('carousel-item').length;
-
-    if (index >= totalItems - (itemsPerSlide - 1)) {
-      let it = itemsPerSlide - (totalItems - index);
-      let carouselItems = document.getElementsByClassName('carousel-item');
-
-        for (let i = 0; i < it; i++) {
-            // append slides to end
-            if (e.direction == "left") {
-                carouselItems[i].parentNode.appendChild(carouselItems[i]);
-            } else {
-                legendsCarousel.querySelector('.carousel-inner').appendChild(carouselItems[0]);
+    $('#legendsCarousel').on('slide.bs.carousel', function (e) {
+        let $e = $(e.relatedTarget);
+        let idx = $e.index();
+        let itemsPerSlide = 3;
+        let totalItems = $('.carousel-item').length;
+        
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
+            let it = itemsPerSlide - (totalItems - idx);
+            for (let i = 0; i < it; i++) {
+                // append slides to end
+                if (e.direction == "left") {
+                    $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                }
+                else {
+                    $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                }
             }
         }
-    }
-  }, { passive: true }); // Use passive: true for better scrolling performance
-
-  let carousels = document.querySelectorAll('.carousel');
-  carousels.forEach(function (carousel) {
-    carousel.addEventListener('touchstart', function (event) {
-      let xClick = event.touches[0].pageX;
-      carousel.addEventListener('touchmove', function (event) {
-        let xMove = event.touches[0].pageX;
-          if (Math.floor(xClick - xMove) > 5) {
-              carousel.carousel('next');
-          } else if (Math.floor(xClick - xMove) < -5) {
-              carousel.carousel('prev');
-          }
-      }, { passive: true }); // Use passive: true for better scrolling performance
-
-      carousel.addEventListener('touchend', function () {
-          carousel.removeEventListener('touchmove');
-      }, { passive: true }); // Use passive: true for better scrolling performance
     });
-  });
+  
+    $(".carousel").on("touchstart", function(event){
+        let xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function(event) {
+            let xMove = event.originalEvent.touches[0].pageX;
+            if (Math.floor(xClick - xMove) > 5) {
+                $(".carousel").carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -5) {
+                $(".carousel").carousel('prev');
+            }
+        });
+        $(".carousel").on("touchend", function() {
+            $(this).off("touchmove");
+        });
+    });
 });
 
 function loadLegends(legendsList) {
