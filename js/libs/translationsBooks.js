@@ -2,9 +2,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     try {
         const language = window.navigator.userLanguage || window.navigator.language;
         const lang = language.includes('es') ? "es-sv/min" : "en-us/min";
-        const langLoc = "../js/data/translations/";
 
-        const data = await fetchData(`${langLoc}${lang}/booksList.json`);
+        const data = await fetchData(`../js/data/translations/${lang}/booksList.json`);
         loadBooks(data.booksList);
     } catch (e) {
         console.error(e);
