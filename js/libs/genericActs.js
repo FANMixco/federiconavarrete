@@ -9,6 +9,7 @@ const tCenter = "text-center";
 const iconsPath = 'img/icons/website/';
 const marginTop = 0;
 const heightIFrame = 600;
+const imgCDN = 'https://fanmixco.sirv.com/';
 
 const deviceType = () => {
     const ua = navigator.userAgent.toLowerCase();
