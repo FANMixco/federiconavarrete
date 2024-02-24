@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function loadSeenOn(seenOnList) {
-    const defTxt = 'contest-';
+    const defTxt = 'https://fanmixco.sirv.com/img/events/contest-';
     const { seenOn } = seenOnList;
 
     const fragment = document.createDocumentFragment();
@@ -53,9 +53,9 @@ function loadSeenOn(seenOnList) {
                                     <div class="panel-thumbnail">
                                         <a target="_blank" href="https://${item.link}" class="thumb">
                                             <picture>
-                                                <source srcset="../img/events/${defTxt}${item.image}.webp" type="image/webp">
-                                                <source srcset="../img/events/${defTxt}${item.image}.png" type="image/png">
-                                                <img src="../img/events/${defTxt}${item.image}.png" alt="${item.title}" class="img-fluid mx-auto d-block">
+                                                <source srcset="${defTxt}${item.image}.webp" type="image/webp">
+                                                <source srcset="${defTxt}${item.image}.png" type="image/png">
+                                                <img src="${defTxt}${item.image}.png" alt="${item.title}" class="img-fluid mx-auto d-block">
                                             </picture>
                                         </a>
                                     </div>

@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function loadBooks(booksList) {
-    const urlI = '../img/books/';
+    const urlI = 'https://fanmixco.sirv.com/img/books/';
     const fragment = document.createDocumentFragment();
 
     booksList.forEach((item) => {

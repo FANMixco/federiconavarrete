@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function loadLegends(legendsList) {
-  const urlI = '../img/legends/';
+  const urlI = 'https://fanmixco.sirv.com/img/legends/';
   const fragment = document.createDocumentFragment();
 
   legendsList.forEach((item) => {
