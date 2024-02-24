@@ -448,7 +448,7 @@ iframe {
 }
 
 .btn-full-screen {
-	background: url(../img/icons/website/fullscreen.svg) center/1.4em no-repeat;
+	background: url(https://fanmixco.sirv.com/img/icons/website/fullscreen.svg) center/1.4em no-repeat;
 	margin-right: 0.8rem !important;
 }
 
@@ -920,14 +920,14 @@ a.text-material-link-dark:active {
 
 @media screen and (max-width: 682px) and (orientation: portrait) {
 	#mainBackground {
-		background-image: url(../img/northern_light_small_portrait.jpg);
+		background-image: url(https://fanmixco.sirv.com/img/northern_light_small_portrait.jpg);
 		background-image: -webkit-image-set(
-            url(../img/northern_light_small_portrait.webp) 1x,
-            url(../img/northern_light_small_portrait.jpg) 1x
+            url(https://fanmixco.sirv.com/img/northern_light_small_portrait.webp) 1x,
+            url(https://fanmixco.sirv.com/img/northern_light_small_portrait.jpg) 1x
         );
 		background-image: image-set(
-            url(../img/northern_light_small_portrait.webp) type("image/webp"),
-            url(../img/northern_light_small_portrait.jpg) type("image/jpeg")
+            url(https://fanmixco.sirv.com/img/northern_light_small_portrait.webp) type("image/webp"),
+            url(https://fanmixco.sirv.com/img/northern_light_small_portrait.jpg) type("image/jpeg")
         );
 		background-size: cover;
 	}
@@ -1059,14 +1059,14 @@ a.text-material-link-dark:active {
 
 @media screen and (max-width: 682px) and (orientation: landscape) {
 	#mainBackground {
-		background-image: url(../img/astronomy_small_landscape.jpg);
+		background-image: url(https://fanmixco.sirv.com/img/astronomy_small_landscape.jpg);
 		background-image: -webkit-image-set(
-            url(../img/astronomy_small_landscape.webp) 1x,
-            url(../img/astronomy_small_landscape.jpg) 1x
+            url(https://fanmixco.sirv.com/img/astronomy_small_landscape.webp) 1x,
+            url(https://fanmixco.sirv.com/img/astronomy_small_landscape.jpg) 1x
         );
 		background-image: image-set(
-            url(../img/astronomy_small_landscape.webp) type("image/webp"),
-            url(../img/astronomy_small_landscape.jpg) type("image/jpeg")
+            url(https://fanmixco.sirv.com/img/astronomy_small_landscape.webp) type("image/webp"),
+            url(https://fanmixco.sirv.com/img/astronomy_small_landscape.jpg) type("image/jpeg")
         );
 		background-size: cover;
 	}
@@ -1074,14 +1074,14 @@ a.text-material-link-dark:active {
 
 @media screen and (max-width: 1364px) and (min-width: 683px) {
 	#mainBackground {
-		background-image: url(../img/northern_light_medium.jpg);
+		background-image: url(https://fanmixco.sirv.com/img/northern_light_medium.jpg);
 		background-image: -webkit-image-set(
-            url(../img/northern_light_medium.webp) 1x,
-            url(../img/northern_light_medium.jpg) 1x
+            url(https://fanmixco.sirv.com/img/northern_light_medium.webp) 1x,
+            url(https://fanmixco.sirv.com/img/northern_light_medium.jpg) 1x
         );
 		background-image: image-set(
-            url(../img/northern_light_medium.webp) type("image/webp"),
-            url(../img/northern_light_medium.jpg) type("image/jpeg")
+            url(https://fanmixco.sirv.com/img/northern_light_medium.webp) type("image/webp"),
+            url(https://fanmixco.sirv.com/img/northern_light_medium.jpg) type("image/jpeg")
         );
 		background-size: cover;
 	}
@@ -1089,14 +1089,14 @@ a.text-material-link-dark:active {
 
 @media screen and (min-width: 1365px) {
 	#mainBackground {
-		background-image: url(../img/northern_light_large.jpg);
+		background-image: url(https://fanmixco.sirv.com/img/northern_light_large.jpg);
 		background-image: -webkit-image-set(
-            url(../img/northern_light_large.webp) 1x,
-            url(../img/northern_light_large.jpg) 1x
+            url(https://fanmixco.sirv.com/img/northern_light_large.webp) 1x,
+            url(https://fanmixco.sirv.com/img/northern_light_large.jpg) 1x
         );
 		background-image: image-set(
-            url(../img/northern_light_large.webp) type("image/webp"),
-            url(../img/northern_light_large.jpg) type("image/jpeg")
+            url(https://fanmixco.sirv.com/img/northern_light_large.webp) type("image/webp"),
+            url(https://fanmixco.sirv.com/img/northern_light_large.jpg) type("image/jpeg")
         );
 		background-size: cover;
 	}
