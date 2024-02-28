@@ -45,7 +45,7 @@ function loadSeenOn(seenOnList) {
     const { seenOn } = seenOnList;
 
     const fragment = document.createDocumentFragment();
-    const total = seenOn.length / 3;
+    const total = seenOn.length / 4;
     seenOn.forEach((item, index) => {
         const active = index === 0 ? " active" : "";
         const lazyLoaded = (index < total) ? "" : "loading='lazy'";
