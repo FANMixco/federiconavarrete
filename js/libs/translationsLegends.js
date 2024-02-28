@@ -45,6 +45,7 @@ function loadLegends(legendsList) {
 
   legendsList.forEach((item) => {
       const active = item.isActive ? " active" : "";
+      const lazyLoaded = item.isActive ? "" : "loading='lazy'";
 
       const legendDiv = document.createElement('div');
       legendDiv.className = `carousel-item col-md-4${active}`;
@@ -54,7 +55,7 @@ function loadLegends(legendsList) {
                                           <picture>
                                               <source srcset="${urlI}${item.img}.webp" type="image/webp">
                                               <source srcset="${urlI}${item.img}.jpg" type="image/jpeg">
-                                              <img src="${urlI}${item.img}.jpg" alt="${item.title}" class="cards-row">
+                                              <img src="${urlI}${item.img}.jpg" ${lazyLoaded} alt="${item.title}" class="cards-row">
                                           </picture>
                                           <div class="caption">
                                               <p><b>${item.title}</b></p>

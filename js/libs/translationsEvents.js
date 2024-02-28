@@ -40,12 +40,15 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function loadSeenOn(seenOnList) {
+    const urlI = '../img/events/';
     const defTxt = 'contest-';
     const { seenOn } = seenOnList;
 
     const fragment = document.createDocumentFragment();
+    const total = seenOn.length / 3;
     seenOn.forEach((item, index) => {
         const active = index === 0 ? " active" : "";
+        const lazyLoaded = (index < total) ? "" : "loading='lazy'";
 
         const seenOnDiv = document.createElement('div');
         seenOnDiv.className = `carousel-item col-md-3${active}`;
@@ -53,9 +56,9 @@ function loadSeenOn(seenOnList) {
                                     <div class="panel-thumbnail">
                                         <a target="_blank" href="https://${item.link}" class="thumb">
                                             <picture>
-                                                <source srcset="../img/events/${defTxt}${item.image}.webp" type="image/webp">
-                                                <source srcset="../img/events/${defTxt}${item.image}.png" type="image/png">
-                                                <img src="../img/events/${defTxt}${item.image}.png" alt="${item.title}" class="img-fluid mx-auto d-block">
+                                                <source srcset="${urlI}${defTxt}${item.image}.webp" type="image/webp">
+                                                <source srcset="${urlI}${defTxt}${item.image}.png" type="image/png">
+                                                <img src="${urlI}${defTxt}${item.image}.png" ${lazyLoaded} alt="${item.title}" class="img-fluid mx-auto d-block">
                                             </picture>
                                         </a>
                                     </div>

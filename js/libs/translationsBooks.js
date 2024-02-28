@@ -25,6 +25,7 @@ function loadBooks(booksList) {
 
     booksList.forEach((item) => {
         const active = item.isActive ? " active" : "";
+        const lazyLoaded = item.isActive ? "" : "loading='lazy'";
 
         const bookDiv = document.createElement('div');
         bookDiv.className = `carousel-item col-12 col-sm-6 col-md-4 col-lg-2${active}`;
@@ -32,7 +33,7 @@ function loadBooks(booksList) {
                                 <picture>
                                     <source srcset="${urlI}${item.img}.webp" type="image/webp">
                                     <source srcset="${urlI}${item.img}.jpg" type="image/jpeg">
-                                    <img class="img-fluid mx-auto d-block" src="${urlI}${item.img}.jpg" alt="${item.title}">
+                                    <img class="img-fluid mx-auto d-block" ${lazyLoaded} src="${urlI}${item.img}.jpg" alt="${item.title}">
                                 </picture>
                             </a>`;
         fragment.appendChild(bookDiv);
