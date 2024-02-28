@@ -1,8 +1,8 @@
 # Personal Website
 
-[![preview][1]][1]
+[![preview][1]][3]
 
-[![Eco results][2]][2]
+[![Eco results][2]][4]
 
 Get a copy of my **folkloric books**, **Timeless Stories of El Salvador**:
 
@@ -41,6 +41,8 @@ Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://g
 
   [1]: https://raw.githubusercontent.com/FANMixco/federiconavarrete/master/img/preview.jpg
   [2]: https://i.stack.imgur.com/aGDuD.jpg
+  [3]: https://federiconavarrete.com
+  [4]: https://www.websitecarbon.com/website/federiconavarrete-com
   [9]: https://federiconavarrete.com/img/books/en/moves.jpg
   [10]: https://federiconavarrete.com/img/books/en/linkedin.jpg
   [11]: https://federiconavarrete.com/img/books/en/WF.jpg
