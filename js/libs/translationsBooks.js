@@ -22,10 +22,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 function loadBooks(booksList) {
     const urlI = '../img/books/';
     const fragment = document.createDocumentFragment();
+    const lazyLoaded = "loading='lazy'";
 
     booksList.forEach((item) => {
         const active = item.isActive ? " active" : "";
-        const lazyLoaded = item.isActive ? "" : "loading='lazy'";
 
         const bookDiv = document.createElement('div');
         bookDiv.className = `carousel-item col-12 col-sm-6 col-md-4 col-lg-2${active}`;

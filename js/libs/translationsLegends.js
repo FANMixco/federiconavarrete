@@ -42,10 +42,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 function loadLegends(legendsList) {
   const urlI = '../img/legends/';
   const fragment = document.createDocumentFragment();
+  const lazyLoaded = "loading='lazy'";
 
   legendsList.forEach((item) => {
       const active = item.isActive ? " active" : "";
-      const lazyLoaded = item.isActive ? "" : "loading='lazy'";
 
       const legendDiv = document.createElement('div');
       legendDiv.className = `carousel-item col-md-4${active}`;
