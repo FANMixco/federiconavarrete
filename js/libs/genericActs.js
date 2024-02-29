@@ -105,12 +105,12 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras 
     let style = (!extras) ? '' : `style="${extras}"`;
 
     return `${lStart}<div class="card card-ser ${cOption}" ${style}>
-    <div class="card-body text-center">
-      <h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5>
-      <br />
-      <h6 class="card-subtitle mb-2">${title}</h6>
-    </div>
-  </div>${lEnd}`
+        <div class="card-body text-center">
+        <h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5>
+        <br />
+        <h6 class="card-subtitle mb-2">${title}</h6>
+        </div>
+    </div>${lEnd}`;
 }
 
 function getActionBtn(link, iconsPath, icon, title) {
@@ -148,17 +148,18 @@ function getCleanTitle(alt) {
     return alt.replace(tagRegExp, '');
 }
 
+function hideToolTips() {
+    try {
+        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+        [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)).forEach(tooltip => {
+            tooltip.hide();
+        });
+    } catch { }
+}
+
 window.addEventListener("load", function() {
     if (window.matchMedia('(hover: hover)').matches) {
-      try {
-        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-  
-        for (let i = 0; i < tooltipList.length; i++) {
-          tooltipList[i].hide();
-        }
-      } catch (error) {
-        console.error(error);
-      }
+        hideToolTips();
     }
 });

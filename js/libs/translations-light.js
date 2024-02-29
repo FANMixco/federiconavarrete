@@ -590,14 +590,7 @@ function addIFrameModal(opt) {
 
             iFrameHResize('serviceFormI');
             
-            try {
-                let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-                let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
-                for (let i = 0; i < tooltipList.length; i++) {
-                    tooltipList[i].hide();
-                }
-            } catch { }
+            hideToolTips();
 
             let services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
             services.show();
@@ -772,14 +765,13 @@ function getCItem(extras) {
 function rotatedModal() {
     //Clean old changes
     if (smallScreenMobileOS || equalScreen) {
-        const mModals = document.getElementsByClassName("mFullScreen");
-        for (let i = 0; i < mModals.length; i++) {
-            mModals[i].classList.remove("modal-fullscreen");
-        }
-        const mModalsH = document.getElementsByClassName("mFullScreenH");
-        for (let i = 0; i < mModalsH.length; i++) {
-            mModalsH[i].classList.remove("modal-fullscreen");
-        }
+        [...document.getElementsByClassName("mFullScreen")].forEach(modal => {
+            modal.classList.remove("modal-fullscreen");
+        });
+
+        [...document.getElementsByClassName("mFullScreenH")].forEach(modal => {
+            modal.classList.remove("modal-fullscreen");
+        });
     }
 
     if (document.getElementById('contactMeI'))
@@ -790,19 +782,17 @@ function rotatedModal() {
 
 function changeModalType() {
     if (smallScreenMobileOS || equalScreen) {
-        const mModals = document.getElementsByClassName("mFullScreen");
-        for (let i = 0; i < mModals.length; i++) {
-            mModals[i].classList.remove("modal-xl");
-            mModals[i].classList.add("modal-fullscreen");
-        }
+        [...document.getElementsByClassName("mFullScreen")].forEach(modal => {
+            modal.classList.remove("modal-xl");
+            modal.classList.add("modal-fullscreen");
+        });
 
         let landscape = window.matchMedia("(orientation: landscape)");
         if (landscape.matches || equalScreen || actualDev === "Watch") {
-            const mModalsH = document.getElementsByClassName("mFullScreenH");
-            for (let i = 0; i < mModalsH.length; i++) {
-                mModalsH[i].classList.remove("modal-xl");
-                mModalsH[i].classList.add("modal-fullscreen");
-            }
+            [...document.getElementsByClassName("mFullScreenH")].forEach(modal => {
+                modal.classList.remove("modal-xl");
+                modal.classList.add("modal-fullscreen");
+            });
         }
     }
 }

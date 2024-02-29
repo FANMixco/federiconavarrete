@@ -63,36 +63,13 @@ fetchData(`${langLoc}${lang}/generics.json`)
     });
 }).catch((e) => { console.error(e); });
 
-/*getScript(`${langLoc}${lang}/generics.js`)
-.then(() => {
-    // call loadTranslationsWithRetry and handle the result or error
-    loadTranslationsWithRetry(loadTranslations, function(err) {
-        if (!err) {
-            // handle result
-            getScript(`${langLoc}${lang}/basicInfo.js`).then(() => {
-                loadTranslationsWithRetry(loadBasicInfo, function() { });
-                addExtraIcons();
-            })
-            .catch((e) => { 
-                console.error(e);
-            });
-        }
-    });
-})
-.catch((e) => {
-    console.error(e);
-});*/
-
 function addExtraIcons() {
-    //const dStyle = `style='filter: invert(1)'`;
     [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
         element.innerHTML = getFinalIcon(`gallery`, 21) + '&ensp;' + element.innerHTML;
-        //element.innerHTML = `${getFinalImg('', '', 'preview', `src="${iconsPath}gallery.svg" height="22" width="22" ${dStyle}`)}&ensp;` + element.innerHTML;
     });
   
     [...document.getElementsByClassName('btn-book')].forEach(function(element) {
         element.innerHTML = getFinalIcon(`download`) + '&nbsp;&nbsp;' + element.innerHTML;
-        //element.innerHTML = `${getFinalImg('', '', 'download book', `src="${iconsPath}download.svg" height="18" width="18" ${dStyle}`)}&nbsp;&nbsp;` + element.innerHTML;
     });
 }
 
@@ -218,28 +195,9 @@ function loadBasicInfo() {
             });
         });
         
-        //linkName.innerHTML = name;
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;
-
-        /*const detectScreenSize = window.matchMedia('screen and (max-width: 320px) and (orientation: portrait)');
-
-        function resizeTitleName(detectScreenSize) {
-            if (detectScreenSize.matches || equalScreen) {
-                // Media query matches
-                let sName = name.split(' ');
-                linkName.innerHTML = Array.from(sName[0])[0] + '. ' + sName[1];
-            } else {
-                linkName.innerHTML = name;
-            }
-        }
-        
-        // Initial check
-        resizeTitleName(detectScreenSize);
-        
-        // Add listener for changes to the media query
-        detectScreenSize.addEventListener('change', resizeTitleName);*/  
 
         const urlI = 'https://';
 
@@ -263,7 +221,7 @@ function loadBasicInfo() {
 
         const listContacts = document.getElementById('listContacts');
 
-        if (skype.isVisible) {
+        /*if (skype.isVisible) {
             listContacts.innerHTML = getInLineBtn(genericTranslations.skype, `skype:${skype.id}?call`, 'skype') + listContacts.innerHTML;
         }
 
@@ -273,7 +231,7 @@ function loadBasicInfo() {
 
         if (email.isVisible) {
             listContacts.innerHTML = getInLineBtn(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, 'at') + listContacts.innerHTML;
-        }
+        }*/
 
         if (company.isVisible) {
             listContacts.innerHTML = getInLineBtn(company.name, `${urlI}${company.link}`, "building-solid", true) + listContacts.innerHTML;
