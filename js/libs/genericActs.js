@@ -104,13 +104,7 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras 
     let lEnd = hasLink ? '</a>' : '';
     let style = (!extras) ? '' : `style="${extras}"`;
 
-    return `${lStart}<div class="card card-ser ${cOption}" ${style}>
-        <div class="card-body text-center">
-        <h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5>
-        <br />
-        <h6 class="card-subtitle mb-2">${title}</h6>
-        </div>
-    </div>${lEnd}`;
+    return `${lStart}<div class="card card-ser ${cOption}" ${style}><div class="card-body text-center"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${lEnd}`;
 }
 
 function getActionBtn(link, iconsPath, icon, title) {

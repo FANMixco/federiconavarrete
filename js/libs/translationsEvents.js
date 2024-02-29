@@ -52,17 +52,7 @@ function loadSeenOn(seenOnList) {
 
         const seenOnDiv = document.createElement('div');
         seenOnDiv.className = `carousel-item col-md-3${active}`;
-        seenOnDiv.innerHTML = `<div class="panel panel-default">
-                                    <div class="panel-thumbnail">
-                                        <a target="_blank" href="https://${item.link}" class="thumb">
-                                            <picture>
-                                                <source srcset="${urlI}${defTxt}${item.image}.webp" type="image/webp">
-                                                <source srcset="${urlI}${defTxt}${item.image}.png" type="image/png">
-                                                <img src="${urlI}${defTxt}${item.image}.png" ${lazyLoaded} alt="${item.title}" class="img-fluid mx-auto d-block">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                </div>`;
+        seenOnDiv.innerHTML = `<div class="panel panel-default"><div class="panel-thumbnail"><a target="_blank" href="https://${item.link}" class="thumb"><picture><source srcset="${urlI}${defTxt}${item.image}.webp" type="image/webp"><source srcset="${urlI}${defTxt}${item.image}.png" type="image/png"><img src="${urlI}${defTxt}${item.image}.png" ${lazyLoaded} alt="${item.title}" class="img-fluid mx-auto d-block"></picture></a></div></div>`;
 
         fragment.appendChild(seenOnDiv);
     });

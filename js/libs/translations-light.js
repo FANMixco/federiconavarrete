@@ -110,18 +110,11 @@ function loadReviews(reviewsList) {
             reviews.forEach((item, index) => {
                 const currentReview = index + 1;
                 const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
-                const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}
-                                    ${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}
-                                    ${cDiv}`;
+                const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}${cDiv}`;
                 reviewsHTML += reviewPreview;
 
-                const longReview = item.isPDF ? `${getImgName(name, item.img, currentReview, "picReviewers")}
-                                        ${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}
-                                        ${getInnerTitle(item.date)}
-                                        <div id="review${currentReview}PDF">${cDiv}
-                                        <div class="centerText">
-                                            ${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}
-                                        ${cDiv}` :
+                const longReview = item.isPDF ?
+                                        `${getImgName(name, item.img, currentReview, "picReviewers")}${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}${getInnerTitle(item.date)}<div id="review${currentReview}PDF">${cDiv}<div class="centerText">${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}${cDiv}` :
                                         getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title.replaceAll('text-material-link', "text-material-link-dark")), 'dark', 'black', item.review, "centerText", false);
                 
                 fullReviews.push({ review: longReview, isPDF: item.isPDF });
@@ -196,19 +189,7 @@ function loadServices(servicesList) {
 }
 
 function getCarousel(items, cId, arrowsColor = 'text-muted') {
-    return `<div class="container-fluid" id="div${cId}">
-    <div id="${cId}" class="carousel slide">
-        <div class="carousel-inner">
-            ${items}
-        </div>
-        <button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous">
-            <span class="${arrowsColor} icon-chevron-left-solid"></span>
-        </button>
-        <button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next">
-            <span class="${arrowsColor} icon-chevron-right-solid"></span>
-        </button>
-        </div>
-    </div>`;
+    return `<div class="container-fluid" id="div${cId}"><div id="${cId}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div></div>`;
 }
 
 function loadAwards(awardsList) {
@@ -331,15 +312,7 @@ function loadPersonalProjects(personalProjects) {
 }
 
 function getVideoCarousel(items, id) {
-    return `<div id="${id}" class="carousel slide">
-    <div class="carousel-inner">${items}</div>
-    <button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous">
-        <span class="text-muted icon-chevron-left-solid"></span>
-    </button>
-    <button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next">
-        <span class="text-muted icon-chevron-right-solid"></span>
-    </button>
- </div>`;
+    return `<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous"><span class="text-muted icon-chevron-left-solid"></span></button><button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next"><span class="text-muted icon-chevron-right-solid"></span></button></div>`;
 }
 
 function loadVideos(presentationsVideos) {
@@ -642,10 +615,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
 }
 
 function getUTubeContainer(item, cls) {
-    return `${divSmall}
-        ${getUTubeLite(item)}
-        ${getH4Tag(item.title, '', cls)}
-        ${cDiv}`;
+    return `${divSmall}${getUTubeLite(item)}${getH4Tag(item.title, '', cls)}${cDiv}`;
 }
 
 function getUTubeLite(item) {
@@ -653,9 +623,7 @@ function getUTubeLite(item) {
 }
 
 function getImgPreview(img, currentReview, extraClass) {
-    return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">
-                ${getImgReview(img, currentReview)}
-            ${cDiv}`;
+    return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">${getImgReview(img, currentReview)}${cDiv}`;
 }
 
 function getReviewName(name, isLarge) {
@@ -676,10 +644,7 @@ function getImgReview(src, rev) {
 }
 
 function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
-    return `${getImgName(name, img, currentReview, extraClass, isLarge)}
-    ${extraTitle}
-    ${getReviewTitle(txtColor, title, cssCentered)}
-    <p class="m-0 pt-3 text-${txtColor2}">${content}</p>`;
+    return `${getImgName(name, img, currentReview, extraClass, isLarge)}${extraTitle}${getReviewTitle(txtColor, title, cssCentered)}<p class="m-0 pt-3 text-${txtColor2}">${content}</p>`;
 }
 
 function getImgName(name, img, currentReview, extraClass, isLarge) {
@@ -688,11 +653,7 @@ function getImgName(name, img, currentReview, extraClass, isLarge) {
 }
 
 function getPicture(src1, src2, img) {
-    return `<picture>
-                <source ${src1} type="image/webp">
-                <source ${src2} type="image/jpeg"> 
-                ${img}
-            </picture>`;
+    return `<picture><source ${src1} type="image/webp"><source ${src2} type="image/jpeg">${img}</picture>`;
 }
 
 function setWebPImage(id, img) {
@@ -700,10 +661,7 @@ function setWebPImage(id, img) {
 }
 
 function getImgContainer(link, img, title, cls) {
-    return `${divSmall}
-        ${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}
-        ${getH4Tag(title, '', cls)}
-    ${cDiv}`
+    return `${divSmall}${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}${getH4Tag(title, '', cls)}${cDiv}`
 }
 
 function getH4Tag(body, extras = '', cls = '') {
