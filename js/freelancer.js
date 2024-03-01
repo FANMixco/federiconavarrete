@@ -13,11 +13,9 @@ function onReadyFreelancer() {
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
+    const responsiveNavItems = Array.from(document.querySelectorAll('#navbarResponsive .nav-link'));
 
-    responsiveNavItems.map(function (responsiveNavItem) {
+    responsiveNavItems.forEach(responsiveNavItem => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
@@ -27,11 +25,10 @@ function onReadyFreelancer() {
 
     if (deviceType() === "Smartphone") {
 
-        let el_autohide = document.querySelector('.autohide');
+        const el_autohide = document.querySelector('.autohide');
  
         // add padding-top to bady (if necessary)
-        let navbar_height = document.querySelector('.navbar').offsetHeight;
-        document.body.style.paddingTop = `${navbar_height}px`;
+        document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight}px`;
 
         if (el_autohide) {
             let last_scroll_top = 0;
@@ -40,7 +37,7 @@ function onReadyFreelancer() {
                     document.getElementById("menuExpander").click();
                 }
 
-                let scroll_top = window.scrollY;
+                const scroll_top = window.scrollY;
                 if (scroll_top < last_scroll_top) {
                     el_autohide.classList.remove('scrolled-down');
                     el_autohide.classList.add('scrolled-up');
