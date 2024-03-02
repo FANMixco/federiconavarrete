@@ -780,6 +780,11 @@ a.text-material-link-dark:active {
     text-align: center;
 }
 
+#modalDark {
+	background-color: var(--dark-purple);
+	text-align: center;
+}
+
 .floatingButton {
 	position: fixed;
 	bottom: 15px;
