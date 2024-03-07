@@ -2,7 +2,7 @@
     "apps": [
       {
         "app": "Toastasters Timer",
-        "link": "https://federiconavarrete.com/toastmasters-timer",
+        "link": "https://tmtimer.federiconavarrete.com",
         "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
         "logo": "timer.png",
         "edition": [
@@ -537,7 +537,7 @@
       },
       {
         "app": "Toastasters Timer Lite",
-        "link": "https://federiconavarrete.com/toastmasters-timer",
+        "link": "https://tmtimer.federiconavarrete.com",
         "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
         "logo": "tm_lite.png",
         "edition": [
