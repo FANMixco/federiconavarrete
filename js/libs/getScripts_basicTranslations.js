@@ -117,11 +117,12 @@ function loadTranslations() {
         });
 
         [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
-            element.addEventListener(eClick, function(e) {
+            element.addEventListener(eClick, function() {
                 currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
+                const url = `https://${currentLoc}.federiconavarrete.com`;
                 const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
 
-                const iframePreview = getIframe(pTitle, `pages/${currentLoc}.html?isIframe=true`, 'id="gPreview" allowfullscreen');
+                const iframePreview = getIframe(pTitle, `${url}?isIframe=true`, 'id="gPreview" allowfullscreen');
 
                 const divPreview = document.getElementById("divPreview");
 
@@ -132,7 +133,7 @@ function loadTranslations() {
 
                 const btnFullScreen = document.getElementById('btn-full-screen');
 
-                btnFullScreen.href = `${fURL}pages/${currentLoc}.html`;
+                btnFullScreen.href = `${url}${currentLoc}.html`;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
