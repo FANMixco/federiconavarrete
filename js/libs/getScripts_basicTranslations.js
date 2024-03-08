@@ -133,7 +133,7 @@ function loadTranslations() {
 
                 const btnFullScreen = document.getElementById('btn-full-screen');
 
-                btnFullScreen.href = `${url}${currentLoc}.html`;
+                btnFullScreen.href = url;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
