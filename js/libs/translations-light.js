@@ -12,6 +12,7 @@ const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
 const extHTTPS = 'https://';
+const defaultImgFormat = 'jpg'; 
 
 let fullData;
 
@@ -396,7 +397,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         items = getVideoCarousel(items, divCar);
         divPicture.innerHTML = items;
         presentations.forEach(item => {
-            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
+            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, defaultImgFormat);
         });
         new bootstrap.Carousel(`#${divCar}`);
     }
@@ -404,7 +405,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         presentations.forEach(item => {
             const ppt = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
             divPPTs.innerHTML += ppt;
-            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
+            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, defaultImgFormat);
         });
     }   
 }
@@ -415,11 +416,6 @@ function loadPresentations(presentationsLinks) {
 
         const divPPTs = document.getElementById('divPPTs');
         if (isVisible) {
-            /*presentations.forEach(item => {
-                let ppt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
-                divPPTs.innerHTML += ppt;
-                setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
-            });*/
             loadDivPresentations(presentations, divPPTs, 'presentationsDiv');
         }
         else {
@@ -442,7 +438,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
             list.forEach(item => {
                 const tmpImg = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
                 divSection.innerHTML += tmpImg;
-                setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat);
+                setImage(item.imgID, item.imgBasicName, imgPath, defaultImgFormat);
             });
         }
         else {

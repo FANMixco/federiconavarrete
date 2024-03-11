@@ -5,15 +5,13 @@
                 "link": "bit.ly/3SZwnk2",
                 "title": "¿Puedes hacer que tu sitio web sea ecológico 🌳♻🌳? (en inglés)",
                 "imgID": "green_site",
-                "imgBasicName": "green_site",
-                "imgFormat": "jpg"
+                "imgBasicName": "green_site"
             },
             {
                 "link": "bit.ly/377HDCm",
                 "title": "¿Existe alguna plataforma RPA para Android/iOS? 🤔 (en inglés)",
                 "imgID": "imgArt1",
-                "imgBasicName": "rpas1",
-                "imgFormat": "jpg"
+                "imgBasicName": "rpas1"
             }
         ],
         "isVisible": true
@@ -65,15 +63,13 @@
                 "link": "bit.ly/442bojU",
                 "title": "Apoyo de profesionales en el camino hacia el éxito en Lodz (páginas 22 y 23. En inglés)",
                 "imgID": "imgNews1",
-                "imgBasicName": "news1",
-                "imgFormat": "jpg"
+                "imgBasicName": "news1"
             },
             {
                 "link": "bit.ly/3NODKZ4",
                 "title": "Dos salvadoreños destacan en concurso de la NASA",
                 "imgID": "imgNews2",
-                "imgBasicName": "news2",
-                "imgFormat": "jpg"
+                "imgBasicName": "news2"
             }
         ],
         "isVisible": true
@@ -84,8 +80,7 @@
                 "link": "bit.ly/43ZR9TJ",
                 "title": "Łódźarts - Conferencia de Toastmasters - 2019 (en inglés), División A, District 108",
                 "imgID": "imgLodzarts",
-                "imgBasicName": "lodzarts",
-                "imgFormat": "jpg"
+                "imgBasicName": "lodzarts"
             }
         ],
         "isVisible": true
@@ -153,15 +148,13 @@
                 "link": "bit.ly/3zURwzI",
                 "title": "El último discurso elevador (en inglés)",
                 "imgID": "imgPPT2",
-                "imgBasicName": "elevator",
-                "imgFormat": "jpg"
+                "imgBasicName": "elevator"
             },
             {
                 "link": "bit.ly/2WGzfb1",
                 "title": "¿Son los robots tus amigos? (en inglés)",
                 "imgID": "imgPPT1",
-                "imgBasicName": "rfriends",
-                "imgFormat": "jpg"
+                "imgBasicName": "rfriends"
             }
         ],
         "isVisible": true

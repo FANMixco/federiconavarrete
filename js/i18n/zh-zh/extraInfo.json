@@ -5,15 +5,13 @@
                 "link": "bit.ly/3SZwnk2",
                 "title": "你能让你的网站变得绿色🌳♻🌳吗？ （英语）",
                 "imgID": "green_site",
-                "imgBasicName": "green_site",
-                "imgFormat": "jpg"
+                "imgBasicName": "green_site"
             },
             {
                 "link": "bit.ly/377HDCm",
                 "title": "是否有适用于Android/iOS的RPA平台？（英语） 🤔",
                 "imgID": "imgArt1",
-                "imgBasicName": "rpas1",
-                "imgFormat": "jpg"
+                "imgBasicName": "rpas1"
             }
         ],
         "isVisible": true
@@ -65,15 +63,13 @@
                 "link": "bit.ly/442bojU",
                 "title": "专业人士对罗兹成功之路的支持（第22页和第23页）",
                 "imgID": "imgNews1",
-                "imgBasicName": "news1",
-                "imgFormat": "jpg"
+                "imgBasicName": "news1"
             },
             {
                 "link": "bit.ly/3NODKZ4",
                 "title": "两名萨尔瓦多人在NASA竞赛中脱颖而出（西班牙语）",
                 "imgID": "imgNews2",
-                "imgBasicName": "news2",
-                "imgFormat": "jpg"
+                "imgBasicName": "news2"
             }
         ],
         "isVisible": true
@@ -84,8 +80,7 @@
                 "link": "bit.ly/43ZR9TJ",
                 "title": "2019年演讲会A区, 108区",
                 "imgID": "imgLodzarts",
-                "imgBasicName": "lodzarts",
-                "imgFormat": "jpg"
+                "imgBasicName": "lodzarts"
             }
         ],
         "isVisible": true
@@ -153,15 +148,13 @@
                 "link": "bit.ly/3zURwzI",
                 "title": "终极电梯演讲（英文）",
                 "imgID": "imgPPT2",
-                "imgBasicName": "elevator",
-                "imgFormat": "jpg"
+                "imgBasicName": "elevator"
             },
             {
                 "link": "bit.ly/2WGzfb1",
                 "title": "机器人是你的朋友吗？（英文）",
                 "imgID": "imgPPT1",
-                "imgBasicName": "rfriends",
-                "imgFormat": "jpg"
+                "imgBasicName": "rfriends"
             }
         ],
         "isVisible": true
