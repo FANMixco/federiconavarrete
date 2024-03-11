@@ -11,10 +11,11 @@ const cDiv = '</div>';
 const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
+const extHTTPS = 'https://';
 
 let fullData;
 
-fetchData(`${langLoc}${lang}/otherTranslations.json`)
+fetchData(`${langLoc}${lang}/extraInfo.json`)
 .then(data => {
     fullData = data;
     loadServices(data.servicesList);
@@ -94,7 +95,7 @@ setTimeout(function () {
 function loadBookPreview() {
     const bookPreview = document.getElementById("bookPreview");
 
-    bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', 'https://leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3', `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
+    bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', `${extHTTPS}leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3`, `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
 }
 
 function loadReviews(reviewsList) {
@@ -155,10 +156,11 @@ function loadServices(servicesList) {
                 item.forEach(elem => {
 
                     let newListItem = document.createElement('li');
-                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${elem.link}">➤&nbsp;${elem.title}</a>`;
+                    const tmlLink = `${extHTTPS}${elem.link}`;
+                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
                     dropdownMenu.appendChild(newListItem);
 
-                    const title = getCard(elem.link, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
+                    const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
                     items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
@@ -203,12 +205,13 @@ function loadAwards(awardsList) {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(elem.link, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, elem.link);
+                    let tmpLink = `${extHTTPS}${elem.link}`;
+                    let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
 
                     availableLinks.push({ 
                         id: i,
                         title: elem.title,
-                        link: elem.link,
+                        link: tmpLink,
                         type: elem.type
                     });
                     
@@ -246,7 +249,9 @@ function loadAwards(awardsList) {
                         const gDivTitle = document.getElementById('gDivTitle');
                         gDivTitle.classList.add('border-0');
 
-                        const lPreview = !(item.link.includes("storage.live.com")) ? getIframe(item.title, item.link, `class="previewerIframe" id="previewerIframeI" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", item.link).replace("{Title}", item.title);
+                        const tmpLink = item.link;
+
+                        const lPreview = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, `class="previewerIframe" id="previewerIframeI" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
                         const modalPreview = document.getElementById('modal-preview');
 
@@ -256,7 +261,7 @@ function loadAwards(awardsList) {
                             modalPreview.classList.add('modal-xl');
                         }
 
-                        btnFullScreenPreview.href = item.link;
+                        btnFullScreenPreview.href = tmpLink;
                         btnFullScreenPreview.setAttribute('title', item.title);
                         btnFullScreenPreview.setAttribute('aria-label', item.title);
                     
@@ -301,7 +306,7 @@ function loadPersonalProjects(personalProjects) {
             const pp = `${getCItem(isActive)}
                 <div class="carousel-video-inner">
                     ${getUTubeLite(item)}
-                    ${getH4Tag(`${getFLink("text-material-link-dark", item.link, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}
+                    ${getH4Tag(`${getFLink("text-material-link-dark", `${extHTTPS}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}
                     ${cDiv}
                 ${cDiv}`;
 
@@ -382,7 +387,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
-            let vTmp = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
+            let vTmp = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
@@ -397,7 +402,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     }
     else {
         presentations.forEach(item => {
-            const ppt = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+            const ppt = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
             divPPTs.innerHTML += ppt;
             setImage(item.imgID, item.imgBasicName, imgLocPortfolio, item.imgFormat);
         });
@@ -435,7 +440,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
         if (isVisible) {
             const divSection = document.getElementById(section);
             list.forEach(item => {
-                const tmpImg = getImgContainer(item.link, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
+                const tmpImg = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
                 divSection.innerHTML += tmpImg;
                 setImage(item.imgID, item.imgBasicName, imgPath, item.imgFormat);
             });
@@ -453,13 +458,12 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         const { socialMedia, isVisible} = socialBasicList;
 
         if (isVisible) {
-            const ext = 'https://';
             const socialMediaBasic = document.getElementById('socialMediaBasic');
             const socialMediaBasicExtended = document.getElementById('social-medias-extended-list');
 
             socialMedia.forEach(item => {
-                socialMediaBasic.innerHTML += getListItem(getImage(item.title, `${ext}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
-                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, `${ext}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
+                socialMediaBasic.innerHTML += getListItem(getImage(item.title, `${extHTTPS}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
+                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, `${extHTTPS}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
             });
             socialMediaBasicExtended.innerHTML += getBtnShare();
 
@@ -489,7 +493,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
-                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${ext}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
+                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${extHTTPS}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
                 });
             }
         }

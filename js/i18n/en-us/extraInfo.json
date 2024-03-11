@@ -2,15 +2,15 @@
     "articlesList": {
         "articles": [
             {
-                "link": "https://bit.ly/3SZwnk2",
-                "title": "¿Puedes hacer que tu sitio web sea ecológico 🌳♻🌳? (en inglés)",
+                "link": "bit.ly/3SZwnk2",
+                "title": "Can you make your website green 🌳♻🌳?",
                 "imgID": "green_site",
                 "imgBasicName": "green_site",
                 "imgFormat": "jpg"
             },
             {
-                "link": "https://bit.ly/377HDCm",
-                "title": "¿Existe alguna plataforma RPA para Android/iOS? 🤔 (en inglés)",
+                "link": "bit.ly/377HDCm",
+                "title": "Is there any RPA platform for Android/iOS? 🤔",
                 "imgID": "imgArt1",
                 "imgBasicName": "rpas1",
                 "imgFormat": "jpg"
@@ -22,37 +22,37 @@
         "awards": [
             [
                 { 
-                    "title": "1<sup>er</sup> Lugar en las Citythons 2021, Ediciones Eindhoven y Hamburgo. Patrocinadas por la UE",
-                    "link": "https://shorturl.at/adwP0",
+                    "title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU",
+                    "link": "shorturl.at/adwP0",
                     "type": "_blank"
                 },
                 {
-                    "title": "Samsung Top Developer Award 2021 con componente Social",
-                    "link": "https://bit.ly/31laqDT",
+                    "title": "Samsung Top Developer Award 2021 with Social Component",
+                    "link": "bit.ly/31laqDT",
                     "type": "_blank"
                 }
             ],
             [
                 {
-                    "title": "Toastmaster Distinguido (DTM) por Toastmasters International en 2020",
-                    "link": "https://ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none",
+                    "title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
+                    "link": "ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none",
                     "type": "img"
                 },
                 {
-                    "title": "Área Distinguida del Presidente por Toastmasters International 2019",
-                    "link": "https://ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none",
+                    "title": "President's Distinguished Area by Toastmasters International 2019",
+                    "link": "ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none",
                     "type": "img"
                 }
             ],
             [
                 {
-                    "title": "1<sup>er</sup> lugar en el Cisco Switch Up Challenge 2016, “El Internet de todo”",
-                    "link": "https://bit.ly/3b8Tu8J",
+                    "title": "1<sup>st</sup> place Cisco Switch Up Challenge 2016, “The Internet of Everything”",
+                    "link": "bit.ly/3b8Tu8J",
                     "type": "iframe"
                 },
                 {
-                    "title": "Top 5 de los proyectos más inspiradores de la NASA SpaceApps Challenge 2014",
-                    "link": "https://bit.ly/3lqNR7Y",
+                    "title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
+                    "link": "bit.ly/3lqNR7Y",
                     "type": "iframe"
                 }
             ]
@@ -62,15 +62,15 @@
     "newsArticlesList": {
         "articles": [
             {
-                "link": "https://bit.ly/442bojU",
-                "title": "Apoyo de profesionales en el camino hacia el éxito en Lodz (páginas 22 y 23. En inglés)",
+                "link": "bit.ly/442bojU",
+                "title": "Professionals support on the road to success in Lodz (Pages 22 & 23)",
                 "imgID": "imgNews1",
                 "imgBasicName": "news1",
                 "imgFormat": "jpg"
             },
             {
-                "link": "https://bit.ly/3NODKZ4",
-                "title": "Dos salvadoreños destacan en concurso de la NASA",
+                "link": "bit.ly/3NODKZ4",
+                "title": "Two Salvadorans stand out in a NASA contest (in Spanish)",
                 "imgID": "imgNews2",
                 "imgBasicName": "news2",
                 "imgFormat": "jpg"
@@ -81,8 +81,8 @@
     "organizedEvents": {
         "events": [
             {
-                "link": "https://bit.ly/43ZR9TJ",
-                "title": "Łódźarts - Conferencia de Toastmasters - 2019 (en inglés), División A, District 108",
+                "link": "bit.ly/43ZR9TJ",
+                "title": "Łódźarts - Toastmasters Conference - 2019, Division A, District 108",
                 "imgID": "imgLodzarts",
                 "imgBasicName": "lodzarts",
                 "imgFormat": "jpg"
@@ -93,21 +93,21 @@
     "personalProjects": [
         {
             "youTubeID": "2_iI-uGmjcc",
-            "link": "https://bit.ly/37cTxuR",
-            "title": "La Ruta Maya",
+            "link": "bit.ly/37cTxuR",
+            "title": "The Mayan Route",
             "timeFrame": "2013 - now",
             "isActive": true	
         },
         {
-            "youTubeID": "0S8ybMuA4v",
-            "link": "https://tmtimer.federiconavarrete.com",
-            "title": "Cronómetro de Toastmasters",
+            "youTubeID": "0S8ybMuA4vA",
+            "link": "tmtimer.federiconavarrete.com",
+            "title": "Toastmasters Timer",
             "timeFrame": "2018 - now",
             "isActive": false
         },
         {
             "youTubeID": "77KYtHlTrsI",
-            "link": "https://bit.ly/3XsCTAn",
+            "link": "bit.ly/3XsCTAn",
             "title": "Gravity Now!",
             "timeFrame": "2014 - now",
             "isActive": false	
@@ -117,15 +117,15 @@
         "presentations": [
             {
                 "youTubeID": "IcWZ962uYy0",
-                "title": "<a class='text-material-link-dark' href='https://shorturl.at/adwP0' rel='noreferrer' target='_blank'>Equipo ganador | Equipo Greenhoven | Desafío 3 - Hacer que la ciudad sea saludable - Citython Eindhoven 2021 (en inglés)</a>"
+                "title": "<a class='text-material-link-dark' href='https://shorturl.at/adwP0' rel='noreferrer' target='_blank'>Winning Team | Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
             },
             {
                 "youTubeID": "XJyWAErkNtY",
-                "title": "Momentos de la verdad con la Dra. Natalia Wiechowski (en inglés)"
+                "title": "Moments of Truth with Dr Natalia Wiechowski"
             },
             {
                 "youTubeID": "-c2zayFv14Y",
-                "title": "La variable faltante (en inglés)"
+                "title": "The Missing Variable"
             }
         ],
         "isVisible": true
@@ -134,15 +134,15 @@
         "presentations": [
             {
                 "youTubeID": "VJF9NZOehTE",
-                "title": "¡Cuando Low-Code se encuentra con #ChatGPT! ¿Puedes crear tu primer Chatbot con Low-Code? (en inglés)"
+                "title": "When Low-Code meets #ChatGPT! Can you create your 1st Chatbot with Low-Code?"
             },
             {
                 "youTubeID": "oPg8aIlZJds",
-                "title": "Creemos presentaciones asombrosas con Prezi Video (en inglés)"
+                "title": "Let's Create Amazing Presentations with Prezi Video"
             },
             {
                 "youTubeID": "9mXanZhm9eo",
-                "title": "Es hora de subir de nivel ⏫ ¡Tu perfil de LinkedIn! (en inglés)"
+                "title": "It's time to Level Up ⏫ Your LinkedIn Profile!"
             }
         ],
         "isVisible": true
@@ -150,15 +150,15 @@
     "presentationsLinks": {
         "presentations": [
             {
-                "link": "https://bit.ly/3zURwzI",
-                "title": "El último discurso elevador (en inglés)",
+                "link": "bit.ly/3zURwzI",
+                "title": "The Ultimate Elevator Pitch",
                 "imgID": "imgPPT2",
                 "imgBasicName": "elevator",
                 "imgFormat": "jpg"
             },
             {
-                "link": "https://bit.ly/2WGzfb1",
-                "title": "¿Son los robots tus amigos? (en inglés)",
+                "link": "bit.ly/2WGzfb1",
+                "title": "Are robots your friends?",
                 "imgID": "imgPPT1",
                 "imgBasicName": "rfriends",
                 "imgFormat": "jpg"
@@ -172,9 +172,9 @@
                 "name": "Dr. Natalia Wiechowski",
                 "img": "img/photos/nataliawiechowski.jpg",
                 "externalLink": "https://www.drnataliawiechowski.com",
-                "review": "<p><small>En inglés originalmente.</small></p>Frederico es un ser humano maravilloso que tuve el placer de conocer en # DES2019 en Madrid. También grabamos una entrevista sobre mi viaje de Toastmasters para su club/región TM. Frederico también es un excelente entrevistador. Estaba bien preparado, es un buen oyente y creó un video maravilloso a partir de nuestra conversación. Además, Frederico parece ser una persona que realmente se preocupa, que quiere agregar valor y marcar la diferencia. ¡Sigan con el gran trabajo y gracias por su tiempo!",
-                "shortReview": "Frederico es un ser humano maravilloso que tuve el placer de conocer en # DES2019 en Madrid. También grabamos una entrevista sobre mi viaje de Toastmasters para su club/región TM … ",
-                "title": "LinkedIn🦄 | Personal Branding Pro | Edutainer: Ayudando a los asesores a desarrollar su negocio a través del marketing ORGÁNICO de LinkedIn",
+                "review": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!",
+                "shortReview": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region … ",
+                "title": "LinkedIn🦄|Personal Branding Pro|Edutainer: Helping Coachsultants to grow their bizz through ORGANIC LinkedIn marketing",
                 "date": "27-05-2019",
                 "isPDF": false,
                 "isActive": true
@@ -184,8 +184,8 @@
                 "img": "img/photos/gabriela.jpg",
                 "externalLink": "",
                 "review": "testimonials/references.pdf",
-                "shortReview": "Conozco a Federico Navarrete de Toastmasters International… En esta organización, Federico tenía el rol de Director de Área siendo el encargado de organizar, capacitar y motivar a más de 100 miembros en Polonia … ",
-                "title": "Director de Calidad del Programa 2018/2019 en <a target='_blank' class='text-material-link' rel='noreferrer' href='https://www.toastmasters.org' class='text-dark'>Toastmasters International</a>, <a class='text-material-link' target='_blank' rel='noreferrer' href='https://toastmastersd108.org' class='text-dark'>District 108</a>",
+                "shortReview": "I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland … ",
+                "title": "Program Quality Director 2018/2019 at <a target='_blank' class='text-material-link' rel='noreferrer' href='https://www.toastmasters.org' class='text-dark'>Toastmasters International</a>, <a class='text-material-link' target='_blank' rel='noreferrer' href='https://toastmastersd108.org' class='text-dark'>District 108</a>",
                 "date": "03-06-2019",
                 "isPDF": true,
                 "pdfLocation": "testimonials/references.pdf",
@@ -195,9 +195,9 @@
                 "name": "Edgar Regalado",
                 "img": "img/photos/edgar.jpg",
                 "externalLink": "",
-                "review": "<p><small>En inglés originalmente.</small></p>Conozco a Federico desde hace unos 20 años, así que hablo por experiencia real cuando digo que es digno de confianza, responsable, inteligente y leal a sus principios. Federico y yo fuimos compañeros de clase en la escuela y la universidad. Durante este tiempo desarrollé una fuerte relación de amistad con él. Mi estrecha asociación con él me hizo ser testigo de su estupendo crecimiento como persona y como profesional. Es el desarrollador más ágil que he conocido. Crea código limpio y fácil de mantener en la mitad del tiempo que sus compañeros. Ésta es una consecuencia de su análisis altamente analítico. Su personalidad y gran pasión por la informática.<br /><br />Por otro lado, Federico ha estado trabajando duro para desarrollar sus habilidades interpersonales. Para ello, participó en diversas comunidades que le exigen asumir un rol de liderazgo, como Microsoft Student Partners y Toastmasters. En este último, Federico ganó confianza y desarrolló el arte de hablar en público.<br /><br />No hay duda de que Federico es una persona íntegra, con un conjunto bien equilibrado de habilidades técnicas e interpersonales. Por todo esto, es un placer para mí recomendar a Federico.",
-                "shortReview": "Conozco a Federico desde hace unos 20 años, así que hablo por experiencia real cuando digo que es digno de confianza, responsable, inteligente y leal a sus principios. Federico y yo fuimos compañeros de clase en la escuela y la universidad … ",
-                "title": "Desarrollador Java Senior en Deutsche Börse, Alemania",
+                "review": "I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college. During this time I developed a strong friendship relationship with him. My close association to him made me witness his stupendous growth as a person and as a professional. He's the most agile developer I've ever known. He creates clean, maintainable code in half the time of his peers. This is a consequence of his highly analytical personality and strong passion for computer science.<br /><br />On the other hand, Federico has been working hard to develop his interpersonal skills. To do so, he participated in various communities that require him to take a leadership role, such as Microsoft Student Partners and Toastmasters. In the latter, Federico gained confidence and developed the art of public speaking.<br /><br />There's no doubt that Federico is a person of integrity, with a well-balanced set of technical and interpersonal skills. For all of this, it is my pleasure to recommend Federico.",
+                "shortReview": "I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college … ",
+                "title": "Senior Java Developer at Deutsche Börse, Germany",
                 "date": "30-10-2016",
                 "isPDF": false,
                 "isActive": false
@@ -209,20 +209,20 @@
         "services": [
             [
                 {
-                    "title": "Consultoría de TICs",
-                    "link": "https://form.jotform.com/202595846674065",
+                    "title": "IT Consultancy",
+                    "link": "form.jotform.com/202595846674065",
                     "icon": "laptop-code-solid"
                 },
                 {
-                    "title": "Discursos de apertura",
-                    "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/7",
+                    "title": "Keynote Speeches",
+                    "link": "www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/5",
                     "icon": "speaker"
-                }			
+                }
             ],
             [
                 {
-                    "title": "Entrenamientos de Discursos Elevadores y Narración (storytelling)",
-                    "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/8",
+                    "title": "Elevator Pitching and Storytelling Trainings",
+                    "link": "www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/6",
                     "icon": "chalkboard-teacher-solid"
                 }
             ]
@@ -241,7 +241,7 @@
             },
             {
                 "icon": "youtube",
-                "title": "Canal de YouTube",
+                "title": "YouTube Channel",
                 "id": "uTubeLink",
                 "link": "www.youtube.com/@FedericoNavarrete",
                 "isIcon": false,
@@ -249,7 +249,7 @@
             },
             {
                 "icon": "behance",
-                "title": "Mi Portafolio",
+                "title": "My Portfolio",
                 "id": "",
                 "link": "www.behance.net/fanmixco",
                 "isIcon": false,
@@ -257,7 +257,7 @@
             },
             {
                 "icon": "calendar-today",
-                "title": "Conóceme (15”)",
+                "title": "Meet Me (15”)",
                 "id": "",
                 "link": "bit.ly/47hmCm1",
                 "isIcon": false,
@@ -358,69 +358,69 @@
     },
     "softSkills": [
         [
-            "Gestión de proyectos",
-            "Tutoría y Entrenamiento"
+            "Project management",
+            "Mentoring & Coaching"
         ],
         [
-            "Consultoría y estrategia TI",
-            "Investigación en tecnologías emergentes"
+            "IT consultancy & strategy",
+            "Emerging technologies research"
         ],
         [
-            "Liderazgo",
-            "Narrativa (storytelling) y Discursos elevadores"
+            "Leadership",
+            "Storytelling & Elevator pitching"
         ]
     ],
     "softSkillsOthers": [
         [
-            "Organización de eventos",
-            "Escritura creativa",
-            "Inteligencia cultural"
+            "Organizing events",
+            "Creative writing",
+            "Cultural intelligence"
         ],
         [
-            "Recolección de requisitos",
-            "Planificación innovadora",
-            "Análisis de negocios"
+            "Gathering requirements",
+            "Innovative planning",
+            "Business analysis"
         ],
         [
-            "Diseño de presentación",
-            "Formación de los empleados",
-            "Formación de equipos"
+            "Presentation design",
+            "Employee training",
+            "Team building"
         ]
     ],
     "techSkills": [
         [
-            "Ágil - Scrum",
+            "Agile - Scrum",
             "CICD — Azure DevOps",
-            "<a href='https://rpa-practices.federiconavarrete.com' target='_blank' class='text-warning' rel='noreferrer'>RPA</a> — UiPath y Automation Anywhere"
+            "<a href='https://rpa-practices.federiconavarrete.com' target='_blank' class='text-warning' rel='noreferrer'>RPA</a> — UiPath &amp; Automation Anywhere"
         ],
         [
             "Angular 17+",
             "Open AI API / ChatGPT",
-            "C# y .NET Core"
+            "C# & .NET Core"
         ],
         [
-            "Arquitectura en la Nube (AWS)",
-            "Desarrollo Móvil y de Páginas Web Verdes",
-            "Android y MAUI"
+            "Cloud Architecture (AWS)",
+            "Green Web & Mobile Dev",
+            "Android & MAUI"
         ]
     ],
-    "techSkillsOthers":[
+    "techSkillsOthers": [
         [
             "ITSM — ITIL v4",
             "ATDD",
-            "Servicios web RESTful",
-            "Versionamiento — Git"
+            "RESTful Web Services",
+            "Versioning — Git"
         ],
         [
             "ASP MVC",
             "Entity Framework",
             "PWA / HTML5 / CSS3 / JS",
-            "UI y UX"
+            "UI & UX"
         ],
         [
             "Azure (PaaS & IaaS)",
-            "Visual Studio y Code",
-            "SQL Server y SQLite",
+            "Visual Studio & Code",
+            "SQL Server & SQLite",
             "Google Analytics &amp; Maps API"
         ]
     ]

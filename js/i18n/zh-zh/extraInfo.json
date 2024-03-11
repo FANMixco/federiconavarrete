@@ -2,14 +2,14 @@
     "articlesList": {
         "articles": [
             {
-                "link": "https://bit.ly/3SZwnk2",
+                "link": "bit.ly/3SZwnk2",
                 "title": "你能让你的网站变得绿色🌳♻🌳吗？ （英语）",
                 "imgID": "green_site",
                 "imgBasicName": "green_site",
                 "imgFormat": "jpg"
             },
             {
-                "link": "https://bit.ly/377HDCm",
+                "link": "bit.ly/377HDCm",
                 "title": "是否有适用于Android/iOS的RPA平台？（英语） 🤔",
                 "imgID": "imgArt1",
                 "imgBasicName": "rpas1",
@@ -23,36 +23,36 @@
             [
                 { 
                     "title": "2021《城市》、《埃因霍温》和《汉堡版》排名第一。由欧盟赞助",
-                    "link": "https://shorturl.at/adwP0",
+                    "link": "shorturl.at/adwP0",
                     "type": "_blank"
                 },
                 {
                     "title": "2021 年三星社交组件顶级开发者奖",
-                    "link": "https://bit.ly/31laqDT",
+                    "link": "bit.ly/31laqDT",
                     "type": "_blank"
                 }			
             ],
             [
                 {
                     "title": "2020年国际演讲会杰出演讲会（DTM）",
-                    "link": "https://ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none",
+                    "link": "ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none",
                     "type": "img"
                 },
                 {
                     "title": "2019年国际演讲会主席杰出区域",
-                    "link": "https://ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none",
+                    "link": "ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none",
                     "type": "img"
                 }
             ],
             [
                 {
                     "title": "2016年思科交换机升级挑战赛第一名，“万物互联”",
-                    "link": "https://bit.ly/3b8Tu8J",
+                    "link": "bit.ly/3b8Tu8J",
                     "type": "iframe"
                 },
                 {
                     "title": "2014年NASA SpaceApps挑战赛最具启发性项目前5名",
-                    "link": "https://bit.ly/3lqNR7Y",
+                    "link": "bit.ly/3lqNR7Y",
                     "type": "iframe"
                 }
             ]
@@ -62,14 +62,14 @@
     "newsArticlesList": {
         "articles": [
             {
-                "link": "https://bit.ly/442bojU",
+                "link": "bit.ly/442bojU",
                 "title": "专业人士对罗兹成功之路的支持（第22页和第23页）",
                 "imgID": "imgNews1",
                 "imgBasicName": "news1",
                 "imgFormat": "jpg"
             },
             {
-                "link": "https://bit.ly/3NODKZ4",
+                "link": "bit.ly/3NODKZ4",
                 "title": "两名萨尔瓦多人在NASA竞赛中脱颖而出（西班牙语）",
                 "imgID": "imgNews2",
                 "imgBasicName": "news2",
@@ -81,7 +81,7 @@
     "organizedEvents": {
         "events": [
             {
-                "link": "https://bit.ly/43ZR9TJ",
+                "link": "bit.ly/43ZR9TJ",
                 "title": "2019年演讲会A区, 108区",
                 "imgID": "imgLodzarts",
                 "imgBasicName": "lodzarts",
@@ -93,21 +93,21 @@
     "personalProjects": [
         {
             "youTubeID": "2_iI-uGmjcc",
-            "link": "https://bit.ly/37cTxuR",
+            "link": "bit.ly/37cTxuR",
             "title": "玛雅路线",
             "timeFrame": "2013年至今",
             "isActive": true	
         },
         {
             "youTubeID": "0S8ybMuA4vA",
-            "link": "https://tmtimer.federiconavarrete.com",
+            "link": "tmtimer.federiconavarrete.com",
             "title": "演讲会计时器",
             "timeFrame": "2018年至今",
             "isActive": false
         },
         {
             "youTubeID": "77KYtHlTrsI",
-            "link": "https://bit.ly/3XsCTAn",
+            "link": "bit.ly/3XsCTAn",
             "title": "重力现在！",
             "timeFrame": "2014年至今",
             "isActive": false	
@@ -150,14 +150,14 @@
     "presentationsLinks": {
         "presentations": [
             {
-                "link": "https://bit.ly/3zURwzI",
+                "link": "bit.ly/3zURwzI",
                 "title": "终极电梯演讲（英文）",
                 "imgID": "imgPPT2",
                 "imgBasicName": "elevator",
                 "imgFormat": "jpg"
             },
             {
-                "link": "https://bit.ly/2WGzfb1",
+                "link": "bit.ly/2WGzfb1",
                 "title": "机器人是你的朋友吗？（英文）",
                 "imgID": "imgPPT1",
                 "imgBasicName": "rfriends",
@@ -210,19 +210,19 @@
             [
                 {
                     "title": "资讯科技顾问",
-                    "link": "https://form.jotform.com/202595846674065",
+                    "link": "form.jotform.com/202595846674065",
                     "icon": "laptop-code-solid"
                 },
                 {
                     "title": "主题报告（英语或西班牙语）",
-                    "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/5",
+                    "link": "www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/5",
                     "icon": "speaker"
                 }
             ],
             [
                 {
                     "title": "电梯推介和讲故事培训（英语或西班牙语）",
-                    "link": "https://www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/6",
+                    "link": "www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/6",
                     "icon": "chalkboard-teacher-solid"
                 }
             ]
