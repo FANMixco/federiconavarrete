@@ -31,7 +31,7 @@ async function fetchData(url) {
 //basicTranslations.js
 
 const language = window.navigator.userLanguage || window.navigator.language;
-const langLoc = "js/data/translations/";
+const langLoc = "js/i18n/";
 const validLang = ['en', 'es', 'zh'];
 const lMin = '/min';
 

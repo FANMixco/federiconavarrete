@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         const language = window.navigator.userLanguage || window.navigator.language;
         const lang = language.includes('es') ? "es-sv/min" : "en-us/min";
 
-        const data = await fetchData(`../js/data/translations/${lang}/booksList.json`);
+        const data = await fetchData(`../js/i18n/${lang}/booksList.json`);
         loadBooks(data.booksList);
     } catch (e) {
         console.error(e);
