@@ -12,7 +12,6 @@ const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
 const extHTTPS = 'https://';
-const defaultImgFormat = 'jpg'; 
 
 let fullData;
 
@@ -397,7 +396,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         items = getVideoCarousel(items, divCar);
         divPicture.innerHTML = items;
         presentations.forEach(item => {
-            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, defaultImgFormat);
+            setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
         });
         new bootstrap.Carousel(`#${divCar}`);
     }
@@ -405,7 +404,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         presentations.forEach(item => {
             const ppt = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
             divPPTs.innerHTML += ppt;
-            setImage(item.imgID, item.imgBasicName, imgLocPortfolio, defaultImgFormat);
+            setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
         });
     }   
 }
@@ -438,7 +437,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
             list.forEach(item => {
                 const tmpImg = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
                 divSection.innerHTML += tmpImg;
-                setImage(item.imgID, item.imgBasicName, imgPath, defaultImgFormat);
+                setImage(item.imgID, item.imgBasicName, imgPath);
             });
         }
         else {
@@ -577,7 +576,7 @@ function loadVideosAndPresentations(youtubeTrainings, presentationsLinks, presen
     loadPresentations(presentationsLinks);
 }
 
-function setImage(imgID, imgBasic, imgLoc, imgFormat) {
+function setImage(imgID, imgBasic, imgLoc) {
     //let imgBookSize = '';
     let imgSize = '';
 
@@ -601,7 +600,7 @@ function setImage(imgID, imgBasic, imgLoc, imgFormat) {
             break;
     }
     
-    imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.${imgFormat}`;
+    imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
     srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
     srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;    
