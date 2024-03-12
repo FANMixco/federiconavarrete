@@ -11,7 +11,6 @@ const cDiv = '</div>';
 const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
-const extHTTPS = 'https://';
 
 let fullData;
 
@@ -162,7 +161,7 @@ function loadServices(servicesList) {
 
                     const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
-                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}${cDiv}${cDiv}` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}${cDiv}`;
 
                     totalServices++;
                 });
@@ -191,7 +190,7 @@ function loadServices(servicesList) {
 }
 
 function getCarousel(items, cId, arrowsColor = 'text-muted') {
-    return `<div class="container-fluid" id="div${cId}"><div id="${cId}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div></div>`;
+    return `<div class="container-fluid" id="div${cId}"><div id="${cId}" class="carousel slide"><div class="carousel-inner">${items}${cDiv}<button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button>${cDiv}${cDiv}`;
 }
 
 function loadAwards(awardsList) {
@@ -215,7 +214,7 @@ function loadAwards(awardsList) {
                         type: elem.type
                     });
                     
-                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}${cDiv}${cDiv}` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}${cDiv}`;
     
                     i++;
                 });
@@ -317,7 +316,7 @@ function loadPersonalProjects(personalProjects) {
 }
 
 function getVideoCarousel(items, id) {
-    return `<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous"><span class="text-muted icon-chevron-left-solid"></span></button><button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next"><span class="text-muted icon-chevron-right-solid"></span></button></div>`;
+    return `<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}${cDiv}<button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous"><span class="text-muted icon-chevron-left-solid"></span></button><button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next"><span class="text-muted icon-chevron-right-solid"></span></button>${cDiv}`;
 }
 
 function loadVideos(presentationsVideos) {
@@ -345,7 +344,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
         presentations.forEach(item => {
             let vTmp = getUTubeContainer(item, fontMobile);
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}</div>`;
+            vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}${cDiv}`;
             items += vTmp;
             cUTube++;
         });
@@ -389,7 +388,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         presentations.forEach(item => {
             let vTmp = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
+            vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}${cDiv}`;
             items += vTmp;
             cPresentation++;
         });
