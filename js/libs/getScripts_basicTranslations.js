@@ -200,11 +200,13 @@ function loadBasicInfo() {
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;
+        divAbout.innerHTML = '';
 
         aboutDesc.forEach(item => {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
         });
 
+        favBookDiv.innerHTML = '';
         if (favBook.isVisible) {
             favBookDiv.innerHTML += getActionBtn(`${urlI}${favBook.link}`, iconsPath, 'download', favBook.title);
         }
