@@ -1,24 +1,3 @@
-//getScripts.js
-const getScript = url => new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = url;
-    script.async = true;
-  
-    script.onerror = reject;
-  
-    script.onload = script.onreadystatechange = function() {
-      const loadState = this.readyState;
-  
-      if (loadState && loadState !== 'loaded' && loadState !== 'complete') return;
-  
-      script.onload = script.onreadystatechange = null;
-  
-      resolve();
-    }
-  
-    document.head.appendChild(script);
-});
-
 async function fetchData(url) {
     try {
         const response = await fetch(url);
@@ -208,14 +187,14 @@ function loadBasicInfo() {
 
         favBookDiv.innerHTML = '';
         if (favBook.isVisible) {
-            favBookDiv.innerHTML += getActionBtn(`${urlI}${favBook.link}`, iconsPath, 'download', favBook.title);
+            favBookDiv.innerHTML += getActionBtn(`${extHTTPS}${favBook.link}`, iconsPath, 'download', favBook.title);
         }
         else {
             favBookDiv.classList.add(nVis);
         }
 
         if (favPodcast.isVisible) {
-            favPodcastDiv.innerHTML += getActionBtn(`${urlI}${favPodcast.link}`, iconsPath, 'spotify', favPodcast.title);
+            favPodcastDiv.innerHTML += getActionBtn(`${extHTTPS}${favPodcast.link}`, iconsPath, 'spotify', favPodcast.title);
         }
         else {
             favPodcastDiv.classList.add(nVis);
@@ -236,7 +215,7 @@ function loadBasicInfo() {
         }*/
 
         if (company.isVisible) {
-            listContacts.innerHTML = getInLineBtn(company.name, `${urlI}${company.link}`, "building-solid", true) + listContacts.innerHTML;
+            listContacts.innerHTML = getInLineBtn(company.name, `${extHTTPS}${company.link}`, "building-solid", true) + listContacts.innerHTML;
         }
 
         const aElSalvador = document.getElementById('aElSalvador');
