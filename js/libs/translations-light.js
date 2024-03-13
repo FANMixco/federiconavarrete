@@ -7,7 +7,6 @@ const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-wi
 const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
-const cDiv = '</div>';
 const w100 = 'class="w-100"';
 const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
