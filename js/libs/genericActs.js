@@ -1,12 +1,10 @@
 let tagRegExp;
 let extraContact = 0;
-let isMenuTriggered = false;
 
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
 const nVis = 'd-none';
 const tCenter = "text-center";
-const iconsPath = 'img/icons/website/';
 const marginTop = 0;
 const heightIFrame = 600;
 
@@ -107,9 +105,8 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras 
     return `${lStart}<div class="card card-ser ${cOption}" ${style}><div class="card-body text-center"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${lEnd}`;
 }
 
-function getActionBtn(link, iconsPath, icon, title) {
+function getActionBtn(link, icon, title) {
     return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
-    //return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalImg('', 'mr-2 btnIcons', title, `src="${iconsPath}${icon}.svg" ${extras}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
 }
 
 function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
@@ -122,7 +119,6 @@ function getInLi(body, extraCls = '', extras = '') {
 
 function getHMenu(icon = 'bars-solid') {
     return getFinalIcon(icon);
-    //return getFinalImg('', 'hMenu ml-2', 'menu', `src="${iconsPath}bars-solid.svg" height="13" width="11.2" ${extras}`);
 }
 
 function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {

@@ -183,16 +183,16 @@ function loadBasicInfo() {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
         });
 
-        favBookDiv.innerHTML = '';
+        //favBookDiv.innerHTML = '';
         if (favBook.isVisible) {
-            favBookDiv.innerHTML += getActionBtn(`${urlB}${favBook.link}`, iconsPath, 'download', favBook.title);
+            favBookDiv.innerHTML = getActionBtn(`${urlB}${favBook.link}`, 'download', favBook.title);
         }
         else {
             favBookDiv.classList.add(nVis);
         }
 
         if (favPodcast.isVisible) {
-            favPodcastDiv.innerHTML += getActionBtn(`${urlB}${favPodcast.link}`, iconsPath, 'spotify', favPodcast.title);
+            favPodcastDiv.innerHTML = getActionBtn(`${urlB}${favPodcast.link}`, 'spotify', favPodcast.title);
         }
         else {
             favPodcastDiv.classList.add(nVis);
