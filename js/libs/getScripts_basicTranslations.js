@@ -228,7 +228,7 @@ function loadBasicInfo() {
             }
         }, false);
 
-        const contactForms = document.querySelectorAll("#linkContactMe,#linkContactMeAbout,#contactMeFloat");
+        const contactForms = document.querySelectorAll("#linkContactMe, #linkContactMeAbout, #contactMeFloat");
 
         contactForms.forEach(element => {
             element.addEventListener("click", contactMeForm);
