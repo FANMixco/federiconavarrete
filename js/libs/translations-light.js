@@ -154,7 +154,7 @@ function loadServices(servicesList) {
 
                     let newListItem = document.createElement('li');
                     const tmlLink = `${urlB}${elem.link}`;
-                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
+                    newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" ${tBlank} href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
                     dropdownMenu.appendChild(newListItem);
 
                     const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
