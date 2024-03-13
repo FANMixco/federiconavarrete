@@ -13,16 +13,14 @@ const language = window.navigator.userLanguage || window.navigator.language;
 const langLoc = "js/i18n/";
 const validLang = ['en', 'es', 'zh'];
 const lMin = '/min';
-const extHTTPS = 'https://';
+const urlB = 'https://';
+const lang = (language.includes('es')) ? `es-sv${lMin}`: (language.includes('zh')) ? `zh-zh${lMin}` : `en-us${lMin}`;
 
 let tErr1;
 
 let currentLoc = '';
-let lang = `en-us${lMin}`;
 
 let genericTranslations, basicInfo;
-
-lang = (language.includes('es')) ? `es-sv${lMin}`: (language.includes('zh')) ? `zh-zh${lMin}` : lang;
 
 fetchData(`${langLoc}${lang}/generics.json`)
 .then(data => {
@@ -99,7 +97,7 @@ function loadTranslations() {
         [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
             element.addEventListener(eClick, function() {
                 currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
-                const url = `${extHTTPS}${currentLoc}.federiconavarrete.com`;
+                const url = `${urlB}${currentLoc}.federiconavarrete.com`;
                 const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
 
                 const iframePreview = getIframe(pTitle, `${url}?isIframe=true`, 'id="gPreview" allowfullscreen');
@@ -117,12 +115,12 @@ function loadTranslations() {
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
-                let gPreview = document.getElementById('gPreview');
+                const gPreview = document.getElementById('gPreview');
                 const hFrameGeneric = 450;
                 let hPreviewHeight = `${hFrameGeneric}px`; 
                 if (smallScreenMobileOS || equalScreen) {
-                    let portrait = window.matchMedia("(orientation: portrait)");
-                    let height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
+                    const portrait = window.matchMedia("(orientation: portrait)");
+                    const height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
                     hPreviewHeight = `${height}px`;
                 }
                 else if (devicePortraitAndLong) 
@@ -187,14 +185,14 @@ function loadBasicInfo() {
 
         favBookDiv.innerHTML = '';
         if (favBook.isVisible) {
-            favBookDiv.innerHTML += getActionBtn(`${extHTTPS}${favBook.link}`, iconsPath, 'download', favBook.title);
+            favBookDiv.innerHTML += getActionBtn(`${urlB}${favBook.link}`, iconsPath, 'download', favBook.title);
         }
         else {
             favBookDiv.classList.add(nVis);
         }
 
         if (favPodcast.isVisible) {
-            favPodcastDiv.innerHTML += getActionBtn(`${extHTTPS}${favPodcast.link}`, iconsPath, 'spotify', favPodcast.title);
+            favPodcastDiv.innerHTML += getActionBtn(`${urlB}${favPodcast.link}`, iconsPath, 'spotify', favPodcast.title);
         }
         else {
             favPodcastDiv.classList.add(nVis);
@@ -215,7 +213,7 @@ function loadBasicInfo() {
         }*/
 
         if (company.isVisible) {
-            listContacts.innerHTML = getInLineBtn(company.name, `${extHTTPS}${company.link}`, "building-solid", true) + listContacts.innerHTML;
+            listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
         }
 
         const aElSalvador = document.getElementById('aElSalvador');
@@ -223,20 +221,17 @@ function loadBasicInfo() {
         aElSalvador.addEventListener(eClick, function() {
             if (!document.getElementById('iframeElSalvador')) {
                 const divIframElSalvador = document.getElementById('divIframElSalvador');
-                divIframElSalvador.innerHTML += getIframe('El Salvador Map', `${extHTTPS}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+                divIframElSalvador.innerHTML += getIframe('El Salvador Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
                 iFrameHResize('iframeElSalvador');
             }
         }, false);
 
-        const linkContactMe = document.getElementById("linkContactMe");
-        linkContactMe.addEventListener(eClick, contactMeForm);
+        const contactForms = document.querySelectorAll("#linkContactMe,#linkContactMeAbout,#contactMeFloat");
 
-        const linkContactMeAbout = document.getElementById("linkContactMeAbout");
-        linkContactMeAbout.addEventListener(eClick, contactMeForm);
-
-        const contactMeFloat = document.getElementById("contactMeFloat");
-        contactMeFloat.addEventListener(eClick, contactMeForm);
+        contactForms.forEach(element => {
+            element.addEventListener("click", contactMeForm);
+        });
 
         const linkPreview = document.getElementById('youTubePreview');
         let iframeGeneric = document.getElementById('iframeGeneric');
@@ -252,12 +247,12 @@ function loadBasicInfo() {
             const modalPreview = document.getElementById('modal-preview');
             modalPreview.classList.add('modal-xl');
 
-            iframeGeneric.innerHTML = getIframe('Federico Navarrete', `${extHTTPS}www.youtube.com/embed/IcWZ962uYy0`, `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+            iframeGeneric.innerHTML = getIframe('Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
             iFrameHResize('yIframeP', 0.7);
 
             const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
-            btnFullScreenPreview.href = `${extHTTPS}bit.ly/3p9hMGJ`;
+            btnFullScreenPreview.href = `${urlB}bit.ly/3p9hMGJ`;
             btnFullScreenPreview.setAttribute('title', genericTranslations.winning);
             btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
         });

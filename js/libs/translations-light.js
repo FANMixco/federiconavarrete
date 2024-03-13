@@ -92,9 +92,7 @@ setTimeout(function () {
 }, 1000);
 
 function loadBookPreview() {
-    const bookPreview = document.getElementById("bookPreview");
-
-    bookPreview.innerHTML += getIframe('Timeless Stories of El Salvador', `${extHTTPS}leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3`, `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
+    document.getElementById("bookPreview").innerHTML += getIframe('Timeless Stories of El Salvador', `${urlB}leer.amazon.es/kp/card?asin=B09Z33ZPTV&preview=inline&linkCode=kpe&ref_=cm_sw_r_kb_dp_HJ6YDMXY6BRE1FA9AWE3`, `type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="336" height="550" frameborder="0" style="max-width:100%;margin:auto;display:block"`, '');
 }
 
 function loadReviews(reviewsList) {
@@ -110,11 +108,11 @@ function loadReviews(reviewsList) {
             reviews.forEach((item, index) => {
                 const currentReview = index + 1;
                 const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
-                const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}${cDiv}`;
+                const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}</div>`;
                 reviewsHTML += reviewPreview;
 
                 const longReview = item.isPDF ?
-                                        `${getImgName(name, item.img, currentReview, "picReviewers")}${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}${getInnerTitle(item.date)}<div id="review${currentReview}PDF">${cDiv}<div class="centerText">${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}${cDiv}` :
+                                        `${getImgName(name, item.img, currentReview, "picReviewers")}${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}${getInnerTitle(item.date)}<div id="review${currentReview}PDF"></div><div class="centerText">${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>` :
                                         getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title.replaceAll('text-material-link', "text-material-link-dark")), 'dark', 'black', item.review, "centerText", false);
                 
                 fullReviews.push({ review: longReview, isPDF: item.isPDF });
@@ -155,19 +153,19 @@ function loadServices(servicesList) {
                 item.forEach(elem => {
 
                     let newListItem = document.createElement('li');
-                    const tmlLink = `${extHTTPS}${elem.link}`;
+                    const tmlLink = `${urlB}${elem.link}`;
                     newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" target="_blank" href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
                     dropdownMenu.appendChild(newListItem);
 
                     const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
-                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}${cDiv}${cDiv}` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}${cDiv}`;
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
                     totalServices++;
                 });
             });
 
-            items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
+            items = (smallScreenMobileOS || equalScreen) ? items : `${items}</div>`;
 
             if (smallScreenMobileOS || equalScreen) {
                 items = getCarousel(items, "carouselServices", 'text-dark');
@@ -179,7 +177,7 @@ function loadServices(servicesList) {
             servicesList.innerHTML += items;
 
             if (smallScreenMobileOS || equalScreen)
-                new bootstrap.Carousel(`#carouselServices`);
+                new bootstrap.Carousel('#carouselServices');
         }
         else {
             const divServices = document.getElementById('divServices');
@@ -190,7 +188,7 @@ function loadServices(servicesList) {
 }
 
 function getCarousel(items, cId, arrowsColor = 'text-muted') {
-    return `<div class="container-fluid" id="div${cId}"><div id="${cId}" class="carousel slide"><div class="carousel-inner">${items}${cDiv}<button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button>${cDiv}${cDiv}`;
+    return `<div class="container-fluid" id="div${cId}"><div id="${cId}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div></div>`;
 }
 
 function loadAwards(awardsList) {
@@ -204,7 +202,7 @@ function loadAwards(awardsList) {
             let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
             awards.forEach(item => {
                 item.forEach(elem => {
-                    let tmpLink = `${extHTTPS}${elem.link}`;
+                    let tmpLink = `${urlB}${elem.link}`;
                     let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
 
                     availableLinks.push({ 
@@ -214,13 +212,13 @@ function loadAwards(awardsList) {
                         type: elem.type
                     });
                     
-                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}${cDiv}${cDiv}` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}${cDiv}`;
+                    items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
     
                     i++;
                 });
             });
 
-            items = (smallScreenMobileOS || equalScreen) ? items : `${items}${cDiv}`;
+            items = (smallScreenMobileOS || equalScreen) ? items : `${items}</div>`;
 
             if (smallScreenMobileOS || equalScreen) {
                 items = getCarousel(items, "carouselAwards", 'text-dark');
@@ -302,12 +300,7 @@ function loadPersonalProjects(personalProjects) {
 
             const hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
 
-            const pp = `${getCItem(isActive)}
-                <div class="carousel-video-inner">
-                    ${getUTubeLite(item)}
-                    ${getH4Tag(`${getFLink("text-material-link-dark", `${extHTTPS}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}
-                    ${cDiv}
-                ${cDiv}`;
+            const pp = `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(`${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}</div></div>`;
 
             personalProjectsDiv.innerHTML += pp;
         });
@@ -316,7 +309,7 @@ function loadPersonalProjects(personalProjects) {
 }
 
 function getVideoCarousel(items, id) {
-    return `<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}${cDiv}<button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous"><span class="text-muted icon-chevron-left-solid"></span></button><button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next"><span class="text-muted icon-chevron-right-solid"></span></button>${cDiv}`;
+    return `<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous"><span class="text-muted icon-chevron-left-solid"></span></button><button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next"><span class="text-muted icon-chevron-right-solid"></span></button></div>`;
 }
 
 function loadVideos(presentationsVideos) {
@@ -344,7 +337,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
         presentations.forEach(item => {
             let vTmp = getUTubeContainer(item, fontMobile);
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}${cDiv}`;
+            vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
             cUTube++;
         });
@@ -356,7 +349,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
         presentations.forEach(item => {
             divVideo.innerHTML += getUTubeContainer(item);
             if (cUTube === 0) {
-                divVideo.innerHTML += `<div ${w100}>${cDiv}`;
+                divVideo.innerHTML += `<div ${w100}></div>`;
             }
             cUTube++;
         });
@@ -386,9 +379,9 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
-            let vTmp = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
+            let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}${cDiv}`;
+            vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
             cPresentation++;
         });
@@ -401,7 +394,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     }
     else {
         presentations.forEach(item => {
-            const ppt = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
+            const ppt = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
             divPPTs.innerHTML += ppt;
             setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
         });
@@ -434,7 +427,7 @@ function loadImgSection(list, isVisible, section, divSection, imgPath, optTitle 
         if (isVisible) {
             const divSection = document.getElementById(section);
             list.forEach(item => {
-                const tmpImg = getImgContainer(`${extHTTPS}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
+                const tmpImg = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
                 divSection.innerHTML += tmpImg;
                 setImage(item.imgID, item.imgBasicName, imgPath);
             });
@@ -456,8 +449,8 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
             const socialMediaBasicExtended = document.getElementById('social-medias-extended-list');
 
             socialMedia.forEach(item => {
-                socialMediaBasic.innerHTML += getListItem(getImage(item.title, `${extHTTPS}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
-                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, `${extHTTPS}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
+                socialMediaBasic.innerHTML += getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
+                socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
             });
             socialMediaBasicExtended.innerHTML += getBtnShare();
 
@@ -487,7 +480,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
                 const socialMediaOthers = document.getElementById('socialMediaOthers');
                 socialOthersList.socialMedia.forEach(elem => {
-                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${extHTTPS}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
+                    socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
                 });
             }
         }
@@ -512,7 +505,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
             item.forEach(elem => {
                 items += `${elem}<br /><br />`;
             });
-            items = `${items.substring(0, items.length - 12)}</p>${cDiv}`;
+            items = `${items.substring(0, items.length - 12)}</p></div>`;
 
             let divTmp = document.getElementById(`${divContainer}`);
 
@@ -534,7 +527,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
             item.forEach(elem => {
                 items += `${elem}<br /><br />`;
             });
-            items = `${items.substring(0, items.length - 12)}${cDiv}${cDiv}${cDiv}`;
+            items = `${items.substring(0, items.length - 12)}</div></div></div>`;
 
             divOthersContainerDiv.innerHTML = items + divOthersContainerDiv.innerHTML;
         });
@@ -613,7 +606,7 @@ function setImage(imgID, imgBasic, imgLoc) {
 }
 
 function getUTubeContainer(item, cls) {
-    return `${divSmall}${getUTubeLite(item)}${getH4Tag(item.title, '', cls)}${cDiv}`;
+    return `${divSmall}${getUTubeLite(item)}${getH4Tag(item.title, '', cls)}</div>`;
 }
 
 function getUTubeLite(item) {
@@ -621,7 +614,7 @@ function getUTubeLite(item) {
 }
 
 function getImgPreview(img, currentReview, extraClass) {
-    return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">${getImgReview(img, currentReview)}${cDiv}`;
+    return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">${getImgReview(img, currentReview)}</div>`;
 }
 
 function getReviewName(name, isLarge) {
@@ -659,7 +652,7 @@ function setWebPImage(id, img) {
 }
 
 function getImgContainer(link, img, title, cls) {
-    return `${divSmall}${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}${getH4Tag(title, '', cls)}${cDiv}`
+    return `${divSmall}${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}${getH4Tag(title, '', cls)}</div>`
 }
 
 function getH4Tag(body, extras = '', cls = '') {
