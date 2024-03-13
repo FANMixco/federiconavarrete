@@ -9,8 +9,8 @@ async function fetchData(url) {
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const language = window.navigator.userLanguage || window.navigator.language;
-        const lang = language.includes('es') ? "es-sv/min" : language.includes('zh') ? 'zh-zh/min' : "en-us/min";
+        const uLang = window.navigator.userLanguage || window.navigator.language;
+        const lang = uLang.includes('es') ? "es-sv/min" : uLang.includes('zh') ? 'zh-zh/min' : "en-us/min";
 
         const data = await fetchData(`../js/i18n/${lang}/seenOn.json`);
         loadSeenOn(data);

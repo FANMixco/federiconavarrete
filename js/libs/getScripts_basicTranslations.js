@@ -9,12 +9,13 @@ async function fetchData(url) {
 
 //basicTranslations.js
 
-const language = window.navigator.userLanguage || window.navigator.language;
+const urlB = 'https://';
+const uLang = window.navigator.userLanguage || window.navigator.language;
 const langLoc = "js/i18n/";
 const validLang = ['en', 'es', 'zh'];
 const lMin = '/min';
-const urlB = 'https://';
-const lang = (language.includes('es')) ? `es-sv${lMin}`: (language.includes('zh')) ? `zh-zh${lMin}` : `en-us${lMin}`;
+const pref = uLang.includes('es') ? 'es-sv' : uLang.includes('zh') ? 'zh-zh' : 'en-us';
+const lang = pref + lMin;
 
 let tErr1;
 
