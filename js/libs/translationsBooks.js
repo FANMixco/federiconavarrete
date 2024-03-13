@@ -3,7 +3,7 @@ async function fetchData(url) {
         const response = await fetch(url);
         return await response.json();
     } catch (error) {
-        console.error('Error loading JSON:', error);
+        console.error(error);
     }
 }
 
@@ -40,16 +40,17 @@ function loadBooks(booksList) {
             CC 2.0 License Iatek LLC 2018
             Attribution required
         */
+        const itemsPerSlide = 7;
+        const cItem = '.carousel-item';
         let $e = $(e.relatedTarget);
         let idx = $e.index();
-        let itemsPerSlide = 7;
-        let totalItems = $('.carousel-item').length;
+        let totalItems = $(cItem).length;
         
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);
             for (let i = 0; i < it; i++) {
                 // append slides to end
-                $('.carousel-item').eq(e.direction == "left" ? i : 0).appendTo('.carousel-inner');
+                $(cItem).eq(e.direction == "left" ? i : 0).appendTo('.carousel-inner');
             }
         }
     });

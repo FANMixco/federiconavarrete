@@ -59,7 +59,7 @@ function onReadyFreelancer() {
 }
 
 // Navbar shrink function
-var navbarShrink = function () {
+let navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector('#mainNav');
     let scroll = window.scrollY;
 

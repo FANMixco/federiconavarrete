@@ -3,7 +3,7 @@ async function fetchData(url) {
         const response = await fetch(url);
         return await response.json();
     } catch (error) {
-        console.error('Error loading JSON:', error);
+        console.error(error);
     }
 }
 
@@ -19,16 +19,17 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     $('#legendsCarousel').on('slide.bs.carousel', function (e) {
+        const itemsPerSlide = 3;
+        const cItem = '.carousel-item';
         let $e = $(e.relatedTarget);
         let idx = $e.index();
-        let itemsPerSlide = 3;
-        let totalItems = $('.carousel-item').length;
+        let totalItems = $(cItem).length;
         
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);
             for (let i = 0; i < it; i++) {
                 // append slides to end
-                $('.carousel-item').eq(e.direction == "left" ? i : 0).appendTo('.carousel-inner');
+                $(cItem).eq(e.direction == "left" ? i : 0).appendTo('.carousel-inner');
             }
         }
     });

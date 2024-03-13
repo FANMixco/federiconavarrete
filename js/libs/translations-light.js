@@ -464,10 +464,10 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
                     url: window.location.href
                 })
                 .then(() => {
-                    console.log('Shared successfully!');
+                    console.log('Shared!');
                 })
                 .catch((error) => {
-                    console.error('Error sharing:', error);
+                    console.error(error);
                 });
             });
 
