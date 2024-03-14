@@ -506,7 +506,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
             });
             items = `${items.substring(0, items.length - 12)}</p></div>`;
 
-            let divTmp = document.getElementById(`${divContainer}`);
+            const divTmp = document.getElementById(`${divContainer}`);
 
             divTmp.innerHTML = items + divTmp.innerHTML;
         });

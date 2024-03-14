@@ -57,9 +57,10 @@ function contactMeForm(e) {
     try {
         e.preventDefault();
     } catch { }
-    if (document.getElementById("contactMeForm").innerHTML.trim().length == 0) {
-        document.getElementById("contactMeForm").innerHTML += `<iframe title="contact me" id="contactMeI" src="pages/contact${uLang.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
-        iFrameHResize('contactMeI');
+    const cMe = 'contactMe';
+    if (document.getElementById(`${cMe}Form`).innerHTML.trim().length == 0) {
+        document.getElementById(`${cMe}Form`).innerHTML += `<iframe title="contact me" id="${cMe}I" src="pages/contact${uLang.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+        iFrameHResize(`${cMe}I`);
     }
 
     let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
@@ -68,22 +69,20 @@ function contactMeForm(e) {
 }
 
 function iFrameHResize(id, percentage = 0.7) {
-    let landscape = window.matchMedia("(orientation: landscape)");
-    if (equalScreen)
-        document.getElementById(id).style.height = `${document.documentElement.clientHeight * 0.7}px`;
-    else if (landscape.matches)
-        document.getElementById(id).style.height = `${document.documentElement.clientHeight * percentage}px`;
-    else if (devicePortraitAndLong)
-        document.getElementById(id).style.height = `${heightIFrame * 1.2}px`;
-    else
-        document.getElementById(id).style.height = `${heightIFrame * 0.8}px`;
+    const landscape = window.matchMedia("(orientation: landscape)");
+    const height = equalScreen ? document.documentElement.clientHeight * 0.7
+                 : landscape.matches ? document.documentElement.clientHeight * percentage
+                 : devicePortraitAndLong ? heightIFrame * 1.2
+                 : heightIFrame * 0.8;
+
+    document.getElementById(id).style.height = `${height}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
-    let targetBlank = isTargetBlank ? `target="_blank"` : "";
-    let ignoreClick = isIgnoredClick ? "ignore-click" : "";
-    let noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
-    let img = isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
+    const targetBlank = isTargetBlank ? `target="_blank"` : "";
+    const ignoreClick = isIgnoredClick ? "ignore-click" : "";
+    const noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
+    const img = isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
     return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `${extras} title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
 }
@@ -97,10 +96,10 @@ function getFLink(cls, link, body, extras = '') {
 }
 
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
-    let idC = idL != '' ? `id='${idL}'` : '';
-    let lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor}'>` : '';
-    let lEnd = hasLink ? '</a>' : '';
-    let style = (!extras) ? '' : `style="${extras}"`;
+    const idC = idL != '' ? `id='${idL}'` : '';
+    const lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor}'>` : '';
+    const lEnd = hasLink ? '</a>' : '';
+    const style = (!extras) ? '' : `style="${extras}"`;
 
     return `${lStart}<div class="card card-ser ${cOption}" ${style}><div class="card-body text-center"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${lEnd}`;
 }
@@ -122,8 +121,8 @@ function getHMenu(icon = 'bars-solid') {
 }
 
 function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
-    let idT = (id != '') ? `id="${id}"` : '';
-    let clsT = (imgCls != '') ? `class="${imgCls}"` : '';
+    const idT = (id != '') ? `id="${id}"` : '';
+    const clsT = (imgCls != '') ? `class="${imgCls}"` : '';
     return `<img ${idT} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
 }
 
