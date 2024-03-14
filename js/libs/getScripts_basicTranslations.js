@@ -10,12 +10,9 @@ async function fetchData(url) {
 //basicTranslations.js
 
 const urlB = 'https://';
-const uLang = window.navigator.userLanguage || window.navigator.language;
-const langLoc = "js/i18n/";
+const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
 const validLang = ['en', 'es', 'zh'];
-const lMin = '/min';
-const pref = uLang.includes('es') ? 'es-sv' : uLang.includes('zh') ? 'zh-zh' : 'en-us';
-const lang = pref + lMin;
+const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === -1) ? uLang : 'en')}/min`;
 
 let tErr1;
 
@@ -23,14 +20,14 @@ let currentLoc = '';
 
 let genericTranslations, basicInfo;
 
-fetchData(`${langLoc}${lang}/generics.json`)
+fetchData(`${jsonLoc}/generics.json`)
 .then(data => {
     genericTranslations = data;
 
     loadTranslationsWithRetry(loadTranslations, function(err) {
         if (!err) {
             // handle result
-            fetchData(`${langLoc}${lang}/basicInfo.json`).then(data => {
+            fetchData(`${jsonLoc}/basicInfo.json`).then(data => {
                 basicInfo = data;
                 loadTranslationsWithRetry(loadBasicInfo, function() { });
                 addExtraIcons();

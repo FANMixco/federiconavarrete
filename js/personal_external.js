@@ -96,7 +96,7 @@ if (smallScreenMobileOS) {
 
 //external
 function onReadyExternal() {
-  getScript('https://www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7')
+  getScript(`${urlB}www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7`)
   .then(() => {
       loadAnalytics();
   })
@@ -109,7 +109,7 @@ function onReadyExternal() {
       console.error(e);
   });*/
 
-  getScript('https://cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js')
+  getScript(`${urlB}cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js`)
   .catch((e) => {
       console.error(e);
   });
@@ -127,7 +127,7 @@ window.onload = function() {
   onReadyExternal();
 };
 
-if (!validLang.includes(uLang.split('-')[0])) {
+if (!validLang.includes(uLang)) {
   function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
   }

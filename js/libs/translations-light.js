@@ -13,7 +13,7 @@ const navbarCollapse = document.getElementById('navbarResponsive');
 
 let fullData;
 
-fetchData(`${langLoc}${lang}/extraInfo.json`)
+fetchData(`${jsonLoc}/extraInfo.json`)
 .then(data => {
     fullData = data;
     loadServices(data.servicesList);
