@@ -12,7 +12,7 @@ async function fetchData(url) {
 const urlB = 'https://';
 const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
 const validLang = ['en', 'es', 'zh'];
-const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === -1) ? uLang : 'en')}/min`;
+const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`;
 
 let tErr1;
 

@@ -18,7 +18,7 @@ function onReadyFreelancer() {
     const responsiveNavItems = Array.from(document.querySelectorAll('#navbarResponsive .nav-link'));
 
     responsiveNavItems.forEach(responsiveNavItem => {
-        responsiveNavItem.addEventListener('click', () => {
+        responsiveNavItem.addEventListener(eClick, () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
             }
@@ -85,7 +85,7 @@ function extraEvents(scroll) {
         
         if (!gScriptExist && !validLang.includes(uLang)) {
             const script = document.createElement('script');
-            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
             script.id = 'g_translate';
             document.body.appendChild(script);
             document.getElementById('google_translate_element').classList.remove('d-none');
