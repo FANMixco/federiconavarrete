@@ -47,7 +47,7 @@ function closeMenu() {
 }
 
 function getHeight() {
-    let body = document.body,
+    const body = document.body,
         html = document.documentElement;
 
     return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
@@ -63,7 +63,7 @@ function contactMeForm(e) {
         iFrameHResize(`${cMe}I`);
     }
 
-    let contactMe = new bootstrap.Modal(document.getElementById("contactMe"), {});
+    const contactMe = new bootstrap.Modal(document.getElementById(cMe), {});
     contactMe.show();
     extraContact++;
 }
