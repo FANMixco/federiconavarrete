@@ -499,36 +499,20 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
 function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse, btnMore, itemCollapseID) {
     try {
-        skills.forEach(item => {
-            let items = `${divSmall}<p class="lead">`;
-            item.forEach(elem => {
-                items += `${elem}<br /><br />`;
-            });
-            items = `${items.substring(0, items.length - 12)}</p></div>`;
-
-            const divTmp = document.getElementById(`${divContainer}`);
-
-            divTmp.innerHTML = items + divTmp.innerHTML;
-        });
-
-        let arias = "";
-
-        for (let i = 0; i < skillsOthers.length; i++){
-            arias += `${itemCollapseID}${i} `;
-        }
-
-        document.getElementById(btnMore).setAttribute("aria-controls", arias);
-
+        const divTmp = document.getElementById(divContainer);
         const divOthersContainerDiv = document.getElementById(divOthersContainer);
 
-        skillsOthers.forEach(function(item, index) {
-            let items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">`;
-            item.forEach(elem => {
-                items += `${elem}<br /><br />`;
-            });
-            items = `${items.substring(0, items.length - 12)}</div></div></div>`;
+        skills.forEach(item => {
+            let items = `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`;
+            divTmp.insertAdjacentHTML('afterbegin', items);
+        });
 
-            divOthersContainerDiv.innerHTML = items + divOthersContainerDiv.innerHTML;
+        const arias = skillsOthers.map((_, i) => `${itemCollapseID}${i}`).join(' ');
+        document.getElementById(btnMore).setAttribute("aria-controls", arias);
+
+        skillsOthers.forEach((item, index) => {
+            let items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
+            divOthersContainerDiv.insertAdjacentHTML('afterbegin', items);
         });
     }
     catch (e) { return e; }
