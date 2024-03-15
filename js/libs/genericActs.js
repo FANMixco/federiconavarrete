@@ -1,6 +1,7 @@
 let tagRegExp;
 let extraContact = 0;
 
+const urlB = 'https://';
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
 const nVis = 'd-none';
@@ -139,12 +140,21 @@ function getCleanTitle(alt) {
 
 function hideToolTips() {
     try {
-        let tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 
         [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)).forEach(tooltip => {
             tooltip.hide();
         });
     } catch { }
+}
+
+async function fetchData(url) {
+    try {
+        const response = await fetch(url);
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 window.addEventListener("load", function() {

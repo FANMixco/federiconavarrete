@@ -1,15 +1,3 @@
-async function fetchData(url) {
-    try {
-        const response = await fetch(url);
-        return await response.json();
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-//basicTranslations.js
-
-const urlB = 'https://';
 const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
 const validLang = ['en', 'es', 'zh'];
 const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`;
