@@ -566,11 +566,11 @@ function setImage(imgID, imgBasic, imgLoc) {
     //let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
 
     switch (deviceType()) {
-        case "Smartphone":
+        case devs[0]:
             //imgBookSize = '_small';
             imgSize = '_small';
             break;
-        case "Tablet":
+        case devs[1]:
             imgSize = '_medium';
             break;
     }
@@ -720,7 +720,7 @@ function changeModalType() {
         });
 
         let landscape = window.matchMedia("(orientation: landscape)");
-        if (landscape.matches || equalScreen || actualDev === "Watch") {
+        if (landscape.matches || equalScreen || actualDev === devs[3]) {
             [...document.getElementsByClassName("mFullScreenH")].forEach(modal => {
                 modal.classList.remove("modal-xl");
                 modal.classList.add("modal-fullscreen");
