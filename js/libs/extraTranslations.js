@@ -601,7 +601,7 @@ function getImgPreview(img, currentReview, extraClass) {
 }
 
 function getReviewName(name, isLarge) {
-    let extraCss = (smallScreenMobileOS || equalScreen) && isLarge ? "style='font-size: larger!important'" : '';
+    const extraCss = (smallScreenMobileOS || equalScreen) && isLarge ? "style='font-size: larger!important'" : '';
     return `<p class="mt-4 mb-0 ${tCenter} h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
 }
 
