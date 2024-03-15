@@ -7,6 +7,7 @@ const nVis = 'd-none';
 const tCenter = "text-center";
 const marginTop = 0;
 const heightIFrame = 600;
+const devs = ["Smartphone", "Tablet", "Desktop", "Watch"];
 
 const deviceType = () => {
     const ua = navigator.userAgent.toLowerCase();
@@ -14,24 +15,24 @@ const deviceType = () => {
     if (
       ua.match(/(tablet|ipad|playbook|silk|kindle fire)|(android(?!.*mobi))/i) !== null
     ) {
-      return "Tablet";
+      return devs[1];
     } else if (
         ua.match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch/g) !== null
     ) {
-        return "Watch";
+        return devs[3];
     } else if (
       ua.match(/iphone|ipod/i) !== null ||
       ua.match(/mobile|android|ip(hone|od)|windows phone|iemobile|blackberry|silk-accelerated|(hpw|web)os|opera m(obi|ini)|tizen|harmonyos|kaios/) !== null
     ) {
-      return "Smartphone";
+      return devs[0];
     }
   
-    return "Desktop";
+    return devs[2];
 };
 
 const actualDev = deviceType();
-const smallScreenMobileOS = (actualDev === "Smartphone" || actualDev === "Watch");
-let devicePortraitAndLong = (actualDev === "Desktop" || actualDev === "Tablet") && window.innerHeight > window.innerWidth;
+const smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]);
+let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
 const equalScreen = window.innerWidth == window.innerHeight;
 
 function hFixCMenu() {

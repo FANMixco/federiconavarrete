@@ -130,7 +130,7 @@ function loadReviews(reviewsList) {
 
                 if (item.isPDF) {
                     PDFObject.embed(item.pdfLocation, `#review${index + 1}PDF`);
-                    if (deviceType() === "Smartphone" || deviceType() === "Tablet")
+                    if (deviceType() === devs[0] || deviceType() === devs[1])
                         document.getElementById("review2PDF").style.height = "auto";
                 }
             });
