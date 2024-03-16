@@ -13,8 +13,7 @@
                 "imgID": "imgArt1",
                 "imgBasicName": "rpas1"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "awardsList": {
         "awards": [
@@ -54,8 +53,7 @@
                     "type": "iframe"
                 }
             ]
-        ],
-        "isVisible": true
+        ]
     },
     "newsArticlesList": {
         "articles": [
@@ -71,8 +69,7 @@
                 "imgID": "imgNews2",
                 "imgBasicName": "news2"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "organizedEvents": {
         "events": [
@@ -82,8 +79,7 @@
                 "imgID": "imgLodzarts",
                 "imgBasicName": "lodzarts"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "personalProjects": [
         {
@@ -122,8 +118,7 @@
                 "youTubeID": "-c2zayFv14Y",
                 "title": "La variable faltante (en inglés)"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "youtubeTrainings": {
         "presentations": [
@@ -139,8 +134,7 @@
                 "youTubeID": "9mXanZhm9eo",
                 "title": "Es hora de subir de nivel ⏫ ¡Tu perfil de LinkedIn! (en inglés)"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "presentationsLinks": {
         "presentations": [
@@ -156,8 +150,7 @@
                 "imgID": "imgPPT1",
                 "imgBasicName": "rfriends"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "reviewsList": {
         "reviews": [
@@ -195,8 +188,7 @@
                 "isPDF": false,
                 "isActive": false
             }
-        ],
-        "isVisible": true
+        ]
     },
     "servicesList": {
         "services": [
@@ -219,8 +211,7 @@
                     "icon": "chalkboard-teacher-solid"
                 }
             ]
-        ],
-        "isVisible": true
+        ]
     },
     "socialBasicList": {
         "socialMedia": [
@@ -256,8 +247,7 @@
                 "isIcon": false,
                 "externalClass": "iconFooter"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "socialOthersList": {
         "socialMedia": [
@@ -346,8 +336,7 @@
                 "isIcon": false,
                 "externalClass": "iconFooter"
             }
-        ],
-        "isVisible": true
+        ]
     },
     "softSkills": [
         [

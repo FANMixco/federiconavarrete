@@ -6,38 +6,17 @@
 		"Bienvenido compañero, encantado de conocerte en línea. Soy Federico y me apasiona dar forma a un mundo mejor 🌍 a través de innovaciones tecnológicas, siempre persiguiendo <span class='fw-bold'>la próxima gran novedad</span>. Espero que pronto podamos trabajar juntos en ellas.<br /><br />He vivido en cuatro países, <a id='aElSalvador' href='#elSalvador' class='text-material-link' data-bs-toggle='modal' data-bs-target='#elSalvador'>El Salvador</a>, Estados Unidos de América, Polonia y España, dónde he trabajado con ciudadanos de 30 más de nacionalidades, permitiéndome desarrollar, <span class='fw-bold fst-italic'>Inteligencia Cultural.</span>",
 		"Mi viaje único me ha empoderado liderar equipos fantásticos, co-crear <a href='https://bit.ly/3dIhfQW' class='text-material-link' rel='noreferrer' target='_blank'>aplicaciones innovadoras</a>, publicar <a href='https://es.wikipedia.org/wiki/Historias_Eternas_de_El_Salvador' class='text-material-link' rel='noreferrer' target='_blank'>libros pioneros</a> sobre el folclore salvadoreño en inglés, automatizar múltiples soluciones y desarrollar impresionantes habilidades de <a id='youTubePreview' data-bs-toggle='modal' data-bs-target='#linkPreviews' class='text-material-link'>oratoria pública</a>.<br /><br /> <span class='text-uppercase fw-bold-bold text-center d-block'><i>¿Y tú? ¿Estás listo para tu próximo desafío?</i><br /> <a id='linkContactMeAbout' class='text-warning'>ENTREMOS EN CONTACTO 💡</a></span>"
 	],
-	"favApp": {
-		"link": "https://bit.ly/2UkxmMZ",
-		"title": "¡La Ruta Maya!",
-		"isVisible": false
-	},
 	"favPodcast": {
 		"link": "https://spoti.fi/3cD1743",
-		"title": "Cyber Prophets&nbsp;<small>(en inglés)</small>",
-		"isVisible": true
+		"title": "Cyber Prophets&nbsp;<small>(en inglés)</small>"
 	},
 	"favBook": {
 		"link": "https://a.co/d/h7yXzXb",
-		"title": "Historias Eternas de El Salvador",
-		"isVisible": true
-	},
-	"telephone": {
-		"number": "+0",
-		"isVisible": false
-	},
-	"email": {
-		"address": "mail@mail.com",
-		"subject": "Contáctame (sitio de FANMixco)",
-		"isVisible": false
-	},
-	"skype": {
-		"id": "fanmixco",
-		"isVisible": false
+		"title": "Historias Eternas de El Salvador"
 	},
 	"company": {
 		"id": "supernova",
 		"name": "Supernova IC",
-		"link": "https://supernovaic.com",
-		"isVisible": true
+		"link": "https://supernovaic.com"
 	}
 }

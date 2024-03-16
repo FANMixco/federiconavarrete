@@ -170,19 +170,19 @@ function loadBasicInfo() {
         });
 
         //favBookDiv.innerHTML = '';
-        if (favBook.isVisible) {
-            favBookDiv.innerHTML = getActionBtn(`${urlB}${favBook.link}`, 'download', favBook.title);
-        }
-        else {
-            favBookDiv.classList.add(nVis);
-        }
+        //if (favBook.isVisible) {
+        favBookDiv.innerHTML = getActionBtn(`${urlB}${favBook.link}`, 'download', favBook.title);
+        //}
+        //else {
+        //    favBookDiv.classList.add(nVis);
+        //}
 
-        if (favPodcast.isVisible) {
-            favPodcastDiv.innerHTML = getActionBtn(`${urlB}${favPodcast.link}`, 'spotify', favPodcast.title);
-        }
-        else {
-            favPodcastDiv.classList.add(nVis);
-        }
+        //if (favPodcast.isVisible) {
+        favPodcastDiv.innerHTML = getActionBtn(`${urlB}${favPodcast.link}`, 'spotify', favPodcast.title);
+        //}
+        //else {
+        //    favPodcastDiv.classList.add(nVis);
+        //}
 
         const listContacts = document.getElementById('listContacts');
 
@@ -198,9 +198,9 @@ function loadBasicInfo() {
             listContacts.innerHTML = getInLineBtn(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, 'at') + listContacts.innerHTML;
         }*/
 
-        if (company.isVisible) {
-            listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
-        }
+        //if (company.isVisible) {
+        listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
+        //}
 
         const aElSalvador = document.getElementById('aElSalvador');
 
