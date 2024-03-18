@@ -554,7 +554,7 @@ function loadVideosAndPresentations(youtubeTrainings, presentationsLinks, presen
 
 function setImage(imgID, imgBasic, imgLoc) {
     //let imgBookSize = '';
-    let imgSize = '';
+    const imgSize = deviceType() == devs[0] ? '_small' : deviceType() == devs[1] ? '_medium' : '';
 
     const imgTemp = document.getElementById(imgID);
     const srcWebP = document.getElementById(`srcWebP${imgID}`);
@@ -566,6 +566,7 @@ function setImage(imgID, imgBasic, imgLoc) {
     //let currentDate = new Date();
     //let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
 
+    /*let imgSize = '';
     switch (deviceType()) {
         case devs[0]:
             //imgBookSize = '_small';
@@ -574,7 +575,7 @@ function setImage(imgID, imgBasic, imgLoc) {
         case devs[1]:
             imgSize = '_medium';
             break;
-    }
+    }*/
     
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 

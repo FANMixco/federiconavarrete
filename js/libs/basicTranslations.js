@@ -252,10 +252,10 @@ function loadBasicInfo() {
 document.addEventListener('DOMContentLoaded', function () {
     const menuExpander = document.getElementById('menuExpander');
     const hMenu = getHMenu();
-    const cMenu = getHMenu('cross');
+    //const cMenu = getHMenu('cross');
 
     // Toggle between getHMenu() and getHMenu('close') on button click
     menuExpander.addEventListener('click', function() {
-        spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? cMenu : hMenu;
+        spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });
 });
