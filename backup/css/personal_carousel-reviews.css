@@ -51,7 +51,8 @@ a#aBooksModal {
 
 #imgProfile {
     max-width: 300px;
-    border-radius: 50%
+    border-radius: 50%;
+    object-fit: contain
 }
 
 /*#linkContactMe {
