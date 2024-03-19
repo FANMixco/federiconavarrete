@@ -8,7 +8,7 @@ const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
 const w100 = 'class="w-100"';
-const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
+//const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
 
 let fullData;
@@ -72,17 +72,17 @@ loadSectionIfVisible();
 
 function loadOrganizedEvents(organizedEvents) {
     const { events } = organizedEvents;
-    loadImgSection(events, 'divEvents', 'divEvents', imgLocPortfolio, 'Łódźarts', fontMobile);
+    loadImgSection(events, 'divEvents', 'divEvents', imgLocPortfolio, 'Łódźarts', '');
 }
 
 function loadArticles(articlesList) {
-    const { articles, isVisible } = articlesList;
-    loadImgSection(articles, 'divArticles', 'articlesDiv', imgLocArticles, '', fontMobile);
+    const { articles } = articlesList;
+    loadImgSection(articles, 'divArticles', 'articlesDiv', imgLocArticles, '', '');
 }
 
 function loadNewsArticles(newsArticlesList) {
     const { articles } = newsArticlesList;
-    loadImgSection(articles, 'divMMArticles', 'newsArticles', imgLocArticles, fontMobile);
+    loadImgSection(articles, 'divMMArticles', 'newsArticles', imgLocArticles, '');
 }
 
 setTimeout(function () {
@@ -297,9 +297,9 @@ function loadPersonalProjects(personalProjects) {
         personalProjects.forEach(item => {
             const isActive = item.isActive ? " active" : "";
 
-            const hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
+            //const hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
 
-            const pp = `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(`${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, hOpt)}</div></div>`;
+            const pp = `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(`${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, '')}</div></div>`;
 
             personalProjectsDiv.innerHTML += pp;
         });
@@ -334,7 +334,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
-            let vTmp = getUTubeContainer(item, fontMobile);
+            let vTmp = getUTubeContainer(item, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
@@ -378,7 +378,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     if (smallScreenMobileOS || equalScreen) {
         let items = '';
         presentations.forEach(item => {
-            let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, 'font-mobile');
+            let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
             items += vTmp;
