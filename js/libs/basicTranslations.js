@@ -109,15 +109,12 @@ function loadTranslations() {
                     const height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
                     hPreviewHeight = `${height}px`;
                 }
-                else if (devicePortraitAndLong) 
+                else if (devicePortraitAndLong) {
                     hPreviewHeight = `${hFrameGeneric * 1.5}px`;
+                }
                 gPreview.style.height = hPreviewHeight;
             });
         });
-
-        //const spanMenu = document.getElementById('spanMenu');
-        //spanMenu.innerHTML = getHMenu();
-        //spanMenu.innerHTML = (!(smallScreenMobileOS || equalScreen)) ? getHMenu() : getHMenu('style="margin-top:0px!important"');
         
         return true;
     }
@@ -216,7 +213,7 @@ function loadBasicInfo() {
         const contactForms = document.querySelectorAll("#linkContactMe, #linkContactMeAbout, #contactMeFloat");
 
         contactForms.forEach(element => {
-            element.addEventListener("click", contactMeForm);
+            element.addEventListener(eClick, contactMeForm);
         });
 
         const linkPreview = document.getElementById('youTubePreview');
@@ -225,7 +222,7 @@ function loadBasicInfo() {
         linkPreview.addEventListener(eClick, () => {
             const gTitle = document.getElementById('gTitle');
             gTitle.innerHTML = genericTranslations.winning;
-            gTitle.classList.remove('d-none');
+            gTitle.classList.remove(nVis);
 
             const gDivTitle = document.getElementById('gDivTitle');
             gDivTitle.classList.remove('border-0');
@@ -252,10 +249,9 @@ function loadBasicInfo() {
 document.addEventListener('DOMContentLoaded', function () {
     const menuExpander = document.getElementById('menuExpander');
     const hMenu = getHMenu();
-    //const cMenu = getHMenu('cross');
 
     // Toggle between getHMenu() and getHMenu('close') on button click
-    menuExpander.addEventListener('click', function() {
+    menuExpander.addEventListener(eClick, function() {
         spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });
 });

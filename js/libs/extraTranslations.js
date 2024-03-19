@@ -105,7 +105,6 @@ function loadReviews(reviewsList) {
         //if (isVisible) {
         let reviewsHTML = '';
         reviews.forEach((item, index) => {
-            console.log(item);
             const currentReview = index + 1;
             const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
             const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}</div>`;
