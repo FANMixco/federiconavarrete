@@ -8,7 +8,6 @@ const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
 const w100 = 'class="w-100"';
-//const fontMobile = (smallScreenMobileOS) ? 'font-mobile' : '';
 const navbarCollapse = document.getElementById('navbarResponsive');
 
 let fullData;
@@ -296,8 +295,6 @@ function loadPersonalProjects(personalProjects) {
         const personalProjectsDiv = document.getElementById('personalProjects');
         personalProjects.forEach(item => {
             const isActive = item.isActive ? " active" : "";
-
-            //const hOpt = smallScreenMobileOS || equalScreen ? "style='font-size: larger!important'" : "";
 
             const pp = `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(`${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, '')}</div></div>`;
 

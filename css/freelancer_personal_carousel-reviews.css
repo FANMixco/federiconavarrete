@@ -730,10 +730,6 @@ a.text-material-link-dark:active {
 	max-width: 100%;
 }
 
-.font-mobile {
-	font-size: larger !important;
-}
-
 #carouselReviews .carousel-inner .carousel-item .img-box {
 	width: 135px;
 	height: 135px;
