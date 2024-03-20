@@ -12,6 +12,7 @@
  */
 class LiteYTEmbed extends HTMLElement {
     connectedCallback() {
+        const yPreview = 'https://i.ytimg.com';
         this.videoId = this.getAttribute('videoid');
 
         let playBtnEl = this.querySelector('.lty-playbtn');
@@ -29,9 +30,9 @@ class LiteYTEmbed extends HTMLElement {
          */
         if (!this.style.backgroundImage) {
           this.style = 
-                `background-image: url('https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg');
-                 background-image: -webkit-image-set(url("https://i.ytimg.com/vi_webp/${this.videoId}/hqdefault.webp") 1x, url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg") 1x);
-                 background-image: image-set(url("https://i.ytimg.com/vi_webp/${this.videoId}/hqdefault.webp") type("image/webp"), url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg") type("image/jpeg"));`;
+                `background-image: url("${yPreview}/vi/${this.videoId}/hqdefault.jpg");
+                 background-image: -webkit-image-set(url("${yPreview}/vi_webp/${this.videoId}/hqdefault.webp") 1x, url("${yPreview}/vi/${this.videoId}/hqdefault.jpg") 1x);
+                 background-image: image-set(url("${yPreview}/vi_webp/${this.videoId}/hqdefault.webp") type("image/webp"), url("${yPreview}/vi/${this.videoId}/hqdefault.jpg") type("image/jpeg"));`;
         }
 
         // Set up play button, and its visually hidden label
@@ -56,7 +57,14 @@ class LiteYTEmbed extends HTMLElement {
         // TODO: In the future we could be like amp-youtube and silently swap in the iframe during idle time
         //   We'd want to only do this for in-viewport or near-viewport ones: https://github.com/ampproject/amphtml/pull/5003
         this.addEventListener('click', this.addIframe);
-        this.needsYTApiForAutoplay = navigator.vendor.includes('Apple') || ['Firefox', 'Android'].some(userAgent => navigator.userAgent.includes(userAgent));
+        // Define the user agents to check
+        const userAgents = ['Apple', 'Firefox', 'Android'];
+
+        // Check if any of the user agents is present in the navigator.userAgent
+        const needsYTApiForAutoplay = userAgents.some(userAgent => navigator.userAgent.includes(userAgent));
+
+        // Use the result in your code
+        this.needsYTApiForAutoplay = needsYTApiForAutoplay;
     }
 
     // // TODO: Support the the user changing the [videoid] attribute
