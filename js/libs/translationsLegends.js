@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
         const lang = (['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en';
 
-        const data = await fetchData(`../js/i18n/${lang}/legendsList.json`);
+        const data = await fetchData(`../js/i18n/${lang}/legends.json`);
         loadLegends(data.legendsList);
     } catch (e) {
         console.error(e);

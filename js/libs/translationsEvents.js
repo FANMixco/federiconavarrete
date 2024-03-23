@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
         const lang = (['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en';
 
-        const data = await fetchData(`../js/i18n/${lang}/seenOn.json`);
+        const data = await fetchData(`../js/i18n/${lang}/events.json`);
         loadSeenOn(data);
     } catch (e) {
         console.error(e);
