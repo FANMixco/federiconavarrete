@@ -301,7 +301,7 @@ function loadPersonalProjects(personalProjects) {
 
             items += pp;
         });
-        personalProjectsDiv.innerHTML += items;
+        personalProjectsDiv.innerHTML = items;
     }
     catch (e) { return e; }
 }
@@ -376,6 +376,7 @@ function loadYouTubeVideos(youtubeTrainings) {
 function loadDivPresentations(presentations, divPicture, divCar) {
     let cPresentation = 0;
     let items = '';
+    
     if (smallScreenMobileOS || equalScreen) {
         presentations.forEach(item => {
             let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '');
@@ -391,9 +392,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     }
     else {
         presentations.forEach(item => {
-            const ppt = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
-            items += ppt;
-            setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
+            items += getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
         });
         divPPTs.innerHTML = items;
         setPPTImg(presentations);
