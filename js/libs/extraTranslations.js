@@ -293,13 +293,15 @@ function loadSoftSkills(softSkills, softSkillsOthers) {
 function loadPersonalProjects(personalProjects) {
     try {
         const personalProjectsDiv = document.getElementById('personalProjects');
+        let items = '';
         personalProjects.forEach(item => {
             const isActive = item.isActive ? " active" : "";
 
             const pp = `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(`${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, '')}</div></div>`;
 
-            personalProjectsDiv.innerHTML += pp;
+            items += pp;
         });
+        personalProjectsDiv.innerHTML += items;
     }
     catch (e) { return e; }
 }
@@ -328,8 +330,8 @@ function loadVideos(presentationsVideos) {
 
 function loadVideosUTube(presentations, divVideo, divCar) {
     let cUTube = 0;
+    let items = '';
     if (smallScreenMobileOS || equalScreen) {
-        let items = '';
         presentations.forEach(item => {
             let vTmp = getUTubeContainer(item, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
@@ -343,12 +345,13 @@ function loadVideosUTube(presentations, divVideo, divCar) {
     }
     else {
         presentations.forEach(item => {
-            divVideo.innerHTML += getUTubeContainer(item);
+            items += getUTubeContainer(item);
             if (cUTube === 0) {
-                divVideo.innerHTML += `<div ${w100}></div>`;
+                items += `<div ${w100}></div>`;
             }
             cUTube++;
         });
+        divVideo.innerHTML = items;
     }
 }
 
@@ -372,8 +375,8 @@ function loadYouTubeVideos(youtubeTrainings) {
 
 function loadDivPresentations(presentations, divPicture, divCar) {
     let cPresentation = 0;
+    let items = '';
     if (smallScreenMobileOS || equalScreen) {
-        let items = '';
         presentations.forEach(item => {
             let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
@@ -383,18 +386,24 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         });
         items = getVideoCarousel(items, divCar);
         divPicture.innerHTML = items;
-        presentations.forEach(item => {
-            setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
-        });
+        setPPTImg(presentations);
         new bootstrap.Carousel(`#${divCar}`);
     }
     else {
         presentations.forEach(item => {
             const ppt = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
-            divPPTs.innerHTML += ppt;
+            items += ppt;
             setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
         });
+        divPPTs.innerHTML = items;
+        setPPTImg(presentations);
     }   
+}
+
+function setPPTImg(presentations) {
+    presentations.forEach(item => {
+        setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
+    });
 }
 
 function loadPresentations(presentationsLinks) {
