@@ -293,14 +293,11 @@ function loadSoftSkills(softSkills, softSkillsOthers) {
 function loadPersonalProjects(personalProjects) {
     try {
         const personalProjectsDiv = document.getElementById('personalProjects');
-        let items = '';
-        personalProjects.forEach(item => {
+        const items = personalProjects.map(item => {
             const isActive = item.isActive ? " active" : "";
-
-            const pp = `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(`${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`, '')}</div></div>`;
-
-            items += pp;
-        });
+            const link = `${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`;
+            return `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(link, '')}</div></div>`;
+        }).join('');
         personalProjectsDiv.innerHTML = items;
     }
     catch (e) { return e; }
@@ -329,28 +326,27 @@ function loadVideos(presentationsVideos) {
 }
 
 function loadVideosUTube(presentations, divVideo, divCar) {
-    let cUTube = 0;
     let items = '';
+
     if (smallScreenMobileOS || equalScreen) {
-        presentations.forEach(item => {
+        items = presentations.map((item, index) => {
             let vTmp = getUTubeContainer(item, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${(cUTube == 0) ? 'active' : ''}">${vTmp}</div>`;
-            items += vTmp;
-            cUTube++;
-        });
+            return `<div class="carousel-item ${index === 0 ? 'active' : ''}">${vTmp}</div>`;
+        }).join('');
         items = getVideoCarousel(items, divCar);
         divVideo.innerHTML = items;
         new bootstrap.Carousel(`#${divCar}`);
-    }
-    else {
-        presentations.forEach(item => {
-            items += getUTubeContainer(item);
+    } else {
+        let cUTube = 0;
+        items = presentations.map(item => {
+            let result = getUTubeContainer(item);
             if (cUTube === 0) {
-                items += `<div ${w100}></div>`;
+                result += `<div ${w100}></div>`;
             }
             cUTube++;
-        });
+            return result;
+        }).join('');
         divVideo.innerHTML = items;
     }
 }
@@ -374,35 +370,28 @@ function loadYouTubeVideos(youtubeTrainings) {
 }
 
 function loadDivPresentations(presentations, divPicture, divCar) {
-    let cPresentation = 0;
+    const isSmallScreen = smallScreenMobileOS || equalScreen;
     let items = '';
     
-    if (smallScreenMobileOS || equalScreen) {
-        presentations.forEach(item => {
+    if (isSmallScreen) {
+        items = presentations.map((item, index) => {
             let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            vTmp = `<div class="carousel-item ${(cPresentation == 0) ? 'active' : ''}">${vTmp}</div>`;
-            items += vTmp;
-            cPresentation++;
-        });
+            return `<div class="carousel-item ${(index == 0) ? 'active' : ''}">${vTmp}</div>`;
+        }).join('');
         items = getVideoCarousel(items, divCar);
         divPicture.innerHTML = items;
-        setPPTImg(presentations);
-        new bootstrap.Carousel(`#${divCar}`);
+    } else {
+        items = presentations.map(item => getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title)).join('');
+        divPicture.innerHTML = items;
     }
-    else {
-        presentations.forEach(item => {
-            items += getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title);
-        });
-        divPPTs.innerHTML = items;
-        setPPTImg(presentations);
-    }   
+    
+    setPPTImg(presentations);
+    if (isSmallScreen) new bootstrap.Carousel(`#${divCar}`);
 }
 
 function setPPTImg(presentations) {
-    presentations.forEach(item => {
-        setImage(item.imgID, item.imgBasicName, imgLocPortfolio);
-    });
+    presentations.forEach(item => setImage(item.imgID, item.imgBasicName, imgLocPortfolio));
 }
 
 function loadPresentations(presentationsLinks) {
