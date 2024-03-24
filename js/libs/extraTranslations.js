@@ -147,20 +147,22 @@ function loadServices(serviceList) {
         const servicesList = document.getElementById('servicesList');
         const dropdownMenu = document.getElementById('dServices');
         let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
-        services.forEach(item => {
-            item.forEach(elem => {
 
-                let newListItem = document.createElement('li');
-                const tmlLink = `${urlB}${elem.link}`;
-                newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" ${tBlank} href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
-                dropdownMenu.appendChild(newListItem);
+        services.flat().forEach(elem => {
+            const tmlLink = `${urlB}${elem.link}`;
 
-                const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
+            // Create dropdown item
+            let newListItem = document.createElement('li');
+            newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" ${tBlank} href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
+            dropdownMenu.appendChild(newListItem);
 
-                items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+            // Create card title
+            const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
-                totalServices++;
-            });
+            // Append to items
+            items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+
+            totalServices++;
         });
 
         items = (smallScreenMobileOS || equalScreen) ? items : `${items}</div>`;
@@ -198,22 +200,19 @@ function loadAwards(awardList) {
         let availableLinks = [];
         let i = 0;
         let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
-        awards.forEach(item => {
-            item.forEach(elem => {
-                let tmpLink = `${urlB}${elem.link}`;
-                let title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
-
-                availableLinks.push({ 
-                    id: i,
-                    title: elem.title,
-                    link: tmpLink,
-                    type: elem.type
-                });
-                
-                items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(i == 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
-
-                i++;
+        awards.flat().forEach((elem, index) => {
+            const tmpLink = `${urlB}${elem.link}`;
+            const title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
+        
+            availableLinks.push({ 
+                id: index,
+                title: elem.title,
+                link: tmpLink,
+                type: elem.type
             });
+        
+            items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(index === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+            i++;
         });
 
         items = (smallScreenMobileOS || equalScreen) ? items : `${items}</div>`;
