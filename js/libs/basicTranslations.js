@@ -1,11 +1,10 @@
 const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
 const validLang = ['en', 'es', 'zh'];
 const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`;
+const smallScreen = smallScreenMobileOS || equalScreen;
 
 let tErr1;
-
 let currentLoc = '';
-
 let genericTranslations, basicInfo;
 
 fetchData(`${jsonLoc}/generics.json`)
@@ -104,7 +103,7 @@ function loadTranslations() {
                 const gPreview = document.getElementById('gPreview');
                 const hFrameGeneric = 450;
                 let hPreviewHeight = `${hFrameGeneric}px`; 
-                if (smallScreenMobileOS || equalScreen) {
+                if (smallScreen) {
                     const portrait = window.matchMedia("(orientation: portrait)");
                     const height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
                     hPreviewHeight = `${height}px`;

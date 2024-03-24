@@ -146,7 +146,7 @@ function loadServices(serviceList) {
         //if (isVisible) {
         const servicesList = document.getElementById('servicesList');
         const dropdownMenu = document.getElementById('dServices');
-        let items = (smallScreenMobileOS || equalScreen) ? '' : `<div class="row justify-content-center">`;
+        let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
         services.flat().forEach(elem => {
             const tmlLink = `${urlB}${elem.link}`;
@@ -160,14 +160,14 @@ function loadServices(serviceList) {
             const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
             // Append to items
-            items += (smallScreenMobileOS || equalScreen) ? `<div class="carousel-item ${(totalServices === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+            items += (smallScreen) ? `<div class="carousel-item ${(totalServices === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 
             totalServices++;
         });
 
-        items = (smallScreenMobileOS || equalScreen) ? items : `${items}</div>`;
+        items = (smallScreen) ? items : `${items}</div>`;
 
-        if (smallScreenMobileOS || equalScreen) {
+        if (smallScreen) {
             items = getCarousel(items, "carouselServices", 'text-dark');
             const servicesListDiv = document.getElementById("servicesList");
             servicesListDiv.classList.remove("row");
@@ -176,7 +176,7 @@ function loadServices(serviceList) {
 
         servicesList.innerHTML += items;
 
-        if (smallScreenMobileOS || equalScreen)
+        if (smallScreen)
             new bootstrap.Carousel('#carouselServices');
         //}
         //else {
@@ -193,7 +193,6 @@ function getCarousel(items, cId, arrowsColor = 'text-muted') {
 
 function loadAwards(awardList) {
     try {
-        const smallScreen = smallScreenMobileOS || equalScreen;
         const { awards } = awardList;
 
         //if (isVisible) {
@@ -328,7 +327,7 @@ function loadVideos(presentationsVideos) {
 function loadVideosUTube(presentations, divVideo, divCar) {
     let items = '';
 
-    if (smallScreenMobileOS || equalScreen) {
+    if (smallScreen) {
         items = presentations.map((item, index) => {
             let vTmp = getUTubeContainer(item, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
@@ -370,10 +369,9 @@ function loadYouTubeVideos(youtubeTrainings) {
 }
 
 function loadDivPresentations(presentations, divPicture, divCar) {
-    const isSmallScreen = smallScreenMobileOS || equalScreen;
     let items = '';
     
-    if (isSmallScreen) {
+    if (smallScreen) {
         items = presentations.map((item, index) => {
             let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '');
             vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
@@ -387,7 +385,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     }
     
     setPPTImg(presentations);
-    if (isSmallScreen) new bootstrap.Carousel(`#${divCar}`);
+    if (smallScreen) new bootstrap.Carousel(`#${divCar}`);
 }
 
 function setPPTImg(presentations) {
@@ -596,7 +594,7 @@ function getImgPreview(img, currentReview, extraClass) {
 }
 
 function getReviewName(name, isLarge) {
-    const extraCss = (smallScreenMobileOS || equalScreen) && isLarge ? "style='font-size: larger!important'" : '';
+    const extraCss = (smallScreen) && isLarge ? "style='font-size: larger!important'" : '';
     return `<p class="mt-4 mb-0 ${tCenter} h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
 }
 
@@ -691,7 +689,7 @@ function getCItem(extras) {
 
 function rotatedModal() {
     //Clean old changes
-    if (smallScreenMobileOS || equalScreen) {
+    if (smallScreen) {
         [...document.getElementsByClassName("mFullScreen")].forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
@@ -708,7 +706,7 @@ function rotatedModal() {
 }
 
 function changeModalType() {
-    if (smallScreenMobileOS || equalScreen) {
+    if (smallScreen) {
         [...document.getElementsByClassName("mFullScreen")].forEach(modal => {
             modal.classList.remove("modal-xl");
             modal.classList.add("modal-fullscreen");

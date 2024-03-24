@@ -41,7 +41,7 @@ if (document.readyState !== "loading") {
   document.addEventListener("DOMContentLoaded", onReadyPersonal);
 }
 
-if (smallScreenMobileOS || equalScreen) {
+if (smallScreen) {
   const imgProfile = document.getElementById('imgProfile');
   imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
 } else {
