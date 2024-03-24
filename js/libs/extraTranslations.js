@@ -198,11 +198,11 @@ function loadAwards(awardList) {
         //if (isVisible) {
         const awardsList = document.getElementById('awardsList');
         let availableLinks = [];
-        let i = 0;
+        //let i = 0;
         let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
         awards.flat().forEach((elem, index) => {
             const tmpLink = `${urlB}${elem.link}`;
-            const title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${i}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
+            const title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
         
             availableLinks.push({ 
                 id: index,
@@ -212,7 +212,7 @@ function loadAwards(awardList) {
             });
         
             items += (smallScreen) ? `<div class="carousel-item ${(index === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
-            i++;
+            //i++;
         });
 
         items = (smallScreen) ? items : `${items}</div>`;
