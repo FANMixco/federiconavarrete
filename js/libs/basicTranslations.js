@@ -216,9 +216,9 @@ function loadBasicInfo() {
         });
 
         const linkPreview = document.getElementById('youTubePreview');
-        let iframeGeneric = document.getElementById('iframeGeneric');
 
         linkPreview.addEventListener(eClick, () => {
+            const iframeGeneric = document.getElementById('iframeGeneric');
             const gTitle = document.getElementById('gTitle');
             gTitle.innerHTML = genericTranslations.winning;
             gTitle.classList.remove(nVis);

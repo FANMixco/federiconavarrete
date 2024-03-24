@@ -31,8 +31,8 @@ const loadSectionIfVisible = () => {
         const loaded = section.getAttribute('data-loaded');
 
         if (rect.top < windowHeight - triggerPoint && rect.bottom >= 0 && loaded === "false") {
-            const sectionId = section.getAttribute('id');
-            switch (sectionId) {
+            //const sectionId = section.getAttribute('id');
+            switch (section.getAttribute('id')) {
                 case 'divAwards':
                     loadAwards(fullData.awardsList);
                     break;
