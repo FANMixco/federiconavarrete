@@ -142,9 +142,9 @@ function getCleanTitle(alt) {
 
 function hideToolTips() {
     try {
-        [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)).forEach(tooltip => {
-            tooltip.hide();
-        });
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipTriggerEl => {
+            new bootstrap.Tooltip(tooltipTriggerEl).hide();
+        });        
     } catch { }
 }
 

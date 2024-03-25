@@ -481,9 +481,9 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         }*/
 
         if (smallScreenMobileOS) {
-            [...document.getElementsByClassName('uTubeLink')].forEach(function(element) {
-                element.href = element.href.replace('www', 'm');    
-            });
+            document.querySelectorAll('.uTubeLink').forEach(element => {
+                element.href = element.href.replace('www', 'm');
+            });            
         }
     }
     catch (e) { return e; }
@@ -690,11 +690,11 @@ function getCItem(extras) {
 function rotatedModal() {
     //Clean old changes
     if (smallScreen) {
-        [...document.getElementsByClassName("mFullScreen")].forEach(modal => {
+        document.getElementsByClassName("mFullScreen").forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
 
-        [...document.getElementsByClassName("mFullScreenH")].forEach(modal => {
+        document.getElementsByClassName("mFullScreenH").forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
     }
@@ -707,14 +707,14 @@ function rotatedModal() {
 
 function changeModalType() {
     if (smallScreen) {
-        [...document.getElementsByClassName("mFullScreen")].forEach(modal => {
+        document.getElementsByClassName("mFullScreen").forEach(modal => {
             modal.classList.remove("modal-xl");
             modal.classList.add("modal-fullscreen");
         });
 
         let landscape = window.matchMedia("(orientation: landscape)");
         if (landscape.matches || equalScreen || actualDev === devs[3]) {
-            [...document.getElementsByClassName("mFullScreenH")].forEach(modal => {
+            document.getElementsByClassName("mFullScreenH").forEach(modal => {
                 modal.classList.remove("modal-xl");
                 modal.classList.add("modal-fullscreen");
             });

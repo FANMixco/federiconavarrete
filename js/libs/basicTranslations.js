@@ -135,27 +135,26 @@ function loadBasicInfo() {
         const favBookDiv = document.getElementById('favBook');
         const favPodcastDiv = document.getElementById('favPodcast');
 
-        [...document.querySelectorAll('.nav-link')].forEach(element => {
+        document.querySelectorAll('.nav-link').forEach(element => {
             element.addEventListener(eClick, () => {
                 isMenuTriggered = true;
-                if (extraContact == 0) {
-                    setTimeout(function () {
-                        contactMeForm();
-                    }, 5000);
+                if (extraContact === 0) {
+                    setTimeout(contactMeForm, 5000);
                 }
                 extraContact++;
             });
-        });
+        });        
 
-        [...document.querySelectorAll('.mFix')].forEach(element => {
-            element.addEventListener(eClick, () => {
-                tErr1 = setTimeout(function(self) {
+        document.querySelectorAll('.mFix').forEach(element => {
+            element.addEventListener(eClick, function() {
+                const self = this;
+                tErr1 = setTimeout(() => {
                     self.click();
                     clearTimeout(tErr1);
                     hFixCMenu();
-                }, 500, this);
+                }, 500);
             });
-        });
+        });        
         
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
@@ -240,9 +239,9 @@ function loadBasicInfo() {
             btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
         });
 
-        [...document.querySelectorAll('.iLang')].forEach(element => {
+        document.querySelectorAll('.iLang').forEach(element => {
             element.src += `?lang=${uLang}`;
-        });
+        });        
         return true;
     }
     catch {
