@@ -240,7 +240,7 @@ function loadBasicInfo() {
         });
 
         document.querySelectorAll('.iLang').forEach(element => {
-            element.src += `?lang=${uLang}`;
+            element.src = `pages/${element.getAttribute('data-page')}.html?lang=${uLang}`;
         });        
         return true;
     }
