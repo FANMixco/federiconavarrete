@@ -31,10 +31,11 @@ const deviceType = () => {
     return devs[2];
 };
 
+const equalScreen = window.innerWidth == window.innerHeight;
 const actualDev = deviceType();
 const smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]);
+
 let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
-const equalScreen = window.innerWidth == window.innerHeight;
 
 function hFixCMenu() {
     setTimeout(function() {

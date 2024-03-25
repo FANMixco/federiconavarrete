@@ -35,6 +35,7 @@ function onReadyPersonal() {
         element.addEventListener('click', x => false);
     });
 }
+
 if (document.readyState !== "loading") {
   onReadyPersonal();
 } else {

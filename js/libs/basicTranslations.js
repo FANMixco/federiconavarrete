@@ -28,11 +28,11 @@ fetchData(`${jsonLoc}/generics.json`)
 
 function addExtraIcons() {
     [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
-        element.innerHTML = getFinalIcon(`gallery`, 21) + '&ensp;' + element.innerHTML;
+        element.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${element.innerHTML}`;
     });
   
     [...document.getElementsByClassName('btn-book')].forEach(function(element) {
-        element.innerHTML = getFinalIcon(`download`) + '&nbsp;&nbsp;' + element.innerHTML;
+        element.innerHTML = `${getFinalIcon('download')}&nbsp;&nbsp;${element.innerHTML}`;
     });
 }
 
@@ -71,12 +71,13 @@ function loadTranslations() {
         });
 
         document.querySelectorAll('[data-translation]').forEach(item => {
-            item.innerHTML = genericTranslations[`${item.dataset.translation}`];
+            item.innerHTML = genericTranslations[item.dataset.translation];
         });
         
         document.querySelectorAll('[data-title-translation]').forEach(item => {
-            item.setAttribute("aria-label", genericTranslations[`${item.dataset.titleTranslation}`]);
-            item.title = genericTranslations[`${item.dataset.titleTranslation}`];
+            const trans = genericTranslations[item.dataset.titleTranslation];
+            item.setAttribute("aria-label", trans);
+            item.title = trans;
         });
 
         [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
@@ -203,7 +204,7 @@ function loadBasicInfo() {
         aElSalvador.addEventListener(eClick, function() {
             if (!document.getElementById('iframeElSalvador')) {
                 const divIframElSalvador = document.getElementById('divIframElSalvador');
-                divIframElSalvador.innerHTML += getIframe('El Salvador Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+                divIframElSalvador.innerHTML += getIframe('SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
                 iFrameHResize('iframeElSalvador');
             }
@@ -246,11 +247,11 @@ function loadBasicInfo() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const menuExpander = document.getElementById('menuExpander');
+    //const menuExpander = document.getElementById('menuExpander');
     const hMenu = getHMenu();
 
     // Toggle between getHMenu() and getHMenu('close') on button click
-    menuExpander.addEventListener(eClick, function() {
+    document.getElementById('menuExpander').addEventListener(eClick, function() {
         spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });
 });
