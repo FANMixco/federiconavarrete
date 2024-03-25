@@ -10,7 +10,7 @@ async function fetchData(url) {
 window.addEventListener('DOMContentLoaded', async () => {
     try {
         const lang = new URL(window.location.href).searchParams.get("lang");
-        const data = await fetchData(`../js/i18n/${lang}/books.json`);
+        const data = await fetchData(`../js/i18n/${lang ? lang : 'en'}/books.json`);
 
         loadBooks(data.booksList);
     } catch (e) {

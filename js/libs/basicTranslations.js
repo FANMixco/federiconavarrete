@@ -239,6 +239,10 @@ function loadBasicInfo() {
             btnFullScreenPreview.setAttribute('title', genericTranslations.winning);
             btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
         });
+
+        [...document.querySelectorAll('.iLang')].forEach(element => {
+            element.src += `?lang=${uLang}`;
+        });
         return true;
     }
     catch {
