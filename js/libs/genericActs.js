@@ -61,8 +61,9 @@ function contactMeForm(e) {
         e.preventDefault();
     } catch { }
     const cMe = 'contactMe';
-    if (document.getElementById(`${cMe}Form`).innerHTML.trim().length == 0) {
-        document.getElementById(`${cMe}Form`).innerHTML += `<iframe title="contact me" id="${cMe}I" src="pages/contact${uLang.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+    const mForm = document.getElementById(`${cMe}Form`);
+    if (mForm.innerHTML.trim().length == 0) {
+        mForm.innerHTML += `<iframe title="contact me" id="${cMe}I" src="pages/contact${uLang.includes('es') ? "_es" : ""}.html" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
         iFrameHResize(`${cMe}I`);
     }
 
@@ -141,9 +142,7 @@ function getCleanTitle(alt) {
 
 function hideToolTips() {
     try {
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-
-        [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)).forEach(tooltip => {
+        [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)).forEach(tooltip => {
             tooltip.hide();
         });
     } catch { }
