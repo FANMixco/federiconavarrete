@@ -66,7 +66,7 @@ let loadTranslationsWithRetry = function(fn, callback) {
 
 function loadTranslations() {
     try {
-        document.querySelectorAll('.button.btn-close').forEach(element => {
+        document.querySelectorAll('button.btn-close').forEach(element => {
             element.setAttribute("aria-label", genericTranslations.close);
         });
 
