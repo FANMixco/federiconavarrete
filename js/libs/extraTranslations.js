@@ -804,6 +804,10 @@ if (document.readyState !== "loading") {
     document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
 }
 
+[...document.querySelectorAll('.iLang')].forEach(element => {
+    element.src += `?lang=${uLang}`;
+});
+
 /*function loadHobbies() {
     try {
         const { hobbies, isVisible } = hobbiesList;

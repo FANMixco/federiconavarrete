@@ -32,7 +32,7 @@ function onReadyPersonal() {
     spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
     
     [...document.getElementsByClassName('ignore-click')].forEach(function(element) {
-        element.addEventListener('click', x => false);
+        element.addEventListener('click', () => false);
     });
 }
 

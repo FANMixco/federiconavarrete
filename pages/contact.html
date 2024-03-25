@@ -27,7 +27,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
     <head></head>
     <body>
         <div class="cognito">
-            <script src="https://www.cognitoforms.com/f/seamless.js" data-key="hkz0rsUoNkGpGQYpoPHBzg" data-form="1"></script>
+            <script>
+                const lang = new URL(window.location.href).searchParams.get("lang");
+                document.write('<script src="https://www.cognitoforms.com/f/seamless.js" data-key="hkz0rsUoNkGpGQYpoPHBzg" data-form="' + (lang === 'es' ? '2' : '1') + '"></' + 'script>');
+            </script>
         </div>
     </body>
 </html>

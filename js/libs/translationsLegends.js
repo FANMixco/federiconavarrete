@@ -9,10 +9,9 @@ async function fetchData(url) {
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
-        const lang = (['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en';
-
+        const lang = new URL(window.location.href).searchParams.get("lang");
         const data = await fetchData(`../js/i18n/${lang}/legends.json`);
+
         loadLegends(data.legendsList);
     } catch (e) {
         console.error(e);

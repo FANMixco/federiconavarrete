@@ -135,11 +135,11 @@ function loadBasicInfo() {
         const favBookDiv = document.getElementById('favBook');
         const favPodcastDiv = document.getElementById('favPodcast');
 
-        [...document.querySelectorAll('.nav-link')].forEach(function(element) {
-            element.addEventListener(eClick, function(e) {
+        [...document.querySelectorAll('.nav-link')].forEach(element => {
+            element.addEventListener(eClick, () => {
                 isMenuTriggered = true;
                 if (extraContact == 0) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         contactMeForm();
                     }, 5000);
                 }
@@ -147,8 +147,8 @@ function loadBasicInfo() {
             });
         });
 
-        [...document.querySelectorAll('.mFix')].forEach(function(element) {
-            element.addEventListener(eClick, function(e) {
+        [...document.querySelectorAll('.mFix')].forEach(element => {
+            element.addEventListener(eClick, () => {
                 tErr1 = setTimeout(function(self) {
                     self.click();
                     clearTimeout(tErr1);
