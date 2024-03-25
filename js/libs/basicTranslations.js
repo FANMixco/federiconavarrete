@@ -27,11 +27,11 @@ fetchData(`${jsonLoc}/generics.json`)
 }).catch((e) => { console.error(e); });
 
 function addExtraIcons() {
-    [...document.getElementsByClassName('btn-preview')].forEach(function(element) {
+    document.querySelectorAll('.btn-preview').forEach(element => {
         element.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${element.innerHTML}`;
     });
   
-    [...document.getElementsByClassName('btn-book')].forEach(function(element) {
+    document.querySelectorAll('.btn-book').forEach(element => {
         element.innerHTML = `${getFinalIcon('download')}&nbsp;&nbsp;${element.innerHTML}`;
     });
 }
@@ -66,7 +66,7 @@ let loadTranslationsWithRetry = function(fn, callback) {
 
 function loadTranslations() {
     try {
-        [...document.querySelectorAll('button.btn-close')].forEach(element => {
+        document.querySelectorAll('button.btn-close').forEach(element => {
             element.setAttribute("aria-label", genericTranslations.close);
         });
 
@@ -80,7 +80,7 @@ function loadTranslations() {
             item.title = trans;
         });
 
-        [...document.querySelectorAll('.btn-preview')].forEach(function(element) {
+        document.querySelectorAll('.btn-preview').forEach(element => {
             element.addEventListener(eClick, function() {
                 currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
                 const url = `${urlB}${currentLoc}.federiconavarrete.com`;
@@ -143,7 +143,7 @@ function loadBasicInfo() {
                 }
                 extraContact++;
             });
-        });        
+        });
 
         document.querySelectorAll('.mFix').forEach(element => {
             element.addEventListener(eClick, function() {
@@ -154,7 +154,7 @@ function loadBasicInfo() {
                     hFixCMenu();
                 }, 500);
             });
-        });        
+        });
         
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
@@ -241,7 +241,7 @@ function loadBasicInfo() {
 
         document.querySelectorAll('.iLang').forEach(element => {
             element.src = `pages/${element.getAttribute('data-page')}.html?lang=${uLang}`;
-        });        
+        });
         return true;
     }
     catch {

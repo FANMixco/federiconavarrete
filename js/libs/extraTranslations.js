@@ -671,7 +671,7 @@ function getBtnShare() {
 
 function getBtnOthers(loc, cls, extra = "", id = '') {
     extra += `title="${genericTranslations.extras}" aria-label="${genericTranslations.extras}"`;
-    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon(`plus`), extra));
+    return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon('plus'), extra));
 }
 
 function getCItem(extras) {
@@ -682,7 +682,7 @@ function getCItem(extras) {
     const divs = document.querySelectorAll(".card-holder");
     const width = window.innerWidth;
 
-    divs.forEach(function(div) {
+    divs.forEach(div => {
         div.style.width = (width < 992) ? "auto" : "revert-layer";
     });
 }*/
@@ -830,7 +830,7 @@ if (document.readyState !== "loading") {
                 optHobbies.innerHTML += getListItem(getHobbyImg(elem));
             });
 
-            [...document.querySelectorAll('.ignore-click')].forEach(function(element) {
+            document.querySelectorAll('.ignore-click').forEach(function(element) {
                 element.addEventListener(eClick, function(e) {
                     e.preventDefault();
                 });
