@@ -657,14 +657,16 @@ function getBtnShare() {
     let icon = 'share';
     const isMac = /Macintosh|MacIntel|iPad|iPhone|iPod/i.test(navigator.userAgent);
     const isWindows = /Windows/i.test(navigator.userAgent);
+    const share = genericTranslations.share ? genericTranslations.share : '';
 
     icon = isMac ? `ios_${icon}` : isWindows ? `windows_${icon}` : icon;
 
-    return getListItem(getImage('', '#', icon, false, true, "btn-footer", false, "iconFooter", `id="btnShare" title="${genericTranslations.share}" alt="${genericTranslations.share}"`));
+    return getListItem(getImage('', '#', icon, false, true, "btn-footer", false, "iconFooter", `id="btnShare" title="${share}" alt="${share}"`));
 }
 
 function getBtnOthers(loc, cls, extra = "", id = '') {
-    extra += `title="${genericTranslations.extras}" aria-label="${genericTranslations.extras}"`;
+    const ext = genericTranslations.extras ? genericTranslations.extras : '';
+    extra += `title="${ext}" aria-label="${ext}"`;
     return getListItem(getBtnModal(loc, `btn btn-outline-light btn-social ${tCenter} rounded-circle ${cls}`, id, getFinalIcon('plus'), extra));
 }
 
