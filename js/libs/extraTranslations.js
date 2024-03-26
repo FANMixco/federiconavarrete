@@ -436,14 +436,13 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         //if (isVisible) {
         const socialMediaBasic = document.getElementById('socialMediaBasic');
         const socialMediaBasicExtended = document.getElementById('social-medias-extended-list');
+        const itemsArray = socialMedia.map(item => getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter")));
 
-        socialMedia.forEach(item => {
-            socialMediaBasic.innerHTML += getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
-            socialMediaBasicExtended.innerHTML += getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter"));
-        });
+        socialMediaBasic.innerHTML = itemsArray.join('');
+        socialMediaBasicExtended.innerHTML = itemsArray.join('');
         socialMediaBasicExtended.innerHTML += getBtnShare();
 
-        document.getElementById('btnShare').addEventListener(eClick, (event) => {
+        document.getElementById('btnShare').addEventListener(eClick, event => {
             event.preventDefault();
 
             navigator.share({
@@ -462,7 +461,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         //if (socialOthersList.isVisible) {
         
         //(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '')
-        document.getElementById("socialMediaBasic").innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
+        socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
         const socialMediaOthers = document.getElementById('socialMediaOthers');
         socialOthersList.socialMedia.forEach(elem => {
