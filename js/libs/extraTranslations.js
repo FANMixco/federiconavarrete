@@ -440,6 +440,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
         socialMediaBasic.innerHTML = itemsArray.join('');
         socialMediaBasicExtended.innerHTML = itemsArray.join('');
+
         setTimeout(() => {
             socialMediaBasicExtended.innerHTML += getBtnShare();
 
@@ -458,12 +459,6 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
                     console.error(error);
                 });
             });
-        }, 50);
-
-        //if (socialOthersList.isVisible) {
-        
-        //(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '')
-        setTimeout(() => {
 
             socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
