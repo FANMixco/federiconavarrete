@@ -83,6 +83,7 @@ function screenResize() {
 }
 
 // Call the function when the page loads
+window.addEventListener('resize', screenResize);
 screenResize();
 
 if (smallScreenMobileOS) {

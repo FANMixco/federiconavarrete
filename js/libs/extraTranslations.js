@@ -329,8 +329,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
 
     if (smallScreen) {
         items = presentations.map((item, index) => {
-            let vTmp = getUTubeContainer(item, '');
-            vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
+            const vTmp = getUTubeContainer(item, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             return `<div class="carousel-item ${index === 0 ? 'active' : ''}">${vTmp}</div>`;
         }).join('');
         items = getVideoCarousel(items, divCar);
@@ -373,8 +372,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     
     if (smallScreen) {
         items = presentations.map((item, index) => {
-            let vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '');
-            vTmp = vTmp.replaceAll('class="col-sm"', `class="carousel-video-inner"`);
+            const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             return `<div class="carousel-item ${(index == 0) ? 'active' : ''}">${vTmp}</div>`;
         }).join('');
         items = getVideoCarousel(items, divCar);
@@ -495,7 +493,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         const divOthersContainerDiv = document.getElementById(divOthersContainer);
 
         skills.forEach(item => {
-            let items = `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`;
+            const items = `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`;
             divTmp.insertAdjacentHTML('afterbegin', items);
         });
 
@@ -503,7 +501,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         document.getElementById(btnMore).setAttribute("aria-controls", arias);
 
         skillsOthers.forEach((item, index) => {
-            let items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
+            const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
             divOthersContainerDiv.insertAdjacentHTML('afterbegin', items);
         });
     }
@@ -522,7 +520,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
 
 function addIFrameModal(opt) {
     for (let serv = 0; serv < totalServices; serv++) {
-        let cService = document.getElementById(`${opt}${serv}`);
+        const cService = document.getElementById(`${opt}${serv}`);
         cService.addEventListener(eClick, function(e) {
             e.preventDefault();
             document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
@@ -531,7 +529,7 @@ function addIFrameModal(opt) {
             
             hideToolTips();
 
-            let services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
+            const services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
             services.show();
         });
     }
