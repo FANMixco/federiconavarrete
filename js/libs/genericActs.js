@@ -34,6 +34,7 @@ const deviceType = () => {
 const equalScreen = window.innerWidth == window.innerHeight;
 const actualDev = deviceType();
 const smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]);
+const smallScreen = smallScreenMobileOS || equalScreen;
 
 let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
 
