@@ -91,7 +91,7 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     const noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
     const img = isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
-    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `${extras} title="${title}" ${targetBlank} data-bs-toggle="tooltip" ${noreferrer}`);
+    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `${extras} title="${title}" ${targetBlank} ${noreferrer}`);
 }
 
 function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
@@ -141,23 +141,6 @@ function getFinalIcon(id, fontSize = '', extraCls = '') {
 function getCleanTitle(alt) {
     tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
     return alt.replace(tagRegExp, '');
-}
-
-function toggleToolTips(init) {
-    try {
-        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipTriggerEl => {
-            const tooltip = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
-            if (init) {
-                if (!tooltip) {
-                    new bootstrap.Tooltip(tooltipTriggerEl);
-                }
-            } else {
-                tooltip.hide();
-            }
-        });
-    } catch (error) {
-        console.error(error);
-    }
 }
 
 async function fetchData(url) {

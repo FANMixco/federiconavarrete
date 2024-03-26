@@ -474,8 +474,6 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
             aroundWeb.classList.add(nVis);
         }*/
 
-        toggleToolTips(true);
-
         if (smallScreenMobileOS) {
             document.querySelectorAll('.uTubeLink').forEach(item => {
                 item.href = item.href.replace('www', 'm');
@@ -524,8 +522,6 @@ function addIFrameModal(opt) {
             document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
 
             iFrameHResize('serviceFormI');
-            
-            //hideToolTips();
 
             const services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
             services.show();

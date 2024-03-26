@@ -701,6 +701,17 @@ a.text-material-link-dark:active {
 	font-size: 34px;
 }
 
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .nav-item {
+        display: flex!important;
+        align-items: center!important;
+    }
+
+	.dropdown-menu {
+		top: 5rem;
+	}
+}
+
 .closeModal {
 	margin-left: -1px !important;
 }
