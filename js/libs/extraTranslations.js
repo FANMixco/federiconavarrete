@@ -440,34 +440,39 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
         socialMediaBasic.innerHTML = itemsArray.join('');
         socialMediaBasicExtended.innerHTML = itemsArray.join('');
-        socialMediaBasicExtended.innerHTML += getBtnShare();
+        setTimeout(() => {
+            socialMediaBasicExtended.innerHTML += getBtnShare();
 
-        document.getElementById('btnShare').addEventListener(eClick, event => {
-            event.preventDefault();
-
-            navigator.share({
-                title: genericTranslations.knowMoreTitle,
-                text: genericTranslations.knowMoreBody,
-                url: window.location.href
-            })
-            .then(() => {
-                console.log('Shared!');
-            })
-            .catch((error) => {
-                console.error(error);
+            document.getElementById('btnShare').addEventListener(eClick, event => {
+                event.preventDefault();
+    
+                navigator.share({
+                    title: genericTranslations.knowMoreTitle,
+                    text: genericTranslations.knowMoreBody,
+                    url: window.location.href
+                })
+                .then(() => {
+                    console.log('Shared!');
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
             });
-        });
+        }, 50);
 
         //if (socialOthersList.isVisible) {
         
         //(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '')
-        socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
+        setTimeout(() => {
 
-        const socialMediaOthers = document.getElementById('socialMediaOthers');
-        socialOthersList.socialMedia.forEach(elem => {
-            socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
-        });
-        //}
+            socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
+
+            const socialMediaOthers = document.getElementById('socialMediaOthers');
+            socialOthersList.socialMedia.forEach(elem => {
+                socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
+            });
+        }, 50);
+    //}
         /*}
         else {
             const aroundWeb = document.getElementById('aroundWeb');
