@@ -151,9 +151,3 @@ async function fetchData(url) {
         console.error(e);
     }
 }
-
-window.addEventListener("load", function() {
-    if (window.matchMedia('(hover: hover)').matches) {
-        toggleToolTips(false);
-    }
-});
