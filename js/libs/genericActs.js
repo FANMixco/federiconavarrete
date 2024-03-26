@@ -1,7 +1,7 @@
-let tagRegExp;
-let extraContact = 0;
-
 const urlB = 'https://';
+const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
+const validLang = ['en', 'es', 'zh'];
+const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`;
 const lazyLoading = 'loading="lazy"';
 const eClick = 'click';
 const nVis = 'd-none';
@@ -35,11 +35,10 @@ const equalScreen = window.innerWidth == window.innerHeight;
 const actualDev = deviceType();
 const smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]);
 const smallScreen = smallScreenMobileOS || equalScreen;
-const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
-const validLang = ['en', 'es', 'zh'];
-const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`;
 
 let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
+let tagRegExp;
+let extraContact = 0;
 
 function hFixCMenu() {
     setTimeout(function() {
