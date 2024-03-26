@@ -687,11 +687,11 @@ function getCItem(extras) {
 function rotatedModal() {
     //Clean old changes
     if (smallScreen) {
-        document.getElementsByClassName("mFullScreen").forEach(modal => {
+        document.querySelectorAll(".mFullScreen").forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
 
-        document.getElementsByClassName("mFullScreenH").forEach(modal => {
+        document.querySelectorAll(".mFullScreenH").forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
     }
@@ -704,14 +704,14 @@ function rotatedModal() {
 
 function changeModalType() {
     if (smallScreen) {
-        document.getElementsByClassName("mFullScreen").forEach(modal => {
+        document.querySelectorAll(".mFullScreen").forEach(modal => {
             modal.classList.remove("modal-xl");
             modal.classList.add("modal-fullscreen");
         });
 
         let landscape = window.matchMedia("(orientation: landscape)");
         if (landscape.matches || equalScreen || actualDev === devs[3]) {
-            document.getElementsByClassName("mFullScreenH").forEach(modal => {
+            document.querySelectorAll(".mFullScreenH").forEach(modal => {
                 modal.classList.remove("modal-xl");
                 modal.classList.add("modal-fullscreen");
             });
