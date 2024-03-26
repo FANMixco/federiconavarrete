@@ -27,12 +27,12 @@ fetchData(`${jsonLoc}/generics.json`)
 }).catch((e) => { console.error(e); });
 
 function addExtraIcons() {
-    document.querySelectorAll('.btn-preview').forEach(element => {
-        element.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${element.innerHTML}`;
+    document.querySelectorAll('.btn-preview').forEach(item => {
+        item.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${item.innerHTML}`;
     });
   
-    document.querySelectorAll('.btn-book').forEach(element => {
-        element.innerHTML = `${getFinalIcon('download')}&nbsp;&nbsp;${element.innerHTML}`;
+    document.querySelectorAll('.btn-book').forEach(item => {
+        item.innerHTML = `${getFinalIcon('download')}&nbsp;&nbsp;${item.innerHTML}`;
     });
 }
 
@@ -66,8 +66,8 @@ let loadTranslationsWithRetry = function(fn, callback) {
 
 function loadTranslations() {
     try {
-        document.querySelectorAll('button.btn-close').forEach(element => {
-            element.setAttribute("aria-label", genericTranslations.close);
+        document.querySelectorAll('button.btn-close').forEach(item => {
+            item.setAttribute("aria-label", genericTranslations.close);
         });
 
         document.querySelectorAll('[data-translation]').forEach(item => {
@@ -80,9 +80,9 @@ function loadTranslations() {
             item.title = trans;
         });
 
-        document.querySelectorAll('.btn-preview').forEach(element => {
-            element.addEventListener(eClick, function() {
-                currentLoc = (currentLoc != element.dataset.action) ? element.dataset.action : currentLoc;
+        document.querySelectorAll('.btn-preview').forEach(item => {
+            item.addEventListener(eClick, () => {
+                currentLoc = (currentLoc != item.dataset.action) ? item.dataset.action : currentLoc;
                 const url = `${urlB}${currentLoc}.federiconavarrete.com`;
                 const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
 
@@ -103,7 +103,7 @@ function loadTranslations() {
 
                 const gPreview = document.getElementById('gPreview');
                 const hFrameGeneric = 450;
-                let hPreviewHeight = `${hFrameGeneric}px`; 
+                let hPreviewHeight = `${hFrameGeneric}px`;
                 if (smallScreen) {
                     const portrait = window.matchMedia("(orientation: portrait)");
                     const height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
@@ -125,9 +125,8 @@ function loadTranslations() {
 
 function loadBasicInfo() {
     try {
-        const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, telephone, email, skype, company } = basicInfo;
+        const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, company } = basicInfo;
 
-        //const linkName = document.getElementById('linkName');
         const hName = document.getElementById('hName');
         const hHeadline = document.getElementById('hHeadline');
         const hIntro = document.getElementById('hIntro');
@@ -135,8 +134,8 @@ function loadBasicInfo() {
         const favBookDiv = document.getElementById('favBook');
         const favPodcastDiv = document.getElementById('favPodcast');
 
-        document.querySelectorAll('.nav-link').forEach(element => {
-            element.addEventListener(eClick, () => {
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.addEventListener(eClick, () => {
                 isMenuTriggered = true;
                 if (extraContact === 0) {
                     setTimeout(contactMeForm, 5000);
@@ -145,8 +144,8 @@ function loadBasicInfo() {
             });
         });
 
-        document.querySelectorAll('.mFix').forEach(element => {
-            element.addEventListener(eClick, function() {
+        document.querySelectorAll('.mFix').forEach(item => {
+            item.addEventListener(eClick, () => {
                 const self = this;
                 tErr1 = setTimeout(() => {
                     self.click();
@@ -198,27 +197,20 @@ function loadBasicInfo() {
         listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
         //}
 
-        const aElSalvador = document.getElementById('aElSalvador');
-
-        aElSalvador.addEventListener(eClick, function() {
-            if (!document.getElementById('iframeElSalvador')) {
-                const divIframElSalvador = document.getElementById('divIframElSalvador');
-                divIframElSalvador.innerHTML += getIframe('SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+        document.getElementById('aElSalvador').addEventListener(eClick, () => {
+            const divIframElSalvador = document.getElementById('divIframElSalvador');
+            if (!divIframElSalvador) {
+                divIframElSalvador.innerHTML = getIframe('SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
                 iFrameHResize('iframeElSalvador');
             }
         }, false);
 
-        const contactForms = document.querySelectorAll("#linkContactMe, #linkContactMeAbout, #contactMeFloat");
-
-        contactForms.forEach(element => {
-            element.addEventListener(eClick, contactMeForm);
+        document.querySelectorAll("#linkContactMe, #linkContactMeAbout, #contactMeFloat").forEach(item => {
+            item.addEventListener(eClick, contactMeForm);
         });
 
-        const linkPreview = document.getElementById('youTubePreview');
-
-        linkPreview.addEventListener(eClick, () => {
-            const iframeGeneric = document.getElementById('iframeGeneric');
+        document.getElementById('youTubePreview').addEventListener(eClick, () => {
             const gTitle = document.getElementById('gTitle');
             gTitle.innerHTML = genericTranslations.winning;
             gTitle.classList.remove(nVis);
@@ -229,7 +221,7 @@ function loadBasicInfo() {
             const modalPreview = document.getElementById('modal-preview');
             modalPreview.classList.add('modal-xl');
 
-            iframeGeneric.innerHTML = getIframe('Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+            document.getElementById('iframeGeneric').innerHTML = getIframe('Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
             iFrameHResize('yIframeP', 0.7);
 
@@ -239,8 +231,8 @@ function loadBasicInfo() {
             btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
         });
 
-        document.querySelectorAll('.iLang').forEach(element => {
-            element.src = `pages/${element.getAttribute('data-page')}.html?lang=${uLang}`;
+        document.querySelectorAll('.iLang').forEach(item => {
+            item.src = `pages/${item.getAttribute('data-page')}.html?lang=${uLang}`;
         });
         return true;
     }
@@ -254,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const hMenu = getHMenu();
 
     // Toggle between getHMenu() and getHMenu('close') on button click
-    document.getElementById('menuExpander').addEventListener(eClick, function() {
+    document.getElementById('menuExpander').addEventListener(eClick, () => {
         spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });
 });

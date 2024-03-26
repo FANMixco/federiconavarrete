@@ -50,10 +50,8 @@ function onReadyFreelancer() {
                 }
                 last_scroll_top = scroll_top;
             }); 
-            // window.addEventListener
         }
-        // if
-    }    // ...your code here...
+    }
 
     document.addEventListener("click", closeMenu);
 }
