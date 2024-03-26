@@ -443,9 +443,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         });
         socialMediaBasicExtended.innerHTML += getBtnShare();
 
-        const btnShare = document.getElementById('btnShare');
-
-        btnShare.addEventListener(eClick, (event) => {
+        document.getElementById('btnShare').addEventListener(eClick, (event) => {
             event.preventDefault();
 
             navigator.share({
@@ -462,10 +460,9 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         });
 
         //if (socialOthersList.isVisible) {
-        const sBasic = document.getElementById("socialMediaBasic");
         
         //(loc, cls, extra = "", imgExtra = "", id = '', clsImg = '')
-        sBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
+        document.getElementById("socialMediaBasic").innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
         const socialMediaOthers = document.getElementById('socialMediaOthers');
         socialOthersList.socialMedia.forEach(elem => {
@@ -478,9 +475,11 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
             aroundWeb.classList.add(nVis);
         }*/
 
+        toggleToolTips(true);
+
         if (smallScreenMobileOS) {
-            document.querySelectorAll('.uTubeLink').forEach(element => {
-                element.href = element.href.replace('www', 'm');
+            document.querySelectorAll('.uTubeLink').forEach(item => {
+                item.href = item.href.replace('www', 'm');
             });            
         }
     }
@@ -527,7 +526,7 @@ function addIFrameModal(opt) {
 
             iFrameHResize('serviceFormI');
             
-            hideToolTips();
+            //hideToolTips();
 
             const services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
             services.show();

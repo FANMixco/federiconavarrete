@@ -140,12 +140,21 @@ function getCleanTitle(alt) {
     return alt.replace(tagRegExp, '');
 }
 
-function hideToolTips() {
+function toggleToolTips(init) {
     try {
         document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(tooltipTriggerEl => {
-            new bootstrap.Tooltip(tooltipTriggerEl).hide();
-        });        
-    } catch { }
+            const tooltip = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
+            if (init) {
+                if (!tooltip) {
+                    new bootstrap.Tooltip(tooltipTriggerEl);
+                }
+            } else {
+                tooltip.hide();
+            }
+        });
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 async function fetchData(url) {
@@ -159,6 +168,6 @@ async function fetchData(url) {
 
 window.addEventListener("load", function() {
     if (window.matchMedia('(hover: hover)').matches) {
-        hideToolTips();
+        toggleToolTips(false);
     }
 });
