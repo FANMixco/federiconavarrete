@@ -1,14 +1,14 @@
-const urlB = 'https://';
-const uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0];
-const validLang = ['en', 'es', 'zh'];
-const jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`;
-const lazyLoading = 'loading="lazy"';
-const eClick = 'click';
-const nVis = 'd-none';
-const tCenter = "text-center";
-const marginTop = 0;
-const heightIFrame = 600;
-const devs = ["Smartphone", "Tablet", "Desktop", "Watch"];
+const urlB = 'https://',
+      uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
+      validLang = ['en', 'es', 'zh'],
+      jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
+      lazyLoading = 'loading="lazy"',
+      eClick = 'click',
+      nVis = 'd-none',
+      tCenter = "text-center",
+      marginTop = 0,
+      heightIFrame = 600,
+      devs = ["Smartphone", "Tablet", "Desktop", "Watch"];
 
 const deviceType = () => {
     const ua = navigator.userAgent.toLowerCase();
@@ -31,14 +31,14 @@ const deviceType = () => {
     return devs[2];
 };
 
-const equalScreen = window.innerWidth == window.innerHeight;
-const actualDev = deviceType();
-const smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]);
-const smallScreen = smallScreenMobileOS || equalScreen;
+const equalScreen = window.innerWidth == window.innerHeight,
+      actualDev = deviceType(),
+      smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]),
+      smallScreen = smallScreenMobileOS || equalScreen;
 
-let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
-let tagRegExp;
-let extraContact = 0;
+let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth,
+    tagRegExp,
+    extraContact = 0;
 
 function hFixCMenu() {
     setTimeout(function() {
@@ -71,8 +71,8 @@ function contactMeForm(e) {
     try {
         e.preventDefault();
     } catch { }
-    const cMe = 'contactMe';
-    const mForm = document.getElementById(`${cMe}Form`);
+    const cMe = 'contactMe',
+          mForm = document.getElementById(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
         mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
         iFrameHResize(`${cMe}I`);
@@ -84,8 +84,8 @@ function contactMeForm(e) {
 }
 
 function iFrameHResize(id, percentage = 0.7) {
-    const landscape = window.matchMedia("(orientation: landscape)");
-    const height = equalScreen ? document.documentElement.clientHeight * 0.7
+    const landscape = window.matchMedia("(orientation: landscape)"),
+          height = equalScreen ? document.documentElement.clientHeight * 0.7
                  : landscape.matches ? document.documentElement.clientHeight * percentage
                  : devicePortraitAndLong ? heightIFrame * 1.2
                  : heightIFrame * 0.8;
@@ -110,7 +110,7 @@ function getFLink(cls, link, body, extras = '') {
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
     const lStart = hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : '';
 
-    return `${lStart}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body text-center"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
+    return `${lStart}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
 }
 
 function getActionBtn(link, icon, title) {
