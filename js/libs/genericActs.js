@@ -46,6 +46,10 @@ function hFixCMenu() {
     }, 500);
 }
 
+function dIframe(id, cls) {
+    return `id="${id}" class="${cls}" style='background: url("img/icons/loading.gif") center/7em no-repeat'`
+}
+
 function closeMenu() {
     if (document.getElementById("navbarResponsive").classList.contains("show")) {
         document.getElementById("menuExpander").click();

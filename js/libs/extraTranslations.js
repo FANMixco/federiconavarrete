@@ -244,7 +244,7 @@ function loadAwards(awardList) {
 
                     const tmpLink = item.link;
 
-                    const lPreview = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, `class="previewerIframe" id="previewerIframeI" style='background: url("img/icons/loading.gif") center/7em no-repeat'`) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
+                    const lPreview = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
                     const modalPreview = document.getElementById('modal-preview');
 
