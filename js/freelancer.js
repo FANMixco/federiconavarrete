@@ -57,7 +57,7 @@ function onReadyFreelancer() {
 }
 
 // Navbar shrink function
-let navbarShrink = function () {
+let navbarShrink = () => {
     const navbarCollapsible = document.body.querySelector('#mainNav');
     let scroll = window.scrollY;
 
@@ -65,9 +65,9 @@ let navbarShrink = function () {
         return;
     }
     if (scroll === 0) {
-        navbarCollapsible.classList.remove('navbar-shrink')
+        navbarCollapsible.classList.remove('navbar-shrink');
     } else {
-        navbarCollapsible.classList.add('navbar-shrink')
+        navbarCollapsible.classList.add('navbar-shrink');
     }
 
     extraEvents(scroll);

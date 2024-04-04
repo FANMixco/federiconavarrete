@@ -6,17 +6,17 @@ fetchData(`${jsonLoc}/generics.json`)
 .then(data => {
     genericTranslations = data;
 
-    loadTranslationsWithRetry(loadTranslations, function(err) {
+    loadTranslationsWithRetry(loadTranslations, (err) => {
         if (!err) {
             // handle result
             fetchData(`${jsonLoc}/basicInfo.json`).then(data => {
                 basicInfo = data;
-                loadTranslationsWithRetry(loadBasicInfo, function() { });
+                loadTranslationsWithRetry(loadBasicInfo, () => { });
                 addExtraIcons();
             })
-            .catch((e) => { 
-                console.error(e);
-            });
+                .catch((e) => {
+                    console.error(e);
+                });
         }
     });
 }).catch((e) => { console.error(e); });
@@ -194,8 +194,7 @@ function loadBasicInfo() {
 
         document.getElementById('aElSalvador').addEventListener(eClick, () => {
             if (!document.getElementById('iframeElSalvador')) {
-                const divIframElSalvador = document.getElementById('divIframElSalvador');
-                divIframElSalvador.innerHTML += getIframe('SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+                loadIframe('divIframElSalvador', 'SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, `id="iframeElSalvador" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
 
                 iFrameHResize('iframeElSalvador');
             }
@@ -216,7 +215,7 @@ function loadBasicInfo() {
             const modalPreview = document.getElementById('modal-preview');
             modalPreview.classList.add('modal-xl');
 
-            document.getElementById('iframeGeneric').innerHTML = getIframe('Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`);
+            loadIframe('iframeGeneric', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, `id="yIframeP" class="previewerIframe" style='background: url("img/icons/loading.gif") center/7em no-repeat'`)
 
             iFrameHResize('yIframeP', 0.7);
 
@@ -236,7 +235,11 @@ function loadBasicInfo() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function loadIframe(iframe, title, url, extras) {
+    document.getElementById(iframe).innerHTML = getIframe(title, url, extras);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     //const menuExpander = document.getElementById('menuExpander');
     const hMenu = getHMenu();
 

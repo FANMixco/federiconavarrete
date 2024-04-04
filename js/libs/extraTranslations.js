@@ -84,7 +84,7 @@ function loadNewsArticles(newsArticlesList) {
     loadImgSection(articles, 'divMMArticles', 'newsArticles', imgLocArticles, '');
 }
 
-setTimeout(function () {
+setTimeout(() => {
     addIFrameModal('service');
     addIFrameModal('lSer');
 }, 1000);
@@ -234,7 +234,6 @@ function loadAwards(awardList) {
                 const linkPreview = document.getElementById(`linkPreview${item.id}`);
 
                 linkPreview.addEventListener(eClick, () => {
-                    const iframeGeneric = document.getElementById('iframeGeneric');
                     const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
                     const gTitle = document.getElementById('gTitle');
 
@@ -259,7 +258,7 @@ function loadAwards(awardList) {
                     btnFullScreenPreview.setAttribute('title', item.title);
                     btnFullScreenPreview.setAttribute('aria-label', item.title);
                 
-                    iframeGeneric.innerHTML = lPreview;
+                    document.getElementById('iframeGeneric').innerHTML = lPreview;
 
                     iFrameHResize('previewerIframeI');
                 });
@@ -746,7 +745,7 @@ function handleNavbarVisibility() {
     else {
         // Navbar is visible, add the dynamicNavItem
         if (dynamicNavItem.length === 0) {
-            setTimeout(function () {
+            setTimeout(() => {
                 const ul = document.getElementById('nElems');
                 const li = document.createElement('li');
                 li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
@@ -776,7 +775,7 @@ function debounce(func, wait) {
     return function () {
         const context = this;
         const args = arguments;
-        const later = function () {
+        const later = () => {
             timeout = null;
             func.apply(context, args);
         };
