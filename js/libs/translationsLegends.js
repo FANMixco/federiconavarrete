@@ -20,9 +20,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     $('#legendsCarousel').on('slide.bs.carousel', function (e) {
         const itemsPerSlide = 3;
         const cItem = '.carousel-item';
-        let $e = $(e.relatedTarget);
+        const $e = $(e.relatedTarget);
         let idx = $e.index();
-        let totalItems = $(cItem).length;
+        const totalItems = $(cItem).length;
         
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);

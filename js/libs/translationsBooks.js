@@ -41,9 +41,9 @@ function loadBooks(booksList) {
         */
         const itemsPerSlide = 7;
         const cItem = '.carousel-item';
-        let $e = $(e.relatedTarget);
+        const $e = $(e.relatedTarget);
         let idx = $e.index();
-        let totalItems = $(cItem).length;
+        const totalItems = $(cItem).length;
         
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);

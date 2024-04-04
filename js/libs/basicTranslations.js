@@ -211,7 +211,7 @@ function loadBasicInfo() {
             const modalPreview = document.getElementById('modal-preview');
             modalPreview.classList.add('modal-xl');
 
-            loadIframe('iframeGeneric', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'));
+            loadIframe('iframeGeneric', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'), true);
 
             iFrameHResize('yIframeP', 0.7);
 
@@ -229,10 +229,6 @@ function loadBasicInfo() {
     catch {
         return false;
     }
-}
-
-function loadIframe(iframe, title, url, extras) {
-    document.getElementById(iframe).innerHTML = getIframe(title, url, extras);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

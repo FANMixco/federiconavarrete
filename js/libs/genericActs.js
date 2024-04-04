@@ -46,6 +46,10 @@ function hFixCMenu() {
     }, 500);
 }
 
+function loadIframe(iframe, title, url, extras, fScreen = false) {
+    document.getElementById(iframe).innerHTML = getIframe(title, url, extras, fScreen);
+}
+
 function dIframe(id, cls) {
     return `id="${id}" class="${cls}" style='background: url("img/icons/loading.gif") center/7em no-repeat'`
 }
@@ -95,8 +99,8 @@ function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal
     return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${isIgnoredClick ? "ignore-click" : ""} ${classExternal}`, link, img, `${extras} title="${title}" ${isTargetBlank ? `target="_blank"` : ""} ${link !== "#" ? 'rel="noreferrer"' : ""}`);
 }
 
-function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
-    return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen}></iframe>`;
+function getIframe(title, src, extras, fullscreen, lazy = lazyLoading) {
+    return `<iframe title="${title}" src="${src}" ${extras} ${lazy} ${fullscreen ? 'allowfullscreen' : ''}></iframe>`;
 }
 
 function getFLink(cls, link, body, extras = '') {
