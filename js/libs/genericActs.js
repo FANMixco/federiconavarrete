@@ -74,7 +74,7 @@ function contactMeForm(e) {
     const cMe = 'contactMe';
     const mForm = document.getElementById(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
-        mForm.innerHTML = `<iframe title="contact me" id="${cMe}I" src="pages/contact.html?lang=${uLang}" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"></iframe>`;
+        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
         iFrameHResize(`${cMe}I`);
     }
 
