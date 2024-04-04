@@ -90,12 +90,9 @@ function iFrameHResize(id, percentage = 0.7) {
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
-    const targetBlank = isTargetBlank ? `target="_blank"` : "";
-    const ignoreClick = isIgnoredClick ? "ignore-click" : "";
-    const noreferrer = link !== "#" ? 'rel="noreferrer"' : "";
     const img = isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
 
-    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${ignoreClick} ${classExternal}`, link, img, `${extras} title="${title}" ${targetBlank} ${noreferrer}`);
+    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${isIgnoredClick ? "ignore-click" : ""} ${classExternal}`, link, img, `${extras} title="${title}" ${isTargetBlank ? `target="_blank"` : ""} ${link !== "#" ? 'rel="noreferrer"' : ""}`);
 }
 
 function getIframe(title, src, extras, fullscreen = 'allowfullscreen', lazy = lazyLoading) {
@@ -107,12 +104,9 @@ function getFLink(cls, link, body, extras = '') {
 }
 
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
-    const idC = idL != '' ? `id='${idL}'` : '';
-    const lStart = hasLink ? `<a href="${link}" ${idC} class='card-link ${txtColor}'>` : '';
-    const lEnd = hasLink ? '</a>' : '';
-    const style = (!extras) ? '' : `style="${extras}"`;
+    const lStart = hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : '';
 
-    return `${lStart}<div class="card card-ser ${cOption}" ${style}><div class="card-body text-center"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${lEnd}`;
+    return `${lStart}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body text-center"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
 }
 
 function getActionBtn(link, icon, title) {
@@ -132,9 +126,7 @@ function getHMenu(icon = 'bars-solid') {
 }
 
 function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
-    const idT = (id != '') ? `id="${id}"` : '';
-    const clsT = (imgCls != '') ? `class="${imgCls}"` : '';
-    return `<img ${idT} ${clsT} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
+    return `<img ${(id != '') ? `id="${id}"` : ''} ${(imgCls != '') ? `class="${imgCls}"` : ''} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
 }
 
 function getFinalIcon(id, fontSize = '', extraCls = '') {
