@@ -159,8 +159,8 @@ function loadServices(serviceList) {
             // Create card title
             const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
 
-            // Append to items
-            items += (smallScreen) ? `<div class="carousel-item ${(totalServices === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+            // Append to items            
+            items += getSCItem(totalServices, title);
 
             totalServices++;
         });
@@ -191,6 +191,10 @@ function getCarousel(items, id, arrowsColor = 'text-muted', isVideo = false) {
     return `${!isVideo ? `<div class="container-fluid" id="div${id}">` : ''}<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22 ${isVideo ? 'carousel-control-prev-video' : 'carousel-control-prev'}" type="button" data-bs-target="#${id}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22 ${isVideo ? 'carousel-control-next-video' : 'carousel-control-next'}" type="button" data-bs-target="#${id}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div>${!!isVideo ? '</div>' : ''}`;
 }
 
+function getSCItem(index, title) {
+    return (smallScreen) ? `${getCItem(`${(index === 0) ? "active" : ""}"`)}<div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+}
+
 function loadAwards(awardList) {
     try {
         const { awards } = awardList;
@@ -198,7 +202,7 @@ function loadAwards(awardList) {
         //if (isVisible) {
         const awardsList = gId('awardsList');
         let availableLinks = [];
-        //let i = 0;
+
         let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
         awards.flat().forEach((elem, index) => {
             const tmpLink = `${urlB}${elem.link}`;
@@ -211,8 +215,7 @@ function loadAwards(awardList) {
                 type: elem.type
             });
         
-            items += (smallScreen) ? `<div class="carousel-item ${(index === 0) ? "active" : ""}"><div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
-            //i++;
+            items += getSCItem(index, title);
         });
 
         items = (smallScreen) ? items : `${items}</div>`;
@@ -325,7 +328,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
     if (smallScreen) {
         items = presentations.map((item, index) => {
             const vTmp = getUTubeContainer(item, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            return `<div class="carousel-item ${index === 0 ? 'active' : ''}">${vTmp}</div>`;
+            return `${getCItem(`${(index === 0) ? "active" : ""}"`)}${vTmp}</div>`;
         }).join('');
         items = getCarousel(items, divCar, 'text-muted', true);
         divVideo.innerHTML = items;
@@ -368,7 +371,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
     if (smallScreen) {
         items = presentations.map((item, index) => {
             const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
-            return `<div class="carousel-item ${(index == 0) ? 'active' : ''}">${vTmp}</div>`;
+            return `${getCItem(`${(index === 0) ? "active" : ""}"`)}${vTmp}</div>`;
         }).join('');
         items = getCarousel(items, divCar, 'text-muted', true);
         divPicture.innerHTML = items;
