@@ -22,11 +22,11 @@ fetchData(`${jsonLoc}/generics.json`)
 }).catch((e) => { console.error(e); });
 
 function addExtraIcons() {
-    document.querySelectorAll('.btn-preview').forEach(item => {
+    gAll('.btn-preview').forEach(item => {
         item.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${item.innerHTML}`;
     });
   
-    document.querySelectorAll('.btn-book').forEach(item => {
+    gAll('.btn-book').forEach(item => {
         item.innerHTML = `${getFinalIcon('download')}&nbsp;&nbsp;${item.innerHTML}`;
     });
 }
@@ -61,38 +61,38 @@ let loadTranslationsWithRetry = function(fn, callback) {
 
 function loadTranslations() {
     try {
-        document.querySelectorAll('button.btn-close').forEach(item => {
+        gAll('button.btn-close').forEach(item => {
             item.setAttribute("aria-label", genericTranslations.close);
         });
 
-        document.querySelectorAll('[data-translation]').forEach(item => {
+        gAll('[data-translation]').forEach(item => {
             item.innerHTML = genericTranslations[item.dataset.translation];
         });
         
-        document.querySelectorAll('[data-title-translation]').forEach(item => {
+        gAll('[data-title-translation]').forEach(item => {
             const trans = genericTranslations[item.dataset.titleTranslation];
             item.setAttribute("aria-label", trans);
             item.title = trans;
         });
 
-        document.querySelectorAll('.btn-preview').forEach(item => {
+        gAll('.btn-preview').forEach(item => {
             item.addEventListener(eClick, () => {
                 currentLoc = (currentLoc != item.dataset.action) ? item.dataset.action : currentLoc;
                 const url = `${urlB}${currentLoc}.federiconavarrete.com`;
                 const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
 
-                const title = document.getElementById('zoomTitle');
+                const title = gId('zoomTitle');
                 title.innerHTML = pTitle;
 
                 loadIframe("divPreview", pTitle, `${url}?isIframe=true`, 'id="gPreview" allowfullscreen');
 
-                const btnFullScreen = document.getElementById('btn-full-screen');
+                const btnFullScreen = gId('btn-full-screen');
 
                 btnFullScreen.href = url;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
-                const gPreview = document.getElementById('gPreview');
+                const gPreview = gId('gPreview');
                 const hFrameGeneric = 450;
                 let hPreviewHeight = `${hFrameGeneric}px`;
                 if (smallScreen) {
@@ -118,14 +118,14 @@ function loadBasicInfo() {
     try {
         const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, company } = basicInfo;
 
-        const hName = document.getElementById('hName');
-        const hHeadline = document.getElementById('hHeadline');
-        const hIntro = document.getElementById('hIntro');
-        const divAbout = document.getElementById('divAbout');
-        const favBookDiv = document.getElementById('favBook');
-        const favPodcastDiv = document.getElementById('favPodcast');
+        const hName = gId('hName');
+        const hHeadline = gId('hHeadline');
+        const hIntro = gId('hIntro');
+        const divAbout = gId('divAbout');
+        const favBookDiv = gId('favBook');
+        const favPodcastDiv = gId('favPodcast');
 
-        document.querySelectorAll('.nav-link').forEach(item => {
+        gAll('.nav-link').forEach(item => {
             item.addEventListener(eClick, () => {
                 isMenuTriggered = true;
                 if (extraContact === 0) {
@@ -135,7 +135,7 @@ function loadBasicInfo() {
             });
         });
 
-        document.querySelectorAll('.mFix').forEach(item => {
+        gAll('.mFix').forEach(item => {
             item.addEventListener(eClick, () => {
                 const self = this;
                 tErr1 = setTimeout(() => {
@@ -170,7 +170,7 @@ function loadBasicInfo() {
         //    favPodcastDiv.classList.add(nVis);
         //}
 
-        const listContacts = document.getElementById('listContacts');
+        const listContacts = gId('listContacts');
 
         /*if (skype.isVisible) {
             listContacts.innerHTML = getInLineBtn(genericTranslations.skype, `skype:${skype.id}?call`, 'skype') + listContacts.innerHTML;
@@ -188,40 +188,40 @@ function loadBasicInfo() {
         listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
         //}
 
-        document.getElementById('aElSalvador').addEventListener(eClick, () => {
-            if (!document.getElementById('iframeElSalvador')) {
+        gId('aElSalvador').addEventListener(eClick, () => {
+            if (!gId('iframeElSalvador')) {
                 loadIframe('divIframElSalvador', 'SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, dIframe('iframeElSalvador', 'previewerIframe'));
 
                 iFrameHResize('iframeElSalvador');
             }
         }, false);
 
-        document.querySelectorAll("#linkContactMe, #linkContactMeAbout, #contactMeFloat").forEach(item => {
+        gAll("#linkContactMe, #linkContactMeAbout, #contactMeFloat").forEach(item => {
             item.addEventListener(eClick, contactMeForm);
         });
 
-        document.getElementById('youTubePreview').addEventListener(eClick, () => {
-            const gTitle = document.getElementById('gTitle');
+        gId('youTubePreview').addEventListener(eClick, () => {
+            const gTitle = gId('gTitle');
             gTitle.innerHTML = genericTranslations.winning;
             gTitle.classList.remove(nVis);
 
-            const gDivTitle = document.getElementById('gDivTitle');
+            const gDivTitle = gId('gDivTitle');
             gDivTitle.classList.remove('border-0');
 
-            const modalPreview = document.getElementById('modal-preview');
+            const modalPreview = gId('modal-preview');
             modalPreview.classList.add('modal-xl');
 
             loadIframe('iframeGeneric', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'), true);
 
             iFrameHResize('yIframeP', 0.7);
 
-            const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
+            const btnFullScreenPreview = gId('btn-full-screen-preview');
             btnFullScreenPreview.href = `${urlB}bit.ly/3p9hMGJ`;
             btnFullScreenPreview.setAttribute('title', genericTranslations.winning);
             btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
         });
 
-        document.querySelectorAll('.iLang').forEach(item => {
+        gAll('.iLang').forEach(item => {
             item.src = `pages/${item.getAttribute('data-page')}.html?lang=${uLang}`;
         });
         return true;
@@ -232,11 +232,11 @@ function loadBasicInfo() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    //const menuExpander = document.getElementById('menuExpander');
+    //const menuExpander = gId('menuExpander');
     const hMenu = getHMenu();
 
     // Toggle between getHMenu() and getHMenu('close') on button click
-    document.getElementById('menuExpander').addEventListener(eClick, () => {
+    gId('menuExpander').addEventListener(eClick, () => {
         spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });
 });

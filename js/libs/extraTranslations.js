@@ -8,7 +8,7 @@ const noreferrer = 'rel="noreferrer"';
 const tBlank = 'target="_blank"';
 const divSmall = '<div class="col-sm">';
 const w100 = 'class="w-100"';
-const navbarCollapse = document.getElementById('navbarResponsive');
+const navbarCollapse = gId('navbarResponsive');
 
 let fullData;
 
@@ -21,7 +21,7 @@ fetchData(`${jsonLoc}/extraInfo.json`)
     loadSocialMedias(data.socialBasicList, data.socialOthersList);
 }).catch((e) => { console.error(e); });
 
-const sections = document.querySelectorAll('section, div');
+const sections = gAll('section, div');
 
 const loadSectionIfVisible = () => {
     sections.forEach(section => {
@@ -97,9 +97,9 @@ function loadReviews(reviewsList) {
     try {
         const { reviews } = reviewsList;
 
-        const divReviewsPreviews = document.getElementById('divReviewsPreviews');
-        //const divReviews = document.getElementById("divReviews");
-        const divGenericContent = document.getElementById('divGenericContent');
+        const divReviewsPreviews = gId('divReviewsPreviews');
+        //const divReviews = gId("divReviews");
+        const divGenericContent = gId('divGenericContent');
 
         //if (isVisible) {
         let reviewsHTML = '';
@@ -122,7 +122,7 @@ function loadReviews(reviewsList) {
         //}
 
         fullReviews.forEach((item, index) => {
-            const rmCurrent = document.getElementById(`readMore${index + 1}`);
+            const rmCurrent = gId(`readMore${index + 1}`);
             rmCurrent.addEventListener(eClick, (e) => {
                 e.preventDefault();
                 divGenericContent.innerHTML = item.review;
@@ -130,7 +130,7 @@ function loadReviews(reviewsList) {
                 if (item.isPDF) {
                     PDFObject.embed(item.pdfLocation, `#review${index + 1}PDF`);
                     if (deviceType() === devs[0] || deviceType() === devs[1])
-                        document.getElementById("review2PDF").style.height = "auto";
+                        gId("review2PDF").style.height = "auto";
                 }
             });
         });
@@ -144,8 +144,8 @@ function loadServices(serviceList) {
         const { services } = serviceList;
 
         //if (isVisible) {
-        const servicesList = document.getElementById('servicesList');
-        const dropdownMenu = document.getElementById('dServices');
+        const servicesList = gId('servicesList');
+        const dropdownMenu = gId('dServices');
         let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
         services.flat().forEach(elem => {
@@ -169,7 +169,7 @@ function loadServices(serviceList) {
 
         if (smallScreen) {
             items = getCarousel(items, "carouselServices", 'text-dark');
-            const servicesListDiv = document.getElementById("servicesList");
+            const servicesListDiv = gId("servicesList");
             servicesListDiv.classList.remove("row");
             servicesListDiv.classList.add("container");
         }
@@ -180,7 +180,7 @@ function loadServices(serviceList) {
             new bootstrap.Carousel('#carouselServices');
         //}
         //else {
-        //    const divServices = document.getElementById('divServices');
+        //    const divServices = gId('divServices');
         //    divServices.classList.add(nVis);
         //}
     }
@@ -196,7 +196,7 @@ function loadAwards(awardList) {
         const { awards } = awardList;
 
         //if (isVisible) {
-        const awardsList = document.getElementById('awardsList');
+        const awardsList = gId('awardsList');
         let availableLinks = [];
         //let i = 0;
         let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
@@ -219,7 +219,7 @@ function loadAwards(awardList) {
 
         if (smallScreen) {
             items = getCarousel(items, "carouselAwards", 'text-dark');
-            const awardsListDiv = document.getElementById("awardsList");
+            const awardsListDiv = gId("awardsList");
             awardsListDiv.classList.remove("row");
             awardsListDiv.classList.add("container");
         }
@@ -231,22 +231,22 @@ function loadAwards(awardList) {
 
         availableLinks.forEach(item => {
             if (item.type !== "_blank") {
-                const linkPreview = document.getElementById(`linkPreview${item.id}`);
+                const linkPreview = gId(`linkPreview${item.id}`);
 
                 linkPreview.addEventListener(eClick, () => {
-                    const btnFullScreenPreview = document.getElementById('btn-full-screen-preview');
-                    const gTitle = document.getElementById('gTitle');
+                    const btnFullScreenPreview = gId('btn-full-screen-preview');
+                    const gTitle = gId('gTitle');
 
                     gTitle.classList.add(nVis);
 
-                    const gDivTitle = document.getElementById('gDivTitle');
+                    const gDivTitle = gId('gDivTitle');
                     gDivTitle.classList.add('border-0');
 
                     const tmpLink = item.link;
 
                     const lPreview = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
-                    const modalPreview = document.getElementById('modal-preview');
+                    const modalPreview = gId('modal-preview');
 
                     modalPreview.classList.remove('modal-xl');
 
@@ -258,7 +258,7 @@ function loadAwards(awardList) {
                     btnFullScreenPreview.setAttribute('title', item.title);
                     btnFullScreenPreview.setAttribute('aria-label', item.title);
                 
-                    document.getElementById('iframeGeneric').innerHTML = lPreview;
+                    gId('iframeGeneric').innerHTML = lPreview;
 
                     iFrameHResize('previewerIframeI');
                 });
@@ -267,7 +267,7 @@ function loadAwards(awardList) {
         //screenResizeCardHolders();
         //}
         //else {
-        //    const divAwards = document.getElementById('divAwards');
+        //    const divAwards = gId('divAwards');
         //    divAwards.classList.add(nVis);
         //}
     }
@@ -290,7 +290,7 @@ function loadSoftSkills(softSkills, softSkillsOthers) {
 
 function loadPersonalProjects(personalProjects) {
     try {
-        const personalProjectsDiv = document.getElementById('personalProjects');
+        const personalProjectsDiv = gId('personalProjects');
         const items = personalProjects.map(item => {
             const isActive = item.isActive ? " active" : "";
             const link = `${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`;
@@ -309,12 +309,12 @@ function loadVideos(presentationsVideos) {
     try {
         const { presentations } = presentationsVideos;
 
-        const divVideos = document.getElementById('divVideos');
+        const divVideos = gId('divVideos');
         //if (isVisible) {
         loadVideosUTube(presentations, divVideos, 'publicSpeakingDiv');
         //}
         //else {
-        //    const hPublicSpeaking = document.getElementById('hPublicSpeaking');
+        //    const hPublicSpeaking = gId('hPublicSpeaking');
         //    hPublicSpeaking.classList.add(nVis);
 
         //    divVideos.classList.add(nVis);
@@ -351,13 +351,13 @@ function loadVideosUTube(presentations, divVideo, divCar) {
 function loadYouTubeVideos(youtubeTrainings) {
     try {
         const { presentations } = youtubeTrainings;
-        const divYouTubeVideos = document.getElementById('divYouTubeVideos');
+        const divYouTubeVideos = gId('divYouTubeVideos');
 
         //if (isVisible) {
         loadVideosUTube(presentations, divYouTubeVideos, 'uTubeDiv');
         /*}
         else {
-            const hYouTubeTraining = document.getElementById('hYouTubeTraining');
+            const hYouTubeTraining = gId('hYouTubeTraining');
             hYouTubeTraining.classList.add(nVis);
 
             divYouTubeVideos.classList.add(nVis);
@@ -393,17 +393,17 @@ function loadPresentations(presentationsLinks) {
     try {
         const { presentations } = presentationsLinks;
 
-        const divPPTs = document.getElementById('divPPTs');
+        const divPPTs = gId('divPPTs');
         //if (isVisible) {
         loadDivPresentations(presentations, divPPTs, 'presentationsDiv');
         /*}
         else {
-            const hPresentations = document.getElementById('hPresentations');
+            const hPresentations = gId('hPresentations');
             hPresentations.classList.add(nVis);
 
             divPPTs.classList.add(nVis);
 
-            const pPPTs = document.getElementById('pPPTs');
+            const pPPTs = gId('pPPTs');
             pPPTs.classList.add(nVis);
         }*/
     }
@@ -413,7 +413,7 @@ function loadPresentations(presentationsLinks) {
 function loadImgSection(list, section, divSection, imgPath, optTitle = '', cls = '') {
     try {
         //if (isVisible) {
-        const divSection = document.getElementById(section);
+        const divSection = gId(section);
         list.forEach(item => {
             const tmpImg = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
             divSection.innerHTML += tmpImg;
@@ -421,7 +421,7 @@ function loadImgSection(list, section, divSection, imgPath, optTitle = '', cls =
         });
         /*}
         else {
-            const secDiv = document.getElementById(divSection);
+            const secDiv = gId(divSection);
             secDiv.classList.add(nVis);
         }*/
     }
@@ -433,8 +433,8 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         const { socialMedia} = socialBasicList;
 
         //if (isVisible) {
-        const socialMediaBasic = document.getElementById('socialMediaBasic');
-        const socialMediaBasicExtended = document.getElementById('social-medias-extended-list');
+        const socialMediaBasic = gId('socialMediaBasic');
+        const socialMediaBasicExtended = gId('social-medias-extended-list');
         const itemsArray = socialMedia.map(item => getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter")));
 
         socialMediaBasic.innerHTML = itemsArray.join('');
@@ -443,7 +443,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         setTimeout(() => {
             socialMediaBasicExtended.innerHTML += getBtnShare();
 
-            document.getElementById('btnShare').addEventListener(eClick, event => {
+            gId('btnShare').addEventListener(eClick, event => {
                 event.preventDefault();
     
                 navigator.share({
@@ -461,7 +461,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
             socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
-            const socialMediaOthers = document.getElementById('socialMediaOthers');
+            const socialMediaOthers = gId('socialMediaOthers');
             socialOthersList.socialMedia.forEach(elem => {
                 socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
             });
@@ -469,12 +469,12 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
     //}
         /*}
         else {
-            const aroundWeb = document.getElementById('aroundWeb');
+            const aroundWeb = gId('aroundWeb');
             aroundWeb.classList.add(nVis);
         }*/
 
         if (smallScreenMobileOS) {
-            document.querySelectorAll('.uTubeLink').forEach(item => {
+            gAll('.uTubeLink').forEach(item => {
                 item.href = item.href.replace('www', 'm');
             });            
         }
@@ -484,8 +484,8 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
 function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse, btnMore, itemCollapseID) {
     try {
-        const divTmp = document.getElementById(divContainer);
-        const divOthersContainerDiv = document.getElementById(divOthersContainer);
+        const divTmp = gId(divContainer);
+        const divOthersContainerDiv = gId(divOthersContainer);
 
         skills.forEach(item => {
             const items = `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`;
@@ -493,7 +493,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
         });
 
         const arias = skillsOthers.map((_, i) => `${itemCollapseID}${i}`).join(' ');
-        document.getElementById(btnMore).setAttribute("aria-controls", arias);
+        gId(btnMore).setAttribute("aria-controls", arias);
 
         skillsOthers.forEach((item, index) => {
             const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
@@ -515,14 +515,14 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
 
 function addIFrameModal(opt) {
     for (let serv = 0; serv < totalServices; serv++) {
-        const cService = document.getElementById(`${opt}${serv}`);
+        const cService = gId(`${opt}${serv}`);
         cService.addEventListener(eClick, function(e) {
             e.preventDefault();
-            document.getElementById("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
+            gId("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
 
             iFrameHResize('serviceFormI');
 
-            const services = new bootstrap.Modal(document.getElementById("servicesModal"), {});
+            const services = new bootstrap.Modal(gId("servicesModal"), {});
             services.show();
         });
     }
@@ -538,13 +538,13 @@ function setImage(imgID, imgBasic, imgLoc) {
     //let imgBookSize = '';
     const imgSize = deviceType() == devs[0] ? '_small' : deviceType() == devs[1] ? '_medium' : '';
 
-    const imgTemp = document.getElementById(imgID);
-    const srcWebP = document.getElementById(`srcWebP${imgID}`);
-    const srcJPG = document.getElementById(`srcJPG${imgID}`);
-    //let divBook = document.getElementById("myBookDiv");
+    const imgTemp = gId(imgID);
+    const srcWebP = gId(`srcWebP${imgID}`);
+    const srcJPG = gId(`srcJPG${imgID}`);
+    //let divBook = gId("myBookDiv");
     //divBook.classList.add(nVis);
 
-    //let imgBook = document.getElementById("imgBook");
+    //let imgBook = gId("imgBook");
     //let currentDate = new Date();
     //let validDate = !((currentDate.getMonth() + 1 >= 7) && (currentDate.getFullYear() >= 2022) && (currentDate.getDate() >= 15));
 
@@ -669,7 +669,7 @@ function getCItem(extras) {
 }
 
 /*function screenResizeCardHolders() {
-    const divs = document.querySelectorAll(".card-holder");
+    const divs = gAll(".card-holder");
     const width = window.innerWidth;
 
     divs.forEach(div => {
@@ -680,16 +680,16 @@ function getCItem(extras) {
 function rotatedModal() {
     //Clean old changes
     if (smallScreen) {
-        document.querySelectorAll(".mFullScreen").forEach(modal => {
+        gAll(".mFullScreen").forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
 
-        document.querySelectorAll(".mFullScreenH").forEach(modal => {
+        gAll(".mFullScreenH").forEach(modal => {
             modal.classList.remove("modal-fullscreen");
         });
     }
 
-    if (document.getElementById('contactMeI'))
+    if (gId('contactMeI'))
         iFrameHResize('contactMeI');
 
     changeModalType();
@@ -697,14 +697,14 @@ function rotatedModal() {
 
 function changeModalType() {
     if (smallScreen) {
-        document.querySelectorAll(".mFullScreen").forEach(modal => {
+        gAll(".mFullScreen").forEach(modal => {
             modal.classList.remove("modal-xl");
             modal.classList.add("modal-fullscreen");
         });
 
         let landscape = window.matchMedia("(orientation: landscape)");
         if (landscape.matches || equalScreen || actualDev === devs[3]) {
-            document.querySelectorAll(".mFullScreenH").forEach(modal => {
+            gAll(".mFullScreenH").forEach(modal => {
                 modal.classList.remove("modal-xl");
                 modal.classList.add("modal-fullscreen");
             });
@@ -729,8 +729,8 @@ function handleNavbarVisibility() {
     isHandlingVisibility = true;
 
     const dynamicNavItem = document.getElementsByClassName('dynamicNavItem');
-    const sMenu = document.getElementById('sMenu');
-    const dMenu = document.getElementById('dMenu');
+    const sMenu = gId('sMenu');
+    const dMenu = gId('dMenu');
 
     if (window.getComputedStyle(navbarCollapse).display === 'flex') {
         // Navbar is not visible, remove the dynamicNavItem
@@ -746,7 +746,7 @@ function handleNavbarVisibility() {
         // Navbar is visible, add the dynamicNavItem
         if (dynamicNavItem.length === 0) {
             setTimeout(() => {
-                const ul = document.getElementById('nElems');
+                const ul = gId('nElems');
                 const li = document.createElement('li');
                 li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
                 li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
@@ -759,7 +759,7 @@ function handleNavbarVisibility() {
 
                 ul.append(liCC);
 
-                const mobileContactMe = document.getElementById("mobileContactMe");
+                const mobileContactMe = gId("mobileContactMe");
                 mobileContactMe.addEventListener(eClick, contactMeForm);
             }, 250);
         }
@@ -799,7 +799,7 @@ if (document.readyState !== "loading") {
         const { hobbies, isVisible } = hobbiesList;
 
         if (isVisible) {
-            const hobbiesList = document.getElementById('hobbiesList');
+            const hobbiesList = gId('hobbiesList');
 
             const finalH = !(smallScreenMobileOS) ? hobbies : hobbies.filter(({isOpt}) => isOpt === false);
 
@@ -815,23 +815,23 @@ if (document.readyState !== "loading") {
 
             const hobbiesOthers = hobbies.filter(({isOpt}) => isOpt === true);
 
-            const optHobbies = document.getElementById('optHobbies');
+            const optHobbies = gId('optHobbies');
             hobbiesOthers.forEach(elem => {
                 optHobbies.innerHTML += getListItem(getHobbyImg(elem));
             });
 
-            document.querySelectorAll('.ignore-click').forEach(function(element) {
+            gAll('.ignore-click').forEach(function(element) {
                 element.addEventListener(eClick, function(e) {
                     e.preventDefault();
                 });
             });
 
-            document.getElementById("linkContactMe").addEventListener(eClick, function(e) {
+            gId("linkContactMe").addEventListener(eClick, function(e) {
                 e.preventDefault();
             });
         }
         else {
-            const divHobbies = document.getElementById("divHobbies");
+            const divHobbies = gId("divHobbies");
             divHobbies.classList.add(nVis);
         }
     }

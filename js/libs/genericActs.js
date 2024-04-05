@@ -46,8 +46,16 @@ function hFixCMenu() {
     }, 500);
 }
 
+function gId(id) {
+    return document.getElementById(id);
+}
+
+function gAll(elem) {
+    return document.querySelectorAll(elem);
+}
+
 function loadIframe(iframe, title, url, extras, fScreen = false) {
-    document.getElementById(iframe).innerHTML = getIframe(title, url, extras, fScreen);
+    gId(iframe).innerHTML = getIframe(title, url, extras, fScreen);
 }
 
 function dIframe(id, cls) {
@@ -55,8 +63,8 @@ function dIframe(id, cls) {
 }
 
 function closeMenu() {
-    if (document.getElementById("navbarResponsive").classList.contains("show")) {
-        document.getElementById("menuExpander").click();
+    if (gId("navbarResponsive").classList.contains("show")) {
+        gId("menuExpander").click();
     }
 }
 
@@ -72,13 +80,13 @@ function contactMeForm(e) {
         e.preventDefault();
     } catch { }
     const cMe = 'contactMe',
-          mForm = document.getElementById(`${cMe}Form`);
+          mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
         mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
         iFrameHResize(`${cMe}I`);
     }
 
-    const contactMe = new bootstrap.Modal(document.getElementById(cMe), {});
+    const contactMe = new bootstrap.Modal(gId(cMe), {});
     contactMe.show();
     extraContact++;
 }
@@ -91,7 +99,7 @@ function iFrameHResize(id, percentage = 0.7) {
                  : devicePortraitAndLong ? heightIFrame * 1.2
                  : heightIFrame * 0.8;
 
-    document.getElementById(id).style.height = `${height}px`;
+    gId(id).style.height = `${height}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
