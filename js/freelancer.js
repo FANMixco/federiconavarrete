@@ -25,7 +25,7 @@ function onReadyFreelancer() {
         });
     });
 
-    if (deviceType() === "Smartphone") {
+    if (deviceType() === devs[0]) {
 
         const el_autohide = document.querySelector('.autohide');
  
@@ -35,8 +35,8 @@ function onReadyFreelancer() {
         if (el_autohide) {
             let last_scroll_top = 0;
             window.addEventListener('scroll', function() {
-                if (document.getElementById("navbarResponsive").classList.contains("show")) {
-                    document.getElementById("menuExpander").click();
+                if (gId("navbarResponsive").classList.contains("show")) {
+                    gId("menuExpander").click();
                 }
 
                 const scroll_top = window.scrollY;
@@ -79,14 +79,14 @@ function extraEvents(scroll) {
         extraContact++;
     }
     else if (scroll > getHeight() * 0.7) {
-        const gScriptExist = document.getElementById('g_translate');
+        const gScriptExist = gId('g_translate');
         
         if (!gScriptExist && !validLang.includes(uLang)) {
             const script = document.createElement('script');
             script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
             script.id = 'g_translate';
             document.body.appendChild(script);
-            document.getElementById('google_translate_element').classList.remove('d-none');
+            gId('google_translate_element').classList.remove('d-none');
         }
     }
 }
