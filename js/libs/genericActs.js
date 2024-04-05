@@ -85,8 +85,9 @@ function contactMeForm(e) {
 
 function iFrameHResize(id, percentage = 0.7) {
     const landscape = window.matchMedia("(orientation: landscape)"),
-          height = equalScreen ? document.documentElement.clientHeight * 0.7
-                 : landscape.matches ? document.documentElement.clientHeight * percentage
+          cH = document.documentElement.clientHeight,
+          height = equalScreen ? cH * 0.7
+                 : landscape.matches ? cH * percentage
                  : devicePortraitAndLong ? heightIFrame * 1.2
                  : heightIFrame * 0.8;
 
