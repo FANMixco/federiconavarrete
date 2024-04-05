@@ -516,7 +516,7 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
 function addIFrameModal(opt) {
     for (let serv = 0; serv < totalServices; serv++) {
         const cService = gId(`${opt}${serv}`);
-        cService.addEventListener(eClick, function(e) {
+        cService.addEventListener(eClick, (e) => {
             e.preventDefault();
             gId("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
 
@@ -640,11 +640,8 @@ function getListItem(elem, extra = "", extraCls = "") {
 
 function getBtnModal(target, cls, id, body, extras = '', href = '', isBtn = false, targetBlank = '', link = '') {
     const tmpTag = (isBtn) ? 'button' : 'a';
-    const tmpRef = (isBtn) ? '' : `href="#${href}"`;
-    const idT = (id != '') ? `id="${id}"` : '';
-    const tNone = (!isBtn) ? 'text-decoration-none' : '';
 
-    return (targetBlank != '_blank') ? `<${tmpTag} ${idT} class="${cls} ${tNone}" data-bs-toggle="modal" data-bs-target="#${target}" ${tmpRef} ${extras}>${body}</${tmpTag}>` : `<a href='${link}' target='${targetBlank}' class="${cls}" ${extras}>${body}</a>`;
+    return (targetBlank != '_blank') ? `<${tmpTag} ${(id != '') ? `id="${id}"` : ''} class="${cls} ${(!isBtn) ? 'text-decoration-none' : ''}" data-bs-toggle="modal" data-bs-target="#${target}" ${(isBtn) ? '' : `href="#${href}"`} ${extras}>${body}</${tmpTag}>` : `<a href='${link}' target='${targetBlank}' class="${cls}" ${extras}>${body}</a>`;
 }
 
 function getBtnShare() {
@@ -734,9 +731,9 @@ function handleNavbarVisibility() {
 
     if (window.getComputedStyle(navbarCollapse).display === 'flex') {
         // Navbar is not visible, remove the dynamicNavItem
-        [...dynamicNavItem].forEach(function(element) {
-            if (element) {
-                element.parentNode.removeChild(element);
+        [...dynamicNavItem].forEach((elem) => {
+            if (elem) {
+                elem.parentNode.removeChild(elem);
             }
         });
         sMenu.style.display = 'block';

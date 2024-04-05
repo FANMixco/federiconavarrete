@@ -46,7 +46,7 @@ function retry(maxRetries, delay, fn, callback) {
             callback(new Error('Max retries reached'));
         } else {
             // if there are retries left, wait for the delay and try again
-            setTimeout(function() {
+            setTimeout(() => {
                 // call retry recursively with one less retry
                 retry(maxRetries - 1, delay, fn, callback);
             }, delay);
