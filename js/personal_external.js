@@ -25,13 +25,13 @@ const getScript = url => new Promise((resolve, reject) => {
 });
 
 function onReadyPersonal() {
-    let cYear = new Date().getFullYear();
+    const cYear = new Date().getFullYear();
     
     const spanYear = gId("spanYear");
     
     spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
     
-    document.querySelectorAll('.ignore-click').forEach(element => {
+    gAll('.ignore-click').forEach(element => {
         element.addEventListener('click', () => false);
     });
 }
