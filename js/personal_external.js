@@ -27,7 +27,7 @@ const getScript = url => new Promise((resolve, reject) => {
 function onReadyPersonal() {
     let cYear = new Date().getFullYear();
     
-    const spanYear = document.getElementById("spanYear");
+    const spanYear = gId("spanYear");
     
     spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
     
@@ -43,10 +43,10 @@ if (document.readyState !== "loading") {
 }
 
 if (smallScreen) {
-  const imgProfile = document.getElementById('imgProfile');
+  const imgProfile = gId('imgProfile');
   imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
 } else {
-  const profileDiv = document.getElementById('profile-div');
+  const profileDiv = gId('profile-div');
   const mediaQuery = window.matchMedia('(min-width: 769px)');
 
   function handleTabletChange(e) {
@@ -70,7 +70,7 @@ if (smallScreen) {
 // Define a function to change the class based on screen size
 function screenResize() {
   // Get the div element
-  const element = document.getElementById("hContent");
+  const element = gId("hContent");
   // Get the current width of the window
   const width = window.innerWidth;
 
@@ -78,7 +78,7 @@ function screenResize() {
 
   devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
 
-  if (document.getElementById('contactMeI'))
+  if (gId('contactMeI'))
     iFrameHResize('contactMeI');
 }
 
@@ -91,7 +91,7 @@ if (smallScreenMobileOS) {
 
   window.addEventListener("scroll", function() {
     let currentScroll = window.scrollY || document.documentElement.scrollTop;
-    document.getElementById("contactMeFloat").style.display = (currentScroll > lastScrollTop) ? 'none' : 'block';
+    gId("contactMeFloat").style.display = (currentScroll > lastScrollTop) ? 'none' : 'block';
     lastScrollTop = currentScroll;
   }, false);
 }
