@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.error(e);
     }
 
-    $('#legendsCarousel').on('slide.bs.carousel', function (e) {
+    $('#legendsCarousel').on('slide.bs.carousel', (e) => {
         const itemsPerSlide = 3;
         const cItem = '.carousel-item';
         const $e = $(e.relatedTarget);

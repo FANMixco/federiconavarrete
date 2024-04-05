@@ -34,7 +34,7 @@ function loadBooks(booksList) {
 
     document.getElementById('divBooks').appendChild(fragment);
 
-    $('#booksCarousel').on('slide.bs.carousel', function (e) {
+    $('#booksCarousel').on('slide.bs.carousel', (e) => {
         /*
             CC 2.0 License Iatek LLC 2018
             Attribution required

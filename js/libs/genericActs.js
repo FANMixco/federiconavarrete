@@ -41,7 +41,7 @@ let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && 
     extraContact = 0;
 
 function hFixCMenu() {
-    setTimeout(function() {
+    setTimeout(() => {
         closeMenu();
     }, 500);
 }
@@ -103,9 +103,7 @@ function iFrameHResize(id, percentage = 0.7) {
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
-    const img = isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`;
-
-    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${isIgnoredClick ? "ignore-click" : ""} ${classExternal}`, link, img, `${extras} title="${title}" ${isTargetBlank ? `target="_blank"` : ""} ${link !== "#" ? 'rel="noreferrer"' : ""}`);
+    return getFLink(`btn btn-outline-light btn-social ${tCenter} rounded-circle ${isIgnoredClick ? "ignore-click" : ""} ${classExternal}`, link, isIcon ? `<i class="icon-${icon}"></i>` : `${getFinalImg('', imgClass, title, `src="${icon}"`)}`, `${extras} title="${title}" ${isTargetBlank ? `target="_blank"` : ""} ${link !== "#" ? 'rel="noreferrer"' : ""}`);
 }
 
 function getIframe(title, src, extras, fullscreen, lazy = lazyLoading) {
@@ -117,9 +115,7 @@ function getFLink(cls, link, body, extras = '') {
 }
 
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
-    const lStart = hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : '';
-
-    return `${lStart}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
+    return `${hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : ''}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
 }
 
 function getActionBtn(link, icon, title) {

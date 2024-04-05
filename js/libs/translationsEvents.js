@@ -17,13 +17,13 @@ window.addEventListener('DOMContentLoaded', async () => {
         console.error(e);
     }
 
-    $('#eventsCarousel').on('slide.bs.carousel', function (e) {
+    $('#eventsCarousel').on('slide.bs.carousel', (e) => {
         const itemsPerSlide = 4;
         const cItem = '.carousel-item';
         const $e = $(e.relatedTarget);
         let idx = $e.index();
         const totalItems = $(cItem).length;
-        
+
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);
             for (let i = 0; i < it; i++) {
