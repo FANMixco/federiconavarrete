@@ -187,8 +187,8 @@ function loadServices(serviceList) {
     catch (e) { return e; }
 }
 
-function getCarousel(items, cId, arrowsColor = 'text-muted') {
-    return `<div class="container-fluid" id="div${cId}"><div id="${cId}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22" type="button" data-bs-target="#${cId}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div></div>`;
+function getCarousel(items, id, arrowsColor = 'text-muted', isVideo = false) {
+    return `${!isVideo ? `<div class="container-fluid" id="div${id}">` : ''}<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22 ${isVideo ? 'carousel-control-prev-video' : 'carousel-control-prev'}" type="button" data-bs-target="#${id}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22 ${isVideo ? 'carousel-control-next-video' : 'carousel-control-next'}" type="button" data-bs-target="#${id}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div>${!!isVideo ? '</div>' : ''}`;
 }
 
 function loadAwards(awardList) {
@@ -301,10 +301,6 @@ function loadPersonalProjects(personalProjects) {
     catch (e) { return e; }
 }
 
-function getVideoCarousel(items, id) {
-    return `<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev carousel-control-prev-video icon-size-22" href="#${id}" role="button" data-bs-slide="prev" aria-label="Previous"><span class="text-muted icon-chevron-left-solid"></span></button><button class="carousel-control-next carousel-control-next-video icon-size-22" href="#${id}" role="button" data-bs-slide="next" aria-label="Next"><span class="text-muted icon-chevron-right-solid"></span></button></div>`;
-}
-
 function loadVideos(presentationsVideos) {
     try {
         const { presentations } = presentationsVideos;
@@ -331,7 +327,7 @@ function loadVideosUTube(presentations, divVideo, divCar) {
             const vTmp = getUTubeContainer(item, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             return `<div class="carousel-item ${index === 0 ? 'active' : ''}">${vTmp}</div>`;
         }).join('');
-        items = getVideoCarousel(items, divCar);
+        items = getCarousel(items, divCar, 'text-muted', true);
         divVideo.innerHTML = items;
         new bootstrap.Carousel(`#${divCar}`);
     } else {
@@ -374,7 +370,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
             const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
             return `<div class="carousel-item ${(index == 0) ? 'active' : ''}">${vTmp}</div>`;
         }).join('');
-        items = getVideoCarousel(items, divCar);
+        items = getCarousel(items, divCar, 'text-muted', true);
         divPicture.innerHTML = items;
     } else {
         items = presentations.map(item => getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title)).join('');
