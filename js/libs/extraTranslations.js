@@ -279,14 +279,14 @@ function loadAwards(awardList) {
 
 function loadTechSkills(techSkills, techSkillsOthers) {
     try {
-        loadSkills(techSkills, techSkillsOthers, "divTechSkills", "divTechSkillsOthers", "", "btnMoreTechSkills", "multiDev");
+        loadSkills(techSkills, techSkillsOthers, "divTechSkills", "divTechSkillsOthers", "");
     }
     catch (e) { return e; }
 }
 
 function loadSoftSkills(softSkills, softSkillsOthers) {
     try {
-        loadSkills(softSkills, softSkillsOthers, "divSoftSkills", "divSoftSkillsOther", "-business", "btnMoreSoftSkills", "multiBS");
+        loadSkills(softSkills, softSkillsOthers, "divSoftSkills", "divSoftSkillsOther", "-business");
     }
     catch (e) { return e; }
 }
@@ -479,7 +479,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
     catch (e) { return e; }
 }
 
-function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse, btnMore, itemCollapseID) {
+function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse) {
     try {
         const divTmp = gId(divContainer);
         const divOthersContainerDiv = gId(divOthersContainer);
@@ -489,11 +489,11 @@ function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, clas
             divTmp.insertAdjacentHTML('afterbegin', items);
         });
 
-        const arias = skillsOthers.map((_, i) => `${itemCollapseID}${i}`).join(' ');
-        gId(btnMore).setAttribute("aria-controls", arias);
+        //const arias = skillsOthers.map((_, i) => `${itemCollapseID}${i}`).join(' ');
+        //gId(btnMore).setAttribute("aria-controls", arias);
 
         skillsOthers.forEach((item, index) => {
-            const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}" id="${itemCollapseID}${index}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
+            const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
             divOthersContainerDiv.insertAdjacentHTML('afterbegin', items);
         });
     }
