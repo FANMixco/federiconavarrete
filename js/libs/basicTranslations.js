@@ -1,6 +1,7 @@
-let tErr1;
-let currentLoc = '';
-let genericTranslations, basicInfo;
+let tErr1,
+    currentLoc = '',
+    genericTranslations,
+    basicInfo;
 
 fetchData(`${jsonLoc}/generics.json`)
     .then(data => {
@@ -118,12 +119,12 @@ function loadBasicInfo() {
     try {
         const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, company } = basicInfo;
 
-        const hName = gId('hName');
-        const hHeadline = gId('hHeadline');
-        const hIntro = gId('hIntro');
-        const divAbout = gId('divAbout');
-        const favBookDiv = gId('favBook');
-        const favPodcastDiv = gId('favPodcast');
+        const hName = gId('hName'),
+            hHeadline = gId('hHeadline'),
+            hIntro = gId('hIntro'),
+            divAbout = gId('divAbout'),
+            favBookDiv = gId('favBook'),
+            favPodcastDiv = gId('favPodcast');
 
         gAll('.nav-link').forEach(item => {
             item.addEventListener(eClick, () => {

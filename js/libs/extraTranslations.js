@@ -1,16 +1,16 @@
-let totalServices = 0;
-let fullReviews = [];
-let isHandlingVisibility = false;
+let totalServices = 0,
+    fullReviews = [],
+    isHandlingVisibility = false,
+    fullData;
 
 //const bookEdition = 'second;'
-const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"');
-const noreferrer = 'rel="noreferrer"';
-const tBlank = 'target="_blank"';
-const divSmall = '<div class="col-sm">';
-const w100 = 'class="w-100"';
-const navbarCollapse = gId('navbarResponsive');
-
-let fullData;
+const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"'),
+    noreferrer = 'rel="noreferrer"',
+    tBlank = 'target="_blank"',
+    divSmall = '<div class="col-sm">',
+    w100 = 'class="w-100"',
+    navbarCollapse = gId('navbarResponsive'),
+    sections = gAll('section, div');
 
 fetchData(`${jsonLoc}/extraInfo.json`)
     .then(data => {
@@ -21,14 +21,12 @@ fetchData(`${jsonLoc}/extraInfo.json`)
         loadSocialMedias(data.socialBasicList, data.socialOthersList);
     }).catch((e) => { console.error(e); });
 
-const sections = gAll('section, div');
-
 const loadSectionIfVisible = () => {
     sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        const triggerPoint = windowHeight * 0.15; // 15% of window height
-        const loaded = section.getAttribute('data-loaded');
+        const rect = section.getBoundingClientRect(),
+            windowHeight = window.innerHeight || document.documentElement.clientHeight,
+            triggerPoint = windowHeight * 0.15, // 15% of window height
+            loaded = section.getAttribute('data-loaded');
 
         if (rect.top < windowHeight - triggerPoint && rect.bottom >= 0 && loaded === "false") {
             //const sectionId = section.getAttribute('id');
