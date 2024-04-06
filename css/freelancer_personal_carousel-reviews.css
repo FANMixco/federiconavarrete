@@ -68,13 +68,14 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 700;
+	font-weight: bold;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 header.masthead h2 {
 	font-size: 1.3rem;
-	font-family: "Lucida Grande", "Roboto Bold", "Tahoma Bold", Sans-Serif !important
+	font-family: "Lucida Grande", Roboto, Tahoma, Sans-Serif !important;
+	font-weight: 450;
 }
 
 hr.star-black,
@@ -270,10 +271,6 @@ header.masthead {
 header.masthead h1 {
 	font-size: 3rem;
 	line-height: 3rem;
-}
-
-header.masthead h2 {
-	font-size: 1.3rem;
 }
 
 .portfolio {
