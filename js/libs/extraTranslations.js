@@ -739,23 +739,21 @@ function handleNavbarVisibility() {
     else {
         // Navbar is visible, add the dynamicNavItem
         if (dynamicNavItem.length === 0) {
-            setTimeout(() => {
-                const ul = gId('nElems');
-                const li = document.createElement('li');
-                li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
-                li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
+            const ul = gId('nElems');
+            const li = document.createElement('li');
+            li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
+            li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
 
-                ul.insertBefore(li, ul.children[1]);
+            ul.insertBefore(li, ul.children[1]);
 
-                const liCC = document.createElement('li');
-                liCC.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
-                liCC.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded text-white" id="mobileContactMe">${genericTranslations.contactMe}&nbsp;💡</a>`;
+            const liCC = document.createElement('li');
+            liCC.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
+            liCC.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded text-white" id="mobileContactMe">${genericTranslations.contactMe}&nbsp;💡</a>`;
 
-                ul.append(liCC);
+            ul.append(liCC);
 
-                const mobileContactMe = gId("mobileContactMe");
-                mobileContactMe.addEventListener(eClick, contactMeForm);
-            }, 250);
+            const mobileContactMe = gId("mobileContactMe");
+            mobileContactMe.addEventListener(eClick, contactMeForm);
         }
         sMenu.style.display = 'none';
         dMenu.style.display = 'none';
