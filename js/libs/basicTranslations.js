@@ -3,29 +3,29 @@ let currentLoc = '';
 let genericTranslations, basicInfo;
 
 fetchData(`${jsonLoc}/generics.json`)
-.then(data => {
-    genericTranslations = data;
+    .then(data => {
+        genericTranslations = data;
 
-    loadTranslationsWithRetry(loadTranslations, (err) => {
-        if (!err) {
-            // handle result
-            fetchData(`${jsonLoc}/basicInfo.json`).then(data => {
-                basicInfo = data;
-                loadTranslationsWithRetry(loadBasicInfo, () => { });
-                addExtraIcons();
-            })
-                .catch((e) => {
-                    console.error(e);
-                });
-        }
-    });
-}).catch((e) => { console.error(e); });
+        loadTranslationsWithRetry(loadTranslations, (err) => {
+            if (!err) {
+                // handle result
+                fetchData(`${jsonLoc}/basicInfo.json`).then(data => {
+                    basicInfo = data;
+                    loadTranslationsWithRetry(loadBasicInfo, () => { });
+                    addExtraIcons();
+                })
+                    .catch((e) => {
+                        console.error(e);
+                    });
+            }
+        });
+    }).catch((e) => { console.error(e); });
 
 function addExtraIcons() {
     gAll('.btn-preview').forEach(item => {
         item.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${item.innerHTML}`;
     });
-  
+
     gAll('.btn-book').forEach(item => {
         item.innerHTML = `${getFinalIcon('download')}&nbsp;&nbsp;${item.innerHTML}`;
     });
@@ -55,9 +55,9 @@ function retry(maxRetries, delay, fn, callback) {
 }
 
 // wrap loadTranslations with retry and delay
-let loadTranslationsWithRetry = function(fn, callback) {
+let loadTranslationsWithRetry = function (fn, callback) {
     retry(3, 150, fn, callback);
-};  
+};
 
 function loadTranslations() {
     try {
@@ -68,7 +68,7 @@ function loadTranslations() {
         gAll('[data-translation]').forEach(item => {
             item.innerHTML = genericTranslations[item.dataset.translation];
         });
-        
+
         gAll('[data-title-translation]').forEach(item => {
             const trans = genericTranslations[item.dataset.titleTranslation];
             item.setAttribute("aria-label", trans);
@@ -106,7 +106,7 @@ function loadTranslations() {
                 gPreview.style.height = hPreviewHeight;
             });
         });
-        
+
         return true;
     }
     catch {
@@ -145,7 +145,7 @@ function loadBasicInfo() {
                 }, 500);
             });
         });
-        
+
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;

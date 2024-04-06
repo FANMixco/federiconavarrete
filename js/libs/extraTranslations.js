@@ -13,13 +13,13 @@ const navbarCollapse = gId('navbarResponsive');
 let fullData;
 
 fetchData(`${jsonLoc}/extraInfo.json`)
-.then(data => {
-    fullData = data;
-    loadServices(data.servicesList);
-    loadSoftSkills(data.softSkills, data.softSkillsOthers);
-    loadTechSkills(data.techSkills, data.techSkillsOthers);
-    loadSocialMedias(data.socialBasicList, data.socialOthersList);
-}).catch((e) => { console.error(e); });
+    .then(data => {
+        fullData = data;
+        loadServices(data.servicesList);
+        loadSoftSkills(data.softSkills, data.softSkillsOthers);
+        loadTechSkills(data.techSkills, data.techSkillsOthers);
+        loadSocialMedias(data.socialBasicList, data.socialOthersList);
+    }).catch((e) => { console.error(e); });
 
 const sections = gAll('section, div');
 
@@ -110,9 +110,9 @@ function loadReviews(reviewsList) {
             reviewsHTML += reviewPreview;
 
             const longReview = item.isPDF ?
-                                    `${getImgName(name, item.img, currentReview, "picReviewers")}${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}${getInnerTitle(item.date)}<div id="review${currentReview}PDF"></div><div class="centerText">${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>` :
-                                    getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title.replaceAll('text-material-link', "text-material-link-dark")), 'dark', 'black', item.review, "centerText", false);
-            
+                `${getImgName(name, item.img, currentReview, "picReviewers")}${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}${getInnerTitle(item.date)}<div id="review${currentReview}PDF"></div><div class="centerText">${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>` :
+                getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title.replaceAll('text-material-link', "text-material-link-dark")), 'dark', 'black', item.review, "centerText", false);
+
             fullReviews.push({ review: longReview, isPDF: item.isPDF, pdfLocation: item.pdfLocation });
         });
 
@@ -207,14 +207,14 @@ function loadAwards(awardList) {
         awards.flat().forEach((elem, index) => {
             const tmpLink = `${urlB}${elem.link}`;
             const title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
-        
-            availableLinks.push({ 
+
+            availableLinks.push({
                 id: index,
                 title: elem.title,
                 link: tmpLink,
                 type: elem.type
             });
-        
+
             items += getSCItem(index, title);
         });
 
@@ -260,7 +260,7 @@ function loadAwards(awardList) {
                     btnFullScreenPreview.href = tmpLink;
                     btnFullScreenPreview.setAttribute('title', item.title);
                     btnFullScreenPreview.setAttribute('aria-label', item.title);
-                
+
                     gId('iframeGeneric').innerHTML = lPreview;
 
                     iFrameHResize('previewerIframeI');
@@ -367,7 +367,7 @@ function loadYouTubeVideos(youtubeTrainings) {
 
 function loadDivPresentations(presentations, divPicture, divCar) {
     let items = '';
-    
+
     if (smallScreen) {
         items = presentations.map((item, index) => {
             const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
@@ -379,7 +379,7 @@ function loadDivPresentations(presentations, divPicture, divCar) {
         items = presentations.map(item => getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title)).join('');
         divPicture.innerHTML = items;
     }
-    
+
     setPPTImg(presentations);
     if (smallScreen) new bootstrap.Carousel(`#${divCar}`);
 }
@@ -429,7 +429,7 @@ function loadImgSection(list, section, divSection, imgPath, optTitle = '', cls =
 
 function loadSocialMedias(socialBasicList, socialOthersList) {
     try {
-        const { socialMedia} = socialBasicList;
+        const { socialMedia } = socialBasicList;
 
         //if (isVisible) {
         const socialMediaBasic = gId('socialMediaBasic');
@@ -449,12 +449,12 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
                 text: genericTranslations.knowMoreBody,
                 url: window.location.href
             })
-            .then(() => {
-                console.log('Shared!');
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+                .then(() => {
+                    console.log('Shared!');
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
         });
 
         socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
@@ -463,7 +463,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         socialOthersList.socialMedia.forEach(elem => {
             socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
         });
-    //}
+        //}
         /*}
         else {
             const aroundWeb = gId('aroundWeb');
@@ -473,7 +473,7 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         if (smallScreenMobileOS) {
             gAll('.uTubeLink').forEach(item => {
                 item.href = item.href.replace('www', 'm');
-            });            
+            });
         }
     }
     catch (e) { return e; }
@@ -555,11 +555,11 @@ function setImage(imgID, imgBasic, imgLoc) {
             imgSize = '_medium';
             break;
     }*/
-    
+
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
     srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
-    srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;    
+    srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
     /*if (validDate) {
         imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;

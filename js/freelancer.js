@@ -28,13 +28,13 @@ function onReadyFreelancer() {
     if (deviceType() === devs[0]) {
 
         const el_autohide = document.querySelector('.autohide');
- 
+
         // add padding-top to bady (if necessary)
         document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight}px`;
 
         if (el_autohide) {
             let last_scroll_top = 0;
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 if (gId("navbarResponsive").classList.contains("show")) {
                     gId("menuExpander").click();
                 }
@@ -49,7 +49,7 @@ function onReadyFreelancer() {
                     el_autohide.classList.add('scrolled-down');
                 }
                 last_scroll_top = scroll_top;
-            }); 
+            });
         }
     }
 
@@ -80,7 +80,7 @@ function extraEvents(scroll) {
     }
     else if (scroll > getHeight() * 0.7) {
         const gScriptExist = gId('g_translate');
-        
+
         if (!gScriptExist && !validLang.includes(uLang)) {
             const script = document.createElement('script');
             script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;

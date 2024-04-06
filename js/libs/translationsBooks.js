@@ -44,7 +44,7 @@ function loadBooks(booksList) {
         const $e = $(e.relatedTarget);
         let idx = $e.index();
         const totalItems = $(cItem).length;
-        
+
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);
             for (let i = 0; i < it; i++) {
