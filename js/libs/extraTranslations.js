@@ -439,32 +439,30 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         socialMediaBasic.innerHTML = itemsArray.join('');
         socialMediaBasicExtended.innerHTML = itemsArray.join('');
 
-        setTimeout(() => {
-            socialMediaBasicExtended.innerHTML += getBtnShare();
+        socialMediaBasicExtended.innerHTML += getBtnShare();
 
-            gId('btnShare').addEventListener(eClick, event => {
-                event.preventDefault();
-    
-                navigator.share({
-                    title: genericTranslations.knowMoreTitle,
-                    text: genericTranslations.knowMoreBody,
-                    url: window.location.href
-                })
-                .then(() => {
-                    console.log('Shared!');
-                })
-                .catch((error) => {
-                    console.error(error);
-                });
+        gId('btnShare').addEventListener(eClick, event => {
+            event.preventDefault();
+
+            navigator.share({
+                title: genericTranslations.knowMoreTitle,
+                text: genericTranslations.knowMoreBody,
+                url: window.location.href
+            })
+            .then(() => {
+                console.log('Shared!');
+            })
+            .catch((error) => {
+                console.error(error);
             });
+        });
 
-            socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
+        socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
-            const socialMediaOthers = gId('socialMediaOthers');
-            socialOthersList.socialMedia.forEach(elem => {
-                socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
-            });
-        }, 50);
+        const socialMediaOthers = gId('socialMediaOthers');
+        socialOthersList.socialMedia.forEach(elem => {
+            socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
+        });
     //}
         /*}
         else {
