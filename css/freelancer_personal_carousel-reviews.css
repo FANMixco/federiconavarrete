@@ -74,7 +74,7 @@ h6 {
 
 header.masthead h2 {
 	font-size: 1.3rem;
-	font-family: Lato,"Lucida Grande",Tahoma,Sans-Serif!important
+	font-family: "Lucida Grande",Tahoma,Sans-Serif!important
 }
 
 hr.star-black,
@@ -123,6 +123,10 @@ hr.star-dark {
 hr.star-dark:after {
 	color: var(--dark-gray);
 	background-color: white;
+}
+
+#divSoftSkills p, #divTechSkills p {
+	font-weight: 500!important;
 }
 
 #mainNav .navbar-brand,
