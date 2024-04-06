@@ -458,9 +458,7 @@ a#aBooksModal {
 	margin: auto !important;
 }
 
-.btn-more,
-.carousel-video-inner,
-.centerText {
+.carousel-video-inner {
 	text-align: center;
 }
 
