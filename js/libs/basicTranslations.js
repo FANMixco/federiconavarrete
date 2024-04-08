@@ -1,7 +1,8 @@
 let tErr1,
     currentLoc = '',
     genericTranslations,
-    basicInfo;
+    basicInfo,
+    totalGenerics;
 
 fetchData(`${jsonLoc}/generics.json`)
     .then(data => {
@@ -60,14 +61,16 @@ let loadTranslationsWithRetry = function (fn, callback) {
     retry(3, 150, fn, callback);
 };
 
+function loadGenerics(dTrans) {
+    dTrans.forEach(item => {
+        item.innerHTML = genericTranslations[item.dataset.translation];
+    });
+}
+
 function loadTranslations() {
     try {
         gAll('button.btn-close').forEach(item => {
             item.setAttribute("aria-label", genericTranslations.close);
-        });
-
-        gAll('[data-translation]').forEach(item => {
-            item.innerHTML = genericTranslations[item.dataset.translation];
         });
 
         gAll('[data-title-translation]').forEach(item => {
@@ -75,6 +78,12 @@ function loadTranslations() {
             item.setAttribute("aria-label", trans);
             item.title = trans;
         });
+
+        const dTrans = gAll('[data-translation]');
+    
+        totalGenerics = dTrans.length;
+
+        loadGenerics(dTrans);
 
         gAll('.btn-preview').forEach(item => {
             item.addEventListener(eClick, () => {

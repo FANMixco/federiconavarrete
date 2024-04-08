@@ -34,6 +34,12 @@ function onReadyPersonal() {
     gAll('.ignore-click').forEach(element => {
         element.addEventListener('click', () => false);
     });
+
+    const dTrans = gAll('[data-translation]');
+
+    if (totalGenerics < dTrans.length) {
+        loadGenerics(dTrans);
+    }
 }
 
 if (document.readyState !== "loading") {

@@ -72,9 +72,14 @@ h6 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+.btn,
+header.masthead h2,
+.card-subtitle {
+	font-family: "Lucida Sans", Roboto, Tahoma, Sans-Serif !important;
+}
+
 header.masthead h2 {
 	font-size: 1.3rem;
-	font-family: "Lucida Grande", Roboto, Tahoma, Sans-Serif !important;
 	font-weight: 400;
 }
 
