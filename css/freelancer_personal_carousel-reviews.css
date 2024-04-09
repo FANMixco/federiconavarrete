@@ -424,6 +424,7 @@ a#aBooksModal {
 }
 
 #legendsIframe {
+	overflow-y: hidden;
 	width: 100%;
 	border: 0;
 	height: 325px;
