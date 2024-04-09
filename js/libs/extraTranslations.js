@@ -186,7 +186,7 @@ function loadServices(serviceList) {
 }
 
 function getCarousel(items, id, arrowsColor = 'text-muted', isVideo = false) {
-    return `${!isVideo ? `<div class="container-fluid" id="div${id}">` : ''}<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><button class="carousel-control-prev icon-size-22 ${isVideo ? 'carousel-control-prev-video' : 'carousel-control-prev'}" type="button" data-bs-target="#${id}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></button><button class="carousel-control-next icon-size-22 ${isVideo ? 'carousel-control-next-video' : 'carousel-control-next'}" type="button" data-bs-target="#${id}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></button></div>${!!isVideo ? '</div>' : ''}`;
+    return `${!isVideo ? `<div class="container-fluid" id="div${id}">` : ''}<div id="${id}" class="carousel slide"><div class="carousel-inner">${items}</div><a class="carousel-control-prev icon-size-22 ${isVideo ? 'carousel-control-prev-video' : 'carousel-control-prev'}" type="button" data-bs-target="#${id}" data-bs-slide="prev" aria-label="Previous"><span class="${arrowsColor} icon-chevron-left-solid"></span></a><a class="carousel-control-next icon-size-22 ${isVideo ? 'carousel-control-next-video' : 'carousel-control-next'}" type="button" data-bs-target="#${id}" data-bs-slide="next" aria-label="Next"><span class="${arrowsColor} icon-chevron-right-solid"></span></a></div>${!!isVideo ? '</div>' : ''}`;
 }
 
 function getSCItem(index, title) {
