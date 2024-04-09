@@ -23,10 +23,6 @@ const getScript = url => new Promise((resolve, reject) => {
     document.head.appendChild(script);
 });
 
-function fixClick() {
-
-}
-
 function onReadyPersonal() {
     const cYear = new Date().getFullYear(),
           spanYear = gId("spanYear"),
@@ -35,7 +31,7 @@ function onReadyPersonal() {
     spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
 
     gAll('.ignore-click').forEach(element => {
-        element.addEventListener('click', () => false);
+        element.addEventListener(eClick, () => false);
     });
 
     if (totalGenerics < dTrans.length) {
@@ -65,6 +61,16 @@ function onReadyPersonal() {
                 }
             }, 500);
         });
+    });
+
+    // Add event listener to document
+    document.addEventListener(eClick, function(event) {
+        const isClickInsideNavbar = gId('mainNav').contains(event.target);
+
+        // If click is outside navbar, close navbar
+        if (!isClickInsideNavbar && gId("navbarResponsive").classList.contains("show")) {
+            gId("menuExpander").click();
+        }
     });
 }
 
