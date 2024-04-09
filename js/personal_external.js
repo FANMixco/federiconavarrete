@@ -40,26 +40,7 @@ function onReadyPersonal() {
 
     gAll('.mFix').forEach(item => {
         item.addEventListener(eClick, () => {
-            const loc = item.getAttribute('href').slice(1),
-                        idLoc = gId(loc),
-                        cTop = idLoc.offsetTop;
-    
-            let scrollCount = 0;
-    
-            const scrollInterval = setInterval(() => {
-                const ncTop = idLoc.offsetTop;
-    
-                if (cTop < ncTop) {
-                    idLoc.scrollIntoView({ behavior: 'smooth' });
-                    scrollCount++;
-                } else {
-                    clearInterval(scrollInterval);
-                }
-    
-                if (scrollCount === 5) {
-                    clearInterval(scrollInterval);
-                }
-            }, 500);
+            scrollToLoc(item.getAttribute('href').slice(1));
         });
     });
 
@@ -72,6 +53,32 @@ function onReadyPersonal() {
             gId("menuExpander").click();
         }
     });
+
+    if (window.location.hash) {
+        scrollToLoc(window.location.hash.substring(1), 8);
+    }
+}
+
+function scrollToLoc(loc, max = 5) {
+    const idLoc = gId(loc),
+          cTop = idLoc.offsetTop;
+
+    let scrollCount = 0;
+    
+    const scrollInterval = setInterval(() => {
+        const ncTop = idLoc.offsetTop;
+
+        if (cTop < ncTop) {
+            idLoc.scrollIntoView({ behavior: 'smooth' });
+            scrollCount++;
+        } else {
+            clearInterval(scrollInterval);
+        }
+
+        if (scrollCount === max) {
+            clearInterval(scrollInterval);
+        }
+    }, 500);
 }
 
 if (document.readyState !== "loading") {
