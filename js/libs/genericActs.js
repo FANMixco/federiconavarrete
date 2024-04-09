@@ -40,11 +40,11 @@ let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && 
     tagRegExp,
     extraContact = 0;
 
-function hFixCMenu() {
+/*function hFixCMenu() {
     setTimeout(() => {
         closeMenu();
     }, 500);
-}
+}*/
 
 function gId(id) {
     return document.getElementById(id);
@@ -62,11 +62,11 @@ function dIframe(id, cls) {
     return `id="${id}" class="${cls}" style='background: url("img/icons/loading.gif") center/7em no-repeat'`
 }
 
-function closeMenu() {
+/*function closeMenu() {
     if (gId("navbarResponsive").classList.contains("show")) {
         gId("menuExpander").click();
     }
-}
+}*/
 
 function getHeight() {
     const body = document.body,

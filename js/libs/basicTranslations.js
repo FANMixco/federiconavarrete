@@ -145,17 +145,6 @@ function loadBasicInfo() {
             });
         });
 
-        gAll('.mFix').forEach(item => {
-            item.addEventListener(eClick, () => {
-                const self = this;
-                tErr1 = setTimeout(() => {
-                    self.click();
-                    clearTimeout(tErr1);
-                    hFixCMenu();
-                }, 500);
-            });
-        });
-
         hName.innerHTML = name;
         hHeadline.innerHTML = headline;
         hIntro.innerHTML = headlineIntro;

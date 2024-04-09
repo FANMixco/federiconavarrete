@@ -1,7 +1,6 @@
-const fURL = 'https://federiconavarrete.com/';
-
-const imgLocPortfolio = 'img/portfolio/';
-const imgLocArticles = 'img/articles/';
+const fURL = 'https://federiconavarrete.com/',
+      imgLocPortfolio = 'img/portfolio/',
+      imgLocArticles = 'img/articles/';
 
 //getScripts.js
 const getScript = url => new Promise((resolve, reject) => {
@@ -24,10 +23,14 @@ const getScript = url => new Promise((resolve, reject) => {
     document.head.appendChild(script);
 });
 
-function onReadyPersonal() {
-    const cYear = new Date().getFullYear();
+function fixClick() {
 
-    const spanYear = gId("spanYear");
+}
+
+function onReadyPersonal() {
+    const cYear = new Date().getFullYear(),
+          spanYear = gId("spanYear"),
+          dTrans = gAll('[data-translation]');
 
     spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
 
@@ -35,11 +38,34 @@ function onReadyPersonal() {
         element.addEventListener('click', () => false);
     });
 
-    const dTrans = gAll('[data-translation]');
-
     if (totalGenerics < dTrans.length) {
         loadGenerics(dTrans);
     }
+
+    gAll('.mFix').forEach(item => {
+        item.addEventListener(eClick, () => {
+            const loc = item.getAttribute('href').slice(1),
+                        idLoc = gId(loc),
+                        cTop = idLoc.offsetTop;
+    
+            let scrollCount = 0;
+    
+            const scrollInterval = setInterval(() => {
+                const ncTop = idLoc.offsetTop;
+    
+                if (cTop < ncTop) {
+                    idLoc.scrollIntoView({ behavior: 'smooth' });
+                    scrollCount++;
+                } else {
+                    clearInterval(scrollInterval);
+                }
+    
+                if (scrollCount === 5) {
+                    clearInterval(scrollInterval);
+                }
+            }, 500);
+        });
+    });
 }
 
 if (document.readyState !== "loading") {
@@ -52,8 +78,8 @@ if (smallScreen) {
     const imgProfile = gId('imgProfile');
     imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
 } else {
-    const profileDiv = gId('profile-div');
-    const mediaQuery = window.matchMedia('(min-width: 769px)');
+    const profileDiv = gId('profile-div'),
+          mediaQuery = window.matchMedia('(min-width: 769px)');
 
     function handleTabletChange(e) {
         // Check if the media query is true
