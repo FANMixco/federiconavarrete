@@ -56,6 +56,12 @@ function onReadyFreelancer() {
     document.addEventListener("click", closeMenu);
 }
 
+function closeMenu() {
+    if (gId("navbarResponsive").classList.contains("show")) {
+        gId("menuExpander").click();
+    }
+}
+
 // Navbar shrink function
 let navbarShrink = () => {
     const navbarCollapsible = document.body.querySelector('#mainNav');
