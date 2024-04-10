@@ -15,7 +15,7 @@ function onReadyFreelancer() {
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = Array.from(document.querySelectorAll('#navbarResponsive .nav-link'));
+    const responsiveNavItems = Array.from(gAll('#navbarResponsive .nav-link'));
 
     responsiveNavItems.forEach(responsiveNavItem => {
         responsiveNavItem.addEventListener(eClick, () => {

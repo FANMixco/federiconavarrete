@@ -122,13 +122,13 @@ if (smallScreen) {
 function screenResize() {
     closeMenu();
     // Get the div element
-    const element = gId("hContent");
+    //const element = gId("hContent");
     // Get the current width of the window
     const width = window.innerWidth;
 
-    element.className = (width < 1200) ? "container-fluid" : "container";
+    gId("hContent").className = (width < 1200) ? "container-fluid" : "container";
 
-    devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth;
+    devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > width;
 
     if (gId('contactMeI'))
         iFrameHResize('contactMeI');
@@ -144,7 +144,7 @@ if (smallScreenMobileOS) {
     let lastScrollTop = 0;
 
     window.addEventListener("scroll", function () {
-        let currentScroll = window.scrollY || document.documentElement.scrollTop;
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
         gId("contactMeFloat").style.display = (currentScroll > lastScrollTop) ? 'none' : 'block';
         lastScrollTop = currentScroll;
     }, false);
