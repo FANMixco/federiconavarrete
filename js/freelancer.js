@@ -4,6 +4,7 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 */
 let isMenuTriggered = false;
+const navbarResponsive = gId('navbarResponsive');
 
 function onReadyFreelancer() {
 
@@ -35,7 +36,7 @@ function onReadyFreelancer() {
         if (el_autohide) {
             let last_scroll_top = 0;
             window.addEventListener('scroll', function () {
-                if (gId("navbarResponsive").classList.contains("show")) {
+                if (navbarResponsive.classList.contains("show")) {
                     gId("menuExpander").click();
                 }
 
@@ -57,8 +58,7 @@ function onReadyFreelancer() {
 }
 
 function addPadding() {
-    if (!navbarCollapse.classList.contains('show'))
-        document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight - 1}px`;
+    document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight - 1}px`;
 }
 
 // Navbar shrink function
