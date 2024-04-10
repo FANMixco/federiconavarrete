@@ -59,7 +59,7 @@ function onReadyFreelancer() {
 window.addEventListener('resize', addPadding);
 
 function addPadding() {
-    document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight}px`;
+    document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight - 1}px`;
 }
 
 // Navbar shrink function
