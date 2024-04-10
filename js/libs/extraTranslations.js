@@ -720,9 +720,10 @@ function handleNavbarVisibility() {
 
     isHandlingVisibility = true;
 
-    const dynamicNavItem = document.getElementsByClassName('dynamicNavItem');
-    const sMenu = gId('sMenu');
-    const dMenu = gId('dMenu');
+    const dynamicNavItem = document.getElementsByClassName('dynamicNavItem'),
+          sMenu = gId('sMenu'),
+          dMenu = gId('dMenu'),
+          display = [ 'display:flex !important', 'display:none !important' ];
 
     if (window.getComputedStyle(navbarCollapse).display === 'flex') {
         // Navbar is not visible, remove the dynamicNavItem
@@ -731,8 +732,8 @@ function handleNavbarVisibility() {
                 elem.parentNode.removeChild(elem);
             }
         });
-        sMenu.setAttribute('style', 'display:flex !important');
-        dMenu.style.display = 'block';
+        menuHideShow(sMenu, display[0]);
+        menuHideShow(dMenu, display[0]);
     }
     else {
         // Navbar is visible, add the dynamicNavItem
@@ -753,11 +754,15 @@ function handleNavbarVisibility() {
             const mobileContactMe = gId("mobileContactMe");
             mobileContactMe.addEventListener(eClick, contactMeForm);
         }
-        sMenu.setAttribute('style', 'display:none !important');
-        dMenu.style.display = 'none';
+        menuHideShow(sMenu, display[1]);
+        menuHideShow(dMenu, display[1]);
     }
 
     isHandlingVisibility = false;
+
+    function menuHideShow(menu, display) {
+        menu.setAttribute('style', display);
+    }
 }
 
 function debounce(func, wait) {
