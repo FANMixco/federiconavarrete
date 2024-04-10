@@ -56,8 +56,6 @@ function onReadyFreelancer() {
     //document.addEventListener("click", closeMenu);
 }
 
-window.addEventListener('resize', addPadding);
-
 function addPadding() {
     document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight - 1}px`;
 }

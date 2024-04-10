@@ -132,6 +132,8 @@ function screenResize() {
 
     if (gId('contactMeI'))
         iFrameHResize('contactMeI');
+
+    setTimeout(addPadding, 150);
 }
 
 // Call the function when the page loads
