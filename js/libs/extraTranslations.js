@@ -62,7 +62,6 @@ const loadSectionIfVisible = () => {
 };
 
 window.addEventListener('scroll', loadSectionIfVisible);
-window.addEventListener('resize', loadSectionIfVisible);
 
 // Initial load check
 loadSectionIfVisible();
@@ -785,12 +784,17 @@ function debounce(func, wait) {
 
 const debouncedHandleNavbarVisibility = debounce(handleNavbarVisibility, 250);
 
-window.addEventListener('resize', debouncedHandleNavbarVisibility);
-
 if (document.readyState !== "loading") {
     handleNavbarVisibility();
 } else {
     document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
+}
+
+window.addEventListener('resize', resizeExtras);
+
+function resizeExtras() {
+    loadSectionIfVisible();
+    debouncedHandleNavbarVisibility();
 }
 
 /*function loadHobbies() {
