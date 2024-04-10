@@ -705,15 +705,15 @@ a.text-material-link-dark:active {
 	font-size: 34px;
 }
 
-@media (min-width: 1200px) and (max-width: 1399px) {
-    .nav-item {
-        display: flex!important;
-        align-items: center!important;
-    }
+.nav-item {
+    display: flex!important;
+    align-items: center!important;
+    position: relative; /* Ensure .nav-item is a positioned element */
+}
 
-	.dropdown-menu {
-		top: 5rem;
-	}
+.dropdown-menu {
+    top: calc(100% + 0.15rem); /* Place the top of dropdown-menu 0.15rem below the bottom of .nav-item */
+    left: 0; /* Align with the left edge of .nav-item */
 }
 
 .closeModal {

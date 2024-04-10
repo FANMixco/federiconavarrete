@@ -731,7 +731,7 @@ function handleNavbarVisibility() {
                 elem.parentNode.removeChild(elem);
             }
         });
-        sMenu.style.display = 'block';
+        sMenu.setAttribute('style', 'display:flex !important');
         dMenu.style.display = 'block';
     }
     else {
@@ -753,7 +753,7 @@ function handleNavbarVisibility() {
             const mobileContactMe = gId("mobileContactMe");
             mobileContactMe.addEventListener(eClick, contactMeForm);
         }
-        sMenu.style.display = 'none';
+        sMenu.setAttribute('style', 'display:none !important');
         dMenu.style.display = 'none';
     }
 
