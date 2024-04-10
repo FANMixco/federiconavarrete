@@ -133,7 +133,7 @@ function screenResize() {
     if (gId('contactMeI'))
         iFrameHResize('contactMeI');
 
-    if (!navbarCollapse.classList.contains('show') && navbarResponsive.classList.contains("show"))
+    if (!navbarCollapse.classList.contains('show') && navbarResponsive.classList.contains("show") && deviceType() === devs[0])
         setTimeout(addPadding, 250);
 }
 
