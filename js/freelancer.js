@@ -30,7 +30,7 @@ function onReadyFreelancer() {
         const el_autohide = document.querySelector('.autohide');
 
         // add padding-top to bady (if necessary)
-        document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight}px`;
+        addPadding();
 
         if (el_autohide) {
             let last_scroll_top = 0;
@@ -56,11 +56,11 @@ function onReadyFreelancer() {
     //document.addEventListener("click", closeMenu);
 }
 
-/*function closeMenu() {
-    if (gId("navbarResponsive").classList.contains("show")) {
-        gId("menuExpander").click();
-    }
-}*/
+window.addEventListener('resize', addPadding);
+
+function addPadding() {
+    document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight}px`;
+}
 
 // Navbar shrink function
 let navbarShrink = () => {

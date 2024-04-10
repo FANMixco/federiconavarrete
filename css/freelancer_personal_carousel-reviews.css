@@ -1025,7 +1025,7 @@ a.text-material-link-dark:active {
 	}
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
 	.navbar {
 		padding-top: 0.1rem !important;
 		padding-bottom: 0.1rem !important;
@@ -1040,7 +1040,7 @@ a.text-material-link-dark:active {
 	}
 }
 
-@media (min-width: 576px) and (max-width: 1199.98px) {
+@media (min-width: 576px) and (max-width: 1200px) {
 	.navbar {
 		padding-top: 0.2rem !important;
 		padding-bottom: 0.2rem !important;
