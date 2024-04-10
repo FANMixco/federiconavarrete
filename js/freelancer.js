@@ -64,7 +64,7 @@ function addPadding() {
 
 // Navbar shrink function
 let navbarShrink = () => {
-    const navbarCollapsible = document.body.querySelector('#mainNav');
+    const navbarCollapsible = gId('mainNav');
     let scroll = window.scrollY;
 
     if (!navbarCollapsible) {

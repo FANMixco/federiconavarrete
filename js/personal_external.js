@@ -65,8 +65,6 @@ function closeMenu() {
     }
 }
 
-window.addEventListener('resize', closeMenu);
-
 function scrollToLoc(loc, max = 5) {
     const idLoc = gId(loc),
           cTop = idLoc.offsetTop;
@@ -122,6 +120,7 @@ if (smallScreen) {
 
 // Define a function to change the class based on screen size
 function screenResize() {
+    closeMenu();
     // Get the div element
     const element = gId("hContent");
     // Get the current width of the window
