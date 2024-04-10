@@ -26,7 +26,7 @@ function onReadyFreelancer() {
         });
     });
 
-    if (deviceType() === devs[0]) {
+    if (smallScreen) {
 
         const el_autohide = document.querySelector('.autohide');
 

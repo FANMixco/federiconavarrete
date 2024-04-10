@@ -130,11 +130,13 @@ function screenResize() {
 
     devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > width;
 
-    if (gId('contactMeI'))
+    if (gId('contactMeI')) {
         iFrameHResize('contactMeI');
+    }
 
-    if (!navbarCollapse.classList.contains('show') && navbarResponsive.classList.contains("show") && deviceType() === devs[0])
+    if (!navbarCollapse.classList.contains('show') && navbarResponsive.classList.contains("show") && smallScreen) {
         setTimeout(addPadding, 250);
+    }
 }
 
 // Call the function when the page loads
