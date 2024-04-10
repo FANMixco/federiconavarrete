@@ -736,6 +736,12 @@ function handleNavbarVisibility() {
         menuHideShow(dMenu, display[0]);
     }
     else {
+        loadTranslationsWithRetry(loadDynamicMenu, () => { });
+    }
+
+    isHandlingVisibility = false;
+
+    function loadDynamicMenu() {
         // Navbar is visible, add the dynamicNavItem
         if (dynamicNavItem.length === 0) {
             const ul = gId('nElems');
@@ -757,8 +763,6 @@ function handleNavbarVisibility() {
         menuHideShow(sMenu, display[1]);
         menuHideShow(dMenu, display[1]);
     }
-
-    isHandlingVisibility = false;
 
     function menuHideShow(menu, display) {
         menu.setAttribute('style', display);
