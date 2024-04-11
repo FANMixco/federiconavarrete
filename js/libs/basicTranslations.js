@@ -91,11 +91,9 @@ function loadTranslations() {
                 const url = `${urlB}${currentLoc}.federiconavarrete.com`,
                       pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery,
                       btnFullScreen = gId('btn-full-screen'),
-                      title = gId('zoomTitle'),
-                      gPreview = gId('gPreview'),
                       hFrameGeneric = 450;
 
-                title.innerHTML = pTitle;
+                gId('zoomTitle').innerHTML = pTitle;
 
                 loadIframe("divPreview", pTitle, `${url}?isIframe=true`, 'id="gPreview" allowfullscreen');
 
@@ -111,7 +109,7 @@ function loadTranslations() {
                 else if (devicePortraitAndLong) {
                     hPreviewHeight = `${hFrameGeneric * 1.5}px`;
                 }
-                gPreview.style.height = hPreviewHeight;
+                gId('gPreview').style.height = hPreviewHeight;
             });
         });
 
