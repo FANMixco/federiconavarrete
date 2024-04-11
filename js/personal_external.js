@@ -134,7 +134,7 @@ function screenResize() {
         iFrameHResize('contactMeI');
     }
 
-    if (!navbarCollapse.classList.contains('show') && navbarResponsive.classList.contains("show") && smallScreen) {
+    if (!navbarResponsive.classList.contains("show") && smallScreen) {
         setTimeout(addPadding, 250);
     }
 }
