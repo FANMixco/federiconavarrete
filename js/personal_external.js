@@ -139,8 +139,6 @@ function screenResize() {
     }
 }
 
-// Call the function when the page loads
-window.addEventListener('resize', screenResize);
 screenResize();
 
 if (smallScreenMobileOS) {
@@ -184,6 +182,8 @@ function loadAnalytics() {
 
 window.onload = function () {
     onReadyExternal();
+    // Call the function when the page loads
+    window.addEventListener('resize', screenResize);
 };
 
 if (!validLang.includes(uLang)) {
