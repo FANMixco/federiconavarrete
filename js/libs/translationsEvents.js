@@ -9,8 +9,8 @@ async function fetchData(url) {
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const lang = new URL(window.location.href).searchParams.get("lang");
-        const data = await fetchData(`../js/i18n/${lang ? lang : 'en'}/events.json`);
+        const lang = new URL(window.location.href).searchParams.get("lang"),
+              data = await fetchData(`../js/i18n/${lang ? lang : 'en'}/events.json`);
 
         loadSeenOn(data);
     } catch (e) {
@@ -18,11 +18,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     $('#eventsCarousel').on('slide.bs.carousel', (e) => {
-        const itemsPerSlide = 4;
-        const cItem = '.carousel-item';
-        const $e = $(e.relatedTarget);
+        const itemsPerSlide = 4,
+              cItem = '.carousel-item',
+              $e = $(e.relatedTarget),
+              totalItems = $(cItem).length;
         let idx = $e.index();
-        const totalItems = $(cItem).length;
 
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);

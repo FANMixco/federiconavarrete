@@ -1,15 +1,3 @@
-const urlB = 'https://',
-      uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
-      validLang = ['en', 'es', 'zh'],
-      jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
-      lazyLoading = 'loading="lazy"',
-      eClick = 'click',
-      nVis = 'd-none',
-      tCenter = "text-center",
-      marginTop = 0,
-      heightIFrame = 600,
-      devs = ["Smartphone", "Tablet", "Desktop", "Watch"];
-
 const deviceType = () => {
     const ua = navigator.userAgent.toLowerCase();
   
@@ -31,7 +19,18 @@ const deviceType = () => {
     return devs[2];
 };
 
-const equalScreen = window.innerWidth == window.innerHeight,
+const urlB = 'https://',
+      uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
+      validLang = ['en', 'es', 'zh'],
+      jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
+      lazyLoading = 'loading="lazy"',
+      eClick = 'click',
+      nVis = 'd-none',
+      tCenter = "text-center",
+      marginTop = 0,
+      heightIFrame = 600,
+      devs = ["Smartphone", "Tablet", "Desktop", "Watch"],
+      equalScreen = window.innerWidth == window.innerHeight,
       actualDev = deviceType(),
       smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]),
       smallScreen = smallScreenMobileOS || equalScreen;
@@ -70,7 +69,7 @@ function dIframe(id, cls) {
 
 function getHeight() {
     const body = document.body,
-        html = document.documentElement;
+          html = document.documentElement;
 
     return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
 }
@@ -116,10 +115,6 @@ function getFLink(cls, link, body, extras = '') {
 
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
     return `${hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : ''}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
-}
-
-function getActionBtn(link, icon, title) {
-    return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
 }
 
 function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {

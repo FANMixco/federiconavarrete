@@ -88,26 +88,24 @@ function loadTranslations() {
         gAll('.btn-preview').forEach(item => {
             item.addEventListener(eClick, () => {
                 currentLoc = (currentLoc != item.dataset.action) ? item.dataset.action : currentLoc;
-                const url = `${urlB}${currentLoc}.federiconavarrete.com`;
-                const pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery;
+                const url = `${urlB}${currentLoc}.federiconavarrete.com`,
+                      pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery,
+                      btnFullScreen = gId('btn-full-screen'),
+                      title = gId('zoomTitle'),
+                      gPreview = gId('gPreview'),
+                      hFrameGeneric = 450;
 
-                const title = gId('zoomTitle');
                 title.innerHTML = pTitle;
 
                 loadIframe("divPreview", pTitle, `${url}?isIframe=true`, 'id="gPreview" allowfullscreen');
-
-                const btnFullScreen = gId('btn-full-screen');
 
                 btnFullScreen.href = url;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
-                const gPreview = gId('gPreview');
-                const hFrameGeneric = 450;
                 let hPreviewHeight = `${hFrameGeneric}px`;
                 if (smallScreen) {
-                    const portrait = window.matchMedia("(orientation: portrait)");
-                    const height = equalScreen ? document.documentElement.clientHeight * 0.6 : portrait.matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
+                    const height = equalScreen ? document.documentElement.clientHeight * 0.6 : window.matchMedia("(orientation: portrait)").matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
                     hPreviewHeight = `${height}px`;
                 }
                 else if (devicePortraitAndLong) {
@@ -133,7 +131,8 @@ function loadBasicInfo() {
             hIntro = gId('hIntro'),
             divAbout = gId('divAbout'),
             favBookDiv = gId('favBook'),
-            favPodcastDiv = gId('favPodcast');
+            favPodcastDiv = gId('favPodcast'),
+            listContacts = gId('listContacts');
 
         gAll('.nav-link').forEach(item => {
             item.addEventListener(eClick, () => {
@@ -169,7 +168,6 @@ function loadBasicInfo() {
         //    favPodcastDiv.classList.add(nVis);
         //}
 
-        const listContacts = gId('listContacts');
 
         /*if (skype.isVisible) {
             listContacts.innerHTML = getInLineBtn(genericTranslations.skype, `skype:${skype.id}?call`, 'skype') + listContacts.innerHTML;
@@ -200,21 +198,20 @@ function loadBasicInfo() {
         });
 
         gId('youTubePreview').addEventListener(eClick, () => {
-            const gTitle = gId('gTitle');
+            const gTitle = gId('gTitle'),
+                  btnFullScreenPreview = gId('btn-full-screen-preview');
+
             gTitle.innerHTML = genericTranslations.winning;
             gTitle.classList.remove(nVis);
 
-            const gDivTitle = gId('gDivTitle');
-            gDivTitle.classList.remove('border-0');
+            gId('gDivTitle').classList.remove('border-0');
 
-            const modalPreview = gId('modal-preview');
-            modalPreview.classList.add('modal-xl');
+            gId('modal-preview').classList.add('modal-xl');
 
             loadIframe('iframeGeneric', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'), true);
 
             iFrameHResize('yIframeP', 0.7);
 
-            const btnFullScreenPreview = gId('btn-full-screen-preview');
             btnFullScreenPreview.href = `${urlB}bit.ly/3p9hMGJ`;
             btnFullScreenPreview.setAttribute('title', genericTranslations.winning);
             btnFullScreenPreview.setAttribute('aria-label', genericTranslations.winning);
@@ -227,6 +224,10 @@ function loadBasicInfo() {
     }
     catch {
         return false;
+    }
+
+    function getActionBtn(link, icon, title) {
+        return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
     }
 }
 

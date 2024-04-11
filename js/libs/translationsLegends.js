@@ -9,8 +9,8 @@ async function fetchData(url) {
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const lang = new URL(window.location.href).searchParams.get("lang");
-        const data = await fetchData(`../js/i18n/${lang ? lang : 'en'}/legends.json`);
+        const lang = new URL(window.location.href).searchParams.get("lang"),
+              data = await fetchData(`../js/i18n/${lang ? lang : 'en'}/legends.json`);
 
         loadLegends(data.legendsList);
     } catch (e) {
@@ -18,11 +18,12 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     $('#legendsCarousel').on('slide.bs.carousel', (e) => {
-        const itemsPerSlide = 3;
-        const cItem = '.carousel-item';
-        const $e = $(e.relatedTarget);
+        const itemsPerSlide = 3,
+              cItem = '.carousel-item',
+              $e = $(e.relatedTarget),
+              totalItems = $(cItem).length;
+
         let idx = $e.index();
-        const totalItems = $(cItem).length;
 
         if (idx >= totalItems - (itemsPerSlide - 1)) {
             let it = itemsPerSlide - (totalItems - idx);
@@ -35,18 +36,18 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 function loadLegends(legendsList) {
-    const urlI = '../img/legends/';
-    const fragment = document.createDocumentFragment();
-    const lazyLoaded = "loading='lazy'";
+    const urlI = '../img/legends/',
+          fragment = document.createDocumentFragment(),
+          lazyLoaded = "loading='lazy'";
 
     legendsList.forEach((item) => {
-        const active = item.isActive ? " active" : "";
+        const active = item.isActive ? " active" : "",
+              legendDiv = document.createElement('div');
 
-        const legendDiv = document.createElement('div');
         legendDiv.className = `carousel-item col-md-4${active}`;
         legendDiv.innerHTML = `<div class="card"><div class="img-thumbnail"><a class="text-warning legend-link" target="_blank" href="https://${item.link}"><picture><source srcset="${urlI}${item.img}.webp" type="image/webp"><source srcset="${urlI}${item.img}.jpg" type="image/jpeg"><img src="${urlI}${item.img}.jpg" ${lazyLoaded} alt="${item.title}" class="cards-row"></picture><div class="caption"><p><b>${item.title}</b></p></div></a></div></div>`;
         fragment.appendChild(legendDiv);
     });
 
-    document.getElementById('divLegends').appendChild(fragment);
+    $('#divLegends').append(fragment);
 }

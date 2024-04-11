@@ -94,33 +94,31 @@ function loadReviews(reviewsList) {
     try {
         const { reviews } = reviewsList;
 
-        const divReviewsPreviews = gId('divReviewsPreviews');
+        const divReviewsPreviews = gId('divReviewsPreviews'),
+              divGenericContent = gId('divGenericContent');
         //const divReviews = gId("divReviews");
-        const divGenericContent = gId('divGenericContent');
 
         //if (isVisible) {
         let reviewsHTML = '';
         reviews.forEach((item, index) => {
-            const currentReview = index + 1;
-            const name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name;
-            const reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer("", item.img, currentReview, name, item.title, "", "white", "white", `${item.shortReview}${getBtnModal("reviewGeneric", "text-material-link", `readMore${currentReview}`, genericTranslations.readMore, '', 'reviewGeneric')}`, "", true)}</div>`;
+            const currentReview = index + 1,
+                  name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name,
+                  reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer2(item.img, '', currentReview, false, name, item.title, "", item.review, true)}</div>`;
+
+                  console.log(getReviewContainer2(item.img, '', currentReview, false, name, item.title, "", item.review, true));
+
             reviewsHTML += reviewPreview;
 
-            const longReview = item.isPDF ?
-                `${getImgName(name, item.img, currentReview, "picReviewers")}${getReviewTitle('dark', item.title.replaceAll('text-material-link', "text-material-link-dark"))}${getInnerTitle(item.date)}<div id="review${currentReview}PDF"></div><div class="text-center">${getFLink("btn btn btn-outline-dark", item.pdfLocation, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>` :
-                getReviewContainer("picReviewers", item.img, index + 1, name, item.date, getInnerTitle(item.title.replaceAll('text-material-link', "text-material-link-dark")), 'dark', 'black', item.review, "text-center", false);
+            const longReview = getReviewContainer2(item.img, "picReviewers", currentReview, true, name, item.title, item.date, item.review, false, true, item.isPDF);
 
             fullReviews.push({ review: longReview, isPDF: item.isPDF, pdfLocation: item.pdfLocation });
         });
 
         divReviewsPreviews.innerHTML = reviewsHTML;
-        //} else {
-        //    divReviews.classList.add(nVis);
-        //}
 
         fullReviews.forEach((item, index) => {
-            const rmCurrent = gId(`readMore${index + 1}`);
-            rmCurrent.addEventListener(eClick, (e) => {
+            //const rmCurrent = gId(`readMore${index + 1}`);
+            gId(`readMore${index + 1}`).addEventListener(eClick, (e) => {
                 e.preventDefault();
                 divGenericContent.innerHTML = item.review;
 
@@ -134,6 +132,54 @@ function loadReviews(reviewsList) {
     } catch (e) {
         return e;
     }
+    
+    function getContent2(content, color) {
+        return `<p class="m-0 pt-3 text-${color}">${content}</p>`;
+    }
+    
+    function getTitle2(title, color) {
+        return `<p class="text-${color} m-0 text-center fst-italic p-1">${title}</p>`;
+    }
+    
+    function getReviewContainer2(img, cssImg, reviewIndex, isImgLarge, name, title, subtitle, content, isShort = true, isLarge = false, isPDF = false) {
+        const titleColor = (isShort) ? 'white' : 'dark';
+        if (isShort) {
+            content = getContent2(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white');
+        } else {
+            if (isPDF) {
+                content = `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn btn-outline-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>`
+            }
+            else {
+                content = getContent2(content, 'black');
+            }
+        }
+    
+        return `${getImgName(name, img, reviewIndex, cssImg, isImgLarge)}${getTitle2(title, titleColor)}${(subtitle) ? getTitle2(subtitle, titleColor) : ''}${content}`;
+    }
+    
+
+    function getImgName(name, img, currentReview, extraClass, isLarge) {
+        return `${getImgPreview(img, currentReview, extraClass)}${getReviewName(name, isLarge)}`;
+    }
+
+    function getImgPreview(img, currentReview, extraClass) {
+        return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">${getImgReview(img, currentReview)}</div>`;
+    }
+    
+    function getReviewName(name, isLarge) {
+        return `<p class="mt-4 mb-0 ${tCenter} h5 p-1 text-material-orange text-uppercase" ${(smallScreen) && isLarge ? "style='font-size: larger!important'" : ''}>${name}</p>`;
+    }
+            
+    function getShortReview(str) {
+        // Split the string into an array of words
+        const words = str.split(/\s+/),
+              first30Words = words.slice(0, 30);
+        
+        // Join the words back into a string
+        //const result = first30Words.join(' ');
+    
+        return first30Words.join(' ') + ' …';
+    }
 }
 
 function loadServices(serviceList) {
@@ -141,8 +187,8 @@ function loadServices(serviceList) {
         const { services } = serviceList;
 
         //if (isVisible) {
-        const servicesList = gId('servicesList');
-        const dropdownMenu = gId('dServices');
+        const servicesList = gId('servicesList'),
+              dropdownMenu = gId('dServices');
         let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
         services.flat().forEach(elem => {
@@ -153,11 +199,8 @@ function loadServices(serviceList) {
             newListItem.innerHTML = `<a class="dropdown-item" id="lSer${totalServices}" ${tBlank} href="${tmlLink}">➤&nbsp;${elem.title}</a>`;
             dropdownMenu.appendChild(newListItem);
 
-            // Create card title
-            const title = getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`);
-
             // Append to items            
-            items += getSCItem(totalServices, title);
+            items += getSCItem(totalServices, getCard(tmlLink, `${elem.icon} fSize65`, 'text-white', elem.title, 'card-services', 'fa-icon-services', null, '', true, `service${totalServices}`));
 
             totalServices++;
         });
@@ -198,12 +241,12 @@ function loadAwards(awardList) {
 
         //if (isVisible) {
         const awardsList = gId('awardsList');
-        let availableLinks = [];
+        let availableLinks = [],
+            items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
-        let items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
         awards.flat().forEach((elem, index) => {
-            const tmpLink = `${urlB}${elem.link}`;
-            const title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
+            const tmpLink = `${urlB}${elem.link}`,
+                  title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
 
             availableLinks.push({
                 id: index,
@@ -226,27 +269,19 @@ function loadAwards(awardList) {
 
         awardsList.innerHTML += items;
 
-        if (smallScreen)
+        if (smallScreen) {
             new bootstrap.Carousel(`#carouselAwards`);
+        }
 
         availableLinks.forEach(item => {
             if (item.type !== "_blank") {
-                const linkPreview = gId(`linkPreview${item.id}`);
-
-                linkPreview.addEventListener(eClick, () => {
-                    const btnFullScreenPreview = gId('btn-full-screen-preview');
-                    const gTitle = gId('gTitle');
-
-                    gTitle.classList.add(nVis);
-
-                    const gDivTitle = gId('gDivTitle');
-                    gDivTitle.classList.add('border-0');
-
-                    const tmpLink = item.link;
-
-                    const lPreview = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
-
-                    const modalPreview = gId('modal-preview');
+                gId(`linkPreview${item.id}`).addEventListener(eClick, () => {
+                    const btnFullScreenPreview = gId('btn-full-screen-preview'),
+                          tmpLink = item.link,
+                          modalPreview = gId('modal-preview');
+      
+                    gId('gTitle').classList.add(nVis);
+                    gId('gDivTitle').classList.add('border-0');
 
                     modalPreview.classList.remove('modal-xl');
 
@@ -258,7 +293,7 @@ function loadAwards(awardList) {
                     btnFullScreenPreview.setAttribute('title', item.title);
                     btnFullScreenPreview.setAttribute('aria-label', item.title);
 
-                    gId('iframeGeneric').innerHTML = lPreview;
+                    gId('iframeGeneric').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
                     iFrameHResize('previewerIframeI');
                 });
@@ -290,13 +325,13 @@ function loadSoftSkills(softSkills, softSkillsOthers) {
 
 function loadPersonalProjects(personalProjects) {
     try {
-        const personalProjectsDiv = gId('personalProjects');
+        //const personalProjectsDiv = gId('personalProjects');
         const items = personalProjects.map(item => {
-            const isActive = item.isActive ? " active" : "";
-            const link = `${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`;
+            const isActive = item.isActive ? " active" : "",
+                  link = `${getFLink("text-material-link-dark", `${urlB}${item.link}`, item.title, `${noreferrer} ${tBlank}`)}, ${item.timeFrame}`;
             return `${getCItem(isActive)}<div class="carousel-video-inner">${getUTubeLite(item)}${getH4Tag(link, '')}</div></div>`;
         }).join('');
-        personalProjectsDiv.innerHTML = items;
+        gId('personalProjects').innerHTML = items;
     }
     catch (e) { return e; }
 }
@@ -305,9 +340,9 @@ function loadVideos(presentationsVideos) {
     try {
         const { presentations } = presentationsVideos;
 
-        const divVideos = gId('divVideos');
+        //const divVideos = gId('divVideos');
         //if (isVisible) {
-        loadVideosUTube(presentations, divVideos, 'publicSpeakingDiv');
+        loadVideosUTube(presentations, gId('divVideos'), 'publicSpeakingDiv');
         //}
         //else {
         //    const hPublicSpeaking = gId('hPublicSpeaking');
@@ -347,10 +382,10 @@ function loadVideosUTube(presentations, divVideo, divCar) {
 function loadYouTubeVideos(youtubeTrainings) {
     try {
         const { presentations } = youtubeTrainings;
-        const divYouTubeVideos = gId('divYouTubeVideos');
+        //const divYouTubeVideos = gId('divYouTubeVideos');
 
         //if (isVisible) {
-        loadVideosUTube(presentations, divYouTubeVideos, 'uTubeDiv');
+        loadVideosUTube(presentations, gId('divYouTubeVideos'), 'uTubeDiv');
         /*}
         else {
             const hYouTubeTraining = gId('hYouTubeTraining');
@@ -389,9 +424,9 @@ function loadPresentations(presentationsLinks) {
     try {
         const { presentations } = presentationsLinks;
 
-        const divPPTs = gId('divPPTs');
+        //const divPPTs = gId('divPPTs');
         //if (isVisible) {
-        loadDivPresentations(presentations, divPPTs, 'presentationsDiv');
+        loadDivPresentations(presentations, gId('divPPTs'), 'presentationsDiv');
         /*}
         else {
             const hPresentations = gId('hPresentations');
@@ -411,8 +446,8 @@ function loadImgSection(list, section, divSection, imgPath, optTitle = '', cls =
         //if (isVisible) {
         const divSection = gId(section);
         list.forEach(item => {
-            const tmpImg = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
-            divSection.innerHTML += tmpImg;
+            //const tmpImg = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
+            divSection.innerHTML += getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
             setImage(item.imgID, item.imgBasicName, imgPath);
         });
         /*}
@@ -429,9 +464,10 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
         const { socialMedia } = socialBasicList;
 
         //if (isVisible) {
-        const socialMediaBasic = gId('socialMediaBasic');
-        const socialMediaBasicExtended = gId('social-medias-extended-list');
-        const itemsArray = socialMedia.map(item => getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter")));
+        const socialMediaBasic = gId('socialMediaBasic'),
+              socialMediaBasicExtended = gId('social-medias-extended-list'),
+              itemsArray = socialMedia.map(item => getListItem(getImage(item.title, `${urlB}${item.link}`, `${item.icon}`, true, true, `btn-footer ${item.id}`, false, "iconFooter")));
+              //socialMediaOthers = gId('socialMediaOthers');
 
         socialMediaBasic.innerHTML = itemsArray.join('');
         socialMediaBasicExtended.innerHTML = itemsArray.join('');
@@ -456,9 +492,8 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
         socialMediaBasic.innerHTML += getBtnOthers('otherLocs', 'btn-footer', "");
 
-        const socialMediaOthers = gId('socialMediaOthers');
         socialOthersList.socialMedia.forEach(elem => {
-            socialMediaOthers.innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
+            gId('socialMediaOthers').innerHTML += getListItem(getImage(elem.title, `${urlB}${elem.link}`, `${elem.icon}`, true, true, "btn-footer", false, "iconFooter"));
         });
         //}
         /*}
@@ -478,20 +513,20 @@ function loadSocialMedias(socialBasicList, socialOthersList) {
 
 function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse) {
     try {
-        const divTmp = gId(divContainer);
-        const divOthersContainerDiv = gId(divOthersContainer);
+        //const divTmp = gId(divContainer);
+        //const divOthersContainerDiv = gId(divOthersContainer);
 
         skills.forEach(item => {
-            const items = `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`;
-            divTmp.insertAdjacentHTML('afterbegin', items);
+            //const items = `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`;
+            gId(divContainer).insertAdjacentHTML('afterbegin', `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`);
         });
 
         //const arias = skillsOthers.map((_, i) => `${itemCollapseID}${i}`).join(' ');
         //gId(btnMore).setAttribute("aria-controls", arias);
 
-        skillsOthers.forEach((item, index) => {
-            const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
-            divOthersContainerDiv.insertAdjacentHTML('afterbegin', items);
+        skillsOthers.forEach((item) => {
+            //const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
+            gId(divOthersContainer).insertAdjacentHTML('afterbegin', `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`);
         });
     }
     catch (e) { return e; }
@@ -530,11 +565,12 @@ function loadVideosAndPresentations(youtubeTrainings, presentationsLinks, presen
 
 function setImage(imgID, imgBasic, imgLoc) {
     //let imgBookSize = '';
-    const imgSize = deviceType() == devs[0] ? '_small' : deviceType() == devs[1] ? '_medium' : '';
+    const imgSize = deviceType() == devs[0] ? '_small' : deviceType() == devs[1] ? '_medium' : '',
+        imgTemp = gId(imgID);
+        //,
+        //srcWebP = gId(`srcWebP${imgID}`),
+        //srcJPG = gId(`srcJPG${imgID}`);
 
-    const imgTemp = gId(imgID);
-    const srcWebP = gId(`srcWebP${imgID}`);
-    const srcJPG = gId(`srcJPG${imgID}`);
     //let divBook = gId("myBookDiv");
     //divBook.classList.add(nVis);
 
@@ -555,8 +591,8 @@ function setImage(imgID, imgBasic, imgLoc) {
 
     imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
-    srcWebP.srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
-    srcJPG.srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
+    gId(`srcWebP${imgID}`).srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
+    gId(`srcJPG${imgID}`).srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
 
     /*if (validDate) {
         imgBook.src = `img/mybook/${bookEdition}${imgBookSize}.png`;
@@ -574,34 +610,8 @@ function getUTubeLite(item) {
     return `<lite-youtube class="iVideos" videoid="${item.youTubeID}" playlabel="${item.title}"></lite-youtube>`;
 }
 
-function getImgPreview(img, currentReview, extraClass) {
-    return `<div class="img-box p-1 border rounded-circle m-auto ${extraClass}">${getImgReview(img, currentReview)}</div>`;
-}
-
-function getReviewName(name, isLarge) {
-    const extraCss = (smallScreen) && isLarge ? "style='font-size: larger!important'" : '';
-    return `<p class="mt-4 mb-0 ${tCenter} h5 p-1 text-material-orange text-uppercase" ${extraCss}>${name}</p>`;
-}
-
-function getReviewTitle(color, title, cssCentered) {
-    return `<p class="text-${color} m-0 ${cssCentered} ${tCenter} h6 p-1">${title}</p>`;
-}
-
-function getInnerTitle(title) {
-    return `<p class="text-dark m-0 ${tCenter} p-2">${title}</p>`;
-}
-
 function getImgReview(src, rev) {
     return getPicture(`srcset="${src.replace('.jpg', '.webp')}"`, `srcset="${src}"`, getImgBasicTag(src, lazyLoading, 'd-block w-100 h-auto rounded-circle', '', `review${rev} slide`, 'height="151" width="151"'));
-}
-
-function getReviewContainer(extraClass, img, currentReview, name, title, extraTitle, txtColor, txtColor2, content, cssCentered, isLarge = false) {
-    return `${getImgName(name, img, currentReview, extraClass, isLarge)}${extraTitle}${getReviewTitle(txtColor, title, cssCentered)}<p class="m-0 pt-3 text-${txtColor2}">${content}</p>`;
-}
-
-function getImgName(name, img, currentReview, extraClass, isLarge) {
-    return `${getImgPreview(img, currentReview, extraClass)}
-    ${getReviewName(name, isLarge)}`;
 }
 
 function getPicture(src1, src2, img) {
@@ -640,9 +650,9 @@ function getBtnModal(target, cls, id, body, extras = '', href = '', isBtn = fals
 
 function getBtnShare() {
     let icon = 'share';
-    const isMac = /Macintosh|MacIntel|iPad|iPhone|iPod/i.test(navigator.userAgent);
-    const isWindows = /Windows/i.test(navigator.userAgent);
-    const share = genericTranslations.share ? genericTranslations.share : '';
+    const isMac = /Macintosh|MacIntel|iPad|iPhone|iPod/i.test(navigator.userAgent),
+          isWindows = /Windows/i.test(navigator.userAgent),
+          share = genericTranslations.share ? genericTranslations.share : '';
 
     icon = isMac ? `ios_${icon}` : isWindows ? `windows_${icon}` : icon;
 
@@ -693,8 +703,7 @@ function changeModalType() {
             modal.classList.add("modal-fullscreen");
         });
 
-        let landscape = window.matchMedia("(orientation: landscape)");
-        if (landscape.matches || equalScreen || actualDev === devs[3]) {
+        if (window.matchMedia("(orientation: landscape)").matches || equalScreen || actualDev === devs[3]) {
             gAll(".mFullScreenH").forEach(modal => {
                 modal.classList.remove("modal-xl");
                 modal.classList.add("modal-fullscreen");
@@ -743,21 +752,22 @@ function handleNavbarVisibility() {
     function loadDynamicMenu() {
         // Navbar is visible, add the dynamicNavItem
         if (dynamicNavItem.length === 0) {
-            const ul = gId('nElems');
-            const li = document.createElement('li');
+            const ul = gId('nElems'),
+                  li = document.createElement('li');
             li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
             li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
 
             ul.insertBefore(li, ul.children[1]);
 
-            const liCC = document.createElement('li');
+            const liCC = document.createElement('li');//,
+                  //mobileContactMe = gId("mobileContactMe");
+
             liCC.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
             liCC.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded text-white" id="mobileContactMe">${genericTranslations.contactMe}&nbsp;💡</a>`;
 
             ul.append(liCC);
 
-            const mobileContactMe = gId("mobileContactMe");
-            mobileContactMe.addEventListener(eClick, contactMeForm);
+            gId("mobileContactMe").addEventListener(eClick, contactMeForm);
         }
         menuHideShow(sMenu, display[1]);
         menuHideShow(dMenu, display[1]);
@@ -771,8 +781,8 @@ function handleNavbarVisibility() {
 function debounce(func, wait) {
     let timeout;
     return function () {
-        const context = this;
-        const args = arguments;
+        const context = this,
+              args = arguments;
         const later = () => {
             timeout = null;
             func.apply(context, args);
