@@ -78,6 +78,11 @@ header.masthead h2,
 	font-family: "Lucida Sans", Roboto, "Lucida Grande", "Helvetica Neue", Sans-Serif !important;
 }
 
+.card-subtitle {
+    line-height: 1.2;
+    display: inline-block;
+}
+
 header.masthead h2 {
 	font-size: 1.3rem;
 	font-weight: 400;
