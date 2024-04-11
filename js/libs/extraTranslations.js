@@ -796,12 +796,10 @@ if (document.readyState !== "loading") {
     handleNavbarVisibility();
 } else {
     document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
-    window.addEventListener('resize', resizeExtras);
-}
-
-function resizeExtras() {
-    loadSectionIfVisible();
-    debouncedHandleNavbarVisibility();
+    window.addEventListener('resize', () => {
+        loadSectionIfVisible();
+        debouncedHandleNavbarVisibility();    
+    });
 }
 
 /*function loadHobbies() {
