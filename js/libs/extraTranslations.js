@@ -103,13 +103,11 @@ function loadReviews(reviewsList) {
         reviews.forEach((item, index) => {
             const currentReview = index + 1,
                   name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name,
-                  reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer2(item.img, '', currentReview, false, name, item.title, "", item.review, true)}</div>`;
-
-                  console.log(getReviewContainer2(item.img, '', currentReview, false, name, item.title, "", item.review, true));
+                  reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer2(item.img, '', currentReview, name, item.title, "", item.review, true)}</div>`;
 
             reviewsHTML += reviewPreview;
 
-            const longReview = getReviewContainer2(item.img, "picReviewers", currentReview, true, name, item.title, item.date, item.review, false, true, item.isPDF);
+            const longReview = getReviewContainer2(item.img, "picReviewers", currentReview, name, item.title, item.date, item.review, false, true, item.isPDF);
 
             fullReviews.push({ review: longReview, isPDF: item.isPDF, pdfLocation: item.pdfLocation });
         });
@@ -141,7 +139,7 @@ function loadReviews(reviewsList) {
         return `<p class="text-${color} m-0 text-center fst-italic p-1">${title}</p>`;
     }
     
-    function getReviewContainer2(img, cssImg, reviewIndex, isImgLarge, name, title, subtitle, content, isShort = true, isLarge = false, isPDF = false) {
+    function getReviewContainer2(img, cssImg, reviewIndex, name, title, subtitle, content, isShort = true, isLarge = true, isPDF = false) {
         const titleColor = (isShort) ? 'white' : 'dark';
         if (isShort) {
             content = getContent2(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white');
@@ -154,7 +152,7 @@ function loadReviews(reviewsList) {
             }
         }
     
-        return `${getImgName(name, img, reviewIndex, cssImg, isImgLarge)}${getTitle2(title, titleColor)}${(subtitle) ? getTitle2(subtitle, titleColor) : ''}${content}`;
+        return `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getTitle2(title, titleColor)}${(subtitle) ? getTitle2(subtitle, titleColor) : ''}${content}`;
     }
     
 
