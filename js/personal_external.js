@@ -91,15 +91,21 @@ function scrollToLoc(loc, max = 5) {
     }, 500);
 }
 
-if (document.readyState !== "loading") {
+function onLoadedPE() {
+    onReadyExternal()
     onReadyPersonal();
-} else {
-    document.addEventListener("DOMContentLoaded", onReadyPersonal);
+
+    window.addEventListener('resize', screenResize);
+
+    if (!validLang.includes(uLang)) {
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    }
 }
 
 if (smallScreen) {
-    const imgProfile = gId('imgProfile');
-    imgProfile.classList.add('mb-5', 'd-block', 'mx-auto');
+    gId('imgProfile').classList.add('mb-5', 'd-block', 'mx-auto');
 } else {
     const profileDiv = gId('profile-div'),
           mediaQuery = window.matchMedia('(min-width: 769px)');
@@ -184,17 +190,8 @@ function loadAnalytics() {
     gtag('config', 'G-4X4X4PDHN7');
 }
 
-window.onload = function () {
-    onReadyExternal();
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Call the function when the page loads
-    window.addEventListener('resize', screenResize);
-
-    if (!validLang.includes(uLang)) {
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-        }
-    }
-})
+if (document.readyState !== "loading") {
+    onLoadedPE();
+} else {
+    document.addEventListener("DOMContentLoaded", onLoadedPE);
+}
