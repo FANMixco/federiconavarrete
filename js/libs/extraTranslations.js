@@ -742,21 +742,20 @@ function handleNavbarVisibility() {
         menuHideShow(dMenu, display[0]);
     }
     else {
-        loadDynamicMenu();
+        menuHideShow(sMenu, display[1]);
+        menuHideShow(dMenu, display[1]);
+        if (!genericTranslations) {
+            // If genericTranslations is not loaded yet, retry loading dynamic menu
+            loadTranslationsWithRetry(loadDynamicMenu, () => {});
+        }
+        else {
+            loadDynamicMenu();
+        }
     }
 
     isHandlingVisibility = false;
 
     function loadDynamicMenu() {
-        menuHideShow(sMenu, display[1]);
-        menuHideShow(dMenu, display[1]);
-
-        if (!genericTranslations) {
-            // If genericTranslations is not loaded yet, retry loading dynamic menu
-            loadTranslationsWithRetry(loadDynamicMenu, () => {});
-            return; // Exit the function to prevent further execution until translations are loaded
-        }
-
         // Navbar is visible, add the dynamicNavItem
         if (dynamicNavItem.length === 0) {
             const ul = gId('nElems'),
