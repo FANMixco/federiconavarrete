@@ -38,10 +38,6 @@ function onReadyPersonal() {
         loadGenerics(dTrans);
     }
 
-    if (failedDMenu) {
-        loadDynamicMenu();
-    }
-
     gAll('.mFix').forEach(item => {
         item.addEventListener(eClick, () => {
             scrollToLoc(item.getAttribute('href').slice(1));
@@ -51,6 +47,12 @@ function onReadyPersonal() {
     if (window.location.hash) {
         scrollToLoc(window.location.hash.substring(1), 8);
     }
+
+    try {
+        if (failedDMenu) {
+            loadDynamicMenu();
+        }
+    } catch { }
 }
 
 function closeMenu() {
