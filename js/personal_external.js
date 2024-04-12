@@ -48,16 +48,6 @@ function onReadyPersonal() {
         });
     });
 
-    // Add event listener to document
-    document.addEventListener(eClick, function(event) {
-        //const isClickInsideNavbar = gId('mainNav').contains(event.target);
-
-        // If click is outside navbar, close navbar
-        if (!gId('mainNav').contains(event.target)) {
-            closeMenu()
-        }
-    });
-
     if (window.location.hash) {
         scrollToLoc(window.location.hash.substring(1), 8);
     }
@@ -94,6 +84,15 @@ function scrollToLoc(loc, max = 5) {
 function onLoadedPE() {
     onReadyExternal()
     onReadyPersonal();
+
+    // Add event listener to document
+    document.addEventListener(eClick, (event) => {
+        //const isClickInsideNavbar = gId('mainNav').contains(event.target);
+        // If click is outside navbar, close navbar
+        if (!gId('mainNav').contains(event.target)) {
+            closeMenu();
+        }
+    });
 
     window.addEventListener('resize', screenResize);
 
