@@ -20,6 +20,7 @@ body {
 @media not (hover: hover) {
   .carousel-item img {
     height: 80px!important;
+    max-height: 80px!important;
     display: inline-block;
     padding: 10px 0;
   }
