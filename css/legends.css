@@ -1,7 +1,8 @@
 body {
-    font-family: "Montserrat",Arial,Helvetica,sans-serif;
-    background: #07060e!important
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    background: #07060e !important
 }
+
 a .cards-row {
     height: 250px;
     width: 100%
@@ -19,25 +20,30 @@ a .cards-row {
 }
 
 .legend-link {
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .img-thumbnail {
-    background: #1b1223!important
+    background: #1b1223 !important
 }
 
 @media (min-width:768px) {
-    .carousel-inner .active,.carousel-inner .active+.carousel-item,.carousel-inner .active+.carousel-item+.carousel-item {
+    .carousel-inner .active,
+    .carousel-inner .active+.carousel-item,
+    .carousel-inner .active+.carousel-item+.carousel-item {
         display: block
     }
 
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
         transition: none
     }
 
-    .carousel-inner .carousel-item-next,.carousel-inner .carousel-item-prev {
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
         position: relative;
-        transform: translate3d(0,0,0)
+        transform: translate3d(0, 0, 0)
     }
 
     .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item {
@@ -49,9 +55,12 @@ a .cards-row {
         visibility: visible
     }
 
-    .active.carousel-item-left+.carousel-item-next.carousel-item-left,.carousel-item-next.carousel-item-left+.carousel-item,.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,.carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
         position: relative;
-        transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%, 0, 0);
         visibility: visible
     }
 
@@ -64,9 +73,12 @@ a .cards-row {
         visibility: visible
     }
 
-    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,.carousel-item-prev.carousel-item-right+.carousel-item,.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,.carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
         position: relative;
-        transform: translate3d(100%,0,0);
+        transform: translate3d(100%, 0, 0);
         display: block;
         visibility: visible
     }
