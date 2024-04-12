@@ -60,7 +60,7 @@ function onReadyPersonal() {
 }
 
 function closeMenu() {
-    if (gId("navbarResponsive").classList.contains("show")) {
+    if (navbarResponsive.classList.contains("show")) {
         gId("menuExpander").click();
     }
 }
@@ -182,12 +182,15 @@ function loadAnalytics() {
 
 window.onload = function () {
     onReadyExternal();
-    // Call the function when the page loads
-    window.addEventListener('resize', screenResize);
 };
 
-if (!validLang.includes(uLang)) {
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+document.addEventListener("DOMContentLoaded", () => {
+    // Call the function when the page loads
+    window.addEventListener('resize', screenResize);
+
+    if (!validLang.includes(uLang)) {
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
     }
-}
+})
