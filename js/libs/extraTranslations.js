@@ -104,11 +104,11 @@ function loadReviews(reviewsList) {
         reviews.forEach((item, index) => {
             const currentReview = index + 1,
                   name = item.externalLink !== "" ? getFLink("text-warning", item.externalLink, item.name, `${noreferrer} ${tBlank}`) : item.name,
-                  reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer2(item.img, '', currentReview, name, item.title, "", item.review, true)}</div>`;
+                  reviewPreview = `${getCItem(`${tCenter}${item.isActive ? " active" : ""}`)}${getReviewContainer(item.img, '', currentReview, name, item.title, "", item.review, true)}</div>`;
 
             reviewsHTML += reviewPreview;
 
-            const longReview = getReviewContainer2(item.img, "picReviewers", currentReview, name, item.title, item.date, item.review, false, true, item.isPDF);
+            const longReview = getReviewContainer(item.img, "picReviewers", currentReview, name, item.title, item.date, item.review, false, true, item.isPDF);
 
             fullReviews.push({ review: longReview, isPDF: item.isPDF, pdfLocation: item.pdfLocation });
         });
@@ -131,24 +131,21 @@ function loadReviews(reviewsList) {
     } catch (e) {
         return e;
     }
-    
-    function getContent2(content, color) {
-        return `<p class="m-0 pt-3 text-${color}">${content}</p>`;
+
+    function getContent(content, color, isTitle = false) {
+        const extras = (isTitle) ? 'text-center fst-italic p-1' : 'pt-3'; 
+        return `<p class="m-0 text-${color} ${extras}">${content}</p>`;
     }
     
-    function getTitle2(title, color) {
-        return `<p class="text-${color} m-0 text-center fst-italic p-1">${title}</p>`;
-    }
-    
-    function getReviewContainer2(img, cssImg, reviewIndex, name, title, subtitle, content, isShort = true, isLarge = true, isPDF = false) {
+    function getReviewContainer(img, cssImg, reviewIndex, name, title, subtitle, content, isShort = true, isLarge = true, isPDF = false) {
         const titleColor = (isShort) ? 'white' : 'dark';
         content = (isShort) ?
-                        getContent2(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white') :
+                        getContent(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white') :
                   (isPDF) ?
                         `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>`:
-                        getContent2(content, 'black');
+                        getContent(content, 'black');
     
-        return `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getTitle2(title, titleColor)}${(subtitle) ? getTitle2(subtitle, titleColor) : ''}${content}`;
+        return `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getContent(title, titleColor, true)}${(subtitle) ? getContent(subtitle, titleColor, true) : ''}${content}`;
     }
     
 
@@ -788,23 +785,29 @@ function debounce(func, wait) {
 function loadDynamicMenu() {
     // Navbar is visible, add the dynamicNavItem
     if (document.getElementsByClassName('dynamicNavItem').length === 0) {
-        const ul = gId('nElems'),
-              li = document.createElement('li');
-        li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
-        li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
+        const ul = gId('nElems');
+        let li = document.createElement('li'),
+            liC = createLiContent('divServices', genericTranslations.servicesM, '');
+        li.className = liC[0];
+        li.innerHTML = liC[1];
 
         ul.insertBefore(li, ul.children[1]);
 
-        const liCC = document.createElement('li');//,
-              //mobileContactMe = gId("mobileContactMe");
+        li = document.createElement('li');//,
 
-        liCC.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
-        liCC.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded text-white" id="mobileContactMe">${genericTranslations.contactMe}&nbsp;💡</a>`;
+        liC = createLiContent('mobileContactMe', `${genericTranslations.contactMe}&nbsp;💡`, 'text-white');
+        li.className = liC[0];
+        li.innerHTML = liC[1];
 
         ul.append(liCC);
 
         gId("mobileContactMe").addEventListener(eClick, contactMeForm);
+
         failedDMenu = false;
+    }
+
+    function createLiContent(id, text, color) {
+        return ['nav-item mx-0 mx-lg-1 dynamicNavItem', `<a class="nav-link py-3 px-0 px-lg-3 rounded ${color}" href="#${id}">${text}</a>`];
     }
 }
 
