@@ -799,7 +799,7 @@ function loadDynamicMenu() {
         li.className = liC[0];
         li.innerHTML = liC[1];
 
-        ul.append(liCC);
+        ul.append(li);
 
         gId("mobileContactMe").addEventListener(eClick, contactMeForm);
 
