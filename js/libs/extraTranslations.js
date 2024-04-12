@@ -796,10 +796,12 @@ const debouncedHandleNavbarVisibility = debounce(handleNavbarVisibility, 250);
 if (document.readyState !== "loading") {
     handleNavbarVisibility();
 } else {
-    document.addEventListener("DOMContentLoaded", handleNavbarVisibility);
-    window.addEventListener('resize', () => {
-        loadSectionIfVisible();
-        debouncedHandleNavbarVisibility();    
+    document.addEventListener("DOMContentLoaded", () => {
+        handleNavbarVisibility();
+        window.addEventListener('resize', () => {
+            loadSectionIfVisible();
+            debouncedHandleNavbarVisibility();    
+        });
     });
 }
 
