@@ -745,7 +745,6 @@ function handleNavbarVisibility() {
         else {
             try {
                 loadDynamicMenu();
-                failedDMenu = false;
             } catch {
                 failedDMenu = true;
             }
@@ -792,6 +791,7 @@ function loadDynamicMenu() {
         ul.append(liCC);
 
         gId("mobileContactMe").addEventListener(eClick, contactMeForm);
+        failedDMenu = false;
     }
 }
 
