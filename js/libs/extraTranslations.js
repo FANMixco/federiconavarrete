@@ -144,12 +144,8 @@ function loadReviews(reviewsList) {
         if (isShort) {
             content = getContent2(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white');
         } else {
-            if (isPDF) {
-                content = `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>`
-            }
-            else {
-                content = getContent2(content, 'black');
-            }
+            content = (isPDF) ? `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>`:
+                                getContent2(content, 'black');
         }
     
         return `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getTitle2(title, titleColor)}${(subtitle) ? getTitle2(subtitle, titleColor) : ''}${content}`;
