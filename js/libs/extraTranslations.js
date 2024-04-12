@@ -141,12 +141,11 @@ function loadReviews(reviewsList) {
     
     function getReviewContainer2(img, cssImg, reviewIndex, name, title, subtitle, content, isShort = true, isLarge = true, isPDF = false) {
         const titleColor = (isShort) ? 'white' : 'dark';
-        if (isShort) {
-            content = getContent2(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white');
-        } else {
-            content = (isPDF) ? `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>`:
-                                getContent2(content, 'black');
-        }
+        content = (isShort) ?
+                        getContent2(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white') :
+                  (isPDF) ?
+                        `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>`:
+                        getContent2(content, 'black');
     
         return `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getTitle2(title, titleColor)}${(subtitle) ? getTitle2(subtitle, titleColor) : ''}${content}`;
     }
