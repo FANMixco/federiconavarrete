@@ -76,32 +76,32 @@ let navbarShrink = () => {
     }
 
     extraEvents(scroll);
-};
 
-function extraEvents(scroll) {
-    if (scroll > getHeight() * 0.20 && extraContact == 0 && !isMenuTriggered) {
-        contactMeForm();
-        extraContact++;
-    }
-    else if (scroll > getHeight() * 0.7) {
-        const gScriptExist = gId('g_translate');
+    function extraEvents(scroll) {
+        if (scroll > getHeight() * 0.20 && extraContact == 0 && !isMenuTriggered) {
+            contactMeForm();
+            extraContact++;
+        }
+        else if (scroll > getHeight() * 0.7) {
+            const gScriptExist = gId('g_translate');
 
-        if (!gScriptExist && !validLang.includes(uLang)) {
-            const script = document.createElement('script');
-            script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
-            script.id = 'g_translate';
-            document.body.appendChild(script);
-            gId('google_translate_element').classList.remove('d-none');
+            if (!gScriptExist && !validLang.includes(uLang)) {
+                const script = document.createElement('script');
+                script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
+                script.id = 'g_translate';
+                document.body.appendChild(script);
+                gId('google_translate_element').classList.remove('d-none');
+            }
+        }
+
+        function getHeight() {
+            const body = document.body,
+                html = document.documentElement;
+
+            return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
         }
     }
-
-    function getHeight() {
-        const body = document.body,
-              html = document.documentElement;
-    
-        return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
-    }
-}
+};
 
 if (document.readyState !== "loading") {
     onReadyFreelancer(); // Or setTimeout(onReady, 0); if you want it consistently async
