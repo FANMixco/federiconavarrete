@@ -229,6 +229,10 @@ function getSCItem(index, title) {
     return (smallScreen) ? `${getCItem(`${(index === 0) ? "active" : ""}"`)}<div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 }
 
+function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
+    return `${hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : ''}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
+}
+
 function loadAwards(awardList) {
     try {
         const { awards } = awardList;
@@ -630,6 +634,15 @@ function getImgTag(id, alt) {
 
 function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '', extras = '') {
     return getFinalImg(id, extraClass, alt, `src='${src}' ${extras}`, lazyLoading);
+}
+
+function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
+    return `<img ${(id != '') ? `id="${id}"` : ''} ${(imgCls != '') ? `class="${imgCls}"` : ''} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
+}
+
+function getCleanTitle(alt) {
+    tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
+    return alt.replace(tagRegExp, '');
 }
 
 function getListItem(elem, extra = "", extraCls = "") {

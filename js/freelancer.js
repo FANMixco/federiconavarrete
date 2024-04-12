@@ -94,6 +94,13 @@ function extraEvents(scroll) {
             gId('google_translate_element').classList.remove('d-none');
         }
     }
+
+    function getHeight() {
+        const body = document.body,
+              html = document.documentElement;
+    
+        return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
+    }
 }
 
 if (document.readyState !== "loading") {

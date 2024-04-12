@@ -227,6 +227,10 @@ function loadBasicInfo() {
     function getActionBtn(link, icon, title) {
         return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
     }
+
+    function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
+        return getInLi(getImage(btnAction, action, `${icon}`, isTargetBlank, true, "btn-footer", false, "iconFooter"));
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -237,4 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
     gId('menuExpander').addEventListener(eClick, () => {
         spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });
+
+    function getHMenu(icon = 'bars-solid') {
+        return getFinalIcon(icon);
+    }
 });

@@ -67,13 +67,6 @@ function dIframe(id, cls) {
     }
 }*/
 
-function getHeight() {
-    const body = document.body,
-          html = document.documentElement;
-
-    return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight, body.getBoundingClientRect().height);
-}
-
 function contactMeForm(e) {
     try {
         e.preventDefault();
@@ -113,33 +106,12 @@ function getFLink(cls, link, body, extras = '') {
     return `<a class='${cls}' href="${link}" ${extras}>${body}</a>`;
 }
 
-function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {
-    return `${hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : ''}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
-}
-
-function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
-    return getInLi(getImage(btnAction, action, `${icon}`, isTargetBlank, true, "btn-footer", false, "iconFooter"));
-}
-
 function getInLi(body, extraCls = '', extras = '') {
     return `<li class="list-inline-item${extraCls}" ${extras}>${body}</li>`;
 }
 
-function getHMenu(icon = 'bars-solid') {
-    return getFinalIcon(icon);
-}
-
-function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
-    return `<img ${(id != '') ? `id="${id}"` : ''} ${(imgCls != '') ? `class="${imgCls}"` : ''} ${lLoading} ${extras} alt="${getCleanTitle(alt)}" />`
-}
-
 function getFinalIcon(id, fontSize = '', extraCls = '') {
     return `<span class="icon-${id}${extraCls}"${(fontSize) ? ` style="font-size: ${fontSize}px;"` : ''}></span>`;
-}
-
-function getCleanTitle(alt) {
-    tagRegExp = !(tagRegExp) ? new RegExp('<\s*[^>]*>', 'g') : tagRegExp;
-    return alt.replace(tagRegExp, '');
 }
 
 async function fetchData(url) {
