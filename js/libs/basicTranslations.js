@@ -229,7 +229,7 @@ function loadBasicInfo() {
     }
 
     function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {
-        return getInLi(getImage(btnAction, action, `${icon}`, isTargetBlank, true, "btn-footer", false, "iconFooter"));
+        return getInLi(getImage(btnAction, action, icon, isTargetBlank, true, "btn-footer", false, "iconFooter"));
     }
 }
 
