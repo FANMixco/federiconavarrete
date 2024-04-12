@@ -1,5 +1,4 @@
 let totalServices = 0,
-    fullReviews = [],
     isHandlingVisibility = false,
     fullData,
     failedDMenu = null;
@@ -8,10 +7,8 @@ let totalServices = 0,
 const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"'),
     noreferrer = 'rel="noreferrer"',
     tBlank = 'target="_blank"',
-    divSmall = '<div class="col-sm">',
     w100 = 'class="w-100"',
-    navbarCollapse = gId('navbarResponsive'),
-    sections = gAll('section, div');
+    divSmall = '<div class="col-sm">';
 
 fetchData(`${jsonLoc}/extraInfo.json`)
     .then(data => {
@@ -82,7 +79,6 @@ fetchData(`${jsonLoc}/extraInfo.json`)
                 });
 
                 skillsOthers.forEach((item) => {
-                    //const items = `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`;
                     gId(divOthersContainer).insertAdjacentHTML('afterbegin', `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`);
                 });
             }
@@ -153,7 +149,9 @@ fetchData(`${jsonLoc}/extraInfo.json`)
     }).catch((e) => { console.error(e); });
 
 const loadSectionIfVisible = () => {
-    sections.forEach(section => {
+    let fullReviews = [];
+
+    gAll('section, div').forEach(section => {
         const rect = section.getBoundingClientRect(),
             windowHeight = window.innerHeight || document.documentElement.clientHeight,
             triggerPoint = windowHeight * 0.15, // 15% of window height
@@ -264,9 +262,7 @@ const loadSectionIfVisible = () => {
 
             const divReviewsPreviews = gId('divReviewsPreviews'),
                 divGenericContent = gId('divGenericContent');
-            //const divReviews = gId("divReviews");
 
-            //if (isVisible) {
             let reviewsHTML = '';
             reviews.forEach((item, index) => {
                 const currentReview = index + 1,
@@ -283,7 +279,6 @@ const loadSectionIfVisible = () => {
             divReviewsPreviews.innerHTML = reviewsHTML;
 
             fullReviews.forEach((item, index) => {
-                //const rmCurrent = gId(`readMore${index + 1}`);
                 gId(`readMore${index + 1}`).addEventListener(eClick, (e) => {
                     e.preventDefault();
                     divGenericContent.innerHTML = item.review;
@@ -409,17 +404,17 @@ const loadSectionIfVisible = () => {
 
     function loadOrganizedEvents(organizedEvents) {
         const { events } = organizedEvents;
-        loadImgSection(events, 'divEvents', 'divEvents', imgLocPortfolio, 'Łódźarts', '');
+        loadImgSection(events, 'divEvents', imgLocPortfolio, 'Łódźarts', '');
     }
 
     function loadArticles(articlesList) {
         const { articles } = articlesList;
-        loadImgSection(articles, 'divArticles', 'articlesDiv', imgLocArticles, '', '');
+        loadImgSection(articles, 'divArticles', imgLocArticles, '', '');
     }
 
     function loadNewsArticles(newsArticlesList) {
         const { articles } = newsArticlesList;
-        loadImgSection(articles, 'divMMArticles', 'newsArticles', imgLocArticles, '');
+        loadImgSection(articles, 'divMMArticles', imgLocArticles, '');
     }
 
     function loadBookPreview() {
@@ -434,7 +429,7 @@ const loadSectionIfVisible = () => {
         return `<picture><source ${src1} type="image/webp"><source ${src2} type="image/jpeg">${img}</picture>`;
     }
 
-    function loadImgSection(list, section, divSection, imgPath, optTitle = '', cls = '') {
+    function loadImgSection(list, section, imgPath, optTitle = '', cls = '') {
         try {
             const divSection = gId(section);
             list.forEach(item => {
@@ -649,7 +644,7 @@ function handleNavbarVisibility() {
         dMenu = gId('dMenu'),
         display = ['display:flex !important', 'display:none !important'];
 
-    if (window.getComputedStyle(navbarCollapse).display === 'flex') {
+    if (window.getComputedStyle(gId('navbarResponsive')).display === 'flex') {
         // Navbar is not visible, remove the dynamicNavItem
         [...document.getElementsByClassName('dynamicNavItem')].forEach((elem) => {
             if (elem) {
