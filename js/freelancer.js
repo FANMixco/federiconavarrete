@@ -69,7 +69,7 @@ let navbarShrink = () => {
     if (!navbarCollapsible) {
         return;
     }
-    if (scroll === 0) {
+    if (scroll <= 1) {
         navbarCollapsible.classList.remove('navbar-shrink');
     } else {
         navbarCollapsible.classList.add('navbar-shrink');
