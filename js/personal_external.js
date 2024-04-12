@@ -38,6 +38,10 @@ function onReadyPersonal() {
         loadGenerics(dTrans);
     }
 
+    if (failedDMenu) {
+        loadDynamicMenu();
+    }
+
     gAll('.mFix').forEach(item => {
         item.addEventListener(eClick, () => {
             scrollToLoc(item.getAttribute('href').slice(1));

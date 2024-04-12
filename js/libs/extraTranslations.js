@@ -1,7 +1,8 @@
 let totalServices = 0,
     fullReviews = [],
     isHandlingVisibility = false,
-    fullData;
+    fullData,
+    failedDMenu = null;
 
 //const bookEdition = 'second;'
 const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"'),
@@ -721,14 +722,13 @@ function handleNavbarVisibility() {
 
     isHandlingVisibility = true;
 
-    const dynamicNavItem = document.getElementsByClassName('dynamicNavItem'),
-          sMenu = gId('sMenu'),
+    const sMenu = gId('sMenu'),
           dMenu = gId('dMenu'),
           display = [ 'display:flex !important', 'display:none !important' ];
 
     if (window.getComputedStyle(navbarCollapse).display === 'flex') {
         // Navbar is not visible, remove the dynamicNavItem
-        [...dynamicNavItem].forEach((elem) => {
+        [...document.getElementsByClassName('dynamicNavItem')].forEach((elem) => {
             if (elem) {
                 elem.parentNode.removeChild(elem);
             }
@@ -740,37 +740,19 @@ function handleNavbarVisibility() {
         menuHideShow(sMenu, display[1]);
         menuHideShow(dMenu, display[1]);
         if (!genericTranslations) {
-            // If genericTranslations is not loaded yet, retry loading dynamic menu
-            loadTranslationsWithRetry(loadDynamicMenu, () => {});
+            failedDMenu = true;
         }
         else {
-            loadDynamicMenu();
+            try {
+                loadDynamicMenu();
+                failedDMenu = false;
+            } catch {
+                failedDMenu = true;
+            }
         }
     }
 
     isHandlingVisibility = false;
-
-    function loadDynamicMenu() {
-        // Navbar is visible, add the dynamicNavItem
-        if (dynamicNavItem.length === 0) {
-            const ul = gId('nElems'),
-                  li = document.createElement('li');
-            li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
-            li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
-
-            ul.insertBefore(li, ul.children[1]);
-
-            const liCC = document.createElement('li');//,
-                  //mobileContactMe = gId("mobileContactMe");
-
-            liCC.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
-            liCC.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded text-white" id="mobileContactMe">${genericTranslations.contactMe}&nbsp;💡</a>`;
-
-            ul.append(liCC);
-
-            gId("mobileContactMe").addEventListener(eClick, contactMeForm);
-        }
-    }
 
     function menuHideShow(menu, display) {
         menu.setAttribute('style', display);
@@ -789,6 +771,28 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+function loadDynamicMenu() {
+    // Navbar is visible, add the dynamicNavItem
+    if (document.getElementsByClassName('dynamicNavItem').length === 0) {
+        const ul = gId('nElems'),
+              li = document.createElement('li');
+        li.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
+        li.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded" href="#divServices">${genericTranslations.servicesM}</a>`;
+
+        ul.insertBefore(li, ul.children[1]);
+
+        const liCC = document.createElement('li');//,
+              //mobileContactMe = gId("mobileContactMe");
+
+        liCC.className = 'nav-item mx-0 mx-lg-1 dynamicNavItem';
+        liCC.innerHTML = `<a class="nav-link py-3 px-0 px-lg-3 rounded text-white" id="mobileContactMe">${genericTranslations.contactMe}&nbsp;💡</a>`;
+
+        ul.append(liCC);
+
+        gId("mobileContactMe").addEventListener(eClick, contactMeForm);
+    }
 }
 
 const debouncedHandleNavbarVisibility = debounce(handleNavbarVisibility, 250);
