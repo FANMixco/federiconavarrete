@@ -58,7 +58,7 @@ function onReadyFreelancer() {
 }
 
 function addPadding() {
-    document.body.style.paddingTop = `${document.querySelector('.navbar').offsetHeight - 1}px`;
+    document.body.style.paddingTop = `${(window.innerHeight > window.innerWidth) ? document.querySelector('.navbar').offsetHeight - 1 : 0 }px`;
 }
 
 // Navbar shrink function
