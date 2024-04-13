@@ -53,12 +53,11 @@ function onReadyFreelancer() {
             });
         }
     }
-
-    //document.addEventListener("click", closeMenu);
 }
 
 function addPadding() {
-    document.body.style.paddingTop = `${(window.innerHeight > window.innerWidth) ? document.querySelector('.navbar').offsetHeight - 1 : 0 }px`;
+    //to be fixed if the foldables ever support the detection
+    document.body.style.paddingTop = `${(window.matchMedia("(orientation: portrait)").matches || window.matchMedia('(screen-spanning: single-fold-horizontal)')).matches ? document.querySelector('.navbar').offsetHeight - 1 : 0 }px`;
 }
 
 // Navbar shrink function
