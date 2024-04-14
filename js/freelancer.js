@@ -56,8 +56,9 @@ function onReadyFreelancer() {
 }
 
 function addPadding() {
+    const width = window.innerWidth;
     //to be fixed if the foldables ever support the detection
-    document.body.style.paddingTop = `${(window.innerHeight > window.innerWidth || window.matchMedia('(screen-spanning: single-fold-horizontal)').matches || /iPhone/.test(navigator.userAgent)) ? document.querySelector('.navbar').offsetHeight - 1 : 0 }px`;
+    document.body.style.paddingTop = `${(window.innerHeight > width || window.matchMedia('(screen-spanning: single-fold-horizontal)').matches || width < 768) ? document.querySelector('.navbar').offsetHeight - 1 : 0 }px`;
 }
 
 // Navbar shrink function
