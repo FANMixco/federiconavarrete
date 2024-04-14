@@ -32,6 +32,13 @@ html {
 	box-sizing: border-box;
 	font-family: "Segoe UI", "Roboto Condensed", "Helvetica Neue", Sans-Serif;
 	overscroll-behavior: none;
+	background-color: var(--darker-purple)!important;
+}
+
+.portfolio {
+	background-color: white;
+	margin-bottom: -15px;
+	font-size: 1.5rem;
 }
 
 #navBarImg,
@@ -279,14 +286,9 @@ header.masthead h1 {
 	line-height: 3rem;
 }
 
-.portfolio {
-	margin-bottom: -15px;
-	font-size: 1.5rem;
-}
-
 @media (min-width: 576px) {
 	.portfolio {
-		margin-bottom: 30px;
+		margin-bottom: -30px;
 	}
 }
 
@@ -308,10 +310,6 @@ a:hover {
 
 .btn {
 	border-width: 2px;
-}
-
-.bg-primary {
-	background-color: var(--darker-purple) !important;
 }
 
 .bg-secondary {
