@@ -205,6 +205,10 @@ a {
 	color: var(--light-green);
 }
 
+#divPreview, #divIframeLinkPreviews {
+	overflow: hidden;
+}
+
 #mainNav .navbar-toggler {
 	font-size: 80%;
 	padding: 0.8rem;

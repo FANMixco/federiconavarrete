@@ -79,7 +79,7 @@ function iFrameHResize(id, percentage = 0.7) {
                 : devicePortraitAndLong ? heightIFrame * 1.2
                     : heightIFrame * 0.8;
 
-    gId(id).style.height = `${height}px`;
+    gId(id).style.height = `${height + (smallScreen ? 30 : 0)}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {

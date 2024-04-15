@@ -4,7 +4,7 @@ let totalServices = 0,
     failedDMenu = null;
 
 //const bookEdition = 'second;'
-const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%"'),
+const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%;max-height: 100%;"'),
     noreferrer = 'rel="noreferrer"',
     tBlank = 'target="_blank"',
     w100 = 'class="w-100"',
@@ -246,7 +246,7 @@ const loadSectionIfVisible = () => {
                         btnFullScreenPreview.setAttribute('title', item.title);
                         btnFullScreenPreview.setAttribute('aria-label', item.title);
 
-                        gId('iframeGeneric').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
+                        gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
                         iFrameHResize('previewerIframeI');
                     });
