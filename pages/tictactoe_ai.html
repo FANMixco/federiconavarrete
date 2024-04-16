@@ -35,7 +35,9 @@ https://emojicombos.com/rayquaza-ascii-art
     <meta name="author" content="Federico Navarrete and ChatGPT">
     <style>
         @media (orientation: portrait) {
-            html, body {
+
+            html,
+            body {
                 overflow: hidden;
             }
         }
@@ -62,6 +64,11 @@ https://emojicombos.com/rayquaza-ascii-art
             margin-bottom: 20px;
         }
 
+        .draw {
+            color: var(--bg-color);
+            background: var(--text-color);
+        }
+
         .win-text {
             text-transform: uppercase;
             font-weight: bold;
@@ -71,9 +78,13 @@ https://emojicombos.com/rayquaza-ascii-art
         .board td {
             width: 100px;
             height: 100px;
-            border: 2px solid #000;
+            border: 2px solid var(--text-color);
             font-size: 48px;
             cursor: pointer;
+        }
+
+        .draw-board td {
+            border: 2px solid var(--bg-color);
         }
 
         h2 {
@@ -94,10 +105,6 @@ https://emojicombos.com/rayquaza-ascii-art
 
             .winner {
                 background-color: red;
-            }
-
-            .board td {
-                border: 2px solid white;
             }
 
             a {
@@ -154,6 +161,7 @@ https://emojicombos.com/rayquaza-ascii-art
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Tic-Tac-Toe</h1>
@@ -180,7 +188,8 @@ https://emojicombos.com/rayquaza-ascii-art
             <button class="btn" onclick="restartGame()"><b>Restart<b></button>
         </p>
         <p id="footer">
-            &copy; <a href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a href="https://supernovaic.com" target="_blank">Supernova IC</a>
+            &copy; <a href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a
+                href="https://supernovaic.com" target="_blank">Supernova IC</a>
         </p>
     </div>
     <script>
@@ -188,6 +197,7 @@ https://emojicombos.com/rayquaza-ascii-art
         const message = document.getElementById('message');
         let currentPlayer = 'X';
         let gameActive = true;
+        let aiThinking = false; // Flag to indicate whether the AI is currently making a move
 
         document.getElementById('footer').innerHTML += `&nbsp;${new Date().getFullYear()}`;
 
@@ -210,7 +220,7 @@ https://emojicombos.com/rayquaza-ascii-art
             const cell = e.target;
             const index = parseInt(cell.getAttribute('data-cell'));
 
-            if (cell.textContent !== '' || !gameActive) return;
+            if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === 'O') return; // Ignore clicks while AI is thinking or if it's not the user's turn
 
             cell.textContent = currentPlayer;
             if (checkWin(currentPlayer)) {
@@ -222,13 +232,29 @@ https://emojicombos.com/rayquaza-ascii-art
                 message.classList.add('win-text');
                 message.textContent = "It's a draw!";
                 gameActive = false;
+                handleDraw();
             } else {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-                if (currentPlayer === 'O') {
-                    setTimeout(makeRandomMove, 500); // Delay AI move by 500ms
-                }
                 message.textContent = `${currentPlayer}'s turn`;
+                if (currentPlayer === 'O') {
+                    aiThinking = true; // Set the flag to indicate AI is thinking
+                    setTimeout(makeMove, 500); // Delay AI move by 500ms
+                }
             }
+        }
+
+        function makeMove() {
+            if (currentPlayer !== 'O') return; // Only make move if current player is "O"
+            if (Math.random() < 0.75) {
+                // With 80% probability, make a random move
+                makeOptimalMove();
+            } else {
+                // With 20% probability, make an optimal move
+                makeRandomMove();
+            }
+            aiThinking = false; // Reset the flag after AI's move
+            // Add back event listeners after AI's move is done
+            cells.forEach(cell => cell.addEventListener('click', handleCellClick));
         }
 
         function checkWin(player) {
@@ -240,7 +266,7 @@ https://emojicombos.com/rayquaza-ascii-art
         }
 
         function isDraw() {
-            return [...cells].every(cell => cell.textContent !== '');
+            return [...cells].every(cell => cell.textContent !== '') && !checkWin('X') && !checkWin('O');
         }
 
         function highlightWinner() {
@@ -258,11 +284,49 @@ https://emojicombos.com/rayquaza-ascii-art
             });
         }
 
+        function handleDraw() {
+            cells.forEach(cell => {
+                cell.classList.add('draw');
+            });
+            document.querySelector('.board').classList.add('draw-board');
+        }
+
         function makeRandomMove() {
             const emptyCells = [...cells].filter(cell => cell.textContent === '');
             const randomIndex = Math.floor(Math.random() * emptyCells.length);
             const cell = emptyCells[randomIndex];
             cell.textContent = currentPlayer;
+            if (checkWin(currentPlayer)) {
+                highlightWinner();
+                message.classList.add('win-text');
+                message.textContent = `${currentPlayer} wins!`;
+                gameActive = false;
+            } else if (isDraw()) {
+                message.classList.add('win-text');
+                message.textContent = "It's a draw!";
+                gameActive = false;
+                handleDraw();
+            } else {
+                currentPlayer = 'X'; // Switch back to player X if game is still active
+                message.textContent = `${currentPlayer}'s turn`;
+            }
+        }
+
+        function makeOptimalMove() {
+            let bestScore = -Infinity;
+            let move;
+            for (let i = 0; i < cells.length; i++) {
+                if (cells[i].textContent === '') {
+                    cells[i].textContent = currentPlayer;
+                    const score = minimax(cells, 0, false);
+                    cells[i].textContent = '';
+                    if (score > bestScore) {
+                        bestScore = score;
+                        move = i;
+                    }
+                }
+            }
+            cells[move].textContent = currentPlayer;
             if (checkWin(currentPlayer)) {
                 message.classList.add('win-text');
                 highlightWinner();
@@ -272,12 +336,62 @@ https://emojicombos.com/rayquaza-ascii-art
                 message.classList.add('win-text');
                 message.textContent = "It's a draw!";
                 gameActive = false;
+                handleDraw();
             } else {
                 currentPlayer = 'X'; // Switch back to player X after AI's turn
                 message.textContent = `${currentPlayer}'s turn`;
             }
-            // Add back event listener after AI's turn
-            cell.removeEventListener('click', handleCellClick);
+            aiThinking = false; // Reset the flag after AI's move
+        }
+
+        function minimax(cells, depth, isMaximizing) {
+            const result = checkResult();
+            if (result !== null) {
+                return result;
+            }
+
+            if (isMaximizing) {
+                let bestScore = -Infinity;
+                for (let i = 0; i < cells.length; i++) {
+                    if (cells[i].textContent === '') {
+                        cells[i].textContent = 'O';
+                        const score = minimax(cells, depth + 1, false);
+                        cells[i].textContent = '';
+                        bestScore = Math.max(score, bestScore);
+                    }
+                }
+                return bestScore;
+            } else {
+                let bestScore = Infinity;
+                for (let i = 0; i < cells.length; i++) {
+                    if (cells[i].textContent === '') {
+                        cells[i].textContent = 'X';
+                        const score = minimax(cells, depth + 1, true);
+                        cells[i].textContent = '';
+                        bestScore = Math.min(score, bestScore);
+                    }
+                }
+                return bestScore;
+            }
+        }
+
+        function checkResult() {
+            for (let i = 0; i < winningCombinations.length; i++) {
+                const [a, b, c] = winningCombinations[i];
+                if (cells[a].textContent === cells[b].textContent &&
+                    cells[b].textContent === cells[c].textContent &&
+                    cells[a].textContent !== '') {
+                    if (cells[a].textContent === 'O') {
+                        return 1;
+                    } else {
+                        return -1;
+                    }
+                }
+            }
+            if (isDraw()) {
+                return 0;
+            }
+            return null;
         }
 
         function startGame() {
