@@ -104,7 +104,7 @@ function loadTranslations() {
                 let hPreviewHeight = `${hFrameGeneric}px`;
                 if (smallScreen) {
                     const height = equalScreen ? document.documentElement.clientHeight * 0.6 : window.matchMedia("(orientation: portrait)").matches ? document.documentElement.clientHeight * 0.85 : document.documentElement.clientHeight * 0.7;
-                    hPreviewHeight = `${height}px`;
+                    hPreviewHeight = `${height + 30}px`;
                 }
                 else if (devicePortraitAndLong) {
                     hPreviewHeight = `${hFrameGeneric * 1.5}px`;
@@ -151,37 +151,11 @@ function loadBasicInfo() {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
         });
 
-        //favBookDiv.innerHTML = '';
-        //if (favBook.isVisible) {
         favBookDiv.innerHTML = getActionBtn(`${urlB}${favBook.link}`, 'download', favBook.title);
-        //}
-        //else {
-        //    favBookDiv.classList.add(nVis);
-        //}
 
-        //if (favPodcast.isVisible) {
         favPodcastDiv.innerHTML = getActionBtn(`${urlB}${favPodcast.link}`, 'spotify', favPodcast.title);
-        //}
-        //else {
-        //    favPodcastDiv.classList.add(nVis);
-        //}
 
-
-        /*if (skype.isVisible) {
-            listContacts.innerHTML = getInLineBtn(genericTranslations.skype, `skype:${skype.id}?call`, 'skype') + listContacts.innerHTML;
-        }
-
-        if (telephone.isVisible) {
-            listContacts.innerHTML = getInLineBtn(genericTranslations.telephone, `tel:${telephone.number}`, 'phone') + listContacts.innerHTML;
-        }
-
-        if (email.isVisible) {
-            listContacts.innerHTML = getInLineBtn(genericTranslations.email, `mailto:${email.address}?subject=${email.subject}`, 'at') + listContacts.innerHTML;
-        }*/
-
-        //if (company.isVisible) {
         listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
-        //}
 
         gId('aElSalvador').addEventListener(eClick, () => {
             if (!gId('iframeElSalvador')) {
@@ -206,7 +180,7 @@ function loadBasicInfo() {
 
             gId('modal-preview').classList.add('modal-xl');
 
-            loadIframe('iframeGeneric', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'), true);
+            loadIframe('divIframeLinkPreviews', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'), true);
 
             iFrameHResize('yIframeP', 0.7);
 
@@ -234,10 +208,8 @@ function loadBasicInfo() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    //const menuExpander = gId('menuExpander');
     const hMenu = getHMenu();
 
-    // Toggle between getHMenu() and getHMenu('close') on button click
     gId('menuExpander').addEventListener(eClick, () => {
         spanMenu.innerHTML = (spanMenu.innerHTML === hMenu) ? getHMenu('cross') : hMenu;
     });

@@ -32,6 +32,13 @@ html {
 	box-sizing: border-box;
 	font-family: "Segoe UI", "Roboto Condensed", "Helvetica Neue", Sans-Serif;
 	overscroll-behavior: none;
+	background-color: var(--darker-purple)!important;
+}
+
+.portfolio {
+	background-color: white;
+	margin-bottom: -15px;
+	font-size: 1.5rem;
 }
 
 #navBarImg,
@@ -198,6 +205,10 @@ a {
 	color: var(--light-green);
 }
 
+#divPreview, #divIframeLinkPreviews {
+	overflow: hidden;
+}
+
 #mainNav .navbar-toggler {
 	font-size: 80%;
 	padding: 0.8rem;
@@ -279,15 +290,9 @@ header.masthead h1 {
 	line-height: 3rem;
 }
 
-.portfolio {
-	margin-bottom: -15px;
-	font-size: 1.5rem;
-}
-
 @media (min-width: 576px) {
 	.portfolio {
 		margin-bottom: -30px;
-		margin-bottom: 30px;
 	}
 }
 
@@ -309,10 +314,6 @@ a:hover {
 
 .btn {
 	border-width: 2px;
-}
-
-.bg-primary {
-	background-color: var(--darker-purple) !important;
 }
 
 .bg-secondary {
@@ -651,7 +652,7 @@ a.text-material-link-dark:active {
 }
 
 #review2PDF {
-	height: 450px;
+	height: 400px;
 }
 
 .fancy {
@@ -977,14 +978,14 @@ a.text-material-link-dark:active {
 
 @media screen and (max-width: 682px) and (orientation: landscape) {
 	#mainBackground {
-		background-image: url(../img/astronomy_small_landscape.jpg);
+		background-image: url(../img/northern_light_small_landscape.jpg);
 		background-image: -webkit-image-set(
-            url(../img/astronomy_small_landscape.webp) 1x,
-            url(../img/astronomy_small_landscape.jpg) 1x
+            url(../img/northern_light_small_landscape.webp) 1x,
+            url(../img/northern_light_small_landscape.jpg) 1x
         );
 		background-image: image-set(
-            url(../img/astronomy_small_landscape.webp) type("image/webp"),
-            url(../img/astronomy_small_landscape.jpg) type("image/jpeg")
+            url(../img/northern_light_small_landscape.webp) type("image/webp"),
+            url(../img/northern_light_small_landscape.jpg) type("image/jpeg")
         );
 		background-size: cover;
 	}

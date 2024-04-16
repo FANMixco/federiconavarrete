@@ -1,49 +1,43 @@
 const deviceType = () => {
     const ua = navigator.userAgent.toLowerCase();
-  
+
     if (
-      ua.match(/(tablet|ipad|playbook|silk|kindle fire)|(android(?!.*mobi))/i) !== null
+        ua.match(/(tablet|ipad|playbook|silk|kindle fire)|(android(?!.*mobi))/i) !== null
     ) {
-      return devs[1];
+        return devs[1];
     } else if (
         ua.match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch/g) !== null
     ) {
         return devs[3];
     } else if (
-      ua.match(/iphone|ipod/i) !== null ||
-      ua.match(/mobile|android|ip(hone|od)|windows phone|iemobile|blackberry|silk-accelerated|(hpw|web)os|opera m(obi|ini)|tizen|harmonyos|kaios/) !== null
+        ua.match(/iphone|ipod/i) !== null ||
+        ua.match(/mobile|android|ip(hone|od)|windows phone|iemobile|blackberry|silk-accelerated|(hpw|web)os|opera m(obi|ini)|tizen|harmonyos|kaios/) !== null
     ) {
-      return devs[0];
+        return devs[0];
     }
-  
+
     return devs[2];
 };
 
 const urlB = 'https://',
-      uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
-      validLang = ['en', 'es', 'zh'],
-      jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
-      lazyLoading = 'loading="lazy"',
-      eClick = 'click',
-      nVis = 'd-none',
-      tCenter = "text-center",
-      marginTop = 0,
-      heightIFrame = 600,
-      devs = ["Smartphone", "Tablet", "Desktop", "Watch"],
-      equalScreen = window.innerWidth == window.innerHeight,
-      actualDev = deviceType(),
-      smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]),
-      smallScreen = smallScreenMobileOS || equalScreen;
+    uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
+    validLang = ['en', 'es', 'zh'],
+    jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
+    lazyLoading = 'loading="lazy"',
+    eClick = 'click',
+    nVis = 'd-none',
+    tCenter = "text-center",
+    marginTop = 0,
+    heightIFrame = 600,
+    devs = ["Smartphone", "Tablet", "Desktop", "Watch"],
+    equalScreen = window.innerWidth == window.innerHeight,
+    actualDev = deviceType(),
+    smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]),
+    smallScreen = smallScreenMobileOS || equalScreen;
 
 let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth,
     tagRegExp,
     extraContact = 0;
-
-/*function hFixCMenu() {
-    setTimeout(() => {
-        closeMenu();
-    }, 500);
-}*/
 
 function gId(id) {
     return document.getElementById(id);
@@ -61,18 +55,12 @@ function dIframe(id, cls) {
     return `id="${id}" class="${cls}" style='background: url("img/icons/loading.gif") center/7em no-repeat'`
 }
 
-/*function closeMenu() {
-    if (gId("navbarResponsive").classList.contains("show")) {
-        gId("menuExpander").click();
-    }
-}*/
-
 function contactMeForm(e) {
     try {
         e.preventDefault();
     } catch { }
     const cMe = 'contactMe',
-          mForm = gId(`${cMe}Form`);
+        mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
         mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
         iFrameHResize(`${cMe}I`);
@@ -85,13 +73,13 @@ function contactMeForm(e) {
 
 function iFrameHResize(id, percentage = 0.7) {
     const landscape = window.matchMedia("(orientation: landscape)"),
-          cH = document.documentElement.clientHeight,
-          height = equalScreen ? cH * 0.7
-                 : landscape.matches ? cH * percentage
-                 : devicePortraitAndLong ? heightIFrame * 1.2
-                 : heightIFrame * 0.8;
+        cH = document.documentElement.clientHeight,
+        height = equalScreen ? cH * 0.7
+            : landscape.matches ? cH * percentage
+                : devicePortraitAndLong ? heightIFrame * 1.2
+                    : heightIFrame * 0.8;
 
-    gId(id).style.height = `${height}px`;
+    gId(id).style.height = `${height + (smallScreen ? 30 : 0)}px`;
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {

@@ -1,6 +1,6 @@
 const fURL = 'https://federiconavarrete.com/',
-      imgLocPortfolio = 'img/portfolio/',
-      imgLocArticles = 'img/articles/';
+    imgLocPortfolio = 'img/portfolio/',
+    imgLocArticles = 'img/articles/';
 
 //getScripts.js
 const getScript = url => new Promise((resolve, reject) => {
@@ -23,38 +23,6 @@ const getScript = url => new Promise((resolve, reject) => {
     document.head.appendChild(script);
 });
 
-function onReadyPersonal() {
-    const cYear = new Date().getFullYear(),
-          spanYear = gId("spanYear"),
-          dTrans = gAll('[data-translation]');
-
-    spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
-
-    gAll('.ignore-click').forEach(element => {
-        element.addEventListener(eClick, () => false);
-    });
-
-    if (totalGenerics < dTrans.length) {
-        loadGenerics(dTrans);
-    }
-
-    gAll('.mFix').forEach(item => {
-        item.addEventListener(eClick, () => {
-            scrollToLoc(item.getAttribute('href').slice(1));
-        });
-    });
-
-    if (window.location.hash) {
-        scrollToLoc(window.location.hash.substring(1), 8);
-    }
-
-    try {
-        if (failedDMenu) {
-            loadDynamicMenu();
-        }
-    } catch { }
-}
-
 function closeMenu() {
     if (navbarResponsive.classList.contains("show")) {
         gId("menuExpander").click();
@@ -63,10 +31,10 @@ function closeMenu() {
 
 function scrollToLoc(loc, max = 5) {
     const idLoc = gId(loc),
-          cTop = idLoc.offsetTop;
+        cTop = idLoc.offsetTop;
 
     let scrollCount = 0;
-    
+
     const scrollInterval = setInterval(() => {
         const ncTop = idLoc.offsetTop;
 
@@ -89,7 +57,6 @@ function onLoadedPE() {
 
     // Add event listener to document
     document.addEventListener(eClick, (event) => {
-        //const isClickInsideNavbar = gId('mainNav').contains(event.target);
         // If click is outside navbar, close navbar
         if (!gId('mainNav').contains(event.target)) {
             closeMenu();
@@ -103,13 +70,65 @@ function onLoadedPE() {
             new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
     }
+
+    //external
+    function onReadyExternal() {
+        getScript(`${urlB}www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7`)
+            .then(() => {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+
+                gtag('config', 'G-4X4X4PDHN7');
+            })
+            .catch((e) => {
+                console.error(e);
+            });
+
+        getScript(`${urlB}cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js`)
+            .catch((e) => {
+                console.error(e);
+            });
+    }
+
+    function onReadyPersonal() {
+        const cYear = new Date().getFullYear(),
+            spanYear = gId("spanYear"),
+            dTrans = gAll('[data-translation]');
+
+        spanYear.innerHTML = cYear === 2019 ? `${cYear}` : `2019 - ${cYear}`;
+
+        gAll('.ignore-click').forEach(element => {
+            element.addEventListener(eClick, () => false);
+        });
+
+        if (totalGenerics < dTrans.length) {
+            loadGenerics(dTrans);
+        }
+
+        gAll('.mFix').forEach(item => {
+            item.addEventListener(eClick, () => {
+                scrollToLoc(item.getAttribute('href').slice(1));
+            });
+        });
+
+        if (window.location.hash) {
+            scrollToLoc(window.location.hash.substring(1), 8);
+        }
+
+        try {
+            if (failedDMenu) {
+                loadDynamicMenu();
+            }
+        } catch { }
+    }
 }
 
 if (smallScreen) {
     gId('imgProfile').classList.add('mb-5', 'd-block', 'mx-auto');
 } else {
     const profileDiv = gId('profile-div'),
-          mediaQuery = window.matchMedia('(min-width: 769px)');
+        mediaQuery = window.matchMedia('(min-width: 769px)');
 
     function handleTabletChange(e) {
         // Check if the media query is true
@@ -160,35 +179,6 @@ if (smallScreenMobileOS) {
         gId("contactMeFloat").style.display = (currentScroll > lastScrollTop) ? 'none' : 'block';
         lastScrollTop = currentScroll;
     }, false);
-}
-
-//external
-function onReadyExternal() {
-    getScript(`${urlB}www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7`)
-        .then(() => {
-            loadAnalytics();
-        })
-        .catch((e) => {
-            console.error(e);
-        });
-
-    /*getScript('https://code.jivosite.com/widget/1D5ncamsoj')
-    .catch((e) => {
-        console.error(e);
-    });*/
-
-    getScript(`${urlB}cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js`)
-        .catch((e) => {
-            console.error(e);
-        });
-}
-
-function loadAnalytics() {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-4X4X4PDHN7');
 }
 
 if (document.readyState !== "loading") {
