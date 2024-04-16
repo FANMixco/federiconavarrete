@@ -279,14 +279,24 @@ const loadSectionIfVisible = () => {
             divReviewsPreviews.innerHTML = reviewsHTML;
 
             fullReviews.forEach((item, index) => {
-                gId(`readMore${index + 1}`).addEventListener(eClick, (e) => {
+                const rMore = gId(`readMore${index + 1}`);
+                if (item.isPDF && !PDFObject.supportsPDFs) {
+                    rMore.href = '';
+                    rMore.removeAttribute("data-bs-toggle");
+                    rMore.removeAttribute("data-bs-target");
+                }
+                rMore.addEventListener(eClick, (e) => {
                     e.preventDefault();
                     divGenericContent.innerHTML = item.review;
 
                     if (item.isPDF) {
-                        PDFObject.embed(item.pdfLocation, `#review${index + 1}PDF`);
-                        if (deviceType() === devs[0] || deviceType() === devs[1])
-                            gId("review2PDF").style.height = "auto";
+                        if (PDFObject.supportsPDFs) {
+                            PDFObject.embed(item.pdfLocation, `#review${index + 1}PDF`);
+                            if (deviceType() === devs[0] || deviceType() === devs[1])
+                                gId("review2PDF").style.height = "auto";
+                        } else {
+                            window.open(item.pdfLocation);
+                        }
                     }
                 });
             });
