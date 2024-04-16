@@ -22,45 +22,62 @@ https://emojicombos.com/rayquaza-ascii-art
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe | AI powered video game</title>
+    <title>Tic-Tac-Toe | AI powered video game</title>
     <!--favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
     <link rel="mask-icon" href="../img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="description"
-        content="A simple Tic Tac Toe created with ChatGPT. It's a game for testing the ChatGPT capabilities.">
+        content="A simple Tic-Tac-Toe created with ChatGPT. It's a game for testing the ChatGPT capabilities.">
     <meta name="keywords"
-        content="video game, ai, chatgpt, ">
+        content="video game, ai, chatgpt, tictactoe, federico navarrete, genai, generative ai, game, easter egg, X0">
     <meta name="author" content="Federico Navarrete and ChatGPT">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-color: var(--bg-color);
+          color: var(--text-color);
         }
-
         .board {
-            display: inline-block;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+          display: inline-block;
+          border-collapse: collapse;
+          margin-bottom: 20px;
         }
-
         .board td {
-            width: 100px;
-            height: 100px;
-            border: 2px solid #000;
-            font-size: 48px;
-            cursor: pointer;
+          width: 100px;
+          height: 100px;
+          border: 2px solid #000;
+          font-size: 48px;
+          cursor: pointer;
         }
-
-        .winner {
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --bg-color: #222;
+            --text-color: #fff;
+          }
+          .winner {
+            background-color: red;
+          }
+          .board td {
+            border: 2px solid white;
+            }
+        }
+        @media (prefers-color-scheme: light) {
+          :root {
+            --bg-color: #fff;
+            --text-color: #222;
+          }
+          .winner {
             background-color: yellow;
+          }
         }
     </style>
 </head>
 
 <body>
-    <h1>Tic Tac Toe</h1>
+    <h1>Tic-Tac-Toe</h1>
     <h2>Powered By ChatGPT</h2>
     <table class="board">
         <tr>
@@ -185,7 +202,7 @@ https://emojicombos.com/rayquaza-ascii-art
         {
             "@context": "https://schema.org/",
             "@type": "WebSite",
-            "name": "Tic Tac Toe",
+            "name": "Tic-Tac-Toe",
             "url": "https://federiconavarrete.com/pages/tictactoe_ai.html",
             "potentialAction": {
             "@type": "SearchAction",
