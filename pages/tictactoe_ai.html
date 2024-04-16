@@ -59,6 +59,7 @@ https://emojicombos.com/rayquaza-ascii-art
         .win-text {
             text-transform: uppercase;
             font-weight: bold;
+            font-size: xx-large;
         }
 
         .board td {
@@ -147,7 +148,6 @@ https://emojicombos.com/rayquaza-ascii-art
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>Tic-Tac-Toe</h1>
@@ -171,7 +171,7 @@ https://emojicombos.com/rayquaza-ascii-art
         </table>
         <div id="message"></div>
         <p>
-            <button class="btn" onclick="restartGame()">Restart</button>
+            <button class="btn" onclick="restartGame()"><b>Restart<b></button>
         </p>
         <p id="footer">
             &copy; <a href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a href="https://supernovaic.com" target="_blank">Supernova IC</a>
@@ -208,8 +208,8 @@ https://emojicombos.com/rayquaza-ascii-art
 
             cell.textContent = currentPlayer;
             if (checkWin(currentPlayer)) {
-                highlightWinner();
                 message.classList.add('win-text');
+                highlightWinner();
                 message.textContent = `${currentPlayer} wins!`;
                 gameActive = false;
             } else if (isDraw()) {
@@ -258,10 +258,12 @@ https://emojicombos.com/rayquaza-ascii-art
             const cell = emptyCells[randomIndex];
             cell.textContent = currentPlayer;
             if (checkWin(currentPlayer)) {
+                message.classList.add('win-text');
                 highlightWinner();
                 message.textContent = `${currentPlayer} wins!`;
                 gameActive = false;
             } else if (isDraw()) {
+                message.classList.add('win-text');
                 message.textContent = "It's a draw!";
                 gameActive = false;
             } else {
@@ -289,7 +291,7 @@ https://emojicombos.com/rayquaza-ascii-art
         {
             "@context": "https://schema.org/",
             "@type": "WebSite",
-            "name": "Tic-Tac-Toe",
+            "name": "Tic-Tac-Toe with AI",
             "url": "https://federiconavarrete.com/pages/tictactoe_ai.html",
             "potentialAction": {
             "@type": "SearchAction",
