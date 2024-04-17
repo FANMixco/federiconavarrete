@@ -28,6 +28,7 @@ a .cards-row {
 }
 
 @media (min-width:768px) {
+
     .carousel-inner .active,
     .carousel-inner .active+.carousel-item,
     .carousel-inner .active+.carousel-item+.carousel-item {

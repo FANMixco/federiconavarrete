@@ -41,7 +41,7 @@ fetchData(`${jsonLoc}/extraInfo.json`)
                 items = (smallScreen) ? items : `${items}</div>`;
 
                 if (smallScreen) {
-                    items = getCarousel(items, "carouselServices", 'text-dark');
+                    items = getCarousel(items, "carouselServices", 'text-btn-carousel');
                     const servicesListDiv = gId("servicesList");
                     servicesListDiv.classList.remove("row");
                     servicesListDiv.classList.add("container");
@@ -213,7 +213,7 @@ const loadSectionIfVisible = () => {
             items = (smallScreen) ? items : `${items}</div>`;
 
             if (smallScreen) {
-                items = getCarousel(items, "carouselAwards", 'text-dark');
+                items = getCarousel(items, "carouselAwards", 'text-btn-carousel');
                 const awardsListDiv = gId("awardsList");
                 awardsListDiv.classList.remove("row");
                 awardsListDiv.classList.add("container");
