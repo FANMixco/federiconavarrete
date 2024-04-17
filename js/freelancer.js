@@ -83,12 +83,14 @@ let navbarShrink = () => {
             extraContact++;
         }
         else if (scroll > getHeight() * 0.7) {
-            if (!(gId('g_translate') && validLang.includes(uLang))) {
-                const script = document.createElement('script');
-                script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
-                script.id = 'g_translate';
-                document.body.appendChild(script);
-                gId('google_translate_element').classList.remove('d-none');
+            if (!gId('g_translate')) {
+                if (!validLang.includes(uLang)) {
+                    const script = document.createElement('script');
+                    script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
+                    script.id = 'g_translate';
+                    document.body.appendChild(script);
+                    gId('google_translate_element').classList.remove('d-none');    
+                }
             }
         }
 
