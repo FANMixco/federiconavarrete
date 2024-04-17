@@ -5,9 +5,7 @@ let totalServices = 0,
 
 //const bookEdition = 'second;'
 const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 80%;max-height: 100%;"'),
-    noreferrer = 'rel="noreferrer"',
     tBlank = 'target="_blank"',
-    w100 = 'class="w-100"',
     divSmall = '<div class="col-sm">';
 
 fetchData(`${jsonLoc}/extraInfo.json`)
@@ -150,6 +148,7 @@ fetchData(`${jsonLoc}/extraInfo.json`)
 
 const loadSectionIfVisible = () => {
     let fullReviews = [];
+    const noreferrer = 'rel="noreferrer"';
 
     gAll('section, div').forEach(section => {
         const rect = section.getBoundingClientRect(),
@@ -518,7 +517,7 @@ const loadSectionIfVisible = () => {
             items = presentations.map(item => {
                 let result = getUTubeContainer(item);
                 if (cUTube === 0) {
-                    result += `<div ${w100}></div>`;
+                    result += `<div class="w-100"></div>`;
                 }
                 cUTube++;
                 return result;
