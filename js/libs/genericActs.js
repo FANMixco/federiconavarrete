@@ -73,7 +73,9 @@ function contactMeForm(e) {
 
 function iFrameHResize(id, container) {
     setTimeout(() => {
-        gId(id).style.height =  `${devicePortraitAndLong ? heightIFrame * 1.2 : gId(container).offsetHeight - ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0)}px`;
+        let oH = gId(container).offsetHeight;
+        oH = (oH) === 0 ? 450 : oH;
+        gId(id).style.height =  `${devicePortraitAndLong ? heightIFrame * 1.2 : oH - ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0)}px`;
     }, 250);
 }
 
