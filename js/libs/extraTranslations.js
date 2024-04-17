@@ -235,11 +235,7 @@ const loadSectionIfVisible = () => {
                         gId('gTitle').classList.add(nVis);
                         gId('gDivTitle').classList.add('border-0');
 
-                        modalPreview.classList.remove('modal-xl');
-
-                        if (item.type === "img") {
-                            modalPreview.classList.add('modal-xl');
-                        }
+                        modalPreview.classList.add('modal-xl');
 
                         btnFullScreenPreview.href = tmpLink;
                         btnFullScreenPreview.setAttribute('title', item.title);
@@ -247,7 +243,8 @@ const loadSectionIfVisible = () => {
 
                         gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
-                        iFrameHResize('previewerIframeI', 'divIframeLinkPreviews');
+                        if (item.type !== "img")
+                            iFrameHResize('previewerIframeI', 'divIframeLinkPreviews');
                     });
                 }
             });
