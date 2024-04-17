@@ -95,7 +95,7 @@ function loadTranslations() {
 
                 gId('zoomTitle').innerHTML = pTitle;
 
-                loadIframe("divPreview", pTitle, `${url}?isIframe=true`, 'id="gPreview" allowfullscreen');
+                loadIframe("divPreview", pTitle, `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
 
                 btnFullScreen.href = url;
                 btnFullScreen.setAttribute('title', pTitle);
