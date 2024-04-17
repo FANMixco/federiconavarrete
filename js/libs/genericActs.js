@@ -63,7 +63,7 @@ function contactMeForm(e) {
         mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
         mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
-        iFrameHResize(`${cMe}I`);
+        iFrameHResizeAdvanced(`${cMe}I`, `${cMe}Form`);
     }
 
     const contactMe = new bootstrap.Modal(gId(cMe), {});
@@ -71,15 +71,10 @@ function contactMeForm(e) {
     extraContact++;
 }
 
-function iFrameHResize(id, percentage = 0.7) {
-    const landscape = window.matchMedia("(orientation: landscape)"),
-        cH = document.documentElement.clientHeight,
-        height = equalScreen ? cH * 0.7
-            : landscape.matches ? cH * percentage
-                : devicePortraitAndLong ? heightIFrame * 1.2
-                    : heightIFrame * 0.8;
-
-    gId(id).style.height = `${height + (smallScreen ? 30 : 0)}px`;
+function iFrameHResizeAdvanced(id, container) {
+    setTimeout(() => {
+        gId(id).style.height = `${gId(container).offsetHeight}px`;
+    }, 250);
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {

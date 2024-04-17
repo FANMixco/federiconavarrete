@@ -161,7 +161,7 @@ function loadBasicInfo() {
             if (!gId('iframeElSalvador')) {
                 loadIframe('divIframElSalvador', 'SV Map', `${urlB}www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984252.4374393197!2d-90.05167866086293!3d13.749114461377241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6327a659640657%3A0x6f9a16eb98854832!2sEl+Salvador!5e0!3m2!1sen!2spl!4v1555793789038!5m2!1sen!2spl`, dIframe('iframeElSalvador', 'previewerIframe'));
 
-                iFrameHResize('iframeElSalvador');
+                iFrameHResizeAdvanced('iframeElSalvador', 'divIframElSalvador');
             }
         }, false);
 
@@ -182,7 +182,7 @@ function loadBasicInfo() {
 
             loadIframe('divIframeLinkPreviews', 'Federico Navarrete', `${urlB}www.youtube.com/embed/IcWZ962uYy0`, dIframe('yIframeP', 'previewerIframe'), true);
 
-            iFrameHResize('yIframeP', 0.7);
+            iFrameHResizeAdvanced('yIframeP', 'divIframeLinkPreviews');
 
             btnFullScreenPreview.href = `${urlB}bit.ly/3p9hMGJ`;
             btnFullScreenPreview.setAttribute('title', genericTranslations.winning);

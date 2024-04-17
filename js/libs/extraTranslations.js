@@ -248,7 +248,7 @@ const loadSectionIfVisible = () => {
 
                         gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
-                        iFrameHResize('previewerIframeI');
+                        iFrameHResizeAdvanced('previewerIframeI', 'divIframeLinkPreviews');
                     });
                 }
             });
@@ -552,7 +552,7 @@ setTimeout(() => {
                 e.preventDefault();
                 gId("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
 
-                iFrameHResize('serviceFormI');
+                iFrameHResizeAdvanced('serviceFormI', 'serviceForm');
 
                 const services = new bootstrap.Modal(gId("servicesModal"), {});
                 services.show();
@@ -612,8 +612,9 @@ function rotatedModal() {
         });
     }
 
-    if (gId('contactMeI'))
-        iFrameHResize('contactMeI');
+    if (gId('contactMeI')) {
+        iFrameHResizeAdvanced('contactMeI', 'contactMeForm');
+    }
 
     changeModalType();
 }

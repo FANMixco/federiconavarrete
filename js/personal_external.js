@@ -161,7 +161,7 @@ function screenResize() {
     devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > width;
 
     if (gId('contactMeI')) {
-        iFrameHResize('contactMeI');
+        iFrameHResizeAdvanced('contactMeI', 'contactMeForm');
     }
 
     if (!navbarResponsive.classList.contains("show") && smallScreen) {
