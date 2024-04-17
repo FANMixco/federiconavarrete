@@ -4,7 +4,7 @@ let totalServices = 0,
     failedDMenu = null;
 
 //const bookEdition = 'second;'
-const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 90%;max-height: 100%;"'),
+const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 80%;max-height: 100%;"'),
     noreferrer = 'rel="noreferrer"',
     tBlank = 'target="_blank"',
     w100 = 'class="w-100"',
