@@ -4,7 +4,7 @@ let totalServices = 0,
     failedDMenu = null;
 
 //const bookEdition = 'second;'
-const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', 'style="max-width: 80%;max-height: 100%;"'),
+const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', `style="max-width: ${(smallScreen) ? '90' : '80' }%;max-height: 100%;"`),
     tBlank = 'target="_blank"',
     divSmall = '<div class="col-sm">';
 
