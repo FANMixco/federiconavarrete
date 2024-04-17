@@ -65,12 +65,6 @@ function onLoadedPE() {
 
     window.addEventListener('resize', screenResize);
 
-    if (!validLang.includes(uLang)) {
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-        }
-    }
-
     //external
     function onReadyExternal() {
         getScript(`${urlB}www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7`)

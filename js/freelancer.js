@@ -89,7 +89,10 @@ let navbarShrink = () => {
                     script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
                     script.id = 'g_translate';
                     document.body.appendChild(script);
-                    gId('google_translate_element').classList.remove('d-none');    
+                    gId('google_translate_element').classList.remove('d-none');
+                    window.googleTranslateElementInit = function () {
+                        new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'nl,de,fr,it,en,pt', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                    };
                 }
             }
         }
