@@ -1,0 +1,45 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.maze {
+    position: absolute;
+    top: 0;
+    left: 0;    width: 570px; /* Adjust according to your maze size */
+    height: 600px; /* Adjust according to your maze size */
+    background-color: black;
+    border: 2px solid #000;
+}
+
+/* Styling for maze walls */
+.wall {
+    background-color: blue;
+    width: 30px; /* Adjust according to your maze cell size */
+    height: 30px; /* Adjust according to your maze cell size */
+    position: absolute;
+}
+
+/* Sample styling for maze dots */
+.dot {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+}
+
+/* Sample styling for maze power pellets */
+.power-pellet {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
