@@ -206,7 +206,7 @@ a {
 }
 
 .nonScroll {
-	overflow: hidden;
+	overflow: hidden!important;
 }
 
 #mainNav .navbar-toggler {
