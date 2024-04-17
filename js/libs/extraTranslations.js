@@ -710,7 +710,7 @@ function loadDynamicMenu() {
 
         li = document.createElement('li');//,
 
-        liC = createLiContent('mobileContactMe', `${genericTranslations.contactMe}&nbsp;💡`, 'text-white');
+        liC = createLiContent('', `${genericTranslations.contactMe}&nbsp;💡`, 'text-white', 'mobileContactMe');
         li.className = liC[0];
         li.innerHTML = liC[1];
 
@@ -721,8 +721,8 @@ function loadDynamicMenu() {
         failedDMenu = false;
     }
 
-    function createLiContent(id, text, color) {
-        return ['nav-item mx-0 mx-lg-1 dynamicNavItem', `<a class="nav-link py-3 px-0 px-lg-3 rounded ${color}" href="#${id}">${text}</a>`];
+    function createLiContent(loc, text, color, id = '') {
+        return ['nav-item mx-0 mx-lg-1 dynamicNavItem', `<a ${(id) ? `id='${id}'` : ''} class="nav-link py-3 px-0 px-lg-3 rounded ${color}" href="${(loc) ? `#${loc}` : ''}">${text}</a>`];
     }
 }
 
