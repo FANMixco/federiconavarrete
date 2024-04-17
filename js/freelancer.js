@@ -83,9 +83,7 @@ let navbarShrink = () => {
             extraContact++;
         }
         else if (scroll > getHeight() * 0.7) {
-            const gScriptExist = gId('g_translate');
-
-            if (!gScriptExist && !validLang.includes(uLang)) {
+            if (!(gId('g_translate') && validLang.includes(uLang))) {
                 const script = document.createElement('script');
                 script.src = `${urlB}translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
                 script.id = 'g_translate';
