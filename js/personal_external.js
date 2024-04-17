@@ -10,7 +10,7 @@ const getScript = url => new Promise((resolve, reject) => {
 
     script.onerror = reject;
 
-    script.onload = script.onreadystatechange = function () {
+    script.onload = script.onreadystatechange = () => {
         const loadState = this.readyState;
 
         if (loadState && loadState !== 'loaded' && loadState !== 'complete') return;
@@ -160,8 +160,9 @@ function screenResize() {
 
     devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > width;
 
-    if (gId('contactMeI')) {
-        iFrameHResizeAdvanced('contactMeI', 'contactMeForm');
+    const cName = 'contactMe';
+    if (gId(`${cName}I`)) {
+        iFrameHResize(`${cName}I`, `${cName}Form`);
     }
 
     if (!navbarResponsive.classList.contains("show") && smallScreen) {
@@ -174,7 +175,7 @@ screenResize();
 if (smallScreenMobileOS) {
     let lastScrollTop = 0;
 
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", () => {
         const currentScroll = window.scrollY || document.documentElement.scrollTop;
         gId("contactMeFloat").style.display = (currentScroll > lastScrollTop) ? 'none' : 'block';
         lastScrollTop = currentScroll;

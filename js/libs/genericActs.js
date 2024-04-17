@@ -63,7 +63,7 @@ function contactMeForm(e) {
         mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
         mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
-        iFrameHResizeAdvanced(`${cMe}I`, `${cMe}Form`);
+        iFrameHResize(`${cMe}I`, `${cMe}Form`);
     }
 
     const contactMe = new bootstrap.Modal(gId(cMe), {});
@@ -71,7 +71,7 @@ function contactMeForm(e) {
     extraContact++;
 }
 
-function iFrameHResizeAdvanced(id, container) {
+function iFrameHResize(id, container) {
     setTimeout(() => {
         gId(id).style.height = `${gId(container).offsetHeight}px`;
     }, 250);

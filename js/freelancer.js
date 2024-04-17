@@ -35,7 +35,7 @@ function onReadyFreelancer() {
 
         if (el_autohide) {
             let last_scroll_top = 0;
-            window.addEventListener('scroll', function () {
+            window.addEventListener('scroll', () => {
                 if (navbarResponsive.classList.contains("show")) {
                     gId("menuExpander").click();
                 }

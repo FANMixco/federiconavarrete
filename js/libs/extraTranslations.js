@@ -248,7 +248,7 @@ const loadSectionIfVisible = () => {
 
                         gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
-                        iFrameHResizeAdvanced('previewerIframeI', 'divIframeLinkPreviews');
+                        iFrameHResize('previewerIframeI', 'divIframeLinkPreviews');
                     });
                 }
             });
@@ -550,9 +550,10 @@ setTimeout(() => {
             const cService = gId(`${opt}${serv}`);
             cService.addEventListener(eClick, (e) => {
                 e.preventDefault();
-                gId("serviceForm").innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
+                const sForm = 'serviceForm';
+                gId(sForm).innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
 
-                iFrameHResizeAdvanced('serviceFormI', 'serviceForm');
+                iFrameHResize(`${sForm}I`, sForm);
 
                 const services = new bootstrap.Modal(gId("servicesModal"), {});
                 services.show();
@@ -613,7 +614,7 @@ function rotatedModal() {
     }
 
     if (gId('contactMeI')) {
-        iFrameHResizeAdvanced('contactMeI', 'contactMeForm');
+        iFrameHResize('contactMeI', 'contactMeForm');
     }
 
     changeModalType();
@@ -689,7 +690,7 @@ function handleNavbarVisibility() {
 
 function debounce(func, wait) {
     let timeout;
-    return function () {
+    return () => {
         const context = this,
             args = arguments;
         const later = () => {
