@@ -27,7 +27,6 @@ const urlB = 'https://',
     eClick = 'click',
     nVis = 'd-none',
     tCenter = "text-center",
-    marginTop = 0,
     heightIFrame = 600,
     devs = ["Smartphone", "Tablet", "Desktop", "Watch"],
     equalScreen = window.innerWidth == window.innerHeight,
@@ -63,7 +62,7 @@ function contactMeForm(e) {
     const cMe = 'contactMe',
         mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
-        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" width="100%" frameborder="0" class="previewerIframe" scrolling="yes" style="margin-top:${marginTop}px"`);
+        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" width="100%" frameborder="0" class="previewerIframe" scrolling="yes" style="margin-top:0px"`);
         iFrameHResize(`${cMe}I`, `${cMe}Form`);
     }
 
