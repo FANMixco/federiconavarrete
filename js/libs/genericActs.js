@@ -72,11 +72,14 @@ function contactMeForm(e) {
 }
 
 function iFrameHResize(id, container) {
-    setTimeout(() => {
-        let oH = gId(container).offsetHeight;
-        oH = (oH) === 0 ? 450 : oH;
-        gId(id).style.height =  `${devicePortraitAndLong ? heightIFrame * 1.2 : oH - ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0)}px`;
-    }, 250);
+    const eId = gId(id);
+    if (eId.style.height === 0) {
+        setTimeout(() => {
+            let oH = gId(container).offsetHeight;
+            oH = (oH) === 0 ? 450 : oH;
+            eId.style.height = `${devicePortraitAndLong ? heightIFrame * 1.2 : oH - ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0)}px`;    
+        }, 250);
+    }
 }
 
 function getImage(title, link, icon, isTargetBlank, isIcon = true, classExternal = "", isIgnoredClick = false, imgClass = "", extras = '') {
