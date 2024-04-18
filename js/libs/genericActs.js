@@ -37,7 +37,8 @@ const urlB = 'https://',
 
 let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth,
     tagRegExp,
-    extraContact = 0;
+    extraContact = 0,
+    rotatedScreen = false;
 
 function gId(id) {
     return document.getElementById(id);
@@ -73,7 +74,7 @@ function contactMeForm(e) {
 
 function iFrameHResize(id, container) {
     const eId = gId(id);
-    if (eId.style.height === 0) {
+    if (eId.style.height === 0 || rotatedScreen) {
         setTimeout(() => {
             let oH = gId(container).offsetHeight;
             oH = (oH) === 0 ? 450 : oH;

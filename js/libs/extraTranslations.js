@@ -597,6 +597,7 @@ function getCItem(extras) {
 }
 
 function rotatedModal() {
+    rotatedScreen = true;
     //Clean old changes
     if (smallScreen) {
         gAll(".mFullScreen").forEach(modal => {
