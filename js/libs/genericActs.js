@@ -63,7 +63,7 @@ function contactMeForm(e) {
     const cMe = 'contactMe',
         mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
-        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
+        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" width="100%" frameborder="0" class="previewerIframe" scrolling="yes" style="margin-top:${marginTop}px"`);
         iFrameHResize(`${cMe}I`, `${cMe}Form`);
     }
 
