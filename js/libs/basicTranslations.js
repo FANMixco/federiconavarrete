@@ -186,7 +186,7 @@ function loadBasicInfo() {
         });
 
         gAll('.iLang').forEach(item => {
-            item.src = `pages/${item.getAttribute('data-page')}.html?lang=${uLang}`;
+            item.src = `pages/${item.getAttribute('data-page')}.html?lang=${iLang}`;
         });
         return true;
     }
