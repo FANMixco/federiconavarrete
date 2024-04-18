@@ -79,7 +79,6 @@ function iFrameHResize(id, container) {
             let oH = gId(container).offsetHeight;
             oH = (oH) === 0 ? 450 : oH;
             eId.style.height = `${devicePortraitAndLong ? heightIFrame * 1.2 : oH - ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0)}px`;    
-            rotatedScreen = false;
         }, 250);
     }
 }
