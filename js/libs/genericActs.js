@@ -22,13 +22,12 @@ const deviceType = () => {
 const urlB = 'https://',
     uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
     validLang = ['en', 'es', 'zh'],
+    iLang = ((['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en');
     jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
     lazyLoading = 'loading="lazy"',
     eClick = 'click',
     nVis = 'd-none',
     tCenter = "text-center",
-    marginTop = 0,
-    heightIFrame = 600,
     devs = ["Smartphone", "Tablet", "Desktop", "Watch"],
     equalScreen = window.innerWidth == window.innerHeight,
     actualDev = deviceType(),
@@ -37,7 +36,8 @@ const urlB = 'https://',
 
 let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && window.innerHeight > window.innerWidth,
     tagRegExp,
-    extraContact = 0;
+    extraContact = 0,
+    rotatedScreen = false;
 
 function gId(id) {
     return document.getElementById(id);
@@ -62,7 +62,7 @@ function contactMeForm(e) {
     const cMe = 'contactMe',
         mForm = gId(`${cMe}Form`);
     if (mForm.innerHTML.trim().length == 0) {
-        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${uLang}`, `id="${cMe}I" height="${heightIFrame * 0.8}px" width="100%" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
+        mForm.innerHTML = getIframe('contact me', `pages/contact.html?lang=${iLang}`, `id="${cMe}I" width="100%" frameborder="0" class="previewerIframe" scrolling="yes" style="margin-top:0px"`);
         iFrameHResize(`${cMe}I`, `${cMe}Form`);
     }
 
@@ -72,10 +72,21 @@ function contactMeForm(e) {
 }
 
 function iFrameHResize(id, container) {
+    const dHeight = 450;
+    const dHeightL = 600;
     setTimeout(() => {
-        let oH = gId(container).offsetHeight;
-        oH = (oH) === 0 ? 450 : oH;
-        gId(id).style.height =  `${devicePortraitAndLong ? heightIFrame * 1.2 : oH - ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0)}px`;
+        let oH = 0;
+        if (!devicePortraitAndLong) {
+            oH = gId(container).offsetHeight;
+            oH = (oH) === 0 ? dHeight : oH;
+            oH -= ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0);    
+        } else {
+            oH = dHeightL * 1.2;
+            if (oH >= window.outerHeight) {
+                oH *= 0.7;
+            }
+        }
+        gId(id).style.height = `${oH}px`;
     }, 250);
 }
 

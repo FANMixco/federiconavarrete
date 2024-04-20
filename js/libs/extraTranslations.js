@@ -546,7 +546,7 @@ setTimeout(() => {
             cService.addEventListener(eClick, (e) => {
                 e.preventDefault();
                 const sForm = 'serviceForm';
-                gId(sForm).innerHTML = getIframe('Contact me', cService.href, `height="${heightIFrame * 0.8}px" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:${marginTop}px"`);
+                gId(sForm).innerHTML = getIframe('contact me', cService.href, `class="previewerIframe" width="100%" id="serviceFormI" frameborder="0" scrolling="yes" style="margin-top:0px"`);
 
                 iFrameHResize(`${sForm}I`, sForm);
 
@@ -569,8 +569,8 @@ function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras 
     return `${hasLink ? `<a href="${link}" ${idL != '' ? `id='${idL}'` : ''} class='card-link ${txtColor}'>` : ''}<div class="card card-ser ${cOption}" ${(!extras) ? '' : `style="${extras}"`}><div class="card-body ${tCenter}"><h5 class="card-title"><div class='${iOption} card-icon'>${getFinalIcon(icon, iHeight)}</div></h5><br /><h6 class="card-subtitle mb-2">${title}</h6></div></div>${hasLink ? '</a>' : ''}`;
 }
 
-function getImgBasicTag(src, lazyLoading = '', extraClass = '', id = '', alt = '', extras = '') {
-    return getFinalImg(id, extraClass, alt, `src='${src}' ${extras}`, lazyLoading);
+function getImgBasicTag(src, lLoading = '', extraClass = '', id = '', alt = '', extras = '') {
+    return getFinalImg(id, extraClass, alt, `src='${src}' ${extras}`, lLoading);
 }
 
 function getFinalImg(id, imgCls, alt, extras, lLoading = lazyLoading) {
@@ -597,6 +597,7 @@ function getCItem(extras) {
 }
 
 function rotatedModal() {
+    rotatedScreen = true;
     //Clean old changes
     if (smallScreen) {
         gAll(".mFullScreen").forEach(modal => {
