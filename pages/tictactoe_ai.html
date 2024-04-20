@@ -200,6 +200,7 @@ https://emojicombos.com/rayquaza-ascii-art
         const cells = document.querySelectorAll('[data-cell]');
         const message = document.getElementById('message');
         let currentPlayer = 'X';
+        let aiRole = 'O';
         let gameActive = true;
         let aiThinking = false; // Flag to indicate whether the AI is currently making a move
 
@@ -224,7 +225,7 @@ https://emojicombos.com/rayquaza-ascii-art
             const cell = e.target;
             const index = parseInt(cell.getAttribute('data-cell'));
 
-            if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === 'O') return; // Ignore clicks while AI is thinking or if it's not the user's turn
+            if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === aiRole) return; // Ignore clicks while AI is thinking or if it's not the user's turn
 
             cell.textContent = currentPlayer;
             if (checkWin(currentPlayer)) {
@@ -240,7 +241,7 @@ https://emojicombos.com/rayquaza-ascii-art
             } else {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
                 message.textContent = `${currentPlayer}'s turn`;
-                if (currentPlayer === 'O') {
+                if (currentPlayer === aiRole) {
                     aiThinking = true; // Set the flag to indicate AI is thinking
                     setTimeout(makeMove, 500); // Delay AI move by 500ms
                 }
@@ -248,7 +249,7 @@ https://emojicombos.com/rayquaza-ascii-art
         }
 
         function makeMove() {
-            if (currentPlayer !== 'O') return; // Only make move if current player is "O"
+            if (currentPlayer !== aiRole) return; // Only make move if current player is "O"
             if (Math.random() < 0.75) {
                 // With 80% probability, make a random move
                 makeOptimalMove();
@@ -311,7 +312,7 @@ https://emojicombos.com/rayquaza-ascii-art
                 gameActive = false;
                 handleDraw();
             } else {
-                currentPlayer = 'X'; // Switch back to player X if game is still active
+                currentPlayer = currentPlayer == 'X' ? 'O' : 'X'; // Switch back to player X if game is still active
                 message.textContent = `${currentPlayer}'s turn`;
             }
         }
@@ -342,7 +343,7 @@ https://emojicombos.com/rayquaza-ascii-art
                 gameActive = false;
                 handleDraw();
             } else {
-                currentPlayer = 'X'; // Switch back to player X after AI's turn
+                currentPlayer = currentPlayer == 'X' ? 'O' : 'X'; // Switch back to player X after AI's turn
                 message.textContent = `${currentPlayer}'s turn`;
             }
             aiThinking = false; // Reset the flag after AI's move
@@ -406,6 +407,12 @@ https://emojicombos.com/rayquaza-ascii-art
             });
             message.textContent = `${currentPlayer}'s turn`;
             gameActive = true;
+
+            if (Math.random() < 0.5) {
+                aiThinking = true;
+                aiRole = 'X';
+                makeMove();
+            }
         }
 
         startGame();
