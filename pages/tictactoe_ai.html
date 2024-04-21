@@ -35,13 +35,15 @@ https://emojicombos.com/rayquaza-ascii-art
     <meta name="author" content="Federico Navarrete and ChatGPT">
     <style>
         @media (orientation: portrait) {
+
             html,
             body {
                 overflow: hidden;
             }
         }
 
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
@@ -165,7 +167,6 @@ https://emojicombos.com/rayquaza-ascii-art
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>Tic-Tac-Toe</h1>
@@ -221,13 +222,7 @@ https://emojicombos.com/rayquaza-ascii-art
             [2, 4, 6]
         ];
 
-        function handleCellClick(e) {
-            const cell = e.target;
-            const index = parseInt(cell.getAttribute('data-cell'));
-
-            if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === aiRole) return; // Ignore clicks while AI is thinking or if it's not the user's turn
-
-            cell.textContent = currentPlayer;
+        function handleWinAndDraw(currentPlayer) {
             if (checkWin(currentPlayer)) {
                 message.classList.add('win-text');
                 highlightWinner();
@@ -239,13 +234,59 @@ https://emojicombos.com/rayquaza-ascii-art
                 gameActive = false;
                 handleDraw();
             } else {
+                return true;
+            }
+            return false;
+        }
+
+        function handleCellClick(e) {
+            const cell = e.target;
+            const index = parseInt(cell.getAttribute('data-cell'));
+
+            if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === aiRole) return;
+
+            cell.textContent = currentPlayer;
+            if (handleWinAndDraw(currentPlayer)) {
                 currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
                 message.textContent = `${currentPlayer}'s turn`;
                 if (currentPlayer === aiRole) {
-                    aiThinking = true; // Set the flag to indicate AI is thinking
-                    setTimeout(makeMove, 500); // Delay AI move by 500ms
+                    aiThinking = true;
+                    setTimeout(makeMove, 500);
                 }
             }
+        }
+
+        function makeRandomMove() {
+            const emptyCells = [...cells].filter(cell => cell.textContent === '');
+            const randomIndex = Math.floor(Math.random() * emptyCells.length);
+            const cell = emptyCells[randomIndex];
+            cell.textContent = currentPlayer;
+            if (handleWinAndDraw(currentPlayer)) {
+                currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
+                message.textContent = `Your turn ${currentPlayer}`;
+            }
+        }
+
+        function makeOptimalMove() {
+            let bestScore = -Infinity;
+            let move;
+            for (let i = 0; i < cells.length; i++) {
+                if (cells[i].textContent === '') {
+                    cells[i].textContent = currentPlayer;
+                    const score = minimax(cells, 0, false);
+                    cells[i].textContent = '';
+                    if (score > bestScore) {
+                        bestScore = score;
+                        move = i;
+                    }
+                }
+            }
+            cells[move].textContent = currentPlayer;
+            if (handleWinAndDraw(currentPlayer)) {
+                currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
+                message.textContent = `Your turn ${currentPlayer}`;
+            }
+            aiThinking = false;
         }
 
         function makeMove() {
@@ -294,59 +335,6 @@ https://emojicombos.com/rayquaza-ascii-art
                 cell.classList.add('draw');
             });
             document.querySelector('.board').classList.add('draw-board');
-        }
-
-        function makeRandomMove() {
-            const emptyCells = [...cells].filter(cell => cell.textContent === '');
-            const randomIndex = Math.floor(Math.random() * emptyCells.length);
-            const cell = emptyCells[randomIndex];
-            cell.textContent = currentPlayer;
-            if (checkWin(currentPlayer)) {
-                highlightWinner();
-                message.classList.add('win-text');
-                message.textContent = `${currentPlayer} wins!`;
-                gameActive = false;
-            } else if (isDraw()) {
-                message.classList.add('win-text');
-                message.textContent = "It's a draw!";
-                gameActive = false;
-                handleDraw();
-            } else {
-                currentPlayer = currentPlayer == 'X' ? 'O' : 'X'; // Switch back to player X if game is still active
-                message.textContent = `${currentPlayer}'s turn`;
-            }
-        }
-
-        function makeOptimalMove() {
-            let bestScore = -Infinity;
-            let move;
-            for (let i = 0; i < cells.length; i++) {
-                if (cells[i].textContent === '') {
-                    cells[i].textContent = currentPlayer;
-                    const score = minimax(cells, 0, false);
-                    cells[i].textContent = '';
-                    if (score > bestScore) {
-                        bestScore = score;
-                        move = i;
-                    }
-                }
-            }
-            cells[move].textContent = currentPlayer;
-            if (checkWin(currentPlayer)) {
-                message.classList.add('win-text');
-                highlightWinner();
-                message.textContent = `${currentPlayer} wins!`;
-                gameActive = false;
-            } else if (isDraw()) {
-                message.classList.add('win-text');
-                message.textContent = "It's a draw!";
-                gameActive = false;
-                handleDraw();
-            } else {
-                currentPlayer = currentPlayer == 'X' ? 'O' : 'X'; // Switch back to player X after AI's turn
-                message.textContent = `${currentPlayer}'s turn`;
-            }
-            aiThinking = false; // Reset the flag after AI's move
         }
 
         function minimax(cells, depth, isMaximizing) {
@@ -405,13 +393,15 @@ https://emojicombos.com/rayquaza-ascii-art
                 cell.classList.remove('winner');
                 cell.addEventListener('click', handleCellClick);
             });
-            message.textContent = `${currentPlayer}'s turn`;
             gameActive = true;
 
             if (Math.random() < 0.5) {
                 aiThinking = true;
                 aiRole = 'X';
+                message.textContent = `${currentPlayer}'s turn`;
                 makeMove();
+            } else {
+                message.textContent = `Your turn ${currentPlayer}`;
             }
         }
 
