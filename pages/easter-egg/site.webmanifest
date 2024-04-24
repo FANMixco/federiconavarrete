@@ -1,0 +1,35 @@
+{
+    "name": "AI - Tic-Tac-Toe",
+    "short_name": "AI - X-0",
+    "scope": "https://federiconavarrete.com/pages/easter-egg",
+    "start_url": "https://federiconavarrete.com/pages/easter-egg",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#222",
+    "background_color": "#222",
+    "display": "standalone",
+    "dir": "ltr",
+    "id": 5,
+    "categories": [
+      "games",
+      "entertainment",
+      "social"
+    ],
+    "lang": "en",
+    "display_override": [
+      "standalone",
+      "browser",
+      "window-controls-overlay"
+    ]
+}

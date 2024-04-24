@@ -1,0 +1,81 @@
+<!--
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣤⣄⣾⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⢿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⣦⠀⠀⠀⣽⢿⣵⣿⡟⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣀⣀⣽⣷⣖⡤⣵⣿⣧⣭⠁⠀⠀⠀⠀⠀⠀
+⢀⡤⢦⣄⡈⠛⠈⠛⠋⠉⠋⠻⣿⣿⡿⣧⣀⠀⠀⠀⠀⠀
+⣾⠁⠀⠘⣷⣄⠀⠀⠀⠀⠀⠀⠙⣿⣿⡄⠉⠻⣦⠀⠀⠀
+⢹⡄⠀⠀⠘⣿⣦⡀⠀⠀⠀⣠⣾⣿⢯⣯⣤⡀⠈⣷⣄⠀
+⠈⢷⡄⠀⠀⠸⣿⣿⣦⣤⣼⣿⣿⣿⢾⣿⣿⣷⠈⠇⡹⡦
+⠀⠈⢿⣷⣄⡀⠘⢿⣿⡇⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀
+⠀⠀⠀⠹⣿⣿⡄⠀⠙⢣⣿⠿⠿⠟⠛⣿⠟⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠉⠀⠀⣠⡿⠃⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⡃⠀⠀⠀⠀⠶⠻⣷⣄⣀⢀⠀⠀
+⠀⠀⠀⠀⠀⠀⣰⣿⡿⣿⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+More info:
+https://emojicombos.com/rayquaza-ascii-art
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI - Tic-Tac-Toe | AI powered video game</title>
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link href="css/tictactoe.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#222">
+    <meta name="description" content="A simple Tic-Tac-Toe created with ChatGPT. It's a game for testing the ChatGPT capabilities.">
+    <meta name="keywords" content="video game, ai, chatgpt, tictactoe, federico navarrete, genai, generative ai, game, easter egg, X0">
+    <meta name="author" content="Federico Navarrete, ChatGPT">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+        <h2>Created with ChatGPT</h2>
+        <table class="board">
+            <tr>
+                <td data-cell="0"></td>
+                <td data-cell="1"></td>
+                <td data-cell="2"></td>
+            </tr>
+            <tr>
+                <td data-cell="3"></td>
+                <td data-cell="4"></td>
+                <td data-cell="5"></td>
+            </tr>
+            <tr>
+                <td data-cell="6"></td>
+                <td data-cell="7"></td>
+                <td data-cell="8"></td>
+            </tr>
+        </table>
+        <div id="message"></div>
+        <p>
+            <button class="btn" onclick="restartGame()"><b>Restart<b></button>
+        </p>
+        <p id="footer">
+            &copy; <a href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a href="https://supernovaic.com" target="_blank">Supernova IC</a>
+        </p>
+    </div>
+    <script src="js/tictactoe.min.js"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "Tic-Tac-Toe with AI",
+            "url": "https://federiconavarrete.com/pages/tictactoe_ai.html",
+            "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{search_term_string}",
+            "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+</body>
+</html>
