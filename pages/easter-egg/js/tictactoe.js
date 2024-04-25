@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll('[data-cell]');
 const message = document.getElementById('message');
 let currentPlayer = 'X';
+let aiRole = 'O';
 let gameActive = true;
 let aiThinking = false; // Flag to indicate whether the AI is currently making a move
 
@@ -21,13 +22,7 @@ const winningCombinations = [
     [2, 4, 6]
 ];
 
-function handleCellClick(e) {
-    const cell = e.target;
-    const index = parseInt(cell.getAttribute('data-cell'));
-
-    if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === 'O') return; // Ignore clicks while AI is thinking or if it's not the user's turn
-
-    cell.textContent = currentPlayer;
+function handleWinAndDraw(currentPlayer) {
     if (checkWin(currentPlayer)) {
         message.classList.add('win-text');
         highlightWinner();
@@ -39,17 +34,63 @@ function handleCellClick(e) {
         gameActive = false;
         handleDraw();
     } else {
+        return true;
+    }
+    return false;
+}
+
+function handleCellClick(e) {
+    const cell = e.target;
+    const index = parseInt(cell.getAttribute('data-cell'));
+
+    if (cell.textContent !== '' || !gameActive || aiThinking || currentPlayer === aiRole) return;
+
+    cell.textContent = currentPlayer;
+    if (handleWinAndDraw(currentPlayer)) {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         message.textContent = `${currentPlayer}'s turn`;
-        if (currentPlayer === 'O') {
-            aiThinking = true; // Set the flag to indicate AI is thinking
-            setTimeout(makeMove, 500); // Delay AI move by 500ms
+        if (currentPlayer === aiRole) {
+            aiThinking = true;
+            setTimeout(makeMove, 500);
         }
     }
 }
 
+function makeRandomMove() {
+    const emptyCells = [...cells].filter(cell => cell.textContent === '');
+    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    const cell = emptyCells[randomIndex];
+    cell.textContent = currentPlayer;
+    if (handleWinAndDraw(currentPlayer)) {
+        currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
+        message.textContent = `Your turn ${currentPlayer}`;
+    }
+}
+
+function makeOptimalMove() {
+    let bestScore = -Infinity;
+    let move;
+    for (let i = 0; i < cells.length; i++) {
+        if (cells[i].textContent === '') {
+            cells[i].textContent = currentPlayer;
+            const score = minimax(cells, 0, false);
+            cells[i].textContent = '';
+            if (score > bestScore) {
+                bestScore = score;
+                move = i;
+            }
+        }
+    }
+    cells[move].textContent = currentPlayer;
+    if (handleWinAndDraw(currentPlayer)) {
+        currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
+        message.textContent = `Your turn ${currentPlayer}`;
+    }
+    aiThinking = false;
+}
+
 function makeMove() {
-    if (currentPlayer !== 'O') return; // Only make move if current player is "O"
+    if (currentPlayer !== aiRole) return; // Only make move if current player is "O"
     if (Math.random() < 0.75) {
         // With 80% probability, make a random move
         makeOptimalMove();
@@ -94,59 +135,6 @@ function handleDraw() {
         cell.classList.add('draw');
     });
     document.querySelector('.board').classList.add('draw-board');
-}
-
-function makeRandomMove() {
-    const emptyCells = [...cells].filter(cell => cell.textContent === '');
-    const randomIndex = Math.floor(Math.random() * emptyCells.length);
-    const cell = emptyCells[randomIndex];
-    cell.textContent = currentPlayer;
-    if (checkWin(currentPlayer)) {
-        highlightWinner();
-        message.classList.add('win-text');
-        message.textContent = `${currentPlayer} wins!`;
-        gameActive = false;
-    } else if (isDraw()) {
-        message.classList.add('win-text');
-        message.textContent = "It's a draw!";
-        gameActive = false;
-        handleDraw();
-    } else {
-        currentPlayer = 'X'; // Switch back to player X if game is still active
-        message.textContent = `${currentPlayer}'s turn`;
-    }
-}
-
-function makeOptimalMove() {
-    let bestScore = -Infinity;
-    let move;
-    for (let i = 0; i < cells.length; i++) {
-        if (cells[i].textContent === '') {
-            cells[i].textContent = currentPlayer;
-            const score = minimax(cells, 0, false);
-            cells[i].textContent = '';
-            if (score > bestScore) {
-                bestScore = score;
-                move = i;
-            }
-        }
-    }
-    cells[move].textContent = currentPlayer;
-    if (checkWin(currentPlayer)) {
-        message.classList.add('win-text');
-        highlightWinner();
-        message.textContent = `${currentPlayer} wins!`;
-        gameActive = false;
-    } else if (isDraw()) {
-        message.classList.add('win-text');
-        message.textContent = "It's a draw!";
-        gameActive = false;
-        handleDraw();
-    } else {
-        currentPlayer = 'X'; // Switch back to player X after AI's turn
-        message.textContent = `${currentPlayer}'s turn`;
-    }
-    aiThinking = false; // Reset the flag after AI's move
 }
 
 function minimax(cells, depth, isMaximizing) {
@@ -205,8 +193,16 @@ function startGame() {
         cell.classList.remove('winner');
         cell.addEventListener('click', handleCellClick);
     });
-    message.textContent = `${currentPlayer}'s turn`;
     gameActive = true;
+
+    if (Math.random() < 0.5) {
+        aiThinking = true;
+        aiRole = 'X';
+        message.textContent = `${currentPlayer}'s turn`;
+        makeMove();
+    } else {
+        message.textContent = `Your turn ${currentPlayer}`;
+    }
 }
 
 startGame();
