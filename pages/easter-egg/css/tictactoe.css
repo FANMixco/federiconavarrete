@@ -5,8 +5,7 @@
     }
 }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
 }
@@ -127,17 +126,4 @@ h1 {
 
 .btn:active {
     background-color: #87dbd0;
-}
-
-@media screen and (orientation: landscape) and (max-height: 480px) {
-
-    /* Styles for landscape orientation and phone-sized screens */
-    body {
-        transform: scale(0.7);
-        /* Adjust the scale factor as needed */
-        transform-origin: center top;
-        /* Set the origin of the transformation */
-        overflow: hidden;
-        /* Hide overflow to avoid scrolling */
-    }
 }
