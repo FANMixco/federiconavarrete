@@ -127,3 +127,17 @@ h1 {
 .btn:active {
     background-color: #87dbd0;
 }
+
+@media (orientation: landscape) and (max-height: 480px) {
+    h1 {
+        font-size: large;
+    }
+    h2, #footer {
+        font-size: small;
+    }
+    .board td {
+        width: 5vw; /* Use percentage of viewport width */
+        height: 5vw; /* Use percentage of viewport width */
+        font-size: 4vw; /* Use percentage of viewport width */
+    }
+}
