@@ -1,50 +1,65 @@
 {
-    "name": "Federico Navarrete",
-    "scope": "https://federiconavarrete.com/",
-    "start_url": "https://federiconavarrete.com/",
-    "short_name": "FNavarrete",
-    "description": "Federico Navarrete is an IT innovator, Author and Orator, shaping a better world via tech.",
-    "orientation": "portrait-primary",
-    "icons": [
-        {
-          "src": "img/favicons/android-chrome-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png",
-          "purpose": "any"
-        },
-        {
-          "src": "img/favicons/maskable-icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png",
-          "purpose": "maskable"
-        },
-        {
-          "src": "img/favicons/android-chrome-512x512.png",
-          "sizes": "512x512",
-          "type": "image/png",
-          "purpose": "any"
-        },
-        {
-          "src": "img/favicons/maskable-icon-512x512.png",
-          "sizes": "512x512",
-          "type": "image/png",
-          "purpose": "maskable"
-        }
-      ],
-    "theme_color": "#1b1223",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "dir": "ltr",
-    "id": 5,
-    "categories": [
-      "business",
-      "entertainment",
-      "social"
-    ],
-    "lang": "en",
-    "display_override": [
-      "standalone",
-      "browser",
-      "window-controls-overlay"
-    ]
+  "name": "Federico Navarrete",
+  "scope": "https://federiconavarrete.com/",
+  "start_url": "https://federiconavarrete.com/",
+  "short_name": "FNavarrete",
+  "description": "Federico Navarrete: Technovator, Author, Orator, shaping a better world via tech, leveraging cultural intelligence for personal and collective elevation.",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/favicons/maskable-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "img/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/favicons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#1b1223",
+  "background_color": "#07060e",
+  "display": "standalone",
+  "dir": "ltr",
+  "id": "6",
+  "categories": [
+    "business",
+    "entertainment",
+    "social"
+  ],
+  "lang": "en",
+  "display_override": [
+    "standalone",
+    "browser",
+    "window-controls-overlay"
+  ],
+  "shortcuts": [
+    {
+      "name": "Let's connect!",
+      "url": "https://federiconavarrete.com/pages/contact.html?lang=en",
+      "description": "Official contact me form"
+    },
+    {
+      "name": "Easter Egg",
+      "url": "https://federiconavarrete.com/pages/easter-egg/",
+      "description": "Do you dare to play?"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
 }
