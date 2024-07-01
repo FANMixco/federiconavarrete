@@ -2,11 +2,15 @@ const deviceType = () => {
     const ua = navigator.userAgent.toLowerCase();
 
     if (
-        ua.match(/(tablet|ipad|playbook|silk|kindle fire)|(android(?!.*mobi))/i) !== null
+        ua.match(/(tablet|ipad|playbook|silk|kindle fire)|(android(?!.*mobile))/i) !== null
     ) {
         return devs[1];
     } else if (
-        ua.match(/watch\\b|wear os\\b|huawei watch|gt 2|galaxy watch/g) !== null
+        ua.match(/smart-tv|netcast|googletv|appletv|hbbtv|viera|tizen|webos|roku|inettvbrowser|sonytv|bravia/i) !== null
+    ) {
+        return devs[4];
+    } else if (
+        ua.match(/watch\b|wear os\b|huawei watch|gt 2|galaxy watch/g) !== null
     ) {
         return devs[3];
     } else if (
@@ -28,7 +32,7 @@ const urlB = 'https://',
     eClick = 'click',
     nVis = 'd-none',
     tCenter = "text-center",
-    devs = ["Smartphone", "Tablet", "Desktop", "Watch"],
+    devs = ["Smartphone", "Tablet", "Desktop", "Watch", "TV"],
     equalScreen = window.innerWidth == window.innerHeight,
     actualDev = deviceType(),
     smallScreenMobileOS = (actualDev === devs[0] || actualDev === devs[3]),
