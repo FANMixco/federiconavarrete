@@ -344,8 +344,8 @@ const loadSectionIfVisible = () => {
         return getFinalImg(id, 'img-fluid', alt, '');
     }
 
-    function getH4Tag(body, extras = '', cls = '') {
-        return `<p class="${tCenter} text-uppercase text-secondary mb-0 h4 mt-2 mb-2 ${cls}" ${extras}>${body}</p>`;
+    function getH4Tag(body, extras = '', cls = '', isSecondary = true) {
+        return `<p class="${tCenter} text-uppercase ${isSecondary ? 'text-secondary' : ''} mb-0 h4 mt-2 mb-2 ${cls}" ${extras}>${body}</p>`;
     }
 
     function loadPersonalProjects(personalProjects) {
@@ -384,18 +384,18 @@ const loadSectionIfVisible = () => {
         catch (e) { return e; }
     }
 
-    function loadDivPresentations(presentations, divPicture, divCar) {
+    function loadDivPresentations(presentations, divPicture, divCar, imgLoc = imgLocPortfolio) {
         let items = '';
 
         if (smallScreen) {
             items = presentations.map((item, index) => {
-                const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
+                const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '', false).replaceAll('class="col-sm"', `class="carousel-video-inner"`);
                 return `${getCItem(`${(index === 0) ? "active" : ""}"`)}${vTmp}</div>`;
             }).join('');
             items = getCarousel(items, divCar, 'text-muted', true);
             divPicture.innerHTML = items;
         } else {
-            items = presentations.map(item => getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title)).join('');
+            items = presentations.map(item => getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '', false)).join('');
             divPicture.innerHTML = items;
         }
 
@@ -403,7 +403,7 @@ const loadSectionIfVisible = () => {
         if (smallScreen) new bootstrap.Carousel(`#${divCar}`);
 
         function setPPTImg(presentations) {
-            presentations.forEach(item => setImage(item.imgID, item.imgBasicName, imgLocPortfolio));
+            presentations.forEach(item => setImage(item.imgID, item.imgBasicName, imgLoc));
         }
     }
 
@@ -419,7 +419,8 @@ const loadSectionIfVisible = () => {
 
     function loadNewsArticles(newsArticlesList) {
         const { articles } = newsArticlesList;
-        loadImgSection(articles, 'divMMArticles', imgLocArticles, '');
+        loadDivPresentations(articles, gId('divMMArticles'), 'newsDiv', 'img/articles/');
+        //loadImgSection(articles, 'divMMArticles', imgLocArticles, '', '', false);
     }
 
     function loadBookPreview() {
@@ -434,19 +435,19 @@ const loadSectionIfVisible = () => {
         return `<picture><source ${src1} type="image/webp"><source ${src2} type="image/jpeg">${img}</picture>`;
     }
 
-    function loadImgSection(list, section, imgPath, optTitle = '', cls = '') {
+    function loadImgSection(list, section, imgPath, optTitle = '', cls = '', isSecondary = true) {
         try {
             const divSection = gId(section);
             list.forEach(item => {
-                divSection.innerHTML += getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls);
+                divSection.innerHTML += getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, !(optTitle) ? item.title : optTitle)), item.title, cls, isSecondary);
                 setImage(item.imgID, item.imgBasicName, imgPath);
             });
         }
         catch (e) { return e; }
     }
 
-    function getImgContainer(link, img, title, cls) {
-        return `${divSmall}${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}${getH4Tag(title, '', cls)}</div>`
+    function getImgContainer(link, img, title, cls, isSecondary = true) {
+        return `${divSmall}${getFLink('', link, img, `${noreferrer} ${tBlank} aria-label='${getCleanTitle(title)}'`)}${getH4Tag(title, '', cls, isSecondary)}</div>`
     }
 
     function setImage(imgID, imgBasic, imgLoc) {
