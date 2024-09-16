@@ -26,7 +26,7 @@ const deviceType = () => {
 const urlB = 'https://',
     uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
     validLang = ['en', 'es', 'zh'],
-    iLang = ((['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en');
+    iLang = ((['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en'),
     jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
     lazyLoading = 'loading="lazy"',
     eClick = 'click',
@@ -83,7 +83,7 @@ function iFrameHResize(id, container) {
         if (!devicePortraitAndLong) {
             oH = gId(container).offsetHeight;
             oH = (oH) === 0 ? dHeight : oH;
-            oH -= ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0);    
+            oH -= ((smallScreen && window.innerWidth > window.innerHeight) ? 32 : 0);
         } else {
             oH = dHeightL * 1.2;
             if (oH >= window.outerHeight) {
