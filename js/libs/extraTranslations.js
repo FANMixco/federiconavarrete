@@ -8,7 +8,7 @@ const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', `style="max-wi
     tBlank = 'target="_blank"',
     divSmall = '<div class="col-sm">';
 
-fetchData(`${jsonLoc}/extraInfo.json`)
+fetchData(`${jsonLoc}/extraInfo${smallScreen ? 'small' : ''}.json`)
     .then(data => {
         fullData = data;
         loadServices(data.servicesList);
