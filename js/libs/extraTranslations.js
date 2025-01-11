@@ -501,7 +501,7 @@ const loadSectionIfVisible = () => {
     function loadVideosUTube(presentations, divVideo, divCar) {
         let items = '';
 
-        if (smallScreen) {
+        //if (smallScreen) {
             items = presentations.map((item, index) => {
                 const vTmp = getUTubeContainer(item, '').replaceAll('class="col-sm"', `class="carousel-video-inner"`);
                 return `${getCItem(`${(index === 0) ? "active" : ""}"`)}${vTmp}</div>`;
@@ -509,7 +509,7 @@ const loadSectionIfVisible = () => {
             items = getCarousel(items, divCar, 'text-muted', true);
             divVideo.innerHTML = items;
             new bootstrap.Carousel(`#${divCar}`);
-        } else {
+        /*} else {
             let cUTube = 0;
             items = presentations.map(item => {
                 let result = getUTubeContainer(item);
@@ -520,7 +520,7 @@ const loadSectionIfVisible = () => {
                 return result;
             }).join('');
             divVideo.innerHTML = items;
-        }
+        }*/
 
         function getUTubeContainer(item, cls) {
             return `${divSmall}${getUTubeLite(item)}${getH4Tag(item.title, '', cls)}</div>`;
