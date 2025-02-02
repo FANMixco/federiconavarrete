@@ -238,7 +238,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div id="servicesList"></div>
          </div>
          <div class="container divSpace" id="divAwards" data-loaded="false">
-            <h3 class="text-center text-uppercase text-white text-title"><span class="icon-medal icon-size-40"></span>&nbsp;<span data-translation="awards"></span></h3>
+            <a data-bs-toggle="modal" id="hAwards" data-bs-target="#awardsModal" target="_blank">
+               <h3 class="text-center text-uppercase text-title text-warning"><span class="icon-medal icon-size-40"></span>&nbsp;<span data-translation="awards"></span></h3>
+            </a>
             <hr class="star-black-dark mb-5">
             <div id="awardsList"></div>
          </div>
@@ -408,6 +410,20 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             </div>
          </div>
       </div>
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="awardsModal">
+         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mFullScreen">
+             <div class="modal-content">  <!-- Moved .modal-content inside .modal-dialog -->
+                 <div class="modal-header border-0">
+                     <h5 class="modal-title"><span data-translation="awards"></span></h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                     <ul id="tbAwards"></ul>
+                 </div>
+             </div>
+         </div>
+     </div>     
 
       <div class="modal fade" tabindex="-1" role="dialog" id="reviewGeneric">
          <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable mFullScreenH" role="document">

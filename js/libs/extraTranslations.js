@@ -193,10 +193,17 @@ const loadSectionIfVisible = () => {
             const { awards } = awardList;
 
             const awardsList = gId('awardsList');
+            const tbAwards = gId('tbAwards');
             let availableLinks = [],
                 items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
-            awards.flat().forEach((elem, index) => {
+            const awardFlat = awards.flat();
+
+            awardFlat.forEach((elem, index) => {
+                if (!smallScreen && index > 2)
+                    return;
+                else if (smallScreen && index > 5)
+                    return;
                 const tmpLink = `${urlB}${elem.link}`,
                     title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
 
@@ -208,6 +215,10 @@ const loadSectionIfVisible = () => {
                 });
 
                 items += getSCItem(index, title);
+            });
+
+            awardFlat.forEach((elem) => {
+                tbAwards.innerHTML += `<li><a class="text-material-link" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
             });
 
             items = (smallScreen) ? items : `${items}</div>`;
@@ -229,8 +240,8 @@ const loadSectionIfVisible = () => {
                 if (item.type !== "_blank") {
                     gId(`linkPreview${item.id}`).addEventListener(eClick, () => {
                         const btnFullScreenPreview = gId('btn-full-screen-preview'),
-                            tmpLink = item.link,
-                            modalPreview = gId('modal-preview');
+                            tmpLink = item.link/*,
+                            modalPreview = gId('modal-preview')*/;
 
                         gId('gTitle').classList.add(nVis);
                         gId('gDivTitle').classList.add('border-0');
