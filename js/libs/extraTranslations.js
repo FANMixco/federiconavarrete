@@ -218,7 +218,7 @@ const loadSectionIfVisible = () => {
             });
 
             awardFlat.forEach((elem) => {
-                tbAwards.innerHTML += `<li><a class="text-material-link" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
+                tbAwards.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
             });
 
             items = (smallScreen) ? items : `${items}</div>`;
