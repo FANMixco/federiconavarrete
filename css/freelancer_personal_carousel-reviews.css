@@ -537,7 +537,7 @@ a {
     font-size: 1.75rem;
 }
 
-#youTubePreview, #hAwards {
+#youTubePreview, .hModals {
     cursor: pointer;
 }
 

@@ -8,7 +8,7 @@ const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', `style="max-wi
     tBlank = 'target="_blank"',
     divSmall = '<div class="col-sm">';
 
-fetchData(`${jsonLoc}/extraInfo${smallScreen ? 'Small' : ''}.json`)
+fetchData(`${jsonLoc}/extraInfo.json`)
     .then(data => {
         fullData = data;
         loadServices(data.servicesList);
@@ -198,12 +198,10 @@ const loadSectionIfVisible = () => {
                 items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
             const awardFlat = awards.flat();
+            const maxItems = smallScreen ? 6 : 3;
+            const filteredAwards = awardFlat.slice(0, maxItems);
 
-            awardFlat.forEach((elem, index) => {
-                if (!smallScreen && index > 2)
-                    return;
-                else if (smallScreen && index > 5)
-                    return;
+            filteredAwards.forEach((elem, index) => {
                 const tmpLink = `${urlB}${elem.link}`,
                     title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
 
@@ -250,7 +248,7 @@ const loadSectionIfVisible = () => {
                         btnFullScreenPreview.setAttribute('title', item.title);
                         btnFullScreenPreview.setAttribute('aria-label', item.title);
 
-                        gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("storage.live.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
+                        gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("drive.google.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
 
                         if (item.type !== "img") {
                             iFrameHResize('previewerIframeI', 'divIframeLinkPreviews');
@@ -430,8 +428,20 @@ const loadSectionIfVisible = () => {
 
     function loadNewsArticles(newsArticlesList) {
         const { articles } = newsArticlesList;
-        loadDivPresentations(articles, gId('divMMArticles'), 'newsDiv', 'img/articles/');
-        //loadImgSection(articles, 'divMMArticles', imgLocArticles, '', '', false);
+        const imgTmpLoc = 'img/articles/';
+
+        const maxItems = smallScreen ? 5 : 2;
+        const filteredArticles = articles.slice(0, maxItems);
+
+        loadDivPresentations(filteredArticles, gId('divMMArticles'), 'newsDiv', imgTmpLoc);
+
+        //console.log(articles);
+
+        //loadDivPresentations(articles, gId('dMassMedia'), 'newsDivModal', imgTmpLoc);
+
+        articles.forEach((elem) => {
+            dMassMedia.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
+        });
     }
 
     function loadBookPreview() {

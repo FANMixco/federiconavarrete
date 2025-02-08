@@ -32,12 +32,12 @@
             [
                 {
                     "title": "2020年国际演讲会杰出演讲会（DTM）",
-                    "link": "ams03pap001files.storage.live.com/y4mPW9UvWpzixPKSl-Cgn1ENM97ofsWgLuGjEFareBmeINcvhzIxAOR72dUlq3Q6kwLRZooiLk16ZzZk4Hywl01oHymHvBJd7Op_ISzoW4zcUdZC3DDaGFL788JeWJtTBKaCk2wQ_G8gGycNMiyLFNRqvtX-Qutz6TnKi_mPvMPmoA2_4PcR2VTRAo9mtI6K4Oh?width=1538&height=1032&cropmode=none",
+                    "link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
                     "type": "img"
                 },
                 {
                     "title": "2019年国际演讲会主席杰出区域",
-                    "link": "ams03pap001files.storage.live.com/y4mRZXlz_gI96AonA81i_bmEujvMEqbzMUc8BH8MvbryXaopqc9L_J0Kegr7kTQfNAZwkDzDk59780qEvEJ7lV4MsZP8YBSmJyWyf2-ySoihZq5QL7G_xDfo8fApfmuWppnWsNBFXk9gO35JJT7skW511gId2SaXvlKcz949osMTp6c_lbvI9Ln2VdLcGXNOqGT?width=1537&height=901&cropmode=none",
+                    "link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
                     "type": "img"
                 }
             ],
@@ -68,6 +68,24 @@
                 "title": "两名萨尔瓦多人在NASA竞赛中脱颖而出（西班牙语）",
                 "imgID": "imgNews2",
                 "imgBasicName": "news2"
+            },
+            {
+                "link": "bit.ly/3XV6hkZ",
+                "title": "第一位参加马德里著名书展的萨尔瓦多人（西班牙语）",
+                "imgID": "imgNews3",
+                "imgBasicName": "news3"
+            },
+            {
+                "link": "bit.ly/3XqY5av",
+                "title": "库斯卡特兰的神奇说书人（西班牙语）",
+                "imgID": "imgNews4",
+                "imgBasicName": "news4"
+            },
+            {
+                "link": "bit.ly/3XK7co9",
+                "title": "萨尔瓦多人通过开发技术在波兰取得成功（西班牙语）",
+                "imgID": "imgNews5",
+                "imgBasicName": "news5"
             }
         ]
     },

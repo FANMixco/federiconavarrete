@@ -32,12 +32,12 @@
             [
                 {
                     "title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
-                    "link": "i.sstatic.net/M6iO4uAp.jpg",
+                    "link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
                     "type": "img"
                 },
                 {
                     "title": "President's Distinguished Area by Toastmasters International 2019",
-                    "link": "i.sstatic.net/vp6tH7o7.jpg",
+                    "link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
                     "type": "img"
                 }
             ],
@@ -68,6 +68,24 @@
                 "title": "Two Salvadorans stand out in a NASA contest (in Spanish)",
                 "imgID": "imgNews2",
                 "imgBasicName": "news2"
+            },
+            {
+                "link": "bit.ly/3XV6hkZ",
+                "title": "1<sup>st</sup> Salvadoran that participated in the Prestigious Book Fair of Madrid (in Spanish)",
+                "imgID": "imgNews3",
+                "imgBasicName": "news3"
+            },
+            {
+                "link": "bit.ly/3XqY5av",
+                "title": "The magical storyteller of Cuscatlán (in Spanish)",
+                "imgID": "imgNews4",
+                "imgBasicName": "news4"
+            },
+            {
+                "link": "bit.ly/3XK7co9",
+                "title": "Salvadorans succeed in Poland by developing technology (in Spanish)",
+                "imgID": "imgNews5",
+                "imgBasicName": "news5"
             }
         ]
     },
