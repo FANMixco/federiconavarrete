@@ -193,7 +193,6 @@ const loadSectionIfVisible = () => {
             const { awards } = awardList;
 
             const awardsList = gId('awardsList');
-            const tbAwards = gId('tbAwards');
             let availableLinks = [],
                 items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
 
@@ -215,9 +214,7 @@ const loadSectionIfVisible = () => {
                 items += getSCItem(index, title);
             });
 
-            awardFlat.forEach((elem) => {
-                tbAwards.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
-            });
+            createList(awardFlat, gId('tbAwards'));
 
             items = (smallScreen) ? items : `${items}</div>`;
 
@@ -435,12 +432,12 @@ const loadSectionIfVisible = () => {
 
         loadDivPresentations(filteredArticles, gId('divMMArticles'), 'newsDiv', imgTmpLoc);
 
-        //console.log(articles);
+        createList(articles, gId('dMassMedia'));
+    }
 
-        //loadDivPresentations(articles, gId('dMassMedia'), 'newsDivModal', imgTmpLoc);
-
-        articles.forEach((elem) => {
-            dMassMedia.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
+    function createList(list, loc) {
+        list.forEach((elem) => {
+            loc.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
         });
     }
 
