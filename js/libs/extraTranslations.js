@@ -214,7 +214,7 @@ const loadSectionIfVisible = () => {
                 items += getSCItem(index, title);
             });
 
-            createList(awardFlat, gId('tbAwards'));
+            createList(awardFlat, 'tbAwards');
 
             items = (smallScreen) ? items : `${items}</div>`;
 
@@ -432,12 +432,13 @@ const loadSectionIfVisible = () => {
 
         loadDivPresentations(filteredArticles, gId('divMMArticles'), 'newsDiv', imgTmpLoc);
 
-        createList(articles, gId('dMassMedia'));
+        createList(articles, 'dMassMedia');
     }
 
     function createList(list, loc) {
+        const lTmp = gId(loc);
         list.forEach((elem) => {
-            loc.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
+            lTmp.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
         });
     }
 
