@@ -1,6 +1,12 @@
 {
 	"seenOn": [
 		{
+			"title": "EU",
+			"link": "bit.ly/3DnkfEA",
+			"image": "35",
+			"label": "阅读更多"
+		},
+		{
 			"title": "Citython",
 			"link": "bit.ly/3B6UZkB",
 			"image": "1",
@@ -85,13 +91,13 @@
 			"label": "阅读更多"
 		},
 		{
-			"title": "Feria del Libro de Madrid",
+			"title": "马德里书展",
 			"link": "bit.ly/3XV6hkZ",
 			"image": "22",
 			"label": "阅读更多"
 		},
 		{
-			"title": "Día E en China",
+			"title": "E日在中国",
 			"link": "bit.ly/47p0JlP",
 			"image": "23",
 			"label": "阅读更多"
@@ -103,7 +109,7 @@
 			"label": "阅读更多"
 		},
 		{
-			"title": "International Boat of Culture",
+			"title": "国际文化之舟",
 			"link": "bit.ly/3XOKMlz",
 			"image": "17",
 			"label": "阅读更多"
@@ -121,7 +127,7 @@
 			"label": "阅读更多"
 		},
 		{
-			"title": "Hackathon Gobierno Abierto",
+			"title": "黑客政府公开",
 			"link": "bit.ly/4evdJsi",
 			"image": "13",
 			"label": "阅读更多"
