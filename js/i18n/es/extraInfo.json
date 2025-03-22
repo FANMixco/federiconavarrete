@@ -18,7 +18,7 @@
     "awardsList": {
         "awards": [
             [
-                { 
+                {
                     "title": "1<sup>er</sup> Lugar en las Citythons 2021, Ediciones Eindhoven y Hamburgo. Patrocinadas por la UE",
                     "link": "bit.ly/4coX5ud",
                     "type": "_blank"
@@ -51,6 +51,30 @@
                     "title": "Top 5 de los proyectos más inspiradores de la NASA SpaceApps Challenge 2014",
                     "link": "bit.ly/3lqNR7Y",
                     "type": "iframe"
+                }
+            ],
+            [
+                {
+                    "title": "Ganador del 7.º Debate de Oxford: ¿El futuro del BPO/BPM es prometedor o está condenado? por Infosys Polonia",
+                    "link": "_blank",
+                    "type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
+                },
+                {
+                    "title": "Top 5 en la Imagine Cup de Polonia 2016 en la categoría Ciudadanía Mundial por Microsoft Polonia",
+                    "link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
+                    "type": "_blank"
+                }
+            ],
+            [
+                {
+                    "title": "Ganador del Hackathon Diversidad en el Liderazgo por Chappuis Halder & Co.",
+                    "link": "",
+                    "type": "_blank"
+                },
+                {
+                    "title": "Premio TIC El Salvador 2011 (1<sup>er</sup> Lugar) por YABT y OEA",
+                    "link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
+                    "type": "_blank"
                 }
             ]
         ]
@@ -105,7 +129,7 @@
             "link": "bit.ly/37cTxuR",
             "title": "La Ruta Maya",
             "timeFrame": "2013 - ahora",
-            "isActive": true	
+            "isActive": true
         },
         {
             "youTubeID": "0S8ybMuA4v",
@@ -119,7 +143,7 @@
             "link": "bit.ly/3XsCTAn",
             "title": "Gravity Now!",
             "timeFrame": "2014 - ahora",
-            "isActive": false	
+            "isActive": false
         }
     ],
     "presentationsVideos": {
@@ -217,7 +241,7 @@
                     "title": "Discursos de apertura",
                     "link": "www.cognitoforms.com/f/hkz0rsUoNkGpGQYpoPHBzg/7",
                     "icon": "speaker"
-                }			
+                }
             ],
             [
                 {
@@ -401,7 +425,7 @@
             "Android y MAUI"
         ]
     ],
-    "techSkillsOthers":[
+    "techSkillsOthers": [
         [
             "ITSM — ITIL v4",
             "ATDD",

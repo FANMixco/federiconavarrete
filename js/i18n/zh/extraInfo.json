@@ -18,7 +18,7 @@
     "awardsList": {
         "awards": [
             [
-                { 
+                {
                     "title": "2021《城市》、《埃因霍温》和《汉堡版》排名第一。由欧盟赞助",
                     "link": "bit.ly/4coX5ud",
                     "type": "_blank"
@@ -27,7 +27,7 @@
                     "title": "2021 年三星社交组件顶级开发者奖",
                     "link": "bit.ly/31laqDT",
                     "type": "_blank"
-                }			
+                }
             ],
             [
                 {
@@ -51,6 +51,30 @@
                     "title": "2014年NASA SpaceApps挑战赛最具启发性项目前5名",
                     "link": "bit.ly/3lqNR7Y",
                     "type": "iframe"
+                }
+            ],
+            [
+                {
+                    "title": "第七届牛津辩论赛获胜者：BPO/BPM 的未来是光明还是注定失败？——由 Infosys 波兰主办",
+                    "link": "_blank",
+                    "type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
+                },
+                {
+                    "title": "2016 年 Imagine Cup 波兰赛区世界公民类别前五名 —— 由微软波兰主办",
+                    "link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
+                    "type": "_blank"
+                }
+            ],
+            [
+                {
+                    "title": "领导力多样性黑客松冠军 —— 由 Chappuis Halder & Co. 主办",
+                    "link": "",
+                    "type": "_blank"
+                },
+                {
+                    "title": "2011 年萨尔瓦多 TIC 奖（第一名）—— 由 YABT 和美洲国家组织（OEA）主办",
+                    "link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
+                    "type": "_blank"
                 }
             ]
         ]
@@ -105,7 +129,7 @@
             "link": "bit.ly/37cTxuR",
             "title": "玛雅路线",
             "timeFrame": "2013年至今",
-            "isActive": true	
+            "isActive": true
         },
         {
             "youTubeID": "0S8ybMuA4vA",
@@ -119,7 +143,7 @@
             "link": "bit.ly/3XsCTAn",
             "title": "重力现在！",
             "timeFrame": "2014年至今",
-            "isActive": false	
+            "isActive": false
         }
     ],
     "presentationsVideos": {

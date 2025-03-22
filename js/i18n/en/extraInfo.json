@@ -18,7 +18,7 @@
     "awardsList": {
         "awards": [
             [
-                { 
+                {
                     "title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU",
                     "link": "bit.ly/4coX5ud",
                     "type": "_blank"
@@ -51,6 +51,30 @@
                     "title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
                     "link": "bit.ly/3lqNR7Y",
                     "type": "iframe"
+                }
+            ],
+            [
+                {
+                    "title": "Winner of the 7th Oxford Debate: Is the future of BPO/BPM bright or doomed? by Infosys Poland",
+                    "link": "_blank",
+                    "type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
+                },
+                {
+                    "title": "Top 5 in the Imagine Cup of Poland 2016 in the category World Citizenship by Microsoft Poland",
+                    "link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
+                    "type": "_blank"
+                }
+            ],
+            [
+                {
+                    "title": "Diversity in Leadership Hackathon Winner by Chappuis Halder & Co.",
+                    "link": "",
+                    "type": "_blank"
+                },
+                {
+                    "title": "TIC Award El Salvador 2011 (1st Place) by YABT &amp; OEA",
+                    "link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
+                    "type": "_blank"
                 }
             ]
         ]
@@ -105,7 +129,7 @@
             "link": "bit.ly/37cTxuR",
             "title": "The Mayan Route",
             "timeFrame": "2013 - now",
-            "isActive": true	
+            "isActive": true
         },
         {
             "youTubeID": "0S8ybMuA4vA",
@@ -119,7 +143,7 @@
             "link": "bit.ly/3XsCTAn",
             "title": "Gravity Now!",
             "timeFrame": "2014 - now",
-            "isActive": false	
+            "isActive": false
         }
     ],
     "presentationsVideos": {
