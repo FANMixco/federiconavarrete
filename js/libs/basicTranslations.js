@@ -145,7 +145,7 @@ function loadBasicInfo() {
 
         favBookDiv.innerHTML = getActionBtn(`${urlB}${favBook.link}`, 'download', favBook.title);
 
-        favPodcastDiv.innerHTML = getActionBtn(`${urlB}${favPodcast.link}`, 'spotify', favPodcast.title);
+        favPodcastDiv.innerHTML = getActionBtn(`${urlB}${favPodcast.link}`, 'podcast-solid', favPodcast.title);
 
         listContacts.innerHTML = getInLineBtn(company.name, `${urlB}${company.link}`, "building-solid", true) + listContacts.innerHTML;
 
