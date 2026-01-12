@@ -104,11 +104,23 @@ function loadTranslations() {
                 iFrameHResize('gPreview', 'divPreview');
             });
         });
+        
+        //to be commented
+        setImgBook();
 
         return true;
     }
     catch {
         return false;
+    }
+
+    //to be commented
+    function setImgBook() {
+        const divBook = gId("imgBook");
+        const imgLoc = `mirrors${(uLang === 'es' ? '_es' : '')}`;
+        const imgSize = deviceType() == devs[0] ? '_small' : '_medium';
+
+        divBook.src = `../../img/mybook/${imgLoc}${imgSize}.webp`;
     }
 }
 
