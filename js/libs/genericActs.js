@@ -25,7 +25,7 @@ const deviceType = () => {
 
 const urlB = 'https://',
     uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
-    validLang = ['en', 'es', 'zh'],
+    validLang = ['en', 'es', 'zh', 'fr'],
     iLang = ((['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en'),
     jsonLoc = `js/i18n/${((validLang.indexOf(uLang) === 1) ? uLang : 'en')}/min`,
     lazyLoading = 'loading="lazy"',
