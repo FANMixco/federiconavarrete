@@ -126,12 +126,13 @@ function loadTranslations() {
 
 function loadBasicInfo() {
     try {
-        const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, company } = basicInfo;
+        const { name, headline, headlineIntro, aboutDesc, favBook, favPodcast, company, booksStories = [] } = basicInfo;
 
         const hName = gId('hName'),
             hHeadline = gId('hHeadline'),
             hIntro = gId('hIntro'),
             divAbout = gId('divAbout'),
+            divBooksStories = gId('divBooksStories'),
             favBookDiv = gId('favBook'),
             favPodcastDiv = gId('favPodcast'),
             listContacts = gId('listContacts');
@@ -154,6 +155,14 @@ function loadBasicInfo() {
         aboutDesc.forEach(item => {
             divAbout.innerHTML += `<div class="col-sm"><p class="lead">${item}</p></div>`;
         });
+
+        if (divBooksStories) {
+            divBooksStories.innerHTML = getBooksStoriesCarousel(getSortedBooksStories(booksStories));
+
+            if (booksStories.length > 1) {
+                new bootstrap.Carousel(gId('carouselBooksStories'));
+            }
+        }
 
         favBookDiv.innerHTML = getActionBtn(`${urlB}${favBook.link}`, 'download', favBook.title);
 
@@ -208,6 +217,63 @@ function loadBasicInfo() {
 
     function getActionBtn(link, icon, title) {
         return getFLink("btn btn-xl btn-outline-light btn-home", link, `${getFinalIcon(`${icon}`)}&nbsp;&nbsp;${title}`, `rel="noreferrer" target="_blank"`);
+    }
+
+    function getBookStoryCard(bookStory) {
+        const { title, link, image } = bookStory;
+        const imgBasePath = `/img/mybook/${image}`;
+        const imgJpg = `${imgBasePath}.jpg`;
+        const imgWebp = `${imgBasePath}.webp`;
+
+        return `
+            <div class="carousel-item${bookStory.isActive ? ' active' : ''}">
+                <div class="text-center">
+                    <a href="${link}" rel="noreferrer" target="_blank" class="d-block mb-3">
+                        <picture>
+                            <source srcset="${imgWebp}" type="image/webp">
+                            <source srcset="${imgJpg}" type="image/jpeg">
+                            <img src="${imgJpg}" class="img-fluid d-block mx-auto" alt="${title}" loading="lazy" style="max-width: 100%; width: auto; max-height: min(52vh, 420px);" />
+                        </picture>
+                    </a>
+                    <a href="${link}" rel="noreferrer" target="_blank" class="btn btn-primary btn-book d-inline-flex mt-2">${genericTranslations.bookMsgGet}</a>
+                </div>
+            </div>`;
+    }
+
+    function getBooksStoriesCarousel(booksStories) {
+        if (!booksStories.length) {
+            return '';
+        }
+
+        const carouselItems = booksStories.map((bookStory, index) => getBookStoryCard({
+            ...bookStory,
+            isActive: index === 0
+        })).join('');
+
+        const carouselControls = booksStories.length > 1 ? `
+            <button class="carousel-control-prev icon-size-22" type="button" data-bs-target="#carouselBooksStories" data-bs-slide="prev" aria-label="Previous">
+                <span class="text-muted icon-chevron-left-solid" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next icon-size-22" type="button" data-bs-target="#carouselBooksStories" data-bs-slide="next" aria-label="Next">
+                <span class="text-muted icon-chevron-right-solid" aria-hidden="true"></span>
+            </button>` : '';
+
+        return `
+            <div id="carouselBooksStories" class="carousel slide">
+                <div class="carousel-inner">
+                    ${carouselItems}
+                </div>
+                ${carouselControls}
+            </div>`;
+    }
+
+    function getSortedBooksStories(booksStories) {
+        return [...booksStories].sort((firstBook, secondBook) => {
+            const firstPriority = Number.isFinite(firstBook.priority) ? firstBook.priority : Number.MAX_SAFE_INTEGER;
+            const secondPriority = Number.isFinite(secondBook.priority) ? secondBook.priority : Number.MAX_SAFE_INTEGER;
+
+            return firstPriority - secondPriority;
+        });
     }
 
     function getInLineBtn(btnAction, action, icon, isTargetBlank = false) {

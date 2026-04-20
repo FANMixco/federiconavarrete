@@ -14,6 +14,24 @@
 		"link": "a.co/d/4PLMTJM",
 		"title": "Timeless Stories of El Salvador"
 	},
+	"booksStories": [
+		{
+			"title": "Timeless Stories of El Salvador V1",
+			"link": "https://books2read.com/u/mqXNNQ",
+			"image": "book_medium"
+		},
+		{
+			"title": "Timeless Stories of El Salvador V2",
+			"link": "https://books2read.com/u/3nXNNR",
+			"image": "second_medium"
+		},
+		{
+			"title": "Timeless Stories of El Salvador: Spanish Mirrors",
+			"link": "https://books2read.com/u/bWX0qG",
+			"image": "mirrors_medium",
+			"priority": 1
+		}
+	],
 	"company": {
 		"id": "supernova",
 		"name": "Supernova IC",

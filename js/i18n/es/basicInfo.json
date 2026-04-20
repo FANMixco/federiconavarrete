@@ -14,6 +14,24 @@
 		"link": "a.co/d/efXt4eg",
 		"title": "Historias Eternas de El Salvador"
 	},
+	"booksStories": [
+		{
+			"title": "Historias Eternas de El Salvador V1",
+			"link": "https://books2read.com/u/3nDWx9",
+			"image": "book_es_medium"
+		},
+		{
+			"title": "Historias Eternas de El Salvador V2",
+			"link": "https://books2read.com/u/bWXl7q",
+			"image": "second_es_medium"
+		},
+		{
+			"title": "Historias Eternas de El Salvador: Espejos Españoles",
+			"link": "https://books2read.com/u/bMLlKv",
+			"image": "mirrors_es_medium",
+			"priority": 1
+		}
+	],
 	"company": {
 		"id": "supernova",
 		"name": "Supernova IC",

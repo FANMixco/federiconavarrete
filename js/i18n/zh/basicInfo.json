@@ -14,6 +14,24 @@
 		"link": "bit.ly/3ShazAe",
 		"title": "萨尔瓦多的历久弥新故事 （英语）"
 	},
+	"booksStories": [
+		{
+			"title": "萨尔瓦多的历久弥新故事 （英语） V1",
+			"link": "https://books2read.com/u/3nDWx9",
+			"image": "book_es_medium"
+		},
+		{
+			"title": "萨尔瓦多的历久弥新故事 （英语） V2",
+			"link": "https://books2read.com/u/bWXl7q",
+			"image": "second_es_medium"
+		},
+		{
+			"title": "萨尔瓦多的历久弥新故事 （英语）：西班牙镜子",
+			"link": "https://books2read.com/u/bMLlKv",
+			"image": "mirrors_es_medium",
+			"priority": 1
+		}
+	],
 	"company": {
 		"id": "supernova",
 		"name": "Supernova IC",
