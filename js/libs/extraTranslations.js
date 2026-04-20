@@ -700,7 +700,9 @@ function handleNavbarVisibility() {
     isHandlingVisibility = false;
 
     function menuHideShow(menu, display) {
-        menu.setAttribute('style', display);
+        if (menu) {
+            menu.setAttribute('style', display);
+        }
     }
 }
 
