@@ -137,10 +137,35 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!--Books display-->
       <header id="myBookDiv" class="masthead bg-secondary text-black text-center">
          <div class="container">
-            <a href="https://a.co/d/03CTLiih" target="_blank" rel="noreferrer">
-               <img class="img-fluid mb-5 d-block mx-auto" loading="lazy" id="imgBook" class="img-fluid" alt="Timeless Stories" />
-               <h4 data-translation="news"></h4>
-            </a>
+            <div class="book-hero">
+               <a class="book-hero-media" href="https://a.co/d/03CTLiih" target="_blank" rel="noreferrer" aria-label="Pre-order Spanish Mirrors on Amazon">
+                  <img class="img-fluid d-block mx-auto" loading="lazy" id="imgBook" alt="Timeless Stories" />
+               </a>
+               <div class="book-hero-copy">
+                  <h4 class="book-hero-news" data-translation="news"></h4>
+                  <div id="bookCountdown" class="book-countdown" aria-live="polite">
+                     <p id="bookCountdownTitle" class="book-countdown-title" data-translation="fullyAvailableIn"></p>
+                     <div class="book-countdown-grid">
+                        <div class="book-countdown-card">
+                           <span id="countdownDays" class="book-countdown-value">0</span>
+                           <span class="book-countdown-label" data-translation="countdownDays"></span>
+                        </div>
+                        <div class="book-countdown-card">
+                           <span id="countdownHours" class="book-countdown-value">0</span>
+                           <span class="book-countdown-label" data-translation="countdownHours"></span>
+                        </div>
+                        <div class="book-countdown-card">
+                           <span id="countdownMinutes" class="book-countdown-value">0</span>
+                           <span class="book-countdown-label" data-translation="countdownMinutes"></span>
+                        </div>
+                        <div class="book-countdown-card">
+                           <span id="countdownSeconds" class="book-countdown-value">0</span>
+                           <span class="book-countdown-label" data-translation="countdownSeconds"></span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </header>
 

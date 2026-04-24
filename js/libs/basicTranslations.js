@@ -107,6 +107,7 @@ function loadTranslations() {
         
         //to be commented
         setImgBook();
+        startBookCountdown();
 
         return true;
     }
@@ -122,6 +123,55 @@ function loadTranslations() {
 
         divBook.src = `../../img/mybook/${imgLoc}${imgSize}.webp`;
     }
+}
+
+function startBookCountdown() {
+    const countdown = gId('bookCountdown');
+
+    if (!countdown || countdown.dataset.started === 'true') {
+        return;
+    }
+
+    countdown.dataset.started = 'true';
+
+    const targetDate = new Date(2026, 4, 1, 0, 0, 0).getTime(),
+        units = [
+            ['countdownDays', 86400000],
+            ['countdownHours', 3600000],
+            ['countdownMinutes', 60000],
+            ['countdownSeconds', 1000]
+        ],
+        title = gId('bookCountdownTitle');
+    let timer;
+
+    function updateCountdown() {
+        let remaining = Math.max(0, targetDate - Date.now());
+
+        units.forEach(([id, duration]) => {
+            const value = Math.floor(remaining / duration),
+                element = gId(id);
+
+            remaining %= duration;
+
+            if (element) {
+                element.textContent = value;
+            }
+        });
+
+        if (targetDate <= Date.now()) {
+            if (title && genericTranslations.bookAvailableNow) {
+                title.innerHTML = genericTranslations.bookAvailableNow;
+            }
+
+            if (timer) {
+                clearInterval(timer);
+            }
+        }
+    }
+
+    updateCountdown();
+
+    timer = setInterval(updateCountdown, 1000);
 }
 
 function loadBasicInfo() {
