@@ -118,6 +118,9 @@ function loadTranslations() {
     //to be commented
     function setImgBook() {
         const divBook = gId("imgBook");
+        if (!divBook) {
+            return;
+        }
         const imgLoc = `mirrors${(uLang === 'es' ? '_es' : '')}`;
         const imgSize = deviceType() == devs[0] ? '_small' : '_medium';
 
