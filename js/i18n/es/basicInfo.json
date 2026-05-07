@@ -17,17 +17,17 @@
 	"booksStories": [
 		{
 			"title": "Historias Eternas de El Salvador V1",
-			"link": "https://books2read.com/u/3nDWx9",
+			"link": "books2read.com/heternas-v1",
 			"image": "book_es_medium"
 		},
 		{
 			"title": "Historias Eternas de El Salvador V2",
-			"link": "https://books2read.com/u/bWXl7q",
+			"link": "books2read.com/heternas-v2",
 			"image": "second_es_medium"
 		},
 		{
 			"title": "Historias Eternas de El Salvador: Espejos Españoles",
-			"link": "https://books2read.com/u/bMLlKv",
+			"link": "books2read.com/heternas-espejos",
 			"image": "mirrors_es_medium",
 			"priority": 1
 		}

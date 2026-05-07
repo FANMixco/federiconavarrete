@@ -17,17 +17,17 @@
 	"booksStories": [
 		{
 			"title": "萨尔瓦多的历久弥新故事 （英语） V1",
-			"link": "https://books2read.com/u/3nDWx9",
+			"link": "books2read.com/tstories-v1",
 			"image": "book_es_medium"
 		},
 		{
 			"title": "萨尔瓦多的历久弥新故事 （英语） V2",
-			"link": "https://books2read.com/u/bWXl7q",
+			"link": "books2read.com/tstories-v2",
 			"image": "second_es_medium"
 		},
 		{
 			"title": "萨尔瓦多的历久弥新故事 （英语）：西班牙镜子",
-			"link": "https://books2read.com/u/bMLlKv",
+			"link": "books2read.com/tstories-mirrors",
 			"image": "mirrors_es_medium",
 			"priority": 1
 		}

@@ -274,6 +274,7 @@ function loadBasicInfo() {
 
     function getBookStoryCard(bookStory) {
         const { title, link, image } = bookStory;
+        const bookLink = /^https?:\/\//i.test(link) ? link : `${urlB}${link.replace(/^\/+/, '')}`;
         const imgBasePath = `/img/mybook/${image}`;
         const imgJpg = `${imgBasePath}.jpg`;
         const imgWebp = `${imgBasePath}.webp`;
@@ -281,14 +282,14 @@ function loadBasicInfo() {
         return `
             <div class="carousel-item${bookStory.isActive ? ' active' : ''}">
                 <div class="text-center">
-                    <a href="${link}" rel="noreferrer" target="_blank" class="d-block mb-3">
+                    <a href="${bookLink}" rel="noreferrer" target="_blank" class="d-block mb-3">
                         <picture>
                             <source srcset="${imgWebp}" type="image/webp">
                             <source srcset="${imgJpg}" type="image/jpeg">
                             <img src="${imgJpg}" class="img-fluid d-block mx-auto" alt="${title}" loading="lazy" style="max-width: 100%; width: auto; max-height: min(52vh, 420px);" />
                         </picture>
                     </a>
-                    <a href="${link}" rel="noreferrer" target="_blank" class="btn btn-primary btn-book d-inline-flex mt-2">${genericTranslations.bookMsgGet}</a>
+                    <a href="${bookLink}" rel="noreferrer" target="_blank" class="btn btn-primary btn-book d-inline-flex mt-2">${genericTranslations.bookMsgGet}</a>
                 </div>
             </div>`;
     }

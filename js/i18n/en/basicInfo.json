@@ -17,17 +17,17 @@
 	"booksStories": [
 		{
 			"title": "Timeless Stories of El Salvador V1",
-			"link": "https://books2read.com/u/mqXNNQ",
+			"link": "books2read.com/tstories-v1",
 			"image": "book_medium"
 		},
 		{
 			"title": "Timeless Stories of El Salvador V2",
-			"link": "https://books2read.com/u/3nXNNR",
+			"link": "books2read.com/tstories-v2",
 			"image": "second_medium"
 		},
 		{
 			"title": "Timeless Stories of El Salvador: Spanish Mirrors",
-			"link": "https://books2read.com/u/bWX0qG",
+			"link": "books2read.com/tstories-mirrors",
 			"image": "mirrors_medium",
 			"priority": 1
 		}

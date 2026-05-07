@@ -11,23 +11,23 @@
     "title": "Partager vos histoires"
   },
   "favBook": {
-    "link": "a.co/d/4PLMTJM",
-    "title": "Légendes Éternelles d’El Salvador (anglais)"
+    "link": "a.co/d/09n5KCcf",
+    "title": "Légendes Éternelles d’El Salvador"
   },
   "booksStories": [
     {
-      "title": "Légendes Éternelles d’El Salvador T1 (anglais)",
-      "link": "https://books2read.com/u/mqXNNQ",
-      "image": "book_medium"
+      "title": "Légendes Éternelles d’El Salvador T1",
+      "link": "books2read.com/lternelles-v1",
+      "image": "book_fr_medium"
     },
     {
       "title": "Légendes Éternelles d’El Salvador T2 (anglais)",
-      "link": "https://books2read.com/u/3nXNNR",
+      "link": "books2read.com/tstories-v2",
       "image": "second_medium"
     },
     {
       "title": "Légendes Éternelles d’El Salvador: Miroirs Espagnols (anglais)",
-      "link": "https://books2read.com/u/bWX0qG",
+      "link": "books2read.com/tstories-mirrors",
       "image": "mirrors_medium",
       "priority": 1
     }
