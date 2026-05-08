@@ -4,14 +4,19 @@ const fURL = 'https://federiconavarrete.com/',
 
 //getScripts.js
 const getScript = url => new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${url}"]`)) {
+        resolve();
+        return;
+    }
+
     const script = document.createElement('script');
     script.src = url;
     script.async = true;
 
     script.onerror = reject;
 
-    script.onload = script.onreadystatechange = () => {
-        const loadState = this.readyState;
+    script.onload = script.onreadystatechange = function () {
+        const loadState = script.readyState;
 
         if (loadState && loadState !== 'loaded' && loadState !== 'complete') return;
 
@@ -22,6 +27,15 @@ const getScript = url => new Promise((resolve, reject) => {
 
     document.head.appendChild(script);
 });
+
+function runWhenIdle(callback, timeout = 2500) {
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(callback, { timeout });
+        return;
+    }
+
+    setTimeout(callback, timeout);
+}
 
 function closeMenu() {
     if (navbarResponsive.classList.contains("show")) {
@@ -67,22 +81,24 @@ function onLoadedPE() {
 
     //external
     function onReadyExternal() {
-        getScript(`${urlB}www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7`)
-            .then(() => {
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
+        runWhenIdle(() => {
+            getScript(`${urlB}www.googletagmanager.com/gtag/js?id=G-4X4X4PDHN7`)
+                .then(() => {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() { dataLayer.push(arguments); }
+                    gtag('js', new Date());
 
-                gtag('config', 'G-4X4X4PDHN7');
-            })
-            .catch((e) => {
-                console.error(e);
-            });
+                    gtag('config', 'G-4X4X4PDHN7');
+                })
+                .catch((e) => {
+                    console.error(e);
+                });
 
-        getScript(`${urlB}cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js`)
-            .catch((e) => {
-                console.error(e);
-            });
+            getScript(`${urlB}cdn-cookieyes.com/client_data/c7c09fa5c642b8cdc1a5b1a9/script.js`)
+                .catch((e) => {
+                    console.error(e);
+                });
+        });
     }
 
     function onReadyPersonal() {
