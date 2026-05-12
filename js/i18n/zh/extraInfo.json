@@ -19,22 +19,29 @@
         "awards": [
             [
                 {
-                    "title": "2021《城市》、《埃因霍温》和《汉堡版》排名第一。由欧盟赞助",
-                    "link": "bit.ly/4coX5ud",
+                    "title": "2026年欧盟委员会“基于 Drupal Canvas 的人工智能解决方案项目管理卓越荣誉奖”",
+                    "link": "#",
                     "type": "_blank"
                 },
                 {
-                    "title": "2021 年三星社交组件顶级开发者奖",
-                    "link": "bit.ly/31laqDT",
+                    "title": "2021《城市》、《埃因霍温》和《汉堡版》排名第一。由欧盟赞助",
+                    "link": "bit.ly/4coX5ud",
                     "type": "_blank"
                 }
             ],
             [
                 {
+                    "title": "2021 年三星社交组件顶级开发者奖",
+                    "link": "bit.ly/31laqDT",
+                    "type": "_blank"
+                },
+                {
                     "title": "2020年国际演讲会杰出演讲会（DTM）",
                     "link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
                     "type": "img"
-                },
+                }
+            ],
+            [
                 {
                     "title": "2019年国际演讲会主席杰出区域",
                     "link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",

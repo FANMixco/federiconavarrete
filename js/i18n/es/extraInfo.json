@@ -19,22 +19,29 @@
         "awards": [
             [
                 {
-                    "title": "1<sup>er</sup> Lugar en las Citythons 2021, Ediciones Eindhoven y Hamburgo. Patrocinadas por la UE",
-                    "link": "bit.ly/4coX5ud",
+                    "title": "Premio Honorífico para la Gestión de Proyectos de Soluciones de IA con Drupal Canvas, Comisión Europea, 2026",
+                    "link": "#",
                     "type": "_blank"
                 },
                 {
-                    "title": "Samsung Top Developer Award 2021 con componente Social",
-                    "link": "bit.ly/31laqDT",
+                    "title": "1<sup>er</sup> Lugar en las Citythons 2021, Ediciones Eindhoven y Hamburgo. Patrocinadas por la UE",
+                    "link": "bit.ly/4coX5ud",
                     "type": "_blank"
                 }
             ],
             [
                 {
+                    "title": "Samsung Top Developer Award 2021 con componente Social",
+                    "link": "bit.ly/31laqDT",
+                    "type": "_blank"
+                },
+                {
                     "title": "Toastmaster Distinguido (DTM) por Toastmasters International en 2020",
                     "link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
                     "type": "img"
-                },
+                }
+            ],
+            [
                 {
                     "title": "Área Distinguida del Presidente por Toastmasters International 2019",
                     "link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
