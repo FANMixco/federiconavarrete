@@ -706,6 +706,12 @@ function handleNavbarVisibility() {
     }
 }
 
+function handleDynamicMenuRetry() {
+    if (failedDMenu) {
+        handleNavbarVisibility();
+    }
+}
+
 function debounce(func, wait) {
     let timeout;
     return () => {
@@ -750,6 +756,8 @@ function loadDynamicMenu() {
 }
 
 const debouncedHandleNavbarVisibility = debounce(handleNavbarVisibility, 250);
+
+document.addEventListener('genericsLoaded', handleDynamicMenuRetry);
 
 if (document.readyState !== "loading") {
     handlingResize();

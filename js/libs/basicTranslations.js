@@ -7,6 +7,7 @@ let tErr1,
 fetchData(`${jsonLoc}/generics.json`)
     .then(data => {
         genericTranslations = data;
+        document.dispatchEvent(new CustomEvent('genericsLoaded'));
 
         loadTranslationsWithRetry(loadTranslations, (err) => {
             if (!err) {
