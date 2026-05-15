@@ -1290,3 +1290,5 @@ screen and (aspect-ratio: 1/1) {
         right: -40px;
     }
 }
+
+.site-language-picker{max-width:230px;margin:1.6rem auto 0;text-align:center}.site-language-picker label{display:block;margin-bottom:.55rem;color:#fff;font-size:1rem;font-weight:700;line-height:1.2}.site-language-picker .form-select{display:block;width:100%;margin:0 auto;border:2px solid rgba(255,255,255,.85);border-radius:4px;background-color:transparent;color:#fff;font-size:.95rem;font-weight:700;line-height:1.5;padding:.42rem 2.2rem .42rem .8rem;box-shadow:none}.site-language-picker .form-select:focus{border-color:var(--light-purple);box-shadow:0 0 0 .18rem rgba(156,95,255,.3)}.site-language-picker .form-select option{color:var(--bs-dark);font-weight:500}

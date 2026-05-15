@@ -70,6 +70,8 @@ function loadGenerics(dTrans) {
 
 function loadTranslations() {
     try {
+        document.documentElement.lang = iLang;
+
         gAll('button.btn-close').forEach(item => {
             item.setAttribute("aria-label", genericTranslations.close);
         });
@@ -85,6 +87,7 @@ function loadTranslations() {
         totalGenerics = dTrans.length;
 
         loadGenerics(dTrans);
+        setupLanguageSelector();
 
         gAll('.btn-preview').forEach(item => {
             item.addEventListener(eClick, () => {
@@ -127,6 +130,28 @@ function loadTranslations() {
 
         divBook.src = `../../img/mybook/${imgLoc}${imgSize}.webp`;
     }
+}
+
+function setupLanguageSelector() {
+    const languageSelector = gId('officialSiteLanguage');
+
+    if (!languageSelector || languageSelector.dataset.ready === 'true') {
+        return;
+    }
+
+    languageSelector.value = iLang;
+    languageSelector.addEventListener('change', () => {
+        const selectedLanguage = languageSelector.value;
+
+        if (!validLang.includes(selectedLanguage) || selectedLanguage === iLang) {
+            return;
+        }
+
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', selectedLanguage);
+        window.location.href = url.toString();
+    });
+    languageSelector.dataset.ready = 'true';
 }
 
 function startBookCountdown() {

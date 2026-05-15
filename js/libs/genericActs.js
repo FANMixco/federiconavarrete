@@ -24,10 +24,11 @@ const deviceType = () => {
 };
 
 const urlB = 'https://',
+    qLang = new URL(window.location.href).searchParams.get("lang"),
     uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
     validLang = ['en', 'es', 'zh', 'fr'],
-    iLang = ((['en', 'es'].indexOf(uLang) === 1) ? uLang : 'en'),
-    jsonLoc = `js/i18n/${(validLang.includes(uLang) ? uLang : 'en')}/min`,
+    iLang = validLang.includes(qLang) ? qLang : (validLang.includes(uLang) ? uLang : 'en'),
+    jsonLoc = `js/i18n/${iLang}/min`,
     lazyLoading = 'loading="lazy"',
     eClick = 'click',
     nVis = 'd-none',
