@@ -9,6 +9,8 @@
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
+        "i18n": "npm run i18n:manager",
+        "i18n:manager": "node tools/i18n-manager/server.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
