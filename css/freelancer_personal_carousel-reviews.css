@@ -198,6 +198,27 @@ hr.star-black {
         border-color: var(--beige);
     }
 
+    #awardsModal .modal-content,
+    #awardsModal .modal-header,
+    #awardsModal .modal-body,
+    #booksModal .modal-content,
+    #booksModal .modal-header,
+    #booksModal .modal-body,
+    #elSalvador .modal-content,
+    #elSalvador .modal-header,
+    #elSalvador .modal-body,
+    #linkPreviews .modal-content,
+    #linkPreviews .modal-header,
+    #linkPreviews .modal-body,
+    #qrPreview .modal-content,
+    #qrPreview .modal-header,
+    #qrPreview .modal-body,
+    #reviewGeneric .modal-content,
+    #reviewGeneric .modal-header,
+    #reviewGeneric .modal-body,
+    #skillsModal .modal-content,
+    #skillsModal .modal-header,
+    #skillsModal .modal-body,
     #zoomPreview .modal-content,
     #zoomPreview .modal-header,
     #zoomPreview .modal-body {
@@ -205,97 +226,91 @@ hr.star-black {
         color: var(--beige);
     }
 
+    #awardsModal .modal-content,
+    #booksModal .modal-content,
+    #elSalvador .modal-content,
+    #linkPreviews .modal-content,
+    #qrPreview .modal-content,
+    #reviewGeneric .modal-content,
+    #skillsModal .modal-content,
     #zoomPreview .modal-content {
         border-color: #2f3440;
     }
 
+    #awardsModal .modal-header,
+    #booksModal .modal-header,
+    #elSalvador .modal-header,
+    #linkPreviews .modal-header,
+    #qrPreview .modal-header,
+    #reviewGeneric .modal-header,
+    #skillsModal .modal-header,
     #zoomPreview .modal-header {
         border-bottom-color: #2f3440;
     }
 
+    #awardsModal .btn-close,
+    #booksModal .btn-close,
+    #elSalvador .btn-close,
+    #linkPreviews .btn-close,
+    #qrPreview .btn-close,
+    #reviewGeneric .btn-close,
+    #skillsModal .btn-close,
     #zoomPreview .btn-close {
         filter: invert(1) grayscale(100%);
         opacity: 0.75;
     }
 
+    #awardsModal .btn-close:hover,
+    #awardsModal .btn-close:focus,
+    #booksModal .btn-close:hover,
+    #booksModal .btn-close:focus,
+    #elSalvador .btn-close:hover,
+    #elSalvador .btn-close:focus,
+    #linkPreviews .btn-close:hover,
+    #linkPreviews .btn-close:focus,
+    #qrPreview .btn-close:hover,
+    #qrPreview .btn-close:focus,
+    #reviewGeneric .btn-close:hover,
+    #reviewGeneric .btn-close:focus,
+    #skillsModal .btn-close:hover,
+    #skillsModal .btn-close:focus,
     #zoomPreview .btn-close:hover,
     #zoomPreview .btn-close:focus {
         opacity: 1;
     }
 
-    #booksModal .modal-content,
-    #booksModal .modal-header,
-    #booksModal .modal-body {
+    #otherLocs .modal-header {
         background-color: var(--darkest-gray);
+        border-bottom-color: #2f3440;
         color: var(--beige);
     }
 
-    #booksModal .modal-content {
-        border-color: #2f3440;
-    }
-
-    #booksModal .modal-header {
-        border-bottom-color: #2f3440;
-    }
-
-    #booksModal .btn-close {
+    #otherLocs .btn-close {
         filter: invert(1) grayscale(100%);
         opacity: 0.75;
     }
 
-    #booksModal .btn-close:hover,
-    #booksModal .btn-close:focus {
+    #otherLocs .btn-close:hover,
+    #otherLocs .btn-close:focus {
         opacity: 1;
     }
 
-    #linkPreviews .modal-content,
-    #linkPreviews .modal-header,
-    #linkPreviews .modal-body {
-        background-color: var(--darkest-gray);
-        color: var(--beige);
+    #awardsModal a.text-material-link-dark {
+        color: #d6b8ff;
     }
 
-    #linkPreviews .modal-content {
-        border-color: #2f3440;
+    #awardsModal a.text-material-link-dark:hover,
+    #awardsModal a.text-material-link-dark:focus,
+    #awardsModal a.text-material-link-dark:active {
+        color: white;
     }
 
-    #linkPreviews .modal-header {
-        border-bottom-color: #2f3440;
+    #skillsModal hr.star-black {
+        border-color: var(--beige);
     }
 
-    #linkPreviews .btn-close {
-        filter: invert(1) grayscale(100%);
-        opacity: 0.75;
-    }
-
-    #linkPreviews .btn-close:hover,
-    #linkPreviews .btn-close:focus {
-        opacity: 1;
-    }
-
-    #elSalvador .modal-content,
-    #elSalvador .modal-header,
-    #elSalvador .modal-body {
-        background-color: var(--darkest-gray);
-        color: var(--beige);
-    }
-
-    #elSalvador .modal-content {
-        border-color: #2f3440;
-    }
-
-    #elSalvador .modal-header {
-        border-bottom-color: #2f3440;
-    }
-
-    #elSalvador .btn-close {
-        filter: invert(1) grayscale(100%);
-        opacity: 0.75;
-    }
-
-    #elSalvador .btn-close:hover,
-    #elSalvador .btn-close:focus {
-        opacity: 1;
+    #qrImg {
+        filter: invert(1);
     }
 }
 
