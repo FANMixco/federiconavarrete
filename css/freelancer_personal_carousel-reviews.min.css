@@ -222,6 +222,81 @@ hr.star-black {
     #zoomPreview .btn-close:focus {
         opacity: 1;
     }
+
+    #booksModal .modal-content,
+    #booksModal .modal-header,
+    #booksModal .modal-body {
+        background-color: var(--darkest-gray);
+        color: var(--beige);
+    }
+
+    #booksModal .modal-content {
+        border-color: #2f3440;
+    }
+
+    #booksModal .modal-header {
+        border-bottom-color: #2f3440;
+    }
+
+    #booksModal .btn-close {
+        filter: invert(1) grayscale(100%);
+        opacity: 0.75;
+    }
+
+    #booksModal .btn-close:hover,
+    #booksModal .btn-close:focus {
+        opacity: 1;
+    }
+
+    #linkPreviews .modal-content,
+    #linkPreviews .modal-header,
+    #linkPreviews .modal-body {
+        background-color: var(--darkest-gray);
+        color: var(--beige);
+    }
+
+    #linkPreviews .modal-content {
+        border-color: #2f3440;
+    }
+
+    #linkPreviews .modal-header {
+        border-bottom-color: #2f3440;
+    }
+
+    #linkPreviews .btn-close {
+        filter: invert(1) grayscale(100%);
+        opacity: 0.75;
+    }
+
+    #linkPreviews .btn-close:hover,
+    #linkPreviews .btn-close:focus {
+        opacity: 1;
+    }
+
+    #elSalvador .modal-content,
+    #elSalvador .modal-header,
+    #elSalvador .modal-body {
+        background-color: var(--darkest-gray);
+        color: var(--beige);
+    }
+
+    #elSalvador .modal-content {
+        border-color: #2f3440;
+    }
+
+    #elSalvador .modal-header {
+        border-bottom-color: #2f3440;
+    }
+
+    #elSalvador .btn-close {
+        filter: invert(1) grayscale(100%);
+        opacity: 0.75;
+    }
+
+    #elSalvador .btn-close:hover,
+    #elSalvador .btn-close:focus {
+        opacity: 1;
+    }
 }
 
 hr.star-black-dark:after,
