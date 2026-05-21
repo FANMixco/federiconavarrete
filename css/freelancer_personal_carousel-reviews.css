@@ -210,6 +210,9 @@ hr.star-black {
     #linkPreviews .modal-content,
     #linkPreviews .modal-header,
     #linkPreviews .modal-body,
+    #massMediaModal .modal-content,
+    #massMediaModal .modal-header,
+    #massMediaModal .modal-body,
     #qrPreview .modal-content,
     #qrPreview .modal-header,
     #qrPreview .modal-body,
@@ -230,6 +233,7 @@ hr.star-black {
     #booksModal .modal-content,
     #elSalvador .modal-content,
     #linkPreviews .modal-content,
+    #massMediaModal .modal-content,
     #qrPreview .modal-content,
     #reviewGeneric .modal-content,
     #skillsModal .modal-content,
@@ -241,6 +245,7 @@ hr.star-black {
     #booksModal .modal-header,
     #elSalvador .modal-header,
     #linkPreviews .modal-header,
+    #massMediaModal .modal-header,
     #qrPreview .modal-header,
     #reviewGeneric .modal-header,
     #skillsModal .modal-header,
@@ -252,6 +257,7 @@ hr.star-black {
     #booksModal .btn-close,
     #elSalvador .btn-close,
     #linkPreviews .btn-close,
+    #massMediaModal .btn-close,
     #qrPreview .btn-close,
     #reviewGeneric .btn-close,
     #skillsModal .btn-close,
@@ -268,6 +274,8 @@ hr.star-black {
     #elSalvador .btn-close:focus,
     #linkPreviews .btn-close:hover,
     #linkPreviews .btn-close:focus,
+    #massMediaModal .btn-close:hover,
+    #massMediaModal .btn-close:focus,
     #qrPreview .btn-close:hover,
     #qrPreview .btn-close:focus,
     #reviewGeneric .btn-close:hover,
@@ -303,6 +311,53 @@ hr.star-black {
     #awardsModal a.text-material-link-dark:focus,
     #awardsModal a.text-material-link-dark:active {
         color: white;
+    }
+
+    #tbAwards,
+    #dMassMedia {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    #dMassMedia {
+        padding: 1rem;
+    }
+
+    #tbAwards li,
+    #dMassMedia li {
+        border-bottom: 1px solid #2f3440;
+        list-style: none;
+        padding: 1rem 0;
+    }
+
+    #tbAwards li:first-child,
+    #dMassMedia li:first-child {
+        padding-top: 0;
+    }
+
+    #tbAwards li:last-child,
+    #dMassMedia li:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #tbAwards a.text-material-link-dark,
+    #dMassMedia a.text-material-link-dark {
+        color: #a9c9ff;
+        display: block;
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        line-height: 1.45;
+        text-decoration: none;
+    }
+
+    #tbAwards a.text-material-link-dark:hover,
+    #tbAwards a.text-material-link-dark:focus,
+    #dMassMedia a.text-material-link-dark:hover,
+    #dMassMedia a.text-material-link-dark:focus {
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
     }
 
     #skillsModal hr.star-black {
