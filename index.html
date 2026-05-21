@@ -617,24 +617,86 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
 
       <script type="application/ld+json">
          {
-           "@context": "https://schema.org/",
-           "@type": "Person",
-           "name": "Federico Navarrete",
-           "url": "https://federiconavarrete.com/",
-           "image": "https://federiconavarrete.com/img/photos/federico-navarrete.webp",
-           "jobTitle": "Technovator, Cloud Consultant, Author and Orator",
-           "worksFor": {
-             "@type": "Organization",
-             "name": "Supernova IC"
-           },
-           "sameAs": [
-               "https://www.instagram.com/federico_the_consultant/",
-               "https://linkedin.com/in/federiconavarrete",
-               "https://www.tiktok.com/@federicostories",
-               "https://youtube.com/@FedericoNavarrete",
-               "https://twitter.com/FedeStories",
-               "https://www.amazon.com/stores/Federico-Navarrete/author/B08NJTXQRV"
-            ]
+           "@context": "https://schema.org",
+           "@graph": [
+             {
+               "@type": "WebSite",
+               "@id": "https://federiconavarrete.com/#about",
+               "url": "https://federiconavarrete.com/",
+               "name": "Federico Navarrete",
+               "description": "Official website of Federico Navarrete, technovator, cloud consultant, author, and public speaker.",
+               "inLanguage": ["en", "es", "fr", "zh"],
+               "publisher": {
+                 "@id": "https://federiconavarrete.com/#about"
+               }
+             },
+             {
+               "@type": "Person",
+               "@id": "https://federiconavarrete.com/#about",
+               "name": "Federico Navarrete",
+               "url": "https://federiconavarrete.com/",
+               "image": {
+                 "@type": "ImageObject",
+                 "@id": "https://federiconavarrete.com/#profile-image",
+                 "url": "https://federiconavarrete.com/img/photos/federico-navarrete.webp",
+                 "contentUrl": "https://federiconavarrete.com/img/photos/federico-navarrete.webp",
+                 "caption": "Federico Navarrete"
+               },
+               "jobTitle": [
+                 "Technovator",
+                 "Cloud Consultant",
+                 "Author",
+                 "Public Speaker"
+               ],
+               "worksFor": {
+                 "@id": "https://supernovaic.com/#about"
+               },
+               "knowsAbout": [
+                 "Cloud architecture",
+                 "Green web design",
+                 "Public speaking",
+                 "Robotic process automation",
+                 "Cultural intelligence",
+                 "Storytelling",
+                 "Salvadoran and Spanish folklore"
+               ],
+               "sameAs": [
+                 "https://www.linkedin.com/in/federiconavarrete",
+                 "https://www.instagram.com/federico_the_consultant/",
+                 "https://www.tiktok.com/@federicostories",
+                 "https://www.youtube.com/@FedericoNavarrete",
+                 "https://x.com/FedeStories",
+                 "https://www.amazon.com/stores/Federico-Navarrete/author/B08NJTXQRV",
+                 "https://www.goodreads.com/fanmixco",
+                 "https://github.com/FANMixco",
+                 "https://dev.to/fanmixco"
+               ],
+               "mainEntityOfPage": {
+                 "@id": "https://federiconavarrete.com/#about"
+               }
+             },
+             {
+               "@type": "Organization",
+               "@id": "https://supernovaic.com/#about",
+               "name": "Supernova IC",
+               "url": "https://supernovaic.com/"
+             },
+             {
+               "@type": "BookSeries",
+               "@id": "https://tstories.federiconavarrete.com/",
+               "name": "Timeless Stories of El Salvador",
+               "author": {
+                 "@id": "https://federiconavarrete.com/#about"
+               },
+               "genre": [
+                 "Folklore",
+                 "Cultural research",
+                 "Salvadoran and Spanish legends"
+               ],
+               "inLanguage": ["en", "es", "fr"],
+               "url": "https://books.federiconavarrete.com/"
+             }
+           ]
          }
       </script>
    </body>
