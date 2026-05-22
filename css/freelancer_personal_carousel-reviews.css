@@ -313,6 +313,11 @@ hr.star-black {
         color: white;
     }
 
+    #reviewGeneric .text-dark,
+    #reviewGeneric .text-black {
+        color: var(--beige) !important;
+    }
+
     #tbAwards,
     #dMassMedia {
         list-style: none;
