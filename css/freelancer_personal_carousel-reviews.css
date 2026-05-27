@@ -1144,6 +1144,12 @@ a.text-material-link-dark:active {
     /* Ensure .nav-item is a positioned element */
 }
 
+@media (min-width: 768px) {
+    #memoryGameMenuItem {
+        display: none !important;
+    }
+}
+
 .dropdown-menu {
     top: calc(100% + 0.15rem);
     /* Place the top of dropdown-menu 0.15rem below the bottom of .nav-item */
