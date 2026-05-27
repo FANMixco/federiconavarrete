@@ -89,17 +89,19 @@ function loadTranslations() {
         loadGenerics(dTrans);
         setupLanguageSelector();
 
-        gAll('.btn-preview').forEach(item => {
+        gAll('.btn-preview, [data-preview-action]').forEach(item => {
             item.addEventListener(eClick, () => {
-                currentLoc = (currentLoc != item.dataset.action) ? item.dataset.action : currentLoc;
-                const url = `${urlB}${currentLoc}.federiconavarrete.com`,
-                      pTitle = (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery,
-                      btnFullScreen = gId('btn-full-screen'),
-                      hFrameGeneric = 450;
+                const action = item.dataset.previewAction || item.dataset.action,
+                    isMemoryGame = action == 'memoryGame';
+
+                currentLoc = (currentLoc != action) ? action : currentLoc;
+                const url = isMemoryGame ? 'https://tstories.federiconavarrete.com/memory-game.html' : `${urlB}${currentLoc}.federiconavarrete.com`,
+                      pTitle = isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery,
+                      btnFullScreen = gId('btn-full-screen');
 
                 gId('zoomTitle').innerHTML = pTitle;
 
-                loadIframe("divPreview", pTitle, `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
+                loadIframe("divPreview", pTitle, isMemoryGame ? `${url}?embed=1` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
 
                 btnFullScreen.href = url;
                 btnFullScreen.setAttribute('title', pTitle);
