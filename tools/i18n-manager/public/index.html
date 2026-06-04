@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i18n Manager</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <div class="brand">
+            <h1>i18n Manager</h1>
+            <p>Edit source JSON and generate minified files.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span>Languages</span>
+                <button class="icon" id="refresh" title="Refresh">R</button>
+            </div>
+            <div class="list" id="languages"></div>
+            <div class="create-row">
+                <input id="newLanguage" placeholder="new language">
+                <button class="icon" id="addLanguage" title="Add language">+</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span>Files</span>
+                <span class="count" id="fileCount"></span>
+            </div>
+            <div class="list" id="files"></div>
+            <div class="create-row">
+                <input id="newFile" placeholder="new file">
+                <button class="icon" id="addFile" title="Add file">+</button>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="toolbar">
+            <div class="current">
+                <h2 id="title">Select a JSON file</h2>
+                <p id="subtitle">Choose a language and file to begin.</p>
+            </div>
+            <div class="actions">
+                <button id="rawToggle" disabled>Raw JSON</button>
+                <button id="validate" disabled>Validate</button>
+                <button id="minifyLanguage" disabled>Minify language</button>
+                <button id="minifyAll">Minify all</button>
+                <button class="primary" id="save" disabled>Save</button>
+            </div>
+        </div>
+        <div class="editor-wrap" id="editorWrap">
+            <div class="empty" id="empty">
+                <div>
+                    <div>No file selected.</div>
+                    <button class="empty-action" id="pickFirst">Open first JSON</button>
+                </div>
+            </div>
+            <div class="form-editor" id="formEditor" hidden></div>
+            <textarea class="raw-editor" id="rawEditor" spellcheck="false" hidden></textarea>
+        </div>
+        <div class="status" id="status">Ready.</div>
+    </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
