@@ -386,6 +386,28 @@ summary {
     font-weight: 700;
     margin-bottom: 8px;
 }
+.array-item-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.array-item-summary span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.reorder-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.reorder-controls button {
+    min-height: 28px;
+    padding: 0 8px;
+    font-size: 12px;
+}
 .field {
     display: grid;
     grid-template-columns: minmax(170px, 260px) minmax(0, 1fr);
@@ -457,6 +479,7 @@ summary {
     .actions button { flex: 1 1 140px; }
     .raw-editor { min-height: 58vh; }
     .field { grid-template-columns: 1fr; }
+    .array-item-summary { align-items: flex-start; flex-direction: column; }
 }
 </style>
 </head>
@@ -614,6 +637,19 @@ function removeAtPath(path) {
     }
 }
 
+function moveArrayItem(arrayPath, fromIndex, toIndex) {
+    const target = getAtPath(arrayPath);
+    if (!Array.isArray(target) || fromIndex === toIndex) {
+        return;
+    }
+
+    const finalIndex = Math.max(0, Math.min(target.length - 1, toIndex));
+    const item = target.splice(fromIndex, 1)[0];
+    target.splice(finalIndex, 0, item);
+    markDirty();
+    renderForm();
+}
+
 function markDirty() {
     state.dirty = true;
     renderSelection();
@@ -675,6 +711,39 @@ function addArrayItem(path) {
     target.push(Array.isArray(sample) ? [] : isObject(sample) ? {} : "");
     markDirty();
     renderForm();
+}
+
+function getItemLabel(value, fallback) {
+    if (isObject(value)) {
+        return value.title || value.name || value.id || fallback;
+    }
+
+    return fallback;
+}
+
+function addReorderControls(summary, arrayPath, index, total) {
+    const controls = document.createElement("span");
+    controls.className = "reorder-controls";
+
+    [
+        ["Top", 0],
+        ["Up", index - 1],
+        ["Down", index + 1],
+        ["Bottom", total - 1],
+    ].forEach(([label, targetIndex]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = label;
+        button.disabled = targetIndex === index || targetIndex < 0 || targetIndex >= total;
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            moveArrayItem(arrayPath, index, targetIndex);
+        });
+        controls.appendChild(button);
+    });
+
+    summary.appendChild(controls);
 }
 
 function renderPrimitive(container, path, key, value) {
@@ -777,7 +846,15 @@ function renderNode(container, value, path = [], key = "Root") {
             const details = document.createElement("details");
             details.open = path.length < 2;
             const summary = document.createElement("summary");
-            summary.textContent = String(childKey);
+            if (Array.isArray(value)) {
+                summary.className = "array-item-summary";
+                const itemLabel = document.createElement("span");
+                itemLabel.textContent = String(Number(childKey) + 1) + ". " + getItemLabel(childValue, "Item " + (Number(childKey) + 1));
+                summary.appendChild(itemLabel);
+                addReorderControls(summary, path, Number(childKey), value.length);
+            } else {
+                summary.textContent = String(childKey);
+            }
             details.appendChild(summary);
             renderNode(details, childValue, childPath, childKey);
             fields.appendChild(details);
