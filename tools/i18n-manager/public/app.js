@@ -6,6 +6,10 @@ const state = {
     data: null,
     rawMode: false,
     dirty: false,
+    arrayIndexes: {},
+    focusPath: null,
+    searchTimer: null,
+    searchCache: {},
 };
 
 const el = {
@@ -19,6 +23,7 @@ const el = {
     rawEditor: document.getElementById("rawEditor"),
     empty: document.getElementById("empty"),
     save: document.getElementById("save"),
+    syncMissing: document.getElementById("syncMissing"),
     rawToggle: document.getElementById("rawToggle"),
     validate: document.getElementById("validate"),
     minifyLanguage: document.getElementById("minifyLanguage"),
@@ -29,6 +34,9 @@ const el = {
     newFile: document.getElementById("newFile"),
     addFile: document.getElementById("addFile"),
     pickFirst: document.getElementById("pickFirst"),
+    searchInput: document.getElementById("searchInput"),
+    searchAllFiles: document.getElementById("searchAllFiles"),
+    searchResults: document.getElementById("searchResults"),
 };
 
 function setStatus(message, type = "") {
@@ -62,6 +70,14 @@ function titleFromPath(path) {
     return path.length ? path.join(".") : state.file || "JSON";
 }
 
+function pathKey(path) {
+    return path.join(".");
+}
+
+function pathMatches(path, focusPath) {
+    return focusPath && path.length <= focusPath.length && path.every((part, index) => part === focusPath[index]);
+}
+
 function getAtPath(path) {
     return path.reduce((current, key) => current[key], state.data);
 }
@@ -91,6 +107,7 @@ function moveArrayItem(arrayPath, fromIndex, toIndex) {
     const finalIndex = Math.max(0, Math.min(target.length - 1, toIndex));
     const item = target.splice(fromIndex, 1)[0];
     target.splice(finalIndex, 0, item);
+    state.arrayIndexes[pathKey(arrayPath)] = finalIndex;
     markDirty();
     renderForm();
 }
@@ -130,6 +147,68 @@ function addObjectField(path) {
     renderForm();
 }
 
+function emptyFromSample(value) {
+    if (Array.isArray(value)) {
+        return [];
+    }
+
+    if (isObject(value)) {
+        return Object.fromEntries(Object.entries(value).map(([key, childValue]) => [key, emptyFromSample(childValue)]));
+    }
+
+    if (typeof value === "boolean") {
+        return false;
+    }
+
+    if (typeof value === "number") {
+        return 0;
+    }
+
+    return "";
+}
+
+function cloneMissingStructure(source, target) {
+    if (Array.isArray(source)) {
+        const output = Array.isArray(target) ? target.slice() : [];
+        let changed = !Array.isArray(target);
+
+        source.forEach((sourceItem, index) => {
+            if (index >= output.length) {
+                output.push(emptyFromSample(sourceItem));
+                changed = true;
+                return;
+            }
+
+            const merged = cloneMissingStructure(sourceItem, output[index]);
+            output[index] = merged.value;
+            changed = changed || merged.changed;
+        });
+
+        return { changed, value: output };
+    }
+
+    if (isObject(source)) {
+        const output = isObject(target) ? { ...target } : {};
+        let changed = !isObject(target);
+
+        Object.entries(source).forEach(([key, sourceValue]) => {
+            if (!Object.prototype.hasOwnProperty.call(output, key)) {
+                output[key] = emptyFromSample(sourceValue);
+                changed = true;
+                return;
+            }
+
+            const merged = cloneMissingStructure(sourceValue, output[key]);
+            output[key] = merged.value;
+            changed = changed || merged.changed;
+        });
+
+        return { changed, value: output };
+    }
+
+    return { changed: false, value: target };
+}
+
 function addArrayItem(path) {
     const target = getAtPath(path);
     if (!Array.isArray(target)) {
@@ -137,7 +216,8 @@ function addArrayItem(path) {
     }
 
     const sample = target.find((item) => item !== null && item !== undefined);
-    target.push(Array.isArray(sample) ? [] : isObject(sample) ? {} : "");
+    target.push(sample === undefined ? "" : emptyFromSample(sample));
+    state.arrayIndexes[pathKey(path)] = target.length - 1;
     markDirty();
     renderForm();
 }
@@ -148,6 +228,22 @@ function getItemLabel(value, fallback) {
     }
 
     return fallback;
+}
+
+function humanizeKey(key) {
+    if (typeof key === "number" || /^\d+$/.test(String(key))) {
+        return "item";
+    }
+
+    return String(key)
+        .replace(/([a-z])([A-Z])/g, "$1 $2")
+        .replace(/[_-]+/g, " ")
+        .toLowerCase();
+}
+
+function singularLabel(key) {
+    const label = humanizeKey(key);
+    return label.endsWith("s") ? label.slice(0, -1) : label;
 }
 
 function addReorderControls(summary, arrayPath, index, total) {
@@ -175,9 +271,74 @@ function addReorderControls(summary, arrayPath, index, total) {
     summary.appendChild(controls);
 }
 
+function setArrayIndex(path, index) {
+    state.arrayIndexes[pathKey(path)] = index;
+    renderForm();
+}
+
+function deleteArrayItem(path, index) {
+    const target = getAtPath(path);
+    if (!Array.isArray(target) || !target.length) {
+        return;
+    }
+
+    target.splice(index, 1);
+    state.arrayIndexes[pathKey(path)] = Math.max(0, Math.min(index, target.length - 1));
+    markDirty();
+    renderForm();
+}
+
+function renderArrayPager(container, value, path) {
+    if (!value.length) {
+        return;
+    }
+
+    const key = pathKey(path);
+    const index = Math.max(0, Math.min(state.arrayIndexes[key] || 0, value.length - 1));
+    state.arrayIndexes[key] = index;
+
+    const pager = document.createElement("div");
+    pager.className = "array-pager";
+
+    const previous = document.createElement("button");
+    previous.type = "button";
+    previous.textContent = "Previous";
+    previous.disabled = index === 0;
+    previous.addEventListener("click", () => setArrayIndex(path, index - 1));
+
+    const selector = document.createElement("select");
+    value.forEach((item, itemIndex) => {
+        const option = document.createElement("option");
+        option.value = itemIndex;
+        option.textContent = String(itemIndex + 1) + ". " + getItemLabel(item, "Item " + (itemIndex + 1));
+        option.selected = itemIndex === index;
+        selector.appendChild(option);
+    });
+    selector.addEventListener("change", () => setArrayIndex(path, Number(selector.value)));
+
+    const next = document.createElement("button");
+    next.type = "button";
+    next.textContent = "Next";
+    next.disabled = index === value.length - 1;
+    next.addEventListener("click", () => setArrayIndex(path, index + 1));
+
+    const count = document.createElement("span");
+    count.className = "array-count";
+    count.textContent = String(index + 1) + " / " + value.length;
+
+    pager.appendChild(previous);
+    pager.appendChild(selector);
+    pager.appendChild(next);
+    pager.appendChild(count);
+    container.appendChild(pager);
+}
+
 function renderPrimitive(container, path, key, value) {
     const field = document.createElement("div");
     field.className = "field";
+    if (state.focusPath && pathKey(path) === pathKey(state.focusPath)) {
+        field.classList.add("focused-field");
+    }
 
     const label = document.createElement("label");
     label.textContent = String(key);
@@ -236,6 +397,9 @@ function renderNode(container, value, path = [], key = "Root") {
 
     const node = document.createElement("section");
     node.className = "json-node" + (path.length ? "" : " root");
+    if (pathMatches(path, state.focusPath)) {
+        node.classList.add("focused-node");
+    }
 
     const title = document.createElement("div");
     title.className = "node-title";
@@ -247,9 +411,12 @@ function renderNode(container, value, path = [], key = "Root") {
     const entries = Array.isArray(value) ? value.length : Object.keys(value).length;
     meta.textContent = (Array.isArray(value) ? "Array" : "Object") + " - " + entries + " item" + (entries === 1 ? "" : "s");
 
+    const actions = document.createElement("div");
+    actions.className = "node-actions";
+
     const addButton = document.createElement("button");
     addButton.type = "button";
-    addButton.textContent = Array.isArray(value) ? "Add item" : "Add field";
+    addButton.textContent = Array.isArray(value) ? "Add " + singularLabel(key) : "Add field";
     addButton.addEventListener("click", () => {
         if (Array.isArray(value)) {
             addArrayItem(path);
@@ -257,14 +424,36 @@ function renderNode(container, value, path = [], key = "Root") {
             addObjectField(path);
         }
     });
+    actions.appendChild(addButton);
+
+    if (Array.isArray(value) && value.length) {
+        const selectedIndex = Math.max(0, Math.min(state.arrayIndexes[pathKey(path)] || 0, value.length - 1));
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.textContent = "Delete " + singularLabel(key);
+        deleteButton.addEventListener("click", () => deleteArrayItem(path, selectedIndex));
+        actions.appendChild(deleteButton);
+    }
 
     title.appendChild(heading);
     title.appendChild(meta);
-    title.appendChild(addButton);
+    title.appendChild(actions);
     node.appendChild(title);
 
     const fields = document.createElement("div");
     fields.className = "fields";
+
+    if (Array.isArray(value)) {
+        renderArrayPager(fields, value, path);
+        if (value.length) {
+            const selectedIndex = state.arrayIndexes[pathKey(path)] || 0;
+            const childPath = path.concat(selectedIndex);
+            renderNode(fields, value[selectedIndex], childPath, selectedIndex);
+        }
+        node.appendChild(fields);
+        container.appendChild(node);
+        return;
+    }
 
     const keys = Array.isArray(value) ? value.map((_, index) => index) : Object.keys(value);
     keys.forEach((childKey) => {
@@ -292,7 +481,8 @@ function renderNode(container, value, path = [], key = "Root") {
         }
     });
 
-    if (path.length) {
+    const parent = path.length ? getAtPath(path.slice(0, -1)) : null;
+    if (path.length && !Array.isArray(parent)) {
         const removeButton = document.createElement("button");
         removeButton.type = "button";
         removeButton.textContent = "Remove " + String(key);
@@ -312,6 +502,14 @@ function renderForm() {
     el.formEditor.innerHTML = "";
     if (state.data !== null) {
         renderNode(el.formEditor, state.data);
+        if (state.focusPath) {
+            const focused = el.formEditor.querySelector(".focused-field textarea, .focused-field input, .focused-field select");
+            if (focused) {
+                focused.scrollIntoView({ behavior: "smooth", block: "center" });
+                focused.focus();
+            }
+            state.focusPath = null;
+        }
     }
 }
 
@@ -359,6 +557,7 @@ function renderSelection() {
     el.save.disabled = !hasFile || !state.dirty;
     el.rawToggle.disabled = !hasFile;
     el.rawToggle.textContent = state.rawMode ? "Form fields" : "Raw JSON";
+    el.syncMissing.disabled = !hasFile;
     el.validate.disabled = !hasFile;
     el.minifyLanguage.disabled = !state.language;
 }
@@ -390,6 +589,7 @@ async function loadState() {
     }
 
     renderSelection();
+    queueSearch();
 }
 
 async function selectLanguage(language) {
@@ -402,12 +602,111 @@ async function selectLanguage(language) {
     state.data = null;
     state.rawMode = false;
     state.dirty = false;
+    state.arrayIndexes = {};
+    state.focusPath = null;
     el.rawEditor.value = "";
     el.formEditor.innerHTML = "";
     renderSelection();
+    queueSearch();
 }
 
-async function loadFile(language, file) {
+function collectSearchResults(data, path = [], results = []) {
+    if (Array.isArray(data)) {
+        data.forEach((item, index) => collectSearchResults(item, path.concat(index), results));
+        return results;
+    }
+
+    if (isObject(data)) {
+        Object.entries(data).forEach(([key, value]) => collectSearchResults(value, path.concat(key), results));
+        return results;
+    }
+
+    results.push({
+        path,
+        key: path[path.length - 1],
+        value: data === null || data === undefined ? "" : String(data),
+    });
+    return results;
+}
+
+function applyFocusPath(path) {
+    state.focusPath = path;
+    for (let index = 0; index < path.length; index++) {
+        if (typeof path[index] === "number") {
+            state.arrayIndexes[pathKey(path.slice(0, index))] = path[index];
+        }
+    }
+}
+
+async function searchFile(language, file, query) {
+    const cacheKey = language + "/" + file;
+    if (!state.searchCache[cacheKey]) {
+        const response = await api("/api/json/" + encodeURIComponent(language) + "/" + encodeURIComponent(file.replace(/\.json$/i, "")));
+        state.searchCache[cacheKey] = JSON.parse(response.content);
+    }
+
+    const lowerQuery = query.toLowerCase();
+    return collectSearchResults(state.searchCache[cacheKey])
+        .filter((item) => titleFromSearchPath(item.path).toLowerCase().includes(lowerQuery) || item.value.toLowerCase().includes(lowerQuery))
+        .map((item) => ({ ...item, language, file }));
+}
+
+function titleFromSearchPath(path) {
+    return path.map((part) => typeof part === "number" ? "[" + part + "]" : part).join(".");
+}
+
+function renderSearchResults(results) {
+    el.searchResults.innerHTML = "";
+    el.searchResults.hidden = !results.length;
+
+    results.slice(0, 40).forEach((result) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "search-result";
+
+        const file = document.createElement("strong");
+        file.className = "result-file";
+        file.textContent = result.language + "/" + result.file;
+
+        const title = document.createElement("strong");
+        title.className = "result-path";
+        title.textContent = titleFromSearchPath(result.path);
+
+        const meta = document.createElement("span");
+        meta.className = "result-value";
+        meta.textContent = result.value;
+
+        button.appendChild(file);
+        button.appendChild(title);
+        button.appendChild(meta);
+        button.addEventListener("click", () => loadFile(result.language, result.file, result.path));
+        el.searchResults.appendChild(button);
+    });
+}
+
+async function runSearch() {
+    const query = el.searchInput.value.trim();
+    if (!query) {
+        renderSearchResults([]);
+        return;
+    }
+
+    const filesToSearch = el.searchAllFiles.checked
+        ? state.languages.flatMap((language) => (state.filesByLanguage[language] || []).map((file) => ({ language, file })))
+        : (state.filesByLanguage[state.language] || []).map((file) => ({ language: state.language, file }));
+
+    const batches = await Promise.all(filesToSearch.map(({ language, file }) => searchFile(language, file, query)));
+    renderSearchResults(batches.flat());
+}
+
+function queueSearch() {
+    clearTimeout(state.searchTimer);
+    state.searchTimer = setTimeout(() => {
+        runSearch().catch((error) => setStatus(error.message, "error"));
+    }, 200);
+}
+
+async function loadFile(language, file, focusPath = null) {
     if (!assertCleanChange()) {
         return;
     }
@@ -416,6 +715,10 @@ async function loadFile(language, file) {
     state.language = language;
     state.file = file;
     state.data = JSON.parse(data.content);
+    state.arrayIndexes = {};
+    if (focusPath) {
+        applyFocusPath(focusPath);
+    }
     state.rawMode = false;
     state.dirty = false;
     el.rawEditor.value = JSON.stringify(state.data, null, "\t") + "\n";
@@ -432,11 +735,52 @@ async function saveFile() {
             method: "PUT",
             body: JSON.stringify({ content, generateMin: true }),
         });
+        delete state.searchCache[state.language + "/" + state.file];
         state.dirty = false;
         await loadFile(state.language, state.file);
         setStatus("Saved " + data.saved + " and generated " + data.minified.join(", ") + ".", "ok");
     } catch (error) {
         el.rawEditor.classList.add("invalid");
+        setStatus(error.message, "error");
+    }
+}
+
+async function syncMissingStructure() {
+    if (!state.language || !state.file || !state.data) {
+        return;
+    }
+
+    try {
+        const sourceData = validateJson();
+        const updates = [];
+        const targetLanguages = state.languages.filter((language) => language !== state.language);
+
+        for (const language of targetLanguages) {
+            if (!(state.filesByLanguage[language] || []).includes(state.file)) {
+                updates.push(language + ": missing file");
+                continue;
+            }
+
+            const response = await api("/api/json/" + encodeURIComponent(language) + "/" + encodeURIComponent(state.file.replace(/\.json$/i, "")));
+            const targetData = JSON.parse(response.content);
+            const merged = cloneMissingStructure(sourceData, targetData);
+
+            if (!merged.changed) {
+                updates.push(language + ": already complete");
+                continue;
+            }
+
+            const content = JSON.stringify(merged.value, null, "\t") + "\n";
+            await api("/api/json/" + encodeURIComponent(language) + "/" + encodeURIComponent(state.file.replace(/\.json$/i, "")), {
+                method: "PUT",
+                body: JSON.stringify({ content, generateMin: true }),
+            });
+            delete state.searchCache[language + "/" + state.file];
+            updates.push(language + ": updated");
+        }
+
+        setStatus("Synced missing structure from " + state.language + "/" + state.file + ". " + updates.join("; "), "ok");
+    } catch (error) {
         setStatus(error.message, "error");
     }
 }
@@ -485,6 +829,7 @@ el.rawEditor.addEventListener("input", () => {
     renderSelection();
 });
 el.save.addEventListener("click", saveFile);
+el.syncMissing.addEventListener("click", syncMissingStructure);
 el.rawToggle.addEventListener("click", () => {
     try {
         if (state.rawMode) {
@@ -530,6 +875,8 @@ el.minifyAll.addEventListener("click", async () => {
 el.refresh.addEventListener("click", loadState);
 el.addLanguage.addEventListener("click", addLanguage);
 el.addFile.addEventListener("click", addFile);
+el.searchInput.addEventListener("input", queueSearch);
+el.searchAllFiles.addEventListener("change", queueSearch);
 el.pickFirst.addEventListener("click", () => {
     const first = (state.filesByLanguage[state.language] || [])[0];
     if (first) {

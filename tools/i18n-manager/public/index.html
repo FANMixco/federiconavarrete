@@ -45,7 +45,18 @@
                 <h2 id="title">Select a JSON file</h2>
                 <p id="subtitle">Choose a language and file to begin.</p>
             </div>
+            <div class="search-panel">
+                <div class="search-box">
+                    <input id="searchInput" placeholder="Search keys or values">
+                    <label class="check-row">
+                        <input id="searchAllFiles" type="checkbox">
+                        <span>All files</span>
+                    </label>
+                </div>
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
             <div class="actions">
+                <button id="syncMissing" disabled>Sync missing</button>
                 <button id="rawToggle" disabled>Raw JSON</button>
                 <button id="validate" disabled>Validate</button>
                 <button id="minifyLanguage" disabled>Minify language</button>
