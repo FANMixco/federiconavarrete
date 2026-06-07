@@ -1,12 +1,20 @@
 let totalServices = 0,
     isHandlingVisibility = false,
     fullData,
-    failedDMenu = null;
+    failedDMenu = null,
+    lastResponsiveSmallScreen = isResponsiveSmallScreen();
 
 //const bookEdition = 'second;'
-const imgPreview = getImgBasicTag('{URL}', '', '', '', '{Title}', `style="max-width: ${(smallScreen) ? '90' : '80' }%;max-height: 100%;"`),
-    tBlank = 'target="_blank"',
+const tBlank = 'target="_blank"',
     divSmall = '<div class="col-sm">';
+
+function isResponsiveSmallScreen() {
+    return (typeof isSmallScreen === "function") ? isSmallScreen() : smallScreen;
+}
+
+function getLinkPreviewImg() {
+    return getImgBasicTag('{URL}', '', '', '', '{Title}', `style="max-width: ${isResponsiveSmallScreen() ? '90' : '80'}%;max-height: 100%;"`);
+}
 
 fetchData(`${jsonLoc}/extraInfo.json`)
     .then(data => {
@@ -15,6 +23,7 @@ fetchData(`${jsonLoc}/extraInfo.json`)
         loadSoftSkills(data.softSkills, data.softSkillsOthers);
         loadTechSkills(data.techSkills, data.techSkillsOthers);
         loadSocialMedias(data.socialBasicList, data.socialOthersList);
+        loadSectionIfVisible();
 
         function loadServices(serviceList) {
             try {
@@ -147,8 +156,16 @@ fetchData(`${jsonLoc}/extraInfo.json`)
     }).catch((e) => { console.error(e); });
 
 const loadSectionIfVisible = () => {
+    if (!fullData) {
+        return;
+    }
+
     let fullReviews = [];
-    const noreferrer = 'rel="noreferrer"';
+    const noreferrer = 'rel="noreferrer"',
+        currentResponsiveSmallScreen = isResponsiveSmallScreen(),
+        refreshResponsiveSections = currentResponsiveSmallScreen !== lastResponsiveSmallScreen;
+
+    lastResponsiveSmallScreen = currentResponsiveSmallScreen;
 
     gAll('section, div').forEach(section => {
         const rect = section.getBoundingClientRect(),
@@ -188,16 +205,40 @@ const loadSectionIfVisible = () => {
         }
     });
 
-    function loadAwards(awardList) {
+    if (refreshResponsiveSections) {
+        reloadResponsiveSections();
+    }
+
+    function reloadResponsiveSections() {
+        const divAwards = gId('divAwards'),
+            presentations = gId('presentations'),
+            newsArticles = gId('newsArticles');
+
+        if (divAwards && divAwards.getAttribute('data-loaded') === 'true') {
+            gId('awardsList').innerHTML = '';
+            loadAwards(fullData.awardsList, false);
+        }
+
+        if (presentations && presentations.getAttribute('data-loaded') === 'true') {
+            loadPresentations(fullData.presentationsLinks);
+        }
+
+        if (newsArticles && newsArticles.getAttribute('data-loaded') === 'true') {
+            loadNewsArticles(fullData.newsArticlesList, false);
+        }
+    }
+
+    function loadAwards(awardList, includeList = true) {
         try {
             const { awards } = awardList;
+            const useSmallLayout = isResponsiveSmallScreen();
 
             const awardsList = gId('awardsList');
             let availableLinks = [],
-                items = (smallScreen) ? '' : `<div class="row justify-content-center">`;
+                items = useSmallLayout ? '' : `<div class="row justify-content-center">`;
 
             const awardFlat = awards.flat();
-            const maxItems = smallScreen ? 6 : 3;
+            const maxItems = useSmallLayout ? 6 : 3;
             const filteredAwards = awardFlat.slice(0, maxItems);
 
             filteredAwards.forEach((elem, index) => {
@@ -214,20 +255,24 @@ const loadSectionIfVisible = () => {
                 items += getSCItem(index, title);
             });
 
-            createList(awardFlat, 'tbAwards');
+            if (includeList) {
+                createList(awardFlat, 'tbAwards');
+            }
 
-            items = (smallScreen) ? items : `${items}</div>`;
+            items = useSmallLayout ? items : `${items}</div>`;
 
-            if (smallScreen) {
+            if (useSmallLayout) {
                 items = getCarousel(items, "carouselAwards", 'text-btn-carousel');
                 const awardsListDiv = gId("awardsList");
                 awardsListDiv.classList.remove("row");
                 awardsListDiv.classList.add("container");
+            } else {
+                gId("awardsList").classList.remove("container");
             }
 
             awardsList.innerHTML += items;
 
-            if (smallScreen) {
+            if (useSmallLayout) {
                 new bootstrap.Carousel(`#carouselAwards`);
             }
 
@@ -245,7 +290,7 @@ const loadSectionIfVisible = () => {
                         btnFullScreenPreview.setAttribute('title', item.title);
                         btnFullScreenPreview.setAttribute('aria-label', item.title);
 
-                        gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("drive.google.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : imgPreview.replace("{URL}", tmpLink).replace("{Title}", item.title);
+                        gId('divIframeLinkPreviews').innerHTML = !(tmpLink.includes("drive.google.com")) ? getIframe(item.title, tmpLink, dIframe('previewerIframeI', 'previewerIframe')) : getLinkPreviewImg().replace("{URL}", tmpLink).replace("{Title}", item.title);
 
                         if (item.type !== "img") {
                             iFrameHResize('previewerIframeI', 'divIframeLinkPreviews');
@@ -392,8 +437,9 @@ const loadSectionIfVisible = () => {
 
     function loadDivPresentations(presentations, divPicture, divCar, imgLoc = imgLocPortfolio) {
         let items = '';
+        const useSmallLayout = isResponsiveSmallScreen();
 
-        if (smallScreen) {
+        if (useSmallLayout) {
             items = presentations.map((item, index) => {
                 const vTmp = getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '', false).replaceAll('class="col-sm"', `class="carousel-video-inner"`);
                 return `${getCItem(`${(index === 0) ? "active" : ""}"`)}${vTmp}</div>`;
@@ -406,7 +452,7 @@ const loadSectionIfVisible = () => {
         }
 
         setPPTImg(presentations);
-        if (smallScreen) new bootstrap.Carousel(`#${divCar}`);
+        if (useSmallLayout) new bootstrap.Carousel(`#${divCar}`);
 
         function setPPTImg(presentations) {
             presentations.forEach(item => setImage(item.imgID, item.imgBasicName, imgLoc));
@@ -423,16 +469,19 @@ const loadSectionIfVisible = () => {
         loadImgSection(articles, 'divArticles', imgLocArticles, '', '');
     }
 
-    function loadNewsArticles(newsArticlesList) {
+    function loadNewsArticles(newsArticlesList, includeList = true) {
         const { articles } = newsArticlesList;
         const imgTmpLoc = 'img/articles/';
+        const useSmallLayout = isResponsiveSmallScreen();
 
-        const maxItems = smallScreen ? 5 : 2;
+        const maxItems = useSmallLayout ? 5 : 2;
         const filteredArticles = articles.slice(0, maxItems);
 
         loadDivPresentations(filteredArticles, gId('divMMArticles'), 'newsDiv', imgTmpLoc);
 
-        createList(articles, 'dMassMedia');
+        if (includeList) {
+            createList(articles, 'dMassMedia');
+        }
     }
 
     function createList(list, loc) {
@@ -582,7 +631,7 @@ function getCarousel(items, id, arrowsColor = 'text-muted', isVideo = false) {
 }
 
 function getSCItem(index, title) {
-    return (smallScreen) ? `${getCItem(`${(index === 0) ? "active" : ""}"`)}<div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
+    return isResponsiveSmallScreen() ? `${getCItem(`${(index === 0) ? "active" : ""}"`)}<div class='text-center card-holder'>${title}</div></div>` : `<div class='col-lg-4 col-md-6 col-sm-12 col-12 p-2 text-center card-holder'>${title}</div>`;
 }
 
 function getCard(link, icon, txtColor, title, cOption, iOption, iHeight, extras = '', hasLink = false, idL = '') {

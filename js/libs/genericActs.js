@@ -44,6 +44,10 @@ let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && 
     extraContact = 0,
     rotatedScreen = false;
 
+function isSmallScreen() {
+    return smallScreenMobileOS || window.innerWidth === window.innerHeight || window.matchMedia("(max-width: 767.98px)").matches;
+}
+
 function gId(id) {
     return document.getElementById(id);
 }
