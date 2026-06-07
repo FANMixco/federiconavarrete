@@ -125,10 +125,70 @@
 				"imgBasicName": "news6"
 			},
 			{
-				"link": "bit.ly/3Rr7oEY",
+				"link": "bit.ly/3QiEzgF",
 				"title": "Este escritor salvadoreño estuvo en la Feria del Libro de Madrid",
 				"imgID": "imgNews7",
 				"imgBasicName": "news7"
+			},
+			{
+				"link": "diarioelsalvador.com/literatura-salvadorena-se-expone-en-marruecos/791030/",
+				"title": "Literatura salvadoreña se expone en Marruecos",
+				"imgID": "imgMarruecos",
+				"imgBasicName": "fair/marruecos"
+			},
+			{
+				"link": "rree.gob.sv/literatura-salvadorena-destaca-en-evento-editorial-internacional-en-marruecos/",
+				"title": "Literatura salvadoreña destaca en evento editorial internacional en Marruecos",
+				"imgID": "imgSiel",
+				"imgBasicName": "fair/SIEL"
+			},
+			{
+				"link": "www.youtube.com/watch?v=44OsqBcTgIo",
+				"title": "Timeless Stories of El Salvador en el Instituto Cervantes de Nueva Delhi",
+				"imgID": "imgIndia",
+				"imgBasicName": "fair/india"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-turkiye-promueve-a-autor-nacional-en-encuentro-de-literatura-iberoamericana/",
+				"title": "Embajada de El Salvador en Türkiye promueve a autor nacional en encuentro de literatura iberoamericana",
+				"imgID": "imgTurkiye",
+				"imgBasicName": "fair/turkey"
+			},
+			{
+				"link": "rree.gob.sv/consulado-general-de-el-salvador-en-espana-promueve-participacion-de-escritor-nacional-en-feria-de-libro-de-madrid/",
+				"title": "Consulado General de El Salvador en España promueve participación de escritor nacional en Feria de Libro de Madrid",
+				"imgID": "imgConsuladoEspana",
+				"imgBasicName": "fair/consulado_es"
+			},
+			{
+				"link": "diarioelsalvador.com/salvadoreno-participo-en-feria-de-libro-en-madrid/369897/",
+				"title": "Salvadoreño participó en Feria de Libro en Madrid",
+				"imgID": "imgDiarioMadrid",
+				"imgBasicName": "fair/diario_el_salvador_2"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-austria-apoya-obra-de-escritor-salvadoreno-en-feria-del-libro-en-viena/",
+				"title": "Embajada de El Salvador en Austria apoya obra de escritor salvadoreño en Feria del Libro en Viena, Buch Wien",
+				"imgID": "imgBuchWien",
+				"imgBasicName": "fair/buch_viena"
+			},
+			{
+				"link": "diarioelsalvador.com/el-narrador-de-historias-magicas-de-cuscatlan/15042",
+				"title": "Libro sobre mitología salvadoreña causa sensación en Alemania",
+				"imgID": "imgDiarioAlemania",
+				"imgBasicName": "fair/diario_el_salvador"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-alemania-presento-el-libro-timeless-stories-of-el-salvador-de-federico-navarrete/",
+				"title": "Embajada de El Salvador en Alemania presentó el libro “Timeless Stories of El Salvador” de Federico Navarrete",
+				"imgID": "imgEmbajadaAlemania",
+				"imgBasicName": "fair/diario_el_salvador"
+			},
+			{
+				"link": "rree.gob.sv/noviembre-es-el-mes-dedicado-a-los-salvadorenos-en-el-exterior/",
+				"title": "Noviembre es el mes dedicado a los salvadoreños en el exterior",
+				"imgID": "imgExterior",
+				"imgBasicName": "fair/exterior"
 			}
 		]
 	},

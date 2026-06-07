@@ -125,10 +125,70 @@
 				"imgBasicName": "news6"
 			},
 			{
-				"link": "bit.ly/3Rr7oEY",
+				"link": "bit.ly/3QiEzgF",
 				"title": "This Salvadoran writer was at the Madrid Book Fair (in Spanish)",
 				"imgID": "imgNews7",
 				"imgBasicName": "news7"
+			},
+			{
+				"link": "diarioelsalvador.com/literatura-salvadorena-se-expone-en-marruecos/791030/",
+				"title": "La littérature salvadorienne exposée au Maroc (en espagnol)",
+				"imgID": "imgMarruecos",
+				"imgBasicName": "fair/marruecos"
+			},
+			{
+				"link": "rree.gob.sv/literatura-salvadorena-destaca-en-evento-editorial-internacional-en-marruecos/",
+				"title": "La littérature salvadorienne à l’honneur lors d’un salon international du livre au Maroc (en espagnol)",
+				"imgID": "imgSiel",
+				"imgBasicName": "fair/SIEL"
+			},
+			{
+				"link": "www.youtube.com/watch?v=44OsqBcTgIo",
+				"title": "Timeless Stories of El Salvador à l’Institut Cervantes de New Delhi (en espagnol)",
+				"imgID": "imgIndia",
+				"imgBasicName": "fair/india"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-turkiye-promueve-a-autor-nacional-en-encuentro-de-literatura-iberoamericana/",
+				"title": "L’ambassade du Salvador en Türkiye promeut un auteur national lors d’une rencontre de littérature ibéro-américaine (en espagnol)",
+				"imgID": "imgTurkiye",
+				"imgBasicName": "fair/turkey"
+			},
+			{
+				"link": "rree.gob.sv/consulado-general-de-el-salvador-en-espana-promueve-participacion-de-escritor-nacional-en-feria-de-libro-de-madrid/",
+				"title": "Le consulat général du Salvador en Espagne promeut la participation d’un écrivain salvadorien à la Foire du livre de Madrid (en espagnol)",
+				"imgID": "imgConsuladoEspana",
+				"imgBasicName": "fair/consulado_es"
+			},
+			{
+				"link": "diarioelsalvador.com/salvadoreno-participo-en-feria-de-libro-en-madrid/369897/",
+				"title": "Un Salvadorien a participé à la Foire du livre de Madrid (en espagnol)",
+				"imgID": "imgDiarioMadrid",
+				"imgBasicName": "fair/diario_el_salvador_2"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-austria-apoya-obra-de-escritor-salvadoreno-en-feria-del-libro-en-viena/",
+				"title": "L’ambassade du Salvador en Autriche soutient l’œuvre de l’écrivain salvadorien à la Foire du livre de Vienne, Buch Wien (en espagnol)",
+				"imgID": "imgBuchWien",
+				"imgBasicName": "fair/buch_viena"
+			},
+			{
+				"link": "diarioelsalvador.com/el-narrador-de-historias-magicas-de-cuscatlan/15042",
+				"title": "Un livre sur la mythologie salvadorienne fait sensation en Allemagne (en espagnol)",
+				"imgID": "imgDiarioAlemania",
+				"imgBasicName": "fair/diario_el_salvador"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-alemania-presento-el-libro-timeless-stories-of-el-salvador-de-federico-navarrete/",
+				"title": "L’ambassade du Salvador en Allemagne a présenté le livre « Timeless Stories of El Salvador » de Federico Navarrete (en espagnol)",
+				"imgID": "imgEmbajadaAlemania",
+				"imgBasicName": "fair/diario_el_salvador"
+			},
+			{
+				"link": "rree.gob.sv/noviembre-es-el-mes-dedicado-a-los-salvadorenos-en-el-exterior/",
+				"title": "Novembre est le mois dédié aux Salvadoriens vivant à l’étranger (en espagnol)",
+				"imgID": "imgExterior",
+				"imgBasicName": "fair/exterior"
 			}
 		]
 	},

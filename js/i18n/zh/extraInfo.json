@@ -125,10 +125,70 @@
 				"imgBasicName": "news6"
 			},
 			{
-				"link": "bit.ly/3Rr7oEY",
+				"link": "bit.ly/3QiEzgF",
 				"title": "这位萨尔瓦多作家出席马德里书展（西班牙语）",
 				"imgID": "imgNews7",
 				"imgBasicName": "news7"
+			},
+			{
+				"link": "diarioelsalvador.com/literatura-salvadorena-se-expone-en-marruecos/791030/",
+				"title": "萨尔瓦多文学在摩洛哥展出（西班牙语）",
+				"imgID": "imgMarruecos",
+				"imgBasicName": "fair/marruecos"
+			},
+			{
+				"link": "rree.gob.sv/literatura-salvadorena-destaca-en-evento-editorial-internacional-en-marruecos/",
+				"title": "萨尔瓦多文学在摩洛哥国际书展上成为焦点（西班牙语）",
+				"imgID": "imgSiel",
+				"imgBasicName": "fair/SIEL"
+			},
+			{
+				"link": "www.youtube.com/watch?v=44OsqBcTgIo",
+				"title": "《Timeless Stories of El Salvador》亮相新德里塞万提斯学院（西班牙语）",
+				"imgID": "imgIndia",
+				"imgBasicName": "fair/india"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-turkiye-promueve-a-autor-nacional-en-encuentro-de-literatura-iberoamericana/",
+				"title": "萨尔瓦多驻土耳其大使馆在伊比利亚美洲文学活动中推广本国作家（西班牙语）",
+				"imgID": "imgTurkiye",
+				"imgBasicName": "fair/turkey"
+			},
+			{
+				"link": "rree.gob.sv/consulado-general-de-el-salvador-en-espana-promueve-participacion-de-escritor-nacional-en-feria-de-libro-de-madrid/",
+				"title": "萨尔瓦多驻西班牙总领事馆推动萨尔瓦多作家参加马德里书展（西班牙语）",
+				"imgID": "imgConsuladoEspana",
+				"imgBasicName": "fair/consulado_es"
+			},
+			{
+				"link": "diarioelsalvador.com/salvadoreno-participo-en-feria-de-libro-en-madrid/369897/",
+				"title": "萨尔瓦多人参加马德里书展（西班牙语）",
+				"imgID": "imgDiarioMadrid",
+				"imgBasicName": "fair/diario_el_salvador_2"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-austria-apoya-obra-de-escritor-salvadoreno-en-feria-del-libro-en-viena/",
+				"title": "萨尔瓦多驻奥地利大使馆支持萨尔瓦多作家参加维也纳 Buch Wien 书展（西班牙语）",
+				"imgID": "imgBuchWien",
+				"imgBasicName": "fair/buch_viena"
+			},
+			{
+				"link": "diarioelsalvador.com/el-narrador-de-historias-magicas-de-cuscatlan/15042",
+				"title": "关于萨尔瓦多神话的书在德国引起轰动（西班牙语）",
+				"imgID": "imgDiarioAlemania",
+				"imgBasicName": "fair/diario_el_salvador"
+			},
+			{
+				"link": "rree.gob.sv/embajada-de-el-salvador-en-alemania-presento-el-libro-timeless-stories-of-el-salvador-de-federico-navarrete/",
+				"title": "萨尔瓦多驻德国大使馆介绍 Federico Navarrete 的《Timeless Stories of El Salvador》（西班牙语）",
+				"imgID": "imgEmbajadaAlemania",
+				"imgBasicName": "fair/diario_el_salvador"
+			},
+			{
+				"link": "rree.gob.sv/noviembre-es-el-mes-dedicado-a-los-salvadorenos-en-el-exterior/",
+				"title": "十一月是献给海外萨尔瓦多人的月份（西班牙语）",
+				"imgID": "imgExterior",
+				"imgBasicName": "fair/exterior"
 			}
 		]
 	},
