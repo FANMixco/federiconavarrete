@@ -2,9 +2,9 @@
   "booksList": [
     {
       "title": "Harry Potter et l’Ordre du Phénix",
-      "img": "en/HP",
+      "img": "fr/HP",
       "author": "J.K. Rowling",
-      "link": "amzn.eu/d/06IoTmeq"
+      "link": "a.co/d/0cbC9LcR"
     },
     {
       "title": "Légendes Éternelles d’El Salvador",
@@ -15,39 +15,39 @@
     },
     {
       "title": "Comment se faire des amis",
-      "img": "en/WF",
+      "img": "fr/WF",
       "author": "Dale Carnegie",
-      "link": "amzn.eu/d/02HrRgau"
+      "link": "a.co/d/08q1JPpf"
     },
     {
       "title": "L’ordre mondial en mutation",
-      "img": "en/principles",
+      "img": "fr/principles",
       "author": "Ray Dalio",
-      "link": "amzn.eu/d/08zI0gLX"
+      "link": "a.co/d/0hovifLT"
     },
     {
       "title": "I.A. La Plus Grande Mutation de l’Histoire",
-      "img": "en/ai",
+      "img": "fr/ai",
       "author": "Kai-Fu Lee",
-      "link": "amzn.eu/d/0bMNo9eo"
+      "link": "a.co/d/0fTxiyaO"
     },
     {
       "title": "Cinq coups d’avance",
-      "img": "en/moves",
+      "img": "fr/moves",
       "author": "Patrick Bet-David",
-      "link": "amzn.eu/d/0arQiot7"
+      "link": "a.co/d/0iszgM0d"
     },
     {
       "title": "Triomphez de vos soucis : vivez que diable !",
-      "img": "en/worry",
+      "img": "fr/worry",
       "author": "Dale Carnegie",
-      "link": "amzn.eu/d/08a2RMNM"
+      "link": "a.co/d/08Xclrst"
     },
     {
       "title": "Climat : comment éviter un désastre",
-      "img": "en/warming",
+      "img": "fr/warming",
       "author": "Bill Gates",
-      "link": "amzn.eu/d/05k8JTE2"
+      "link": "a.co/d/04pRp9gz"
     },
     {
       "title": "Personal Branding with LinkedIn: The Think Natalia Method",
@@ -57,21 +57,21 @@
     },
     {
       "title": "Bill Campbell : le trillion dollar coach",
-      "img": "en/coach",
+      "img": "fr/coach",
       "author": "Alan Eagle, Eric Schmidt, Jonathan Rosenberg",
-      "link": "amzn.eu/d/0379k5r5"
+      "link": "a.co/d/0gheMnGO"
     },
     {
       "title": "L’affaire Cambridge Analytica",
-      "img": "en/targeted",
+      "img": "fr/targeted",
       "author": "Brittany Kaiser",
-      "link": "amzn.eu/d/01L7QrXE"
+      "link": "a.co/d/09xrFHix"
     },
     {
       "title": "Bad Blood",
-      "img": "en/blood",
+      "img": "fr/blood",
       "author": "John Carreyrou",
-      "link": "amzn.eu/d/0g49956y"
+      "link": "amzn.eu/d/04e0wHx4"
     },
     {
       "title": "The 25 Laws for Doing The Impossible",
@@ -93,9 +93,9 @@
     },
     {
       "title": "Le moine qui vendit sa Ferrari",
-      "img": "en/monk",
+      "img": "fr/monk",
       "author": "Robin Sharma",
-      "link": "amzn.eu/d/0hKpmXxL"
+      "link": "amzn.eu/d/04CEnkBa"
     }
   ]
 }
