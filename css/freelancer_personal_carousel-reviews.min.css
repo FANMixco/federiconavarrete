@@ -213,6 +213,9 @@ hr.star-black {
     #massMediaModal .modal-content,
     #massMediaModal .modal-header,
     #massMediaModal .modal-body,
+    #articlesModal .modal-content,
+    #articlesModal .modal-header,
+    #articlesModal .modal-body,
     #qrPreview .modal-content,
     #qrPreview .modal-header,
     #qrPreview .modal-body,
@@ -234,6 +237,7 @@ hr.star-black {
     #elSalvador .modal-content,
     #linkPreviews .modal-content,
     #massMediaModal .modal-content,
+    #articlesModal .modal-content,
     #qrPreview .modal-content,
     #reviewGeneric .modal-content,
     #skillsModal .modal-content,
@@ -246,6 +250,7 @@ hr.star-black {
     #elSalvador .modal-header,
     #linkPreviews .modal-header,
     #massMediaModal .modal-header,
+    #articlesModal .modal-header,
     #qrPreview .modal-header,
     #reviewGeneric .modal-header,
     #skillsModal .modal-header,
@@ -258,6 +263,7 @@ hr.star-black {
     #elSalvador .btn-close,
     #linkPreviews .btn-close,
     #massMediaModal .btn-close,
+    #articlesModal .btn-close,
     #qrPreview .btn-close,
     #reviewGeneric .btn-close,
     #skillsModal .btn-close,
@@ -276,6 +282,8 @@ hr.star-black {
     #linkPreviews .btn-close:focus,
     #massMediaModal .btn-close:hover,
     #massMediaModal .btn-close:focus,
+    #articlesModal .btn-close:hover,
+    #articlesModal .btn-close:focus,
     #qrPreview .btn-close:hover,
     #qrPreview .btn-close:focus,
     #reviewGeneric .btn-close:hover,
@@ -319,47 +327,58 @@ hr.star-black {
     }
 
     #tbAwards,
-    #dMassMedia {
+    #dMassMedia,
+    #dArticles {
         list-style: none;
         margin: 0;
         padding-left: 0;
     }
 
-    #dMassMedia {
+    #dMassMedia,
+    #dArticles {
+        overflow-x: hidden;
         padding: 1rem;
     }
 
     #tbAwards li,
-    #dMassMedia li {
+    #dMassMedia li,
+    #dArticles li {
         border-bottom: 1px solid #2f3440;
         list-style: none;
         padding: 1rem 0;
     }
 
     #tbAwards li:first-child,
-    #dMassMedia li:first-child {
+    #dMassMedia li:first-child,
+    #dArticles li:first-child {
         padding-top: 0;
     }
 
     #tbAwards li:last-child,
-    #dMassMedia li:last-child {
+    #dMassMedia li:last-child,
+    #dArticles li:last-child {
         border-bottom: 0;
         padding-bottom: 0;
     }
 
     #tbAwards a.text-material-link-dark,
-    #dMassMedia a.text-material-link-dark {
+    #dMassMedia a.text-material-link-dark,
+    #dArticles a.text-material-link-dark {
         color: #a9c9ff;
         display: block;
         font-size: clamp(1.25rem, 2.5vw, 1.75rem);
         line-height: 1.45;
+        overflow-wrap: anywhere;
         text-decoration: none;
+        word-break: break-word;
     }
 
     #tbAwards a.text-material-link-dark:hover,
     #tbAwards a.text-material-link-dark:focus,
     #dMassMedia a.text-material-link-dark:hover,
-    #dMassMedia a.text-material-link-dark:focus {
+    #dMassMedia a.text-material-link-dark:focus,
+    #dArticles a.text-material-link-dark:hover,
+    #dArticles a.text-material-link-dark:focus {
         color: white;
         text-decoration: underline;
         text-underline-offset: 0.2em;

@@ -245,7 +245,11 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          <div id="newsArticles" data-loaded="false" class="container">
             <hr class="pt-4">
             <a data-bs-toggle="modal" data-bs-target="#massMediaModal" class="hModals" target="_blank" rel="nofollow noopener noreferrer">
-               <h3 class="text-center text-uppercase mb-0 text-warning" data-translation="massMedia"></h3>
+               <h3 class="text-center text-uppercase mb-0 text-title text-warning">
+                  <span class="icon-newspaper icon-size-40"></span>
+                  &nbsp;
+                  <span data-translation="massMedia"></span>
+               </h3>
             </a>
             <hr class="star-black-dark mb-5">
             <div class="row" id="divMMArticles"></div>
@@ -293,7 +297,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
             <div class="row" id="testimonialsRow">
                <div class="col-md-8 offset-md-2 col-10 offset-1 mt-5">
                   <a href="https://www.linkedin.com/in/federiconavarrete/details/recommendations/" target="_blank">
-                     <h3 class="text-center text-uppercase fw-bold text-warning" data-translation="testimonials"></h3>
+                     <h3 class="text-center text-title text-uppercase fw-bold text-warning">
+                        <span class="icon-comment-quote icon-size-40"></span>&nbsp;<span data-translation="testimonials"></span>
+                     </h3>
                   </a>
                   <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel">
                      <div class="carousel-inner mt-4" id="divReviewsPreviews"></div>
@@ -316,7 +322,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Personal projects Grid Section -->
       <section class="portfolio pb-1 pb-sm-0 mb-0" id="projects" data-loaded="false">
          <div class="container text-center">
-            <h2 class="text-uppercase text-secondary mb-0" data-translation="personalProjects"></h2>
+            <h2 class="text-uppercase text-secondary mb-0 text-title">
+               <span class="icon-apps icon-size-40"></span>&nbsp;<span data-translation="personalProjects"></span>
+            </h2>
             <hr class="star-dark mb-5">
             <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="false">
                <div class="carousel-inner" id="personalProjects"></div>
@@ -359,7 +367,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Articles Grid Section -->
       <section class="portfolio" id="articles" data-loaded="false">
          <div class="container">
-            <h2 class="text-center text-uppercase text-secondary mb-0 text-title"><span class="icon-newspaper icon-size-46"></span>&nbsp;<span data-translation="articles"></span></h2>
+            <a data-bs-toggle="modal" data-bs-target="#articlesModal" href="#articlesModal" class="hModals" rel="nofollow noopener noreferrer">
+               <h2 class="text-center text-uppercase text-warning mb-0 text-title"><span class="icon-article icon-size-40"></span>&nbsp;<span data-translation="articles"></span></h2>
+            </a>
             <hr class="star-dark mb-5">
             <div class="row" id="divArticles"></div>
          </div>
@@ -367,7 +377,9 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Books Section -->
       <section class="text-white mb-0" id="books" data-loaded="false">
          <div class="container">
-            <a href="https://books.federiconavarrete.com" target="_blank"><h2 class="text-center text-uppercase text-warning h2-smaller" data-translation="recommendedBooks"></h2></a>
+            <a href="https://books.federiconavarrete.com" target="_blank"><h2 class="text-center text-title text-uppercase text-warning h2-smaller">
+               <span class="icon-books icon-size-40"></span>&nbsp;<span data-translation="recommendedBooks"></span>
+            </h2></a>
             <hr class="star-black-dark mb-5">
             <div id="bookPreview" class="mt-5 mb-5"></div>
             <div class="row row-auto">
@@ -487,6 +499,18 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body" id="dMassMedia"></div>
+            </div>
+         </div>
+      </div>
+
+      <div class="modal fade" tabindex="-1" role="dialog" id="articlesModal">
+         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mFullScreen">
+            <div class="modal-content">
+               <div class="modal-header border-0">
+                  <h5 class="modal-title"><span data-translation="articles"></span></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body" id="dArticles"></div>
             </div>
          </div>
       </div>

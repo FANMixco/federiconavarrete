@@ -13,6 +13,200 @@
 				"imgID": "imgArt1",
 				"imgBasicName": "rpas1"
 			}
+		],
+		"moreArticles": [
+			{
+				"link": "linkedin.com/pulse/why-i-believe-leverage-more-important-than-ever-federico-navarrete--3ji5f",
+				"title": "Why I Believe Leverage Is More Important Than Ever"
+			},
+			{
+				"link": "linkedin.com/pulse/why-i-always-think-systems-incentives-my-two-cents-navarrete--zsdif",
+				"title": "Why I Always Think in Systems and Incentives: My Two Cents"
+			},
+			{
+				"link": "linkedin.com/pulse/two-brains-one-vision-how-chatgpt-helped-me-level-up-my-navarrete--ic5gf",
+				"title": "Two Brains, One Vision: How ChatGPT Helped Me Level Up My Work"
+			},
+			{
+				"link": "linkedin.com/pulse/future-software-development-citizen-developers-federico-navarrete",
+				"title": "The Future of Software Development: Citizen Developers"
+			},
+			{
+				"link": "linkedin.com/pulse/can-chatgpt-your-copilot-xp-partner-federico-navarrete-",
+				"title": "Can ChatGPT Be Your Copilot and XP Partner?"
+			},
+			{
+				"link": "linkedin.com/pulse/automation-here-stay-post-covid-19-federico-navarrete",
+				"title": "Automation Is Here to Stay Post-COVID-19"
+			},
+			{
+				"link": "linkedin.com/pulse/7-tips-successful-rpas-federico-navarrete",
+				"title": "7 Tips for Successful RPAs"
+			},
+			{
+				"link": "linkedin.com/pulse/four-faces-automation-industry-40-federico-navarrete",
+				"title": "The Four Faces of Automation in Industry 4.0"
+			},
+			{
+				"link": "linkedin.com/pulse/low-code-platforms-next-big-thing-federico-navarrete",
+				"title": "Low-Code Platforms: The Next Big Thing?"
+			},
+			{
+				"link": "linkedin.com/pulse/should-you-learn-programming-federico-navarrete",
+				"title": "Should You Learn Programming?"
+			},
+			{
+				"link": "linkedin.com/pulse/good-bad-ugly-robotic-process-automation-federico-navarrete",
+				"title": "The Good, the Bad and the Ugly of Robotic Process Automation"
+			},
+			{
+				"link": "linkedin.com/pulse/automation-future-workforce-federico-navarrete",
+				"title": "Automation and the Future Workforce"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-connect-to-efs-via-cloud-shell-2hh5",
+				"title": "How to connect to EFS via CloudShell"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-create-a-ecs-service-more-than-one-target-group-2j2i",
+				"title": "How to create an ECS Service with more than one Target Group"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-schedule-rds-instances-turn-onoff-easily-5792",
+				"title": "How to schedule RDS instances (start/stop) easily"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-connect-your-sql-server-rds-to-your-self-managed-active-directories-windows-authentication-37ac",
+				"title": "How to connect your SQL Server RDS to your Self Managed Active Directories (Windows Authentication)"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-fix-the-cloudwatch-log-stream-resourcenotfoundexception-the-specified-log-group-does-not-exist-in-ecs-1h70",
+				"title": "How to fix the Cloudwatch log stream: ResourceNotFoundException error from ECS"
+			},
+			{
+				"link": "dev.to/fanmixco/is-xamarin-dead-36g",
+				"title": "Is Xamarin Dead?"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-add-google-translate-to-your-website-59cc",
+				"title": "How to add Google Translate to your website"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-update-eventbridge-schedules-with-lambdas-2482",
+				"title": "How to Update EventBridge Schedules with Lambdas"
+			},
+			{
+				"link": "dev.to/fanmixco/from-webview-to-webview2-in-uwp-2ehj",
+				"title": "From WebView to WebView2 in UWP"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-disable-printing-in-a-website-591n",
+				"title": "How to disable printing on a website"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-access-efs-folders-from-file-explorer-in-windows-10-using-wsl2-4dl7",
+				"title": "How to access EFS folders from the Windows File Explorer using WSL2"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-run-docker-commands-in-cmdpowershell-from-docker-using-wsl2-5h65",
+				"title": "How to run Docker commands in CMD/PowerShell powered by Docker running in WSL2"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-create-multilingual-static-pages-2ei4",
+				"title": "How to create multilingual static pages without frameworks"
+			},
+			{
+				"link": "dev.to/fanmixco/automatic-token-generation-for-maven-in-codeartifact-in-windows-15k6",
+				"title": "How to Automatically Generate Tokens for CodeArtifact (Maven) in Windows"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-update-ecs-tasks-revisions-with-aws-cli-26m3",
+				"title": "How to update ECS Tasks Revisions with AWS CLI"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-schedule-startstop-ec2-instances-managed-by-auto-scaling-groups-3hk2",
+				"title": "How to schedule EC2 instances managed by Auto Scaling Groups (start/stop)"
+			},
+			{
+				"link": "dev.to/fanmixco/guide-for-using-xamaringoogleusermessagingplatform-gdpr-1lkc",
+				"title": "Tutorial for using Xamarin.Google.UserMessagingPlatform (GDPR) for Google AdMob (Android only)"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-compile-docker-images-in-windows-without-docker-desktop-using-wsl2-1pk9",
+				"title": "How to Create Docker Images in Windows without Docker Desktop using WSL2"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-create-a-tabbed-dialog-in-xamarinandroid-5h2a",
+				"title": "How to create a tabbed dialog in .NET for Android or Xamarin.Android"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-schedule-ec2-instances-easily-dnh",
+				"title": "How to schedule EC2 instances easily (start/stop)"
+			},
+			{
+				"link": "dev.to/fanmixco/bootstrap-5-horizonal-scrolling-tabs-5bgc",
+				"title": "Bootstrap 5 horizontal scrolling tabs"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-create-a-nexus-repository-with-windows-containers-e0p",
+				"title": "Create a Nexus Repository with Windows Containers"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-sync-efs-and-s3-every-5-min-in-aws-1712",
+				"title": "How to sync EFS and S3 every 5 min in AWS"
+			},
+			{
+				"link": "dev.to/fanmixco/workaround-to-schedule-aws-ecs-services-4m6b",
+				"title": "How to schedule ECS Services in AWS easily (start/stop)"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-create-a-simple-floating-button-with-xamarin-forms-maui-4k7i",
+				"title": "How to create a simple Floating Button with Xamarin.Forms/MAUI"
+			},
+			{
+				"link": "dev.to/fanmixco/learn-how-to-connect-to-a-private-amazon-rds-without-ec2-instances-easily-52be",
+				"title": "How to connect easily to a private Amazon RDS without EC2 instances"
+			},
+			{
+				"link": "dev.to/fanmixco/painless-multi-language-apps-with-angular-425n",
+				"title": "How to build painless multi-language apps with Angular and ngx-translate"
+			},
+			{
+				"link": "dev.to/fanmixco/what-is-your-experience-as-a-freelancer-developer-with-tdd-atdd-bdd-and-ci-cd-when-do-you-use-them-how-often-do-you-use-them-2ej9",
+				"title": "What is your experience as a freelancer developer with TDD/ATDD/BDD and CI/CD? When do you use them? How often do you use them?"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-use-bootstrap-modals-in-angular-in-separate-components-2mai",
+				"title": "How to use Bootstrap Modals in Angular in separate components"
+			},
+			{
+				"link": "dev.to/fanmixco/transfer-data-between-siblings-components-in-angular-a1m",
+				"title": "Transfer Data between Siblings Components in Angular with RxJS"
+			},
+			{
+				"link": "dev.to/fanmixco/sales-and-it-42fk",
+				"title": "Sales and IT!"
+			},
+			{
+				"link": "dev.to/fanmixco/programming-fatigue-how-it-feels-to-learn-to-code-in-2019-olo",
+				"title": "Programming fatigue. How it feels to learn to code in 2019/2022"
+			},
+			{
+				"link": "dev.to/fanmixco/floating-action-menu-with-xamarin-android-2mha",
+				"title": "Floating Action Menu with .NET for Android or Xamarin Android"
+			},
+			{
+				"link": "dev.to/fanmixco/fresh-tabs-in-xamarin-android-1cac",
+				"title": "Fresh Tabs in .NET for Android or Xamarin.Android!"
+			},
+			{
+				"link": "dev.to/fanmixco/floating-material-search-view-with-xamarin-android-3pd3",
+				"title": "Floating Material Search View with .NET for Android or Xamarin.Android"
+			},
+			{
+				"link": "dev.to/fanmixco/how-to-create-a-splash-screen-in-3-steps-for-xamarin-android-3oa8",
+				"title": "How to Create a Splash Screen in 3 Steps in .NET for Android or Xamarin.Android"
+			}
 		]
 	},
 	"awardsList": {
