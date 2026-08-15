@@ -96,7 +96,7 @@ function loadTranslations() {
 
                 currentLoc = (currentLoc != action) ? action : currentLoc;
                 const url = isMemoryGame ? 'https://tstories.federiconavarrete.com/memory-game.html' : `${urlB}${currentLoc}.federiconavarrete.com`,
-                      pTitle = isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : genericTranslations.presentationsGallery,
+                      pTitle = isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : (currentLoc == 'books') ? genericTranslations.recommendedBooks : genericTranslations.presentationsGallery,
                       btnFullScreen = gId('btn-full-screen');
 
                 gId('zoomTitle').innerHTML = pTitle;
