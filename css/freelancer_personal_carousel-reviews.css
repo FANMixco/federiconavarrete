@@ -1153,6 +1153,22 @@ a.text-material-link-dark:active {
     }
 }
 
+#books .salvadorean-title {
+    gap: 0.75rem;
+}
+
+#books .salvadorean-title .title-label {
+    max-width: 22ch;
+    width: max-content;
+}
+
+@media (min-width: 992px) {
+    #books .salvadorean-title .title-label {
+        max-width: none;
+        white-space: nowrap;
+    }
+}
+
 .icon-size-40 {
     font-size: 40px;
 }
