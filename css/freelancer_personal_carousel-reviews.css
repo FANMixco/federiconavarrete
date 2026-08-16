@@ -1129,25 +1129,25 @@ a.text-material-link-dark:active {
 .text-title {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-#projects .text-title {
-    align-items: center;
-    display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-#projects .project-title-label {
+.text-title .title-label {
     display: inline-block;
-    line-height: 0.95;
+    line-height: 1;
+    max-width: calc(100% - 4rem);
     text-align: center;
+    width: auto;
+}
+
+#projects .title-label {
+    line-height: 0.95;
     width: min-content;
 }
 
 @media (min-width: 992px) {
-    #projects .project-title-label {
+    #projects .title-label {
         white-space: nowrap;
         width: auto;
     }
