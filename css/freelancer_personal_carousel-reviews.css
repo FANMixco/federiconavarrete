@@ -1132,6 +1132,27 @@ a.text-material-link-dark:active {
     justify-content: center;
 }
 
+#projects .text-title {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#projects .project-title-label {
+    display: inline-block;
+    line-height: 0.95;
+    text-align: center;
+    width: min-content;
+}
+
+@media (min-width: 992px) {
+    #projects .project-title-label {
+        white-space: nowrap;
+        width: auto;
+    }
+}
+
 .icon-size-40 {
     font-size: 40px;
 }
