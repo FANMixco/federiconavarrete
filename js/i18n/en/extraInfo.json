@@ -209,77 +209,63 @@
 			}
 		]
 	},
-	"awardsList": {
-		"awards": [
-			[
-				{
-					"title": "Honorary Award for Best AI Solutions PM with Drupal Canvas, European Commission, 2026",
-					"link": "#",
-					"type": "_blank"
-				},
-				{
-					"title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU",
-					"link": "bit.ly/4coX5ud",
-					"type": "_blank"
-				}
-			],
-			[
-				{
-					"title": "Samsung Top Developer Award 2021 with Social Component",
-					"link": "bit.ly/31laqDT",
-					"type": "_blank"
-				},
-				{
-					"title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
-					"link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
-					"type": "img"
-				}
-			],
-			[
-				{
-					"title": "President's Distinguished Area by Toastmasters International 2019",
-					"link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
-					"type": "img"
-				}
-			],
-			[
-				{
-					"title": "1<sup>st</sup> place Cisco Switch Up Challenge 2016, “The Internet of Everything”",
-					"link": "bit.ly/3b8Tu8J",
-					"type": "iframe"
-				},
-				{
-					"title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
-					"link": "bit.ly/3lqNR7Y",
-					"type": "iframe"
-				}
-			],
-			[
-				{
-					"title": "Winner of the 7<sup>th</sup> Oxford Debate: Is the future of BPO/BPM bright or doomed? by Infosys Poland",
-					"link": "_blank",
-					"type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
-				},
-				{
-					"title": "Top 5 in the Imagine Cup of Poland 2016 in the category World Citizenship by Microsoft Poland",
-					"link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
-					"type": "_blank"
-				}
-			],
-			[
-				{
-					"title": "Diversity in Leadership Hackathon Winner by Chappuis Halder & Co.",
-					"link": "",
-					"type": "_blank"
-				},
-				{
-					"title": "TIC Award El Salvador 2011 (1<sup>st</sup> Place) by YABT &amp; OEA",
-					"link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
-					"type": "_blank"
-				}
-			]
-		]
-	},
+	"awardsList": [
+		{
+			"title": "Honorary Award for Best AI Solutions PM with Drupal Canvas, European Commission, 2026",
+			"link": "#",
+			"type": "_blank"
+		},
+		{
+			"title": "1<sup>st</sup> Place in Citythons 2021, Eindhoven and Hamburg Editions. Sponsored by the EU",
+			"link": "bit.ly/4coX5ud",
+			"type": "_blank"
+		},
+		{
+			"title": "Samsung Top Developer Award 2021 with Social Component",
+			"link": "bit.ly/31laqDT",
+			"type": "_blank"
+		},
+		{
+			"title": "Distinguished Toastmaster (DTM) by Toastmasters International in 2020",
+			"link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
+			"type": "img"
+		},
+		{
+			"title": "President's Distinguished Area by Toastmasters International 2019",
+			"link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
+			"type": "img"
+		},
+		{
+			"title": "1<sup>st</sup> place Cisco Switch Up Challenge 2016, “The Internet of Everything”",
+			"link": "bit.ly/3b8Tu8J",
+			"type": "iframe"
+		},
+		{
+			"title": "Top 5 of The Most Inspiring Projects of NASA SpaceApps Challenge 2014",
+			"link": "bit.ly/3lqNR7Y",
+			"type": "iframe"
+		},
+		{
+			"title": "Winner of the 7<sup>th</sup> Oxford Debate: Is the future of BPO/BPM bright or doomed? by Infosys Poland",
+			"link": "_blank",
+			"type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
+		},
+		{
+			"title": "Top 5 in the Imagine Cup of Poland 2016 in the category World Citizenship by Microsoft Poland",
+			"link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
+			"type": "_blank"
+		},
+		{
+			"title": "Diversity in Leadership Hackathon Winner by Chappuis Halder & Co.",
+			"link": "",
+			"type": "_blank"
+		},
+		{
+			"title": "TIC Award El Salvador 2011 (1<sup>st</sup> Place) by YABT &amp; OEA",
+			"link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
+			"type": "_blank"
+		}
+	],
 	"newsArticlesList": {
 		"articles": [
 			{
@@ -652,72 +638,52 @@
 			}
 		]
 	},
-	"softSkills": [
-		[
+	"softSkills": {
+		"main": [
+			"Leadership",
+			"Storytelling & Elevator pitching",
+			"IT consultancy & strategy",
+			"Emerging technologies research",
 			"Project management",
 			"Mentoring & Coaching"
 		],
-		[
-			"IT consultancy & strategy",
-			"Emerging technologies research"
-		],
-		[
-			"Leadership",
-			"Storytelling & Elevator pitching"
-		]
-	],
-	"softSkillsOthers": [
-		[
+		"more": [
+			"Presentation design",
+			"Employee training",
+			"Team building",
+			"Gathering requirements",
+			"Innovative planning",
+			"Business analysis",
 			"Organizing events",
 			"Creative writing",
 			"Cultural intelligence"
-		],
-		[
-			"Gathering requirements",
-			"Innovative planning",
-			"Business analysis"
-		],
-		[
-			"Presentation design",
-			"Employee training",
-			"Team building"
 		]
-	],
-	"techSkills": [
-		[
+	},
+	"techSkills": {
+		"main": [
+			"Cloud Architecture (AWS) &amp; FinOps",
+			"Green Web & Mobile Dev",
+			"Android & MAUI",
+			"Angular 20+",
+			"Open AI API / ChatGPT",
+			"C# & .NET Core",
 			"Agile - Scrum",
 			"CICD — Azure DevOps",
 			"<a href='https://rpa-practices.federiconavarrete.com' target='_blank' class='text-warning' rel='noreferrer'>RPA</a> — UiPath &amp; Automation Anywhere"
 		],
-		[
-			"Angular 20+",
-			"Open AI API / ChatGPT",
-			"C# & .NET Core"
-		],
-		[
-			"Cloud Architecture (AWS) &amp; FinOps",
-			"Green Web & Mobile Dev",
-			"Android & MAUI"
-		]
-	],
-	"techSkillsOthers": [
-		[
+		"more": [
+			"Azure (PaaS & IaaS)",
+			"Visual Studio & Code",
+			"SQL Server & SQLite",
+			"Google Analytics &amp; Maps API",
+			"ASP MVC",
+			"Entity Framework",
+			"PWA / HTML5 / CSS3 / JS",
+			"UI & UX",
 			"ITSM — ITIL v4",
 			"ATDD",
 			"RESTful Web Services",
 			"Versioning — Git"
-		],
-		[
-			"ASP MVC",
-			"Entity Framework",
-			"PWA / HTML5 / CSS3 / JS",
-			"UI & UX"
-		],
-		[
-			"Azure (PaaS & IaaS)",
-			"Visual Studio & Code",
-			"SQL Server & SQLite",
-			"Google Analytics &amp; Maps API"
 		]
-	]
+	}
 }

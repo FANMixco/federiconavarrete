@@ -209,77 +209,63 @@
 			}
 		]
 	},
-	"awardsList": {
-		"awards": [
-			[
-				{
-					"title": "Premio Honorífico para la Gestión de Proyectos de Soluciones de IA con Drupal Canvas, Comisión Europea, 2026",
-					"link": "#",
-					"type": "_blank"
-				},
-				{
-					"title": "1<sup>er</sup> Lugar en las Citythons 2021, Ediciones Eindhoven y Hamburgo. Patrocinadas por la UE",
-					"link": "bit.ly/4coX5ud",
-					"type": "_blank"
-				}
-			],
-			[
-				{
-					"title": "Samsung Top Developer Award 2021 con componente Social",
-					"link": "bit.ly/31laqDT",
-					"type": "_blank"
-				},
-				{
-					"title": "Toastmaster Distinguido (DTM) por Toastmasters International en 2020",
-					"link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
-					"type": "img"
-				}
-			],
-			[
-				{
-					"title": "Área Distinguida del Presidente por Toastmasters International 2019",
-					"link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
-					"type": "img"
-				}
-			],
-			[
-				{
-					"title": "1<sup>er</sup> lugar en el Cisco Switch Up Challenge 2016, “El Internet de todo”",
-					"link": "bit.ly/3b8Tu8J",
-					"type": "iframe"
-				},
-				{
-					"title": "Top 5 de los proyectos más inspiradores de la NASA SpaceApps Challenge 2014",
-					"link": "bit.ly/3lqNR7Y",
-					"type": "iframe"
-				}
-			],
-			[
-				{
-					"title": "Ganador del 7.º Debate de Oxford: ¿El futuro del BPO/BPM es prometedor o está condenado? por Infosys Polonia",
-					"link": "_blank",
-					"type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
-				},
-				{
-					"title": "Uno de los mejores 5 en la Imagine Cup de Polonia 2016 en la categoría Ciudadanía Mundial por Microsoft Polonia",
-					"link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
-					"type": "_blank"
-				}
-			],
-			[
-				{
-					"title": "Ganador del Hackathon Diversidad en el Liderazgo por Chappuis Halder & Co.",
-					"link": "",
-					"type": "_blank"
-				},
-				{
-					"title": "Premio TIC El Salvador 2011 (1<sup>er</sup> Lugar) por YABT y OEA",
-					"link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
-					"type": "_blank"
-				}
-			]
-		]
-	},
+	"awardsList": [
+		{
+			"title": "Premio Honorífico para la Gestión de Proyectos de Soluciones de IA con Drupal Canvas, Comisión Europea, 2026",
+			"link": "#",
+			"type": "_blank"
+		},
+		{
+			"title": "1<sup>er</sup> Lugar en las Citythons 2021, Ediciones Eindhoven y Hamburgo. Patrocinadas por la UE",
+			"link": "bit.ly/4coX5ud",
+			"type": "_blank"
+		},
+		{
+			"title": "Samsung Top Developer Award 2021 con componente Social",
+			"link": "bit.ly/31laqDT",
+			"type": "_blank"
+		},
+		{
+			"title": "Toastmaster Distinguido (DTM) por Toastmasters International en 2020",
+			"link": "drive.google.com/thumbnail?id=1cUkN42zFwefo2Zu5ySpEeReB4OcwVMYr&sz=w1000",
+			"type": "img"
+		},
+		{
+			"title": "Área Distinguida del Presidente por Toastmasters International 2019",
+			"link": "drive.google.com/thumbnail?id=1IasVzUhUPxljNh6nUCytaLDi50wb_61e&sz=w1000",
+			"type": "img"
+		},
+		{
+			"title": "1<sup>er</sup> lugar en el Cisco Switch Up Challenge 2016, “El Internet de todo”",
+			"link": "bit.ly/3b8Tu8J",
+			"type": "iframe"
+		},
+		{
+			"title": "Top 5 de los proyectos más inspiradores de la NASA SpaceApps Challenge 2014",
+			"link": "bit.ly/3lqNR7Y",
+			"type": "iframe"
+		},
+		{
+			"title": "Ganador del 7.º Debate de Oxford: ¿El futuro del BPO/BPM es prometedor o está condenado? por Infosys Polonia",
+			"link": "_blank",
+			"type": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDI58gMAAAAB4Eo-ynt6gMMRKJkX74ErWQ?e=h8GwsC"
+		},
+		{
+			"title": "Uno de los mejores 5 en la Imagine Cup de Polonia 2016 en la categoría Ciudadanía Mundial por Microsoft Polonia",
+			"link": "1drv.ms/b/c/32d7bc188cb6401a/ERpAtowYvNcggDIy8QMAAAAB1SsCvQNef4KSKs5kpAkOdQ?e=yuPaQR",
+			"type": "_blank"
+		},
+		{
+			"title": "Ganador del Hackathon Diversidad en el Liderazgo por Chappuis Halder & Co.",
+			"link": "",
+			"type": "_blank"
+		},
+		{
+			"title": "Premio TIC El Salvador 2011 (1<sup>er</sup> Lugar) por YABT y OEA",
+			"link": "1drv.ms/i/c/32d7bc188cb6401a/ERpAtowYvNcggDLmJgAAAAABQy8hovsVZwcR017NpPN2pQ?e=YRXFPe",
+			"type": "_blank"
+		}
+	],
 	"newsArticlesList": {
 		"articles": [
 			{
@@ -652,72 +638,52 @@
 			}
 		]
 	},
-	"softSkills": [
-		[
+	"softSkills": {
+		"main": [
+			"Liderazgo",
+			"Narrativa (storytelling) y Discursos elevadores",
+			"Consultoría y estrategia TI",
+			"Investigación en tecnologías emergentes",
 			"Gestión de proyectos",
 			"Tutoría y Entrenamiento"
 		],
-		[
-			"Consultoría y estrategia TI",
-			"Investigación en tecnologías emergentes"
-		],
-		[
-			"Liderazgo",
-			"Narrativa (storytelling) y Discursos elevadores"
-		]
-	],
-	"softSkillsOthers": [
-		[
+		"more": [
+			"Diseño de presentación",
+			"Formación de los empleados",
+			"Formación de equipos",
+			"Recolección de requisitos",
+			"Planificación innovadora",
+			"Análisis de negocios",
 			"Organización de eventos",
 			"Escritura creativa",
 			"Inteligencia cultural"
-		],
-		[
-			"Recolección de requisitos",
-			"Planificación innovadora",
-			"Análisis de negocios"
-		],
-		[
-			"Diseño de presentación",
-			"Formación de los empleados",
-			"Formación de equipos"
 		]
-	],
-	"techSkills": [
-		[
+	},
+	"techSkills": {
+		"main": [
+			"Arquitectura en la Nube (AWS) y FinOps",
+			"Desarrollo Móvil y de Páginas Web Verdes",
+			"Android y MAUI",
+			"Angular 20+",
+			"Open AI API / ChatGPT",
+			"C# y .NET Core",
 			"Ágil - Scrum",
 			"CICD — Azure DevOps",
 			"<a href='https://rpa-practices.federiconavarrete.com' target='_blank' class='text-warning' rel='noreferrer'>RPA</a> — UiPath y Automation Anywhere"
 		],
-		[
-			"Angular 20+",
-			"Open AI API / ChatGPT",
-			"C# y .NET Core"
-		],
-		[
-			"Arquitectura en la Nube (AWS) y FinOps",
-			"Desarrollo Móvil y de Páginas Web Verdes",
-			"Android y MAUI"
-		]
-	],
-	"techSkillsOthers": [
-		[
+		"more": [
+			"Azure (PaaS & IaaS)",
+			"Visual Studio y Code",
+			"SQL Server y SQLite",
+			"Google Analytics y Maps API",
+			"ASP MVC",
+			"Entity Framework",
+			"PWA / HTML5 / CSS3 / JS",
+			"UI y UX",
 			"ITSM — ITIL v4",
 			"ATDD",
 			"Servicios web RESTful",
 			"Versionamiento — Git"
-		],
-		[
-			"ASP MVC",
-			"Entity Framework",
-			"PWA / HTML5 / CSS3 / JS",
-			"UI y UX"
-		],
-		[
-			"Azure (PaaS & IaaS)",
-			"Visual Studio y Code",
-			"SQL Server y SQLite",
-			"Google Analytics y Maps API"
 		]
-	]
+	}
 }

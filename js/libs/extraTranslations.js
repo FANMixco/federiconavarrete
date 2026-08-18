@@ -90,29 +90,54 @@ fetchData(`${jsonLoc}/extraInfo.json`)
 
         function loadSoftSkills(softSkills, softSkillsOthers) {
             try {
-                loadSkills(softSkills, softSkillsOthers, "divSoftSkills", "divSoftSkillsOther", "-business");
+                const normalizedSkills = normalizeSkillGroup(softSkills, softSkillsOthers);
+                loadSkills(normalizedSkills.main, normalizedSkills.more, "divSoftSkills", "divSoftSkillsOther", "-business");
             }
             catch (e) { return e; }
         }
 
         function loadTechSkills(techSkills, techSkillsOthers) {
             try {
-                loadSkills(techSkills, techSkillsOthers, "divTechSkills", "divTechSkillsOthers", "");
+                const normalizedSkills = normalizeSkillGroup(techSkills, techSkillsOthers);
+                loadSkills(normalizedSkills.main, normalizedSkills.more, "divTechSkills", "divTechSkillsOthers", "");
             }
             catch (e) { return e; }
         }
 
         function loadSkills(skills, skillsOthers, divContainer, divOthersContainer, classCollapse) {
             try {
-                skills.forEach(item => {
-                    gId(divContainer).insertAdjacentHTML('afterbegin', `${divSmall}<p class="lead">${item.join("<br /><br />")}</p></div>`);
-                });
-
-                skillsOthers.forEach((item) => {
-                    gId(divOthersContainer).insertAdjacentHTML('afterbegin', `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${item.join("<br /><br />")}</div></div></div>`);
-                });
+                renderSkillColumns(gId(divContainer), toSkillColumns(skills), (items) => `${divSmall}<p class="lead">${items.join("<br /><br />")}</p></div>`);
+                renderSkillColumns(gId(divOthersContainer), toSkillColumns(skillsOthers), (items) => `${divSmall}<div class="collapse multi-collapse${classCollapse}"><div class="card card-body mini-cards">${items.join("<br /><br />")}</div></div></div>`);
             }
             catch (e) { return e; }
+        }
+
+        function toSkillColumns(skills, columnCount = 3) {
+            if (!Array.isArray(skills)) return [];
+            if (skills.every(Array.isArray)) return [...skills].reverse();
+
+            const columnSize = Math.ceil(skills.length / columnCount);
+            return Array.from({ length: columnCount }, (_, index) => skills.slice(index * columnSize, (index + 1) * columnSize)).filter(items => items.length);
+        }
+
+        function renderSkillColumns(container, columns, template) {
+            columns.forEach(items => {
+                container.insertAdjacentHTML('beforeend', template(items));
+            });
+        }
+
+        function normalizeSkillGroup(skills, fallbackOthers = []) {
+            if (skills && !Array.isArray(skills)) {
+                return {
+                    main: skills.main || [],
+                    more: skills.more || fallbackOthers || []
+                };
+            }
+
+            return {
+                main: skills || [],
+                more: fallbackOthers || []
+            };
         }
 
         function loadSocialMedias(socialBasicList, socialOthersList) {
@@ -251,18 +276,22 @@ const loadSectionIfVisible = () => {
         }
     }
 
+    function normalizeList(source, key) {
+        const list = Array.isArray(source) ? source : source?.[key] || [];
+        return Array.isArray(list) ? list.flat() : [];
+    }
+
     function loadAwards(awardList, includeList = true) {
         try {
-            const { awards } = awardList;
+            const awards = normalizeList(awardList, 'awards');
             const useSmallLayout = isResponsiveSmallScreen();
 
             const awardsList = gId('awardsList');
             let availableLinks = [],
                 items = useSmallLayout ? '' : `<div class="row justify-content-center">`;
 
-            const awardFlat = awards.flat();
             const maxItems = useSmallLayout ? 6 : 3;
-            const filteredAwards = awardFlat.slice(0, maxItems);
+            const filteredAwards = awards.slice(0, maxItems);
 
             filteredAwards.forEach((elem, index) => {
                 const tmpLink = `${urlB}${elem.link}`,
@@ -279,7 +308,7 @@ const loadSectionIfVisible = () => {
             });
 
             if (includeList) {
-                createList(awardFlat, 'tbAwards');
+                createList(awards, 'tbAwards');
             }
 
             items = useSmallLayout ? items : `${items}</div>`;
