@@ -526,16 +526,50 @@ const loadSectionIfVisible = () => {
     function loadNewsArticles(newsArticlesList, includeList = true) {
         const { articles } = newsArticlesList;
         const imgTmpLoc = 'img/articles/';
-        const useSmallLayout = isResponsiveSmallScreen();
+        const articlesPerSlide = isResponsiveSmallScreen() ? 1 : 2;
+        const visibleArticles = articles.filter(hasArticleImage);
 
-        const maxItems = useSmallLayout ? 5 : 2;
-        const filteredArticles = articles.slice(0, maxItems);
-
-        loadDivPresentations(filteredArticles, gId('divMMArticles'), 'newsDiv', imgTmpLoc);
+        loadMassMediaGallery(visibleArticles, gId('divMMArticles'), 'newsDiv', imgTmpLoc, articlesPerSlide);
 
         if (includeList) {
             createList(articles, 'dMassMedia');
         }
+    }
+
+    function hasArticleImage(article) {
+        return !!(article?.imgID && article?.imgBasicName && !article.imgBasicName.includes('/'));
+    }
+
+    function loadMassMediaGallery(articles, container, carouselId, imgLoc, articlesPerSlide) {
+        container.classList.remove('row');
+        container.classList.add('container');
+        container.innerHTML = '';
+
+        if (!articles.length) return;
+
+        const slides = chunkList(articles, articlesPerSlide).map((items, index) => {
+            const cardClass = articlesPerSlide === 2 ? 'mass-media-gallery-card mass-media-gallery-card-half' : 'mass-media-gallery-card mass-media-gallery-card-full';
+            const cards = items.map(item => getImgContainer(`${urlB}${item.link}`, setWebPImage(item.imgID, getImgTag(item.imgID, item.title)), item.title, '', false).replace('class="col-sm"', `class="${cardClass}"`)).join('');
+            return `${getCItem(index === 0 ? 'active' : '')}<div class="mass-media-gallery-slide">${cards}</div></div>`;
+        }).join('');
+
+        container.innerHTML = getCarousel(slides, carouselId, 'text-btn-carousel');
+        articles.forEach(item => setMassMediaImage(item.imgID, item.imgBasicName, imgLoc));
+        new bootstrap.Carousel(`#${carouselId}`);
+    }
+
+    function setMassMediaImage(imgID, imgBasic, imgLoc) {
+        const imgSize = deviceType() == devs[0] ? '_small' : '_medium',
+            imgTemp = gId(imgID);
+
+        imgTemp.src = `${imgLoc}${imgBasic}${imgSize}.jpg`;
+        gId(`srcWebP${imgID}`).srcset = `${imgLoc}${imgBasic}${imgSize}.webp`;
+        gId(`srcJPG${imgID}`).srcset = `${imgLoc}${imgBasic}${imgSize}.jpg`;
+        imgTemp.setAttribute("loading", "lazy");
+    }
+
+    function chunkList(list, chunkSize) {
+        return Array.from({ length: Math.ceil(list.length / chunkSize) }, (_, index) => list.slice(index * chunkSize, (index + 1) * chunkSize));
     }
 
     function createList(list, loc) {

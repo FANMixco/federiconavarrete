@@ -864,6 +864,30 @@ a#aBooksModal {
     text-align: center;
 }
 
+.mass-media-gallery-slide {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.mass-media-gallery-card {
+    min-width: 0;
+    padding: 0 0.75rem;
+    text-align: center;
+}
+
+.mass-media-gallery-card-half {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.mass-media-gallery-card-full {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
 .externalImg img,
 .externalImg:active img,
 .iconFooter {
