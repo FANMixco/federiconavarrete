@@ -403,15 +403,15 @@
 		"presentations": [
 			{
 				"youTubeID": "IcWZ962uYy0",
-				"title": "<a class='text-material-link-dark' href='https://bit.ly/4coX5ud' rel='noreferrer' target='_blank'>Winning Team | Team Greenhoven | Challenge 3 – Make the city healthy - Citython Eindhoven 2021</a>"
+				"title": "<a class='text-material-link-dark' href='https://bit.ly/4coX5ud' rel='noreferrer' target='_blank'>Équipe gagnante | Team Greenhoven | Défi 3 – Rendre la ville saine – Citython Eindhoven 2021 (en anglais)</a>"
 			},
 			{
 				"youTubeID": "XJyWAErkNtY",
-				"title": "Moments of Truth with Dr Natalia Wiechowski"
+				"title": "Moments de vérité avec le Dr Natalia Wiechowski (en anglais)"
 			},
 			{
 				"youTubeID": "-c2zayFv14Y",
-				"title": "The Missing Variable"
+				"title": "La variable manquante (en anglais)"
 			}
 		]
 	},
@@ -419,15 +419,15 @@
 		"presentations": [
 			{
 				"youTubeID": "VJF9NZOehTE",
-				"title": "When Low-Code meets #ChatGPT! Can you create your 1st Chatbot with Low-Code?"
+				"title": "Automatisez vos candidatures avec #Codex (en anglais)"
 			},
 			{
 				"youTubeID": "oPg8aIlZJds",
-				"title": "Let's Create Amazing Presentations with Prezi Video"
+				"title": "Créons des Présentations Incroyables avec Prezi Video (en anglais)"
 			},
 			{
 				"youTubeID": "9mXanZhm9eo",
-				"title": "It's time to Level Up ⏫ Your LinkedIn Profile!"
+				"title": "Il est temps de Passer au Niveau Supérieur ⏫ Votre Profil LinkedIn!"
 			}
 		]
 	},
@@ -435,13 +435,13 @@
 		"presentations": [
 			{
 				"link": "bit.ly/3zURwzI",
-				"title": "The Ultimate Elevator Pitch",
+				"title": "Le Pitch d'Élevator Ultimate (en anglais)",
 				"imgID": "imgPPT2",
 				"imgBasicName": "elevator"
 			},
 			{
 				"link": "bit.ly/2WGzfb1",
-				"title": "Are robots your friends?",
+				"title": "Les robots sont-ils vos amis ? (en anglais)",
 				"imgID": "imgPPT1",
 				"imgBasicName": "rfriends"
 			}
@@ -453,8 +453,8 @@
 				"name": "Dr. Natalia Wiechowski",
 				"img": "img/photos/nataliawiechowski.jpg",
 				"externalLink": "https://www.drnataliawiechowski.com",
-				"review": "Frederico is a wonderful human being I had the pleasure to meet at #DES2019 in Madrid. We also recorded an interview about my Toastmasters journey for his TM club/region. Frederico also is an awesome interviewer. He was well prepared, is a good listener and created a wonderful video out of our conversation. Furthermore, Frederico seems to be a person that truly cares, that wants to add value and make a difference. Keep up the great work and thank you for your time!",
-				"title": "LinkedIn🦄|Personal Branding Pro|Edutainer: Helping Coachsultants to grow their bizz through ORGANIC LinkedIn marketing",
+				"review": "Frederico est une personne formidable que j'ai eu le plaisir de rencontrer lors du #DES2019 à Madrid. Nous avons également enregistré une interview sur mon parcours Toastmasters pour son club ou sa région. Frederico est par ailleurs un intervieweur hors pair : il était parfaitement préparé, savait être à l'écoute et a réalisé une superbe vidéo à partir de notre échange. De plus, Frederico semble être quelqu'un de sincèrement bienveillant, désireux d'apporter de la valeur et d'avoir un impact positif. Continuez sur cette lancée et merci pour le temps que vous m'avez consacré !",
+				"title": "LinkedIn 🦄 | Expert en Personal Branding & Edutainer : J'aide les coachs et consultants à développer leur activité grâce au marketing organique sur LinkedIn.",
 				"date": "27-05-2019",
 				"isPDF": false,
 				"isActive": true
@@ -463,8 +463,8 @@
 				"name": "Gabriela Roivainen",
 				"img": "img/photos/gabriela.jpg",
 				"externalLink": "",
-				"review": "I know Federico Navarrete from Toastmasters International … In this organization, Federico had the role of Area Director being in charge of organizing, training and motivated more than 100 members in Poland …",
-				"title": "Program Quality Director 2018/2019 at <a target='_blank' class='text-material-link' rel='noreferrer' href='https://www.toastmasters.org' class='text-dark'>Toastmasters International</a>, <a class='text-material-link' target='_blank' rel='noreferrer' href='https://toastmastersd108.org' class='text-dark'>District 108</a>",
+				"review": "Je connais Federico Navarrete depuis Toastmasters International… Dans cette organisation, Federico avait le rôle de Directeur de Région, en charge d'organiser, former et motiver plus de 100 membres en Pologne…",
+				"title": "Directeur de la Qualité du Programme 2018/2019 chez <a target='_blank' class='text-material-link' rel='noreferrer' href='https://www.toastmasters.org' class='text-dark'>Toastmasters International</a>, <a class='text-material-link' target='_blank' rel='noreferrer' href='https://toastmastersd108.org' class='text-dark'>District 108</a>",
 				"date": "03-06-2019",
 				"isPDF": true,
 				"pdfLocation": "testimonials/references.pdf",
@@ -474,8 +474,8 @@
 				"name": "Edgar Regalado",
 				"img": "img/photos/edgar.jpg",
 				"externalLink": "",
-				"review": "I've known Federico for about 20 years so I speak from actual experience when I say that he's trustworthy, responsible, intelligent and loyal to his principles. Federico and I were classmates during school and college. During this time I developed a strong friendship relationship with him. My close association to him made me witness his stupendous growth as a person and as a professional. He's the most agile developer I've ever known. He creates clean, maintainable code in half the time of his peers. This is a consequence of his highly analytical personality and strong passion for computer science.<br /><br />On the other hand, Federico has been working hard to develop his interpersonal skills. To do so, he participated in various communities that require him to take a leadership role, such as Microsoft Student Partners and Toastmasters. In the latter, Federico gained confidence and developed the art of public speaking.<br /><br />There's no doubt that Federico is a person of integrity, with a well-balanced set of technical and interpersonal skills. For all of this, it is my pleasure to recommend Federico.",
-				"title": "Senior Java Developer at Deutsche Börse, Germany",
+				"review": "Je connais Federico depuis environ 20 ans, donc je parle de mon expérience personnelle lorsque je dis qu'il est digne de confiance, responsable, intelligent et loyal à ses principes. Federico et moi étions camarades de classe à l'école et à l'université. Pendant cette période, j'ai développé une forte relation d'amitié avec lui. Ma proximité avec lui m'a permis de constater sa croissance remarquable tant sur le plan personnel que professionnel. C'est le développeur le plus agile que je connaisse. Il crée du code clair et maintenable en la moitié du temps nécessaire à ses collègues. Cela découle de sa personnalité fortement analytique et de sa forte passion pour l'informatique.<br /><br />D'un autre côté, Federico s'efforce de développer ses compétences interpersonnelles. Pour cela, il a participé à diverses communautés qui lui demandent de prendre un rôle de leadership, comme Microsoft Student Partners et Toastmasters. Dans ce dernier, Federico a gagné en confiance et développé l'art du discours public.<br /><br />Il n'y a aucun doute que Federico est une personne d'intégrité, dotée d'un ensemble équilibré de compétences techniques et interpersonnelles. Pour toutes ces raisons, c'est un plaisir pour moi de recommander Federico.",
+				"title": "Développeur Java Senior chez Deutsche Börse, Allemagne",
 				"date": "30-10-2016",
 				"isPDF": false,
 				"isActive": false
