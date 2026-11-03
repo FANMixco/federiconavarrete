@@ -95,15 +95,20 @@ function loadTranslations() {
                     isMemoryGame = action == 'memoryGame';
 
                 currentLoc = (currentLoc != action) ? action : currentLoc;
-                const url = isMemoryGame ? 'https://tstories.federiconavarrete.com/memory-game.html' : `${urlB}${currentLoc}.federiconavarrete.com`,
+                const requestedTheme = new URL(window.location.href).searchParams.get('theme'),
+                      gameParams = new URLSearchParams({
+                          lang: iLang,
+                          theme: ['light', 'dark', 'system'].includes(requestedTheme) ? requestedTheme : 'system'
+                      }),
+                      url = isMemoryGame ? 'https://tstories.federiconavarrete.com/memory-game.html' : `${urlB}${currentLoc}.federiconavarrete.com`,
                       pTitle = isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : (currentLoc == 'books') ? genericTranslations.recommendedBooks : genericTranslations.presentationsGallery,
                       btnFullScreen = gId('btn-full-screen');
 
                 gId('zoomTitle').innerHTML = pTitle;
 
-                loadIframe("divPreview", pTitle, isMemoryGame ? `${url}?embed=1` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
+                loadIframe("divPreview", pTitle, isMemoryGame ? `${url}?embed=1&${gameParams}` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
 
-                btnFullScreen.href = url;
+                btnFullScreen.href = isMemoryGame ? `${url}?${gameParams}` : url;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
