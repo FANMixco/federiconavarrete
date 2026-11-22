@@ -9,9 +9,14 @@
 }
 
 @media (max-width: 480px) {
-    html,
-    #page-top {
+    html {
         overflow-x: hidden;
+    }
+
+    #page-top {
+        /* Clip the sides without making the body a second scroll container. */
+        overflow-x: visible;
+        overflow-x: clip;
     }
 }
 
