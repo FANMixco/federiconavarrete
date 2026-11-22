@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0f">
+  <title>Speaking &amp; Events | Federico Navarrete</title>
+  <meta name="description" content="Explore Federico Navarrete’s documented talks, literary presentations, and public appearances, with event sources and recordings where available.">
+  <link rel="canonical" href="https://federiconavarrete.com/pages/speaking.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Speaking &amp; Events | Federico Navarrete">
+  <meta property="og:description" content="Documented talks, literary presentations, and public appearances by Federico Navarrete.">
+  <meta property="og:url" content="https://federiconavarrete.com/pages/speaking.html">
+  <meta property="og:image" content="https://federiconavarrete.com/img/preview.jpg">
+  <meta property="og:image:alt" content="Federico Navarrete’s portfolio preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../css/fonts/montserrat.min.css">
+  <link rel="stylesheet" href="../css/speaking.css?v=2">
+  <script src="../js/libs/genericActs.min.js" defer></script>
+  <script src="../js/libs/speaking.js?v=2" defer></script>
+</head>
+<body class="speaking-page">
+  <header class="page-width site-header" id="speaking-header">
+    <a id="portfolio-link" href="../#presentations" data-text="portfolio">Federico Navarrete</a>
+    <div class="language-control">
+      <label for="speaking-language" data-text="language">Language</label>
+      <select id="speaking-language">
+        <option value="en" lang="en">English</option>
+        <option value="es" lang="es">Español</option>
+        <option value="fr" lang="fr">Français</option>
+        <option value="zh" lang="zh">中文</option>
+      </select>
+    </div>
+  </header>
+  <main class="page-width" id="speaking-profile">
+    <section class="intro" aria-labelledby="speaking-title">
+      <h1 id="speaking-title" data-text="title">Speaking &amp; Events</h1>
+      <p data-text="intro">Federico Navarrete speaks about software development, cloud cost management, and Salvadoran literature and cultural exchange. Browse his documented engagements and public appearances.</p>
+      <div class="intro-actions">
+        <a class="action" href="#archive" data-text="browse">Browse events</a>
+        <a class="action secondary" href="https://bit.ly/3PxrbSC" data-text="invite">Book a 15-minute chat</a>
+      </div>
+    </section>
+    <section aria-labelledby="topics-heading">
+      <h2 id="topics-heading" data-text="topics">Speaking topics</h2>
+      <ul class="topics">
+        <li data-text="topicSoftware">No-code and software development</li>
+        <li data-text="topicCloud">FinOps and cloud cost management</li>
+        <li data-text="topicCulture">Salvadoran folklore and cultural exchange</li>
+      </ul>
+    </section>
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading" data-text="featured">Selected speaking engagements</h2>
+      <div id="featured-events" class="cards"></div>
+    </section>
+    <section id="archive" aria-labelledby="archive-heading">
+      <h2 id="archive-heading" data-text="archive">Events archive</h2>
+      <fieldset id="event-filters" class="filters" hidden>
+        <legend class="visually-hidden" data-text="filters">Event filters</legend>
+        <label for="filter-category"><span data-text="category">Category</span><select id="filter-category"></select></label>
+        <label for="filter-year"><span data-text="year">Year</span><select id="filter-year"></select></label>
+        <label for="filter-role"><span data-text="role">Role</span><select id="filter-role"></select></label>
+      </fieldset>
+      <p id="event-count" role="status"></p>
+      <div id="archive-events" class="cards"></div>
+      <noscript><p>Enable JavaScript to browse and filter the event archive.</p></noscript>
+    </section>
+    <section class="invitation" aria-labelledby="invitation-heading">
+      <h2 id="invitation-heading" data-text="invitation">Invite Federico to speak</h2>
+      <a class="action" href="https://bit.ly/3PxrbSC" data-text="invite">Book a 15-minute chat</a>
+    </section>
+  </main>
+</body>
+</html>

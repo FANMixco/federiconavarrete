@@ -4,7 +4,7 @@ let tErr1,
     basicInfo,
     totalGenerics;
 
-fetchData(`${jsonLoc}/generics.json`)
+fetchData(`${jsonLoc}/generics.json?v=3`)
     .then(data => {
         genericTranslations = data;
         document.dispatchEvent(new CustomEvent('genericsLoaded'));
@@ -26,7 +26,7 @@ fetchData(`${jsonLoc}/generics.json`)
 
 function addExtraIcons() {
     gAll('.btn-preview').forEach(item => {
-        item.innerHTML = `${getFinalIcon('gallery', 21)}&ensp;${item.innerHTML}`;
+        item.innerHTML = `${getFinalIcon(item.dataset.previewIcon || 'gallery', 21)}&ensp;${item.innerHTML}`;
     });
 
     gAll('.btn-book').forEach(item => {
@@ -89,10 +89,11 @@ function loadTranslations() {
         loadGenerics(dTrans);
         setupLanguageSelector();
 
-        gAll('.btn-preview, [data-preview-action]').forEach(item => {
+        gAll('.btn-preview[data-action], [data-preview-action]').forEach(item => {
             item.addEventListener(eClick, () => {
                 const action = item.dataset.previewAction || item.dataset.action,
-                    isMemoryGame = action == 'memoryGame';
+                    isMemoryGame = action == 'memoryGame',
+                    isSpeaking = action == 'speaking';
 
                 currentLoc = (currentLoc != action) ? action : currentLoc;
                 const requestedTheme = new URL(window.location.href).searchParams.get('theme'),
@@ -100,15 +101,17 @@ function loadTranslations() {
                           lang: iLang,
                           theme: ['light', 'dark', 'system'].includes(requestedTheme) ? requestedTheme : 'system'
                       }),
-                      url = isMemoryGame ? 'https://tstories.federiconavarrete.com/memory-game.html' : `${urlB}${currentLoc}.federiconavarrete.com`,
-                      pTitle = isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : (currentLoc == 'books') ? genericTranslations.recommendedBooks : genericTranslations.presentationsGallery,
+                      url = isSpeaking ? item.href : isMemoryGame ? 'https://tstories.federiconavarrete.com/memory-game.html' : `${urlB}${currentLoc}.federiconavarrete.com`,
+                      previewParams = isMemoryGame ? gameParams : new URLSearchParams({ lang: iLang }),
+                      embeddablePage = isSpeaking || isMemoryGame,
+                      pTitle = isSpeaking ? genericTranslations.speakingEvents : isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : (currentLoc == 'books') ? genericTranslations.recommendedBooks : genericTranslations.presentationsGallery,
                       btnFullScreen = gId('btn-full-screen');
 
                 gId('zoomTitle').innerHTML = pTitle;
 
-                loadIframe("divPreview", pTitle, isMemoryGame ? `${url}?embed=1&${gameParams}` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
+                loadIframe("divPreview", pTitle, embeddablePage ? `${url}?embed=1&${previewParams}` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
 
-                btnFullScreen.href = isMemoryGame ? `${url}?${gameParams}` : url;
+                btnFullScreen.href = embeddablePage ? `${url}?${previewParams}` : url;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
