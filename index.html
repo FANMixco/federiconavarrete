@@ -41,11 +41,12 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
 
       <!-- Custom styles for this template -->
       <link href="css/freelancer_personal_carousel-reviews.min.css" rel="stylesheet" />
+      <link href="css/foldables.css?v=2" rel="stylesheet" />
       <link href="css/fonts/iconmoon.min.css" rel="stylesheet" />
 
       <link rel="canonical" href="https://federiconavarrete.com">
 
-      <script src="js/libs/basicTranslations.min.js?v=3"></script>
+      <script src="js/libs/basicTranslations.min.js?v=4"></script>
 
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
@@ -226,32 +227,36 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </header>
       <!-- About Section -->
       <section class="text-white mb-0 pb-2" id="about">
-         <div class="container">
-            <h2 class="text-uppercase text-white text-center" data-translation="aboutMe"></h2>
-            <hr class="star-black-dark mb-5">
-            <div class="text-center mt-4">
+         <div class="container foldable-intro">
+            <div class="foldable-about-title">
+               <h2 class="text-uppercase text-white text-center" data-translation="aboutMe"></h2>
+               <hr class="star-black-dark mb-5">
+            </div>
+            <div class="text-center mt-4 foldable-intro-heading">
                <h3 class="text-uppercase text-white" id="hIntro"></h3>
                <br>
             </div>
             <div class="row" id="divAbout"></div>
          </div>
-         <!--Events-->
-         <div class="mt-2">
-            <p class="h3 text-uppercase text-center pb-2" data-translation="asSeen"></p>
-            <div class="container-fluid mt-4">
-               <iframe class="iLang" title="seen on" loading="lazy" data-page="events" id="eventsIframe"></iframe>
-           </div>
-         </div>
-         <div id="newsArticles" data-loaded="false" class="container">
-            <hr class="pt-4">
-            <a data-bs-toggle="modal" data-bs-target="#massMediaModal" class="hModals" target="_blank" rel="nofollow noopener noreferrer">
-               <h3 class="text-center text-uppercase mb-0 text-title text-warning">
-                  <span class="icon-newspaper icon-size-40"></span>
-                  <span class="title-label" data-translation="massMedia"></span>
-               </h3>
-            </a>
-            <hr class="star-black-dark mb-5">
-            <div class="row" id="divMMArticles"></div>
+         <div class="foldable-media">
+            <!--Events-->
+            <div class="mt-2">
+               <p class="h3 text-uppercase text-center pb-2" data-translation="asSeen"></p>
+               <div class="container-fluid mt-4">
+                  <iframe class="iLang" title="seen on" loading="lazy" data-page="events" id="eventsIframe"></iframe>
+               </div>
+            </div>
+            <div id="newsArticles" data-loaded="false" class="container">
+               <hr class="pt-4">
+               <a data-bs-toggle="modal" data-bs-target="#massMediaModal" class="hModals" target="_blank" rel="nofollow noopener noreferrer">
+                  <h3 class="text-center text-uppercase mb-0 text-title text-warning">
+                     <span class="icon-newspaper icon-size-40"></span>
+                     <span class="title-label" data-translation="massMedia"></span>
+                  </h3>
+               </a>
+               <hr class="star-black-dark mb-5">
+               <div class="row" id="divMMArticles"></div>
+            </div>
          </div>
          <div class="container mb-4 mt-4">
             <div class="row">
@@ -340,28 +345,37 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </section>
       <!-- Portfolio Grid Section -->
       <section class="portfolio pb-2 pb-sm-0 mb-0" id="presentations" data-loaded="false">
-         <div class="container text-center">
-            <!--hr-->
-            <h2 class="text-uppercase text-secondary mb-0 h2-smaller" data-translation="pptsOrganizedEvents"></h2>
-            <hr class="star-dark mb-5">
-            <h3 class="text-uppercase text-secondary mb-0 text-title" id="hPublicSpeaking"><span class="icon-speaker icon-size-26"></span><span class="title-label" data-translation="publicSpeaking"></span></h3>
-            <br>
-            <div class="row" id="divVideos"></div>
-            <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="pages/speaking.html" data-action="speaking" class="btn btn-dark btn-preview mt-4 mb-3"><span data-translation="speakingEvents"></span></a>
+         <div class="container text-center foldable-presentations">
+            <div class="foldable-presentations-title">
+               <h2 class="text-uppercase text-secondary mb-0 h2-smaller" data-translation="pptsOrganizedEvents"></h2>
+               <hr class="star-dark mb-5">
+            </div>
+            <div class="foldable-presentation-group">
+               <h3 class="text-uppercase text-secondary mb-0 text-title" id="hPublicSpeaking"><span class="icon-speaker icon-size-26"></span><span class="title-label" data-translation="publicSpeaking"></span></h3>
+               <br>
+               <div class="row" id="divVideos"></div>
+               <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="pages/speaking.html" data-action="speaking" class="btn btn-dark btn-preview mt-4 mb-3"><span data-translation="speakingEvents"></span></a>
+            </div>
             <hr>
-            <h3 class="text-uppercase text-secondary mb-0 text-title" id="hYouTubeTraining"><span class="icon-youtube icon-size-38"></span><span class="title-label" data-translation="youTubeTraining"></span></h3>
-            <br>
-            <div class="row" id="divYouTubeVideos"></div>
-            <a class="btn btn-dark btn-preview mt-4 mb-3" data-preview-icon="youtube" href="https://www.youtube.com/watch?v=j8slCjuBKV0&amp;list=PL5qnvXALY_bJqLWkGkjIHU8j1gsDjFji3"><span data-translation="youTubeTrainingPlaylist">YouTube Training Playlist</span></a>
+            <div class="foldable-presentation-group foldable-pane-end">
+               <h3 class="text-uppercase text-secondary mb-0 text-title" id="hYouTubeTraining"><span class="icon-youtube icon-size-38"></span><span class="title-label" data-translation="youTubeTraining"></span></h3>
+               <br>
+               <div class="row" id="divYouTubeVideos"></div>
+               <a class="btn btn-dark btn-preview mt-4 mb-3" data-preview-icon="youtube" href="https://www.youtube.com/watch?v=j8slCjuBKV0&amp;list=PL5qnvXALY_bJqLWkGkjIHU8j1gsDjFji3" target="_blank" rel="noopener noreferrer"><span data-translation="youTubeTrainingPlaylist">YouTube Training Playlist</span></a>
+            </div>
             <hr>
-            <h3 class="text-uppercase text-secondary mb-0 text-title" id="hPresentations"><span class="icon-presentation-play icon-size-26"></span><span class="title-label" data-translation="presentations"></span></h3>
-            <br>
-            <div class="row" id="divPPTs"></div>
-            <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="#zoomPreview" data-action="ppts" class="btn btn-dark btn-preview mt-4 mb-3"><span data-translation="presentationsGallery"></span></a>
+            <div class="foldable-presentation-group">
+               <h3 class="text-uppercase text-secondary mb-0 text-title" id="hPresentations"><span class="icon-presentation-play icon-size-26"></span><span class="title-label" data-translation="presentations"></span></h3>
+               <br>
+               <div class="row" id="divPPTs"></div>
+               <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="#zoomPreview" data-action="ppts" class="btn btn-dark btn-preview mt-4 mb-3"><span data-translation="presentationsGallery"></span></a>
+            </div>
             <hr>
-            <h3 class="text-uppercase text-secondary mb-0 text-title"><span class="icon-calendar-today icon-size-26"></span><span class="title-label" data-translation="organizedEvents"></span></h3>
-            <br>
-            <div class="row" id="divEvents"></div>
+            <div class="foldable-presentation-group foldable-pane-end">
+               <h3 class="text-uppercase text-secondary mb-0 text-title"><span class="icon-calendar-today icon-size-26"></span><span class="title-label" data-translation="organizedEvents"></span></h3>
+               <br>
+               <div class="row" id="divEvents"></div>
+            </div>
          </div>
       </section>
       <!-- Articles Grid Section -->
@@ -377,19 +391,23 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <!-- Books Section -->
       <section class="text-white mb-0" id="books" data-loaded="false">
          <div class="container">
-            <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="#zoomPreview" data-preview-action="books" class="hModals"><h2 class="text-center text-title text-uppercase text-warning h2-smaller">
-               <span class="icon-books icon-size-40"></span><span class="title-label" data-translation="recommendedBooks"></span>
-            </h2></a>
-            <hr class="star-black-dark mb-5">
-            <div id="bookPreview" class="mt-5 mb-5"></div>
-            <div class="row row-auto">
-               <iframe class="iLang" title="books collection" loading="lazy" data-page="books" id="booksIframe"></iframe>
+            <div class="foldable-books">
+               <a data-bs-toggle="modal" data-bs-target="#zoomPreview" href="#zoomPreview" data-preview-action="books" class="hModals"><h2 class="text-center text-title text-uppercase text-warning h2-smaller">
+                  <span class="icon-books icon-size-40"></span><span class="title-label" data-translation="recommendedBooks"></span>
+               </h2></a>
+               <hr class="star-black-dark mb-5">
+               <div id="bookPreview" class="mt-5 mb-5"></div>
+               <div class="row row-auto">
+                  <iframe class="iLang" title="books collection" loading="lazy" data-page="books" id="booksIframe"></iframe>
+               </div>
             </div>
             <hr class="wHR" />
-            <h3 class="text-center text-uppercase text-white text-title salvadorean-title"><span class="icon-el-salvador icon-size-34"></span><span class="title-label" data-translation="mySalvadorean"></span></h3>
-            <hr class="star-black-dark mb-5">
-            <div class="row">
-               <iframe class="iLang" title="legends collection" loading="lazy" data-page="legends" id="legendsIframe"></iframe>
+            <div class="foldable-legends">
+               <h3 class="text-center text-uppercase text-white text-title salvadorean-title"><span class="icon-el-salvador icon-size-34"></span><span class="title-label" data-translation="mySalvadorean"></span></h3>
+               <hr class="star-black-dark mb-5">
+               <div class="row">
+                  <iframe class="iLang" title="legends collection" loading="lazy" data-page="legends" id="legendsIframe"></iframe>
+               </div>
             </div>
          </div>
       </section>
@@ -397,7 +415,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <footer class="footer text-center">
          <div class="container">
             <div class="row">
-               <div class="col-md-4 mb-5 mb-lg-0">
+               <div class="col-md-4 mb-5 mb-lg-0" id="footerContact">
                   <h4 class="text-uppercase mb-4" data-translation="contactMe"></h4>
                   <ul class="list-inline mb-0" id="listContacts">
                      <li class="list-inline-item">
@@ -420,7 +438,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                   <h4 class="text-uppercase mb-4" data-translation="aroundWeb"></h4>
                   <ul class="list-inline mb-0" id="socialMediaBasic"></ul>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-4" id="footerCredits">
                   <h4 class="text-uppercase mb-4">About Freelancer</h4>
                   <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
                      <a class="text-material-link" href="https://startbootstrap.com" rel="noreferrer" target="_blank">Start Bootstrap</a>.
@@ -431,8 +449,10 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </footer>
       <div class="copyright py-4 text-center text-white">
          <div class="container">
-            <div id="google_translate_element" class="d-none"></div>
-            <div class="text-center text-material-orange text-uppercase fw-bolder" data-translation="quote"></div>
+            <div class="foldable-quote">
+               <div id="google_translate_element" class="d-none"></div>
+               <div class="text-center text-material-orange text-uppercase fw-bolder" data-translation="quote"></div>
+            </div>
             <small>
                <span id="extraicons">Some icons were created by <a class="text-material-link" href="https://www.flaticon.com/free-icons/reverse-engineering" target="_blank" rel="noreferrer">afif fudin</a> &amp; <a class="text-material-link" href="https://www.flaticon.com/free-icons/motivational" rel="noreferrer" target="_blank">Pixel perfect</a> - Flaticon.</span>&nbsp;
                <span id="copyrights">&copy; Federico Navarrete &amp; <a class="text-material-link" rel="noreferrer" href="https://supernovaic.com" target="_blank">Supernova IC</a>, <span id="spanYear"></span>.</span>

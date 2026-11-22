@@ -7,7 +7,9 @@
     portfolio.searchParams.set('lang', locale);
     link.href = portfolio;
     document.documentElement.lang = locale;
-    get('speaking-header').hidden = new URLSearchParams(location.search).get('embed') === '1';
+    const embedded = new URLSearchParams(location.search).get('embed') === '1';
+    document.body.classList.toggle('is-embedded', embedded);
+    get('speaking-header').hidden = embedded;
 
     const language = get('speaking-language');
     language.value = locale;

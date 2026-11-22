@@ -1,0 +1,401 @@
+.foldable-about-title,
+.foldable-media,
+.foldable-presentation-group,
+.foldable-presentations-title,
+.foldable-books,
+.foldable-legends,
+.foldable-quote {
+    display: contents;
+}
+
+@media (max-width: 480px) {
+    html,
+    #page-top {
+        overflow-x: hidden;
+    }
+}
+
+@media (horizontal-viewport-segments: 2) {
+    #page-top {
+        --first-pane: env(viewport-segment-width 0 0);
+        --second-pane: env(viewport-segment-width 1 0);
+        --hinge: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
+        --fold-columns: minmax(0, var(--first-pane)) var(--hinge) minmax(0, var(--second-pane));
+        display: grid;
+        grid-template-columns: var(--fold-columns);
+        padding-top: 0 !important;
+        overflow-wrap: break-word;
+    }
+
+    /* The middle track is reserved for the physical hinge. */
+    #page-top > :is(header, #about, #presentations, #articles, #books, .footer, .copyright) {
+        grid-column: 1 / -1;
+    }
+
+    #divReviews {
+        grid-column: 1;
+    }
+
+    #projects {
+        grid-column: 3;
+    }
+
+    #page-top > :is(#divReviews, #projects, #presentations, #articles) {
+        min-width: 0;
+        padding-block: 2.5rem !important;
+    }
+
+    #mainNav,
+    #mainNav #hContent {
+        width: 100% !important;
+        max-width: none;
+        padding-inline: 0;
+    }
+
+    #mainNav #hContent {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr) var(--hinge) minmax(0, var(--second-pane));
+    }
+
+    #mainNav .navbar-toggler {
+        display: block;
+        margin: 0 0.5rem !important;
+        padding: 0.5rem;
+    }
+
+    #mainNav #linkName {
+        width: min(100%, 10rem);
+        min-width: 0;
+        margin-inline: auto !important;
+    }
+
+    #discoverIcon {
+        grid-column: 4;
+        justify-self: end;
+    }
+
+    #mainNav #navbarResponsive {
+        display: block;
+        grid-column: 1 / 3;
+        min-width: 0;
+        max-height: 65dvh;
+        overflow: auto;
+        padding-inline: 1rem;
+    }
+
+    #mainNav #navbarResponsive:not(.show, .collapsing),
+    #mainNav #dMenu {
+        display: none;
+    }
+
+    #mainNav .navbar-nav {
+        flex-direction: column;
+    }
+
+    #mainBackground > .container,
+    #books > .container,
+    #articles > .container,
+    .foldable-intro,
+    .foldable-presentations,
+    .copyright > .container,
+    .footer > .container {
+        max-width: none;
+        padding-inline: 0;
+    }
+
+    #mainBackground > .container > .row,
+    #about,
+    .foldable-intro,
+    #divAbout,
+    .foldable-media,
+    .foldable-presentations,
+    #articles > .container,
+    #divArticles,
+    #books > .container,
+    .copyright > .container,
+    .footer > .container > .row {
+        display: grid;
+        grid-template-columns: var(--fold-columns);
+        margin-inline: 0;
+    }
+
+    header#mainBackground {
+        padding-block: 7rem 3rem !important;
+    }
+
+    #mainBackground > .container > .row > * {
+        width: 100%;
+        min-width: 0;
+        padding-inline: 1rem;
+    }
+
+    #profile-div {
+        margin: 0 !important;
+        padding-block: 0 !important;
+    }
+
+    #imgProfile {
+        width: min(100%, 300px);
+        height: auto;
+        margin: auto !important;
+    }
+
+    #mainBackground .col {
+        grid-column: 3;
+    }
+
+    #mainBackground #hName {
+        font-size: clamp(1.5rem, calc(var(--second-pane) * 0.095), 4.25rem) !important;
+        line-height: 1.05 !important;
+    }
+
+    #mainBackground #hHeadline {
+        font-size: clamp(1rem, calc(var(--second-pane) * 0.052), 1.75rem) !important;
+    }
+
+    #about > *,
+    .foldable-intro > *,
+    .foldable-media > *,
+    .foldable-presentations > *,
+    #articles > .container > *,
+    .foldable-books,
+    .foldable-legends,
+    .footer .row > *,
+    .copyright > .container > * {
+        grid-column: 1;
+        min-width: 0;
+    }
+
+    #about > :is(.foldable-intro, .foldable-media),
+    .foldable-intro > #divAbout,
+    #articles > .container > #divArticles {
+        grid-column: 1 / -1;
+    }
+
+    .foldable-intro > .foldable-intro-heading,
+    .foldable-media > #newsArticles,
+    #about > #divAwards,
+    .foldable-presentations > .foldable-pane-end,
+    .foldable-legends,
+    .footer .row > :is(#aroundWeb, #footerCredits),
+    .copyright > .container > small {
+        grid-column: 3;
+    }
+
+    .foldable-about-title,
+    .foldable-presentations-title,
+    .foldable-presentation-group,
+    .foldable-books,
+    .foldable-legends,
+    .foldable-quote {
+        display: block;
+    }
+
+    .foldable-intro > :is(.foldable-about-title, .foldable-intro-heading),
+    .foldable-presentations > div,
+    #articles > .container > :is(a, hr),
+    #books > .container > div,
+    .copyright > .container > * {
+        padding-inline: 1rem;
+    }
+
+    .foldable-intro > .foldable-intro-heading {
+        align-self: center;
+        margin-top: 0 !important;
+    }
+
+    .foldable-intro-heading > br,
+    #newsArticles > hr:first-child,
+    .foldable-presentations > hr,
+    #books .wHR {
+        display: none;
+    }
+
+    #divAbout {
+        padding-inline: 0;
+    }
+
+    #divAbout > *,
+    #divArticles > * {
+        width: 100%;
+        min-width: 0;
+        padding-inline: 1rem;
+    }
+
+    #divAbout > :nth-child(even),
+    #divArticles > :nth-child(even) {
+        grid-column: 3;
+    }
+
+    #divAbout > :nth-child(odd),
+    #divArticles > :nth-child(odd) {
+        grid-column: 1;
+    }
+
+    .foldable-media {
+        margin-top: 1.5rem;
+    }
+
+    .foldable-media > .mt-2 {
+        margin-top: 0 !important;
+    }
+
+    .foldable-presentations {
+        row-gap: 1.5rem;
+    }
+
+    .foldable-presentations-title hr {
+        margin-bottom: 1rem !important;
+    }
+
+    #articles > .container > hr {
+        width: min(70%, 15rem);
+    }
+
+    #page-top hr[class*="star-"] {
+        position: relative;
+        width: min(70%, 15rem);
+    }
+
+    #page-top :is(#projects, #books) .title-label {
+        width: auto;
+        white-space: normal;
+    }
+
+    #page-top :is(#projects, #presentations, #articles, #books) h2 {
+        font-size: clamp(1.35rem, calc(min(var(--first-pane), var(--second-pane)) * 0.066), 2.5rem) !important;
+        line-height: 1.1 !important;
+    }
+
+    .footer {
+        padding-block: 2.5rem;
+    }
+
+    .footer .row > * {
+        width: 100%;
+    }
+
+    .footer .row > #footerContact {
+        grid-row: 1 / span 2;
+        margin-bottom: 0 !important;
+    }
+
+    .footer .row > #aroundWeb {
+        margin-bottom: 1.25rem !important;
+    }
+
+    .copyright > .container {
+        align-items: center;
+    }
+
+    #about .col-sm,
+    #testimonialsRow > * {
+        flex: 0 0 100%;
+        width: 100%;
+        margin-inline: 0;
+    }
+
+    #testimonialsRow {
+        margin-top: 0;
+    }
+
+    #testimonialsRow > * {
+        margin-top: 0 !important;
+    }
+
+    #carouselReviews .carousel-control-prev {
+        left: 0;
+    }
+
+    #carouselReviews .carousel-control-next {
+        right: 0;
+    }
+
+    #page-top :is(.btn-home, .card-ser, .mFullScreen, .mFullScreenH) {
+        max-width: 100%;
+    }
+
+    #page-top .btn-home {
+        width: 100% !important;
+        white-space: normal;
+    }
+
+    #page-top .modal {
+        left: env(viewport-segment-left 0 0);
+        width: var(--first-pane);
+    }
+}
+
+@media (vertical-viewport-segments: 2) {
+    #page-top {
+        --top-pane: env(viewport-segment-height 0 0);
+    }
+
+    #mainNav #navbarResponsive {
+        max-height: max(4rem, calc(var(--top-pane) - 5rem));
+        overflow-y: auto;
+    }
+
+    #page-top .modal {
+        top: env(viewport-segment-top 0 0);
+        height: var(--top-pane);
+    }
+}
+
+@media (horizontal-viewport-segments: 2), (vertical-viewport-segments: 2) {
+    /* Center dialogs within their pane and let long dialogs scroll. */
+    #page-top .modal-dialog {
+        width: auto !important;
+        height: auto !important;
+        min-height: calc(100% - 1rem) !important;
+        max-width: min(42rem, calc(100% - 1rem));
+        margin: 0.5rem auto;
+    }
+
+    #page-top .modal-dialog-scrollable .modal-content {
+        max-height: calc(var(--top-pane, 100dvh) - 1rem);
+    }
+}
+
+/* Size the speaker iframe to the space left after the modal header. */
+#zoomPreview[data-preview-content="speaking"] {
+    --speaking-pane-height: 100dvh;
+    --speaking-dialog-margin: var(--bs-modal-margin, 0.5rem);
+}
+
+#zoomPreview[data-preview-content="speaking"] .modal-content {
+    height: min(48rem, calc(var(--speaking-pane-height) - 2 * var(--speaking-dialog-margin)));
+    min-width: 0;
+}
+
+#zoomPreview[data-preview-content="speaking"] .modal-title {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#zoomPreview[data-preview-content="speaking"] .btn-close {
+    flex-shrink: 0;
+}
+
+#zoomPreview[data-preview-content="speaking"] .modal-body {
+    display: flex;
+    min-height: 0;
+    min-width: 0;
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+#zoomPreview[data-preview-content="speaking"] #gPreview {
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (horizontal-viewport-segments: 2), (vertical-viewport-segments: 2) {
+    #zoomPreview[data-preview-content="speaking"] { --speaking-dialog-margin: 0.5rem; }
+}
+
+@media (vertical-viewport-segments: 2) {
+    #zoomPreview[data-preview-content="speaking"] { --speaking-pane-height: env(viewport-segment-height 0 0, 100dvh); }
+}

@@ -107,6 +107,7 @@ function loadTranslations() {
                       pTitle = isSpeaking ? genericTranslations.speakingEvents : isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : (currentLoc == 'books') ? genericTranslations.recommendedBooks : genericTranslations.presentationsGallery,
                       btnFullScreen = gId('btn-full-screen');
 
+                gId('zoomPreview').dataset.previewContent = action;
                 gId('zoomTitle').innerHTML = pTitle;
 
                 loadIframe("divPreview", pTitle, embeddablePage ? `${url}?embed=1&${previewParams}` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
@@ -115,7 +116,7 @@ function loadTranslations() {
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
 
-                iFrameHResize('gPreview', 'divPreview');
+                if (!isSpeaking) iFrameHResize('gPreview', 'divPreview');
             });
         });
         

@@ -17,6 +17,7 @@ html { scroll-padding-top: 1.5rem; }
     color: var(--text);
     font: 1rem/1.6 system-ui, sans-serif;
     isolation: isolate;
+    overflow-wrap: anywhere;
 }
 
 .speaking-page::before {
@@ -64,6 +65,7 @@ main > section { padding-block: clamp(1.5rem, 5vw, 3rem); }
 
 .action {
     display: inline-block;
+    max-width: 100%;
     border: 1px solid var(--link);
     border-radius: 0.5rem;
     padding: 0.6rem 0.85rem;
@@ -79,8 +81,9 @@ main > section { padding-block: clamp(1.5rem, 5vw, 3rem); }
 .topics { list-style: none; padding: 0; margin: 0; }
 .topics li, .event-card { background: var(--surface); border: 1px solid var(--border); border-radius: 0.65rem; }
 .topics li { padding: 0.8rem 1rem; }
-.filters { border: 0; padding: 0; margin: 0 0 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
+.filters { min-inline-size: 0; border: 0; padding: 0; margin: 0 0 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
 .filters[hidden] { display: none; }
+.filters select { width: 100%; min-width: 0; }
 .filters label { display: grid; gap: 0.25rem; min-width: 0; }
 select { min-height: 2.75rem; border: 1px solid var(--border); border-radius: 0.45rem; background: var(--surface); color: var(--text); padding-inline: 0.6rem; font: inherit; }
 
@@ -95,5 +98,11 @@ select { min-height: 2.75rem; border: 1px solid var(--border); border-radius: 0.
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 @media (horizontal-viewport-segments: 2) and (vertical-viewport-segments: 1) {
-    .page-width { width: min(68rem, calc(env(viewport-segment-width 0 0) - 2rem)); margin-inline: 1rem auto; }
+    .speaking-page:not(.is-embedded) .page-width {
+        width: min(68rem, calc(100% - 2rem), calc(env(viewport-segment-width 0 0) - 2rem));
+        margin-inline: 1rem auto;
+    }
 }
+
+.is-embedded .intro { padding-block-start: clamp(1.25rem, 5vw, 2.25rem); }
+.is-embedded h1 { font-size: clamp(1.75rem, 7vw, 3.5rem); }
