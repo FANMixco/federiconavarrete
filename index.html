@@ -37,16 +37,16 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <link rel="manifest" href="site.webmanifest">
       <meta name="theme-color" content="#1b1223">
 
-      <script src="js/libs/genericActs.min.js"></script>
+      <script src="js/libs/genericActs.min.js?v=2"></script>
 
       <!-- Custom styles for this template -->
       <link href="css/freelancer_personal_carousel-reviews.min.css" rel="stylesheet" />
-      <link href="css/foldables.min.css?v=3" rel="stylesheet" />
+      <link href="css/foldables.min.css?v=6" rel="stylesheet" />
       <link href="css/fonts/iconmoon.min.css" rel="stylesheet" />
 
       <link rel="canonical" href="https://federiconavarrete.com">
 
-      <script src="js/libs/basicTranslations.min.js?v=4"></script>
+      <script src="js/libs/basicTranslations.min.js?v=6"></script>
 
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
@@ -462,15 +462,15 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
 
       <button class="btn btn-primary floatingButton" id="contactMeFloat" data-title-translation="contactMe"><span class="icon-open-email"></span></button>
 
-      <div class="modal fade" tabindex="-1" role="dialog" id="skillsModal">
+      <div class="modal fade fold-dialog" tabindex="-1" role="dialog" id="skillsModal">
          <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable mFullScreen">
             <div class="modal-content">
                <div class="modal-header border-0">
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                </div>
-               <div class="modal-body">
-                  <div>
-                     <div class="container" id="modelSkills">
+               <div class="modal-body fold-dialog-body">
+                  <div class="container" id="modelSkills">
+                     <div class="fold-dialog-pane">
                         <h2 class="text-uppercase text-title text-center"><span class="icon-chalkboard-teacher-solid"></span><span class="title-label" data-translation="softSkills"></span></h2>
                         <hr class="star-black mb-5">
                         <div class="row" id="divSoftSkills"></div>
@@ -480,7 +480,8 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
                            </p>
                            <div class="row cards-row" id="divSoftSkillsOther"></div>
                         </div>
-                        <br>
+                     </div>
+                     <div class="fold-dialog-pane">
                         <h2 class="text-uppercase text-title"><span class="icon-laptop-code-solid"></span><span class="title-label" data-translation="techSkills"></span></h2>
                         <hr class="star-black mb-5">
                         <div class="row" id="divTechSkills"></div>
@@ -497,51 +498,52 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
          </div>
       </div>
 
-      <div class="modal fade" tabindex="-1" role="dialog" id="awardsModal">
+      <div class="modal fade fold-dialog" tabindex="-1" role="dialog" id="awardsModal" aria-labelledby="awardsModalTitle">
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mFullScreen">
             <div class="modal-content">  <!-- Moved .modal-content inside .modal-dialog -->
                <div class="modal-header border-0">
-                  <h5 class="modal-title"><span data-translation="awards"></span></h5>
+                  <h5 class="modal-title" id="awardsModalTitle" data-translation="awards"></h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
-               <div class="modal-body">
-                  <ul id="tbAwards"></ul>
+               <div class="modal-body fold-dialog-body">
+                  <div class="fold-dialog-lists" id="tbAwards"></div>
                </div>
             </div>
          </div>
       </div>
 
-      <div class="modal fade" tabindex="-1" role="dialog" id="massMediaModal">
+      <div class="modal fade fold-dialog" tabindex="-1" role="dialog" id="massMediaModal" aria-labelledby="massMediaModalTitle">
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mFullScreen">
             <div class="modal-content">  <!-- Moved .modal-content inside .modal-dialog -->
                <div class="modal-header border-0">
-                  <h5 class="modal-title"><span data-translation="massMedia"></span></h5>
+                  <h5 class="modal-title" id="massMediaModalTitle" data-translation="massMedia"></h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
-               <div class="modal-body" id="dMassMedia"></div>
+               <div class="modal-body fold-dialog-body" id="dMassMedia"></div>
             </div>
          </div>
       </div>
 
-      <div class="modal fade" tabindex="-1" role="dialog" id="articlesModal">
+      <div class="modal fade fold-dialog" tabindex="-1" role="dialog" id="articlesModal" aria-labelledby="articlesModalTitle">
          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mFullScreen">
             <div class="modal-content">
                <div class="modal-header border-0">
-                  <h5 class="modal-title"><span data-translation="articles"></span></h5>
+                  <h5 class="modal-title" id="articlesModalTitle" data-translation="articles"></h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
-               <div class="modal-body" id="dArticles"></div>
+               <div class="modal-body fold-dialog-body" id="dArticles"></div>
             </div>
          </div>
       </div>
 
-      <div class="modal fade" tabindex="-1" role="dialog" id="reviewGeneric">
+      <div class="modal fade fold-dialog" tabindex="-1" role="dialog" id="reviewGeneric" aria-labelledby="reviewModalTitle">
          <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable mFullScreenH" role="document">
             <div class="modal-content">
                <div class="modal-header border-0">
+                  <h5 class="modal-title visually-hidden" id="reviewModalTitle" data-translation="testimonials"></h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                </div>
-               <div class="modal-body" id="divGenericContent"></div>
+               <div class="modal-body fold-dialog-body" id="divGenericContent"></div>
             </div>
          </div>
       </div>
@@ -580,12 +582,14 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       </div>
 
       <div class="modal fade" tabindex="-1" role="dialog" id="zoomPreview">
-         <div class="modal-dialog modal-xl modal-dialog-centered mFullScreen">
+         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                <div class="modal-header">
                   <span class="modal-title h5" id="zoomTitle"></span>
-                  <a class="btn-close btn-full-screen" rel="noreferrer" target="_blank" id="btn-full-screen"></a>
-                  <button type="button" class="btn-close closeModal" data-bs-dismiss="modal"></button>
+                  <div class="preview-dialog-actions">
+                     <a class="btn-close btn-full-screen" rel="noreferrer" target="_blank" id="btn-full-screen"></a>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
                </div>
                <div class="modal-body nonScroll" id="divPreview"></div>
             </div>
@@ -658,7 +662,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
       <script src="js/freelancer.min.js"></script>
 
-      <script src="js/libs/extraTranslations.min.js" async></script>
+      <script src="js/libs/extraTranslations.min.js?v=3" async></script>
 
       <!-- Include 3rd party libs -->
       <link href="vendor/lite-yt-embed/lite-yt-embed.min.css" rel="stylesheet" media="print" onload="this.media='all'" />

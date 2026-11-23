@@ -25,9 +25,10 @@ const deviceType = () => {
 
 const urlB = 'https://',
     qLang = new URL(window.location.href).searchParams.get("lang"),
-    uLang = (window.navigator.userLanguage || window.navigator.language).split('-')[0],
+    uLang = (window.navigator.userLanguage || window.navigator.language || '').split('-')[0],
     validLang = ['en', 'es', 'zh', 'fr'],
-    iLang = validLang.includes(qLang) ? qLang : (validLang.includes(uLang) ? uLang : 'en'),
+    languagePreferenceKey = 'siteLanguage',
+    iLang = [qLang, readLanguagePreference(), uLang, 'en'].find(language => validLang.includes(language)),
     jsonLoc = `js/i18n/${iLang}/min`,
     lazyLoading = 'loading="lazy"',
     eClick = 'click',
@@ -43,6 +44,36 @@ let devicePortraitAndLong = (actualDev === devs[1] || actualDev === devs[2]) && 
     tagRegExp,
     extraContact = 0,
     rotatedScreen = false;
+
+function readLanguagePreference() {
+    try {
+        return window.localStorage.getItem(languagePreferenceKey);
+    } catch {
+        return null;
+    }
+}
+
+function setupLanguageSelector(selector) {
+    selector.value = iLang;
+    selector.addEventListener('change', () => {
+        const selectedLanguage = selector.value;
+        if (!validLang.includes(selectedLanguage)) {
+            return;
+        }
+
+        try {
+            window.localStorage.setItem(languagePreferenceKey, selectedLanguage);
+        } catch {
+            // The URL still carries the selection when storage is unavailable.
+        }
+
+        if (selectedLanguage !== iLang) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', selectedLanguage);
+            window.location.assign(url);
+        }
+    });
+}
 
 function isSmallScreen() {
     return smallScreenMobileOS || window.innerWidth === window.innerHeight || window.matchMedia("(max-width: 767.98px)").matches;

@@ -10,14 +10,27 @@
     const embedded = new URLSearchParams(location.search).get('embed') === '1';
     document.body.classList.toggle('is-embedded', embedded);
     get('speaking-header').hidden = embedded;
+    if (embedded && window.frameElement) trackEmbeddedHinge(window.frameElement);
 
-    const language = get('speaking-language');
-    language.value = locale;
-    language.addEventListener('change', () => {
-        const url = new URL(location.href);
-        url.searchParams.set('lang', language.value);
-        location.assign(url);
-    });
+    function trackEmbeddedHinge(frame) {
+        const folded = window.matchMedia('(horizontal-viewport-segments: 2) and (vertical-viewport-segments: 1)');
+
+        // The frame inherits the top-level hinge coordinates. Translate them into frame coordinates.
+        function syncHinge() {
+            const [left, right] = window.parent.viewport?.segments ?? [];
+            const frameLeft = frame.getBoundingClientRect().left + frame.clientLeft;
+            const spansHinge = folded.matches && left && right
+                && frameLeft < left.right && frameLeft + frame.clientWidth > right.left;
+            document.body.classList.toggle('spans-fold', Boolean(spansHinge));
+            document.body.style.setProperty('--frame-left', `${frameLeft}px`);
+        }
+
+        folded.addEventListener('change', syncHinge);
+        window.addEventListener('resize', syncHinge);
+        syncHinge();
+    }
+
+    setupLanguageSelector(get('speaking-language'));
 
     async function readJson(path) {
         const response = await fetch(new URL(path, directory));

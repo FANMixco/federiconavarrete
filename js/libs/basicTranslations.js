@@ -87,7 +87,6 @@ function loadTranslations() {
         totalGenerics = dTrans.length;
 
         loadGenerics(dTrans);
-        setupLanguageSelector();
 
         gAll('.btn-preview[data-action], [data-preview-action]').forEach(item => {
             item.addEventListener(eClick, () => {
@@ -107,7 +106,6 @@ function loadTranslations() {
                       pTitle = isSpeaking ? genericTranslations.speakingEvents : isMemoryGame ? genericTranslations.memoryGameTitle : (currentLoc == 'apps') ? genericTranslations.projectsGallery : (currentLoc == 'books') ? genericTranslations.recommendedBooks : genericTranslations.presentationsGallery,
                       btnFullScreen = gId('btn-full-screen');
 
-                gId('zoomPreview').dataset.previewContent = action;
                 gId('zoomTitle').innerHTML = pTitle;
 
                 loadIframe("divPreview", pTitle, embeddablePage ? `${url}?embed=1&${previewParams}` : `${url}?isIframe=true`, 'id="gPreview" class="previewerIframe"');
@@ -115,8 +113,6 @@ function loadTranslations() {
                 btnFullScreen.href = embeddablePage ? `${url}?${previewParams}` : url;
                 btnFullScreen.setAttribute('title', pTitle);
                 btnFullScreen.setAttribute('aria-label', pTitle);
-
-                if (!isSpeaking) iFrameHResize('gPreview', 'divPreview');
             });
         });
         
@@ -136,33 +132,11 @@ function loadTranslations() {
         if (!divBook) {
             return;
         }
-        const imgLoc = `mirrors${(uLang === 'es' ? '_es' : '')}`;
+        const imgLoc = `mirrors${(iLang === 'es' ? '_es' : '')}`;
         const imgSize = deviceType() == devs[0] ? '_small' : '_medium';
 
         divBook.src = `../../img/mybook/${imgLoc}${imgSize}.webp`;
     }
-}
-
-function setupLanguageSelector() {
-    const languageSelector = gId('officialSiteLanguage');
-
-    if (!languageSelector || languageSelector.dataset.ready === 'true') {
-        return;
-    }
-
-    languageSelector.value = iLang;
-    languageSelector.addEventListener('change', () => {
-        const selectedLanguage = languageSelector.value;
-
-        if (!validLang.includes(selectedLanguage) || selectedLanguage === iLang) {
-            return;
-        }
-
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', selectedLanguage);
-        window.location.href = url.toString();
-    });
-    languageSelector.dataset.ready = 'true';
 }
 
 function startBookCountdown() {
@@ -373,6 +347,11 @@ function loadBasicInfo() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const languageSelector = gId('officialSiteLanguage');
+    if (languageSelector) {
+        setupLanguageSelector(languageSelector);
+    }
+
     const hMenu = getHMenu();
 
     gId('menuExpander').addEventListener(eClick, () => {

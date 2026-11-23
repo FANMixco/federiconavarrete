@@ -27,31 +27,28 @@ function onReadyFreelancer() {
     });
 
     if (smallScreen) {
-
-        const el_autohide = document.querySelector('.autohide');
-
-        // add padding-top to bady (if necessary)
         addPadding();
+    }
 
-        if (el_autohide) {
-            let last_scroll_top = 0;
-            window.addEventListener('scroll', () => {
-                if (navbarResponsive.classList.contains("show")) {
-                    gId("menuExpander").click();
-                }
+    const autoHideNav = document.querySelector('.autohide');
+    if (autoHideNav) {
+        const scrollingElement = document.scrollingElement;
+        const getScrollTop = () => Math.max(0, Math.min(window.scrollY, scrollingElement.scrollHeight - scrollingElement.clientHeight));
+        let lastScrollTop = getScrollTop();
 
-                const scroll_top = window.scrollY;
-                if (scroll_top < last_scroll_top) {
-                    el_autohide.classList.remove('scrolled-down');
-                    el_autohide.classList.add('scrolled-up');
-                }
-                else {
-                    el_autohide.classList.remove('scrolled-up');
-                    el_autohide.classList.add('scrolled-down');
-                }
-                last_scroll_top = scroll_top;
-            });
-        }
+        window.addEventListener('scroll', () => {
+            const scrollTop = getScrollTop();
+            if (scrollTop === lastScrollTop) {
+                return;
+            }
+
+            if (navbarResponsive.classList.contains('show') && window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+
+            autoHideNav.classList.toggle('scrolled-down', scrollTop > 1 && scrollTop > lastScrollTop);
+            lastScrollTop = scrollTop;
+        }, { passive: true });
     }
 }
 

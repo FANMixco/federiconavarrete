@@ -16,6 +16,14 @@ function getLinkPreviewImg() {
     return getImgBasicTag('{URL}', '', '', '', '{Title}', `style="max-width: ${isResponsiveSmallScreen() ? '90' : '80'}%;max-height: 100%;"`);
 }
 
+function renderFoldDialogList(container, entries) {
+    const split = Math.ceil(entries.length / 2);
+    const panes = [entries.slice(0, split), entries.slice(split)];
+    container.innerHTML = panes.map(items =>
+        `<ul class="fold-dialog-pane fold-dialog-list">${items.join('')}</ul>`
+    ).join('');
+}
+
 function renderArticlesModalList() {
     if (!fullData || !fullData.articlesList) return;
 
@@ -24,10 +32,9 @@ function renderArticlesModalList() {
 
     if (!articleList) return;
 
-    articleList.innerHTML = '';
-    [...articles, ...moreArticles].forEach((elem) => {
-        articleList.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
-    });
+    renderFoldDialogList(articleList, [...articles, ...moreArticles].map(elem =>
+        `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`
+    ));
 }
 
 function wireArticlesModal() {
@@ -281,10 +288,16 @@ const loadSectionIfVisible = () => {
         return Array.isArray(list) ? list.flat() : [];
     }
 
+    function getEntryLink(link) {
+        const trimmedLink = link?.trim();
+        return trimmedLink && trimmedLink !== '#' && trimmedLink !== '_blank' ? `${urlB}${trimmedLink}` : '';
+    }
+
     function loadAwards(awardList, includeList = true) {
         try {
             const awards = normalizeList(awardList, 'awards');
             const useSmallLayout = isResponsiveSmallScreen();
+            const cardLinkClass = 'clean-btn card-link text-dark';
 
             const awardsList = gId('awardsList');
             let availableLinks = [],
@@ -294,17 +307,16 @@ const loadSectionIfVisible = () => {
             const filteredAwards = awards.slice(0, maxItems);
 
             filteredAwards.forEach((elem, index) => {
-                const tmpLink = `${urlB}${elem.link}`,
-                    title = getBtnModal('linkPreviews', 'clean-btn card-link text-dark', `linkPreview${index}`, getCard(tmpLink, `trophy fSize50`, 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null, ''), '', '', true, elem.type, tmpLink);
+                const link = getEntryLink(elem.link),
+                    card = getCard(link, 'trophy fSize50', 'text-dark', elem.title, 'card-awards', 'fa-icon-awards', null);
 
-                availableLinks.push({
-                    id: index,
-                    title: elem.title,
-                    link: tmpLink,
-                    type: elem.type
-                });
+                if (!link) {
+                    items += getSCItem(index, `<a class="${cardLinkClass}">${card}</a>`);
+                    return;
+                }
 
-                items += getSCItem(index, title);
+                availableLinks.push({ id: index, title: elem.title, link, type: elem.type });
+                items += getSCItem(index, getBtnModal('linkPreviews', cardLinkClass, `linkPreview${index}`, card, '', '', true, elem.type, link));
             });
 
             if (includeList) {
@@ -369,33 +381,30 @@ const loadSectionIfVisible = () => {
 
                 reviewsHTML += reviewPreview;
 
-                const longReview = getReviewContainer(item.img, "picReviewers", currentReview, name, item.title, item.date, item.review, false, true, item.isPDF);
+                const pdfLocation = item.isPDF ? item.pdfLocation : '';
+                const longReview = getReviewContainer(item.img, "picReviewers", currentReview, name, item.title, item.date, item.review, false, true, pdfLocation);
 
                 fullReviews.push({ review: longReview, isPDF: item.isPDF, pdfLocation: item.pdfLocation });
             });
 
             divReviewsPreviews.innerHTML = reviewsHTML;
 
+            const pdfViewer = window.PDFObject;
             fullReviews.forEach((item, index) => {
                 const rMore = gId(`readMore${index + 1}`);
-                if (item.isPDF && !PDFObject.supportsPDFs) {
-                    rMore.href = '';
+                if (item.isPDF && !pdfViewer?.supportsPDFs) {
+                    rMore.href = item.pdfLocation;
+                    rMore.target = '_blank';
+                    rMore.rel = 'noopener noreferrer';
                     rMore.removeAttribute("data-bs-toggle");
                     rMore.removeAttribute("data-bs-target");
+                    return;
                 }
                 rMore.addEventListener(eClick, (e) => {
                     e.preventDefault();
                     divGenericContent.innerHTML = item.review;
 
-                    if (item.isPDF) {
-                        if (PDFObject.supportsPDFs) {
-                            PDFObject.embed(item.pdfLocation, `#review${index + 1}PDF`);
-                            if (deviceType() === devs[0] || deviceType() === devs[1])
-                                gId("review2PDF").style.height = "auto";
-                        } else {
-                            window.open(item.pdfLocation);
-                        }
-                    }
+                    if (item.isPDF) pdfViewer.embed(item.pdfLocation, `#review${index + 1}PDF`);
                 });
             });
         } catch (e) {
@@ -407,15 +416,17 @@ const loadSectionIfVisible = () => {
             return `<p class="m-0 text-${color} ${extras}">${content}</p>`;
         }
 
-        function getReviewContainer(img, cssImg, reviewIndex, name, title, subtitle, content, isShort = true, isLarge = true, isPDF = false) {
+        function getReviewContainer(img, cssImg, reviewIndex, name, title, subtitle, content, isShort = true, isLarge = true, pdfLocation = '') {
             const titleColor = (isShort) ? 'white' : 'dark';
             content = (isShort) ?
-                getContent(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}</p>`, 'white') :
-                (isPDF) ?
-                    `<br><div id="review${reviewIndex}PDF"></div><br><div class="text-center">${getFLink("btn btn-dark", content, `${getFinalIcon(`download`, 14)}&nbsp;${genericTranslations.download}`, tBlank)}</div>` :
+                getContent(`${getShortReview(content)}&nbsp;${getBtnModal("reviewGeneric", "text-material-link", `readMore${reviewIndex}`, genericTranslations.readMore, '', 'reviewGeneric')}`, 'white') :
+                (pdfLocation) ?
+                    `<div id="review${reviewIndex}PDF" class="testimonial-pdf"></div><div class="text-center">${getFLink("btn btn-dark", pdfLocation, `${getFinalIcon('download', 14)}&nbsp;${genericTranslations.download}`, `${noreferrer} ${tBlank}`)}</div>` :
                     getContent(content, 'black');
 
-            return `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getContent(title, titleColor, true)}${(subtitle) ? getContent(subtitle, titleColor, true) : ''}${content}`;
+            const reviewer = `${getImgName(name, img, reviewIndex, cssImg, isLarge)}${getContent(title, titleColor, true)}${subtitle ? getContent(subtitle, titleColor, true) : ''}`;
+            return isShort ? reviewer + content :
+                `<div class="fold-dialog-pane">${reviewer}</div><div class="fold-dialog-pane${pdfLocation ? ' testimonial-document' : ''}">${content}</div>`;
         }
 
 
@@ -573,11 +584,11 @@ const loadSectionIfVisible = () => {
     }
 
     function createList(list, loc) {
-        const lTmp = gId(loc);
-        lTmp.innerHTML = '';
-        list.forEach((elem) => {
-            lTmp.innerHTML += `<li><a class="text-material-link-dark" href='https://${elem.link}' target='_blank'>${elem.title}</a></li>`;
-        });
+        renderFoldDialogList(gId(loc), list.map(elem => {
+            const link = getEntryLink(elem.link),
+                linkAttrs = link ? ` href='${link}' target='_blank'` : '';
+            return `<li><a class="text-material-link-dark"${linkAttrs}>${elem.title}</a></li>`;
+        }));
     }
 
     function loadBookPreview() {

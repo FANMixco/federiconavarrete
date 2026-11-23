@@ -429,6 +429,7 @@ section h2 {
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 #mainNav .navbar-nav {
@@ -475,8 +476,7 @@ a {
     #mainNav {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-        transition: padding-top 0.3s, padding-bottom 0.3s;
+        transition: padding-top 0.3s, padding-bottom 0.3s, transform 0.3s ease-in-out;
     }
 
     #mainNav .navbar-brand {
@@ -747,14 +747,18 @@ a:hover {
     border-color: var(--dark-blue);
 }
 
-.scrolled-down,
-.scrolled-up {
+#mainNav.scrolled-down {
     transform: translateY(-100%);
-    transition: 0.3s ease-in-out;
 }
 
-.scrolled-up {
+#mainNav.scrolled-down:has(:focus-visible) {
     transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #mainNav {
+        transition: none;
+    }
 }
 
 iframe {
