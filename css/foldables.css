@@ -472,8 +472,24 @@
     }
 }
 
-#zoomPreview .modal-dialog {
-    width: 100%;
+#zoomPreview .modal-content {
+    height: min(48rem, calc(100dvh - 2 * var(--bs-modal-margin)));
+}
+
+@media (max-width: 767.98px), (pointer: coarse) and (max-height: 575.98px),
+    (horizontal-viewport-segments: 2), (vertical-viewport-segments: 2) {
+    #zoomPreview .modal-dialog {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+
+    #zoomPreview .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
 }
 
 #zoomPreview .modal-header {
